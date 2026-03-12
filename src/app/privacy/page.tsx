@@ -34,8 +34,7 @@ export default function PrivacyPolicy() {
             your account.
           </BulletItem>
           <BulletItem label="Identifiers">
-            We collect User IDs and Device IDs to monitor app performance, provide personalized
-            features, and analyze app usage.
+            We collect User IDs to provide personalized features and analyze app usage.
           </BulletItem>
           <BulletItem label="Usage Data">
             We track product interactions (how you use the app) to ensure the service functions
@@ -43,12 +42,14 @@ export default function PrivacyPolicy() {
           </BulletItem>
         </Section>
 
-        <Section title="2. Tracking and Third-Party Sharing">
+        <Section title="2. Third-Party Services">
           <p className="mb-4 text-base leading-7 text-charcoal-light">
-            In accordance with Apple&apos;s Transparency frameworks, we disclose that certain
-            identifiers (User ID, Device ID), Contact Info (Email), and Usage Data may be used to
-            track your activity across other companies&apos; apps and websites for the purposes of
-            optimizing our ad campaigns or providing tailored offers.
+            We do not track you across other companies&apos; apps or websites, and we do not share
+            your data with data brokers or advertising networks.
+          </p>
+          <p className="mb-4 text-base leading-7 text-charcoal-light">
+            We use first-party analytics to understand how the app is used and improve the
+            experience. This data is not shared with third parties for advertising purposes.
           </p>
           <p className="text-base leading-7 text-charcoal-light">
             We share necessary data (such as User Content) with third-party AI processors (e.g.,
