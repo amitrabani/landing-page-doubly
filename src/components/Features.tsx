@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const features = [
   {
     title: 'Brain Dump',
-    body: 'Get thoughts out fast before they disappear. No categories, no pressure — just capture.',
+    body: 'Get thoughts out fast before they disappear. No categories, no pressure. Just capture.',
     color: 'bg-lavender-light/25 text-lavender-dark',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: 'Accountability',
-    body: 'Social check-ins and gentle nudges help you actually follow through — not just plan.',
+    body: 'Social check-ins and gentle nudges help you actually follow through, not just plan.',
     color: 'bg-sky-light/30 text-sky',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

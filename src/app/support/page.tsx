@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Support — Doubly',
+  title: 'Support | Doubly',
   description: 'Get help with Doubly. Contact support, manage subscriptions, and find answers.',
 };
 

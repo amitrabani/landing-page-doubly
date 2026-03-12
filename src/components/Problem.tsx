@@ -21,7 +21,7 @@ const problems = [
   },
   {
     type: 'Internal',
-    title: "You know what to do — but can't begin.",
+    title: "You know what to do, but can't begin.",
     body: "The gap between knowing and doing feels impossible to cross. It's not laziness. It's initiation resistance.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -35,7 +35,7 @@ const problems = [
   {
     type: 'Philosophical',
     title: "It shouldn't be this hard to start normal things.",
-    body: "You shouldn't need superhuman effort just to begin. Your brain works differently — your tools should too.",
+    body: "You shouldn't need superhuman effort just to begin. Your brain works differently. Your tools should too.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <path d="M14 4l2.5 5 5.5.8-4 3.9.9 5.5L14 16.7 9.1 19.2l.9-5.5-4-3.9 5.5-.8L14 4z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />

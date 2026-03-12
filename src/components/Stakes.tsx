@@ -17,7 +17,7 @@ export default function Stakes() {
           </h2>
           <p className="mt-6 text-muted text-lg leading-relaxed max-w-2xl mx-auto">
             When every task feels heavy, days disappear into avoidance, guilt, and mental clutter.
-            Doubly helps break that cycle — before &ldquo;I&apos;ll do it later&rdquo; turns into another lost week.
+            Doubly helps break that cycle before &ldquo;I&apos;ll do it later&rdquo; turns into another lost week.
           </p>
         </motion.div>
       </div>

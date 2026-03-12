@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 const faqs = [
   {
     q: 'Is Doubly only for people diagnosed with ADHD?',
-    a: "No. Doubly is for anyone who struggles with starting, overwhelm, or mental clutter. You don't need a diagnosis — just a brain that sometimes freezes when there's too much to do.",
+    a: "No. Doubly is for anyone who struggles with starting, overwhelm, or mental clutter. You don't need a diagnosis, just a brain that sometimes freezes when there's too much to do.",
   },
   {
     q: 'How is this different from a normal to-do app?',
-    a: "To-do apps help you list things. Doubly helps you actually begin them. We focus on reducing initiation resistance — the gap between knowing what to do and doing it — with brain dumps, one-step clarity, and accountability.",
+    a: "To-do apps help you list things. Doubly helps you actually begin them. We focus on reducing initiation resistance, the gap between knowing what to do and doing it, with brain dumps, one-step clarity, and accountability.",
   },
   {
     q: 'Does it help with task initiation specifically?',
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'What makes accountability different here?',
-    a: "It's not nagging or streaks that make you feel guilty. Doubly uses gentle social check-ins — real people who care about your progress — so you have someone in your corner, not a robot shaming you.",
+    a: "It's not nagging or streaks that make you feel guilty. Doubly uses gentle social check-ins with real people who care about your progress, so you have someone in your corner, not a robot shaming you.",
   },
   {
     q: 'Does it replace habit trackers or planners?',

@@ -14,7 +14,7 @@ const testimonials = [
     label: 'College student with ADHD',
   },
   {
-    quote: "This is the first app that helped me start, not just plan. I've tried every productivity app — this one gets it.",
+    quote: "This is the first app that helped me start, not just plan. I've tried every productivity app and this one actually gets it.",
     name: 'Alex K.',
     label: 'Freelance designer',
   },

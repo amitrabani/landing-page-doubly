@@ -17,12 +17,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Doubly — The ADHD app that helps you start',
+  title: 'Doubly | The ADHD app that helps you start',
   description:
     'Brain dump the chaos, get one clear next step, and use accountability to actually follow through. Built for ADHD minds that need help starting, not just planning.',
   keywords: ['ADHD', 'productivity', 'brain dump', 'task management', 'accountability', 'focus'],
   openGraph: {
-    title: 'Doubly — The ADHD app that helps you start',
+    title: 'Doubly | The ADHD app that helps you start',
     description:
       'Brain dump the chaos, get one clear next step, and use accountability to actually follow through.',
     type: 'website',

@@ -6,7 +6,7 @@ const steps = [
   {
     number: '01',
     title: 'Empty your mind',
-    body: 'Capture thoughts, tasks, and mental clutter fast. No organizing required — just get it out.',
+    body: 'Capture thoughts, tasks, and mental clutter fast. No organizing required. Just get it out.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <rect x="4" y="6" width="24" height="20" rx="4" stroke="currentColor" strokeWidth="1.5" />
@@ -19,7 +19,7 @@ const steps = [
   {
     number: '02',
     title: 'Get one clear next step',
-    body: "Doubly turns overwhelm into something you can actually begin. Not ten priorities — one.",
+    body: "Doubly turns overwhelm into something you can actually begin. Not ten priorities. One.",
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="12" stroke="currentColor" strokeWidth="1.5" />
@@ -32,7 +32,7 @@ const steps = [
   {
     number: '03',
     title: 'Stay in motion',
-    body: 'Use accountability, timers, and progress tools to keep going — even when motivation fades.',
+    body: 'Use accountability, timers, and progress tools to keep going, even when motivation fades.',
     icon: (
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <path d="M6 26l5-8 5 4 5-10 5 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

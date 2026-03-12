@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Doubly',
+  title: 'Privacy Policy | Doubly',
   description: 'Privacy Policy for Doubly, the ADHD task management app.',
 };
 
