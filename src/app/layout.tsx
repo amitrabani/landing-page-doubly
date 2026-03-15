@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'Brain dump the chaos, get one clear next step, and use accountability to actually follow through. Built for ADHD minds that need help starting, not just planning.',
   keywords: ['ADHD', 'productivity', 'brain dump', 'task management', 'accountability', 'focus'],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.ico?v=2',
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
