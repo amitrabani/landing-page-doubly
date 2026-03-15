@@ -2,9 +2,12 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Problem from '@/components/Problem';
 import Guide from '@/components/Guide';
+import BrainDumpDemo from '@/components/BrainDumpDemo';
 import Plan from '@/components/Plan';
+import TaskSplitDemo from '@/components/TaskSplitDemo';
 import TwoQuestions from '@/components/TwoQuestions';
 import Features from '@/components/Features';
+import HabitDemo from '@/components/HabitDemo';
 import Success from '@/components/Success';
 import Stakes from '@/components/Stakes';
 import Testimonials from '@/components/Testimonials';
@@ -21,9 +24,12 @@ export default function Home() {
         <Hero />
         <Problem />
         <Guide />
+        <BrainDumpDemo />
         <Plan />
+        <TaskSplitDemo />
         <TwoQuestions />
         <Features />
+        <HabitDemo />
         <Success />
         <Stakes />
         <Testimonials />

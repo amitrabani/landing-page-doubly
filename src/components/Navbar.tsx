@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,8 +24,11 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-          <a href="#" className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal">
-            doubly
+          <a href="#" className="flex items-center gap-2">
+            <Image src="/icon-192.png" alt="Doubly" width={32} height={32} className="rounded-lg" />
+            <span className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal">
+              doubly
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">

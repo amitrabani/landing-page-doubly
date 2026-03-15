@@ -1,11 +1,15 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-charcoal/5">
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="font-[family-name:var(--font-display)] text-xl font-bold text-charcoal">
-          doubly
+        <div className="flex items-center gap-2">
+          <Image src="/icon-192.png" alt="Doubly" width={28} height={28} className="rounded-lg" />
+          <span className="font-[family-name:var(--font-display)] text-xl font-bold text-charcoal">
+            doubly
+          </span>
         </div>
 
         <div className="flex items-center gap-8">
