@@ -25,10 +25,10 @@ export default function StickyBar() {
           className="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-6 md:hidden"
         >
           <a
-            href="#get-doubly"
+            href="https://app.usedoubly.com"
             className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-3.5 text-base font-medium shadow-xl shadow-charcoal/20"
           >
-            Get Doubly
+            Use Doubly
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

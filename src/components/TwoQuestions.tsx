@@ -156,10 +156,10 @@ export default function TwoQuestions() {
 
                 <div className="mt-6">
                   <a
-                    href="#get-doubly"
+                    href="https://app.usedoubly.com"
                     className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-6 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02]"
                   >
-                    Get Doubly
+                    Use Doubly
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

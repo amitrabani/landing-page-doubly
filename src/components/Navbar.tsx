@@ -45,10 +45,10 @@ export default function Navbar() {
               FAQ
             </a>
             <a
-              href="#get-doubly"
+              href="https://app.usedoubly.com"
               className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-medium hover:bg-charcoal-light transition-colors"
             >
-              Get Doubly
+              Use Doubly
             </a>
           </div>
 
@@ -88,11 +88,11 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#get-doubly"
+                href="https://app.usedoubly.com"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center rounded-full bg-charcoal text-cream px-6 py-3 text-lg font-medium mt-4"
               >
-                Get Doubly
+                Use Doubly
               </a>
             </div>
           </motion.div>

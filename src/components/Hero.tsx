@@ -56,10 +56,10 @@ export default function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
             >
               <a
-                href="#get-doubly"
+                href="https://app.usedoubly.com"
                 className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                Get Doubly
+                Use Doubly
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
                   <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
