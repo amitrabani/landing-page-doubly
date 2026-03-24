@@ -23,8 +23,8 @@ export default function Guide() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Left: copy */}
           <motion.div
-            initial={{ opacity: 0, x: -50, filter: 'blur(8px)' }}
-            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8, ease }}
             className="flex-1"
@@ -62,8 +62,8 @@ export default function Guide() {
             className="flex-1 flex items-center justify-center"
           >
             <motion.div
-              initial={{ opacity: 0, x: 60, filter: 'blur(12px)' }}
-              whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.9, delay: 0.15, ease }}
               className="relative w-full max-w-md"

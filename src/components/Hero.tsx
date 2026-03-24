@@ -34,8 +34,8 @@ export default function Hero() {
           {/* Copy side */}
           <div className="flex-1 text-center lg:text-left">
             <motion.div
-              initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease }}
             >
               <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5 mb-6">
@@ -44,8 +44,8 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.15, ease }}
               className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal leading-[1.1] tracking-tight"
             >
@@ -88,8 +88,8 @@ export default function Hero() {
 
           {/* Phone mockup side */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, filter: 'blur(12px)' }}
-            animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3, ease }}
             className="flex-1 relative flex items-center justify-center"
           >
@@ -143,17 +143,15 @@ export default function Hero() {
               {floatingCards.map((card) => (
                 <motion.div
                   key={card.label}
-                  initial={{ opacity: 0, scale: 0.6, filter: 'blur(8px)' }}
+                  initial={{ opacity: 0, scale: 0.6 }}
                   animate={{
                     opacity: 1,
                     scale: 1,
-                    filter: 'blur(0px)',
                     y: [0, -6, 0],
                   }}
                   transition={{
                     opacity: { duration: 0.6, delay: card.delay + 0.3 },
                     scale: { duration: 0.6, delay: card.delay + 0.3, ease },
-                    filter: { duration: 0.6, delay: card.delay + 0.3 },
                     y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
                   }}
                   className={`absolute ${card.color} rounded-2xl px-4 py-3 shadow-lg shadow-charcoal/5 flex items-center gap-2`}

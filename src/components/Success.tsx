@@ -20,8 +20,8 @@ export default function Success() {
     <section className="py-24 sm:py-32 px-6 bg-gradient-to-b from-cream to-lavender-light/10">
       <div className="mx-auto max-w-4xl text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease }}
         >
@@ -39,8 +39,8 @@ export default function Success() {
           className="mt-14 mx-auto relative max-w-sm sm:max-w-md lg:max-w-lg"
         >
           <motion.div
-            initial={{ opacity: 0, filter: 'blur(16px)' }}
-            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2, ease }}
           >

@@ -20,8 +20,8 @@ export default function VisualProblem() {
     <section ref={sectionRef} className="py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, scale: 0.92, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, scale: 0.92 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease }}
           className="text-center mb-16"

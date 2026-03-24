@@ -10,8 +10,8 @@ export default function FinalCTA() {
     <section id="get-doubly" className="py-24 sm:py-32 px-6 bg-gradient-to-b from-warm to-cream">
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
-          initial={{ opacity: 0, scale: 0.88, filter: 'blur(12px)' }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, scale: 0.88 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.9, ease }}
           className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
@@ -20,8 +20,8 @@ export default function FinalCTA() {
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 20, filter: 'blur(6px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7, delay: 0.15, ease }}
           className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-lavender-dark mt-2"

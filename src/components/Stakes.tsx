@@ -10,8 +10,8 @@ export default function Stakes() {
     <section className="py-24 sm:py-28 px-6">
       <div className="mx-auto max-w-3xl text-center">
         <motion.h2
-          initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
-          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.9, ease }}
           className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal leading-tight"
