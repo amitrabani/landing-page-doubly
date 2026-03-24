@@ -22,12 +22,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TaskSplitDemo />
+        <TwoQuestions />
         <Problem />
         <Guide />
         <BrainDumpDemo />
         <Plan />
-        <TaskSplitDemo />
-        <TwoQuestions />
         <Features />
         <HabitDemo />
         <Success />

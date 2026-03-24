@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import t from '@/translations/en';
 
 interface Subtask {
   text: string;
@@ -14,89 +15,8 @@ interface TaskResult {
   urgency: string | null;
 }
 
-const presets = [
-  { label: 'Clean the kitchen', icon: '🍳' },
-  { label: 'Do laundry', icon: '🧺' },
-  { label: 'Cook dinner', icon: '🍲' },
-  { label: 'Clean the bathroom', icon: '🚿' },
-  { label: 'Organize the bedroom', icon: '🛏️' },
-  { label: 'Grocery shopping', icon: '🛒' },
-];
-
-// Hardcoded results for presets (instant, reliable)
-const presetResults: Record<string, TaskResult> = {
-  'Clean the kitchen': {
-    title: '🍳 Clean the kitchen',
-    subtasks: [
-      { text: 'Clear countertops and put items away', duration: '3 minutes' },
-      { text: 'Load dirty dishes into dishwasher', duration: '5 minutes' },
-      { text: 'Wipe down countertops and stovetop', duration: '4 minutes' },
-      { text: 'Scrub the sink', duration: '2 minutes' },
-      { text: 'Sweep the floor', duration: '3 minutes' },
-      { text: 'Take out the trash', duration: '2 minutes' },
-    ],
-    urgency: 'medium',
-  },
-  'Do laundry': {
-    title: '🧺 Do the laundry',
-    subtasks: [
-      { text: 'Gather dirty clothes from around the house', duration: '5 minutes' },
-      { text: 'Sort into whites, colors, and delicates', duration: '3 minutes' },
-      { text: 'Load first batch into washing machine', duration: '2 minutes' },
-      { text: 'Hang or fold dry clothes from last load', duration: '10 minutes' },
-      { text: 'Put folded clothes away in drawers/closet', duration: '5 minutes' },
-    ],
-    urgency: null,
-  },
-  'Cook dinner': {
-    title: '🍲 Cook dinner',
-    subtasks: [
-      { text: 'Decide what to make and check ingredients', duration: '3 minutes' },
-      { text: 'Wash and prep vegetables', duration: '8 minutes' },
-      { text: 'Start cooking main dish', duration: '15 minutes' },
-      { text: 'Prepare side dish or salad', duration: '7 minutes' },
-      { text: 'Set the table', duration: '2 minutes' },
-      { text: 'Plate and serve', duration: '2 minutes' },
-    ],
-    urgency: 'high',
-  },
-  'Clean the bathroom': {
-    title: '🚿 Clean the bathroom',
-    subtasks: [
-      { text: 'Spray cleaner on shower, sink, and toilet', duration: '2 minutes' },
-      { text: 'Scrub the toilet bowl and wipe the seat', duration: '3 minutes' },
-      { text: 'Clean the sink and faucet', duration: '2 minutes' },
-      { text: 'Wipe down the mirror', duration: '1 minute' },
-      { text: 'Scrub the shower/tub', duration: '5 minutes' },
-      { text: 'Mop or wipe the floor', duration: '3 minutes' },
-      { text: 'Replace towels and restock toilet paper', duration: '2 minutes' },
-    ],
-    urgency: 'medium',
-  },
-  'Organize the bedroom': {
-    title: '🛏️ Organize the bedroom',
-    subtasks: [
-      { text: 'Make the bed and straighten pillows', duration: '3 minutes' },
-      { text: 'Pick up clothes from floor and chairs', duration: '4 minutes' },
-      { text: 'Put dirty clothes in hamper, clean ones away', duration: '5 minutes' },
-      { text: 'Clear and organize nightstand', duration: '3 minutes' },
-      { text: 'Dust surfaces', duration: '3 minutes' },
-      { text: 'Vacuum or sweep the floor', duration: '4 minutes' },
-    ],
-    urgency: 'low',
-  },
-  'Grocery shopping': {
-    title: '🛒 Grocery shopping',
-    subtasks: [
-      { text: 'Check fridge and pantry for what you need', duration: '5 minutes' },
-      { text: 'Write a list grouped by aisle', duration: '5 minutes' },
-      { text: 'Grab reusable bags', duration: '1 minute' },
-      { text: 'Shop and check off items', duration: '30 minutes' },
-      { text: 'Unpack and put groceries away', duration: '10 minutes' },
-    ],
-    urgency: null,
-  },
-};
+const presets = t.taskSplitDemo.presets;
+const presetResults = t.taskSplitDemo.presetResults as unknown as Record<string, TaskResult>;
 
 // Call AI for custom (non-preset) tasks
 async function splitTaskAI(task: string): Promise<TaskResult> {
@@ -189,10 +109,10 @@ export default function TaskSplitDemo() {
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            Type a task. Watch it split.
+            {t.taskSplitDemo.title}
           </h2>
           <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
-            Big tasks feel impossible. Doubly breaks them into small, doable steps so you can just start.
+            {t.taskSplitDemo.subtitle}
           </p>
         </motion.div>
 
@@ -234,14 +154,14 @@ export default function TaskSplitDemo() {
               value={customInput}
               onChange={(e) => setCustomInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleCustomSubmit()}
-              placeholder="Or type your own task..."
+              placeholder={t.taskSplitDemo.customInputPlaceholder}
               className="flex-1 rounded-full px-5 py-2.5 text-sm bg-white/80 border border-charcoal/8 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/40 focus:ring-2 focus:ring-lavender/10 transition-all"
             />
             <button
               onClick={handleCustomSubmit}
               className="rounded-full px-5 py-2.5 text-sm font-medium bg-charcoal text-cream hover:bg-charcoal-light transition-all hover:scale-[1.02]"
             >
-              Split it
+              {t.taskSplitDemo.splitButton}
             </button>
           </div>
         </motion.div>
@@ -266,7 +186,7 @@ export default function TaskSplitDemo() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xs text-lavender-dark font-medium">Task</div>
+                    <div className="text-xs text-lavender-dark font-medium">{t.taskSplitDemo.taskLabel}</div>
                     <div className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
                       {taskResult?.title || activeTask}
                     </div>
@@ -280,7 +200,7 @@ export default function TaskSplitDemo() {
                         ? 'bg-lavender-light/30 text-lavender-dark'
                         : 'bg-sage/15 text-sage-dark'
                   }`}>
-                    {taskResult.urgency} urgency
+                    {taskResult.urgency} {t.taskSplitDemo.urgencySuffix}
                   </span>
                 )}
               </div>
@@ -298,14 +218,14 @@ export default function TaskSplitDemo() {
                       />
                     ))}
                   </div>
-                  AI is breaking it down...
+                  {t.taskSplitDemo.aiThinking}
                 </div>
               )}
 
               {/* Error state */}
               {error && !isTyping && (
                 <div className="text-center py-4">
-                  <p className="text-muted text-sm mb-3">Could not reach AI right now. Try a preset above or try again.</p>
+                  <p className="text-muted text-sm mb-3">{t.taskSplitDemo.errorMessage}</p>
                   <button
                     onClick={() => {
                       const task = activeTask;
@@ -314,7 +234,7 @@ export default function TaskSplitDemo() {
                     }}
                     className="text-sm font-medium text-lavender-dark hover:underline"
                   >
-                    Try again
+                    {t.taskSplitDemo.tryAgain}
                   </button>
                 </div>
               )}
@@ -324,10 +244,10 @@ export default function TaskSplitDemo() {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between mb-3">
                     <div className="text-xs font-medium text-muted-light">
-                      {checked.size}/{subtasks.length} steps done
+                      {t.taskSplitDemo.stepsDone(checked.size, subtasks.length)}
                     </div>
                     <div className="text-xs text-muted-light">
-                      ~{subtasks.reduce((sum, st) => sum + parseDuration(st.duration), 0)} min total
+                      {t.taskSplitDemo.minTotal(subtasks.reduce((sum, st) => sum + parseDuration(st.duration), 0))}
                     </div>
                   </div>
                   {subtasks.map((st, idx) => (
@@ -404,16 +324,16 @@ export default function TaskSplitDemo() {
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                      All done. That wasn&apos;t so hard, right?
+                      {t.taskSplitDemo.allDoneMessage}
                     </div>
                     <p className="text-muted text-sm mb-5 max-w-sm mx-auto">
-                      Doubly does this for every task you throw at it. No more staring at a giant to-do list.
+                      {t.taskSplitDemo.allDoneDescription}
                     </p>
                     <a
                       href="https://app.usedoubly.com"
                       className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] shadow-lg shadow-charcoal/10"
                     >
-                      Use Doubly
+                      {t.taskSplitDemo.allDoneCta}
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>

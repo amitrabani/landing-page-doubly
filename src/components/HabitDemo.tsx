@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import t from '@/translations/en';
 
 interface Habit {
   id: string;
@@ -21,26 +22,28 @@ interface Habit {
   pct: string;
 }
 
+const habitTranslations = t.habitDemo.habits;
+
 const sampleHabits: Habit[] = [
   {
-    id: 'water',
-    name: 'Drink water',
-    icon: '💧',
+    id: habitTranslations[0].id,
+    name: habitTranslations[0].name,
+    icon: habitTranslations[0].icon,
     color: 'text-sky',
     colorBg: 'bg-sky-light/25',
     colorCheck: 'bg-sky border-sky',
     type: 'count',
     target: 8,
-    unit: 'glasses',
+    unit: habitTranslations[0].unit,
     gridColors: ['bg-charcoal/5', 'bg-sky-light/30', 'bg-sky-light/50', 'bg-sky/60', 'bg-sky'],
     streak: 23,
     best: 41,
     pct: '78%',
   },
   {
-    id: 'walk',
-    name: 'Go for a walk',
-    icon: '🚶',
+    id: habitTranslations[1].id,
+    name: habitTranslations[1].name,
+    icon: habitTranslations[1].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -52,9 +55,9 @@ const sampleHabits: Habit[] = [
     pct: '65%',
   },
   {
-    id: 'read',
-    name: 'Read 10 pages',
-    icon: '📖',
+    id: habitTranslations[2].id,
+    name: habitTranslations[2].name,
+    icon: habitTranslations[2].icon,
     color: 'text-lavender-dark',
     colorBg: 'bg-lavender-light/25',
     colorCheck: 'bg-lavender border-lavender',
@@ -66,9 +69,9 @@ const sampleHabits: Habit[] = [
     pct: '54%',
   },
   {
-    id: 'journal',
-    name: 'Journal',
-    icon: '✏️',
+    id: habitTranslations[3].id,
+    name: habitTranslations[3].name,
+    icon: habitTranslations[3].icon,
     color: 'text-coral-dark',
     colorBg: 'bg-coral-light/25',
     colorCheck: 'bg-coral border-coral',
@@ -80,9 +83,9 @@ const sampleHabits: Habit[] = [
     pct: '42%',
   },
   {
-    id: 'tidy',
-    name: '10-min tidy',
-    icon: '🧹',
+    id: habitTranslations[4].id,
+    name: habitTranslations[4].name,
+    icon: habitTranslations[4].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -181,10 +184,10 @@ export default function HabitDemo() {
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            Build habits that actually stick
+            {t.habitDemo.title}
           </h2>
           <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
-            No streaks to break. No guilt. Just tap when you do the thing. Doubly tracks the pattern so you can see progress.
+            {t.habitDemo.subtitle}
           </p>
         </motion.div>
 
@@ -200,9 +203,9 @@ export default function HabitDemo() {
             <div className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6">
               <div className="flex items-center justify-between mb-5">
                 <div>
-                  <div className="text-xs font-medium text-muted-light">Today</div>
+                  <div className="text-xs font-medium text-muted-light">{t.habitDemo.todayLabel}</div>
                   <div className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
-                    Your habits
+                    {t.habitDemo.yourHabits}
                   </div>
                 </div>
                 <div className="text-sm text-muted">
@@ -291,16 +294,16 @@ export default function HabitDemo() {
                     className="mt-6 text-center"
                   >
                     <div className="inline-flex items-center gap-2 rounded-full bg-sage/15 px-4 py-2 text-sm font-medium text-sage-dark mb-4">
-                      All habits done for today!
+                      {t.habitDemo.allDoneMessage}
                     </div>
                     <p className="text-muted text-sm mb-5 max-w-xs mx-auto">
-                      Imagine this every day. Doubly makes it easy to keep going.
+                      {t.habitDemo.allDoneDescription}
                     </p>
                     <a
                       href="https://app.usedoubly.com"
                       className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] shadow-lg shadow-charcoal/10"
                     >
-                      Use Doubly
+                      {t.habitDemo.allDoneCta}
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -325,18 +328,18 @@ export default function HabitDemo() {
                 <div className="flex items-center gap-2">
                   <span className="text-lg">{activeHabit.icon}</span>
                   <div>
-                    <div className="text-xs font-medium text-muted-light">12 weeks</div>
+                    <div className="text-xs font-medium text-muted-light">{t.habitDemo.weeksLabel}</div>
                     <div className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
                       {activeHabit.name}
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-1">
-                  <div className="text-xs text-muted-light">Less</div>
+                  <div className="text-xs text-muted-light">{t.habitDemo.lessLabel}</div>
                   {activeHabit.gridColors.map((c, i) => (
                     <div key={i} className={`w-3 h-3 rounded-sm ${c}`} />
                   ))}
-                  <div className="text-xs text-muted-light">More</div>
+                  <div className="text-xs text-muted-light">{t.habitDemo.moreLabel}</div>
                 </div>
               </div>
 
@@ -405,7 +408,7 @@ export default function HabitDemo() {
                   >
                     {activeHabit.streak}
                   </motion.div>
-                  <div className="text-xs text-muted-light">Current streak</div>
+                  <div className="text-xs text-muted-light">{t.habitDemo.currentStreak}</div>
                 </div>
                 <div className="text-center">
                   <motion.div
@@ -416,7 +419,7 @@ export default function HabitDemo() {
                   >
                     {activeHabit.best}
                   </motion.div>
-                  <div className="text-xs text-muted-light">Best streak</div>
+                  <div className="text-xs text-muted-light">{t.habitDemo.bestStreak}</div>
                 </div>
                 <div className="text-center">
                   <motion.div
@@ -427,7 +430,7 @@ export default function HabitDemo() {
                   >
                     {activeHabit.pct}
                   </motion.div>
-                  <div className="text-xs text-muted-light">Completion</div>
+                  <div className="text-xs text-muted-light">{t.habitDemo.completion}</div>
                 </div>
               </div>
             </div>

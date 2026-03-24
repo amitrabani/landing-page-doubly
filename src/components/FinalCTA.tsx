@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import t from '@/translations/en';
 
 export default function FinalCTA() {
   return (
@@ -13,13 +14,13 @@ export default function FinalCTA() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            Your brain doesn&apos;t need more pressure
+            {t.finalCta.title}
           </h2>
           <p className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-lavender-dark mt-2">
-            It needs a better starting point.
+            {t.finalCta.highlight}
           </p>
           <p className="mt-6 text-muted text-lg max-w-lg mx-auto">
-            For ADHD minds that need help starting, resetting, and following through.
+            {t.finalCta.subtitle}
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -27,14 +28,14 @@ export default function FinalCTA() {
               href="https://app.usedoubly.com"
               className="inline-flex items-center gap-3 rounded-full bg-charcoal text-cream px-10 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-charcoal/10"
             >
-              Use Doubly
+              {t.finalCta.cta}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
           </div>
 
-          <p className="mt-4 text-sm text-muted-light">Free to start. No credit card required.</p>
+          <p className="mt-4 text-sm text-muted-light">{t.finalCta.disclaimer}</p>
         </motion.div>
       </div>
     </section>

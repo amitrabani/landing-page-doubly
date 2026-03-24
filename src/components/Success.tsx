@@ -1,13 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-const outcomes = [
-  'Stop carrying everything in your head',
-  'Start tasks faster, not perfectly',
-  'Recover quicker after getting off track',
-  'Feel progress, not just pressure',
-];
+import t from '@/translations/en';
 
 export default function Success() {
   return (
@@ -20,15 +14,15 @@ export default function Success() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            Imagine your day feeling lighter
+            {t.success.title}
           </h2>
           <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
-            Not flawless productivity. Just less friction, less guilt, and more forward motion.
+            {t.success.subtitle}
           </p>
         </motion.div>
 
         <div className="mt-14 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
-          {outcomes.map((outcome, i) => (
+          {t.success.outcomes.map((outcome, i) => (
             <motion.div
               key={outcome}
               initial={{ opacity: 0, scale: 0.95 }}

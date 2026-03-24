@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import t from '@/translations/en';
 
 export default function Footer() {
   return (
@@ -8,24 +9,24 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           <Image src="/icon-192.png" alt="Doubly" width={28} height={28} className="rounded-lg" />
           <span className="font-[family-name:var(--font-display)] text-xl font-bold text-charcoal">
-            doubly
+            {t.footer.brand}
           </span>
         </div>
 
         <div className="flex items-center gap-8">
           <Link href="/privacy" className="text-sm text-muted hover:text-charcoal transition-colors">
-            Privacy
+            {t.footer.privacy}
           </Link>
           <Link href="/terms" className="text-sm text-muted hover:text-charcoal transition-colors">
-            Terms
+            {t.footer.terms}
           </Link>
           <Link href="/support" className="text-sm text-muted hover:text-charcoal transition-colors">
-            Support
+            {t.footer.support}
           </Link>
         </div>
 
         <div className="text-sm text-muted-light">
-          &copy; {new Date().getFullYear()} Doubly. Built for ADHD brains.
+          {t.footer.copyright(new Date().getFullYear())}
         </div>
       </div>
     </footer>

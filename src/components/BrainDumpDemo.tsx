@@ -2,23 +2,17 @@
 
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import t from '@/translations/en';
 
-const DUMP_TEXT =
-  'I open my laptop to be productive and within five seconds my brain is like: answer that message, order vitamins, clean the sink, find the charger, eat something, and also remember the super important task you were definitely not going to forget. Which I immediately forgot.';
-
-const tasks = [
-  { text: '💊 Order vitamins', phrase: 'order vitamins' },
-  { text: '🧹 Clean the sink', phrase: 'clean the sink' },
-  { text: '🔌 Find the charger', phrase: 'find the charger' },
-  { text: '🍽️ Eat something', phrase: 'eat something' },
-];
+const DUMP_TEXT = t.brainDumpDemo.dumpText;
+const tasks = t.brainDumpDemo.tasks;
 
 // Precompute character ranges for each task phrase in the dump text
 function computeRanges() {
   const lower = DUMP_TEXT.toLowerCase();
-  return tasks.map((t) => {
-    const start = lower.indexOf(t.phrase);
-    return { start, end: start + t.phrase.length };
+  return tasks.map((task) => {
+    const start = lower.indexOf(task.phrase);
+    return { start, end: start + task.phrase.length };
   });
 }
 
@@ -26,7 +20,6 @@ export default function BrainDumpDemo() {
   const [typedLength, setTypedLength] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const [done, setDone] = useState(false);
-  const [paused, setPaused] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const ranges = useMemo(computeRanges, []);
 
@@ -65,38 +58,32 @@ export default function BrainDumpDemo() {
 
   // Typewriter effect
   useEffect(() => {
-    if (!hasStarted || done || paused) return;
+    if (!hasStarted || done) return;
     if (typedLength >= DUMP_TEXT.length) {
       setDone(true);
       return;
     }
 
-    // Pause briefly after completing a task phrase, then advance past it
-    if (justFinishedTask) {
-      setPaused(true);
-      const timer = setTimeout(() => {
-        setTypedLength((l) => l + 1);
-        setPaused(false);
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-
-    // Typing speed: slow inside task phrases (so user can read), fast otherwise
-    const char = DUMP_TEXT[typedLength];
+    // Determine delay: pause after completing a task, slow inside tasks, fast otherwise
     let delay: number;
-    if (insideTask) {
+    if (justFinishedTask) {
+      delay = 500;
+    } else if (insideTask) {
       delay = 45;
-    } else if (char === ',' || char === '.' || char === ':') {
-      delay = 90;
-    } else if (char === ' ') {
-      delay = 15;
     } else {
-      delay = 22;
+      const char = DUMP_TEXT[typedLength];
+      if (char === ',' || char === '.' || char === ':') {
+        delay = 90;
+      } else if (char === ' ') {
+        delay = 15;
+      } else {
+        delay = 22;
+      }
     }
 
     const timer = setTimeout(() => setTypedLength((l) => l + 1), delay);
     return () => clearTimeout(timer);
-  }, [hasStarted, done, paused, typedLength, insideTask, justFinishedTask]);
+  }, [hasStarted, done, typedLength, insideTask, justFinishedTask]);
 
   // Build rendered text with highlights
   const renderedText = useMemo(() => {
@@ -156,10 +143,10 @@ export default function BrainDumpDemo() {
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            Dump the chaos. Keep the tasks.
+            {t.brainDumpDemo.title}
           </h2>
           <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
-            Brain full? Just type. Doubly pulls out the actionable stuff and throws away the noise.
+            {t.brainDumpDemo.subtitle}
           </p>
         </motion.div>
 
@@ -181,8 +168,8 @@ export default function BrainDumpDemo() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs text-lavender-dark font-medium">Brain Dump</div>
-                  <div className="text-xs text-muted-light">Just let it out...</div>
+                  <div className="text-xs text-lavender-dark font-medium">{t.brainDumpDemo.brainDumpLabel}</div>
+                  <div className="text-xs text-muted-light">{t.brainDumpDemo.brainDumpPlaceholder}</div>
                 </div>
               </div>
 
@@ -230,7 +217,7 @@ export default function BrainDumpDemo() {
                       <circle cx="7" cy="7" r="6" stroke="currentColor" strokeWidth="1" />
                       <path d="M7 4.5v3M7 9.5v0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
                     </svg>
-                    <span>Non-actionable thoughts filtered out. Only real tasks kept.</span>
+                    <span>{t.brainDumpDemo.filterNote}</span>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -253,9 +240,9 @@ export default function BrainDumpDemo() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-xs text-sage-dark font-medium">Extracted Tasks</div>
+                  <div className="text-xs text-sage-dark font-medium">{t.brainDumpDemo.extractedTasksLabel}</div>
                   <div className="text-xs text-muted-light">
-                    {revealedCount > 0 ? `${revealedCount} task${revealedCount > 1 ? 's' : ''} found` : 'Listening...'}
+                    {revealedCount > 0 ? t.brainDumpDemo.tasksFound(revealedCount) : t.brainDumpDemo.listening}
                   </div>
                 </div>
               </div>

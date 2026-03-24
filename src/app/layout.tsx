@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Inter } from 'next/font/google';
 import './globals.css';
+import t from '@/translations/en';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -17,19 +18,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Doubly | The ADHD app that helps you start',
-  description:
-    'Brain dump the chaos, get one clear next step, and use accountability to actually follow through. Built for ADHD minds that need help starting, not just planning.',
-  keywords: ['ADHD', 'productivity', 'brain dump', 'task management', 'accountability', 'focus'],
+  title: t.metadata.title,
+  description: t.metadata.description,
+  keywords: [...t.metadata.keywords],
   icons: {
     icon: '/favicon.ico?v=2',
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',
   openGraph: {
-    title: 'Doubly | The ADHD app that helps you start',
-    description:
-      'Brain dump the chaos, get one clear next step, and use accountability to actually follow through.',
+    title: t.metadata.ogTitle,
+    description: t.metadata.ogDescription,
     type: 'website',
   },
 };

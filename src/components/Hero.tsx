@@ -1,11 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import t from '@/translations/en';
 
 const floatingCards = [
-  { label: 'Brain Dump', icon: '💭', x: -180, y: -60, delay: 0.3, color: 'bg-lavender-light' },
-  { label: 'Next Step', icon: '✨', x: 180, y: -40, delay: 0.5, color: 'bg-coral-light' },
-  { label: 'Accountability', icon: '🤝', x: 0, y: 160, delay: 0.7, color: 'bg-sky-light' },
+  { label: t.hero.floatingCards.brainDump, icon: '💭', x: -180, y: -60, delay: 0.3, color: 'bg-lavender-light' },
+  { label: t.hero.floatingCards.nextStep, icon: '✨', x: 180, y: -40, delay: 0.5, color: 'bg-coral-light' },
+  { label: t.hero.floatingCards.accountability, icon: '🤝', x: 0, y: 160, delay: 0.7, color: 'bg-sky-light' },
 ];
 
 export default function Hero() {
@@ -26,7 +27,7 @@ export default function Hero() {
               transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5 mb-6">
-                Built for ADHD brains
+                {t.hero.badge}
               </span>
             </motion.div>
 
@@ -36,8 +37,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
               className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-bold text-charcoal leading-[1.1] tracking-tight"
             >
-              The ADHD app that helps you{' '}
-              <span className="text-lavender-dark">start</span>
+              {t.hero.titlePrefix}{' '}
+              <span className="text-lavender-dark">{t.hero.titleHighlight}</span>
             </motion.h1>
 
             <motion.p
@@ -46,7 +47,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
               className="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-lg mx-auto lg:mx-0"
             >
-              Brain dump the chaos, get one clear next step, and use accountability to actually follow through.
+              {t.hero.subtitle}
             </motion.p>
 
             <motion.div
@@ -59,7 +60,7 @@ export default function Hero() {
                 href="https://app.usedoubly.com"
                 className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                Use Doubly
+                {t.hero.cta}
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
                   <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -68,7 +69,7 @@ export default function Hero() {
                 href="#how-it-works"
                 className="inline-flex items-center gap-2 rounded-full border border-charcoal/15 text-charcoal px-8 py-4 text-lg font-medium hover:bg-charcoal/5 transition-all"
               >
-                See how it works
+                {t.hero.secondaryCta}
               </a>
             </motion.div>
           </div>
@@ -89,32 +90,32 @@ export default function Hero() {
                 </div>
                 {/* Screen content — simplified app UI */}
                 <div className="px-5 pb-6 bg-cream">
-                  <div className="text-xs font-medium text-muted-light mb-3">Good morning</div>
+                  <div className="text-xs font-medium text-muted-light mb-3">{t.hero.phone.greeting}</div>
                   <div className="text-base font-[family-name:var(--font-display)] font-semibold text-charcoal mb-4">
-                    Your next step
+                    {t.hero.phone.yourNextStep}
                   </div>
                   {/* Active task card */}
                   <div className="bg-lavender-light/40 rounded-2xl p-4 mb-3">
                     <div className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full border-2 border-lavender-dark" />
-                      <span className="text-sm font-medium text-charcoal">Put laundry in washer</span>
+                      <span className="text-sm font-medium text-charcoal">{t.hero.phone.activeTask}</span>
                     </div>
                     <div className="mt-2 flex items-center gap-2">
                       <div className="text-xs text-lavender-dark bg-lavender-light/60 rounded-full px-2.5 py-0.5">
-                        10 min
+                        {t.hero.phone.duration}
                       </div>
-                      <div className="text-xs text-muted-light">from brain dump</div>
+                      <div className="text-xs text-muted-light">{t.hero.phone.fromBrainDump}</div>
                     </div>
                   </div>
                   {/* Dimmed tasks */}
                   <div className="space-y-2 opacity-40">
                     <div className="bg-white/60 rounded-xl p-3 flex items-center gap-3">
                       <div className="w-4 h-4 rounded-full border border-charcoal/20" />
-                      <span className="text-xs text-muted">Reply to Sarah</span>
+                      <span className="text-xs text-muted">{t.hero.phone.task1}</span>
                     </div>
                     <div className="bg-white/60 rounded-xl p-3 flex items-center gap-3">
                       <div className="w-4 h-4 rounded-full border border-charcoal/20" />
-                      <span className="text-xs text-muted">Start project outline</span>
+                      <span className="text-xs text-muted">{t.hero.phone.task2}</span>
                     </div>
                   </div>
                   {/* Bottom bar mockup */}

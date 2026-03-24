@@ -2,35 +2,9 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import t from '@/translations/en';
 
-const faqs = [
-  {
-    q: 'Is Doubly only for people diagnosed with ADHD?',
-    a: "No. Doubly is for anyone who struggles with starting, overwhelm, or mental clutter. You don't need a diagnosis, just a brain that sometimes freezes when there's too much to do.",
-  },
-  {
-    q: 'How is this different from a normal to-do app?',
-    a: "To-do apps help you list things. Doubly helps you actually begin them. We focus on reducing initiation resistance, the gap between knowing what to do and doing it, with brain dumps, one-step clarity, and accountability.",
-  },
-  {
-    q: 'Does it help with task initiation specifically?',
-    a: "Yes. That's our core focus. Brain dump clears mental clutter, next-step clarity picks one doable action, and accountability tools help you follow through. Every feature is built around that first step.",
-  },
-  {
-    q: 'What makes accountability different here?',
-    a: "It's not nagging or streaks that make you feel guilty. Doubly uses gentle social check-ins with real people who care about your progress, so you have someone in your corner, not a robot shaming you.",
-  },
-  {
-    q: 'Does it replace habit trackers or planners?',
-    a: "It can. But Doubly isn't trying to be a swiss army knife. It's laser-focused on helping you move from stuck to started. If you need detailed project planning, pair it with your existing tools.",
-  },
-  {
-    q: 'Is it good if I get overwhelmed easily?',
-    a: "Especially then. Doubly never shows you everything at once. You see one next step, not a wall of tasks. The entire UX is designed for brains that get overloaded fast.",
-  },
-];
-
-function FAQItem({ faq, index }: { faq: (typeof faqs)[0]; index: number }) {
+function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -89,12 +63,12 @@ export default function FAQ() {
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal">
-            Questions
+            {t.faq.title}
           </h2>
         </motion.div>
 
         <div className="bg-white/60 backdrop-blur-sm rounded-3xl border border-charcoal/5 px-6 sm:px-8">
-          {faqs.map((faq, i) => (
+          {t.faq.items.map((faq, i) => (
             <FAQItem key={faq.q} faq={faq} index={i} />
           ))}
         </div>

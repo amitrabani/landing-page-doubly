@@ -1,24 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-
-const testimonials = [
-  {
-    quote: 'I actually opened it when I was stuck. First app that felt like it was built for that exact moment.',
-    name: 'Maya R.',
-    label: 'ADHD, diagnosed at 28',
-  },
-  {
-    quote: 'Brain dump helped instantly. I went from 20 things spinning in my head to one task on screen.',
-    name: 'Jordan T.',
-    label: 'College student with ADHD',
-  },
-  {
-    quote: "This is the first app that helped me start, not just plan. I've tried every productivity app and this one actually gets it.",
-    name: 'Alex K.',
-    label: 'Freelance designer',
-  },
-];
+import t from '@/translations/en';
 
 export default function Testimonials() {
   return (
@@ -32,15 +15,15 @@ export default function Testimonials() {
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight max-w-3xl mx-auto">
-            People don&apos;t need more productivity pressure
+            {t.testimonials.title}
           </h2>
-          <p className="mt-4 text-muted text-lg">They need help getting started.</p>
+          <p className="mt-4 text-muted text-lg">{t.testimonials.subtitle}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+          {t.testimonials.items.map((item, i) => (
             <motion.div
-              key={t.name}
+              key={item.name}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
@@ -56,16 +39,16 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-charcoal text-sm leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-charcoal text-sm leading-relaxed flex-1">&ldquo;{item.quote}&rdquo;</p>
 
               <div className="mt-5 pt-5 border-t border-charcoal/5">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-lavender-light/40 flex items-center justify-center text-sm font-semibold text-lavender-dark">
-                    {t.name.charAt(0)}
+                    {item.name.charAt(0)}
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-charcoal">{t.name}</div>
-                    <div className="text-xs text-muted-light">{t.label}</div>
+                    <div className="text-sm font-medium text-charcoal">{item.name}</div>
+                    <div className="text-xs text-muted-light">{item.label}</div>
                   </div>
                 </div>
               </div>
