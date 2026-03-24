@@ -37,30 +37,40 @@ const en = {
 
   // Problem
   problem: {
-    title: 'ADHD is not just \u201cbeing unorganized\u201d',
+    title: "ADHD isn\u2019t just being unorganized",
     subtitle:
       "It\u2019s a daily battle with a brain that won\u2019t cooperate with your own intentions.",
     cards: [
       {
         type: 'External',
         title: 'Too many tasks. Too many thoughts.',
-        body: 'No clear starting point. Everything feels equally urgent and equally impossible.',
+        body: 'No clear place to start.',
       },
       {
         type: 'Internal',
         title: "You know what to do, but still can\u2019t start.",
-        body: "The gap between knowing and doing keeps getting bigger \u2014 and it\u2019s exhausting. It\u2019s not laziness. It\u2019s initiation resistance.",
+        body: "It\u2019s not laziness. It\u2019s initiation resistance.",
       },
       {
         type: 'Philosophical',
-        title: "It shouldn\u2019t be this hard to start normal things.",
-        body: "You shouldn\u2019t need superhuman effort just to begin. Your brain works differently. Your tools should too.",
+        title: "It shouldn\u2019t be this hard to start.",
+        body: "Your brain works differently. Your tools should too.",
       },
       {
         type: 'Stakes',
         title: "And it\u2019s costing you more than time.",
-        body: "Things pile up. You fall behind. And it starts to feel like you can\u2019t trust yourself to follow through.",
+        body: "Things pile up. You fall behind. You start to lose trust in yourself.",
       },
+    ],
+  },
+
+  // VisualProblem
+  visualProblem: {
+    cards: [
+      { image: '/problem-1.jpg', alt: 'Too many tasks. Too many thoughts.' },
+      { image: '/problem-2.jpg', alt: "You know what to do, but still can\u2019t start." },
+      { image: '/problem-4.jpg', alt: "It shouldn\u2019t be this hard to start normal things." },
+      { image: '/problem-3.jpg', alt: "And it\u2019s costing you more than time." },
     ],
   },
 
@@ -304,29 +314,6 @@ const en = {
     mockupCta: 'Try Doubly free',
   },
 
-  // Features
-  features: {
-    title: 'Everything designed to reduce friction',
-    subtitle: 'Not more features. Less resistance between you and doing.',
-    items: [
-      {
-        title: 'Brain Dump',
-        body: 'Get thoughts out fast before they disappear. No categories, no pressure. Just capture.',
-      },
-      {
-        title: 'Next-Step Clarity',
-        body: 'Turn \u201cI should do something\u201d into one visible action. Doubly picks your starting point.',
-      },
-      {
-        title: 'Accountability',
-        body: 'Social check-ins and gentle nudges help you actually follow through, not just plan.',
-      },
-      {
-        title: 'Momentum Tools',
-        body: "Timers, habits, and progress tracking that don\u2019t disappear the second life gets messy.",
-      },
-    ],
-  },
 
   // HabitDemo
   habitDemo: {
@@ -379,19 +366,19 @@ const en = {
       {
         quote:
           'I actually opened it when I was stuck. First app that felt like it was built for that exact moment.',
-        name: 'Maya R.',
-        label: 'ADHD, diagnosed at 28',
+        name: 'Maya Reeves',
+        label: 'Living with ADHD',
       },
       {
         quote:
           'Brain dump helped instantly. I went from 20 things spinning in my head to one task on screen.',
-        name: 'Jordan T.',
+        name: 'Jordan Torres',
         label: 'College student with ADHD',
       },
       {
         quote:
           "This is the first app that helped me start, not just plan. I've tried every productivity app and this one actually gets it.",
-        name: 'Alex K.',
+        name: 'Alex Kim',
         label: 'Freelance designer',
       },
     ],

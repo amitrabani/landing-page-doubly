@@ -20,7 +20,7 @@
   --color-muted: #7A7680;
   --color-muted-light: #9E9AA4;
 
-  --font-display: 'DM Sans', system-ui, sans-serif;
+  --font-display: var(--font-body);
   --font-body: 'Inter', system-ui, sans-serif;
 }
 

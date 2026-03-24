@@ -3,15 +3,34 @@
 import { motion } from 'framer-motion';
 import t from '@/translations/en';
 
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.7, ease },
+  },
+};
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="py-24 sm:py-32 px-6 bg-warm">
       <div className="mx-auto max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease }}
           className="text-center mb-14"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight max-w-3xl mx-auto">
@@ -20,14 +39,17 @@ export default function Testimonials() {
           <p className="mt-4 text-muted text-lg">{t.testimonials.subtitle}</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {t.testimonials.items.map((item, i) => (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          className="grid md:grid-cols-3 gap-6"
+        >
+          {t.testimonials.items.map((item) => (
             <motion.div
               key={item.name}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
+              variants={cardVariants}
               className="bg-white/80 rounded-3xl border border-charcoal/5 p-7 flex flex-col"
             >
               {/* Stars */}
@@ -54,7 +76,7 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

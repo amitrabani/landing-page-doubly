@@ -1,17 +1,29 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 import t from '@/translations/en';
 
+const ease = [0.25, 0.1, 0.25, 1] as const;
+
 export default function Success() {
+  const imageRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const imageScale = useTransform(scrollYProgress, [0, 0.4], [0.88, 1]);
+  const imageY = useTransform(scrollYProgress, [0, 1], [40, -30]);
+
   return (
     <section className="py-24 sm:py-32 px-6 bg-gradient-to-b from-cream to-lavender-light/10">
       <div className="mx-auto max-w-4xl text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease }}
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
             {t.success.title}
@@ -21,25 +33,28 @@ export default function Success() {
           </p>
         </motion.div>
 
-        <div className="mt-14 grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
-          {t.success.outcomes.map((outcome, i) => (
-            <motion.div
-              key={outcome}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
-              className="flex items-center gap-3 bg-white/80 rounded-2xl px-5 py-4 border border-charcoal/5"
-            >
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-sage/20 flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M3 7l3 3 5-5.5" stroke="#8A9B80" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-charcoal text-left">{outcome}</span>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          ref={imageRef}
+          style={{ scale: imageScale, y: imageY }}
+          className="mt-14 mx-auto relative max-w-sm sm:max-w-md lg:max-w-lg"
+        >
+          <motion.div
+            initial={{ opacity: 0, filter: 'blur(16px)' }}
+            whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.2, ease }}
+          >
+            <div className="relative rounded-3xl overflow-hidden bg-white shadow-[0_4px_24px_rgba(0,0,0,0.06),0_1px_4px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.03]">
+              <img
+                src="/social-proof.png"
+                alt="Social media posts from real users sharing their productivity wins"
+                className="w-full h-auto block"
+              />
+              {/* Soft edge vignette */}
+              <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.03)]" />
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
