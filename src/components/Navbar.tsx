@@ -15,7 +15,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = [t.navbar.howItWorks, t.navbar.features, t.navbar.testimonials, t.navbar.faq];
+  const navLinks = [t.navbar.howItWorks, t.navbar.testimonials, t.navbar.faq];
 
   return (
     <>
@@ -38,10 +38,7 @@ export default function Navbar() {
             <a href="#how-it-works" className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.howItWorks}
             </a>
-            <a href="#features" className="text-sm text-muted hover:text-charcoal transition-colors">
-              {t.navbar.features}
-            </a>
-            <a href="#testimonials" className="text-sm text-muted hover:text-charcoal transition-colors">
+<a href="#testimonials" className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.testimonials}
             </a>
             <a href="#faq" className="text-sm text-muted hover:text-charcoal transition-colors">
