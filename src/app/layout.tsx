@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { DM_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import t from '@/translations/en';
+import PostHogProvider from './PostHogProvider';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -36,7 +37,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <PostHogProvider>{children}</PostHogProvider>
+      </body>
     </html>
   );
 }
