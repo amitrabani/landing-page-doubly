@@ -45,7 +45,7 @@ export default function Navbar() {
               {t.navbar.faq}
             </a>
             <a
-              href="https://app.usedoubly.com"
+              href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
               className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-medium hover:bg-charcoal-light transition-colors"
             >
               {t.navbar.cta}
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="https://app.usedoubly.com"
+                href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center rounded-full bg-charcoal text-cream px-6 py-3 text-lg font-medium mt-4"
               >

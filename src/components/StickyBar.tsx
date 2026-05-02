@@ -26,7 +26,7 @@ export default function StickyBar() {
           className="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-6 md:hidden"
         >
           <a
-            href="https://app.usedoubly.com"
+            href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
             className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-3.5 text-base font-medium shadow-xl shadow-charcoal/20"
           >
             {t.stickyBar.cta}

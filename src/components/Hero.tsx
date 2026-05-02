@@ -69,7 +69,7 @@ export default function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
             >
               <a
-                href="https://app.usedoubly.com"
+                href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
                 className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 {t.hero.cta}

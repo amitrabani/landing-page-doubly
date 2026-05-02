@@ -47,7 +47,7 @@ export default function FinalCTA() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="https://app.usedoubly.com"
+            href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
             className="inline-flex items-center gap-3 rounded-full bg-charcoal text-cream px-10 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-charcoal/10"
           >
             {t.finalCta.cta}
