@@ -22,12 +22,21 @@ const stepIcons = [
       <circle cx="26" cy="18" r="2" fill="currentColor" />
     </svg>
   ),
+  (
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="11" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="22" cy="11" r="3" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M4 26c0-3.5 3-6 7-6s7 2.5 7 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M19 24c.5-2.5 3-4.5 6-4.5s5 1.5 5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  ),
 ];
 
 const stepStyles = [
   { color: 'text-lavender-dark', bg: 'bg-lavender-light/20' },
   { color: 'text-coral-dark', bg: 'bg-coral-light/20' },
   { color: 'text-sage-dark', bg: 'bg-sage/20' },
+  { color: 'text-sky', bg: 'bg-sky-light/25' },
 ];
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -52,7 +61,7 @@ const stepVariants = {
 export default function Plan() {
   return (
     <section id="how-it-works" className="py-24 sm:py-32 px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +82,7 @@ export default function Plan() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 md:grid-cols-4 gap-8"
         >
           {t.plan.steps.map((step, i) => (
             <motion.div

@@ -29,21 +29,6 @@ const sampleHabits: Habit[] = [
     id: habitTranslations[0].id,
     name: habitTranslations[0].name,
     icon: habitTranslations[0].icon,
-    color: 'text-sky',
-    colorBg: 'bg-sky-light/25',
-    colorCheck: 'bg-sky border-sky',
-    type: 'count',
-    target: 8,
-    unit: habitTranslations[0].unit,
-    gridColors: ['bg-charcoal/5', 'bg-sky-light/30', 'bg-sky-light/50', 'bg-sky/60', 'bg-sky'],
-    streak: 23,
-    best: 41,
-    pct: '78%',
-  },
-  {
-    id: habitTranslations[1].id,
-    name: habitTranslations[1].name,
-    icon: habitTranslations[1].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -55,9 +40,9 @@ const sampleHabits: Habit[] = [
     pct: '65%',
   },
   {
-    id: habitTranslations[2].id,
-    name: habitTranslations[2].name,
-    icon: habitTranslations[2].icon,
+    id: habitTranslations[1].id,
+    name: habitTranslations[1].name,
+    icon: habitTranslations[1].icon,
     color: 'text-lavender-dark',
     colorBg: 'bg-lavender-light/25',
     colorCheck: 'bg-lavender border-lavender',
@@ -69,9 +54,9 @@ const sampleHabits: Habit[] = [
     pct: '54%',
   },
   {
-    id: habitTranslations[3].id,
-    name: habitTranslations[3].name,
-    icon: habitTranslations[3].icon,
+    id: habitTranslations[2].id,
+    name: habitTranslations[2].name,
+    icon: habitTranslations[2].icon,
     color: 'text-coral-dark',
     colorBg: 'bg-coral-light/25',
     colorCheck: 'bg-coral border-coral',
@@ -83,9 +68,9 @@ const sampleHabits: Habit[] = [
     pct: '42%',
   },
   {
-    id: habitTranslations[4].id,
-    name: habitTranslations[4].name,
-    icon: habitTranslations[4].icon,
+    id: habitTranslations[3].id,
+    name: habitTranslations[3].name,
+    icon: habitTranslations[3].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -134,7 +119,7 @@ function generateGrid(seed: number): number[][] {
 
 export default function HabitDemo() {
   const [completions, setCompletions] = useState<Record<string, number>>({});
-  const [selectedHabit, setSelectedHabit] = useState<string>('water');
+  const [selectedHabit, setSelectedHabit] = useState<string>('walk');
   const [bounceKey, setBounceKey] = useState(0);
 
   // Each habit gets its own unique grid

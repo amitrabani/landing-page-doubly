@@ -119,7 +119,7 @@ const en = {
   // Plan (How it works)
   plan: {
     title: "Here\u2019s how you get unstuck",
-    subtitle: 'Three simple steps. No complex setup. No learning curve.',
+    subtitle: 'Four simple steps. No complex setup. No learning curve.',
     stepLabel: 'STEP',
     steps: [
       {
@@ -136,6 +136,11 @@ const en = {
         number: '03',
         title: 'Stay in motion',
         body: 'Use accountability, timers, and progress tools to keep going, even when motivation fades.',
+      },
+      {
+        number: '04',
+        title: 'Get accountable',
+        body: 'Share with friends in the Doubly feed. Real accountability happens when someone is rooting for you.',
       },
     ],
   },
@@ -332,7 +337,6 @@ const en = {
     allDoneDescription: 'Imagine this every day. Doubly makes it easy to keep going.',
     allDoneCta: 'Get unstuck now',
     habits: [
-      { id: 'water', name: 'Drink water', icon: '\ud83d\udca7', unit: 'glasses' },
       { id: 'walk', name: 'Go for a walk', icon: '\ud83d\udeb6' },
       { id: 'read', name: 'Read 10 pages', icon: '\ud83d\udcd6' },
       { id: 'journal', name: 'Journal', icon: '\u270f\ufe0f' },
