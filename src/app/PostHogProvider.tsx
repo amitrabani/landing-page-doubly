@@ -5,35 +5,37 @@ import { PostHogProvider as PHProvider, usePostHog } from 'posthog-js/react';
 import { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
+// Resolve a stable visitor id BEFORE posthog.init so we can bootstrap as
+// identified. The project has defaultIdentifiedOnly=true; if the SDK starts
+// anonymous and identifies later, the initial events (and the recording's
+// session start) get dropped server-side and no person is ever created.
+function resolveVisitorId(): string {
+  const STORAGE_KEY = 'doubly_web_visitor_id';
+  try {
+    const existing = window.localStorage.getItem(STORAGE_KEY);
+    if (existing) return existing;
+    const fresh =
+      typeof crypto !== 'undefined' && 'randomUUID' in crypto
+        ? `web_${crypto.randomUUID()}`
+        : `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    window.localStorage.setItem(STORAGE_KEY, fresh);
+    return fresh;
+  } catch {
+    return `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+  }
+}
+
 if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+  const visitorId = resolveVisitorId();
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://events.usedoubly.com',
     ui_host: 'https://us.posthog.com',
     person_profiles: 'always',
     capture_pageview: false, // we capture manually below
     capture_pageleave: true,
-    loaded: (ph) => {
-      // The project has defaultIdentifiedOnly=true, so anonymous sessions get
-      // dropped server-side. Promote every visitor to identified using a
-      // stable client-generated UUID stored in localStorage. We can't pass
-      // the existing anon distinct_id — PostHog treats that as a no-op.
-      const STORAGE_KEY = 'doubly_web_visitor_id';
-      let visitorId: string | null = null;
-      try {
-        visitorId = window.localStorage.getItem(STORAGE_KEY);
-        if (!visitorId) {
-          visitorId =
-            typeof crypto !== 'undefined' && 'randomUUID' in crypto
-              ? `web_${crypto.randomUUID()}`
-              : `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
-          window.localStorage.setItem(STORAGE_KEY, visitorId);
-        }
-      } catch {
-        visitorId = `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
-      }
-      if (visitorId && ph.get_distinct_id() !== visitorId) {
-        ph.identify(visitorId);
-      }
+    bootstrap: {
+      distinctID: visitorId,
+      isIdentifiedID: true,
     },
   });
 }
