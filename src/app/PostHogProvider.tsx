@@ -12,6 +12,29 @@ if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
     person_profiles: 'always',
     capture_pageview: false, // we capture manually below
     capture_pageleave: true,
+    loaded: (ph) => {
+      // The project has defaultIdentifiedOnly=true, so anonymous sessions get
+      // dropped server-side. Promote every visitor to identified using a
+      // stable client-generated UUID stored in localStorage. We can't pass
+      // the existing anon distinct_id — PostHog treats that as a no-op.
+      const STORAGE_KEY = 'doubly_web_visitor_id';
+      let visitorId: string | null = null;
+      try {
+        visitorId = window.localStorage.getItem(STORAGE_KEY);
+        if (!visitorId) {
+          visitorId =
+            typeof crypto !== 'undefined' && 'randomUUID' in crypto
+              ? `web_${crypto.randomUUID()}`
+              : `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+          window.localStorage.setItem(STORAGE_KEY, visitorId);
+        }
+      } catch {
+        visitorId = `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+      }
+      if (visitorId && ph.get_distinct_id() !== visitorId) {
+        ph.identify(visitorId);
+      }
+    },
   });
 }
 
