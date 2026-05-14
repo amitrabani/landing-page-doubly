@@ -42,3 +42,18 @@
     color: var(--color-charcoal);
   }
 }
+
+@keyframes timer-breathe {
+  0%, 100% { filter: drop-shadow(0 0 8px var(--timer-glow, transparent)); }
+  50%      { filter: drop-shadow(0 0 14px var(--timer-glow, transparent)); }
+}
+
+.timer-wedge-breathe {
+  animation: timer-breathe 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timer-wedge-breathe {
+    animation: none;
+  }
+}

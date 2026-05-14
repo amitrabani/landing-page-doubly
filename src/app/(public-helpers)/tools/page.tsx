@@ -43,6 +43,20 @@ const tools: Tool[] = [
       '25-minute work, 5-minute break - the focus method that finally fits an ADHD brain. Free, no signup, works offline.',
     status: 'live',
   },
+  {
+    slug: 'visual-timer',
+    title: 'Visual Timer / Time Blindness Clock',
+    description:
+      'A shrinking pie wedge so you can see time passing instead of reading digits. Doubles as a time blindness clock for ADHD adults.',
+    status: 'live',
+  },
+  {
+    slug: 'brown-noise',
+    title: 'Ambient Sound Generator',
+    description:
+      'Free in-browser ambient sound generator. Brown noise plus pink and white. Steady background sound to quiet a busy ADHD brain. Sleep timer included, works offline.',
+    status: 'live',
+  },
 ];
 
 export default function ToolsHubPage() {
@@ -125,6 +139,7 @@ export default function ToolsHubPage() {
               </li>
             ))}
           </ul>
+          {/* Hidden for now
           <p className="mt-6 text-sm text-muted">
             More tools shipping soon. In the meantime, read the{' '}
             <Link href="/learn" className="text-lavender-dark underline hover:no-underline">
@@ -132,6 +147,7 @@ export default function ToolsHubPage() {
             </Link>
             .
           </p>
+          */}
         </section>
 
         <SoftAppCTA body="The web tools help you start one task. The Doubly iOS app helps you keep going - brain dump, one clear next step, and accountability check-ins from real people." />

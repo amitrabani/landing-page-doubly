@@ -8,7 +8,6 @@ const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/pomodoro';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
 const PRIMARY_KEYWORD = 'ADHD pomodoro timer';
-const PUBLISHED = '2026-05-13';
 
 export const metadata: Metadata = {
   title: 'Free ADHD Pomodoro Timer - Focus in Sprints | Doubly',
@@ -249,7 +248,22 @@ export default function PomodoroPage() {
           Related tools
         </h2>
         <p className="text-base text-charcoal-light leading-7">
-          More ADHD tools are shipping each week. In the meantime, browse the{' '}
+          If a 25-minute sprint feels long, try the{' '}
+          <Link
+            href="/tools/visual-timer"
+            className="text-lavender-dark underline hover:no-underline"
+          >
+            visual timer
+          </Link>
+          . Same shrinking-wedge dial, any duration you want, and it doubles as a time blindness
+          clock if losing track of time is the deeper issue. Pair the timer with the{' '}
+          <Link
+            href="/tools/brown-noise"
+            className="text-lavender-dark underline hover:no-underline"
+          >
+            brown noise generator
+          </Link>{' '}
+          if office noise or a busy mind keeps pulling you out of the sprint. Browse the{' '}
           <Link href="/tools" className="text-lavender-dark underline hover:no-underline">
             full tools library
           </Link>{' '}
@@ -261,10 +275,6 @@ export default function PomodoroPage() {
         </p>
 
         <SoftAppCTA body="The web timer keeps you focused for one sprint. The Doubly iOS app helps you decide what to focus on in the first place - brain dump, one clear next step, and accountability check-ins from real people." />
-
-        <footer className="mt-10 text-xs text-muted-light">
-          Published {PUBLISHED}. Last reviewed {PUBLISHED}.
-        </footer>
       </article>
     </>
   );

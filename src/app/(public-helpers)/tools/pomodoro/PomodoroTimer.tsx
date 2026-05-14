@@ -1,10 +1,12 @@
 'use client';
 
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
+import TimerDial, { type WedgeTone } from '../../_components/TimerDial';
+import TimerControls from '../../_components/TimerControls';
 
 type Mode = 'work' | 'short-break' | 'long-break';
 
-type Durations = { work: number; short: number; long: number }; // minutes
+type Durations = { work: number; short: number; long: number };
 
 type Settings = {
   durations: Durations;
@@ -15,9 +17,6 @@ type Settings = {
 type TimerState = {
   mode: Mode;
   completedWorkSessions: number;
-  // When running: endTime is an absolute epoch ms. Tick by computing endTime - Date.now() so the timer
-  // stays accurate even when the tab is throttled in the background.
-  // When paused: remainingMs is the snapshot taken at pause time.
   status: 'idle' | 'running' | 'paused';
   endTime: number | null;
   remainingMs: number;
@@ -37,10 +36,16 @@ const MODE_LABEL: Record<Mode, string> = {
   'long-break': 'Long break',
 };
 
-const MODE_ACCENT: Record<Mode, string> = {
-  work: 'bg-coral text-cream',
-  'short-break': 'bg-sage text-cream',
-  'long-break': 'bg-lavender text-cream',
+const MODE_TONE: Record<Mode, WedgeTone> = {
+  work: 'coral',
+  'short-break': 'sage',
+  'long-break': 'lavender',
+};
+
+const MODE_TAB_GRADIENT: Record<Mode, string> = {
+  work: 'linear-gradient(180deg, var(--color-coral-light), var(--color-coral-dark))',
+  'short-break': 'linear-gradient(180deg, var(--color-sage), var(--color-sage-dark))',
+  'long-break': 'linear-gradient(180deg, var(--color-lavender), var(--color-lavender-dark))',
 };
 
 function durationFor(mode: Mode, d: Durations): number {
@@ -49,8 +54,6 @@ function durationFor(mode: Mode, d: Durations): number {
 
 function nextMode(current: Mode, completedWorkSessions: number, longBreakEvery: number): Mode {
   if (current !== 'work') return 'work';
-  // We just finished a work session. That completion happens before this call,
-  // so completedWorkSessions already includes the one we just finished.
   return completedWorkSessions % longBreakEvery === 0 ? 'long-break' : 'short-break';
 }
 
@@ -143,7 +146,6 @@ function playChime(): void {
     if (!Ctx) return;
     const ctx = new Ctx();
     const now = ctx.currentTime;
-    // Two soft tones. Short, ADHD-friendly - not a startling alarm.
     [880, 1320].forEach((freq, i) => {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -160,9 +162,13 @@ function playChime(): void {
     });
     setTimeout(() => ctx.close(), 1000);
   } catch {
-    // Audio failures are silent - the tool still works.
+    // Audio failures are silent. The tool still works.
   }
 }
+
+const CARD_STYLE: React.CSSProperties = {
+  background: 'linear-gradient(160deg, var(--color-cream), var(--color-cream-dark))',
+};
 
 export default function PomodoroTimer() {
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
@@ -171,7 +177,6 @@ export default function PomodoroTimer() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const originalTitleRef = useRef<string | null>(null);
 
-  // Load persisted state on mount.
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -186,8 +191,6 @@ export default function PomodoroTimer() {
 
         const persistedState = parsed.state;
         if (persistedState) {
-          // If a session was running when the tab closed, resume it from the original endTime
-          // so the user doesn't lose elapsed time.
           const mode: Mode = (persistedState.mode as Mode) ?? 'work';
           const completed = persistedState.completedWorkSessions ?? 0;
           const status = persistedState.status ?? 'idle';
@@ -202,7 +205,6 @@ export default function PomodoroTimer() {
                 state: { mode, completedWorkSessions: completed, status: 'running', endTime, remainingMs: remaining },
               });
             } else {
-              // Session expired while away - restart it idle at full duration on the same mode.
               dispatch({
                 type: 'hydrate',
                 state: {
@@ -230,7 +232,6 @@ export default function PomodoroTimer() {
     setHydrated(true);
   }, []);
 
-  // Persist whenever state or settings change.
   useEffect(() => {
     if (!hydrated) return;
     try {
@@ -240,14 +241,12 @@ export default function PomodoroTimer() {
     }
   }, [hydrated, settings, state]);
 
-  // Tick loop - uses absolute endTime so background-throttled tabs stay accurate.
   useEffect(() => {
     if (state.status !== 'running' || state.endTime === null) return;
     const id = window.setInterval(() => dispatch({ type: 'tick', now: Date.now() }), 250);
     return () => window.clearInterval(id);
   }, [state.status, state.endTime]);
 
-  // Detect session completion.
   useEffect(() => {
     if (state.status !== 'running') return;
     if (state.remainingMs > 0) return;
@@ -263,12 +262,11 @@ export default function PomodoroTimer() {
     });
   }, [state.status, state.remainingMs, state.mode, state.completedWorkSessions, settings]);
 
-  // Update document title while running so users on another tab can glance at progress.
   useEffect(() => {
     if (typeof document === 'undefined') return;
     if (originalTitleRef.current === null) originalTitleRef.current = document.title;
     if (state.status === 'running') {
-      document.title = `${format(state.remainingMs)} · ${MODE_LABEL[state.mode]} · Doubly`;
+      document.title = `${format(state.remainingMs)} | ${MODE_LABEL[state.mode]} | Doubly`;
     } else if (originalTitleRef.current) {
       document.title = originalTitleRef.current;
     }
@@ -313,108 +311,71 @@ export default function PomodoroTimer() {
     setSettings((s) => ({ ...s, durations: { ...s.durations, [key]: safe } }));
   }, []);
 
-  // Reset remaining time when active mode's duration changes via settings.
   useEffect(() => {
     if (state.status === 'idle') {
       dispatch({ type: 'reset', durationMs: durationFor(state.mode, settings.durations) });
     }
-    // We intentionally only react to durations, not to status changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings.durations.work, settings.durations.short, settings.durations.long]);
 
   const display = format(state.remainingMs);
-  const isRunning = state.status === 'running';
-  const isPaused = state.status === 'paused';
   const totalMs = durationFor(state.mode, settings.durations);
-  const progress = totalMs > 0 ? Math.min(1, Math.max(0, 1 - state.remainingMs / totalMs)) : 0;
+  const progress = totalMs > 0 ? Math.max(0, Math.min(1, state.remainingMs / totalMs)) : 0;
 
   return (
     <section
       aria-label="Pomodoro timer"
-      className="rounded-3xl bg-white border border-warm-dark/30 shadow-[0_4px_30px_rgba(45,43,50,0.06)] p-6 sm:p-10"
+      className="rounded-3xl border border-warm-dark/30 shadow-[0_4px_30px_rgba(45,43,50,0.06)] p-6 sm:p-10"
+      style={CARD_STYLE}
     >
-      {/* Mode tabs */}
-      <div role="tablist" aria-label="Timer mode" className="flex flex-wrap gap-2 mb-8">
-        {(['work', 'short-break', 'long-break'] as Mode[]).map((m) => (
-          <button
-            key={m}
-            role="tab"
-            type="button"
-            aria-selected={state.mode === m}
-            onClick={() => switchMode(m)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              state.mode === m
-                ? MODE_ACCENT[m]
-                : 'bg-warm text-charcoal-light hover:bg-warm-dark'
-            }`}
-          >
-            {MODE_LABEL[m]}
-          </button>
-        ))}
+      <div role="tablist" aria-label="Timer mode" className="flex flex-wrap justify-center gap-2 mb-8">
+        {(['work', 'short-break', 'long-break'] as Mode[]).map((m) => {
+          const active = state.mode === m;
+          return (
+            <button
+              key={m}
+              role="tab"
+              type="button"
+              aria-selected={active}
+              onClick={() => switchMode(m)}
+              className={
+                active
+                  ? 'px-4 py-2 rounded-full text-sm font-semibold text-cream shadow-[0_2px_8px_rgba(45,43,50,0.18),inset_0_1px_0_rgba(255,255,255,0.2)] transition-shadow'
+                  : 'px-4 py-2 rounded-full text-sm font-medium bg-white/60 text-charcoal-light hover:bg-white/85 shadow-[inset_0_0_0_1px_rgba(45,43,50,0.08)] transition-colors'
+              }
+              style={active ? { background: MODE_TAB_GRADIENT[m] } : undefined}
+            >
+              {MODE_LABEL[m]}
+            </button>
+          );
+        })}
       </div>
 
-      {/* Timer display */}
-      <div className="text-center mb-8">
-        <div
-          aria-live="polite"
-          aria-atomic="true"
-          className="font-[family-name:var(--font-display)] text-7xl sm:text-8xl font-bold text-charcoal tabular-nums tracking-tight"
-        >
-          {display}
-        </div>
-        <p className="mt-2 text-sm text-muted">
+      <div className="flex flex-col items-center gap-4">
+        <TimerDial
+          progress={progress}
+          tone={MODE_TONE[state.mode]}
+          display={display}
+          status={state.status}
+          ariaLabel={`${MODE_LABEL[state.mode]} timer. ${display} remaining.`}
+        />
+        <p className="text-sm text-muted">
           Sessions completed today:{' '}
           <span className="text-charcoal font-medium">{state.completedWorkSessions}</span>
         </p>
-
-        {/* Progress bar */}
-        <div className="mt-6 h-1.5 w-full bg-warm rounded-full overflow-hidden" aria-hidden="true">
-          <div
-            className={`h-full transition-[width] duration-300 ${
-              state.mode === 'work' ? 'bg-coral' : state.mode === 'short-break' ? 'bg-sage' : 'bg-lavender'
-            }`}
-            style={{ width: `${progress * 100}%` }}
-          />
-        </div>
       </div>
 
-      {/* Controls */}
-      <div className="flex flex-wrap items-center justify-center gap-3">
-        {!isRunning ? (
-          <button
-            type="button"
-            onClick={start}
-            className="px-8 py-3 rounded-full bg-charcoal text-cream font-semibold hover:bg-charcoal-light transition-colors min-w-[8rem]"
-          >
-            {isPaused ? 'Resume' : 'Start'}
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={pause}
-            className="px-8 py-3 rounded-full bg-charcoal text-cream font-semibold hover:bg-charcoal-light transition-colors min-w-[8rem]"
-          >
-            Pause
-          </button>
-        )}
-        <button
-          type="button"
-          onClick={reset}
-          className="px-6 py-3 rounded-full bg-warm text-charcoal font-medium hover:bg-warm-dark transition-colors"
-        >
-          Reset
-        </button>
-        <button
-          type="button"
-          onClick={skip}
-          className="px-6 py-3 rounded-full bg-warm text-charcoal font-medium hover:bg-warm-dark transition-colors"
-          aria-label="Skip to next session"
-        >
-          Skip &rarr;
-        </button>
+      <div className="mt-8">
+        <TimerControls
+          status={state.status}
+          remainingMs={state.remainingMs}
+          onStart={start}
+          onPause={pause}
+          onReset={reset}
+          onSkip={skip}
+        />
       </div>
 
-      {/* Settings toggle */}
       <div className="mt-8 flex items-center justify-between text-sm border-t border-warm-dark/20 pt-6">
         <label className="inline-flex items-center gap-2 cursor-pointer text-charcoal-light">
           <input
@@ -439,7 +400,7 @@ export default function PomodoroTimer() {
       {settingsOpen && (
         <div
           id="pomodoro-settings"
-          className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 rounded-2xl bg-cream-dark/60 p-4"
+          className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 rounded-2xl bg-white/40 backdrop-blur-sm p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]"
         >
           <DurationInput
             label="Focus (min)"

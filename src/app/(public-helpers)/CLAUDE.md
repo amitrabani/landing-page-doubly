@@ -96,6 +96,8 @@ Where a short demo video exists, embed it here (YouTube or self-hosted). Apply `
 
 The on-brand differentiator. Explain the cognitive or behavioral mechanism the tool addresses. Cite at least one authoritative source. Plain language, no clinical claims, no diagnosis language.
 
+Cap at three to four tight paragraphs. Tool pages are not articles. If the topic deserves more depth (research breakdown, comparisons, safety deep-dive, mechanism explained accessibly), build a companion article per §4.11 and link to it from here. Do not expand this section to article length - it pushes the FAQ below the fold and dilutes the keyword match for the transactional query.
+
 ### 4.7 FAQ (H2 with H3 per question)
 
 Four to six questions. Mine "people also ask" for the primary keyword. Each answer is two to four sentences, leading with the direct answer. Wrap in FAQPage JSON-LD schema.
@@ -111,6 +113,41 @@ Headline pattern: *"Want this in your pocket? Doubly is built for ADHD brains."*
 ### 4.10 Footer
 
 Standard site footer.
+
+### 4.11 How to build a companion article for a tool
+
+When Amit asks for a companion article to a tool (or asks to build a tool plus its article), the article and the tool page are siblings, not duplicates. They target different intents and must not overlap in content.
+
+- **Tool page** at `/tools/[name]` targets transactional intent ("X generator," "free X," "X for ADHD"). The 3-4 paragraphs of surrounding context (§4.6 plus FAQ) are the cap.
+- **Companion article** at `/learn/[slug]` targets informational intent ("what is X," "X vs Y," "is X safe," "how does X actually work," "does X work for ADHD"). Goes deep on the things a working tool cannot answer.
+
+Pick the article's primary keyword from the informational variants. Never give the article the same primary keyword as the tool - they would cannibalize each other in search results.
+
+The article covers what the tool page deliberately does not:
+
+- The actual mechanism, explained accessibly. Diagrams, not just prose, where the topic has structure to show.
+- Research breakdown. Specific studies named, with authors, year, sample, finding, and limitations. Not just "studies show."
+- Comparison sections ("X vs Y vs Z") with concrete, side-by-side differences.
+- Safety deep-dive where applicable.
+- When it doesn't work, who it doesn't help, common misconceptions.
+- Hands-on context the tool can't deliver: how to combine it with other techniques, what to do if it doesn't land.
+
+The companion article follows §5 in full. Same citation density, same author bio, same schema, same Core Web Vitals budget. It is not a lighter template.
+
+Bidirectional linking is mandatory:
+
+- **Tool page §4.6** ends with one line: *"Want the full science? Read the deep-dive: [how X actually works for ADHD]."* linking to the article.
+- **Tool page §4.7 FAQ:** the "What is X?" answer stays short (two to four sentences) and ends with a link to the article for readers who want more. Do not duplicate the article's depth in the FAQ.
+- **Article opening:** answer capsule (§5.2), then a prominent `[Try the X tool →]` button linking to the tool page, then depth.
+- **Article body:** at least one in-context link back to the tool page from the relevant section (not just the opening button).
+- The two pages reference each other in `relatedLink` / `mainEntity` schema where applicable, and both appear in each other's breadcrumbs as siblings under their respective hubs.
+
+Anti-patterns to avoid:
+
+- Copy-pasting the tool page's "Why this works" section into the article intro. The article opens fresh, written for a reader who arrived from an informational query.
+- Adding a working version of the tool inside the article. The article links to the tool, it does not embed it. Embedding splits engagement metrics across two URLs targeting the same query.
+- Padding the article to "match" some word count. Length comes from depth, not filler.
+- Using the article to dump every FAQ that didn't fit on the tool page. Article structure is driven by the informational query's "people also ask" tree, not by overflow.
 
 ---
 
