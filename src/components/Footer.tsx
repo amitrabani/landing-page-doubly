@@ -13,7 +13,13 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          <Link href="/tools" className="text-sm text-muted hover:text-charcoal transition-colors">
+            Tools
+          </Link>
+          <Link href="/learn" className="text-sm text-muted hover:text-charcoal transition-colors">
+            Learn
+          </Link>
           <Link href="/privacy" className="text-sm text-muted hover:text-charcoal transition-colors">
             {t.footer.privacy}
           </Link>

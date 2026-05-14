@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import t from '@/translations/en';
 
 export default function Navbar() {
@@ -27,23 +28,26 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/icon-192.png" alt="Doubly" width={32} height={32} className="rounded-lg" />
             <span className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal">
               {t.navbar.brand}
             </span>
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-sm text-muted hover:text-charcoal transition-colors">
+            <Link href="/tools" className="text-sm text-muted hover:text-charcoal transition-colors">
+              Tools
+            </Link>
+            <Link href="/#how-it-works" className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.howItWorks}
-            </a>
-<a href="#testimonials" className="text-sm text-muted hover:text-charcoal transition-colors">
+            </Link>
+            <Link href="/#testimonials" className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.testimonials}
-            </a>
-            <a href="#faq" className="text-sm text-muted hover:text-charcoal transition-colors">
+            </Link>
+            <Link href="/#faq" className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.faq}
-            </a>
+            </Link>
             <a
               href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
               className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-medium hover:bg-charcoal-light transition-colors"
@@ -77,15 +81,22 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-cream pt-20 px-6 md:hidden"
           >
             <div className="flex flex-col gap-6">
+              <Link
+                href="/tools"
+                onClick={() => setMobileOpen(false)}
+                className="text-xl font-medium text-charcoal"
+              >
+                Tools
+              </Link>
               {navLinks.map((item) => (
-                <a
+                <Link
                   key={item}
-                  href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                  href={`/#${item.toLowerCase().replace(/ /g, '-')}`}
                   onClick={() => setMobileOpen(false)}
                   className="text-xl font-medium text-charcoal"
                 >
                   {item}
-                </a>
+                </Link>
               ))}
               <a
                 href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
