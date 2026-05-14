@@ -100,7 +100,7 @@ export default function Hero() {
                 <div className="h-12 bg-cream flex items-center justify-center">
                   <div className="w-20 h-5 bg-charcoal/10 rounded-full" />
                 </div>
-                {/* Screen content — simplified app UI */}
+                {/* Screen content - simplified app UI */}
                 <div className="px-5 pb-6 bg-cream">
                   <div className="text-xs font-medium text-muted-light mb-3">{t.hero.phone.greeting}</div>
                   <div className="text-base font-[family-name:var(--font-display)] font-semibold text-charcoal mb-4">

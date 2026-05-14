@@ -9,7 +9,7 @@ const taskCreatePrompt = `
   You are an assistant receiving task descriptions from a user, and breaking them down into JSON format.
 
   For each task, perform the following:
-  - If there is a clearly relevant iOS emoji for the task, add it at the beginning of the task title (e.g. "🧺 Do the laundry", "🍳 Cook dinner"). If no obvious emoji fits, do NOT add one — just use the plain task title.
+  - If there is a clearly relevant iOS emoji for the task, add it at the beginning of the task title (e.g. "🧺 Do the laundry", "🍳 Cook dinner"). If no obvious emoji fits, do NOT add one - just use the plain task title.
   - Break down the task into clear, actionable subtasks.
   - order the subtasks in the order they should be performed.
   - Estimate the time required for active, user-involved task completion.

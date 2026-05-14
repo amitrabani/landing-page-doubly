@@ -1,4 +1,4 @@
-# CLAUDE.md — Doubly SEO Machine
+# CLAUDE.md - Doubly SEO Machine
 
 Standing instructions for Claude Code. Read before creating or editing any page under `/tools/*` or `/learn/*`.
 
@@ -8,7 +8,7 @@ This file is about **how** to build, not **what** to build. The roadmap of speci
 
 ## 1. Project context
 
-**Product:** Doubly — iOS app for ADHD adults. Helps users start tasks (brain dump → one next step → accountability / body doubling).
+**Product:** Doubly - iOS app for ADHD adults. Helps users start tasks (brain dump → one next step → accountability / body doubling).
 
 **Audience reading the site:** ADHD adults in moments of overwhelm. Mobile-first. Short attention. Tired of being told they're "lazy" by productivity content.
 
@@ -90,7 +90,7 @@ One to two sentences expanding on the capsule. Use the target keyword and one or
 
 Three to five numbered steps. This targets the "how to" longtail variants of the keyword.
 
-Where a short demo video exists, embed it here (YouTube or self-hosted). Apply `VideoObject` schema per §7.3. Embedded video lifts dwell time (a known ranking signal), captures multi-modal AEO signals, and lets the video itself rank in Google Video carousels — three wins from one embed.
+Where a short demo video exists, embed it here (YouTube or self-hosted). Apply `VideoObject` schema per §7.3. Embedded video lifts dwell time (a known ranking signal), captures multi-modal AEO signals, and lets the video itself rank in Google Video carousels - three wins from one embed.
 
 ### 4.6 "Why this works for ADHD brains" section (H2)
 
@@ -163,14 +163,14 @@ Generative engines (ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude) de
 - **Citation density.** At least one citation to an authoritative source per page. Replicated study finding: citations dramatically increase the odds a page gets quoted by an LLM.
 - **Statistics.** Concrete numbers, with citations, anywhere a topic admits them. LLMs preferentially cite content with hard data.
 - **Quotations.** Direct expert quotations get pulled verbatim. Wrap them in `<blockquote>` and `Quotation` schema.
-- **Datemark every page.** Honest `datePublished` and `dateModified` in Article schema. Never fake a recent update date — algorithms detect this.
+- **Datemark every page.** Honest `datePublished` and `dateModified` in Article schema. Never fake a recent update date - algorithms detect this.
 - **Conversational sub-headers.** Frame H2s and H3s as questions where natural. Aligns with how users phrase queries to AI assistants.
 - **Semantic clarity over keyword density.** Write like an expert explaining to a smart non-expert. Avoid stuffing. Avoid synonyms-for-the-sake-of-synonyms.
 - **Brand naming consistency.** Always "Doubly" in copy. Never alternate to "Doubly app," "Use Doubly," "doubly.com" in body text. Consistency builds entity recognition in LLM training data.
 
 ### 6.1 `llms.txt` and `robots.txt`
 
-- Maintain a `/llms.txt` at root: a curated index of the highest-value pages with one-line descriptions. Do **not** mirror every page as `.md` — that dilutes signal and wastes crawl budget.
+- Maintain a `/llms.txt` at root: a curated index of the highest-value pages with one-line descriptions. Do **not** mirror every page as `.md` - that dilutes signal and wastes crawl budget.
 - In `robots.txt`, explicitly allow GPTBot, ClaudeBot, PerplexityBot, Google-Extended, OAI-SearchBot. Block only if there's a specific reason. Audit boilerplate `robots.txt` files before deploying.
 
 ---
@@ -181,9 +181,9 @@ Every page ships JSON-LD schema. Cross-link entities by `@id` so the graph is co
 
 ### 7.1 Site-level entities (declared once in root layout)
 
-- `Organization` — name, logo, `sameAs` array linking to every verifiable brand profile (Twitter/X, LinkedIn, App Store, GitHub, Crunchbase, Product Hunt). The `sameAs` array is the single biggest entity-recognition lever for LLMs and Knowledge Graph.
-- `WebSite` — with `potentialAction` for site search if implemented.
-- `MobileApplication` (subtype of `SoftwareApplication`) — for the iOS app, with `applicationCategory`, `operatingSystem`, `offers`, real `aggregateRating` pulled from App Store, `screenshot` URLs, `downloadUrl` to App Store.
+- `Organization` - name, logo, `sameAs` array linking to every verifiable brand profile (Twitter/X, LinkedIn, App Store, GitHub, Crunchbase, Product Hunt). The `sameAs` array is the single biggest entity-recognition lever for LLMs and Knowledge Graph.
+- `WebSite` - with `potentialAction` for site search if implemented.
+- `MobileApplication` (subtype of `SoftwareApplication`) - for the iOS app, with `applicationCategory`, `operatingSystem`, `offers`, real `aggregateRating` pulled from App Store, `screenshot` URLs, `downloadUrl` to App Store.
 
 ### 7.2 Per-page schema
 
@@ -194,8 +194,8 @@ Every page ships JSON-LD schema. Cross-link entities by `@id` so the graph is co
 
 ### 7.3 Multi-modal schema
 
-- `ImageObject` on every meaningful diagram, chart, or screenshot — with `caption`, `contentUrl`, and license info where applicable.
-- `VideoObject` on every embedded video — with `name`, `description`, `uploadDate`, `thumbnailUrl`, `contentUrl`. Video also ranks independently in Google Video and gets pulled by Gemini/ChatGPT vision.
+- `ImageObject` on every meaningful diagram, chart, or screenshot - with `caption`, `contentUrl`, and license info where applicable.
+- `VideoObject` on every embedded video - with `name`, `description`, `uploadDate`, `thumbnailUrl`, `contentUrl`. Video also ranks independently in Google Video and gets pulled by Gemini/ChatGPT vision.
 - `Quotation` schema on every expert quote, with `creator` referencing a `Person` entity.
 - `AudioObject` if podcast clips are embedded.
 
@@ -216,7 +216,7 @@ Every page ships JSON-LD schema. Cross-link entities by `@id` so the graph is co
 - The homepage features the top tools in a dedicated section.
 - Anchor text is descriptive and matches the target page's primary keyword. Never "click here," "read more," "this article."
 - Breadcrumbs on every tool and article page, with `BreadcrumbList` schema.
-- New pages are linked from at least two existing pages before publishing — orphan pages waste authority.
+- New pages are linked from at least two existing pages before publishing - orphan pages waste authority.
 
 ---
 
@@ -227,7 +227,7 @@ For every page:
 - **Title tag:** 50–60 characters. Primary keyword early. Ends with `| Doubly`.
 - **Meta description:** 140–160 characters. Contains keyword and a benefit. Reads naturally, not stuffed.
 - **Canonical URL:** absolute, HTTPS, no query parameters.
-- **Open Graph:** `og:title`, `og:description`, `og:image` (1200×630), `og:url`, `og:type`. OG title and description distinct from `<title>` and meta description — written for social sharing context.
+- **Open Graph:** `og:title`, `og:description`, `og:image` (1200×630), `og:url`, `og:type`. OG title and description distinct from `<title>` and meta description - written for social sharing context.
 - **Twitter Card:** `summary_large_image` with title, description, image.
 - **Per-article:** `article:author`, `article:published_time`, `article:modified_time`, `article:section`.
 
@@ -249,9 +249,9 @@ Tool pages are JavaScript-heavy by definition, which makes Interaction to Next P
 
 ### 10.2 How to hit them
 
-- Server-render or static-generate all content. Tool interactivity is client-side; surrounding content is not.
+- Server-render or static-generate all content. Tool interactivity is client-side. Surrounding content is not.
 - Code-split by route. Do not ship one tool's code on another tool's page.
-- Lazy-hydrate widgets via `IntersectionObserver` — initialize on visibility.
+- Lazy-hydrate widgets via `IntersectionObserver` - initialize on visibility.
 - Break long tasks into chunks under fifty milliseconds. Use `scheduler.yield()` or `setTimeout(0)` to yield to the main thread.
 - Run AI calls and heavy parsing in a Web Worker. Main thread stays responsive.
 - Event handlers under fifty milliseconds. If logic exceeds that, off-load.
@@ -265,7 +265,7 @@ Tool pages are JavaScript-heavy by definition, which makes Interaction to Next P
 ### 10.3 Measurement
 
 - Lighthouse audit on every new page before publishing.
-- Field data via `web-vitals.js` piped to analytics. Lab numbers lie; field numbers don't.
+- Field data via `web-vitals.js` piped to analytics. Lab numbers lie, field numbers don't.
 - Microsoft Clarity for INP field data and session replay of slow interactions.
 
 ---
@@ -311,7 +311,7 @@ This is the audience. Copy that ignores how they process text fails them and tan
 - **Active voice. Concrete verbs. No corporate hedging.**
 - **No shame language.** Never "stop being lazy," "fix your brain," "discipline yourself." Always supportive, never patronizing.
 - **Respect `prefers-reduced-motion`.** Disable animations for users who request it.
-- **Offer dark mode** site-wide; many ADHD users explicitly prefer it.
+- **Offer dark mode** site-wide. Many ADHD users explicitly prefer it.
 - **No autoplay video or audio. No motion that loops indefinitely above the fold.**
 - **Color contrast: WCAG AA minimum, AAA preferred.** Text must remain readable for users with co-occurring visual processing differences.
 
@@ -392,7 +392,7 @@ Algorithm updates increasingly target scaled-thin content, fake authority, and A
 - AI-assisted drafting is permitted. AI-spam is not. Human review and rewrite every page before publish. No exceptions.
 - Avoid every form of cloaking, doorway pages, link buying, hidden text, parasite SEO, and scaled machine translation.
 - Never invent ratings, review counts, user counts, or testimonials.
-- Never claim to diagnose, treat, or cure ADHD or any condition. Phrases like "may help with," "designed for ADHD brains," "supports executive function" are acceptable; "treats ADHD" is not.
+- Never claim to diagnose, treat, or cure ADHD or any condition. Phrases like "may help with," "designed for ADHD brains," "supports executive function" are acceptable. "Treats ADHD" is not.
 - Update existing pages periodically (a portion each quarter) rather than letting them go stale. Honest update dates only.
 
 ### 14.1 Stigma and language rules
@@ -413,8 +413,8 @@ Real social proof helps both UX and trust signals. Fake-looking social proof now
 
 ### 14.3 Responding to algorithm updates
 
-- Do not react inside the first fourteen days of a confirmed Google core update. Rollouts take two weeks; many initial drops recover.
-- Use third-party rank trackers for real-time signal; Search Console lags by days.
+- Do not react inside the first fourteen days of a confirmed Google core update. Rollouts take two weeks, and many initial drops recover.
+- Use third-party rank trackers for real-time signal. Search Console lags by days.
 - If a drop persists after rollout completes, the recovery playbook is the same as the quality playbook: more first-person experience signals, more original data, more visible authorship, real expert review, fewer thin pages. Mental-health-adjacent recovery typically takes six to twelve months. Do not panic-edit dozens of pages in one week.
 
 ---
@@ -439,7 +439,7 @@ Weekly: search for brand mentions of "Doubly" or "usedoubly" without backlinks. 
 
 - Founder-led, not brand-led. Personal accounts, real face, real name. Brand accounts get filtered as promotional.
 - Nine-to-one ratio: nine genuinely useful contributions for every one promotional mention. Never reverse this.
-- Reddit, TikTok, podcast guesting, Twitter/X, Indie Hackers — every appearance is a brand-mention in indexable text and audio that LLMs eventually train on.
+- Reddit, TikTok, podcast guesting, Twitter/X, Indie Hackers - every appearance is a brand-mention in indexable text and audio that LLMs eventually train on.
 
 ### 15.5 First-party data studies
 

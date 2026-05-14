@@ -49,7 +49,7 @@ function durationFor(mode: Mode, d: Durations): number {
 
 function nextMode(current: Mode, completedWorkSessions: number, longBreakEvery: number): Mode {
   if (current !== 'work') return 'work';
-  // We just finished a work session; that completion happens before this call,
+  // We just finished a work session. That completion happens before this call,
   // so completedWorkSessions already includes the one we just finished.
   return completedWorkSessions % longBreakEvery === 0 ? 'long-break' : 'short-break';
 }
@@ -143,7 +143,7 @@ function playChime(): void {
     if (!Ctx) return;
     const ctx = new Ctx();
     const now = ctx.currentTime;
-    // Two soft tones. Short, ADHD-friendly — not a startling alarm.
+    // Two soft tones. Short, ADHD-friendly - not a startling alarm.
     [880, 1320].forEach((freq, i) => {
       const osc = ctx.createOscillator();
       const gain = ctx.createGain();
@@ -160,7 +160,7 @@ function playChime(): void {
     });
     setTimeout(() => ctx.close(), 1000);
   } catch {
-    // Audio failures are silent — the tool still works.
+    // Audio failures are silent - the tool still works.
   }
 }
 
@@ -202,7 +202,7 @@ export default function PomodoroTimer() {
                 state: { mode, completedWorkSessions: completed, status: 'running', endTime, remainingMs: remaining },
               });
             } else {
-              // Session expired while away — restart it idle at full duration on the same mode.
+              // Session expired while away - restart it idle at full duration on the same mode.
               dispatch({
                 type: 'hydrate',
                 state: {
@@ -225,7 +225,7 @@ export default function PomodoroTimer() {
         }
       }
     } catch {
-      // Corrupted storage — fall back to defaults silently.
+      // Corrupted storage - fall back to defaults silently.
     }
     setHydrated(true);
   }, []);
@@ -236,11 +236,11 @@ export default function PomodoroTimer() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({ settings, state }));
     } catch {
-      // Storage quota / private mode — non-fatal.
+      // Storage quota / private mode - non-fatal.
     }
   }, [hydrated, settings, state]);
 
-  // Tick loop — uses absolute endTime so background-throttled tabs stay accurate.
+  // Tick loop - uses absolute endTime so background-throttled tabs stay accurate.
   useEffect(() => {
     if (state.status !== 'running' || state.endTime === null) return;
     const id = window.setInterval(() => dispatch({ type: 'tick', now: Date.now() }), 250);

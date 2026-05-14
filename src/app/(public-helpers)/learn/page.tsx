@@ -7,19 +7,19 @@ const SITE_URL = 'https://usedoubly.com';
 const PAGE_URL = `${SITE_URL}/learn`;
 
 export const metadata: Metadata = {
-  title: 'Learn — ADHD Focus, Tools & Strategies | Doubly',
+  title: 'Learn - ADHD Focus, Tools & Strategies | Doubly',
   description:
     'Plain-language guides on ADHD focus, time-blindness, brain dumping, and getting unstuck. Honest, evidence-based, no shame.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Learn — ADHD Focus, Tools & Strategies',
+    title: 'Learn - ADHD Focus, Tools & Strategies',
     description: 'Plain-language guides on ADHD focus, time-blindness, and getting unstuck.',
     url: PAGE_URL,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Learn — ADHD Focus, Tools & Strategies',
+    title: 'Learn - ADHD Focus, Tools & Strategies',
     description: 'Plain-language guides on ADHD focus, time-blindness, and getting unstuck.',
   },
   other: {
@@ -68,7 +68,7 @@ export default function LearnHubPage() {
             First articles ship next week
           </h2>
           <p className="text-base text-charcoal-light leading-7 max-w-xl mx-auto">
-            We&rsquo;re writing the first batch now — covering time-blindness, the science of brain dumping,
+            We’re writing the first batch now - covering time-blindness, the science of brain dumping,
             and why traditional productivity advice keeps failing ADHD adults.
           </p>
           <p className="mt-6 text-sm text-muted">

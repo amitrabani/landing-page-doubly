@@ -70,7 +70,7 @@ export default function Guide() {
             >
               <Image
                 src="/eisenhower-matrix.png"
-                alt="Doubly's Eisenhower Matrix — tasks organized by urgency and importance"
+                alt="Doubly's Eisenhower Matrix - tasks organized by urgency and importance"
                 width={800}
                 height={800}
                 className="rounded-3xl shadow-xl shadow-charcoal/8 border border-charcoal/5"

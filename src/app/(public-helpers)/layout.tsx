@@ -6,7 +6,7 @@ const APP_ID = '6760469944';
 
 export const metadata: Metadata = {
   other: {
-    // Smart App Banner — iOS Safari renders Apple's native banner.
+    // Smart App Banner - iOS Safari renders Apple's native banner.
     // Per-page metadata can override `app-argument` to deep-link to the matching feature.
     'apple-itunes-app': `app-id=${APP_ID}`,
   },

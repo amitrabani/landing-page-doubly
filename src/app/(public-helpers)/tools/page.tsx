@@ -9,7 +9,7 @@ const PAGE_URL = `${SITE_URL}/tools`;
 export const metadata: Metadata = {
   title: 'Free ADHD Tools That Help You Start | Doubly',
   description:
-    'Free, no-signup tools designed for ADHD brains. Pomodoro timers, brain dumps, and more — built for the moment you need to start, not just plan.',
+    'Free, no-signup tools designed for ADHD brains. Pomodoro timers, brain dumps, and more - built for the moment you need to start, not just plan.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Free ADHD Tools That Help You Start',
@@ -40,7 +40,7 @@ const tools: Tool[] = [
     slug: 'pomodoro',
     title: 'ADHD Pomodoro Timer',
     description:
-      '25-minute work, 5-minute break — the focus method that finally fits an ADHD brain. Free, no signup, works offline.',
+      '25-minute work, 5-minute break - the focus method that finally fits an ADHD brain. Free, no signup, works offline.',
     status: 'live',
   },
 ];
@@ -85,8 +85,8 @@ export default function ToolsHubPage() {
             Free ADHD tools that help you start
           </h1>
           <p className="text-lg text-charcoal-light leading-8 max-w-2xl">
-            Free, no-signup tools designed for ADHD brains. Built for the moment you&rsquo;re overwhelmed,
-            not for the moment you&rsquo;re ready to plan. Use them in your browser. Save your progress.
+            Free, no-signup tools designed for ADHD brains. Built for the moment you’re overwhelmed,
+            not for the moment you’re ready to plan. Use them in your browser. Save your progress.
             Walk away whenever.
           </p>
         </header>
@@ -134,7 +134,7 @@ export default function ToolsHubPage() {
           </p>
         </section>
 
-        <SoftAppCTA body="The web tools help you start one task. The Doubly iOS app helps you keep going — brain dump, one clear next step, and accountability check-ins from real people." />
+        <SoftAppCTA body="The web tools help you start one task. The Doubly iOS app helps you keep going - brain dump, one clear next step, and accountability check-ins from real people." />
       </div>
     </>
   );
