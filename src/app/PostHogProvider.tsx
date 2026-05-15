@@ -25,10 +25,13 @@ function resolveVisitorId(): string {
   }
 }
 
-if (typeof window !== 'undefined' && process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
+const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST?.trim();
+
+if (typeof window !== 'undefined' && POSTHOG_KEY) {
   const visitorId = resolveVisitorId();
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
-    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://events.usedoubly.com',
+  posthog.init(POSTHOG_KEY, {
+    api_host: POSTHOG_HOST || 'https://events.usedoubly.com',
     ui_host: 'https://us.posthog.com',
     person_profiles: 'always',
     capture_pageview: false, // we capture manually below
@@ -59,7 +62,7 @@ function PostHogPageView() {
 }
 
 export default function PostHogProvider({ children }: { children: React.ReactNode }) {
-  if (!process.env.NEXT_PUBLIC_POSTHOG_KEY) {
+  if (!POSTHOG_KEY) {
     return <>{children}</>;
   }
 
