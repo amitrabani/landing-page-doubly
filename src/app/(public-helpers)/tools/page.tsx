@@ -57,6 +57,13 @@ const tools: Tool[] = [
       'Free in-browser ambient sound generator. Brown noise plus pink and white. Steady background sound to quiet a busy ADHD brain. Sleep timer included, works offline.',
     status: 'live',
   },
+  {
+    slug: 'body-doubling-room',
+    title: 'Body Doubling Room',
+    description:
+      'Free two-person focus room. Share a link, work side by side over peer-to-peer video, run a shared timer. No signup, no install.',
+    status: 'live',
+  },
 ];
 
 export default function ToolsHubPage() {
