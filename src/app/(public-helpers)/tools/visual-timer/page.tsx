@@ -290,7 +290,15 @@ export default function VisualTimerPage() {
           <Link href="/tools/brown-noise" className="text-lavender-dark underline hover:no-underline">
             brown noise generator
           </Link>{' '}
-          underneath the timer. Browse the{' '}
+          underneath the timer. If the problem is losing track of an entire afternoon to one task,
+          the{' '}
+          <Link
+            href="/tools/hyperfocus-timer"
+            className="text-lavender-dark underline hover:no-underline"
+          >
+            hyperfocus timer
+          </Link>{' '}
+          schedules spoken check-ins on a recurring interval. Browse the{' '}
           <Link href="/tools" className="text-lavender-dark underline hover:no-underline">
             full tools library
           </Link>{' '}

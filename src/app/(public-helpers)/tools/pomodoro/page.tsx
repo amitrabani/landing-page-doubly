@@ -256,7 +256,15 @@ export default function PomodoroPage() {
             visual timer
           </Link>
           . Same shrinking-wedge dial, any duration you want, and it doubles as a time blindness
-          clock if losing track of time is the deeper issue. Pair the timer with the{' '}
+          clock if losing track of time is the deeper issue. If the trouble is the opposite,
+          knowing when to stop, try the{' '}
+          <Link
+            href="/tools/hyperfocus-timer"
+            className="text-lavender-dark underline hover:no-underline"
+          >
+            hyperfocus timer
+          </Link>{' '}
+          for recurring spoken check-ins on a fixed interval. Pair the timer with the{' '}
           <Link
             href="/tools/brown-noise"
             className="text-lavender-dark underline hover:no-underline"

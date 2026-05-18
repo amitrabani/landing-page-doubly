@@ -13,11 +13,12 @@ export const pageEntries: SitemapEntry[] = [
 ];
 
 export const toolEntries: SitemapEntry[] = [
-  { path: '/tools', lastmod: '2026-05-17' },
-  { path: '/tools/pomodoro', lastmod: '2026-05-14' },
-  { path: '/tools/visual-timer', lastmod: '2026-05-14' },
+  { path: '/tools', lastmod: '2026-05-18' },
+  { path: '/tools/pomodoro', lastmod: '2026-05-18' },
+  { path: '/tools/visual-timer', lastmod: '2026-05-18' },
   { path: '/tools/brown-noise', lastmod: '2026-05-14' },
   { path: '/tools/body-doubling-room', lastmod: '2026-05-17' },
+  { path: '/tools/hyperfocus-timer', lastmod: '2026-05-18' },
 ];
 
 export const learnEntries: SitemapEntry[] = [

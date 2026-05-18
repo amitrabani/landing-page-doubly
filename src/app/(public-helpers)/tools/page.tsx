@@ -64,6 +64,13 @@ const tools: Tool[] = [
       'Free two-person focus room. Share a link, work side by side over peer-to-peer video, run a shared timer. No signup, no install.',
     status: 'live',
   },
+  {
+    slug: 'hyperfocus-timer',
+    title: 'Hyperfocus Interrupt Timer',
+    description:
+      'Recurring spoken check-ins every X minutes and an optional hard stop, so an ADHD hyperfocus session does not eat your whole afternoon.',
+    status: 'live',
+  },
 ];
 
 export default function ToolsHubPage() {
