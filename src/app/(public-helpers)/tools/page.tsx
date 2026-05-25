@@ -37,6 +37,20 @@ type Tool = {
 
 const tools: Tool[] = [
   {
+    slug: 'task-splitter',
+    title: 'Task Breakdown Tool',
+    description:
+      'Type a task you cannot start. AI splits it into small, doable steps with time estimates. Built for ADHD brains.',
+    status: 'live',
+  },
+  {
+    slug: 'brain-dump',
+    title: 'Brain Dump Tool',
+    description:
+      'Dump everything in your head, AI pulls out only the actionable tasks. No signup, nothing stored.',
+    status: 'live',
+  },
+  {
     slug: 'pomodoro',
     title: 'ADHD Pomodoro Timer',
     description:
