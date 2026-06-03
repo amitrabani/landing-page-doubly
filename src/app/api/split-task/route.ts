@@ -3,52 +3,74 @@ import { applyGuards, fetchWithTimeout } from '@/lib/api-guard';
 
 export const runtime = 'nodejs';
 
-const FLOWISE_BASE_URL =
-  process.env.FLOWISE_BASE_URL || 'https://flowise-docker-lwys.onrender.com';
-const FLOWISE_PREDICTION_ID =
-  process.env.FLOWISE_PREDICTION_ID || 'dd9e9b64-3d88-45d0-94b9-8bb62f3576be';
+// Mirrors the TidyList `ai-task-split` edge function (mode: 'create'): same
+// prompt, model, and temperature, so the web tool produces the same quality of
+// breakdown as the app. The landing page calls OpenAI directly instead of the
+// app's edge function because that function gates on a logged-in user JWT,
+// which anonymous web visitors do not have.
+const OPENAI_MODEL = process.env.OPENAI_SPLIT_MODEL || 'gpt-4o-mini';
 
-const TASK_SPLIT_PROMPT = `
-You are an assistant receiving task descriptions from a user, and breaking them down into JSON format.
+const SYSTEM_PROMPT_CREATE = `
+You are a task breakdown assistant for an ADHD-friendly household app.
+You receive a free-form task description from a user and return a structured task.
 
-For each task, perform the following:
-- If there is a clearly relevant iOS emoji for the task, add it at the beginning of the task title (e.g. "🧺 Do the laundry", "🍳 Cook dinner"). If no obvious emoji fits, do NOT add one - just use the plain task title.
-- Break down the task into clear, actionable subtasks.
-- order the subtasks in the order they should be performed.
-- Estimate the time required for active, user-involved task completion.
-- Do not include passive actions like "waiting".
-- Determine the urgency and set the due date based on the text provided.
-- Set the recurrence of the task based on the provided details.
+For the task:
+- If a clearly relevant iOS emoji fits, prefix the task title with it (e.g. "🧺 Do the laundry"). If no obvious emoji fits, do not force one.
+- Break the task into 3-6 concrete, actionable subtasks in the order they should be performed.
+- Each subtask must be a real action the user actively does. Do NOT include passive steps like "wait", "let it dry", "let it soak".
+- Keep each subtask title short and concrete (under 60 characters). Avoid vague verbs like "handle" or "deal with".
+- Estimate the active duration for each subtask as a short string (e.g. "5 minutes"). Use realistic time estimates.
+- Infer urgency from the description: "high", "medium", or "low". If unclear, use null.
+- Extract a due date in ISO 8601 format if the user mentioned one. Otherwise null.
+- Extract a recurrence pattern as one of: "daily", "weekly", "monthly", "yearly", "none". If unclear, null.
 
-If specific details are missing, follow these rules:
-- If urgency is not specified, Assume "null".
-- If no due date is provided, Assume "null".
-- If the due date is today, set the urgency to "high."
-- If no duration is provided, Assume "null".
-- If recurrence is not specified, Assume "null".
-
-Urgency can be: "medium", "low", or "high".
-
-When estimating durations:
-Use realistic time estimates based on typical human behavior and the nature of the task.
-Avoid overestimating durations for simple tasks; apply common sense to ensure time estimates are practical.
-
-**IMPORTANT:**
-- Always return a single JSON object (not an array).
-- Respond ONLY with the JSON. Do not include any additional text or explanations.
-
-example of fields in the JSON:
-"task": "Do the laundry",
-"subtasks": [
-  { "subtask": "Gather dirty clothes", "duration": "3 minutes" },
-  { "subtask": "Sort whites and colors", "duration": "2 minutes" }
-],
-"urgency": "medium",
-"dueDate": null,
-"recurrence": null
-`;
+Return ONLY valid JSON with the keys: task, subtasks, urgency, dueDate, recurrence.
+Each item in "subtasks" must be an object with keys "subtask" (string) and "duration" (string).
+Return a single JSON object for a single task (not an array).
+`.trim();
 
 const MAX_TASK_LENGTH = 200;
+const MAX_SUBTASKS = 12;
+
+type ParsedSubtask = { subtask?: unknown; text?: unknown; name?: unknown; duration?: unknown };
+
+function pickString(...values: unknown[]): string {
+  for (const v of values) {
+    if (typeof v === 'string' && v.trim()) return v;
+  }
+  return '';
+}
+
+function normalize(parsed: Record<string, unknown>, fallbackTitle: string) {
+  // The model may wrap multiple tasks under a "tasks" array; the web tool only
+  // shows one, so collapse to the first.
+  const source =
+    Array.isArray((parsed as { tasks?: unknown }).tasks) &&
+    (parsed as { tasks: unknown[] }).tasks.length > 0
+      ? ((parsed as { tasks: Record<string, unknown>[] }).tasks[0] ?? {})
+      : parsed;
+
+  const subtasksRaw = source.subtasks;
+  const subtasks = Array.isArray(subtasksRaw)
+    ? subtasksRaw
+        .map((st: ParsedSubtask, i: number) => ({
+          text: pickString(st?.subtask, st?.text, st?.name, `Step ${i + 1}`).slice(0, 200),
+          duration: typeof st?.duration === 'string' ? st.duration.slice(0, 32) : null,
+        }))
+        .filter((st) => st.text.trim().length > 0)
+        .slice(0, MAX_SUBTASKS)
+    : [];
+
+  const urgencyRaw = source.urgency;
+  const urgency =
+    urgencyRaw === 'low' || urgencyRaw === 'medium' || urgencyRaw === 'high' ? urgencyRaw : null;
+
+  return {
+    title: pickString(source.task, source.title, fallbackTitle).slice(0, 200) || fallbackTitle,
+    subtasks,
+    urgency,
+  };
+}
 
 export async function POST(request: NextRequest) {
   const guarded = await applyGuards(request, {
@@ -64,14 +86,32 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid task' }, { status: 400 });
   }
 
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    console.error('Task split failed: OPENAI_API_KEY is not set');
+    return NextResponse.json({ error: 'Failed to split task' }, { status: 502 });
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const systemPrompt = `${SYSTEM_PROMPT_CREATE}\n\nToday's date is ${today}. Resolve relative dates (e.g. "tomorrow", "this weekend") relative to this date.`;
+
   try {
     const response = await fetchWithTimeout(
-      `${FLOWISE_BASE_URL}/api/v1/prediction/${FLOWISE_PREDICTION_ID}`,
+      'https://api.openai.com/v1/chat/completions',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
         body: JSON.stringify({
-          question: `${TASK_SPLIT_PROMPT}\n\nTask: ${task}`,
+          model: OPENAI_MODEL,
+          temperature: 0.4,
+          response_format: { type: 'json_object' },
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: task },
+          ],
         }),
       },
       25_000,
@@ -81,33 +121,18 @@ export async function POST(request: NextRequest) {
       throw new Error(`Upstream ${response.status}`);
     }
 
-    const result: Record<string, unknown> = await response.json();
-    const firstValue = Object.values(result)[0];
-    if (typeof firstValue !== 'string') {
+    const result = await response.json();
+    const content = result?.choices?.[0]?.message?.content;
+    if (typeof content !== 'string' || !content.trim()) {
       throw new Error('Unexpected response shape');
     }
 
-    const jsonMatch = firstValue.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) throw new Error('No JSON found');
-    const parsed = JSON.parse(jsonMatch[0]);
+    const parsed = JSON.parse(content);
+    if (!parsed || typeof parsed !== 'object') {
+      throw new Error('Model output was not a JSON object');
+    }
 
-    const normalized = {
-      title: typeof parsed.task === 'string' ? parsed.task : task,
-      subtasks: Array.isArray(parsed.subtasks)
-        ? parsed.subtasks
-            .slice(0, 12)
-            .map((st: { subtask?: string; text?: string; duration?: string }, i: number) => ({
-              text: (st.subtask || st.text || `Step ${i + 1}`).slice(0, 200),
-              duration: typeof st.duration === 'string' ? st.duration.slice(0, 32) : null,
-            }))
-        : [],
-      urgency:
-        parsed.urgency === 'low' || parsed.urgency === 'medium' || parsed.urgency === 'high'
-          ? parsed.urgency
-          : null,
-    };
-
-    return NextResponse.json(normalized);
+    return NextResponse.json(normalize(parsed as Record<string, unknown>, task));
   } catch (error) {
     console.error('Task split failed:', error);
     return NextResponse.json({ error: 'Failed to split task' }, { status: 502 });
