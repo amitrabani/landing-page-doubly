@@ -18,7 +18,6 @@ const en = {
     subtitle:
       'Dump the chaos, get one clear next step, and actually move forward.',
     cta: 'Download on the App Store',
-    secondaryCta: 'See how it works',
     floatingCards: {
       brainDump: 'Brain Dump',
       nextStep: 'Next Step',

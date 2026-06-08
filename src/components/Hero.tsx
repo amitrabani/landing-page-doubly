@@ -70,12 +70,6 @@ export default function Hero() {
               className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
             >
               <AppStoreButton />
-              <a
-                href="#how-it-works"
-                className="inline-flex items-center gap-2 rounded-full border border-charcoal/15 text-charcoal px-8 py-4 text-lg font-medium hover:bg-charcoal/5 transition-all"
-              >
-                {t.hero.secondaryCta}
-              </a>
             </motion.div>
           </div>
 
