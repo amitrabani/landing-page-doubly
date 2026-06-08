@@ -17,7 +17,7 @@ const en = {
     titleHighlight: 'start and follow through',
     subtitle:
       'Dump the chaos, get one clear next step, and actually move forward.',
-    cta: 'Start your first task now',
+    cta: 'Download on the App Store',
     secondaryCta: 'See how it works',
     floatingCards: {
       brainDump: 'Brain Dump',
@@ -25,13 +25,7 @@ const en = {
       accountability: 'Accountability',
     },
     phone: {
-      greeting: 'Good morning',
-      yourNextStep: 'Your next step',
-      activeTask: 'Put laundry in washer',
-      duration: '10 min',
-      fromBrainDump: 'from brain dump',
-      task1: 'Reply to Sarah',
-      task2: 'Start project outline',
+      screenAlt: 'Doubly app showing your planned week ahead with time-blocked tasks',
     },
   },
 
@@ -424,7 +418,7 @@ const en = {
     title: "Your brain doesn\u2019t need more pressure",
     highlight: 'It needs a way to start.',
     subtitle: 'For ADHD minds that are tired of overthinking, avoiding, and falling behind.',
-    cta: 'Start your first task now',
+    cta: 'Download on the App Store',
     disclaimer: 'Free to start. No credit card required.',
   },
 

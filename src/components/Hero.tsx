@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import t from '@/translations/en';
+import AppStoreButton from './AppStoreButton';
 
 const floatingCards = [
   { label: t.hero.floatingCards.brainDump, icon: '💭', x: -180, y: -60, delay: 0.3, color: 'bg-lavender-light' },
@@ -68,15 +69,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.55, ease }}
               className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
             >
-              <a
-                href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
-                className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-4 text-lg font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] active:scale-[0.98]"
-              >
-                {t.hero.cta}
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
-                  <path d="M7 4l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
+              <AppStoreButton />
               <a
                 href="#how-it-works"
                 className="inline-flex items-center gap-2 rounded-full border border-charcoal/15 text-charcoal px-8 py-4 text-lg font-medium hover:bg-charcoal/5 transition-all"
@@ -96,47 +89,12 @@ export default function Hero() {
             {/* Phone frame */}
             <div className="relative w-64 sm:w-72">
               <div className="relative bg-white rounded-[2.5rem] shadow-2xl shadow-charcoal/10 border border-charcoal/5 overflow-hidden">
-                {/* Status bar */}
-                <div className="h-12 bg-cream flex items-center justify-center">
-                  <div className="w-20 h-5 bg-charcoal/10 rounded-full" />
-                </div>
-                {/* Screen content - simplified app UI */}
-                <div className="px-5 pb-6 bg-cream">
-                  <div className="text-xs font-medium text-muted-light mb-3">{t.hero.phone.greeting}</div>
-                  <div className="text-base font-[family-name:var(--font-display)] font-semibold text-charcoal mb-4">
-                    {t.hero.phone.yourNextStep}
-                  </div>
-                  {/* Active task card */}
-                  <div className="bg-lavender-light/40 rounded-2xl p-4 mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full border-2 border-lavender-dark" />
-                      <span className="text-sm font-medium text-charcoal">{t.hero.phone.activeTask}</span>
-                    </div>
-                    <div className="mt-2 flex items-center gap-2">
-                      <div className="text-xs text-lavender-dark bg-lavender-light/60 rounded-full px-2.5 py-0.5">
-                        {t.hero.phone.duration}
-                      </div>
-                      <div className="text-xs text-muted-light">{t.hero.phone.fromBrainDump}</div>
-                    </div>
-                  </div>
-                  {/* Dimmed tasks */}
-                  <div className="space-y-2 opacity-40">
-                    <div className="bg-white/60 rounded-xl p-3 flex items-center gap-3">
-                      <div className="w-4 h-4 rounded-full border border-charcoal/20" />
-                      <span className="text-xs text-muted">{t.hero.phone.task1}</span>
-                    </div>
-                    <div className="bg-white/60 rounded-xl p-3 flex items-center gap-3">
-                      <div className="w-4 h-4 rounded-full border border-charcoal/20" />
-                      <span className="text-xs text-muted">{t.hero.phone.task2}</span>
-                    </div>
-                  </div>
-                  {/* Bottom bar mockup */}
-                  <div className="mt-4 flex items-center justify-around py-2 border-t border-charcoal/5">
-                    {['home', 'dump', 'focus', 'profile'].map((item) => (
-                      <div key={item} className="w-6 h-6 rounded-lg bg-charcoal/10" />
-                    ))}
-                  </div>
-                </div>
+                {/* Real app screen */}
+                <img
+                  src="/hero-app-screen.png"
+                  alt={t.hero.phone.screenAlt}
+                  className="block w-full h-auto"
+                />
               </div>
 
               {/* Floating cards */}
