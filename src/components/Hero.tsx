@@ -5,10 +5,62 @@ import { useRef } from 'react';
 import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
 
+const iconProps = {
+  width: 15,
+  height: 15,
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 2,
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+} as const;
+
 const floatingCards = [
-  { label: t.hero.floatingCards.brainDump, icon: '💭', x: -150, y: -210, delay: 0.3, color: 'bg-lavender-light' },
-  { label: t.hero.floatingCards.habits, icon: '🔁', x: 155, y: -40, delay: 0.5, color: 'bg-coral-light' },
-  { label: t.hero.floatingCards.accountability, icon: '🤝', x: -140, y: 215, delay: 0.7, color: 'bg-sky-light' },
+  {
+    label: t.hero.floatingCards.brainDump,
+    color: 'bg-lavender',
+    x: -150,
+    y: -210,
+    delay: 0.3,
+    icon: (
+      <svg {...iconProps}>
+        <path d="M9 18h6" />
+        <path d="M10 22h4" />
+        <path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+      </svg>
+    ),
+  },
+  {
+    label: t.hero.floatingCards.habits,
+    color: 'bg-coral',
+    x: 155,
+    y: -40,
+    delay: 0.5,
+    icon: (
+      <svg {...iconProps}>
+        <path d="m17 2 4 4-4 4" />
+        <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
+        <path d="m7 22-4-4 4-4" />
+        <path d="M21 13v1a4 4 0 0 1-4 4H3" />
+      </svg>
+    ),
+  },
+  {
+    label: t.hero.floatingCards.accountability,
+    color: 'bg-sky',
+    x: -140,
+    y: 215,
+    delay: 0.7,
+    icon: (
+      <svg {...iconProps}>
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+  },
 ];
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -110,10 +162,12 @@ export default function Hero() {
                       scale: { duration: 0.6, delay: card.delay + 0.3, ease },
                       y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
                     }}
-                    className={`${card.color} rounded-2xl px-4 py-2.5 shadow-xl shadow-charcoal/10 ring-1 ring-black/[0.04] flex items-center gap-2`}
+                    className="flex items-center gap-2.5 rounded-2xl bg-white/95 px-3 py-2.5 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.22)] ring-1 ring-black/[0.05] backdrop-blur"
                   >
-                    <span className="text-lg">{card.icon}</span>
-                    <span className="text-sm font-medium text-charcoal whitespace-nowrap">{card.label}</span>
+                    <span className={`flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
+                      {card.icon}
+                    </span>
+                    <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{card.label}</span>
                   </motion.div>
                 </div>
               ))}
