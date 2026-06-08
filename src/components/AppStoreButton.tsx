@@ -9,7 +9,7 @@ export default function AppStoreButton({ className = '' }: { className?: string 
       href={APP_STORE_URL}
       className={`inline-block transition-transform hover:scale-[1.03] active:scale-[0.98] ${className}`}
     >
-      <img src="/app-store-badge.svg" alt={t.hero.cta} className="h-14 w-auto" />
+      <img src="/app-store-badge.svg" alt={t.hero.cta} className="h-16 w-auto sm:h-20" />
     </a>
   );
 }
