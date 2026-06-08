@@ -6,9 +6,9 @@ import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
 
 const floatingCards = [
-  { label: t.hero.floatingCards.brainDump, icon: '💭', x: -180, y: -60, delay: 0.3, color: 'bg-lavender-light' },
-  { label: t.hero.floatingCards.nextStep, icon: '✨', x: 180, y: -40, delay: 0.5, color: 'bg-coral-light' },
-  { label: t.hero.floatingCards.accountability, icon: '🤝', x: 0, y: 160, delay: 0.7, color: 'bg-sky-light' },
+  { label: t.hero.floatingCards.brainDump, icon: '💭', x: -150, y: -210, delay: 0.3, color: 'bg-lavender-light' },
+  { label: t.hero.floatingCards.habits, icon: '🔁', x: 155, y: -40, delay: 0.5, color: 'bg-coral-light' },
+  { label: t.hero.floatingCards.accountability, icon: '🤝', x: -140, y: 215, delay: 0.7, color: 'bg-sky-light' },
 ];
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
@@ -93,29 +93,29 @@ export default function Hero() {
 
               {/* Floating cards */}
               {floatingCards.map((card) => (
-                <motion.div
+                <div
                   key={card.label}
-                  initial={{ opacity: 0, scale: 0.6 }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    y: [0, -6, 0],
-                  }}
-                  transition={{
-                    opacity: { duration: 0.6, delay: card.delay + 0.3 },
-                    scale: { duration: 0.6, delay: card.delay + 0.3, ease },
-                    y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
-                  }}
-                  className={`absolute ${card.color} rounded-2xl px-4 py-3 shadow-lg shadow-charcoal/5 flex items-center gap-2`}
+                  className="absolute hidden lg:block"
                   style={{
                     left: `calc(50% + ${card.x}px)`,
                     top: `calc(50% + ${card.y}px)`,
                     transform: 'translate(-50%, -50%)',
                   }}
                 >
-                  <span className="text-lg">{card.icon}</span>
-                  <span className="text-sm font-medium text-charcoal whitespace-nowrap">{card.label}</span>
-                </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+                    transition={{
+                      opacity: { duration: 0.6, delay: card.delay + 0.3 },
+                      scale: { duration: 0.6, delay: card.delay + 0.3, ease },
+                      y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
+                    }}
+                    className={`${card.color} rounded-2xl px-4 py-2.5 shadow-xl shadow-charcoal/10 ring-1 ring-black/[0.04] flex items-center gap-2`}
+                  >
+                    <span className="text-lg">{card.icon}</span>
+                    <span className="text-sm font-medium text-charcoal whitespace-nowrap">{card.label}</span>
+                  </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>

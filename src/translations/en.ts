@@ -20,7 +20,7 @@ const en = {
     cta: 'Download on the App Store',
     floatingCards: {
       brainDump: 'Brain Dump',
-      nextStep: 'Next Step',
+      habits: 'Habits',
       accountability: 'Accountability',
     },
     phone: {
