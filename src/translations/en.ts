@@ -16,7 +16,7 @@ const en = {
     titlePrefix: 'The ADHD app that helps you ',
     titleHighlight: 'start and follow through',
     subtitle:
-      'Stop spinning, overthinking, and avoiding. Dump the chaos, get one clear next step, and actually move forward.',
+      'Dump the chaos, get one clear next step, and actually move forward.',
     cta: 'Start your first task now',
     secondaryCta: 'See how it works',
     floatingCards: {

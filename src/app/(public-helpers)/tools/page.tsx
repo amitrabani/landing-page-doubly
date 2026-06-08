@@ -51,6 +51,20 @@ const tools: Tool[] = [
     status: 'live',
   },
   {
+    slug: 'pick-one',
+    title: 'Pick One Task Tool',
+    description:
+      'Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random. Built for the moment ten tasks reads as one giant unstartable thing.',
+    status: 'live',
+  },
+  {
+    slug: 'eisenhower-matrix',
+    title: 'Eisenhower Matrix (ADHD Edition)',
+    description:
+      'Drag tasks into quadrants like "boring but important" instead of textbook labels. The matrix that finally fits an ADHD brain. Saves locally.',
+    status: 'live',
+  },
+  {
     slug: 'pomodoro',
     title: 'ADHD Pomodoro Timer',
     description:

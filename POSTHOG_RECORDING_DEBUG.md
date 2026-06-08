@@ -1,4 +1,4 @@
-# PostHog Session Recording — Web Not Surfacing
+# PostHog Session Recording: Web Not Surfacing
 
 ## Problem
 
@@ -21,7 +21,7 @@ despite the web SDK successfully uploading snapshot data.
 - `_POSTHOG_REMOTE_CONFIG` is populated with correct sessionRecording config
   (urlTriggers, sampleRate: null, minimumDurationMilliseconds: null).
 - Network tab on prod shows **many successful `POST /s/` requests, all 200**
-  — snapshot data is being captured and accepted by PostHog ingestion.
+ : snapshot data is being captured and accepted by PostHog ingestion.
 - `/e/` events also fire (manual `$pageview` captures from `PostHogPageView`).
 - TidyList persons + recordings appear in the project, so the project is
   configured correctly server-side.
@@ -30,7 +30,7 @@ despite the web SDK successfully uploading snapshot data.
 
 - `window.posthog` is `undefined` on prod. Only `__PosthogExtensions__`,
   `_POSTHOG_REMOTE_CONFIG`, and `extendPostHogWithSurveys` are exposed.
-  Likely explained by Next.js bundling the SDK inside a client chunk —
+  Likely explained by Next.js bundling the SDK inside a client chunk:
   `posthog.init()` still runs and the SDK still makes network calls, it just
   isn't attached to `window`. Not necessarily a smoking gun.
 - Remote config returns `"defaultIdentifiedOnly": true` at the project level.
@@ -40,7 +40,7 @@ despite the web SDK successfully uploading snapshot data.
 | # | Change | Result |
 |---|--------|--------|
 | 1 | Confirmed both projects share same key | already true, ruled out as cause |
-| 2 | Loosened URL trigger regex (`.*usedoubly\.com.*`) | not needed — SDK already matches |
+| 2 | Loosened URL trigger regex (`.*usedoubly\.com.*`) | not needed: SDK already matches |
 | 3 | `posthog.identify(posthog.get_distinct_id())` after init (commit `6241037`) | No-op. PostHog does not promote the existing anonymous distinct_id to "identified" when you identify with the same ID. No new persons created. |
 | 4 | Switched `person_profiles: 'identified_only'` → `'always'` (commit `fcb5b5a`) | Pushed. Pending verification after Vercel deploy. |
 
@@ -55,7 +55,7 @@ despite the web SDK successfully uploading snapshot data.
 
 1. **PostHog requires at least one captured event tied to the session before
    it indexes the recording.** Events ARE firing (`/e/` requests visible), so
-   this should be satisfied — but worth confirming the `$pageview` event
+   this should be satisfied: but worth confirming the `$pageview` event
    actually has the same `$session_id` as the `/s/` snapshots. Check a `/s/`
    request payload vs an `/e/` payload in DevTools.
 2. **Recording quota exhausted at the project level.** Free tier caps replays
@@ -73,7 +73,7 @@ despite the web SDK successfully uploading snapshot data.
    could be orphaned.
 6. **Different SDK version mismatch between recorder.js (loaded from CDN
    v1.363.4) and the bundled posthog-js client.** Check the version in
-   `package.json` — if drastically different, upgrade.
+   `package.json`: if drastically different, upgrade.
 
 ## Next diagnostic steps
 
@@ -82,6 +82,6 @@ despite the web SDK successfully uploading snapshot data.
    - Click one `/s/` request → Payload → confirm `$session_id` value.
    - Click one `/e/` request → Payload → confirm `$session_id` value.
    - **They must match.** If they differ, session stitching is the bug.
-3. In PostHog → People → Persons, filter by "Created this hour" — see if
+3. In PostHog → People → Persons, filter by "Created this hour": see if
    any new anonymous web persons appear after the deploy.
 4. Check Settings → Billing & Usage for session replay quota.

@@ -234,7 +234,15 @@ export default function TaskSplitterPage() {
           <Link href="/tools/brain-dump" className="text-lavender-dark underline hover:no-underline">
             brain dump tool
           </Link>{' '}
-          and let the AI pull the actionable items out first. Once you have a step list here,
+          and let the AI pull the actionable items out first, or sort the whole list with the{' '}
+          <Link href="/tools/eisenhower-matrix" className="text-lavender-dark underline hover:no-underline">
+            ADHD Eisenhower matrix
+          </Link>{' '}
+          and run{' '}
+          <Link href="/tools/pick-one" className="text-lavender-dark underline hover:no-underline">
+            pick one
+          </Link>{' '}
+          to surface a starting task. Once you have a step list here,
           time-box the first one with the{' '}
           <Link href="/tools/pomodoro" className="text-lavender-dark underline hover:no-underline">
             ADHD pomodoro timer

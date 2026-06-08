@@ -13,9 +13,11 @@ export const pageEntries: SitemapEntry[] = [
 ];
 
 export const toolEntries: SitemapEntry[] = [
-  { path: '/tools', lastmod: '2026-05-25' },
-  { path: '/tools/task-splitter', lastmod: '2026-05-25' },
-  { path: '/tools/brain-dump', lastmod: '2026-05-25' },
+  { path: '/tools', lastmod: '2026-05-30' },
+  { path: '/tools/task-splitter', lastmod: '2026-05-30' },
+  { path: '/tools/brain-dump', lastmod: '2026-05-30' },
+  { path: '/tools/pick-one', lastmod: '2026-05-30' },
+  { path: '/tools/eisenhower-matrix', lastmod: '2026-05-30' },
   { path: '/tools/pomodoro', lastmod: '2026-05-18' },
   { path: '/tools/visual-timer', lastmod: '2026-05-18' },
   { path: '/tools/brown-noise', lastmod: '2026-05-14' },

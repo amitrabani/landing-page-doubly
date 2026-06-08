@@ -6,21 +6,21 @@ Scope: `/tools/pomodoro` and `/tools/visual-timer`
 
 ## Goal
 
-Both timers feel more visually delightful, more premium / app-like, and more on-brand for the Doubly ADHD audience, while reusing as much code as possible across the two pages. Direction chosen: **Warm Tactile** — a dial that appears to sit in the cream surface like a physical object, with an inset shadow, a soft coral wedge that breathes gently when running, and gradient-treated controls.
+Both timers feel more visually delightful, more premium / app-like, and more on-brand for the Doubly ADHD audience, while reusing as much code as possible across the two pages. Direction chosen: **Warm Tactile**: a dial that appears to sit in the cream surface like a physical object, with an inset shadow, a soft coral wedge that breathes gently when running, and gradient-treated controls.
 
 The "Aurora Glow" and "Frosted Petal" directions were considered and rejected. Aurora's dark stage was too far from the warm Doubly palette. Frosted Petal's glassmorphism worked but was less calm than Warm Tactile.
 
 ## Architectural change: extract the dial
 
-Today, `VisualTimer.tsx` owns both dial rendering and timer state. `PomodoroTimer.tsx` has no dial — just large digits and a thin progress bar. The pomodoro will switch to dial-first, so the dial must become reusable.
+Today, `VisualTimer.tsx` owns both dial rendering and timer state. `PomodoroTimer.tsx` has no dial: just large digits and a thin progress bar. The pomodoro will switch to dial-first, so the dial must become reusable.
 
 Three pure presentational components are extracted to `src/app/(public-helpers)/_components/`:
 
-- **`TimerDial.tsx`** — SVG dial. Props: `progress` (0..1, fraction of time remaining), `wedgeColor` (CSS color or var), `display` (digit string for the chip), `status` ('idle' | 'running' | 'paused'), `ariaLabel`. Renders the cream surface, inset shadow, twelve tick marks (heavier at quarters, no numbers — identical to today's visual timer), conic-gradient wedge with breath glow when running, digits chip centered inside.
-- **`TimerControls.tsx`** — primary Start/Pause/Resume button plus Reset, optional Skip slot. Props: `status`, `onStart`, `onPause`, `onReset`, optional `onSkip`, optional `startLabelOverride` (for the "Done" edge case in the visual timer when remaining is zero).
-- **`PresetPills.tsx`** — the duration preset row used by the visual timer, possibly reused for future tools. Props: `presets: number[]`, `currentMinutes`, `onApply`, `onCustomOpen`, `customOpen`.
+- **`TimerDial.tsx`**: SVG dial. Props: `progress` (0..1, fraction of time remaining), `wedgeColor` (CSS color or var), `display` (digit string for the chip), `status` ('idle' | 'running' | 'paused'), `ariaLabel`. Renders the cream surface, inset shadow, twelve tick marks (heavier at quarters, no numbers: identical to today's visual timer), conic-gradient wedge with breath glow when running, digits chip centered inside.
+- **`TimerControls.tsx`**: primary Start/Pause/Resume button plus Reset, optional Skip slot. Props: `status`, `onStart`, `onPause`, `onReset`, optional `onSkip`, optional `startLabelOverride` (for the "Done" edge case in the visual timer when remaining is zero).
+- **`PresetPills.tsx`**: the duration preset row used by the visual timer, possibly reused for future tools. Props: `presets: number[]`, `currentMinutes`, `onApply`, `onCustomOpen`, `customOpen`.
 
-State logic, persistence, and the reducers stay where they are — the two timers have meaningfully different state machines (modes, long-break cadence, etc.) and consolidating them adds complexity without saving code.
+State logic, persistence, and the reducers stay where they are: the two timers have meaningfully different state machines (modes, long-break cadence, etc.) and consolidating them adds complexity without saving code.
 
 ## Visual language spec
 
@@ -76,12 +76,12 @@ All values reference the existing CSS variables in `src/app/globals.css`.
 
 ## Per-timer layout
 
-**Visual timer (`/tools/visual-timer` — `VisualTimer.tsx`):**
+**Visual timer (`/tools/visual-timer`: `VisualTimer.tsx`):**
 
 Order, top to bottom inside the card:
 
 1. `<TimerDial>` with coral wedge, digits inside.
-2. Status text ("Counting down from 10 min" / "Paused" / "Time is up" / "Set for 10 min") — unchanged copy.
+2. Status text ("Counting down from 10 min" / "Paused" / "Time is up" / "Set for 10 min"): unchanged copy.
 3. `<TimerControls>` with Start/Pause primary and Reset ghost.
 4. `<PresetPills>` row with custom toggle.
 5. Custom minutes input (revealed when toggled).
@@ -89,7 +89,7 @@ Order, top to bottom inside the card:
 
 No content removed. Visual treatment only.
 
-**Pomodoro (`/tools/pomodoro` — `PomodoroTimer.tsx`):**
+**Pomodoro (`/tools/pomodoro`: `PomodoroTimer.tsx`):**
 
 Order, top to bottom inside the card:
 
@@ -100,7 +100,7 @@ Order, top to bottom inside the card:
 5. Sound checkbox + Customize durations toggle row (unchanged).
 6. Settings panel (revealed when toggled), unchanged.
 
-Removed: the giant 7xl/8xl digit display and the thin progress bar. The dial replaces both — the wedge IS the progress bar, and the digits live inside the dial.
+Removed: the giant 7xl/8xl digit display and the thin progress bar. The dial replaces both: the wedge IS the progress bar, and the digits live inside the dial.
 
 ## Motion and accessibility
 
@@ -126,10 +126,10 @@ New:
 - `src/app/(public-helpers)/_components/PresetPills.tsx`
 
 Modified:
-- `src/app/(public-helpers)/_components/VisualTimer.tsx` — keep state/persistence, render new components, remove inline SVG.
-- `src/app/(public-helpers)/tools/pomodoro/PomodoroTimer.tsx` — keep reducer/persistence, swap digit display + progress bar for `<TimerDial>`, mode tab gradients, use shared `<TimerControls>`.
+- `src/app/(public-helpers)/_components/VisualTimer.tsx`: keep state/persistence, render new components, remove inline SVG.
+- `src/app/(public-helpers)/tools/pomodoro/PomodoroTimer.tsx`: keep reducer/persistence, swap digit display + progress bar for `<TimerDial>`, mode tab gradients, use shared `<TimerControls>`.
 
-No new dependencies. No package.json changes. No globals.css token additions — all values can be expressed with existing CSS variables.
+No new dependencies. No package.json changes. No globals.css token additions: all values can be expressed with existing CSS variables.
 
 ## Performance
 
@@ -138,7 +138,7 @@ Both pages remain client-rendered for the timer widget and SSR for everything el
 ## Out of scope
 
 - Sound design changes.
-- Adding numerals to the dial (rejected — "as today" tick style was confirmed).
+- Adding numerals to the dial (rejected: "as today" tick style was confirmed).
 - Reusing state logic across the two timers.
 - Dark mode (not yet implemented site-wide).
 - Settings persistence migration (existing `localStorage` keys preserved).
