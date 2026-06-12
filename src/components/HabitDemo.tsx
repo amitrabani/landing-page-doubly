@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
-import { EASE, SPRING_SOFT, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
+import { EASE, SPRING_SNAPPY, SPRING_SOFT, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import t from '@/translations/en';
@@ -217,11 +217,12 @@ export default function HabitDemo() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        {/* Shared vanishing point so the two panels unfold like one opening device */}
+        <div className="flex flex-col lg:flex-row gap-8 [perspective:1200px]">
           {/* Left: Today's habits */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -20, rotateY: reduced ? 0 : 5 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex-1"
@@ -354,8 +355,8 @@ export default function HabitDemo() {
 
           {/* Right: Contribution grid - changes per selected habit */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20, rotateY: reduced ? 0 : -5 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1"
@@ -419,6 +420,8 @@ export default function HabitDemo() {
                             key={`${wi}-${di}`}
                             variants={cellVariants}
                             custom={(wi + di) * 0.008}
+                            whileHover={reduced ? undefined : { scale: 1.35 }}
+                            transition={SPRING_SNAPPY}
                           >
                             {isToday ? (
                               <motion.div
@@ -446,34 +449,34 @@ export default function HabitDemo() {
               <div className="grid grid-cols-3 gap-4 mt-6 pt-5 border-t border-charcoal/5">
                 <div className="text-center">
                   <motion.div
-                    key={`${selectedHabit}-streak`}
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
                   >
-                    {activeHabit.streak}
+                    <AnimatedNumber value={activeHabit.streak} />
                   </motion.div>
                   <div className="text-xs text-muted-light">{t.habitDemo.currentStreak}</div>
                 </div>
                 <div className="text-center">
                   <motion.div
-                    key={`${selectedHabit}-best`}
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
                   >
-                    {activeHabit.best}
+                    <AnimatedNumber value={activeHabit.best} />
                   </motion.div>
                   <div className="text-xs text-muted-light">{t.habitDemo.bestStreak}</div>
                 </div>
                 <div className="text-center">
                   <motion.div
-                    key={`${selectedHabit}-pct`}
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
                   >
-                    {activeHabit.pct}
+                    <AnimatedNumber
+                      value={parseInt(activeHabit.pct, 10)}
+                      format={(n) => `${n}%`}
+                    />
                   </motion.div>
                   <div className="text-xs text-muted-light">{t.habitDemo.completion}</div>
                 </div>

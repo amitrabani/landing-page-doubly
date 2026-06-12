@@ -6,6 +6,7 @@ import { EASE } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
+import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
 import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
 
@@ -28,6 +29,7 @@ const floatingCards = [
     y: -210,
     delay: 0.3,
     speed: 28,
+    depth: 18,
     rotate: -3,
     icon: (
       <svg {...iconProps}>
@@ -44,6 +46,7 @@ const floatingCards = [
     y: -40,
     delay: 0.5,
     speed: 44,
+    depth: 26,
     rotate: 2,
     icon: (
       <svg {...iconProps}>
@@ -61,6 +64,7 @@ const floatingCards = [
     y: 215,
     delay: 0.7,
     speed: 60,
+    depth: 34,
     rotate: -2,
     icon: (
       <svg {...iconProps}>
@@ -88,113 +92,150 @@ export default function Hero() {
   const phoneScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
 
   return (
-    <section ref={sectionRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 px-6">
-      {/* Soft gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream to-warm pointer-events-none" />
-      <motion.div style={reduced ? undefined : { y: bgY1 }} className="absolute top-20 right-1/4 w-96 h-96 rounded-full bg-lavender-light/20 blur-3xl pointer-events-none" />
-      <motion.div style={reduced ? undefined : { y: bgY2 }} className="absolute bottom-20 left-1/4 w-80 h-80 rounded-full bg-coral-light/15 blur-3xl pointer-events-none" />
-
-      <div className="relative z-10 mx-auto max-w-6xl w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Copy side */}
+    <section ref={sectionRef} className="relative overflow-hidden">
+      <MouseParallax className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
+        {/* Soft gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream to-warm pointer-events-none" />
+        {/* Background blobs: scroll parallax (inner) nested inside mouse depth (outer) */}
+        <MouseLayer depth={-14} className="absolute top-20 right-1/4 pointer-events-none">
           <motion.div
-            style={reduced ? undefined : { opacity: copyOpacity }}
-            className="flex-1 text-center lg:text-left"
-          >
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: EASE }}
-            >
-              <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5 mb-6">
-                {t.hero.badge}
-              </span>
-            </motion.div>
-
-            <WordReveal
-              as="h1"
-              text={t.hero.titlePrefix + t.hero.titleHighlight}
-              highlight={t.hero.titleHighlight}
-              highlightClassName="text-lavender-dark"
-              delay={0.15}
-              className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-semibold text-charcoal leading-[1.1] tracking-tight"
-            />
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.35, ease: EASE }}
-              className="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-lg mx-auto lg:mx-0"
-            >
-              {t.hero.subtitle}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
-              className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
-            >
-              <AppStoreButton />
-            </motion.div>
-          </motion.div>
-
-          {/* Phone mockup side */}
+            style={reduced ? undefined : { y: bgY1 }}
+            className="w-96 h-96 rounded-full bg-lavender-light/20 blur-3xl"
+          />
+        </MouseLayer>
+        <MouseLayer depth={-20} className="absolute bottom-20 left-1/4 pointer-events-none">
           <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3, ease: EASE }}
-            className="flex-1 relative flex items-center justify-center"
+            style={reduced ? undefined : { y: bgY2 }}
+            className="w-80 h-80 rounded-full bg-coral-light/15 blur-3xl"
+          />
+        </MouseLayer>
+
+        {/* Ambient depth accents: tiny decorative motes that sell the depth field */}
+        <MouseLayer depth={-26} className="absolute right-[22%] bottom-[18%] hidden md:block pointer-events-none">
+          <div aria-hidden className="h-6 w-6 rounded-full bg-sky/20 blur-md" />
+        </MouseLayer>
+        <MouseLayer depth={22} className="absolute left-[9%] top-[24%] z-20 hidden md:block pointer-events-none">
+          <div aria-hidden className="h-2.5 w-2.5 rounded-full bg-coral-light/50 blur-[1px]" />
+        </MouseLayer>
+        <MouseLayer depth={30} className="absolute right-[11%] top-[17%] z-20 hidden md:block pointer-events-none">
+          <svg
+            aria-hidden
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="text-lavender/60"
           >
-            {/* Phone frame */}
-            <motion.div style={reduced ? undefined : { scale: phoneScale }} className="relative w-64 sm:w-72">
-              <TiltCard
-                maxTilt={6}
-                sheen
-                className="relative bg-white rounded-[2.5rem] shadow-2xl shadow-charcoal/10 border border-charcoal/5 overflow-hidden"
+            <path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" />
+          </svg>
+        </MouseLayer>
+
+        <div className="relative z-10 mx-auto max-w-6xl w-full">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            {/* Copy side */}
+            <motion.div
+              style={reduced ? undefined : { opacity: copyOpacity }}
+              className="flex-1 text-center lg:text-left"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: EASE }}
               >
-                {/* Real app screen */}
-                <img
-                  src="/hero-app-screen.png"
-                  alt={t.hero.phone.screenAlt}
-                  className="block w-full h-auto"
-                />
-              </TiltCard>
+                <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5 mb-6">
+                  {t.hero.badge}
+                </span>
+              </motion.div>
 
-              {/* Floating cards */}
-              {floatingCards.map((card) => (
-                <div
-                  key={card.label}
-                  className="absolute hidden lg:block"
-                  style={{
-                    left: `calc(50% + ${card.x}px)`,
-                    top: `calc(50% + ${card.y}px)`,
-                    transform: `translate(-50%, -50%) rotate(${card.rotate}deg)`,
-                  }}
-                >
-                  <Parallax speed={card.speed}>
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.6 }}
-                      animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
-                      transition={{
-                        opacity: { duration: 0.6, delay: card.delay + 0.3 },
-                        scale: { duration: 0.6, delay: card.delay + 0.3, ease: EASE },
-                        y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
-                      }}
-                      className="flex items-center gap-2.5 rounded-2xl bg-white/95 px-3 py-2.5 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.22)] ring-1 ring-black/[0.05] backdrop-blur"
-                    >
-                      <span className={`flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
-                        {card.icon}
-                      </span>
-                      <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{card.label}</span>
-                    </motion.div>
-                  </Parallax>
-                </div>
-              ))}
+              <WordReveal
+                as="h1"
+                text={t.hero.titlePrefix + t.hero.titleHighlight}
+                highlight={t.hero.titleHighlight}
+                highlightClassName="text-lavender-dark"
+                delay={0.15}
+                className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-semibold text-charcoal leading-[1.1] tracking-tight"
+              />
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.35, ease: EASE }}
+                className="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-lg mx-auto lg:mx-0"
+              >
+                {t.hero.subtitle}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
+                className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+              >
+                <AppStoreButton />
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            {/* Phone mockup side */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3, ease: EASE }}
+              className="flex-1 relative flex items-center justify-center"
+            >
+              {/* Phone frame on a subtle mid-foreground plane */}
+              <MouseLayer depth={6}>
+                <motion.div style={reduced ? undefined : { scale: phoneScale }} className="relative w-64 sm:w-72">
+                  <TiltCard
+                    maxTilt={6}
+                    sheen
+                    className="relative bg-white rounded-[2.5rem] shadow-2xl shadow-charcoal/10 border border-charcoal/5 overflow-hidden"
+                  >
+                    {/* Real app screen */}
+                    <img
+                      src="/hero-app-screen.png"
+                      alt={t.hero.phone.screenAlt}
+                      className="block w-full h-auto"
+                    />
+                  </TiltCard>
+
+                  {/* Floating cards */}
+                  {floatingCards.map((card) => (
+                    <div
+                      key={card.label}
+                      className="absolute hidden lg:block"
+                      style={{
+                        left: `calc(50% + ${card.x}px)`,
+                        top: `calc(50% + ${card.y}px)`,
+                        transform: `translate(-50%, -50%) rotate(${card.rotate}deg)`,
+                      }}
+                    >
+                      <MouseLayer depth={card.depth}>
+                        <Parallax speed={card.speed}>
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0.6 }}
+                            animate={{ opacity: 1, scale: 1, y: [0, -6, 0] }}
+                            transition={{
+                              opacity: { duration: 0.6, delay: card.delay + 0.3 },
+                              scale: { duration: 0.6, delay: card.delay + 0.3, ease: EASE },
+                              y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
+                            }}
+                            className="flex items-center gap-2.5 rounded-2xl bg-white/95 px-3 py-2.5 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.22)] ring-1 ring-black/[0.05] backdrop-blur"
+                          >
+                            <span className={`flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
+                              {card.icon}
+                            </span>
+                            <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{card.label}</span>
+                          </motion.div>
+                        </Parallax>
+                      </MouseLayer>
+                    </div>
+                  ))}
+                </motion.div>
+              </MouseLayer>
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </MouseParallax>
     </section>
   );
 }

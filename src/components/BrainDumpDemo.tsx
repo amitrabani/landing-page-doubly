@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { EASE, SPRING, SPRING_SNAPPY, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
+import Parallax from '@/components/motion/Parallax';
 import t from '@/translations/en';
 
 const DUMP_TEXT = t.brainDumpDemo.dumpText;
@@ -21,6 +22,11 @@ const ROW_FLASH = [
   '0 0 0 5px rgba(184, 169, 212, 0.28)',
   '0 0 0 0 rgba(184, 169, 212, 0)',
 ];
+
+// Breathing border tint for the dump card while the typewriter runs.
+// Base matches the card's border-charcoal/5 so the loop settles invisibly.
+const BORDER_BASE = 'rgba(45, 43, 50, 0.05)';
+const BORDER_BREATHE = [BORDER_BASE, 'rgba(184, 169, 212, 0.4)', BORDER_BASE];
 
 type Flight = { key: string; fromX: number; fromY: number; toX: number; toY: number };
 
@@ -195,6 +201,9 @@ export default function BrainDumpDemo() {
 
   const revealedCount = revealedTasks.filter(Boolean).length;
 
+  // Drives the dump card's breathing border: only while the typewriter is running.
+  const typingActive = hasStarted && !done && !reduceMotion;
+
   return (
     <section ref={sectionRef} className="py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-4xl">
@@ -211,16 +220,41 @@ export default function BrainDumpDemo() {
           </motion.p>
         </div>
 
-        <div ref={gridRef} className="relative flex flex-col lg:flex-row gap-6 items-stretch">
+        <div
+          ref={gridRef}
+          className="relative isolate flex flex-col lg:flex-row gap-6 items-stretch"
+        >
+          {/* Depth glow: soft lavender plane drifting behind the card pair */}
+          <Parallax speed={16} className="pointer-events-none absolute -inset-10 -z-10">
+            <div
+              aria-hidden="true"
+              className="absolute left-1/2 top-1/2 h-[110%] w-[92%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(184,169,212,0.22),transparent_70%)] blur-2xl"
+            />
+          </Parallax>
+
           {/* Left: Brain dump text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex-1 w-full"
+            className="flex-1 w-full [perspective:1400px]"
           >
-            <div className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full">
+            {/* Nested 3D layer: settles to identity well before the first pill flight.
+                borderColor breathes while the typewriter runs, then stops. */}
+            <motion.div
+              initial={{ rotateY: reduceMotion ? 0 : 6, borderColor: BORDER_BASE }}
+              whileInView={{ rotateY: 0 }}
+              viewport={{ once: true }}
+              animate={{ borderColor: typingActive ? BORDER_BREATHE : BORDER_BASE }}
+              transition={{
+                rotateY: { duration: 0.8, delay: 0.1, ease: EASE },
+                borderColor: typingActive
+                  ? { duration: 4, ease: 'easeInOut', repeat: Infinity }
+                  : { duration: 0.6, ease: 'easeOut' },
+              }}
+              className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full"
+            >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-xl bg-lavender-light/30 flex items-center justify-center">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -322,7 +356,7 @@ export default function BrainDumpDemo() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Right: Extracted tasks (appear live) */}
@@ -331,9 +365,16 @@ export default function BrainDumpDemo() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex-1 w-full"
+            className="flex-1 w-full [perspective:1400px]"
           >
-            <div className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full flex flex-col">
+            {/* Mirror of the dump card's 3D entrance; settles before any flight is measured */}
+            <motion.div
+              initial={{ rotateY: reduceMotion ? 0 : -6 }}
+              whileInView={{ rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
+              className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full flex flex-col"
+            >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-xl bg-sage/20 flex items-center justify-center">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -404,7 +445,7 @@ export default function BrainDumpDemo() {
                 ))}
               </div>
 
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* Flying tokens: a phrase lifts off the dump card and lands in its checklist row */}

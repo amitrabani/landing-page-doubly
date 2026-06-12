@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import { EASE, SPRING, SPRING_SOFT, VIEWPORT_ONCE_TIGHT, fadeRise } from '@/lib/motion';
+import { EASE, HOVER_LIFT, SPRING, SPRING_SOFT, VIEWPORT_ONCE_TIGHT, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 
@@ -90,12 +90,18 @@ export default function TwoQuestions() {
               whileInView={reduced ? { opacity: 1 } : { opacity: 1, x: 0, filter: 'blur(0px)' }}
               viewport={VIEWPORT_ONCE_TIGHT}
               transition={{ duration: 0.65, delay: 0.07 * idx, ease: EASE }}
+              whileHover={reduced ? undefined : 'hover'}
               className="grid grid-cols-1 sm:grid-cols-[1fr_48px_1fr] items-center gap-2 sm:gap-0"
             >
-              {/* Without */}
-              <div className="rounded-2xl border border-coral-light/30 bg-coral-light/8 px-5 py-4">
+              {/* Without: sits a step behind the with card; recedes while the row is hovered */}
+              <motion.div
+                style={{ scale: 0.985, opacity: 0.92 }}
+                variants={{ hover: { scale: 0.97, opacity: 0.85 } }}
+                transition={SPRING_SOFT}
+                className="rounded-2xl border border-coral-light/30 bg-coral-light/8 px-5 py-4"
+              >
                 <span className="text-sm sm:text-base text-charcoal-light leading-relaxed">{row.without}</span>
-              </div>
+              </motion.div>
 
               {/* Arrow */}
               <div className="flex items-center justify-center">
@@ -109,10 +115,14 @@ export default function TwoQuestions() {
                 </svg>
               </div>
 
-              {/* With */}
-              <div className="rounded-2xl border border-sage/30 bg-sage/10 px-5 py-4">
+              {/* With: full presence; lifts while the row is hovered */}
+              <motion.div
+                variants={{ hover: HOVER_LIFT }}
+                transition={SPRING_SOFT}
+                className="rounded-2xl border border-sage/30 bg-sage/10 px-5 py-4"
+              >
                 <span className="text-sm sm:text-base text-charcoal font-medium leading-relaxed">{row.with}</span>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
@@ -162,12 +172,14 @@ export default function TwoQuestions() {
               animate={{ opacity: 1, y: 0, height: 'auto' }}
               exit={{ opacity: 0, y: 20, height: 0 }}
               transition={{ duration: 0.6, ease: EASE }}
-              className="overflow-hidden"
+              className="overflow-hidden [perspective:1000px]"
             >
               <motion.div
                 key={answer2}
-                initial={{ opacity: 0, y: 16, scale: 0.97 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
+                initial={
+                  reduced ? { opacity: 0 } : { opacity: 0, y: 16, scale: 0.97, rotateX: 12 }
+                }
+                animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 transition={SPRING_SOFT}
                 className={`relative bg-white rounded-3xl border ${accent.border} shadow-xl shadow-charcoal/5 p-8 text-center`}
               >

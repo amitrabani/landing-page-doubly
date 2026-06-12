@@ -10,6 +10,7 @@ import {
   type MotionValue,
 } from 'framer-motion';
 import { EASE, SPRING, SPRING_SNAPPY, SPRING_SOFT, fadeRise, staggerContainer } from '@/lib/motion';
+import TiltCard from '@/components/motion/TiltCard';
 import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 
@@ -59,10 +60,13 @@ const stepVariants = {
   },
 };
 
-const chipVariants = {
-  hidden: { opacity: 0, scale: 0.4 },
-  visible: { opacity: 1, scale: 1, transition: { ...SPRING, delay: 0.05 } },
-};
+/** 3D flip-in for the icon chips; each chip wrapper supplies [perspective:800px]. */
+const chipVariants = (reduced: boolean) => ({
+  hidden: reduced ? { opacity: 0 } : { opacity: 0, rotateY: 70, scale: 0.8 },
+  visible: reduced
+    ? { opacity: 1, transition: { duration: 0.5, ease: EASE } }
+    : { opacity: 1, rotateY: 0, scale: 1, transition: { ...SPRING, delay: 0.05 } },
+});
 
 const numberVariants = {
   hidden: { opacity: 0, scale: 0.6 },
@@ -159,24 +163,30 @@ export default function Plan() {
 
           {t.plan.steps.map((step, i) => (
             <motion.div key={step.number} variants={stepVariants} className="relative text-center">
-              <motion.div
-                variants={chipVariants}
-                whileHover={{ y: -4, scale: 1.06 }}
-                transition={SPRING_SOFT}
-                className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl transition-colors duration-300 ${stepStyles[i].bg} ${stepStyles[i].hover} ${stepStyles[i].color} mb-6`}
-              >
-                {stepIcons[i]}
-              </motion.div>
-              <motion.div
-                variants={numberVariants}
-                className="text-xs font-semibold text-muted-light tracking-widest mb-2"
-              >
-                {t.plan.stepLabel} {step.number}
-              </motion.div>
-              <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal mb-3">
-                {step.title}
-              </h3>
-              <p className="text-muted text-sm leading-relaxed max-w-xs mx-auto">{step.body}</p>
+              {/* Gentle pointer tilt for the whole column; nested so it never fights the
+                  entrance transforms on the variants element above. */}
+              <TiltCard maxTilt={3}>
+                <div className="inline-block [perspective:800px] mb-6">
+                  <motion.div
+                    variants={chipVariants(!!reduced)}
+                    whileHover={{ y: -4, scale: 1.06 }}
+                    transition={SPRING_SOFT}
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl transition-colors duration-300 ${stepStyles[i].bg} ${stepStyles[i].hover} ${stepStyles[i].color}`}
+                  >
+                    {stepIcons[i]}
+                  </motion.div>
+                </div>
+                <motion.div
+                  variants={numberVariants}
+                  className="text-xs font-semibold text-muted-light tracking-widest mb-2"
+                >
+                  {t.plan.stepLabel} {step.number}
+                </motion.div>
+                <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-muted text-sm leading-relaxed max-w-xs mx-auto">{step.body}</p>
+              </TiltCard>
             </motion.div>
           ))}
         </motion.div>

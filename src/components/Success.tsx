@@ -3,6 +3,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { EASE, fadeRise } from '@/lib/motion';
+import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
 import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 
@@ -18,6 +19,8 @@ export default function Success() {
   const imageY = useTransform(scrollYProgress, [0, 1], [40, -30]);
   const imageRotateX = useTransform(scrollYProgress, [0, 0.45], [9, 0]);
   const imageRotateY = useTransform(scrollYProgress, [0, 1], [-4, 2.5]);
+  // The glow breathes in as the card travels through the section.
+  const glowOpacity = useTransform(scrollYProgress, [0, 1], [0.2, 0.5]);
 
   return (
     <section className="py-24 sm:py-32 px-6 bg-gradient-to-b from-cream to-lavender-light/10">
@@ -31,7 +34,22 @@ export default function Success() {
           {t.success.subtitle}
         </motion.p>
 
-        <div className="mt-14 mx-auto max-w-sm sm:max-w-md lg:max-w-lg [perspective:1200px]">
+        <MouseParallax className="relative isolate mt-14 mx-auto max-w-sm sm:max-w-md lg:max-w-lg">
+          {/* Pastel accents on their own pointer depths, flanking the card */}
+          <MouseLayer
+            depth={-14}
+            className="pointer-events-none absolute -top-10 -left-16 -z-10 hidden sm:block"
+          >
+            <div aria-hidden className="h-36 w-36 rounded-full bg-sage/40 blur-2xl" />
+          </MouseLayer>
+          <MouseLayer
+            depth={20}
+            className="pointer-events-none absolute -bottom-8 -right-14 z-10 hidden sm:block"
+          >
+            <div aria-hidden className="h-24 w-24 rounded-full bg-coral-light/40 blur-xl" />
+          </MouseLayer>
+
+          <div className="[perspective:1200px]">
           <motion.div
             ref={imageRef}
             style={
@@ -47,10 +65,11 @@ export default function Success() {
             }
             className="relative isolate"
           >
-            {/* Soft lavender radial glow behind the card */}
-            <div
+            {/* Soft lavender radial glow behind the card, brightening with scroll */}
+            <motion.div
               aria-hidden
-              className="absolute -inset-10 -z-10 rounded-[3rem] bg-[radial-gradient(ellipse_at_center,rgba(184,169,212,0.4),transparent_70%)] blur-2xl"
+              style={{ opacity: reduced ? 0.5 : glowOpacity }}
+              className="absolute -inset-10 -z-10 rounded-[3rem] bg-[radial-gradient(ellipse_at_center,rgba(184,169,212,0.8),transparent_70%)] blur-2xl"
             />
             <motion.div
               initial={{ opacity: 0 }}
@@ -69,7 +88,8 @@ export default function Success() {
               </div>
             </motion.div>
           </motion.div>
-        </div>
+          </div>
+        </MouseParallax>
       </div>
     </section>
   );

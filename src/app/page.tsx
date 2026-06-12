@@ -15,11 +15,13 @@ import Footer from '@/components/Footer';
 import StickyBar from '@/components/StickyBar';
 import AmbientBackground from '@/components/AmbientBackground';
 import SmoothScroll from '@/components/motion/SmoothScroll';
+import ScrollProgress from '@/components/motion/ScrollProgress';
 
 export default function Home() {
   return (
     <>
       <SmoothScroll />
+      <ScrollProgress />
       <AmbientBackground />
       <Navbar />
       <main>
