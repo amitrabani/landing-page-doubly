@@ -2,9 +2,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import t from '@/translations/en';
 
+// CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
+const linkClass =
+  'relative text-sm text-muted hover:text-charcoal transition-colors duration-300 ' +
+  'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left ' +
+  'after:scale-x-0 after:bg-current after:transition-transform after:duration-300 ' +
+  'after:ease-out hover:after:scale-x-100';
+
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 border-t border-charcoal/5">
+    <footer className="py-12 px-6 border-t border-charcoal/5 bg-gradient-to-b from-cream to-warm">
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <Image src="/icon-192.png" alt="Doubly" width={28} height={28} className="rounded-lg" />
@@ -14,19 +21,19 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-          <Link href="/tools" className="text-sm text-muted hover:text-charcoal transition-colors">
+          <Link href="/tools" className={linkClass}>
             Tools
           </Link>
-          <Link href="/learn" className="text-sm text-muted hover:text-charcoal transition-colors">
+          <Link href="/learn" className={linkClass}>
             Learn
           </Link>
-          <Link href="/privacy" className="text-sm text-muted hover:text-charcoal transition-colors">
+          <Link href="/privacy" className={linkClass}>
             {t.footer.privacy}
           </Link>
-          <Link href="/terms" className="text-sm text-muted hover:text-charcoal transition-colors">
+          <Link href="/terms" className={linkClass}>
             {t.footer.terms}
           </Link>
-          <Link href="/support" className="text-sm text-muted hover:text-charcoal transition-colors">
+          <Link href="/support" className={linkClass}>
             {t.footer.support}
           </Link>
         </div>

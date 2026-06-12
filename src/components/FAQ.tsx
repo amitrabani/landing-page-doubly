@@ -1,21 +1,34 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { EASE, SPRING, VIEWPORT_ONCE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import t from '@/translations/en';
 
-const ease = [0.25, 0.1, 0.25, 1] as const;
+const listVariants: Variants = {
+  hidden: { opacity: 0, y: 40, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.7, ease: EASE, staggerChildren: 0.07, delayChildren: 0.1 },
+  },
+};
 
-function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number }) {
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+};
+
+function FAQItem({ faq }: { faq: { q: string; a: string } }) {
   const [open, setOpen] = useState(false);
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease }}
-      className="border-b border-charcoal/8 last:border-0"
+      layout
+      variants={itemVariants}
+      transition={{ layout: { duration: 0.35, ease: EASE } }}
+      className="border-b border-charcoal/8 last:border-0 -mx-3 px-3 rounded-2xl transition-colors hover:bg-lavender/5"
     >
       <button
         onClick={() => setOpen(!open)}
@@ -26,9 +39,15 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
           {faq.q}
         </span>
         <motion.div
-          animate={{ rotate: open ? 45 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="flex-shrink-0 w-8 h-8 rounded-full bg-charcoal/5 flex items-center justify-center text-charcoal-light"
+          initial={false}
+          animate={{
+            rotate: open ? 45 : 0,
+            backgroundColor: open ? 'rgba(184, 169, 212, 0.18)' : 'rgba(45, 43, 50, 0.05)',
+          }}
+          transition={{ rotate: SPRING, backgroundColor: { duration: 0.3, ease: 'easeOut' } }}
+          className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-[color] ${
+            open ? 'text-lavender-dark' : 'text-charcoal-light'
+          }`}
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M7 3v8M3 7h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -36,9 +55,10 @@ function FAQItem({ faq, index }: { faq: { q: string; a: string }; index: number 
         </motion.div>
       </button>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {open && (
           <motion.div
+            layout
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -60,24 +80,25 @@ export default function FAQ() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease }}
+          viewport={VIEWPORT_ONCE}
+          transition={{ duration: 0.8, ease: EASE }}
           className="text-center mb-14"
         >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
             {t.faq.title}
           </h2>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.97 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, margin: '-60px' }}
-          transition={{ duration: 0.7, ease }}
+          layout
+          variants={listVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT_ONCE_TIGHT}
           className="bg-white/60 backdrop-blur-sm rounded-3xl border border-charcoal/5 px-6 sm:px-8"
         >
-          {t.faq.items.map((faq, i) => (
-            <FAQItem key={faq.q} faq={faq} index={i} />
+          {t.faq.items.map((faq) => (
+            <FAQItem key={faq.q} faq={faq} />
           ))}
         </motion.div>
       </div>

@@ -1,11 +1,28 @@
 'use client';
 
 import { useState, useEffect, useRef, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { EASE, SPRING, SPRING_SNAPPY, fadeRise } from '@/lib/motion';
+import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 
 const DUMP_TEXT = t.brainDumpDemo.dumpText;
 const tasks = t.brainDumpDemo.tasks;
+
+// Lavender (#B8A9D4) glow keyframes, one-shot. Constant identity so framer doesn't replay.
+const PHRASE_PULSE = [
+  '0 0 0 0 rgba(184, 169, 212, 0)',
+  '0 0 0 6px rgba(184, 169, 212, 0.35)',
+  '0 0 0 0 rgba(184, 169, 212, 0)',
+];
+
+const ROW_FLASH = [
+  '0 0 0 0 rgba(184, 169, 212, 0)',
+  '0 0 0 5px rgba(184, 169, 212, 0.28)',
+  '0 0 0 0 rgba(184, 169, 212, 0)',
+];
+
+type Flight = { key: string; fromX: number; fromY: number; toX: number; toY: number };
 
 // Precompute character ranges for each task phrase in the dump text
 function computeRanges() {
@@ -20,8 +37,18 @@ export default function BrainDumpDemo() {
   const [typedLength, setTypedLength] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const [done, setDone] = useState(false);
+  const [flights, setFlights] = useState<Flight[]>([]);
+  const [runId, setRunId] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
+  const phraseEls = useRef<(HTMLSpanElement | null)[]>([]);
+  const rowEls = useRef<(HTMLDivElement | null)[]>([]);
+  const prevRevealed = useRef<boolean[]>(tasks.map(() => false));
+  const reduceMotion = useReducedMotion();
   const ranges = useMemo(computeRanges, []);
+
+  // Delay before a landed task row springs in, leaving room for the flying token.
+  const rowDelay = reduceMotion ? 0 : 0.4;
 
   // Which tasks have been fully typed through
   const revealedTasks = useMemo(
@@ -85,10 +112,45 @@ export default function BrainDumpDemo() {
     return () => clearTimeout(timer);
   }, [hasStarted, done, typedLength, insideTask, justFinishedTask]);
 
+  // When a phrase completes, launch a small lavender token from the phrase toward its row.
+  // Pure presentation: measured per run, never touches the timer state machine.
+  useEffect(() => {
+    revealedTasks.forEach((revealed, idx) => {
+      if (!revealed || prevRevealed.current[idx]) return;
+      prevRevealed.current[idx] = true;
+      if (reduceMotion) return;
+      const grid = gridRef.current;
+      const fromEl = phraseEls.current[idx];
+      const toEl = rowEls.current[idx];
+      if (!grid || !fromEl || !toEl) return;
+      const g = grid.getBoundingClientRect();
+      const from = fromEl.getBoundingClientRect();
+      const to = toEl.getBoundingClientRect();
+      setFlights((prev) => [
+        ...prev,
+        {
+          key: `${runId}-${idx}`,
+          fromX: from.left + from.width / 2 - g.left,
+          fromY: from.top + from.height / 2 - g.top,
+          toX: to.left + 30 - g.left,
+          toY: to.top + to.height / 2 - g.top,
+        },
+      ]);
+    });
+  }, [revealedTasks, reduceMotion, runId]);
+
+  const handleReplay = () => {
+    prevRevealed.current = tasks.map(() => false);
+    setFlights([]);
+    setRunId((id) => id + 1);
+    setTypedLength(0);
+    setDone(false);
+  };
+
   // Build rendered text with highlights
   const renderedText = useMemo(() => {
     const typed = DUMP_TEXT.substring(0, typedLength);
-    const parts: { value: string; isTask: boolean; taskDone: boolean }[] = [];
+    const parts: { value: string; isTask: boolean; taskDone: boolean; taskIdx?: number }[] = [];
     let cursor = 0;
 
     // Sort ranges by start position
@@ -116,6 +178,7 @@ export default function BrainDumpDemo() {
           value: DUMP_TEXT.substring(taskStart, taskEnd),
           isTask: true,
           taskDone: typedLength >= range.end,
+          taskIdx: range.idx,
         });
       }
 
@@ -135,22 +198,20 @@ export default function BrainDumpDemo() {
   return (
     <section ref={sectionRef} className="py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            {t.brainDumpDemo.title}
-          </h2>
-          <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
+        <div className="text-center mb-14">
+          <WordReveal
+            as="h2"
+            text={t.brainDumpDemo.title}
+            highlight="Keep the tasks."
+            highlightClassName="text-lavender-dark"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight tracking-tight"
+          />
+          <motion.p {...fadeRise(0.2, 20)} className="mt-4 text-muted text-lg max-w-xl mx-auto">
             {t.brainDumpDemo.subtitle}
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 items-stretch">
+        <div ref={gridRef} className="relative flex flex-col lg:flex-row gap-6 items-stretch">
           {/* Left: Brain dump text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -171,14 +232,40 @@ export default function BrainDumpDemo() {
                   <div className="text-xs text-lavender-dark font-medium">{t.brainDumpDemo.brainDumpLabel}</div>
                   <div className="text-xs text-muted-light">{t.brainDumpDemo.brainDumpPlaceholder}</div>
                 </div>
+                <AnimatePresence>
+                  {done && (
+                    <motion.button
+                      type="button"
+                      onClick={handleReplay}
+                      aria-label="Replay demo"
+                      initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.15 } }}
+                      transition={SPRING}
+                      whileHover={{ rotate: -30, scale: 1.08 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="ml-auto w-8 h-8 rounded-full bg-lavender-light/30 text-lavender-dark flex items-center justify-center hover:bg-lavender-light/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M23 4v6h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </motion.button>
+                  )}
+                </AnimatePresence>
               </div>
 
               <div className="min-h-[160px] sm:min-h-[140px]">
                 <p className="text-sm sm:text-base leading-relaxed">
                   {renderedText.map((part, i) =>
                     part.isTask ? (
-                      <span
+                      <motion.span
                         key={i}
+                        ref={(el: HTMLSpanElement | null) => {
+                          if (part.taskIdx !== undefined) phraseEls.current[part.taskIdx] = el;
+                        }}
+                        animate={part.taskDone && !reduceMotion ? { boxShadow: PHRASE_PULSE } : undefined}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
                         className={`rounded px-0.5 font-medium transition-colors duration-300 ${
                           part.taskDone
                             ? 'bg-lavender-light/40 text-lavender-dark'
@@ -186,7 +273,7 @@ export default function BrainDumpDemo() {
                         }`}
                       >
                         {part.value}
-                      </span>
+                      </motion.span>
                     ) : (
                       <span
                         key={i}
@@ -208,9 +295,10 @@ export default function BrainDumpDemo() {
               <AnimatePresence>
                 {done && (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 }}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, transition: { duration: 0.15 } }}
+                    transition={{ delay: 0.5, duration: 0.7, ease: EASE }}
                     className="mt-4 flex items-start gap-2 text-xs text-muted-light"
                   >
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="mt-0.5 flex-shrink-0">
@@ -218,6 +306,19 @@ export default function BrainDumpDemo() {
                       <path d="M7 4.5v3M7 9.5v0" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
                     </svg>
                     <span>{t.brainDumpDemo.filterNote}</span>
+                    <motion.svg
+                      initial={{ opacity: 0, scale: 0, rotate: -45 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{ ...SPRING_SNAPPY, delay: 1.2 }}
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      aria-hidden="true"
+                      className="mt-0.5 flex-shrink-0 text-lavender"
+                    >
+                      <path d="M6 1L7.1 4.4 10.5 5.5 7.1 6.6 6 10 4.9 6.6 1.5 5.5 4.9 4.4 6 1z" fill="currentColor" />
+                    </motion.svg>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -249,41 +350,82 @@ export default function BrainDumpDemo() {
 
               <div className="space-y-2 flex-1 flex flex-col justify-center">
                 {tasks.map((task, idx) => (
-                  <AnimatePresence key={task.phrase}>
-                    {revealedTasks[idx] ? (
-                      <motion.div
-                        initial={{ opacity: 0, x: -20, scale: 0.9 }}
-                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                        className="flex items-center gap-3 rounded-xl bg-cream border border-sage/20 px-4 py-3"
-                      >
-                        <div className="w-5 h-5 rounded-lg border-2 border-sage/30 flex-shrink-0 flex items-center justify-center">
-                          <motion.svg
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ delay: 0.15, type: 'spring', stiffness: 400, damping: 15 }}
-                            width="10"
-                            height="10"
-                            viewBox="0 0 10 10"
-                            fill="none"
-                          >
-                            <path d="M2 5l2 2 4-4" stroke="#8A9B80" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </motion.svg>
-                        </div>
-                        <span className="text-sm font-medium text-charcoal">{task.text}</span>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key={`placeholder-${idx}`}
-                        className="h-11 rounded-xl bg-cream/50 border border-dashed border-charcoal/8"
-                      />
-                    )}
-                  </AnimatePresence>
+                  <div
+                    key={task.phrase}
+                    ref={(el: HTMLDivElement | null) => {
+                      rowEls.current[idx] = el;
+                    }}
+                  >
+                    <AnimatePresence>
+                      {revealedTasks[idx] ? (
+                        <motion.div
+                          key={`task-${idx}`}
+                          initial={{ opacity: 0, x: -28, scale: 0.9 }}
+                          animate={{
+                            opacity: 1,
+                            x: 0,
+                            scale: 1,
+                            ...(reduceMotion ? {} : { boxShadow: ROW_FLASH }),
+                          }}
+                          transition={{
+                            ...SPRING_SNAPPY,
+                            delay: rowDelay,
+                            boxShadow: { delay: rowDelay + 0.1, duration: 0.7, ease: 'easeOut' },
+                          }}
+                          className="flex items-center gap-3 rounded-xl bg-cream border border-sage/20 px-4 py-3"
+                        >
+                          <div className="w-5 h-5 rounded-lg border-2 border-sage/30 flex-shrink-0 flex items-center justify-center">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                              <motion.path
+                                d="M2 5l2 2 4-4"
+                                stroke="#8A9B80"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                initial={{
+                                  pathLength: reduceMotion ? 1 : 0,
+                                  opacity: reduceMotion ? 1 : 0,
+                                }}
+                                animate={{ pathLength: 1, opacity: 1 }}
+                                transition={{ delay: rowDelay + 0.25, duration: 0.35, ease: EASE }}
+                              />
+                            </svg>
+                          </div>
+                          <span className="text-sm font-medium text-charcoal">{task.text}</span>
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key={`placeholder-${idx}`}
+                          className="h-11 rounded-xl bg-cream/50 border border-dashed border-charcoal/8"
+                        />
+                      )}
+                    </AnimatePresence>
+                  </div>
                 ))}
               </div>
 
             </div>
           </motion.div>
+
+          {/* Flying tokens: a phrase lifts off the dump card and lands in its checklist row */}
+          {flights.map((flight) => (
+            <motion.span
+              key={flight.key}
+              aria-hidden="true"
+              className="pointer-events-none absolute left-0 top-0 z-10 h-4 w-10 rounded-full bg-lavender shadow-lg shadow-lavender/40"
+              initial={{ x: flight.fromX - 20, y: flight.fromY - 8, opacity: 0, scale: 0.5 }}
+              animate={{
+                x: [flight.fromX - 20, (flight.fromX + flight.toX) / 2 - 20, flight.toX - 20],
+                y: [flight.fromY - 8, Math.min(flight.fromY, flight.toY) - 40, flight.toY - 8],
+                opacity: [0, 1, 1, 0],
+                scale: [0.5, 1, 0.75],
+              }}
+              transition={{ duration: 0.55, ease: EASE }}
+              onAnimationComplete={() =>
+                setFlights((prev) => prev.filter((f) => f.key !== flight.key))
+              }
+            />
+          ))}
         </div>
       </div>
     </section>

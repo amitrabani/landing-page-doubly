@@ -1,6 +1,16 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import {
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+  type MotionValue,
+} from 'framer-motion';
+import { EASE, SPRING, SPRING_SNAPPY, SPRING_SOFT, fadeRise, staggerContainer } from '@/lib/motion';
+import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 
 const stepIcons = [
@@ -33,20 +43,11 @@ const stepIcons = [
 ];
 
 const stepStyles = [
-  { color: 'text-lavender-dark', bg: 'bg-lavender-light/20' },
-  { color: 'text-coral-dark', bg: 'bg-coral-light/20' },
-  { color: 'text-sage-dark', bg: 'bg-sage/20' },
-  { color: 'text-sky', bg: 'bg-sky-light/25' },
+  { color: 'text-lavender-dark', bg: 'bg-lavender-light/20', hover: 'hover:bg-lavender-light/40' },
+  { color: 'text-coral-dark', bg: 'bg-coral-light/20', hover: 'hover:bg-coral-light/40' },
+  { color: 'text-sage-dark', bg: 'bg-sage/20', hover: 'hover:bg-sage/35' },
+  { color: 'text-sky', bg: 'bg-sky-light/25', hover: 'hover:bg-sky-light/45' },
 ];
-
-const ease = [0.25, 0.1, 0.25, 1] as const;
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.2 },
-  },
-};
 
 const stepVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.95 },
@@ -54,61 +55,124 @@ const stepVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.7, ease },
+    transition: { duration: 0.7, ease: EASE },
   },
 };
 
+const chipVariants = {
+  hidden: { opacity: 0, scale: 0.4 },
+  visible: { opacity: 1, scale: 1, transition: { ...SPRING, delay: 0.05 } },
+};
+
+const numberVariants = {
+  hidden: { opacity: 0, scale: 0.6 },
+  visible: { opacity: 1, scale: 1, transition: { ...SPRING_SNAPPY, delay: 0.2 } },
+};
+
+/**
+ * One continuous gradient thread that draws itself through the four steps as
+ * the section scrolls into view. Desktop only; the wave passes through each
+ * icon chip's vertical center (viewBox y=60 maps to chip center at 32px).
+ */
+function JourneyPath({
+  pathLength,
+  opacity,
+}: {
+  pathLength: MotionValue<number> | number;
+  opacity: MotionValue<number> | number;
+}) {
+  return (
+    <svg
+      className="hidden md:block absolute inset-x-0 top-0 h-16 w-full pointer-events-none"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+      fill="none"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient
+          id="plan-journey-gradient"
+          gradientUnits="userSpaceOnUse"
+          x1="0"
+          y1="0"
+          x2="1200"
+          y2="0"
+        >
+          <stop offset="0" stopColor="#B8A9D4" />
+          <stop offset="0.34" stopColor="#E8967A" />
+          <stop offset="0.66" stopColor="#A8B5A0" />
+          <stop offset="1" stopColor="#9EC5D9" />
+        </linearGradient>
+      </defs>
+      <motion.path
+        d="M150 60 C250 26 350 94 450 60 C550 26 650 94 750 60 C850 26 950 94 1050 60"
+        stroke="url(#plan-journey-gradient)"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+        style={{ pathLength, opacity }}
+      />
+    </svg>
+  );
+}
+
 export default function Plan() {
+  const reduced = useReducedMotion();
+  const gridRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: gridRef,
+    offset: ['start 0.92', 'start 0.4'],
+  });
+  const drawSpring = useSpring(scrollYProgress, { stiffness: 90, damping: 28, restDelta: 0.001 });
+  const pathLength = useTransform(drawSpring, (v) => Math.min(Math.max(v, 0), 1));
+  const pathOpacity = useTransform(scrollYProgress, [0, 0.04], [0, 0.7]);
+
   return (
     <section id="how-it-works" className="py-24 sm:py-32 px-6">
       <div className="mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease }}
-          className="text-center mb-16"
-        >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            {t.plan.title}
-          </h2>
-          <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
+        <div className="text-center mb-16">
+          <WordReveal
+            text={t.plan.title}
+            as="h2"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
+            highlight="unstuck"
+            highlightClassName="text-lavender-dark"
+          />
+          <motion.p {...fadeRise(0.3, 20)} className="mt-4 text-muted text-lg max-w-xl mx-auto">
             {t.plan.subtitle}
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         <motion.div
-          variants={containerVariants}
+          ref={gridRef}
+          variants={staggerContainer(0.18)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
-          className="grid sm:grid-cols-2 md:grid-cols-4 gap-8"
+          className="relative grid sm:grid-cols-2 md:grid-cols-4 gap-8"
         >
-          {t.plan.steps.map((step, i) => (
-            <motion.div
-              key={step.number}
-              variants={stepVariants}
-              className="relative text-center"
-            >
-              {/* Connector line */}
-              {i < t.plan.steps.length - 1 && (
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.5 + i * 0.2, ease }}
-                  className="hidden md:block absolute top-12 left-[calc(50%+40px)] w-[calc(100%-80px)] h-px bg-charcoal/10 origin-left"
-                />
-              )}
+          {/* Scroll-drawn journey thread connecting the 4 steps (desktop) */}
+          <JourneyPath
+            pathLength={reduced ? 1 : pathLength}
+            opacity={reduced ? 0.7 : pathOpacity}
+          />
 
-              <div
-                className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${stepStyles[i].bg} ${stepStyles[i].color} mb-6`}
+          {t.plan.steps.map((step, i) => (
+            <motion.div key={step.number} variants={stepVariants} className="relative text-center">
+              <motion.div
+                variants={chipVariants}
+                whileHover={{ y: -4, scale: 1.06 }}
+                transition={SPRING_SOFT}
+                className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl transition-colors duration-300 ${stepStyles[i].bg} ${stepStyles[i].hover} ${stepStyles[i].color} mb-6`}
               >
                 {stepIcons[i]}
-              </div>
-              <div className="text-xs font-semibold text-muted-light tracking-widest mb-2">
+              </motion.div>
+              <motion.div
+                variants={numberVariants}
+                className="text-xs font-semibold text-muted-light tracking-widest mb-2"
+              >
                 {t.plan.stepLabel} {step.number}
-              </div>
+              </motion.div>
               <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal mb-3">
                 {step.title}
               </h3>

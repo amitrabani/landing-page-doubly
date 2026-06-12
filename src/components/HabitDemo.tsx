@@ -1,7 +1,10 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useMemo, useCallback, useEffect } from 'react';
+import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
+import { EASE, SPRING_SOFT, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
+import AnimatedNumber from '@/components/motion/AnimatedNumber';
+import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import t from '@/translations/en';
 
 interface Habit {
@@ -14,6 +17,8 @@ interface Habit {
   type: 'boolean' | 'count';
   target: number;
   unit?: string;
+  // Confetti palette for completion bursts
+  burst: string[];
   // Grid colors per intensity level (0=empty, 1-4=filled)
   gridColors: string[];
   // Fake stats
@@ -34,6 +39,7 @@ const sampleHabits: Habit[] = [
     colorCheck: 'bg-sage border-sage',
     type: 'boolean',
     target: 1,
+    burst: ['#A8B5A0', '#8A9B80'],
     gridColors: ['bg-charcoal/5', 'bg-sage/20', 'bg-sage/40', 'bg-sage/60', 'bg-sage-dark'],
     streak: 12,
     best: 30,
@@ -48,6 +54,7 @@ const sampleHabits: Habit[] = [
     colorCheck: 'bg-lavender border-lavender',
     type: 'boolean',
     target: 1,
+    burst: ['#B8A9D4', '#9585B8'],
     gridColors: ['bg-charcoal/5', 'bg-lavender-light/40', 'bg-lavender-light/60', 'bg-lavender/70', 'bg-lavender-dark'],
     streak: 8,
     best: 22,
@@ -62,6 +69,7 @@ const sampleHabits: Habit[] = [
     colorCheck: 'bg-coral border-coral',
     type: 'boolean',
     target: 1,
+    burst: ['#E8967A', '#D47A5E'],
     gridColors: ['bg-charcoal/5', 'bg-coral-light/30', 'bg-coral-light/50', 'bg-coral/50', 'bg-coral-dark'],
     streak: 5,
     best: 14,
@@ -76,6 +84,7 @@ const sampleHabits: Habit[] = [
     colorCheck: 'bg-sage border-sage',
     type: 'boolean',
     target: 1,
+    burst: ['#A8B5A0', '#8A9B80'],
     gridColors: ['bg-charcoal/5', 'bg-sage/20', 'bg-sage/40', 'bg-sage/60', 'bg-sage-dark'],
     streak: 15,
     best: 28,
@@ -121,6 +130,10 @@ export default function HabitDemo() {
   const [completions, setCompletions] = useState<Record<string, number>>({});
   const [selectedHabit, setSelectedHabit] = useState<string>('walk');
   const [bounceKey, setBounceKey] = useState(0);
+  // Per-habit confetti counters + one for the all-done celebration (0 = silent).
+  const [bursts, setBursts] = useState<Record<string, number>>({});
+  const [celebrationFire, setCelebrationFire] = useState(0);
+  const reduced = useReducedMotion();
 
   // Each habit gets its own unique grid
   const grids = useMemo(() => {
@@ -131,22 +144,38 @@ export default function HabitDemo() {
     return map;
   }, []);
 
-  const toggleHabit = useCallback((habit: Habit) => {
-    setCompletions((prev) => {
-      const current = prev[habit.id] || 0;
-      if (habit.type === 'boolean') {
-        return { ...prev, [habit.id]: current >= 1 ? 0 : 1 };
+  const toggleHabit = useCallback(
+    (habit: Habit) => {
+      const current = completions[habit.id] || 0;
+      const next =
+        habit.type === 'boolean'
+          ? current >= 1
+            ? 0
+            : 1
+          : current >= habit.target
+            ? 0
+            : current + 1;
+      setCompletions((prev) => ({ ...prev, [habit.id]: next }));
+      if (next >= habit.target) {
+        setBursts((b) => ({ ...b, [habit.id]: (b[habit.id] || 0) + 1 }));
       }
-      return { ...prev, [habit.id]: current >= habit.target ? 0 : current + 1 };
-    });
-    setBounceKey((k) => k + 1);
-    setSelectedHabit(habit.id);
-  }, []);
+      setBounceKey((k) => k + 1);
+      setSelectedHabit(habit.id);
+    },
+    [completions]
+  );
 
   const completedCount = sampleHabits.filter((h) => {
     const val = completions[h.id] || 0;
     return val >= h.target;
   }).length;
+
+  const allDone = completedCount === sampleHabits.length;
+
+  // Fire a slightly bigger burst each time all four habits land together.
+  useEffect(() => {
+    if (allDone) setCelebrationFire((k) => k + 1);
+  }, [allDone]);
 
   const activeHabit = sampleHabits.find((h) => h.id === selectedHabit)!;
   const activeGrid = grids[selectedHabit];
@@ -157,6 +186,18 @@ export default function HabitDemo() {
   const todayCellValue = activeHabit.type === 'count'
     ? Math.min(Math.ceil((activeCompletion / activeHabit.target) * 4), 4)
     : activeIsDone ? 4 : 0;
+
+  // Diagonal wave for the heatmap's first reveal; reduced motion skips the cascade.
+  const cellVariants: Variants = reduced
+    ? { hidden: {}, visible: {} }
+    : {
+        hidden: { opacity: 0, scale: 0.5 },
+        visible: (d: number) => ({
+          opacity: 1,
+          scale: 1,
+          transition: { duration: 0.3, delay: d, ease: EASE },
+        }),
+      };
 
   return (
     <section className="py-24 sm:py-32 px-6">
@@ -194,7 +235,7 @@ export default function HabitDemo() {
                   </div>
                 </div>
                 <div className="text-sm text-muted">
-                  {completedCount}/{sampleHabits.length}
+                  <AnimatedNumber value={completedCount} />/{sampleHabits.length}
                 </div>
               </div>
 
@@ -220,10 +261,11 @@ export default function HabitDemo() {
                     >
                       {/* Checkbox */}
                       <div
-                        className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center flex-shrink-0 transition-all ${
+                        className={`relative w-6 h-6 rounded-lg border-2 flex items-center justify-center flex-shrink-0 transition-all ${
                           isDone ? habit.colorCheck : 'border-charcoal/15'
                         }`}
                       >
+                        <ConfettiBurst fire={bursts[habit.id] || 0} count={10} colors={habit.burst} />
                         <AnimatePresence>
                           {isDone && (
                             <motion.svg
@@ -255,7 +297,16 @@ export default function HabitDemo() {
                           isDone ? 'text-charcoal-light' : 'text-charcoal'
                         }`}
                       >
-                        {habit.name}
+                        <span className="relative inline-block">
+                          {habit.name}
+                          <motion.span
+                            aria-hidden
+                            className="absolute left-0 top-1/2 h-[1.5px] w-full origin-left bg-charcoal/40"
+                            initial={false}
+                            animate={{ scaleX: isDone ? 1 : 0 }}
+                            transition={{ duration: 0.35, ease: EASE }}
+                          />
+                        </span>
                       </span>
 
                       {/* Count indicator for count-type habits */}
@@ -271,13 +322,15 @@ export default function HabitDemo() {
 
               {/* All done message with CTA */}
               <AnimatePresence>
-                {completedCount === sampleHabits.length && (
+                {allDone && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeOut' }}
-                    className="mt-6 text-center"
+                    initial={{ opacity: 0, y: 16, scale: 0.94 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={SPRING_SOFT}
+                    className="relative mt-6 text-center"
                   >
+                    <ConfettiBurst fire={celebrationFire} count={26} />
                     <div className="inline-flex items-center gap-2 rounded-full bg-sage/15 px-4 py-2 text-sm font-medium text-sage-dark mb-4">
                       {t.habitDemo.allDoneMessage}
                     </div>
@@ -349,10 +402,9 @@ export default function HabitDemo() {
               {/* Grid */}
               <div className="flex-1 flex items-center justify-center">
                 <motion.div
-                  key={selectedHabit}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={VIEWPORT_ONCE_TIGHT}
                   className="flex gap-[3px]"
                 >
                   {activeGrid.map((week, wi) => (
@@ -362,19 +414,27 @@ export default function HabitDemo() {
                         const cellVal = isToday ? todayCellValue : val;
                         const cellColor = activeHabit.gridColors[cellVal] || activeHabit.gridColors[0];
 
-                        return isToday ? (
+                        return (
                           <motion.div
-                            key={`today-${bounceKey}`}
-                            initial={{ scale: todayCellValue > 0 ? 1.5 : 1 }}
-                            animate={{ scale: 1 }}
-                            transition={{ type: 'spring', stiffness: 400, damping: 12 }}
-                            className={`w-4 h-4 sm:w-[18px] sm:h-[18px] rounded-[4px] transition-colors duration-300 ${cellColor} ring-1 ring-charcoal/20`}
-                          />
-                        ) : (
-                          <div
                             key={`${wi}-${di}`}
-                            className={`w-4 h-4 sm:w-[18px] sm:h-[18px] rounded-[4px] ${cellColor}`}
-                          />
+                            variants={cellVariants}
+                            custom={(wi + di) * 0.008}
+                          >
+                            {isToday ? (
+                              <motion.div
+                                key={`today-${bounceKey}`}
+                                initial={{ scale: todayCellValue > 0 ? 1.5 : 1 }}
+                                animate={{ scale: 1 }}
+                                transition={{ type: 'spring', stiffness: 400, damping: 12 }}
+                                className={`w-4 h-4 sm:w-[18px] sm:h-[18px] rounded-[4px] transition-colors duration-300 ${cellColor} ring-1 ring-charcoal/20`}
+                              />
+                            ) : (
+                              <div
+                                className={`w-4 h-4 sm:w-[18px] sm:h-[18px] rounded-[4px] transition-colors duration-300 ${cellColor}`}
+                                style={{ transitionDelay: `${wi * 18}ms` }}
+                              />
+                            )}
+                          </motion.div>
                         );
                       })}
                     </div>

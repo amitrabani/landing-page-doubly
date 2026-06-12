@@ -1,7 +1,20 @@
 'use client';
 
-import { useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useCallback, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import {
+  EASE,
+  SPRING,
+  SPRING_SOFT,
+  SPRING_SNAPPY,
+  VIEWPORT_ONCE_TIGHT,
+  fadeRise,
+  staggerContainer,
+  staggerChild,
+} from '@/lib/motion';
+import WordReveal from '@/components/motion/WordReveal';
+import AnimatedNumber from '@/components/motion/AnimatedNumber';
+import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import t from '@/translations/en';
 
 interface Subtask {
@@ -36,12 +49,14 @@ function parseDuration(d: string | null): number {
 }
 
 export default function TaskSplitDemo() {
+  const reduced = useReducedMotion();
   const [activeTask, setActiveTask] = useState<string | null>(null);
   const [taskResult, setTaskResult] = useState<TaskResult | null>(null);
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const [customInput, setCustomInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [error, setError] = useState(false);
+  const [confettiFire, setConfettiFire] = useState(0);
   const abortRef = useRef<AbortController | null>(null);
 
   const handleSelect = useCallback(async (label: string) => {
@@ -97,57 +112,60 @@ export default function TaskSplitDemo() {
 
   const subtasks = taskResult?.subtasks || [];
   const allDone = subtasks.length > 0 && checked.size === subtasks.length;
+  const totalMin = subtasks.reduce((sum, st) => sum + parseDuration(st.duration), 0);
+  const progress = subtasks.length > 0 ? checked.size / subtasks.length : 0;
+
+  // One celebratory burst each time the list reaches fully checked
+  useEffect(() => {
+    if (allDone) setConfettiFire((c) => c + 1);
+  }, [allDone]);
 
   return (
     <section className="py-24 sm:py-32 px-6 bg-warm">
       <div className="mx-auto max-w-3xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
-            {t.taskSplitDemo.title}
-          </h2>
-          <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
+        <div className="text-center mb-14">
+          <WordReveal
+            text={t.taskSplitDemo.title}
+            as="h2"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
+            highlight="split."
+            highlightClassName="text-lavender-dark"
+          />
+          <motion.p {...fadeRise(0.2, 16)} className="mt-4 text-muted text-lg max-w-xl mx-auto">
             {t.taskSplitDemo.subtitle}
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         {/* Preset chips */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={staggerContainer(0.05, 0.1)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT_ONCE_TIGHT}
           className="flex flex-wrap justify-center gap-3 mb-6"
         >
           {presets.map((p) => (
-            <button
-              key={p.label}
-              onClick={() => handleSelect(p.label)}
-              className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all ${
-                activeTask === p.label
-                  ? 'bg-lavender text-white shadow-md shadow-lavender/20 scale-[1.03]'
-                  : 'bg-white/80 text-charcoal-light border border-charcoal/8 hover:border-lavender/30 hover:bg-lavender-light/10'
-              }`}
-            >
-              <span className="mr-1.5">{p.icon}</span>
-              {p.label}
-            </button>
+            <motion.div key={p.label} variants={staggerChild}>
+              <motion.button
+                onClick={() => handleSelect(p.label)}
+                animate={{ scale: activeTask === p.label ? 1.03 : 1 }}
+                whileTap={{ scale: 0.95 }}
+                transition={SPRING_SNAPPY}
+                className={`rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
+                  activeTask === p.label
+                    ? 'bg-lavender text-white shadow-md shadow-lavender/20'
+                    : 'bg-white/80 text-charcoal-light border border-charcoal/8 hover:border-lavender/30 hover:bg-lavender-light/10'
+                }`}
+              >
+                <span className="mr-1.5">{p.icon}</span>
+                {p.label}
+              </motion.button>
+            </motion.div>
           ))}
         </motion.div>
 
         {/* Custom input */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-10"
-        >
+        <motion.div {...fadeRise(0.25, 15)} className="mb-10">
           <div className="flex gap-2 max-w-md mx-auto">
             <input
               type="text"
@@ -157,12 +175,15 @@ export default function TaskSplitDemo() {
               placeholder={t.taskSplitDemo.customInputPlaceholder}
               className="flex-1 rounded-full px-5 py-2.5 text-sm bg-white/80 border border-charcoal/8 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/40 focus:ring-2 focus:ring-lavender/10 transition-all"
             />
-            <button
+            <motion.button
               onClick={handleCustomSubmit}
-              className="rounded-full px-5 py-2.5 text-sm font-medium bg-charcoal text-cream hover:bg-charcoal-light transition-all hover:scale-[1.02]"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.96 }}
+              transition={SPRING_SNAPPY}
+              className="rounded-full px-5 py-2.5 text-sm font-medium bg-charcoal text-cream hover:bg-charcoal-light transition-colors"
             >
               {t.taskSplitDemo.splitButton}
-            </button>
+            </motion.button>
           </div>
         </motion.div>
 
@@ -175,8 +196,14 @@ export default function TaskSplitDemo() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.97 }}
               transition={{ duration: 0.4, ease: 'easeOut' }}
-              className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-8"
+              className="relative bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-8"
             >
+              <ConfettiBurst
+                fire={confettiFire}
+                count={20}
+                colors={['#A8B5A0', '#B8A9D4', '#D4C8ED']}
+              />
+
               {/* Task header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
@@ -193,32 +220,58 @@ export default function TaskSplitDemo() {
                   </div>
                 </div>
                 {taskResult?.urgency && (
-                  <span className={`text-xs font-medium px-3 py-1 rounded-full ${
-                    taskResult.urgency === 'high'
-                      ? 'bg-coral-light/20 text-coral-dark'
-                      : taskResult.urgency === 'medium'
-                        ? 'bg-lavender-light/30 text-lavender-dark'
-                        : 'bg-sage/15 text-sage-dark'
-                  }`}>
+                  <motion.span
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ ...SPRING, delay: 0.1 }}
+                    className={`text-xs font-medium px-3 py-1 rounded-full ${
+                      taskResult.urgency === 'high'
+                        ? 'bg-coral-light/20 text-coral-dark'
+                        : taskResult.urgency === 'medium'
+                          ? 'bg-lavender-light/30 text-lavender-dark'
+                          : 'bg-sage/15 text-sage-dark'
+                    }`}
+                  >
                     {taskResult.urgency} {t.taskSplitDemo.urgencySuffix}
-                  </span>
+                  </motion.span>
                 )}
               </div>
 
               {/* AI thinking animation */}
               {isTyping && (
-                <div className="flex items-center gap-3 text-muted text-sm">
-                  <div className="flex gap-1">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-muted text-sm">
+                    <div aria-hidden className="flex items-center gap-1">
+                      {[0, 1, 2].map((i) => (
+                        <motion.div
+                          key={i}
+                          className="w-1.5 h-1.5 rounded-full bg-lavender"
+                          animate={reduced ? { opacity: 0.6 } : { y: [0, -3, 0], opacity: [0.4, 0.9, 0.4] }}
+                          transition={
+                            reduced
+                              ? { duration: 0 }
+                              : { duration: 1.3, repeat: Infinity, delay: i * 0.16, ease: 'easeInOut' }
+                          }
+                        />
+                      ))}
+                    </div>
+                    {t.taskSplitDemo.aiThinking}
+                  </div>
+                  <div aria-hidden className="space-y-2">
                     {[0, 1, 2].map((i) => (
                       <motion.div
                         key={i}
-                        className="w-2 h-2 rounded-full bg-lavender"
-                        animate={{ opacity: [0.3, 1, 0.3] }}
-                        transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                        className="h-11 rounded-xl bg-cream border border-charcoal/5"
+                        initial={{ opacity: 0 }}
+                        animate={reduced ? { opacity: 0.5 } : { opacity: [0.3, 0.6, 0.3] }}
+                        transition={
+                          reduced
+                            ? { duration: 0.3 }
+                            : { duration: 1.6, repeat: Infinity, delay: 0.1 + i * 0.2, ease: 'easeInOut' }
+                        }
                       />
                     ))}
                   </div>
-                  {t.taskSplitDemo.aiThinking}
                 </div>
               )}
 
@@ -241,73 +294,119 @@ export default function TaskSplitDemo() {
 
               {/* Subtask list */}
               {!isTyping && subtasks.length > 0 && (
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between mb-3">
+                <div>
+                  <div className="flex items-center justify-between mb-2">
                     <div className="text-xs font-medium text-muted-light">
-                      {t.taskSplitDemo.stepsDone(checked.size, subtasks.length)}
+                      <AnimatedNumber
+                        value={checked.size}
+                        format={(x) => t.taskSplitDemo.stepsDone(x, subtasks.length)}
+                      />
                     </div>
                     <div className="text-xs text-muted-light">
-                      {t.taskSplitDemo.minTotal(subtasks.reduce((sum, st) => sum + parseDuration(st.duration), 0))}
+                      <AnimatedNumber value={totalMin} format={(x) => t.taskSplitDemo.minTotal(x)} />
                     </div>
                   </div>
-                  {subtasks.map((st, idx) => (
-                    <motion.button
-                      key={st.text}
-                      initial={{ opacity: 0, x: -15 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: idx * 0.1 }}
-                      onClick={() => toggleCheck(idx)}
-                      className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
-                        checked.has(idx)
-                          ? 'bg-sage/15 border border-sage/20'
-                          : 'bg-cream border border-charcoal/5 hover:border-lavender/20'
-                      }`}
-                    >
-                      <div
-                        className={`w-5 h-5 rounded-lg border-2 flex items-center justify-center flex-shrink-0 transition-all ${
+
+                  {/* Progress bar fills as steps get checked */}
+                  <div className="h-1 rounded-full bg-charcoal/5 overflow-hidden mb-4">
+                    <motion.div
+                      className="h-full rounded-full bg-sage"
+                      style={{ transformOrigin: 'left' }}
+                      initial={false}
+                      animate={{ scaleX: progress }}
+                      transition={reduced ? { duration: 0 } : SPRING_SOFT}
+                    />
+                  </div>
+
+                  <div className="relative pl-5 flex flex-col gap-2">
+                    {/* Connector line grows down the left as rows appear */}
+                    <motion.div
+                      aria-hidden
+                      className="absolute left-[7px] top-3 bottom-3 w-0.5 rounded-full bg-gradient-to-b from-lavender/40 via-sage/40 to-sage/20"
+                      style={{ transformOrigin: 'top' }}
+                      initial={reduced ? false : { scaleY: 0 }}
+                      animate={{ scaleY: 1 }}
+                      transition={
+                        reduced
+                          ? { duration: 0 }
+                          : { duration: 0.3 + subtasks.length * 0.08, ease: EASE, delay: 0.1 }
+                      }
+                    />
+                    {subtasks.map((st, idx) => (
+                      <motion.button
+                        key={st.text}
+                        initial={{ opacity: 0, x: reduced ? 0 : -16 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{
+                          ...SPRING_SOFT,
+                          delay: 0.08 + idx * 0.08,
+                          scale: { ...SPRING_SNAPPY, delay: 0 },
+                        }}
+                        onClick={() => toggleCheck(idx)}
+                        className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-colors ${
                           checked.has(idx)
-                            ? 'bg-sage border-sage'
-                            : 'border-charcoal/15'
+                            ? 'bg-sage/15 border border-sage/20'
+                            : 'bg-cream border border-charcoal/5 hover:border-lavender/20'
                         }`}
                       >
-                        <AnimatePresence>
-                          {checked.has(idx) && (
-                            <motion.svg
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              exit={{ scale: 0 }}
-                              width="12"
-                              height="12"
-                              viewBox="0 0 12 12"
-                              fill="none"
-                            >
-                              <path
-                                d="M2.5 6l2.5 2.5 4.5-5"
-                                stroke="white"
-                                strokeWidth="1.5"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </motion.svg>
-                          )}
-                        </AnimatePresence>
-                      </div>
-                      <span
-                        className={`text-sm font-medium flex-1 transition-all ${
-                          checked.has(idx) ? 'text-sage-dark line-through' : 'text-charcoal'
-                        }`}
-                      >
-                        {st.text}
-                      </span>
-                      {st.duration && (
-                        <span className={`text-xs flex-shrink-0 ${
-                          checked.has(idx) ? 'text-sage-dark/50' : 'text-muted-light'
-                        }`}>
-                          {st.duration}
+                        <div
+                          className={`w-5 h-5 rounded-lg border-2 flex items-center justify-center flex-shrink-0 transition-colors ${
+                            checked.has(idx)
+                              ? 'bg-sage border-sage'
+                              : 'border-charcoal/15'
+                          }`}
+                        >
+                          <AnimatePresence>
+                            {checked.has(idx) && (
+                              <motion.svg
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                width="12"
+                                height="12"
+                                viewBox="0 0 12 12"
+                                fill="none"
+                              >
+                                <motion.path
+                                  d="M2.5 6l2.5 2.5 4.5-5"
+                                  stroke="white"
+                                  strokeWidth="1.5"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  initial={{ pathLength: 0 }}
+                                  animate={{ pathLength: 1 }}
+                                  exit={{ pathLength: 0 }}
+                                  transition={{ duration: 0.28, ease: EASE }}
+                                />
+                              </motion.svg>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                        <span
+                          className={`text-sm font-medium flex-1 transition-colors ${
+                            checked.has(idx) ? 'text-sage-dark line-through' : 'text-charcoal'
+                          }`}
+                        >
+                          {st.text}
                         </span>
-                      )}
-                    </motion.button>
-                  ))}
+                        {st.duration && (
+                          <motion.span
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ ...SPRING, delay: 0.22 + idx * 0.08 }}
+                            className={`text-xs flex-shrink-0 rounded-full px-2 py-0.5 transition-colors ${
+                              checked.has(idx)
+                                ? 'bg-sage/10 text-sage-dark/50'
+                                : 'bg-charcoal/[0.04] text-muted-light'
+                            }`}
+                          >
+                            {st.duration}
+                          </motion.span>
+                        )}
+                      </motion.button>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -315,29 +414,42 @@ export default function TaskSplitDemo() {
               <AnimatePresence>
                 {allDone && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeOut' }}
+                    initial={{ opacity: 0, y: 14, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 6, transition: { duration: 0.2, ease: 'easeOut' } }}
+                    transition={SPRING_SOFT}
                     className="mt-8 text-center"
                   >
                     <div className="inline-flex items-center gap-2 rounded-full bg-sage/15 px-5 py-2.5 text-sm font-medium text-sage-dark mb-4">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        <motion.path
+                          d="M4 8l3 3 5-5"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          initial={{ pathLength: 0 }}
+                          animate={{ pathLength: 1 }}
+                          transition={{ duration: 0.4, delay: 0.25, ease: EASE }}
+                        />
                       </svg>
                       {t.taskSplitDemo.allDoneMessage}
                     </div>
                     <p className="text-muted text-sm mb-5 max-w-sm mx-auto">
                       {t.taskSplitDemo.allDoneDescription}
                     </p>
-                    <a
+                    <motion.a
                       href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
-                      className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] shadow-lg shadow-charcoal/10"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                      transition={SPRING_SNAPPY}
+                      className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-colors shadow-lg shadow-charcoal/10"
                     >
                       {t.taskSplitDemo.allDoneCta}
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
-                    </a>
+                    </motion.a>
                   </motion.div>
                 )}
               </AnimatePresence>

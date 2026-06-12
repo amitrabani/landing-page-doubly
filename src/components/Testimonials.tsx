@@ -1,39 +1,56 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion, type Variants } from 'framer-motion';
+import { EASE, SPRING, SPRING_SOFT, VIEWPORT_ONCE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import t from '@/translations/en';
 
-const ease = [0.25, 0.1, 0.25, 1] as const;
+// Hand-placed feel: each card settles with its own slight tilt.
+const ROTATIONS = [-1, 0, 1];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.15 },
   },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.95 },
-  visible: {
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95, rotate: 0 },
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.7, ease },
+    rotate: ROTATIONS[i] ?? 0,
+    transition: { duration: 0.7, ease: EASE },
+  }),
+};
+
+const starsContainerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.45 },
   },
 };
 
+const starVariants: Variants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: 1, scale: 1, transition: SPRING },
+};
+
 export default function Testimonials() {
+  const reduced = useReducedMotion();
+
   return (
     <section id="testimonials" className="py-24 sm:py-32 px-6 bg-warm">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8, ease }}
+          viewport={VIEWPORT_ONCE}
+          transition={{ duration: 0.8, ease: EASE }}
           className="text-center mb-14"
         >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight max-w-3xl mx-auto">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight max-w-3xl mx-auto">
             {t.testimonials.title}
           </h2>
           <p className="mt-4 text-muted text-lg">{t.testimonials.subtitle}</p>
@@ -43,23 +60,44 @@ export default function Testimonials() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
+          viewport={VIEWPORT_ONCE_TIGHT}
           className="grid md:grid-cols-3 gap-6"
         >
-          {t.testimonials.items.map((item) => (
+          {t.testimonials.items.map((item, i) => (
             <motion.div
               key={item.name}
+              custom={i}
               variants={cardVariants}
-              className="bg-white/80 rounded-3xl border border-charcoal/5 p-7 flex flex-col"
+              whileHover={
+                reduced
+                  ? undefined
+                  : {
+                      y: -6,
+                      rotate: 0,
+                      boxShadow: '0 18px 40px -18px rgba(45, 43, 50, 0.25)',
+                      borderColor: 'rgba(184, 169, 212, 0.2)',
+                    }
+              }
+              transition={SPRING_SOFT}
+              className={`bg-white/80 rounded-3xl border border-charcoal/5 p-7 flex flex-col ${
+                i === 1 ? 'md:-mt-4' : ''
+              }`}
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <motion.div variants={starsContainerVariants} className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
-                  <svg key={j} width="16" height="16" viewBox="0 0 16 16" fill="#E8967A">
+                  <motion.svg
+                    key={j}
+                    variants={starVariants}
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="#E8967A"
+                  >
                     <path d="M8 1.5l1.76 3.57 3.94.57-2.85 2.78.67 3.93L8 10.67l-3.52 1.68.67-3.93L2.3 5.64l3.94-.57L8 1.5z" />
-                  </svg>
+                  </motion.svg>
                 ))}
-              </div>
+              </motion.div>
 
               <p className="text-charcoal text-sm leading-relaxed flex-1">&ldquo;{item.quote}&rdquo;</p>
 
