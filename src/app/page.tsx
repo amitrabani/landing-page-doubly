@@ -13,10 +13,14 @@ import FinalCTA from '@/components/FinalCTA';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import StickyBar from '@/components/StickyBar';
+import AmbientBackground from '@/components/AmbientBackground';
+import SmoothScroll from '@/components/motion/SmoothScroll';
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
+      <AmbientBackground />
       <Navbar />
       <main>
         <Hero />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Fraunces } from 'next/font/google';
 import './globals.css';
 import t from '@/translations/en';
 import PostHogProvider from './PostHogProvider';
@@ -9,6 +9,13 @@ const inter = Inter({
   variable: '--font-body',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+});
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
+  weight: ['500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body suppressHydrationWarning>
         <PostHogProvider>{children}</PostHogProvider>
       </body>
