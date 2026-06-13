@@ -15,9 +15,7 @@ const en = {
     badge: 'Built for ADHD brains',
     titlePrefix: 'For the days when your brain has ',
     titleHighlight: '47 tabs open.',
-    titleSuffix: ' Turn the chaos into one clear next step and keep moving.',
-    subtitle:
-      'Dump the chaos, get one clear next step, and actually move forward.',
+    subtitle: 'Turn the chaos into one clear next step and keep moving.',
     cta: 'Download on the App Store',
     floatingCards: {
       brainDump: 'Brain Dump',

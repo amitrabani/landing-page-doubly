@@ -150,7 +150,7 @@ export default function Hero() {
               <WordReveal
                 as="h1"
                 aboveFold
-                text={t.hero.titlePrefix + t.hero.titleHighlight + t.hero.titleSuffix}
+                text={t.hero.titlePrefix + t.hero.titleHighlight}
                 highlight={t.hero.titleHighlight}
                 highlightClassName="text-lavender-dark"
                 delay={0.15}
