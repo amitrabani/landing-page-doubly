@@ -78,11 +78,13 @@ export default function Success() {
               transition={{ duration: 1, delay: 0.2, ease: EASE }}
             >
               <div className="relative rounded-3xl overflow-hidden bg-white shadow-[0_4px_24px_rgba(0,0,0,0.06),0_1px_4px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.03]">
-                <img
-                  src="/social-proof.png"
-                  alt="Doubly app post detail showing a completed task with community reactions and comments"
-                  className="w-full h-auto block max-h-[50vh] object-cover object-top"
-                />
+                <div className="overflow-hidden" style={{ height: '55vh' }}>
+                  <img
+                    src="/social-proof.png"
+                    alt="Doubly app post detail showing a completed task with community reactions and comments"
+                    className="w-full h-full object-cover object-top block"
+                  />
+                </div>
                 {/* Soft edge vignette */}
                 <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.03)]" />
               </div>
