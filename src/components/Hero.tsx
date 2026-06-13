@@ -149,6 +149,7 @@ export default function Hero() {
 
               <WordReveal
                 as="h1"
+                byChar
                 text={t.hero.titlePrefix + t.hero.titleHighlight}
                 highlight={t.hero.titleHighlight}
                 highlightClassName="text-lavender-dark"

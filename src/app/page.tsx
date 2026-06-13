@@ -16,10 +16,14 @@ import StickyBar from '@/components/StickyBar';
 import AmbientBackground from '@/components/AmbientBackground';
 import SmoothScroll from '@/components/motion/SmoothScroll';
 import ScrollProgress from '@/components/motion/ScrollProgress';
+import Preloader from '@/components/motion/Preloader';
+import CustomCursor from '@/components/motion/CustomCursor';
 
 export default function Home() {
   return (
     <>
+      <Preloader />
+      <CustomCursor />
       <SmoothScroll />
       <ScrollProgress />
       <AmbientBackground />
