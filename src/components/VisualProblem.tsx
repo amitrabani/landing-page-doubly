@@ -13,9 +13,9 @@ const CARD_SPEEDS = [18, 34, 26, 42];
 
 export default function VisualProblem() {
   return (
-    <section className="py-24 sm:py-32 px-6">
+    <section className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-5xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <WordReveal
             text={t.problem.title}
             as="h2"

@@ -128,9 +128,9 @@ export default function TaskSplitDemo() {
   }, [allDone]);
 
   return (
-    <section className="py-24 sm:py-32 px-6 bg-warm">
+    <section className="py-12 sm:py-16 px-6 bg-warm">
       <div className="mx-auto max-w-3xl">
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <WordReveal
             text={t.taskSplitDemo.title}
             as="h2"

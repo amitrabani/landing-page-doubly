@@ -75,14 +75,14 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 sm:py-32 px-6">
+    <section id="faq" className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT_ONCE}
           transition={{ duration: 0.8, ease: EASE }}
-          className="text-center mb-14"
+          className="text-center mb-12"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
             {t.faq.title}

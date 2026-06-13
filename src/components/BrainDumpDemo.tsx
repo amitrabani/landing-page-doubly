@@ -205,9 +205,9 @@ export default function BrainDumpDemo() {
   const typingActive = hasStarted && !done && !reduceMotion;
 
   return (
-    <section ref={sectionRef} className="py-24 sm:py-32 px-6">
+    <section ref={sectionRef} className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-4xl">
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <WordReveal
             as="h2"
             text={t.brainDumpDemo.title}

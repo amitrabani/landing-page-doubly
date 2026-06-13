@@ -53,14 +53,14 @@ export default function Testimonials() {
   const reduced = useReducedMotion();
 
   return (
-    <section id="testimonials" className="py-24 sm:py-32 px-6 bg-warm">
+    <section id="testimonials" className="py-12 sm:py-16 px-6 bg-warm">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT_ONCE}
           transition={{ duration: 0.8, ease: EASE }}
-          className="text-center mb-14"
+          className="text-center mb-12"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight max-w-3xl mx-auto">
             {t.testimonials.title}

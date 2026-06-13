@@ -200,14 +200,14 @@ export default function HabitDemo() {
       };
 
   return (
-    <section className="py-24 sm:py-32 px-6">
+    <section className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-12"
         >
           <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
             {t.habitDemo.title}

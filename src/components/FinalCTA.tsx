@@ -5,7 +5,6 @@ import { useEffect, useRef, useState } from 'react';
 import { EASE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import MagneticArea from '@/components/motion/MagneticArea';
 import Parallax from '@/components/motion/Parallax';
-import WordReveal from '@/components/motion/WordReveal';
 import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
 
@@ -44,7 +43,7 @@ export default function FinalCTA() {
     <section
       ref={sectionRef}
       id="get-doubly"
-      className="relative overflow-hidden py-24 sm:py-32 px-6 bg-gradient-to-b from-warm to-cream"
+      className="relative overflow-hidden py-20 sm:py-28 px-6 bg-gradient-to-b from-warm to-cream"
     >
       {/* Soft radial glow stage drifting behind the headline */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -77,24 +76,30 @@ export default function FinalCTA() {
               : { scale: stageScale, rotateX: stageRotateX, transformStyle: 'preserve-3d' }
           }
         >
-          <WordReveal
-            text={t.finalCta.title}
-            as="h2"
-            stagger={0.05}
+          <motion.h2
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, ease: EASE }}
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
-          />
+          >
+            {t.finalCta.title}
+          </motion.h2>
 
           <motion.div
             onViewportEnter={() => setEntered(true)}
-            viewport={{ once: true, margin: '-80px' }}
-            className="relative mt-2 inline-block overflow-hidden"
+            viewport={{ once: true, amount: 0.3 }}
+            className="relative mt-2 inline-block"
           >
-            <WordReveal
-              text={t.finalCta.highlight}
-              as="p"
-              delay={0.3}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.65, delay: 0.18, ease: EASE }}
               className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-semibold tracking-tight text-lavender-dark"
-            />
+            >
+              {t.finalCta.highlight}
+            </motion.p>
             {sweep && (
               <span
                 aria-hidden

@@ -43,7 +43,7 @@ export default function Stakes() {
   const veilOpacity = useTransform(sectionProgress, [0, 0.45, 0.85, 1], [0, 1, 0.25, 0]);
 
   return (
-    <section ref={sectionRef} className="relative isolate py-24 sm:py-28 px-6">
+    <section ref={sectionRef} className="relative isolate py-12 sm:py-16 px-6">
       {!reduced && (
         <motion.div
           aria-hidden

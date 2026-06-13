@@ -14,7 +14,7 @@ const en = {
   hero: {
     badge: 'Built for ADHD brains',
     titlePrefix: 'When your brain has ',
-    titleHighlight: '47 tabs open.',
+    titleHighlight: '47 tabs open',
     subtitle: 'Turn the chaos into one clear next step and keep moving.',
     cta: 'Download on the App Store',
     floatingCards: {
@@ -339,7 +339,7 @@ const en = {
   // Success
   success: {
     title: 'Swap doomscrolling for a feed that gets you moving.',
-    subtitle: 'Not flawless productivity. Just less friction, less guilt, and more forward motion.',
+    subtitle: 'Swap doomscrolling for a feed that gets you moving.',
     outcomes: [
       'Start tasks without the mental fight',
       'Follow through on what you planned',

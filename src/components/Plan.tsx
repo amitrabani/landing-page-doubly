@@ -132,9 +132,9 @@ export default function Plan() {
   const pathOpacity = useTransform(scrollYProgress, [0, 0.04], [0, 0.7]);
 
   return (
-    <section id="how-it-works" className="py-24 sm:py-32 px-6">
+    <section id="how-it-works" className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <WordReveal
             text={t.plan.title}
             as="h2"
