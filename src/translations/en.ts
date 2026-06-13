@@ -13,8 +13,9 @@ const en = {
   // Hero
   hero: {
     badge: 'Built for ADHD brains',
-    titlePrefix: 'The ADHD app that helps you ',
-    titleHighlight: 'start and follow through',
+    titlePrefix: 'For the days when your brain has ',
+    titleHighlight: '47 tabs open.',
+    titleSuffix: ' Turn the chaos into one clear next step and keep moving.',
     subtitle:
       'Dump the chaos, get one clear next step, and actually move forward.',
     cta: 'Download on the App Store',

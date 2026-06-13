@@ -150,11 +150,11 @@ export default function Hero() {
               <WordReveal
                 as="h1"
                 aboveFold
-                text={t.hero.titlePrefix + t.hero.titleHighlight}
+                text={t.hero.titlePrefix + t.hero.titleHighlight + t.hero.titleSuffix}
                 highlight={t.hero.titleHighlight}
                 highlightClassName="text-lavender-dark"
                 delay={0.15}
-                className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-semibold text-charcoal leading-[1.1] tracking-tight"
+                className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal leading-[1.15] tracking-tight"
               />
 
               <motion.p
