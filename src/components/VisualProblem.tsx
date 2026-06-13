@@ -47,16 +47,6 @@ export default function VisualProblem() {
                       className="w-full h-auto block transition-transform duration-700 ease-out group-hover:scale-[1.04] motion-reduce:transform-none"
                     />
                   </div>
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-x-0 bottom-0 overflow-hidden"
-                  >
-                    <div className="bg-gradient-to-t from-charcoal/70 via-charcoal/35 to-transparent px-4 pt-12 pb-4 translate-y-full opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100 motion-reduce:translate-y-0">
-                      <p className="text-cream text-xs sm:text-sm font-medium leading-snug">
-                        {card.alt}
-                      </p>
-                    </div>
-                  </div>
                 </TiltCard>
               </motion.div>
             </Parallax>
