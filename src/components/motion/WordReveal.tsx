@@ -12,6 +12,8 @@ type Props = {
   stagger?: number;
   /** Reveal character by character (kinetic) instead of word by word. */
   byChar?: boolean;
+  /** Use animate (not whileInView) — required for above-the-fold elements. */
+  aboveFold?: boolean;
   /** Render a highlighted segment: words matching this exact substring get highlightClassName. */
   highlight?: string;
   highlightClassName?: string;
@@ -29,6 +31,7 @@ export default function WordReveal({
   delay = 0,
   stagger = 0.045,
   byChar = false,
+  aboveFold = false,
   highlight,
   highlightClassName,
 }: Props) {
@@ -84,8 +87,9 @@ export default function WordReveal({
                     <motion.span
                       className="inline-block"
                       initial={{ y: '115%', opacity: 0 }}
-                      whileInView={{ y: '0%', opacity: 1 }}
-                      viewport={VIEWPORT_ONCE}
+                      {...(aboveFold
+                        ? { animate: { y: '0%', opacity: 1 } }
+                        : { whileInView: { y: '0%', opacity: 1 }, viewport: VIEWPORT_ONCE })}
                       transition={{ duration: 0.62, delay: delay + idx * charStagger, ease: EASE }}
                     >
                       {ch}
@@ -110,8 +114,9 @@ export default function WordReveal({
           <motion.span
             className={'inline-block ' + (highlightSet.has(i) && highlightClassName ? highlightClassName : '')}
             initial={{ y: '110%', opacity: 0 }}
-            whileInView={{ y: '0%', opacity: 1 }}
-            viewport={VIEWPORT_ONCE}
+            {...(aboveFold
+              ? { animate: { y: '0%', opacity: 1 } }
+              : { whileInView: { y: '0%', opacity: 1 }, viewport: VIEWPORT_ONCE })}
             transition={{ duration: 0.65, delay: delay + i * stagger, ease: EASE }}
           >
             {word}

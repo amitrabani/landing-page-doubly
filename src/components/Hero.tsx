@@ -149,7 +149,7 @@ export default function Hero() {
 
               <WordReveal
                 as="h1"
-                byChar
+                aboveFold
                 text={t.hero.titlePrefix + t.hero.titleHighlight}
                 highlight={t.hero.titleHighlight}
                 highlightClassName="text-lavender-dark"
