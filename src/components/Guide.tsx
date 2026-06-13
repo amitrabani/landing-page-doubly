@@ -18,7 +18,7 @@ export default function Guide() {
   const imageScale = useTransform(scrollYProgress, [0, 0.3, 0.7], [0.92, 1, 1]);
 
   return (
-    <section ref={sectionRef} className="py-24 sm:py-32 px-6 bg-warm">
+    <section ref={sectionRef} className="py-12 sm:py-16 px-6 bg-warm">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           {/* Left: copy */}
