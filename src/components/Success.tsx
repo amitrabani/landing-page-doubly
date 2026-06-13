@@ -81,7 +81,7 @@ export default function Success() {
                 <img
                   src="/social-proof.png"
                   alt="Doubly app post detail showing a completed task with community reactions and comments"
-                  className="w-full h-auto block"
+                  className="w-full h-auto block max-h-[50vh] object-cover object-top"
                 />
                 {/* Soft edge vignette */}
                 <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[inset_0_0_30px_rgba(0,0,0,0.03)]" />
