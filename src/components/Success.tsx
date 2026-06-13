@@ -80,7 +80,7 @@ export default function Success() {
               <div className="relative rounded-3xl overflow-hidden bg-white shadow-[0_4px_24px_rgba(0,0,0,0.06),0_1px_4px_rgba(0,0,0,0.04)] ring-1 ring-black/[0.03]">
                 <img
                   src="/social-proof.png"
-                  alt="Social media posts from real users sharing their productivity wins"
+                  alt="Doubly app post detail showing a completed task with community reactions and comments"
                   className="w-full h-auto block"
                 />
                 {/* Soft edge vignette */}

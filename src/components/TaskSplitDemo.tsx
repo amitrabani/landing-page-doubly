@@ -213,7 +213,6 @@ export default function TaskSplitDemo() {
                 animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 exit={{ opacity: 0, y: -10, scale: 0.97, rotateX: 0 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
-                style={{ transformStyle: 'preserve-3d' }}
               >
                 <TiltCard
                   maxTilt={3}

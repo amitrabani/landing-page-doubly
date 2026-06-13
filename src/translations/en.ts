@@ -102,7 +102,7 @@ const en = {
     filterNote: 'Non-actionable thoughts filtered out. Only real tasks kept.',
     tasks: [
       { text: '\ud83d\udc8a Order vitamins', phrase: 'order vitamins' },
-      { text: '\ud83e\uddf9 Clean the sink', phrase: 'clean the sink' },
+      { text: '\ud83d\udcde Book the dentist', phrase: 'book the dentist' },
       { text: '\ud83d\udd0c Find the charger', phrase: 'find the charger' },
       { text: '\ud83c\udf7d\ufe0f Eat something', phrase: 'eat something' },
     ],
@@ -338,7 +338,7 @@ const en = {
 
   // Success
   success: {
-    title: 'What changes when you can actually start',
+    title: 'Swap doomscrolling for a feed that gets you moving.',
     subtitle: 'Not flawless productivity. Just less friction, less guilt, and more forward motion.',
     outcomes: [
       'Start tasks without the mental fight',
