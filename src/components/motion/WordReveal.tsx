@@ -110,18 +110,20 @@ export default function WordReveal({
   return (
     <Tag className={className} aria-label={text}>
       {words.map((word, i) => (
-        <span key={i} aria-hidden className={maskClass}>
-          <motion.span
-            className={'inline-block ' + (highlightSet.has(i) && highlightClassName ? highlightClassName : '')}
-            initial={{ y: '110%', opacity: 0 }}
-            {...(aboveFold
-              ? { animate: { y: '0%', opacity: 1 } }
-              : { whileInView: { y: '0%', opacity: 1 }, viewport: VIEWPORT_ONCE })}
-            transition={{ duration: 0.65, delay: delay + i * stagger, ease: EASE }}
-          >
-            {word}
-            {i < words.length - 1 ? ' ' : ''}
-          </motion.span>
+        <span key={i} aria-hidden>
+          <span className={maskClass}>
+            <motion.span
+              className={'inline-block ' + (highlightSet.has(i) && highlightClassName ? highlightClassName : '')}
+              initial={{ y: '110%', opacity: 0 }}
+              {...(aboveFold
+                ? { animate: { y: '0%', opacity: 1 } }
+                : { whileInView: { y: '0%', opacity: 1 }, viewport: VIEWPORT_ONCE })}
+              transition={{ duration: 0.65, delay: delay + i * stagger, ease: EASE }}
+            >
+              {word}
+            </motion.span>
+          </span>
+          {i < words.length - 1 ? ' ' : ''}
         </span>
       ))}
     </Tag>

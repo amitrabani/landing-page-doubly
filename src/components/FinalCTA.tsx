@@ -131,15 +131,6 @@ export default function FinalCTA() {
             </MagneticArea>
           </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7, ease: EASE }}
-            className="mt-4 text-sm text-muted-light"
-          >
-            {t.finalCta.disclaimer}
-          </motion.p>
         </motion.div>
       </div>
     </section>
