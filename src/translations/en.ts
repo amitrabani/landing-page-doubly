@@ -13,7 +13,7 @@ const en = {
   // Hero
   hero: {
     badge: 'Built for ADHD brains',
-    titlePrefix: 'For the days when your brain has ',
+    titlePrefix: 'When your brain has ',
     titleHighlight: '47 tabs open.',
     subtitle: 'Turn the chaos into one clear next step and keep moving.',
     cta: 'Download on the App Store',
