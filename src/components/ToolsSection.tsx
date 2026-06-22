@@ -29,9 +29,16 @@ export default function ToolsSection() {
                 href={`/tools/${tool.slug}`}
                 className="group block h-full rounded-2xl bg-white/70 border border-warm-dark/30 p-5 hover:border-lavender hover:shadow-[0_4px_20px_rgba(184,169,212,0.15)] transition-all"
               >
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
-                  {tool.title}
-                </h3>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
+                    {tool.title}
+                  </h3>
+                  {tool.hot && (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-lavender/20 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-lavender-dark">
+                      <span aria-hidden="true">🔥</span> Hot
+                    </span>
+                  )}
+                </div>
                 <p className="mt-1.5 text-sm text-charcoal-light leading-6 line-clamp-2">
                   {tool.description}
                 </p>

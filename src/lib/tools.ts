@@ -3,6 +3,7 @@ export type Tool = {
   title: string;
   description: string;
   status: 'live' | 'coming-soon';
+  hot?: boolean;
 };
 
 // Single source of truth for the tools library. Consumed by the /tools hub,
@@ -71,5 +72,6 @@ export const tools: Tool[] = [
     description:
       'Recurring spoken check-ins every X minutes and an optional hard stop, so an ADHD hyperfocus session does not eat your whole afternoon.',
     status: 'live',
+    hot: true,
   },
 ];
