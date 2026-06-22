@@ -1,0 +1,60 @@
+import Link from 'next/link';
+import { tools } from '@/lib/tools';
+
+// Server-rendered so every tool link is present in the initial HTML for crawlers.
+// The homepage is the most-crawled page on the site; linking each tool directly
+// from here raises their crawl priority and passes link equity (helps indexation).
+export default function ToolsSection() {
+  const live = tools.filter((tool) => tool.status === 'live');
+
+  return (
+    <section aria-labelledby="tools-heading" className="py-12 sm:py-16 px-6">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center max-w-2xl mx-auto">
+          <h2
+            id="tools-heading"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal leading-tight"
+          >
+            Free ADHD tools you can use right now
+          </h2>
+          <p className="mt-4 text-muted text-lg leading-relaxed">
+            No signup, no popups. Open one in your browser the moment you’re stuck.
+          </p>
+        </div>
+
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {live.map((tool) => (
+            <li key={tool.slug}>
+              <Link
+                href={`/tools/${tool.slug}`}
+                className="group block h-full rounded-2xl bg-white/70 border border-warm-dark/30 p-5 hover:border-lavender hover:shadow-[0_4px_20px_rgba(184,169,212,0.15)] transition-all"
+              >
+                <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
+                  {tool.title}
+                </h3>
+                <p className="mt-1.5 text-sm text-charcoal-light leading-6 line-clamp-2">
+                  {tool.description}
+                </p>
+                <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-lavender-dark">
+                  Open tool{' '}
+                  <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                    &rarr;
+                  </span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/tools"
+            className="inline-flex items-center gap-1 text-sm font-medium text-lavender-dark hover:text-charcoal transition-colors"
+          >
+            Browse all free ADHD tools <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}

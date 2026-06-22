@@ -9,6 +9,7 @@ import HabitDemo from '@/components/HabitDemo';
 import Success from '@/components/Success';
 import Stakes from '@/components/Stakes';
 import Testimonials from '@/components/Testimonials';
+import ToolsSection from '@/components/ToolsSection';
 import FinalCTA from '@/components/FinalCTA';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
@@ -39,6 +40,7 @@ export default function Home() {
         <Success />
         <Stakes />
         <Testimonials />
+        <ToolsSection />
         <FAQ />
         <FinalCTA />
       </main>

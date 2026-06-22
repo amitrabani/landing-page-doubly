@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import t from '@/translations/en';
+import { tools } from '@/lib/tools';
 
 // CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
 const linkClass =
@@ -12,6 +13,24 @@ const linkClass =
 export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-charcoal/5 bg-gradient-to-b from-cream to-warm">
+      <nav
+        aria-label="Free ADHD tools"
+        className="mx-auto max-w-6xl mb-10 pb-10 border-b border-charcoal/5"
+      >
+        <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-light mb-4">
+          Free ADHD tools
+        </h2>
+        <div className="flex flex-wrap gap-x-6 gap-y-3">
+          {tools
+            .filter((tool) => tool.status === 'live')
+            .map((tool) => (
+              <Link key={tool.slug} href={`/tools/${tool.slug}`} className={linkClass}>
+                {tool.title}
+              </Link>
+            ))}
+        </div>
+      </nav>
+
       <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
           <Image src="/icon-192.png" alt="Doubly" width={28} height={28} className="rounded-lg" />
