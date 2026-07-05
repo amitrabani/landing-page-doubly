@@ -1,5 +1,6 @@
-const APP_STORE_URL =
-  'https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb';
+'use client';
+
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 
 type Props = {
   /** Optional headline override. Defaults to "Try it in the app". */
@@ -28,6 +29,7 @@ export default function SoftAppCTA({
         <div className="flex flex-col items-start gap-3 sm:items-end sm:shrink-0">
           <a
             href={APP_STORE_URL}
+            onClick={() => trackAppStoreClick('tools_soft_cta')}
             data-cta="soft-app-cta"
             aria-label={`${ctaLabel} on the App Store`}
             className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-6 py-3 font-semibold whitespace-nowrap hover:bg-charcoal-light transition-colors"

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { EASE, HOVER_LIFT, SPRING, SPRING_SOFT, VIEWPORT_ONCE_TIGHT, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import t from '@/translations/en';
 
 /** Per-option accent: option index maps onto the palette (lavender / coral / sage / sky). */
@@ -224,7 +225,8 @@ export default function TwoQuestions() {
 
                 <div>
                   <a
-                    href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
+                    href={APP_STORE_URL}
+                    onClick={() => trackAppStoreClick('two_questions')}
                     className="group inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-6 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02]"
                   >
                     {t.twoQuestions.mockupCta}

@@ -15,6 +15,7 @@ import WordReveal from '@/components/motion/WordReveal';
 import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import TiltCard from '@/components/motion/TiltCard';
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import t from '@/translations/en';
 
 interface Subtask {
@@ -459,7 +460,8 @@ export default function TaskSplitDemo() {
                           {t.taskSplitDemo.allDoneDescription}
                         </p>
                         <motion.a
-                          href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
+                          href={APP_STORE_URL}
+                          onClick={() => trackAppStoreClick('task_split_all_done')}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           transition={SPRING_SNAPPY}
