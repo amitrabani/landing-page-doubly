@@ -3,6 +3,9 @@ import { Inter, Fraunces } from 'next/font/google';
 import './globals.css';
 import t from '@/translations/en';
 import PostHogProvider from './PostHogProvider';
+import ScrollDepthTracker from '@/components/ScrollDepthTracker';
+import { GoogleTagManagerScript, GoogleTagManagerNoScript } from './GoogleTagManager';
+import { RedditPixel } from './RedditPixel';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -37,8 +40,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+      <head>
+        <GoogleTagManagerScript />
+        <RedditPixel />
+      </head>
       <body suppressHydrationWarning>
-        <PostHogProvider>{children}</PostHogProvider>
+        <GoogleTagManagerNoScript />
+        <PostHogProvider>
+          <ScrollDepthTracker />
+          {children}
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -105,10 +105,10 @@ export default function TermsOfUse() {
           <p className="text-base leading-7 text-charcoal-light">
             Questions about these terms? Reach us at{' '}
             <a
-              href="mailto:support@doubly.app"
+              href="mailto:amit@usedoubly.com"
               className="font-medium text-lavender-dark hover:underline"
             >
-              support@doubly.app
+              amit@usedoubly.com
             </a>
             .
           </p>

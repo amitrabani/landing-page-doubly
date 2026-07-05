@@ -172,7 +172,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
                 className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
               >
-                <AppStoreButton />
+                <AppStoreButton placement="hero" />
               </motion.div>
             </motion.div>
 

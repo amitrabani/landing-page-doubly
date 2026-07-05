@@ -15,6 +15,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import t from '@/translations/en';
 import { EASE, SPRING, SPRING_SOFT } from '@/lib/motion';
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 
 const SECTION_IDS = ['how-it-works', 'testimonials', 'faq'] as const;
 
@@ -130,7 +131,8 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
+              href={APP_STORE_URL}
+              onClick={() => trackAppStoreClick('navbar')}
               className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-medium hover:bg-charcoal-light transition-colors"
             >
               {t.navbar.cta}
@@ -200,8 +202,11 @@ export default function Navbar() {
               ))}
               <motion.a
                 variants={menuItemVariants}
-                href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
-                onClick={() => setMobileOpen(false)}
+                href={APP_STORE_URL}
+                onClick={() => {
+                  trackAppStoreClick('navbar_mobile');
+                  setMobileOpen(false);
+                }}
                 className="inline-flex items-center justify-center rounded-full bg-charcoal text-cream px-6 py-3 text-lg font-medium mt-4"
               >
                 {t.navbar.cta}

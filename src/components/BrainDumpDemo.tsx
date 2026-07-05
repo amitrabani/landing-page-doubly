@@ -5,6 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { EASE, SPRING, SPRING_SNAPPY, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
+import TryInDoublyCTA from '@/components/TryInDoublyCTA';
 import t from '@/translations/en';
 
 const DUMP_TEXT = t.brainDumpDemo.dumpText;
@@ -468,6 +469,8 @@ export default function BrainDumpDemo() {
             />
           ))}
         </div>
+
+        <TryInDoublyCTA placement="brain_dump" className="mt-10" />
       </div>
     </section>
   );

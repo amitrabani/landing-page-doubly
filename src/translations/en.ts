@@ -1,4 +1,9 @@
 const en = {
+  // Shared
+  common: {
+    tryInDoubly: 'Try it in Doubly',
+  },
+
   // Navbar
   navbar: {
     brand: 'Doubly',

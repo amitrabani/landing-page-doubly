@@ -3,12 +3,16 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { SPRING } from '@/lib/motion';
+import { APP_STORE_URL, trackAppStoreClick, type AppStorePlacement } from '@/lib/appStore';
 import t from '@/translations/en';
 
-const APP_STORE_URL =
-  'https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb';
-
-export default function AppStoreButton({ className = '' }: { className?: string }) {
+export default function AppStoreButton({
+  placement,
+  className = '',
+}: {
+  placement: AppStorePlacement;
+  className?: string;
+}) {
   const reduced = useReducedMotion();
   const [shimmer, setShimmer] = useState(false);
 
@@ -22,6 +26,7 @@ export default function AppStoreButton({ className = '' }: { className?: string 
   return (
     <motion.a
       href={APP_STORE_URL}
+      onClick={() => trackAppStoreClick(placement)}
       className={`group relative inline-block ${className}`}
       whileHover={reduced ? undefined : { scale: 1.04, y: -2 }}
       whileTap={reduced ? undefined : { scale: 0.97 }}

@@ -5,6 +5,8 @@ import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer
 import { EASE, SPRING_SNAPPY, SPRING_SOFT, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
+import TryInDoublyCTA from '@/components/TryInDoublyCTA';
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import t from '@/translations/en';
 
 interface Habit {
@@ -339,7 +341,8 @@ export default function HabitDemo() {
                       {t.habitDemo.allDoneDescription}
                     </p>
                     <a
-                      href="https://apps.apple.com/us/app/adhd-planner-doubly/id6760469944?ppid=cc9063af-1b63-4ba2-842d-e5f979b03beb"
+                      href={APP_STORE_URL}
+                      onClick={() => trackAppStoreClick('habit_demo_all_done')}
                       className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] shadow-lg shadow-charcoal/10"
                     >
                       {t.habitDemo.allDoneCta}
@@ -485,6 +488,7 @@ export default function HabitDemo() {
           </motion.div>
         </div>
 
+        <TryInDoublyCTA placement="habit_demo" className="mt-10" />
       </div>
     </section>
   );

@@ -37,3 +37,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SEO skill python venv (rebuilt on demand, do not commit ~464MB)
+.claude/skills/seo/.venv/

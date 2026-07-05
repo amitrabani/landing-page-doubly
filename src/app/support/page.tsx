@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Get help with Doubly. Contact support, manage subscriptions, and find answers.',
 };
 
-const SUPPORT_EMAIL = 'support@doubly.app';
+const SUPPORT_EMAIL = 'amit@usedoubly.com';
 
 export default function SupportPage() {
   return (

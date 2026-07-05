@@ -132,7 +132,7 @@ export default function FinalCTA() {
               className="pointer-events-none absolute left-1/2 top-1/2 h-44 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(184,169,212,0.4),transparent_70%)] blur-2xl"
             />
             <MagneticArea strength={0.25}>
-              <AppStoreButton />
+              <AppStoreButton placement="final_cta" />
             </MagneticArea>
           </motion.div>
 

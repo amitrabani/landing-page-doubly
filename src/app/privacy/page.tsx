@@ -80,10 +80,10 @@ export default function PrivacyPolicy() {
             You may initiate account and data deletion directly within the app settings or by
             contacting our support team at{' '}
             <a
-              href="mailto:support@doubly.app"
+              href="mailto:amit@usedoubly.com"
               className="font-medium text-lavender-dark hover:underline"
             >
-              support@doubly.app
+              amit@usedoubly.com
             </a>
             .
           </p>
