@@ -143,7 +143,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.75, ease: EASE }}
           >
-            <SocialProofCounter className="mt-5" />
+            <SocialProofCounter className="mt-5 text-sm text-muted" />
           </motion.div>
 
         </motion.div>

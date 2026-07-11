@@ -38,7 +38,7 @@ const en = {
       accountability: 'Accountability',
     },
     phone: {
-      screenAlt: 'Doubly app showing your planned week ahead with time-blocked tasks',
+      screenAlt: 'Doubly app showing your habits with daily streaks and progress grids',
     },
   },
 

@@ -193,10 +193,18 @@ export default function Hero() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.8, ease: EASE }}
-                className="mt-5"
+                className="mt-8 flex flex-col items-center gap-3 lg:items-start"
               >
-                <SocialProofCounter />
-                <AndroidWaitlist className="mt-2" />
+                {/* Live member count, dressed as a soft pill with a pulsing
+                    dot so it reads as an active community, not an afterthought. */}
+                <div className="inline-flex items-center gap-2 rounded-full border border-sage/25 bg-sage/[0.08] px-3.5 py-1.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-dark/60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-sage-dark" />
+                  </span>
+                  <SocialProofCounter className="text-sm font-medium text-charcoal" />
+                </div>
+                <AndroidWaitlist />
               </motion.div>
             </motion.div>
 

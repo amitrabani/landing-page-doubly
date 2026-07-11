@@ -3,27 +3,34 @@
 import { useEffect, useState } from 'react';
 import t from '@/translations/en';
 
-// Deterministic member counter: BASE_COUNT at EPOCH, +1 every STEP_MS, so every
-// visitor sees the same number at the same moment (no backend needed).
-// SSR and the first client render both show BASE_COUNT; the effect swaps in the
-// live value after hydration so server and client markup never disagree.
-// Keep BASE_COUNT/STEP_MS roughly anchored to real installs.
-const BASE_COUNT = 392;
-const EPOCH = Date.UTC(2026, 6, 11); // 2026-07-11, the day the counter went live
-const STEP_MS = 40 * 60 * 1000; // +1 every 40 minutes
+// The member count comes from the backend (/api/user-count), which owns the
+// increment logic. We render a sensible fallback for SSR and the first paint,
+// then swap in the value from the API after hydration so the server and client
+// markup never disagree. Keep this loosely anchored to the API's base count.
+const FALLBACK_COUNT = 470;
 
-function liveCount() {
-  return BASE_COUNT + Math.max(0, Math.floor((Date.now() - EPOCH) / STEP_MS));
-}
-
-export default function SocialProofCounter({ className = '' }: { className?: string }) {
-  const [count, setCount] = useState(BASE_COUNT);
+export default function SocialProofCounter({
+  className = 'text-sm text-muted',
+}: {
+  className?: string;
+}) {
+  const [count, setCount] = useState(FALLBACK_COUNT);
 
   useEffect(() => {
-    setCount(liveCount());
-    const id = setInterval(() => setCount(liveCount()), 60_000);
-    return () => clearInterval(id);
+    let active = true;
+    fetch('/api/user-count')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        const next = Number(data?.count);
+        if (active && Number.isFinite(next) && next > 0) setCount(next);
+      })
+      .catch(() => {
+        /* keep the fallback */
+      });
+    return () => {
+      active = false;
+    };
   }, []);
 
-  return <p className={`text-sm text-muted ${className}`}>{t.common.socialProof(count)}</p>;
+  return <p className={className}>{t.common.socialProof(count)}</p>;
 }
