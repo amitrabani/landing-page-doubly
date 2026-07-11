@@ -31,6 +31,19 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /*
+   * Prevent horizontal scroll on mobile. Decorative blobs, auroras, and
+   * parallax layers intentionally bleed past the viewport edges; clip that
+   * overflow on the x-axis so the page never scrolls sideways and content
+   * stays centered at full width. `clip` (not `hidden`) avoids creating a
+   * scroll container, so it plays nicely with sticky elements and Lenis.
+   */
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
   body {
     font-family: var(--font-body);
     color: var(--color-charcoal);
