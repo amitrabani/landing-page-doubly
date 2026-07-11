@@ -7,7 +7,7 @@ import TiltCard from '@/components/motion/TiltCard';
 import t from '@/translations/en';
 
 // Hand-placed feel: each card settles with its own slight tilt.
-const ROTATIONS = [-1, 0, 1];
+const ROTATIONS = [-1, 1, 0];
 
 const containerVariants: Variants = {
   hidden: {},
@@ -51,6 +51,15 @@ const starVariants: Variants = {
 
 export default function Testimonials() {
   const reduced = useReducedMotion();
+  // Widen the tuple's literal length so the grid ternary below typechecks as
+  // reviews get added (the section handles 1-3 cards).
+  const count: number = t.testimonials.items.length;
+  const gridClass =
+    count >= 3
+      ? 'md:grid-cols-3'
+      : count === 2
+        ? 'md:grid-cols-2 max-w-3xl mx-auto'
+        : 'max-w-xl mx-auto';
 
   return (
     <section id="testimonials" className="py-12 sm:py-16 px-6 bg-warm">
@@ -84,7 +93,7 @@ export default function Testimonials() {
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT_ONCE_TIGHT}
-            className="grid md:grid-cols-3 gap-6"
+            className={`grid gap-6 ${gridClass}`}
           >
             {t.testimonials.items.map((item, i) => (
               <motion.div

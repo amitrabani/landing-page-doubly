@@ -7,6 +7,7 @@ import MagneticArea from '@/components/motion/MagneticArea';
 import Parallax from '@/components/motion/Parallax';
 import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
+import SocialProofCounter from './SocialProofCounter';
 
 /** Tiny four-point sparkle, colored via currentColor. Decorative only. */
 function Sparkle({ className }: { className?: string }) {
@@ -134,6 +135,15 @@ export default function FinalCTA() {
             <MagneticArea strength={0.25}>
               <AppStoreButton placement="final_cta" />
             </MagneticArea>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.75, ease: EASE }}
+          >
+            <SocialProofCounter className="mt-5" />
           </motion.div>
 
         </motion.div>

@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import posthog from 'posthog-js';
 import { EASE } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
@@ -9,6 +10,8 @@ import TiltCard from '@/components/motion/TiltCard';
 import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
 import t from '@/translations/en';
 import AppStoreButton from './AppStoreButton';
+import SocialProofCounter from './SocialProofCounter';
+import AndroidWaitlist from './AndroidWaitlist';
 
 const iconProps = {
   width: 15,
@@ -170,9 +173,30 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
-                className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+                className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center lg:justify-start"
               >
                 <AppStoreButton placement="hero" />
+                {/* Soft next step for visitors not ready to leave for the store;
+                    Lenis intercepts the anchor for a smooth glide. */}
+                <a
+                  href="#split-demo"
+                  onClick={() => {
+                    if (posthog.__loaded) posthog.capture('hero_secondary_cta_click');
+                  }}
+                  className="text-base font-medium text-charcoal underline decoration-lavender decoration-2 underline-offset-4 hover:text-lavender-dark transition-colors"
+                >
+                  {t.hero.secondaryCta}
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.8, ease: EASE }}
+                className="mt-5"
+              >
+                <SocialProofCounter />
+                <AndroidWaitlist className="mt-2" />
               </motion.div>
             </motion.div>
 

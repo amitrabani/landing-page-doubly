@@ -2,6 +2,7 @@ const en = {
   // Shared
   common: {
     tryInDoubly: 'Try it in Doubly',
+    socialProof: (count: number) => `Join ${count.toLocaleString('en-US')} ADHD brains getting unstuck`,
   },
 
   // Navbar
@@ -11,7 +12,7 @@ const en = {
     features: 'Features',
     testimonials: 'Testimonials',
     faq: 'FAQ',
-    cta: 'Try Doubly free',
+    cta: 'Get Doubly',
     toggleMenu: 'Toggle menu',
   },
 
@@ -20,8 +21,17 @@ const en = {
     badge: 'Built for ADHD brains',
     titlePrefix: 'When your brain has ',
     titleHighlight: '47 tabs open',
-    subtitle: 'Turn the chaos into one clear next step and keep moving.',
+    subtitle: 'Turn the chaos into one clear next step in under a minute.',
     cta: 'Download on the App Store',
+    secondaryCta: 'See it split a task ↓',
+    android: {
+      prompt: 'On Android? Get notified when we launch',
+      placeholder: 'you@email.com',
+      submit: 'Notify me',
+      success: 'You’re on the list. We’ll email you when Doubly lands on Android.',
+      invalid: 'Please enter a valid email.',
+      error: 'Something went wrong. Please try again.',
+    },
     floatingCards: {
       brainDump: 'Brain Dump',
       habits: 'Habits',
@@ -96,7 +106,7 @@ const en = {
   brainDumpDemo: {
     title: 'Dump the chaos. Keep the tasks.',
     subtitle:
-      'Brain full? Just type. Doubly pulls out the actionable stuff and throws away the noise.',
+      'Brain full? Type for 20 seconds. Doubly pulls out the actionable stuff and throws away the noise.',
     dumpText:
       'I open my laptop to be productive and within five seconds my brain is like: answer that message, order vitamins, clean the sink, find the charger, eat something, and also remember the super important task you were definitely not going to forget. Which I immediately forgot.',
     brainDumpLabel: 'Brain Dump',
@@ -146,7 +156,7 @@ const en = {
   taskSplitDemo: {
     title: 'Type a task. Watch it split.',
     subtitle:
-      'Big tasks feel impossible. Doubly breaks them into small, doable steps so you can just start.',
+      'Big tasks feel impossible. Doubly breaks them into 2–5 minute steps so you can just start.',
     customInputPlaceholder: 'Or type your own task...',
     splitButton: 'Split it',
     taskLabel: 'Task',
@@ -313,7 +323,7 @@ const en = {
     },
     mockupNextStep: 'Your next step is ready',
     mockupTask: 'Start with one small thing',
-    mockupCta: 'Try Doubly free',
+    mockupCta: 'Try Doubly',
   },
 
 
@@ -364,24 +374,23 @@ const en = {
     title: "People don\u2019t need more productivity pressure",
     subtitle: 'They need help getting started.',
     items: [
+      // Real App Store reviews, quoted verbatim. Only add entries that are actual
+      // published reviews AND whose reviewer gave permission (Apple's rule; ask by
+      // replying to the review in App Store Connect). The grid auto-adapts up to 3.
       {
         quote:
-          'I actually opened it when I was stuck. First app that felt like it was built for that exact moment.',
-        name: 'Maya Reeves',
-        label: 'Living with ADHD',
+          'This app is the only one that actually got me to do things. I have very strong ADHD, and it made me concentrate on my tasks one by one to always know what’s coming ahead and make order in my day. Love it so much! Hope to see awesome upgrades soon 🙏🏻',
+        name: 'Liorcic',
+        label: 'App Store review · Israel',
       },
-      {
-        quote:
-          'Brain dump helped instantly. I went from 20 things spinning in my head to one task on screen.',
-        name: 'Jordan Torres',
-        label: 'College student with ADHD',
-      },
-      {
-        quote:
-          "This is the first app that helped me start, not just plan. I've tried every productivity app and this one actually gets it.",
-        name: 'Alex Kim',
-        label: 'Freelance designer',
-      },
+      // Slot 2 — pending reviewer permission (asked via App Store Connect reply):
+      // {
+      //   quote:
+      //     'This has really helped me manage my workload, I haven’t seen anything like it. The walkthrough and set up is very intuitive, and the features make it worth it!',
+      //   name: 'MinecraftrNinja',
+      //   label: 'App Store review · United States',
+      // },
+      // Slot 3 — next permitted review goes here.
     ],
   },
 
@@ -422,7 +431,6 @@ const en = {
     highlight: 'It needs a way to start.',
     subtitle: 'For ADHD minds that are tired of overthinking, avoiding, and falling behind.',
     cta: 'Download on the App Store',
-    disclaimer: 'Free to start. No credit card required.',
   },
 
   // Footer
