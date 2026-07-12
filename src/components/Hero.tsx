@@ -144,10 +144,20 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: EASE }}
+                className="mb-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
               >
-                <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5 mb-6">
+                <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5">
                   {t.hero.badge}
                 </span>
+                {/* Live member count, dressed as a soft pill with a pulsing
+                    dot so it reads as an active community, not an afterthought. */}
+                <div className="inline-flex items-center gap-2 rounded-full border border-sage/25 bg-sage/[0.08] px-3.5 py-1.5">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-dark/60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-sage-dark" />
+                  </span>
+                  <SocialProofCounter className="text-sm font-medium text-charcoal" />
+                </div>
               </motion.div>
 
               <WordReveal
@@ -195,15 +205,6 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.8, ease: EASE }}
                 className="mt-8 flex flex-col items-center gap-3 lg:items-start"
               >
-                {/* Live member count, dressed as a soft pill with a pulsing
-                    dot so it reads as an active community, not an afterthought. */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-sage/25 bg-sage/[0.08] px-3.5 py-1.5">
-                  <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-dark/60" />
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-sage-dark" />
-                  </span>
-                  <SocialProofCounter className="text-sm font-medium text-charcoal" />
-                </div>
                 <AndroidWaitlist />
               </motion.div>
             </motion.div>

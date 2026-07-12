@@ -2,7 +2,7 @@ const en = {
   // Shared
   common: {
     tryInDoubly: 'Try it in Doubly',
-    socialProof: (count: number) => `Join ${count.toLocaleString('en-US')} ADHD brains getting unstuck`,
+    socialProof: (count: number) => `Join ${count.toLocaleString('en-US')} ADHDers`,
   },
 
   // Navbar
@@ -25,7 +25,7 @@ const en = {
     cta: 'Download on the App Store',
     secondaryCta: 'See it split a task ↓',
     android: {
-      prompt: 'On Android? Get notified when we launch',
+      prompt: 'Using Android?',
       placeholder: 'you@email.com',
       submit: 'Notify me',
       success: 'You’re on the list. We’ll email you when Doubly lands on Android.',
