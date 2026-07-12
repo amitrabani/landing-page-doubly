@@ -2,7 +2,6 @@
 
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import posthog from 'posthog-js';
 import { EASE } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
@@ -186,24 +185,13 @@ export default function Hero() {
                 className="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 justify-center lg:justify-start"
               >
                 <AppStoreButton placement="hero" />
-                {/* Soft next step for visitors not ready to leave for the store;
-                    Lenis intercepts the anchor for a smooth glide. */}
-                <a
-                  href="#split-demo"
-                  onClick={() => {
-                    if (posthog.__loaded) posthog.capture('hero_secondary_cta_click');
-                  }}
-                  className="text-base font-medium text-charcoal underline decoration-lavender decoration-2 underline-offset-4 hover:text-lavender-dark transition-colors"
-                >
-                  {t.hero.secondaryCta}
-                </a>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.8, ease: EASE }}
-                className="mt-8 flex flex-col items-center gap-3 lg:items-start"
+                className="mt-4 flex flex-col items-center gap-3 lg:items-start"
               >
                 <AndroidWaitlist />
               </motion.div>
