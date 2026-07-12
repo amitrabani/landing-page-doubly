@@ -60,6 +60,9 @@ export default function Testimonials() {
       : count === 2
         ? 'md:grid-cols-2 max-w-3xl mx-auto'
         : 'max-w-xl mx-auto';
+  // The hand-placed middle-card lift only makes sense with 3 cards in a row;
+  // with 2, it shoves the second card up so the pair no longer lines up evenly.
+  const isThreeUp = count >= 3;
 
   return (
     <section id="testimonials" className="py-12 sm:py-16 px-6 bg-warm">
@@ -102,7 +105,7 @@ export default function Testimonials() {
                 variants={cardVariants}
                 whileHover={reduced ? undefined : 'hover'}
                 transition={SPRING_SOFT}
-                className={`[perspective:1200px] ${i === 1 ? 'md:-mt-4' : ''}`}
+                className={`[perspective:1200px] ${isThreeUp && i === 1 ? 'md:-mt-4' : ''}`}
               >
                 <TiltCard maxTilt={4} className="h-full">
                   <motion.div
