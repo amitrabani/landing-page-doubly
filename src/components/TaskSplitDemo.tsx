@@ -16,7 +16,7 @@ import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import TiltCard from '@/components/motion/TiltCard';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
-import { useT } from '@/i18n/TranslationProvider';
+import { useT, useLocale } from '@/i18n/TranslationProvider';
 
 interface Subtask {
   text: string;
@@ -35,12 +35,13 @@ const chipVariant = {
   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: EASE } },
 };
 
-// Call AI for custom (non-preset) tasks
-async function splitTaskAI(task: string): Promise<TaskResult> {
+// Call AI for custom (non-preset) tasks. The page locale is sent so the AI
+// answers in the page's language (presets are already localized and skip this).
+async function splitTaskAI(task: string, locale: string): Promise<TaskResult> {
   const res = await fetch('/api/split-task', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ task }),
+    body: JSON.stringify({ task, locale }),
   });
   if (!res.ok) throw new Error('API error');
   return res.json();
@@ -54,6 +55,7 @@ function parseDuration(d: string | null): number {
 
 export default function TaskSplitDemo() {
   const t = useT();
+  const locale = useLocale();
   const presets = t.taskSplitDemo.presets;
   const presetResults = t.taskSplitDemo.presetResults as unknown as Record<string, TaskResult>;
   const reduced = useReducedMotion();
@@ -90,7 +92,7 @@ export default function TaskSplitDemo() {
       }, 600);
     } else {
       try {
-        const result = await splitTaskAI(label);
+        const result = await splitTaskAI(label, locale);
         if (controller.signal.aborted) return;
         setTaskResult(result);
       } catch {
@@ -100,7 +102,7 @@ export default function TaskSplitDemo() {
         if (!controller.signal.aborted) setIsTyping(false);
       }
     }
-  }, [activeTask]);
+  }, [activeTask, locale]);
 
   const handleCustomSubmit = useCallback(() => {
     const trimmed = customInput.trim();

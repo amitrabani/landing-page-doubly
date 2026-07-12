@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { applyGuards, fetchWithTimeout } from '@/lib/api-guard';
+import { isLocale, defaultLocale, localeEnglishNames } from '@/i18n/config';
 
 export const runtime = 'nodejs';
 
@@ -79,12 +80,18 @@ export async function POST(request: NextRequest) {
   });
   if (!guarded.ok) return guarded.res;
 
-  const body = guarded.body as { task?: unknown } | null;
+  const body = guarded.body as { task?: unknown; locale?: unknown } | null;
   const task = typeof body?.task === 'string' ? body.task.trim() : '';
 
   if (!task || task.length < 2 || task.length > MAX_TASK_LENGTH) {
     return NextResponse.json({ error: 'Invalid task' }, { status: 400 });
   }
+
+  // The landing page's localized homepages send their locale so the AI answers
+  // in the page's language. English (or an absent/unknown locale, e.g. the
+  // English /tools/task-splitter page) leaves the prompt unchanged.
+  const localeRaw = typeof body?.locale === 'string' ? body.locale : '';
+  const locale = isLocale(localeRaw) ? localeRaw : defaultLocale;
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -93,7 +100,11 @@ export async function POST(request: NextRequest) {
   }
 
   const today = new Date().toISOString().slice(0, 10);
-  const systemPrompt = `${SYSTEM_PROMPT_CREATE}\n\nToday's date is ${today}. Resolve relative dates (e.g. "tomorrow", "this weekend") relative to this date.`;
+  const languageDirective =
+    locale === defaultLocale
+      ? ''
+      : `\n\nRespond entirely in ${localeEnglishNames[locale]}. The task title and every subtask must be written in ${localeEnglishNames[locale]}, regardless of the language of the input.`;
+  const systemPrompt = `${SYSTEM_PROMPT_CREATE}\n\nToday's date is ${today}. Resolve relative dates (e.g. "tomorrow", "this weekend") relative to this date.${languageDirective}`;
 
   try {
     const response = await fetchWithTimeout(

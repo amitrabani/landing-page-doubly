@@ -68,6 +68,27 @@ export const htmlLang: Record<Locale, string> = {
   he: 'he',
 };
 
+// English names of each locale's language, for AI prompts that must instruct
+// the model which language to answer in (native names confuse instruction
+// following; the English name is unambiguous).
+export const localeEnglishNames: Record<Locale, string> = {
+  en: 'English',
+  de: 'German',
+  es: 'Spanish',
+  fr: 'French',
+  it: 'Italian',
+  nl: 'Dutch',
+  'pt-BR': 'Brazilian Portuguese',
+  ru: 'Russian',
+  tr: 'Turkish',
+  hi: 'Hindi',
+  ja: 'Japanese',
+  ko: 'Korean',
+  'zh-Hans': 'Simplified Chinese',
+  ar: 'Arabic',
+  he: 'Hebrew',
+};
+
 export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }
