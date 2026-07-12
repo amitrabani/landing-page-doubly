@@ -383,13 +383,12 @@ const en = {
         name: 'Liorcic',
         label: 'App Store review · Israel',
       },
-      // Slot 2 — pending reviewer permission (asked via App Store Connect reply):
-      // {
-      //   quote:
-      //     'This has really helped me manage my workload, I haven’t seen anything like it. The walkthrough and set up is very intuitive, and the features make it worth it!',
-      //   name: 'MinecraftrNinja',
-      //   label: 'App Store review · United States',
-      // },
+      {
+        quote:
+          'This has really helped me manage my workload, I haven’t seen anything like it. The walkthrough and set up is very intuitive, and the features make it worth it!',
+        name: 'MinecraftrNinja',
+        label: 'App Store review · United States',
+      },
       // Slot 3 — next permitted review goes here.
     ],
   },
