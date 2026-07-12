@@ -20,7 +20,10 @@ import ScrollProgress from '@/components/motion/ScrollProgress';
 import Preloader from '@/components/motion/Preloader';
 import CustomCursor from '@/components/motion/CustomCursor';
 
-export default function Home() {
+// The full marketing homepage. Rendered by both the default-locale route
+// ((main)/page.tsx) and the localized route ([locale]/page.tsx); the active
+// language is supplied by the TranslationProvider in each tree's root layout.
+export default function HomePage() {
   return (
     <>
       <Preloader />

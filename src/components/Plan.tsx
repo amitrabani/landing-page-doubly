@@ -12,7 +12,7 @@ import {
 import { EASE, SPRING, SPRING_SNAPPY, SPRING_SOFT, fadeRise, staggerContainer } from '@/lib/motion';
 import TiltCard from '@/components/motion/TiltCard';
 import WordReveal from '@/components/motion/WordReveal';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 const stepIcons = [
   (
@@ -121,6 +121,7 @@ function JourneyPath({
 }
 
 export default function Plan() {
+  const t = useT();
   const reduced = useReducedMotion();
   const gridRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

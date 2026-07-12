@@ -4,9 +4,10 @@ import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion
 import { useRef } from 'react';
 import { EASE } from '@/lib/motion';
 import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 export default function Success() {
+  const t = useT();
   const imageRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({

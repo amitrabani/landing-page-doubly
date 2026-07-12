@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { EASE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import MagneticArea from '@/components/motion/MagneticArea';
 import Parallax from '@/components/motion/Parallax';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 import AppStoreButton from './AppStoreButton';
 import SocialProofCounter from './SocialProofCounter';
 
@@ -19,6 +19,7 @@ function Sparkle({ className }: { className?: string }) {
 }
 
 export default function FinalCTA() {
+  const t = useT();
   const reduced = useReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const [entered, setEntered] = useState(false);

@@ -1,6 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 import { tools } from '@/lib/tools';
 
 // CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
@@ -11,6 +13,7 @@ const linkClass =
   'after:ease-out hover:after:scale-x-100';
 
 export default function Footer() {
+  const t = useT();
   return (
     <footer className="py-12 px-6 border-t border-charcoal/5 bg-gradient-to-b from-cream to-warm">
       <nav

@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { SPRING } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick, type AppStorePlacement } from '@/lib/appStore';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 export default function AppStoreButton({
   placement,
@@ -13,6 +13,7 @@ export default function AppStoreButton({
   placement: AppStorePlacement;
   className?: string;
 }) {
+  const t = useT();
   const reduced = useReducedMotion();
   const [shimmer, setShimmer] = useState(false);
 

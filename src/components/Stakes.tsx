@@ -3,9 +3,7 @@
 import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from 'framer-motion';
 import { useRef } from 'react';
 import WordReveal from '@/components/motion/WordReveal';
-import t from '@/translations/en';
-
-const bodyWords = t.stakes.body.split(' ');
+import { useT } from '@/i18n/TranslationProvider';
 
 /** One word whose opacity scrubs from dim to full as the paragraph scrolls into focus. */
 function ScrubWord({
@@ -26,6 +24,8 @@ function ScrubWord({
 }
 
 export default function Stakes() {
+  const t = useT();
+  const bodyWords = t.stakes.body.split(' ');
   const sectionRef = useRef<HTMLElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
   const reduced = useReducedMotion();

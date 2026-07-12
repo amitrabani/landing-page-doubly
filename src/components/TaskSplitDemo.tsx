@@ -16,7 +16,7 @@ import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import TiltCard from '@/components/motion/TiltCard';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 interface Subtask {
   text: string;
@@ -28,9 +28,6 @@ interface TaskResult {
   subtasks: Subtask[];
   urgency: string | null;
 }
-
-const presets = t.taskSplitDemo.presets;
-const presetResults = t.taskSplitDemo.presetResults as unknown as Record<string, TaskResult>;
 
 // Chips settle in from slightly behind the plane; the container stagger supplies the delay.
 const chipVariant = {
@@ -56,6 +53,9 @@ function parseDuration(d: string | null): number {
 }
 
 export default function TaskSplitDemo() {
+  const t = useT();
+  const presets = t.taskSplitDemo.presets;
+  const presetResults = t.taskSplitDemo.presetResults as unknown as Record<string, TaskResult>;
   const reduced = useReducedMotion();
   const [activeTask, setActiveTask] = useState<string | null>(null);
   const [taskResult, setTaskResult] = useState<TaskResult | null>(null);
@@ -253,8 +253,9 @@ export default function TaskSplitDemo() {
                               : 'bg-sage/15 text-sage-dark'
                         }`}
                       >
-                        {taskResult.urgency.charAt(0).toUpperCase() + taskResult.urgency.slice(1)}{' '}
-                        {t.taskSplitDemo.urgencySuffix}
+                        {t.taskSplitDemo.urgencyLabels[
+                          taskResult.urgency as 'low' | 'medium' | 'high'
+                        ] ?? `${taskResult.urgency} ${t.taskSplitDemo.urgencySuffix}`}
                       </motion.span>
                     )}
                   </div>

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { EASE, SPRING, VIEWPORT_ONCE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 const listVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
@@ -74,6 +74,7 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
 }
 
 export default function FAQ() {
+  const t = useT();
   return (
     <section id="faq" className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-3xl">

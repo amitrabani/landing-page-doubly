@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import posthog from 'posthog-js';
 import { getSupabase, hasSupabaseEnv } from '@/lib/supabase';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -17,6 +17,7 @@ type Status = 'idle' | 'open' | 'sending' | 'done' | 'error';
  * clicks, see src/lib/appStore.ts).
  */
 export default function AndroidWaitlist({ className = '' }: { className?: string }) {
+  const t = useT();
   const [status, setStatus] = useState<Status>('idle');
   const [email, setEmail] = useState('');
   const [invalid, setInvalid] = useState(false);

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 // The member count comes from the backend (/api/user-count), which owns the
 // increment logic. We render a sensible fallback for SSR and the first paint,
@@ -14,6 +14,7 @@ export default function SocialProofCounter({
 }: {
   className?: string;
 }) {
+  const t = useT();
   const [count, setCount] = useState(FALLBACK_COUNT);
 
   useEffect(() => {

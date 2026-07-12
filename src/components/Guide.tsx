@@ -3,11 +3,12 @@
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 const ease = [0.25, 0.1, 0.25, 1] as const;
 
 export default function Guide() {
+  const t = useT();
   const sectionRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,

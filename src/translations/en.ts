@@ -166,6 +166,7 @@ const en = {
     stepsDone: (done: number, total: number) => `${done}/${total} steps done`,
     minTotal: (min: number) => `~${min} min total`,
     urgencySuffix: 'urgency',
+    urgencyLabels: { low: 'Low urgency', medium: 'Medium urgency', high: 'High urgency' },
     allDoneMessage: "All done. That wasn\u2019t so hard, right?",
     allDoneDescription:
       'Doubly does this for every task you throw at it. No more staring at a giant to-do list.',

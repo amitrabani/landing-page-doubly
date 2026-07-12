@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { EASE, HOVER_LIFT, SPRING, SPRING_SOFT, VIEWPORT_ONCE_TIGHT, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 /** Per-option accent: option index maps onto the palette (lavender / coral / sage / sky). */
 const accents = [
@@ -39,15 +39,16 @@ const accents = [
   },
 ];
 
-const accentFor = (option: string) => {
-  const idx = (t.twoQuestions.options as readonly string[]).indexOf(option);
+const accentFor = (option: string, options: readonly string[]) => {
+  const idx = options.indexOf(option);
   return accents[(idx < 0 ? 0 : idx) % accents.length];
 };
 
 export default function TwoQuestions() {
+  const t = useT();
   const [answer2, setAnswer2] = useState<string | null>(null);
   const reduced = useReducedMotion();
-  const accent = accentFor(answer2 ?? '');
+  const accent = accentFor(answer2 ?? '', t.twoQuestions.options as readonly string[]);
 
   return (
     <section className="py-12 sm:py-16 px-6 bg-warm">

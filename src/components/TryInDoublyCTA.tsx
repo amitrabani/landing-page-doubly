@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { SPRING_SNAPPY } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick, type AppStorePlacement } from '@/lib/appStore';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 /**
  * Small App Store pill CTA that sits under a demo section.
@@ -11,13 +11,15 @@ import t from '@/translations/en';
  */
 export default function TryInDoublyCTA({
   placement,
-  label = t.common.tryInDoubly,
+  label,
   className = '',
 }: {
   placement: AppStorePlacement;
   label?: string;
   className?: string;
 }) {
+  const t = useT();
+  label = label ?? t.common.tryInDoubly;
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}

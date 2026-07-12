@@ -1,42 +1,36 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-  useReducedMotion,
-} from 'framer-motion';
-import t from '@/translations/en';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { useT } from '@/i18n/TranslationProvider';
 import { EASE, SPRING, SPRING_SNAPPY } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 
 export default function StickyBar() {
-  const [showByScroll, setShowByScroll] = useState(false);
-  const [ctaInView, setCtaInView] = useState(false);
+  const t = useT();
+  // Both start true so the bar never flashes before the observers report in.
+  const [heroInView, setHeroInView] = useState(true);
+  const [ctaInView, setCtaInView] = useState(true);
   const prefersReducedMotion = useReducedMotion();
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, 'change', (y) => {
-    if (y <= 600) {
-      setShowByScroll(false);
-      return;
-    }
-    const delta = y - (scrollY.getPrevious() ?? y);
-    if (Math.abs(delta) < 2) return;
-    setShowByScroll(delta < 0);
-  });
 
   useEffect(() => {
-    const el = document.getElementById('get-doubly');
-    if (!el) return;
-    const observer = new IntersectionObserver(([entry]) => setCtaInView(entry.isIntersecting));
-    observer.observe(el);
-    return () => observer.disconnect();
+    const hero = document.getElementById('hero');
+    const cta = document.getElementById('get-doubly');
+    if (!hero || !cta) return;
+    const heroObserver = new IntersectionObserver(([entry]) => setHeroInView(entry.isIntersecting));
+    const ctaObserver = new IntersectionObserver(([entry]) => setCtaInView(entry.isIntersecting));
+    heroObserver.observe(hero);
+    ctaObserver.observe(cta);
+    return () => {
+      heroObserver.disconnect();
+      ctaObserver.disconnect();
+    };
   }, []);
 
-  const visible = showByScroll && !ctaInView;
+  // Keep a store CTA on screen at all times: show as soon as the hero scrolls
+  // away, hide only while the final CTA section (which has its own button) is
+  // visible. ~90% of paid visitors never scroll far, so no scroll threshold.
+  const visible = !heroInView && !ctaInView;
 
   return (
     <AnimatePresence>

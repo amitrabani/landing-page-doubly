@@ -6,10 +6,7 @@ import { EASE, SPRING, SPRING_SNAPPY, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
 import TryInDoublyCTA from '@/components/TryInDoublyCTA';
-import t from '@/translations/en';
-
-const DUMP_TEXT = t.brainDumpDemo.dumpText;
-const tasks = t.brainDumpDemo.tasks;
+import { useT } from '@/i18n/TranslationProvider';
 
 // Lavender (#B8A9D4) glow keyframes, one-shot. Constant identity so framer doesn't replay.
 const PHRASE_PULSE = [
@@ -32,9 +29,9 @@ const BORDER_BREATHE = [BORDER_BASE, 'rgba(184, 169, 212, 0.4)', BORDER_BASE];
 type Flight = { key: string; fromX: number; fromY: number; toX: number; toY: number };
 
 // Precompute character ranges for each task phrase in the dump text
-function computeRanges() {
-  const lower = DUMP_TEXT.toLowerCase();
-  return tasks.map((task) => {
+function computeRanges(dumpText: string, phraseTasks: readonly { phrase: string }[]) {
+  const lower = dumpText.toLowerCase();
+  return phraseTasks.map((task) => {
     const start = lower.indexOf(task.phrase);
     // A phrase that isn't in the dump text must never reveal. Park it past the
     // end so `typedLength >= end` can't fire (the old -1 start revealed at char 13).
@@ -46,6 +43,9 @@ function computeRanges() {
 }
 
 export default function BrainDumpDemo() {
+  const t = useT();
+  const DUMP_TEXT = t.brainDumpDemo.dumpText;
+  const tasks = t.brainDumpDemo.tasks;
   const [typedLength, setTypedLength] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const [done, setDone] = useState(false);
@@ -57,7 +57,7 @@ export default function BrainDumpDemo() {
   const rowEls = useRef<(HTMLDivElement | null)[]>([]);
   const prevRevealed = useRef<boolean[]>(tasks.map(() => false));
   const reduceMotion = useReducedMotion();
-  const ranges = useMemo(computeRanges, []);
+  const ranges = useMemo(() => computeRanges(DUMP_TEXT, tasks), [DUMP_TEXT, tasks]);
 
   // Delay before a landed task row springs in, leaving room for the flying token.
   const rowDelay = reduceMotion ? 0 : 0.4;

@@ -7,7 +7,7 @@ import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
 import TryInDoublyCTA from '@/components/TryInDoublyCTA';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 interface Habit {
   id: string;
@@ -29,13 +29,14 @@ interface Habit {
   pct: string;
 }
 
-const habitTranslations = t.habitDemo.habits;
-
-const sampleHabits: Habit[] = [
+function buildSampleHabits(
+  tr: readonly { id: string; name: string; icon: string }[],
+): Habit[] {
+  return [
   {
-    id: habitTranslations[0].id,
-    name: habitTranslations[0].name,
-    icon: habitTranslations[0].icon,
+    id: tr[0].id,
+    name: tr[0].name,
+    icon: tr[0].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -48,9 +49,9 @@ const sampleHabits: Habit[] = [
     pct: '65%',
   },
   {
-    id: habitTranslations[1].id,
-    name: habitTranslations[1].name,
-    icon: habitTranslations[1].icon,
+    id: tr[1].id,
+    name: tr[1].name,
+    icon: tr[1].icon,
     color: 'text-lavender-dark',
     colorBg: 'bg-lavender-light/25',
     colorCheck: 'bg-lavender border-lavender',
@@ -63,9 +64,9 @@ const sampleHabits: Habit[] = [
     pct: '54%',
   },
   {
-    id: habitTranslations[2].id,
-    name: habitTranslations[2].name,
-    icon: habitTranslations[2].icon,
+    id: tr[2].id,
+    name: tr[2].name,
+    icon: tr[2].icon,
     color: 'text-coral-dark',
     colorBg: 'bg-coral-light/25',
     colorCheck: 'bg-coral border-coral',
@@ -78,9 +79,9 @@ const sampleHabits: Habit[] = [
     pct: '42%',
   },
   {
-    id: habitTranslations[3].id,
-    name: habitTranslations[3].name,
-    icon: habitTranslations[3].icon,
+    id: tr[3].id,
+    name: tr[3].name,
+    icon: tr[3].icon,
     color: 'text-sage-dark',
     colorBg: 'bg-sage/20',
     colorCheck: 'bg-sage border-sage',
@@ -92,7 +93,8 @@ const sampleHabits: Habit[] = [
     best: 28,
     pct: '71%',
   },
-];
+  ];
+}
 
 // Generate a seeded 12-week grid per habit (deterministic per seed)
 function seededRandom(seed: number) {
@@ -129,6 +131,8 @@ function generateGrid(seed: number): number[][] {
 }
 
 export default function HabitDemo() {
+  const t = useT();
+  const sampleHabits = useMemo(() => buildSampleHabits(t.habitDemo.habits), [t]);
   const [completions, setCompletions] = useState<Record<string, number>>({});
   const [selectedHabit, setSelectedHabit] = useState<string>('walk');
   const [bounceKey, setBounceKey] = useState(0);
@@ -144,7 +148,7 @@ export default function HabitDemo() {
       map[h.id] = generateGrid((i + 1) * 7919); // different prime seed per habit
     });
     return map;
-  }, []);
+  }, [sampleHabits]);
 
   const toggleHabit = useCallback(
     (habit: Habit) => {

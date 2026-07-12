@@ -13,7 +13,9 @@ import {
 import type { Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import t from '@/translations/en';
+import { useT, useLocale } from '@/i18n/TranslationProvider';
+import { defaultLocale } from '@/i18n/config';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { EASE, SPRING, SPRING_SOFT } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 
@@ -36,10 +38,18 @@ const menuItemVariants: Variants = {
 };
 
 export default function Navbar() {
+  const t = useT();
+  const locale = useLocale();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const prefersReducedMotion = useReducedMotion();
+
+  // Anchor links must point at the current locale's homepage so they don't
+  // bounce the visitor back to the English page.
+  const localeBase = locale === defaultLocale ? '' : `/${locale}`;
+  const homeHref = localeBase || '/';
+  const sectionHref = (id: string) => (localeBase ? `${localeBase}#${id}` : `/#${id}`);
 
   const { scrollY } = useScroll();
   const navPaddingY = useTransform(scrollY, [0, 120], [16, 10]);
@@ -72,7 +82,6 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  const navLinks = [t.navbar.howItWorks, t.navbar.testimonials, t.navbar.faq];
   const desktopLinks = [
     { id: 'how-it-works', label: t.navbar.howItWorks },
     { id: 'testimonials', label: t.navbar.testimonials },
@@ -103,7 +112,7 @@ export default function Navbar() {
         }
       >
         <div className="mx-auto max-w-6xl px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={homeHref} className="flex items-center gap-2">
             <Image src="/icon-192.png" alt="Doubly" width={32} height={32} className="rounded-lg" />
             <span className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal">
               {t.navbar.brand}
@@ -117,7 +126,7 @@ export default function Navbar() {
             {desktopLinks.map(({ id, label }) => (
               <Link
                 key={id}
-                href={`/#${id}`}
+                href={sectionHref(id)}
                 className="relative text-sm text-muted hover:text-charcoal transition-colors"
               >
                 {label}
@@ -130,6 +139,7 @@ export default function Navbar() {
                 )}
               </Link>
             ))}
+            <LanguageSwitcher />
             <a
               href={APP_STORE_URL}
               onClick={() => trackAppStoreClick('navbar')}
@@ -189,14 +199,14 @@ export default function Navbar() {
                   Tools
                 </Link>
               </motion.div>
-              {navLinks.map((item) => (
-                <motion.div key={item} variants={menuItemVariants}>
+              {desktopLinks.map(({ id, label }) => (
+                <motion.div key={id} variants={menuItemVariants}>
                   <Link
-                    href={`/#${item.toLowerCase().replace(/ /g, '-')}`}
+                    href={sectionHref(id)}
                     onClick={() => setMobileOpen(false)}
                     className="text-xl font-medium text-charcoal"
                   >
-                    {item}
+                    {label}
                   </Link>
                 </motion.div>
               ))}
@@ -211,6 +221,9 @@ export default function Navbar() {
               >
                 {t.navbar.cta}
               </motion.a>
+              <motion.div variants={menuItemVariants} className="mt-2">
+                <LanguageSwitcher />
+              </motion.div>
             </div>
           </motion.div>
         )}

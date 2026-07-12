@@ -7,7 +7,7 @@ import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
 import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import AppStoreButton from './AppStoreButton';
 import SocialProofCounter from './SocialProofCounter';
@@ -26,7 +26,7 @@ const iconProps = {
 
 const floatingCards = [
   {
-    label: t.hero.floatingCards.brainDump,
+    labelKey: 'brainDump' as const,
     color: 'bg-lavender',
     x: -150,
     y: -210,
@@ -43,7 +43,7 @@ const floatingCards = [
     ),
   },
   {
-    label: t.hero.floatingCards.habits,
+    labelKey: 'habits' as const,
     color: 'bg-coral',
     x: 155,
     y: -40,
@@ -61,7 +61,7 @@ const floatingCards = [
     ),
   },
   {
-    label: t.hero.floatingCards.accountability,
+    labelKey: 'accountability' as const,
     color: 'bg-sky',
     x: -140,
     y: 215,
@@ -81,6 +81,7 @@ const floatingCards = [
 ];
 
 export default function Hero() {
+  const t = useT();
   const sectionRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -95,7 +96,7 @@ export default function Hero() {
   const phoneScale = useTransform(scrollYProgress, [0, 1], [1, 0.92]);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden">
+    <section id="hero" ref={sectionRef} className="relative overflow-hidden">
       <MouseParallax className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
         {/* Soft gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream to-warm pointer-events-none" />
@@ -226,7 +227,7 @@ export default function Hero() {
                   {/* Floating cards */}
                   {floatingCards.map((card) => (
                     <div
-                      key={card.label}
+                      key={card.labelKey}
                       className="absolute hidden lg:block"
                       style={{
                         left: `calc(50% + ${card.x}px)`,
@@ -249,7 +250,7 @@ export default function Hero() {
                             <span className={`flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
                               {card.icon}
                             </span>
-                            <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{card.label}</span>
+                            <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{t.hero.floatingCards[card.labelKey]}</span>
                           </motion.div>
                         </Parallax>
                       </MouseLayer>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 import { EASE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
@@ -12,6 +12,7 @@ import TiltCard from '@/components/motion/TiltCard';
 const CARD_SPEEDS = [18, 34, 26, 42];
 
 export default function VisualProblem() {
+  const t = useT();
   return (
     <section className="py-12 sm:py-16 px-6">
       <div className="mx-auto max-w-5xl">

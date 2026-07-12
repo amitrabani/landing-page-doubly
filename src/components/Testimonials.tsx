@@ -4,7 +4,7 @@ import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { EASE, SPRING, SPRING_SOFT, VIEWPORT_ONCE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
-import t from '@/translations/en';
+import { useT } from '@/i18n/TranslationProvider';
 
 // Hand-placed feel: each card settles with its own slight tilt.
 const ROTATIONS = [-1, 1, 0];
@@ -50,6 +50,7 @@ const starVariants: Variants = {
 };
 
 export default function Testimonials() {
+  const t = useT();
   const reduced = useReducedMotion();
   // Widen the tuple's literal length so the grid ternary below typechecks as
   // reviews get added (the section handles 1-3 cards).
