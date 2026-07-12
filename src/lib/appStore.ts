@@ -17,6 +17,7 @@ export const APP_STORE_URL =
  */
 export type AppStorePlacement =
   | 'hero'
+  | 'hero_phone'
   | 'navbar'
   | 'navbar_mobile'
   | 'sticky_bar'

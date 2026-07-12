@@ -253,7 +253,8 @@ export default function TaskSplitDemo() {
                               : 'bg-sage/15 text-sage-dark'
                         }`}
                       >
-                        {taskResult.urgency} {t.taskSplitDemo.urgencySuffix}
+                        {taskResult.urgency.charAt(0).toUpperCase() + taskResult.urgency.slice(1)}{' '}
+                        {t.taskSplitDemo.urgencySuffix}
                       </motion.span>
                     )}
                   </div>

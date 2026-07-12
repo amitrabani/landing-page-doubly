@@ -8,6 +8,7 @@ import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
 import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
 import t from '@/translations/en';
+import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import AppStoreButton from './AppStoreButton';
 import SocialProofCounter from './SocialProofCounter';
 import AndroidWaitlist from './AndroidWaitlist';
@@ -212,12 +213,14 @@ export default function Hero() {
                     sheen
                     className="relative bg-white rounded-[2.5rem] shadow-2xl shadow-charcoal/10 border border-charcoal/5 overflow-hidden"
                   >
-                    {/* Real app screen */}
-                    <img
-                      src="/hero-app-screen.png"
-                      alt={t.hero.phone.screenAlt}
-                      className="block w-full h-auto"
-                    />
+                    {/* Real app screen, links to the App Store */}
+                    <a href={APP_STORE_URL} onClick={() => trackAppStoreClick('hero_phone')} className="block">
+                      <img
+                        src="/hero-app-screen.png"
+                        alt={t.hero.phone.screenAlt}
+                        className="block w-full h-auto"
+                      />
+                    </a>
                   </TiltCard>
 
                   {/* Floating cards */}

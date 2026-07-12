@@ -191,7 +191,7 @@ export default function TaskSplitterTool() {
                         : 'bg-sage/15 text-sage-dark'
                   }`}
                 >
-                  {result.urgency} urgency
+                  {result.urgency.charAt(0).toUpperCase() + result.urgency.slice(1)} urgency
                 </span>
               )}
             </div>
