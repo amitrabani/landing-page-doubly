@@ -2,12 +2,14 @@ const en = {
   // Shared
   common: {
     tryInDoubly: 'Try it in Doubly',
+    changeLanguage: 'Change language',
     socialProof: (count: number) => `Join ${count.toLocaleString('en-US')} ADHDers`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Tools',
     howItWorks: 'How it works',
     features: 'Features',
     testimonials: 'Testimonials',
@@ -45,6 +47,7 @@ const en = {
   // Problem
   problem: {
     title: "ADHD isn\u2019t just being unorganized",
+    titleHighlight: 'unorganized',
     subtitle:
       "It\u2019s a daily battle with a brain that won\u2019t cooperate with your own intentions.",
     cards: [
@@ -105,6 +108,8 @@ const en = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Dump the chaos. Keep the tasks.',
+    titleHighlight: 'Keep the tasks.',
+    replayDemo: 'Replay demo',
     subtitle:
       'Brain full? Type for 20 seconds. Doubly pulls out the actionable stuff and throws away the noise.',
     dumpText:
@@ -126,6 +131,7 @@ const en = {
   // Plan (How it works)
   plan: {
     title: "Here\u2019s how you get unstuck",
+    titleHighlight: 'unstuck',
     subtitle: 'Four simple steps. No complex setup. No learning curve.',
     stepLabel: 'STEP',
     steps: [
@@ -155,6 +161,7 @@ const en = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Type a task. Watch it split.',
+    titleHighlight: 'split.',
     subtitle:
       'Big tasks feel impossible. Doubly breaks them into 2–5 minute steps so you can just start.',
     customInputPlaceholder: 'Or type your own task...',
@@ -257,6 +264,7 @@ const en = {
   // TwoQuestions
   twoQuestions: {
     title: 'Does this feel familiar?',
+    titleHighlight: 'familiar?',
     subtitle: "You\u2019re not lazy. Your brain just needs a different starting point.",
     withoutDoubly: 'Without Doubly',
     withDoubly: 'With Doubly',
@@ -355,6 +363,7 @@ const en = {
   // Success
   success: {
     title: 'Swap doomscrolling for a feed that gets you moving.',
+    imageAlt: 'Doubly app post detail showing a completed task with community reactions and comments',
     subtitle: 'Swap doomscrolling for a feed that gets you moving.',
     outcomes: [
       'Start tasks without the mental fight',
@@ -395,6 +404,15 @@ const en = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Free ADHD tools you can use right now',
+    subtitle: 'No signup, no popups. Open one in your browser the moment you’re stuck.',
+    hot: 'Hot',
+    openTool: 'Open tool',
+    browseAll: 'Browse all free ADHD tools',
+  },
+
   faq: {
     title: 'Questions',
     items: [
@@ -436,6 +454,9 @@ const en = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Free ADHD tools',
+    tools: 'Tools',
+    learn: 'Learn',
     privacy: 'Privacy',
     terms: 'Terms',
     support: 'Support',

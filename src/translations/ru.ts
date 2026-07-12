@@ -2,12 +2,14 @@ const ru = {
   // Shared
   common: {
     tryInDoubly: 'Попробуйте в Doubly',
+    changeLanguage: 'Сменить язык',
     socialProof: (count: number) => `К нам присоединились ${count.toLocaleString('ru-RU')} людей с СДВГ`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Инструменты',
     howItWorks: 'Как это работает',
     features: 'Возможности',
     testimonials: 'Отзывы',
@@ -45,6 +47,7 @@ const ru = {
   // Problem
   problem: {
     title: 'СДВГ не сводится к неорганизованности',
+    titleHighlight: 'неорганизованности',
     subtitle:
       'Это ежедневная борьба с мозгом, который отказывается сотрудничать с вашими же намерениями.',
     cards: [
@@ -105,6 +108,8 @@ const ru = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Выгрузите хаос. Оставьте задачи.',
+    titleHighlight: 'Оставьте задачи.',
+    replayDemo: 'Повторить демо',
     subtitle:
       'Голова переполнена? Печатайте 20 секунд. Doubly вытащит конкретные дела и отбросит лишнее.',
     dumpText:
@@ -126,6 +131,7 @@ const ru = {
   // Plan (How it works)
   plan: {
     title: 'Вот как вы сдвинетесь с места',
+    titleHighlight: 'сдвинетесь с места',
     subtitle: 'Четыре простых шага. Никаких сложных настроек. Ничему не надо учиться.',
     stepLabel: 'ШАГ',
     steps: [
@@ -155,6 +161,7 @@ const ru = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Введите задачу. Смотрите, как она разбивается.',
+    titleHighlight: 'разбивается.',
     subtitle:
       'Большие задачи кажутся неподъёмными. Doubly разбивает их на шаги по 2–5 минут, чтобы вы могли просто начать.',
     customInputPlaceholder: 'Или введите свою задачу...',
@@ -257,6 +264,7 @@ const ru = {
   // TwoQuestions
   twoQuestions: {
     title: 'Знакомо?',
+    titleHighlight: 'Знакомо?',
     subtitle: 'Вы не ленивы. Вашему мозгу просто нужна другая точка старта.',
     withoutDoubly: 'Без Doubly',
     withDoubly: 'С Doubly',
@@ -355,6 +363,7 @@ const ru = {
   // Success
   success: {
     title: 'Смените бесконечную ленту на ту, что подталкивает к действию.',
+    imageAlt: 'Пост в Doubly с выполненной задачей, реакциями и комментариями сообщества',
     subtitle: 'Смените бесконечную ленту на ту, что подталкивает к действию.',
     outcomes: [
       'Начинать задачи без внутренней борьбы',
@@ -395,6 +404,15 @@ const ru = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Бесплатные инструменты для СДВГ, которыми можно пользоваться прямо сейчас',
+    subtitle: 'Без регистрации и всплывающих окон. Откройте инструмент в браузере, как только застряли.',
+    hot: 'Хит',
+    openTool: 'Открыть инструмент',
+    browseAll: 'Все бесплатные инструменты для СДВГ',
+  },
+
   faq: {
     title: 'Вопросы',
     items: [
@@ -436,6 +454,9 @@ const ru = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Бесплатные инструменты для СДВГ',
+    tools: 'Инструменты',
+    learn: 'Материалы',
     privacy: 'Конфиденциальность',
     terms: 'Условия',
     support: 'Поддержка',

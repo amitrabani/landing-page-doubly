@@ -2,12 +2,14 @@ const ja = {
   // Shared
   common: {
     tryInDoubly: 'Doublyで試す',
+    changeLanguage: '言語を変更',
     socialProof: (count: number) => `${count.toLocaleString('ja-JP')}人のADHD仲間と一緒に始めよう`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'ツール',
     howItWorks: '使い方',
     features: '特徴',
     testimonials: 'レビュー',
@@ -45,6 +47,7 @@ const ja = {
   // Problem
   problem: {
     title: 'ADHDは、ただ整理整頓が苦手なだけではありません',
+    titleHighlight: '整理整頓が苦手',
     subtitle:
       'それは、自分の意図に協力してくれない脳との、毎日の戦いです。',
     cards: [
@@ -105,6 +108,8 @@ const ja = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: '混乱を吐き出す。タスクだけ残す。',
+    titleHighlight: 'タスクだけ残す。',
+    replayDemo: 'デモをもう一度再生',
     subtitle:
       '頭がいっぱい？20秒だけ打ち込んでみて。Doublyが実行できることだけ取り出して、ノイズは捨ててくれます。',
     dumpText:
@@ -126,6 +131,7 @@ const ja = {
   // Plan (How it works)
   plan: {
     title: '行き詰まりから抜け出す方法',
+    titleHighlight: '抜け出す',
     subtitle: 'シンプルな4つのステップ。複雑な設定なし。学習の手間もなし。',
     stepLabel: 'ステップ',
     steps: [
@@ -155,6 +161,7 @@ const ja = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'タスクを入力。分解される様子を見よう。',
+    titleHighlight: '分解される',
     subtitle:
       '大きなタスクは、不可能に感じる。Doublyはそれを2〜5分のステップに分解するから、すぐに始められます。',
     customInputPlaceholder: 'または自分のタスクを入力...',
@@ -257,6 +264,7 @@ const ja = {
   // TwoQuestions
   twoQuestions: {
     title: '心当たり、ありませんか？',
+    titleHighlight: '心当たり',
     subtitle: 'あなたは怠けているのではありません。あなたの脳は、ただ違う始め方を必要としているだけです。',
     withoutDoubly: 'Doublyがないとき',
     withDoubly: 'Doublyがあれば',
@@ -355,6 +363,7 @@ const ja = {
   // Success
   success: {
     title: 'ダラダラ見るスクロールを、あなたを動かすフィードに変えよう。',
+    imageAlt: '完了したタスクとコミュニティのリアクションやコメントが表示されたDoublyアプリの投稿詳細',
     subtitle: 'ダラダラ見るスクロールを、あなたを動かすフィードに変えよう。',
     outcomes: [
       '心の中の葛藤なしにタスクを始める',
@@ -395,6 +404,15 @@ const ja = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: '今すぐ使える無料のADHDツール',
+    subtitle: '登録もポップアップも不要。行き詰まったらすぐブラウザで開けます。',
+    hot: '人気',
+    openTool: 'ツールを開く',
+    browseAll: '無料のADHDツールをすべて見る',
+  },
+
   faq: {
     title: 'よくある質問',
     items: [
@@ -436,6 +454,9 @@ const ja = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: '無料のADHDツール',
+    tools: 'ツール',
+    learn: '学ぶ',
     privacy: 'プライバシー',
     terms: '利用規約',
     support: 'サポート',

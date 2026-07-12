@@ -139,7 +139,7 @@ export default function Hero() {
             {/* Copy side */}
             <motion.div
               style={reduced ? undefined : { opacity: copyOpacity }}
-              className="flex-1 text-center lg:text-left"
+              className="flex-1 text-center lg:text-start"
             >
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

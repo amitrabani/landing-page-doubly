@@ -19,11 +19,14 @@ import SmoothScroll from '@/components/motion/SmoothScroll';
 import ScrollProgress from '@/components/motion/ScrollProgress';
 import Preloader from '@/components/motion/Preloader';
 import CustomCursor from '@/components/motion/CustomCursor';
+import { defaultLocale, type Locale } from '@/i18n/config';
 
 // The full marketing homepage. Rendered by both the default-locale route
 // ((main)/page.tsx) and the localized route ([locale]/page.tsx); the active
 // language is supplied by the TranslationProvider in each tree's root layout.
-export default function HomePage() {
+// `locale` is threaded to the server-rendered sections (ToolsSection) that
+// can't read the client-side provider.
+export default function HomePage({ locale = defaultLocale }: { locale?: Locale }) {
   return (
     <>
       <Preloader />
@@ -43,7 +46,7 @@ export default function HomePage() {
         <Success />
         <Stakes />
         <Testimonials />
-        <ToolsSection />
+        <ToolsSection locale={locale} />
         <FAQ />
         <FinalCTA />
       </main>

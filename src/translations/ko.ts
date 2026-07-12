@@ -2,12 +2,14 @@ const ko = {
   // Shared
   common: {
     tryInDoubly: 'Doubly로 해보기',
+    changeLanguage: '언어 변경',
     socialProof: (count: number) => `ADHD를 가진 ${count.toLocaleString('ko-KR')}명과 함께하세요`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: '도구',
     howItWorks: '작동 방식',
     features: '기능',
     testimonials: '후기',
@@ -45,6 +47,7 @@ const ko = {
   // Problem
   problem: {
     title: 'ADHD는 단순히 정리를 못하는 게 아니에요',
+    titleHighlight: '정리를 못하는',
     subtitle:
       '내 의도대로 움직여 주지 않는 뇌와 매일 벌이는 싸움이에요.',
     cards: [
@@ -105,6 +108,8 @@ const ko = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: '혼란은 쏟아내고, 할 일만 남기세요.',
+    titleHighlight: '할 일만 남기세요.',
+    replayDemo: '데모 다시 보기',
     subtitle:
       '머릿속이 꽉 찼나요? 20초만 적어보세요. Doubly가 실행할 수 있는 것만 뽑아내고 나머지 잡음은 버려요.',
     dumpText:
@@ -126,6 +131,7 @@ const ko = {
   // Plan (How it works)
   plan: {
     title: '막힌 걸 푸는 방법은 이래요',
+    titleHighlight: '막힌 걸 푸는',
     subtitle: '간단한 네 단계. 복잡한 설정도, 배울 것도 없어요.',
     stepLabel: '단계',
     steps: [
@@ -155,6 +161,7 @@ const ko = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: '할 일을 입력하고, 쪼개지는 걸 보세요.',
+    titleHighlight: '쪼개지는 걸 보세요.',
     subtitle:
       '큰 일은 불가능하게 느껴지죠. Doubly가 2~5분짜리 단계로 쪼개줘서 그냥 시작할 수 있어요.',
     customInputPlaceholder: '아니면 직접 할 일을 입력하세요...',
@@ -257,6 +264,7 @@ const ko = {
   // TwoQuestions
   twoQuestions: {
     title: '이거, 익숙한가요?',
+    titleHighlight: '익숙한가요?',
     subtitle: '당신은 게으른 게 아니에요. 뇌가 그저 다른 출발점이 필요할 뿐이에요.',
     withoutDoubly: 'Doubly 없이',
     withDoubly: 'Doubly와 함께',
@@ -355,6 +363,7 @@ const ko = {
   // Success
   success: {
     title: '끝없는 스크롤 대신, 당신을 움직이게 하는 피드로 바꾸세요.',
+    imageAlt: '완료된 할 일과 커뮤니티의 반응과 댓글이 표시된 Doubly 앱 게시물 상세 화면',
     subtitle: '끝없는 스크롤 대신, 당신을 움직이게 하는 피드로 바꾸세요.',
     outcomes: [
       '머릿속 싸움 없이 할 일을 시작해요',
@@ -395,6 +404,15 @@ const ko = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: '지금 바로 쓸 수 있는 무료 ADHD 도구',
+    subtitle: '가입도 팝업도 없어요. 막히는 순간 브라우저에서 바로 열어보세요.',
+    hot: '인기',
+    openTool: '도구 열기',
+    browseAll: '무료 ADHD 도구 모두 보기',
+  },
+
   faq: {
     title: '자주 묻는 질문',
     items: [
@@ -436,6 +454,9 @@ const ko = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: '무료 ADHD 도구',
+    tools: '도구',
+    learn: '알아보기',
     privacy: '개인정보처리방침',
     terms: '이용약관',
     support: '고객지원',

@@ -121,7 +121,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-8">
             <Link href="/tools" className="text-sm text-muted hover:text-charcoal transition-colors">
-              Tools
+              {t.navbar.tools}
             </Link>
             {desktopLinks.map(({ id, label }) => (
               <Link
@@ -196,7 +196,7 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="text-xl font-medium text-charcoal"
                 >
-                  Tools
+                  {t.navbar.tools}
                 </Link>
               </motion.div>
               {desktopLinks.map(({ id, label }) => (

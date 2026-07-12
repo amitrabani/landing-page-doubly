@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { locales, localeNames, defaultLocale, type Locale } from '@/i18n/config';
-import { useLocale } from '@/i18n/TranslationProvider';
+import { useLocale, useT } from '@/i18n/TranslationProvider';
 
 function homePath(locale: Locale): string {
   return locale === defaultLocale ? '/' : `/${locale}`;
@@ -14,6 +14,7 @@ function homePath(locale: Locale): string {
 // by a different root layout with its own <html lang/dir>.
 export default function LanguageSwitcher({ className = '' }: { className?: string }) {
   const current = useLocale();
+  const t = useT();
   const reduced = useReducedMotion();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -49,7 +50,7 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label="Change language"
+        aria-label={t.common.changeLanguage}
         className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/10 px-3 py-1.5 text-sm text-charcoal hover:border-charcoal/25 transition-colors"
       >
         <svg
@@ -85,7 +86,7 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
                 <button
                   type="button"
                   onClick={() => choose(locale)}
-                  className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm transition-colors ${
+                  className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-start text-sm transition-colors ${
                     locale === current
                       ? 'bg-lavender-light/30 text-charcoal font-medium'
                       : 'text-charcoal-light hover:bg-warm/60'

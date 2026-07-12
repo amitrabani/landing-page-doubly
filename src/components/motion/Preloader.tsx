@@ -88,7 +88,7 @@ export default function Preloader() {
             {/* Progress line */}
             <div className="mt-7 h-px w-44 overflow-hidden rounded-full bg-charcoal/10">
               <motion.div
-                className="h-full origin-left bg-gradient-to-r from-lavender via-coral-light to-sage"
+                className="h-full origin-left rtl:origin-right bg-gradient-to-r from-lavender via-coral-light to-sage"
                 style={{ scaleX: count / 100 }}
               />
             </div>

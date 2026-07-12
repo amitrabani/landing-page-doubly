@@ -28,11 +28,13 @@ const BORDER_BREATHE = [BORDER_BASE, 'rgba(184, 169, 212, 0.4)', BORDER_BASE];
 
 type Flight = { key: string; fromX: number; fromY: number; toX: number; toY: number };
 
-// Precompute character ranges for each task phrase in the dump text
+// Precompute character ranges for each task phrase in the dump text.
+// Both sides are lowercased: languages that capitalize mid-sentence nouns
+// (German) would otherwise never match against the lowercased dump text.
 function computeRanges(dumpText: string, phraseTasks: readonly { phrase: string }[]) {
   const lower = dumpText.toLowerCase();
   return phraseTasks.map((task) => {
-    const start = lower.indexOf(task.phrase);
+    const start = lower.indexOf(task.phrase.toLowerCase());
     // A phrase that isn't in the dump text must never reveal. Park it past the
     // end so `typedLength >= end` can't fire (the old -1 start revealed at char 13).
     if (start === -1) {
@@ -217,7 +219,7 @@ export default function BrainDumpDemo() {
           <WordReveal
             as="h2"
             text={t.brainDumpDemo.title}
-            highlight="Keep the tasks."
+            highlight={t.brainDumpDemo.titleHighlight}
             highlightClassName="text-lavender-dark"
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight tracking-tight"
           />
@@ -277,14 +279,14 @@ export default function BrainDumpDemo() {
                     <motion.button
                       type="button"
                       onClick={handleReplay}
-                      aria-label="Replay demo"
+                      aria-label={t.brainDumpDemo.replayDemo}
                       initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
                       animate={{ opacity: 1, scale: 1, rotate: 0 }}
                       exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.15 } }}
                       transition={SPRING}
                       whileHover={{ rotate: -30, scale: 1.08 }}
                       whileTap={{ scale: 0.9 }}
-                      className="ml-auto w-8 h-8 rounded-full bg-lavender-light/30 text-lavender-dark flex items-center justify-center hover:bg-lavender-light/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50"
+                      className="ms-auto w-8 h-8 rounded-full bg-lavender-light/30 text-lavender-dark flex items-center justify-center hover:bg-lavender-light/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50"
                     >
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                         <path d="M23 4v6h-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -326,7 +328,7 @@ export default function BrainDumpDemo() {
                     ),
                   )}
                   {!done && (
-                    <span className="inline-block w-0.5 h-4 bg-lavender ml-0.5 animate-pulse align-text-bottom" />
+                    <span className="inline-block w-0.5 h-4 bg-lavender ms-0.5 animate-pulse align-text-bottom" />
                   )}
                 </p>
               </div>

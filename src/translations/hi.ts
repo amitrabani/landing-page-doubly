@@ -2,12 +2,14 @@ const hi = {
   // Shared
   common: {
     tryInDoubly: 'Doubly में आज़माएँ',
+    changeLanguage: 'भाषा बदलें',
     socialProof: (count: number) => `${count.toLocaleString('hi-IN')} ADHDers के साथ जुड़ें`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'टूल',
     howItWorks: 'यह कैसे काम करता है',
     features: 'फ़ीचर्स',
     testimonials: 'समीक्षाएँ',
@@ -45,6 +47,7 @@ const hi = {
   // Problem
   problem: {
     title: 'ADHD सिर्फ़ अव्यवस्थित होना नहीं है',
+    titleHighlight: 'अव्यवस्थित',
     subtitle:
       'यह एक ऐसे दिमाग़ के साथ रोज़ाना की लड़ाई है जो आपके अपने इरादों का साथ नहीं देता।',
     cards: [
@@ -105,6 +108,8 @@ const hi = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'अफ़रा-तफ़री बाहर निकालें। काम रख लें।',
+    titleHighlight: 'काम रख लें।',
+    replayDemo: 'डेमो फिर से चलाएँ',
     subtitle:
       'दिमाग़ भरा हुआ है? 20 सेकंड टाइप करें। Doubly करने लायक चीज़ें निकाल लेता है और शोर फेंक देता है।',
     dumpText:
@@ -126,6 +131,7 @@ const hi = {
   // Plan (How it works)
   plan: {
     title: 'अटकन से बाहर निकलने का तरीका यह है',
+    titleHighlight: 'अटकन से बाहर निकलने',
     subtitle: 'चार आसान कदम। कोई जटिल सेटअप नहीं। कुछ सीखने की झंझट नहीं।',
     stepLabel: 'कदम',
     steps: [
@@ -155,6 +161,7 @@ const hi = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'कोई काम टाइप करें। उसे बँटते देखें।',
+    titleHighlight: 'बँटते देखें।',
     subtitle:
       'बड़े काम नामुमकिन लगते हैं। Doubly उन्हें 2–5 मिनट के कदमों में बाँट देता है ताकि आप बस शुरू कर सकें।',
     customInputPlaceholder: 'या अपना कोई काम टाइप करें...',
@@ -257,6 +264,7 @@ const hi = {
   // TwoQuestions
   twoQuestions: {
     title: 'क्या यह जाना-पहचाना लगता है?',
+    titleHighlight: 'जाना-पहचाना',
     subtitle: 'आप आलसी नहीं हैं। आपके दिमाग़ को बस एक अलग शुरुआती बिंदु चाहिए।',
     withoutDoubly: 'Doubly के बिना',
     withDoubly: 'Doubly के साथ',
@@ -355,6 +363,7 @@ const hi = {
   // Success
   success: {
     title: 'डूमस्क्रोलिंग की जगह ऐसी फ़ीड चुनें जो आपको चलने पर मजबूर कर दे।',
+    imageAlt: 'Doubly ऐप की पोस्ट जिसमें पूरा हुआ काम और कम्युनिटी की प्रतिक्रियाएँ व टिप्पणियाँ दिख रही हैं',
     subtitle: 'डूमस्क्रोलिंग की जगह ऐसी फ़ीड चुनें जो आपको चलने पर मजबूर कर दे।',
     outcomes: [
       'दिमाग़ी जद्दोजहद के बिना काम शुरू करें',
@@ -395,6 +404,15 @@ const hi = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'मुफ़्त ADHD टूल जिन्हें आप अभी इस्तेमाल कर सकते हैं',
+    subtitle: 'न साइन-अप, न पॉप-अप। जब भी अटकें, ब्राउज़र में कोई टूल खोल लें।',
+    hot: 'लोकप्रिय',
+    openTool: 'टूल खोलें',
+    browseAll: 'सभी मुफ़्त ADHD टूल देखें',
+  },
+
   faq: {
     title: 'सवाल',
     items: [
@@ -436,6 +454,9 @@ const hi = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'मुफ़्त ADHD टूल',
+    tools: 'टूल',
+    learn: 'सीखें',
     privacy: 'गोपनीयता',
     terms: 'शर्तें',
     support: 'सहायता',

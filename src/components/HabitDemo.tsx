@@ -260,7 +260,7 @@ export default function HabitDemo() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3, delay: idx * 0.06 }}
                       onClick={() => toggleHabit(habit)}
-                      className={`w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-left transition-all ${
+                      className={`w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-start transition-all ${
                         isDone
                           ? `${habit.colorBg} border ${isSelected ? 'border-charcoal/15' : 'border-transparent'}`
                           : `bg-cream border ${isSelected ? 'border-charcoal/15' : 'border-charcoal/5'} hover:border-lavender/20`
@@ -308,7 +308,7 @@ export default function HabitDemo() {
                           {habit.name}
                           <motion.span
                             aria-hidden
-                            className="absolute left-0 top-1/2 h-[1.5px] w-full origin-left bg-charcoal/40"
+                            className="absolute start-0 top-1/2 h-[1.5px] w-full origin-left rtl:origin-right bg-charcoal/40"
                             initial={false}
                             animate={{ scaleX: isDone ? 1 : 0 }}
                             transition={{ duration: 0.35, ease: EASE }}

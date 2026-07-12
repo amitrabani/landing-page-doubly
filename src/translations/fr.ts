@@ -2,12 +2,14 @@ const fr = {
   // Shared
   common: {
     tryInDoubly: 'Essaie-le dans Doubly',
+    changeLanguage: 'Changer de langue',
     socialProof: (count: number) => `Rejoins ${count.toLocaleString('fr-FR')} personnes TDAH`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Outils',
     howItWorks: 'Comment ça marche',
     features: 'Fonctionnalités',
     testimonials: 'Témoignages',
@@ -46,6 +48,7 @@ const fr = {
   // Problem
   problem: {
     title: 'Le TDAH, ce n’est pas juste être désorganisé',
+    titleHighlight: 'désorganisé',
     subtitle:
       'C’est un combat quotidien avec un cerveau qui refuse de coopérer avec tes propres intentions.',
     cards: [
@@ -118,6 +121,8 @@ const fr = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Vide le chaos. Garde les tâches.',
+    titleHighlight: 'Garde les tâches.',
+    replayDemo: 'Rejouer la démo',
     subtitle:
       'Cerveau plein ? Écris pendant 20 secondes. Doubly en extrait le concret et jette le bruit.',
     dumpText:
@@ -139,6 +144,7 @@ const fr = {
   // Plan (How it works)
   plan: {
     title: 'Voici comment tu te débloques',
+    titleHighlight: 'te débloques',
     subtitle: 'Quatre étapes simples. Aucune configuration compliquée. Aucune courbe d’apprentissage.',
     stepLabel: 'ÉTAPE',
     steps: [
@@ -168,6 +174,7 @@ const fr = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Écris une tâche. Regarde-la se découper.',
+    titleHighlight: 'se découper.',
     subtitle:
       'Les grosses tâches semblent impossibles. Doubly les découpe en étapes de 2 à 5 minutes pour que tu puisses simplement commencer.',
     customInputPlaceholder: 'Ou écris ta propre tâche...',
@@ -270,6 +277,7 @@ const fr = {
   // TwoQuestions
   twoQuestions: {
     title: 'Ça te parle ?',
+    titleHighlight: 'te parle',
     subtitle: 'Tu n’es pas paresseux. Ton cerveau a juste besoin d’un point de départ différent.',
     withoutDoubly: 'Sans Doubly',
     withDoubly: 'Avec Doubly',
@@ -368,6 +376,7 @@ const fr = {
   // Success
   success: {
     title: 'Troque le doomscrolling contre un fil qui te met en mouvement.',
+    imageAlt: 'Détail d’une publication Doubly montrant une tâche terminée avec des réactions et des commentaires de la communauté',
     subtitle: 'Troque le doomscrolling contre un fil qui te met en mouvement.',
     outcomes: [
       'Commencer des tâches sans le combat mental',
@@ -408,6 +417,15 @@ const fr = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Des outils TDAH gratuits à utiliser dès maintenant',
+    subtitle: 'Pas d’inscription, pas de pop-ups. Ouvres-en un dans ton navigateur dès que tu bloques.',
+    hot: 'Populaire',
+    openTool: 'Ouvrir l’outil',
+    browseAll: 'Voir tous les outils TDAH gratuits',
+  },
+
   faq: {
     title: 'Questions',
     items: [
@@ -449,6 +467,9 @@ const fr = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Outils TDAH gratuits',
+    tools: 'Outils',
+    learn: 'Ressources',
     privacy: 'Confidentialité',
     terms: 'Conditions',
     support: 'Assistance',

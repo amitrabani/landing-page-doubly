@@ -21,7 +21,7 @@ export default function VisualProblem() {
             text={t.problem.title}
             as="h2"
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
-            highlight="unorganized"
+            highlight={t.problem.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
         </div>

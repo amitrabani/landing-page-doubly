@@ -2,12 +2,14 @@ const ar = {
   // Shared
   common: {
     tryInDoubly: 'جرّبه في Doubly',
+    changeLanguage: 'تغيير اللغة',
     socialProof: (count: number) => `انضم إلى ${count.toLocaleString('ar')} من أصحاب ADHD`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'الأدوات',
     howItWorks: 'كيف يعمل',
     features: 'المميزات',
     testimonials: 'آراء المستخدمين',
@@ -45,6 +47,7 @@ const ar = {
   // Problem
   problem: {
     title: 'ADHD ليس مجرّد فوضى في التنظيم',
+    titleHighlight: 'فوضى في التنظيم',
     subtitle:
       'إنه صراع يومي مع عقل لا يتعاون مع نواياك الخاصة.',
     cards: [
@@ -105,6 +108,8 @@ const ar = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'فرّغ الفوضى. احتفظ بالمهام.',
+    titleHighlight: 'احتفظ بالمهام.',
+    replayDemo: 'أعد تشغيل العرض',
     subtitle:
       'عقلك ممتلئ؟ اكتب لمدة 20 ثانية. يستخرج Doubly ما يمكن تنفيذه ويتخلّص من الضجيج.',
     dumpText:
@@ -126,6 +131,7 @@ const ar = {
   // Plan (How it works)
   plan: {
     title: 'إليك كيف تتخلّص من التعثّر',
+    titleHighlight: 'تتخلّص من التعثّر',
     subtitle: 'أربع خطوات بسيطة. لا إعداد معقّد. لا منحنى تعلّم.',
     stepLabel: 'خطوة',
     steps: [
@@ -155,6 +161,7 @@ const ar = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'اكتب مهمة. وشاهدها تنقسم.',
+    titleHighlight: 'تنقسم.',
     subtitle:
       'المهام الكبيرة تبدو مستحيلة. يقسّمها Doubly إلى خطوات من 2–5 دقائق لتتمكّن من البدء فحسب.',
     customInputPlaceholder: 'أو اكتب مهمتك الخاصة...',
@@ -257,6 +264,7 @@ const ar = {
   // TwoQuestions
   twoQuestions: {
     title: 'هل يبدو هذا مألوفاً؟',
+    titleHighlight: 'مألوفاً؟',
     subtitle: 'أنت لست كسولاً. عقلك يحتاج فقط إلى نقطة بداية مختلفة.',
     withoutDoubly: 'بدون Doubly',
     withDoubly: 'مع Doubly',
@@ -355,6 +363,7 @@ const ar = {
   // Success
   success: {
     title: 'استبدل التصفّح السلبي بموجز يدفعك للتحرّك.',
+    imageAlt: 'تفاصيل منشور في تطبيق Doubly تعرض مهمة مكتملة مع تفاعلات وتعليقات المجتمع',
     subtitle: 'استبدل التصفّح السلبي بموجز يدفعك للتحرّك.',
     outcomes: [
       'ابدأ المهام دون صراع ذهني',
@@ -395,6 +404,15 @@ const ar = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'أدوات ADHD مجانية يمكنك استخدامها الآن',
+    subtitle: 'بدون تسجيل وبدون نوافذ منبثقة. افتح أداة في متصفّحك لحظة شعورك بالتعثّر.',
+    hot: 'رائج',
+    openTool: 'افتح الأداة',
+    browseAll: 'تصفّح كل أدوات ADHD المجانية',
+  },
+
   faq: {
     title: 'الأسئلة',
     items: [
@@ -436,6 +454,9 @@ const ar = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'أدوات ADHD مجانية',
+    tools: 'الأدوات',
+    learn: 'تعلّم',
     privacy: 'الخصوصية',
     terms: 'الشروط',
     support: 'الدعم',

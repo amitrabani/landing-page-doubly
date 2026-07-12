@@ -32,10 +32,10 @@ function FAQItem({ faq }: { faq: { q: string; a: string } }) {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-6 text-left group"
+        className="w-full flex items-center justify-between py-6 text-start group"
         aria-expanded={open}
       >
-        <span className="font-[family-name:var(--font-display)] text-base sm:text-lg font-medium text-charcoal pr-8 group-hover:text-lavender-dark transition-colors">
+        <span className="font-[family-name:var(--font-display)] text-base sm:text-lg font-medium text-charcoal pe-8 group-hover:text-lavender-dark transition-colors">
           {faq.q}
         </span>
         <motion.div

@@ -138,7 +138,7 @@ export default function TaskSplitDemo() {
             text={t.taskSplitDemo.title}
             as="h2"
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
-            highlight="split."
+            highlight={t.taskSplitDemo.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
           <motion.p {...fadeRise(0.2, 16)} className="mt-4 text-muted text-lg max-w-xl mx-auto">
@@ -168,7 +168,7 @@ export default function TaskSplitDemo() {
                     : 'bg-white/80 text-charcoal-light border border-charcoal/8 hover:border-lavender/30 hover:bg-lavender-light/10'
                 }`}
               >
-                <span className="mr-1.5">{p.icon}</span>
+                <span className="me-1.5">{p.icon}</span>
                 {p.label}
               </motion.button>
             </motion.div>
@@ -335,19 +335,18 @@ export default function TaskSplitDemo() {
                       {/* Progress bar fills as steps get checked */}
                       <div className="h-1 rounded-full bg-charcoal/5 overflow-hidden mb-4">
                         <motion.div
-                          className="h-full rounded-full bg-sage"
-                          style={{ transformOrigin: 'left' }}
+                          className="h-full rounded-full bg-sage origin-left rtl:origin-right"
                           initial={false}
                           animate={{ scaleX: progress }}
                           transition={reduced ? { duration: 0 } : SPRING_SOFT}
                         />
                       </div>
 
-                      <div className="relative pl-5 flex flex-col gap-2">
+                      <div className="relative ps-5 flex flex-col gap-2">
                         {/* Connector line grows down the left as rows appear */}
                         <motion.div
                           aria-hidden
-                          className="absolute left-[7px] top-3 bottom-3 w-0.5 rounded-full bg-gradient-to-b from-lavender/40 via-sage/40 to-sage/20"
+                          className="absolute start-[7px] top-3 bottom-3 w-0.5 rounded-full bg-gradient-to-b from-lavender/40 via-sage/40 to-sage/20"
                           style={{ transformOrigin: 'top' }}
                           initial={reduced ? false : { scaleY: 0 }}
                           animate={{ scaleY: 1 }}
@@ -369,7 +368,7 @@ export default function TaskSplitDemo() {
                               scale: { ...SPRING_SNAPPY, delay: 0 },
                             }}
                             onClick={() => toggleCheck(idx)}
-                            className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-colors ${
+                            className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-start transition-colors ${
                               checked.has(idx)
                                 ? 'bg-sage/15 border border-sage/20'
                                 : 'bg-cream border border-charcoal/5 hover:border-lavender/20'

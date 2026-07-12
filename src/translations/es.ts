@@ -2,12 +2,14 @@ const es = {
   // Shared
   common: {
     tryInDoubly: 'Pruébalo en Doubly',
+    changeLanguage: 'Cambiar idioma',
     socialProof: (count: number) => `Únete a ${count.toLocaleString('es-ES')} personas con ADHD`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Herramientas',
     howItWorks: 'Cómo funciona',
     features: 'Funciones',
     testimonials: 'Testimonios',
@@ -45,6 +47,7 @@ const es = {
   // Problem
   problem: {
     title: 'El ADHD no es solo ser desorganizado',
+    titleHighlight: 'desorganizado',
     subtitle:
       'Es una batalla diaria con un cerebro que no coopera con tus propias intenciones.',
     cards: [
@@ -105,6 +108,8 @@ const es = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Suelta el caos. Quédate con las tareas.',
+    titleHighlight: 'Quédate con las tareas.',
+    replayDemo: 'Repetir demo',
     subtitle:
       '¿Cabeza llena? Escribe durante 20 segundos. Doubly extrae lo accionable y descarta el ruido.',
     dumpText:
@@ -126,6 +131,7 @@ const es = {
   // Plan (How it works)
   plan: {
     title: 'Así te desbloqueas',
+    titleHighlight: 'te desbloqueas',
     subtitle: 'Cuatro pasos simples. Sin configuración complicada. Sin curva de aprendizaje.',
     stepLabel: 'PASO',
     steps: [
@@ -155,6 +161,7 @@ const es = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Escribe una tarea. Mira cómo se divide.',
+    titleHighlight: 'se divide.',
     subtitle:
       'Las tareas grandes parecen imposibles. Doubly las divide en pasos de 2 a 5 minutos para que simplemente empieces.',
     customInputPlaceholder: 'O escribe tu propia tarea...',
@@ -257,6 +264,7 @@ const es = {
   // TwoQuestions
   twoQuestions: {
     title: '¿Te suena familiar?',
+    titleHighlight: 'familiar?',
     subtitle: 'No eres perezoso. Tu cerebro solo necesita un punto de partida diferente.',
     withoutDoubly: 'Sin Doubly',
     withDoubly: 'Con Doubly',
@@ -355,6 +363,7 @@ const es = {
   // Success
   success: {
     title: 'Cambia el doomscrolling por un feed que te pone en marcha.',
+    imageAlt: 'Detalle de una publicación en Doubly que muestra una tarea completada con reacciones y comentarios de la comunidad',
     subtitle: 'Cambia el doomscrolling por un feed que te pone en marcha.',
     outcomes: [
       'Empezar tareas sin la lucha mental',
@@ -395,6 +404,15 @@ const es = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Herramientas gratis para el ADHD que puedes usar ahora mismo',
+    subtitle: 'Sin registro ni ventanas emergentes. Abre una en tu navegador en cuanto te quedes bloqueado.',
+    hot: 'Popular',
+    openTool: 'Abrir herramienta',
+    browseAll: 'Ver todas las herramientas gratis para el ADHD',
+  },
+
   faq: {
     title: 'Preguntas',
     items: [
@@ -436,6 +454,9 @@ const es = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Herramientas gratis para el ADHD',
+    tools: 'Herramientas',
+    learn: 'Aprender',
     privacy: 'Privacidad',
     terms: 'Términos',
     support: 'Soporte',

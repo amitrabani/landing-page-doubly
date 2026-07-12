@@ -58,7 +58,7 @@ export default function TwoQuestions() {
             text={t.twoQuestions.title}
             as="h2"
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
-            highlight="familiar?"
+            highlight={t.twoQuestions.titleHighlight}
             highlightClassName="text-coral-dark"
           />
           <motion.p {...fadeRise(0.3, 20)} className="mt-4 text-muted text-lg max-w-xl mx-auto">

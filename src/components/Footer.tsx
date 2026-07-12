@@ -8,7 +8,7 @@ import { tools } from '@/lib/tools';
 // CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
 const linkClass =
   'relative text-sm text-muted hover:text-charcoal transition-colors duration-300 ' +
-  'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left ' +
+  'after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left rtl:after:origin-right ' +
   'after:scale-x-0 after:bg-current after:transition-transform after:duration-300 ' +
   'after:ease-out hover:after:scale-x-100';
 
@@ -17,11 +17,11 @@ export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-charcoal/5 bg-gradient-to-b from-cream to-warm">
       <nav
-        aria-label="Free ADHD tools"
+        aria-label={t.footer.freeTools}
         className="mx-auto max-w-6xl mb-10 pb-10 border-b border-charcoal/5"
       >
         <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-light mb-4">
-          Free ADHD tools
+          {t.footer.freeTools}
         </h2>
         <div className="flex flex-wrap gap-x-6 gap-y-3">
           {tools
@@ -44,10 +44,10 @@ export default function Footer() {
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
           <Link href="/tools" className={linkClass}>
-            Tools
+            {t.footer.tools}
           </Link>
           <Link href="/learn" className={linkClass}>
-            Learn
+            {t.footer.learn}
           </Link>
           <Link href="/privacy" className={linkClass}>
             {t.footer.privacy}

@@ -2,12 +2,14 @@ const tr = {
   // Shared
   common: {
     tryInDoubly: 'Doubly\'de dene',
+    changeLanguage: 'Dili değiştir',
     socialProof: (count: number) => `${count.toLocaleString('tr-TR')} ADHD'liye katıl`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Araçlar',
     howItWorks: 'Nasıl çalışır',
     features: 'Özellikler',
     testimonials: 'Yorumlar',
@@ -45,6 +47,7 @@ const tr = {
   // Problem
   problem: {
     title: 'ADHD sadece düzensiz olmak değildir',
+    titleHighlight: 'düzensiz',
     subtitle:
       'Bu, kendi niyetlerinle iş birliği yapmayan bir beyinle verilen günlük bir savaştır.',
     cards: [
@@ -105,6 +108,8 @@ const tr = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Kaosu boşalt. Görevleri sakla.',
+    titleHighlight: 'Görevleri sakla.',
+    replayDemo: 'Demoyu yeniden oynat',
     subtitle:
       'Kafan mı dolu? 20 saniye yaz. Doubly yapılabilir olan şeyleri çıkarır ve gürültüyü çöpe atar.',
     dumpText:
@@ -126,6 +131,7 @@ const tr = {
   // Plan (How it works)
   plan: {
     title: 'İşte takıldığın yerden böyle kurtulursun',
+    titleHighlight: 'kurtulursun',
     subtitle: 'Dört basit adım. Karmaşık kurulum yok. Öğrenme eğrisi yok.',
     stepLabel: 'ADIM',
     steps: [
@@ -155,6 +161,7 @@ const tr = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Bir görev yaz. Bölünüşünü izle.',
+    titleHighlight: 'Bölünüşünü',
     subtitle:
       'Büyük görevler imkansız hissettirir. Doubly onları 2-5 dakikalık adımlara böler, böylece sadece başlayabilirsin.',
     customInputPlaceholder: 'Ya da kendi görevini yaz...',
@@ -257,6 +264,7 @@ const tr = {
   // TwoQuestions
   twoQuestions: {
     title: 'Bu sana tanıdık geliyor mu?',
+    titleHighlight: 'tanıdık geliyor mu?',
     subtitle: 'Tembel değilsin. Beyninin sadece farklı bir başlangıç noktasına ihtiyacı var.',
     withoutDoubly: 'Doubly olmadan',
     withDoubly: 'Doubly ile',
@@ -355,6 +363,7 @@ const tr = {
   // Success
   success: {
     title: 'Amaçsız kaydırma yerine seni harekete geçiren bir akış seç.',
+    imageAlt: 'Doubly\'de tamamlanmış bir görevi, topluluk tepkilerini ve yorumları gösteren gönderi detayı',
     subtitle: 'Amaçsız kaydırma yerine seni harekete geçiren bir akış seç.',
     outcomes: [
       'Zihinsel savaş olmadan görevlere başla',
@@ -395,6 +404,15 @@ const tr = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Hemen kullanabileceğin ücretsiz ADHD araçları',
+    subtitle: 'Kayıt yok, açılır pencere yok. Takıldığın anda tarayıcında birini aç.',
+    hot: 'Popüler',
+    openTool: 'Aracı aç',
+    browseAll: 'Tüm ücretsiz ADHD araçlarına göz at',
+  },
+
   faq: {
     title: 'Sorular',
     items: [
@@ -436,6 +454,9 @@ const tr = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Ücretsiz ADHD araçları',
+    tools: 'Araçlar',
+    learn: 'Öğren',
     privacy: 'Gizlilik',
     terms: 'Koşullar',
     support: 'Destek',

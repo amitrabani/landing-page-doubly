@@ -78,7 +78,7 @@ export default function Success() {
             >
               <img
                 src="/success-social-proof.png"
-                alt="Doubly app post detail showing a completed task with community reactions and comments"
+                alt={t.success.imageAlt}
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </motion.div>

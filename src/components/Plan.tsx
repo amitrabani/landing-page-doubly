@@ -140,7 +140,7 @@ export default function Plan() {
             text={t.plan.title}
             as="h2"
             className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
-            highlight="unstuck"
+            highlight={t.plan.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
           <motion.p {...fadeRise(0.3, 20)} className="mt-4 text-muted text-lg max-w-xl mx-auto">

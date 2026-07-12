@@ -27,6 +27,11 @@ export async function generateMetadata({
   };
 }
 
-export default function LocaleHome() {
-  return <HomePage />;
+export default async function LocaleHome({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  return <HomePage locale={isLocale(locale) ? locale : defaultLocale} />;
 }

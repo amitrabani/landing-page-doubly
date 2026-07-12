@@ -2,12 +2,14 @@ const zhHans = {
   // Shared
   common: {
     tryInDoubly: '在 Doubly 里试试',
+    changeLanguage: '切换语言',
     socialProof: (count: number) => `加入 ${count.toLocaleString('zh-CN')} 位 ADHD 伙伴`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: '工具',
     howItWorks: '如何运作',
     features: '功能',
     testimonials: '用户评价',
@@ -45,6 +47,7 @@ const zhHans = {
   // Problem
   problem: {
     title: 'ADHD 不只是不够有条理',
+    titleHighlight: '不够有条理',
     subtitle:
       '这是一场每天都要打的仗:你的大脑就是不肯配合你自己的意愿。',
     cards: [
@@ -105,6 +108,8 @@ const zhHans = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: '倒出混乱,留下任务。',
+    titleHighlight: '留下任务。',
+    replayDemo: '重新播放演示',
     subtitle:
       '脑子塞满了?打字 20 秒。Doubly 会挑出能落地的事,把噪音丢掉。',
     dumpText:
@@ -126,6 +131,7 @@ const zhHans = {
   // Plan (How it works)
   plan: {
     title: '你就是这样摆脱卡顿的',
+    titleHighlight: '摆脱卡顿',
     subtitle: '四个简单步骤。无需复杂设置。没有学习成本。',
     stepLabel: '步骤',
     steps: [
@@ -155,6 +161,7 @@ const zhHans = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: '输入一个任务,看它被拆开。',
+    titleHighlight: '拆开。',
     subtitle:
       '大任务让人觉得不可能。Doubly 把它们拆成 2 到 5 分钟的小步,让你直接就能开始。',
     customInputPlaceholder: '或者输入你自己的任务……',
@@ -257,6 +264,7 @@ const zhHans = {
   // TwoQuestions
   twoQuestions: {
     title: '这些是不是很眼熟?',
+    titleHighlight: '很眼熟',
     subtitle: '你不是懒。你的大脑只是需要一个不同的起点。',
     withoutDoubly: '没有 Doubly',
     withDoubly: '有了 Doubly',
@@ -355,6 +363,7 @@ const zhHans = {
   // Success
   success: {
     title: '别再刷手机刷到心累,换一个让你动起来的动态。',
+    imageAlt: 'Doubly 应用的帖子详情,显示已完成的任务以及社区的点赞和评论',
     subtitle: '别再刷手机刷到心累,换一个让你动起来的动态。',
     outcomes: [
       '开始任务时不必再和自己较劲',
@@ -395,6 +404,15 @@ const zhHans = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: '现在就能用的免费 ADHD 工具',
+    subtitle: '无需注册,没有弹窗。卡住的那一刻,在浏览器里直接打开一个。',
+    hot: '热门',
+    openTool: '打开工具',
+    browseAll: '浏览所有免费 ADHD 工具',
+  },
+
   faq: {
     title: '常见问题',
     items: [
@@ -436,6 +454,9 @@ const zhHans = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: '免费 ADHD 工具',
+    tools: '工具',
+    learn: '学习资源',
     privacy: '隐私',
     terms: '条款',
     support: '支持',

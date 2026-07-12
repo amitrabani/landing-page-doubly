@@ -2,12 +2,14 @@ const nl = {
   // Shared
   common: {
     tryInDoubly: 'Probeer het in Doubly',
+    changeLanguage: 'Taal wijzigen',
     socialProof: (count: number) => `Sluit je aan bij ${count.toLocaleString('nl-NL')} ADHD'ers`,
   },
 
   // Navbar
   navbar: {
     brand: 'Doubly',
+    tools: 'Tools',
     howItWorks: 'Hoe het werkt',
     features: 'Functies',
     testimonials: 'Ervaringen',
@@ -45,6 +47,7 @@ const nl = {
   // Problem
   problem: {
     title: 'ADHD is niet zomaar ongeorganiseerd zijn',
+    titleHighlight: 'ongeorganiseerd',
     subtitle:
       'Het is een dagelijkse strijd met een brein dat niet wil meewerken aan je eigen bedoelingen.',
     cards: [
@@ -105,6 +108,8 @@ const nl = {
   // BrainDumpDemo
   brainDumpDemo: {
     title: 'Dump de chaos. Houd de taken over.',
+    titleHighlight: 'Houd de taken over.',
+    replayDemo: 'Demo opnieuw afspelen',
     subtitle:
       'Hoofd vol? Typ 20 seconden. Doubly haalt eruit wat je echt kunt doen en gooit de ruis weg.',
     dumpText:
@@ -126,6 +131,7 @@ const nl = {
   // Plan (How it works)
   plan: {
     title: 'Zo kom je weer op gang',
+    titleHighlight: 'weer op gang',
     subtitle: 'Vier simpele stappen. Geen ingewikkelde setup. Geen leercurve.',
     stepLabel: 'STAP',
     steps: [
@@ -155,6 +161,7 @@ const nl = {
   // TaskSplitDemo
   taskSplitDemo: {
     title: 'Typ een taak. Zie hem splitsen.',
+    titleHighlight: 'splitsen.',
     subtitle:
       'Grote taken voelen onmogelijk. Doubly hakt ze in stappen van 2–5 minuten zodat je gewoon kunt beginnen.',
     customInputPlaceholder: 'Of typ je eigen taak...',
@@ -257,6 +264,7 @@ const nl = {
   // TwoQuestions
   twoQuestions: {
     title: 'Komt dit bekend voor?',
+    titleHighlight: 'bekend voor?',
     subtitle: 'Je bent niet lui. Je brein heeft gewoon een ander startpunt nodig.',
     withoutDoubly: 'Zonder Doubly',
     withDoubly: 'Met Doubly',
@@ -355,6 +363,7 @@ const nl = {
   // Success
   success: {
     title: 'Ruil doomscrollen in voor een feed die je in beweging brengt.',
+    imageAlt: 'Doubly-post die een afgeronde taak toont, met reacties en opmerkingen van de community',
     subtitle: 'Ruil doomscrollen in voor een feed die je in beweging brengt.',
     outcomes: [
       'Begin aan taken zonder de mentale strijd',
@@ -395,6 +404,15 @@ const nl = {
   },
 
   // FAQ
+  // ToolsSection
+  toolsSection: {
+    title: 'Gratis ADHD-tools die je meteen kunt gebruiken',
+    subtitle: 'Geen registratie, geen pop-ups. Open er een in je browser zodra je vastloopt.',
+    hot: 'Populair',
+    openTool: 'Tool openen',
+    browseAll: 'Bekijk alle gratis ADHD-tools',
+  },
+
   faq: {
     title: 'Vragen',
     items: [
@@ -436,6 +454,9 @@ const nl = {
   // Footer
   footer: {
     brand: 'Doubly',
+    freeTools: 'Gratis ADHD-tools',
+    tools: 'Tools',
+    learn: 'Leren',
     privacy: 'Privacy',
     terms: 'Voorwaarden',
     support: 'Support',
