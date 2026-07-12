@@ -117,7 +117,7 @@ const en = {
     filterNote: 'Non-actionable thoughts filtered out. Only real tasks kept.',
     tasks: [
       { text: '\ud83d\udc8a Order vitamins', phrase: 'order vitamins' },
-      { text: '\ud83d\udcde Book the dentist', phrase: 'book the dentist' },
+      { text: '\ud83e\uddfd Clean the sink', phrase: 'clean the sink' },
       { text: '\ud83d\udd0c Find the charger', phrase: 'find the charger' },
       { text: '\ud83c\udf7d\ufe0f Eat something', phrase: 'eat something' },
     ],

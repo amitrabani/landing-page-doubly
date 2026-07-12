@@ -36,6 +36,11 @@ function computeRanges() {
   const lower = DUMP_TEXT.toLowerCase();
   return tasks.map((task) => {
     const start = lower.indexOf(task.phrase);
+    // A phrase that isn't in the dump text must never reveal. Park it past the
+    // end so `typedLength >= end` can't fire (the old -1 start revealed at char 13).
+    if (start === -1) {
+      return { start: Infinity, end: Infinity };
+    }
     return { start, end: start + task.phrase.length };
   });
 }
