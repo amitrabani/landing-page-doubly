@@ -381,13 +381,13 @@ const en = {
         quote:
           'This app is the only one that actually got me to do things. I have very strong ADHD, and it made me concentrate on my tasks one by one to always know what’s coming ahead and make order in my day. Love it so much! Hope to see awesome upgrades soon 🙏🏻',
         name: 'Liorcic',
-        label: 'App Store review · Israel',
+        label: 'App Store review',
       },
       {
         quote:
           'This has really helped me manage my workload, I haven’t seen anything like it. The walkthrough and set up is very intuitive, and the features make it worth it!',
         name: 'MinecraftrNinja',
-        label: 'App Store review · United States',
+        label: 'App Store review',
       },
       // Slot 3 — next permitted review goes here.
     ],
