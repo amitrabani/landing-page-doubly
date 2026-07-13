@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Gratis brain dump-tool - Maak je hoofd leeg | Doubly",
+    "description": "Gratis brain dump-tool online. Dump alles wat in je hoofd zit, de AI haalt de bruikbare taken eruit en gooit de rest weg. Geen registratie, voor ADHD-breinen.",
+    "ogTitle": "Gratis brain dump-tool online - Maak je hoofd leeg",
+    "ogDescription": "Dump alles wat in je hoofd zit, de AI haalt de bruikbare taken eruit. Gratis, geen registratie.",
+    "twitterTitle": "Gratis brain dump-tool online",
+    "twitterDescription": "Dump alles wat in je hoofd zit, de AI haalt de bruikbare taken eruit."
+  },
+  "h1": "Gratis brain dump-tool",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Brain dump-tool",
+  "answerCapsule": "**Met een brain dump-tool haal je alles wat in je hoofd zit in één keer op één plek eruit, en daarna haalt hij alleen de bruikbare taken eruit, zodat je iets kunt doen in plaats van te blijven malen.** Typ hierboven vrijuit. De tool leest je dump, negeert emoties en gemopper, en geeft een kort to-dolijstje terug. Gratis, geen registratie, niets wordt opgeslagen.",
+  "intro": "De mentale lus van “er is te veel, ik kan niet beginnen, maar er is te veel” doorbreken is precies de taak van de brain dump. Je schrijft om je hoofd leeg te maken, niet om te plannen. Het plan rolt er aan de andere kant vanzelf uit, als een lijst waar je iets mee kunt.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo doe je online een brain dump",
+      "steps": [
+        {
+          "name": "Typ alles wat in je hoofd zit",
+          "text": "Geen structuur, geen correcties. Taken, zorgen, halve gedachten, klachten, ideeën. Haal het uit je hoofd en zet het op de pagina."
+        },
+        {
+          "name": "Tik op Haal de taken eruit",
+          "text": "De AI leest je dump, negeert de emoties en het gemopper, en geeft alleen de bruikbare taken terug als een kort lijstje."
+        },
+        {
+          "name": "Kies er één",
+          "text": "Slechts één. De kleinste. Vink hem af als hij klaar is."
+        },
+        {
+          "name": "Kom terug wanneer je het nodig hebt",
+          "text": "Morgenochtend, over een uur, of over een week. De tool is er wanneer je hoofd te vol is om iets te doen."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom brain dumps werken voor ADHD-breinen",
+      "paragraphs": [
+        "Volwassenen met ADHD dragen vaak meer in hun werkgeheugen dan het brein aankan. Open lussen, half doordachte taken, dingen die ze wilden zeggen, dingen die ze bijna vergaten. Onderzoekers beschrijven dit als een probleem van werkgeheugenbelasting, niet als een gebrek aan focus. Het brein is druk bezig, alleen niet met wat jij wilt.",
+        "Die gedachten naar een pagina verplaatsen verlaagt de belasting. David Allen noemt dit in “Getting Things Done” het vastleggen van open lussen. Zodra iets op papier staat, stopt het brein met het steeds opnieuw afspelen ervan. Specifiek bij ADHD kan dit het verschil zijn tussen verlamd zijn en kunnen beginnen.",
+        "Wat de tool toevoegt is de tweede stap: alleen de bruikbare taken er weer uithalen, zodat jij je dump niet opnieuw hoeft te lezen en hoeft te beslissen wat meetelde. Organisaties als [CHADD](https://chadd.org/about-adhd/overview/) raden aan om gedachten te externaliseren, als kernstrategie die vriendelijk is voor ADHD."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "faqs": [
+        {
+          "q": "Wat is een brain dump?",
+          "a": "Een brain dump is het opschrijven van alles wat in je hoofd zit op één pagina, zonder het te sorteren of te beoordelen, om je werkgeheugen leeg te maken. Het doel is niet om te ordenen, maar om te externaliseren. Zodra de gedachten eruit zijn, kun je beslissen wat je ermee doet."
+        },
+        {
+          "q": "Hoe verschilt dit van een gewone notitie-app?",
+          "a": "Een notitie-app geeft je een lege pagina. Deze tool leest wat je hebt gedumpt en haalt er alleen de concrete, bruikbare taken uit, en negeert emoties, observaties en gemopper. Je krijgt een kort to-dolijstje zonder er zelf een te schrijven."
+        },
+        {
+          "q": "Is mijn brain dump privé?",
+          "a": "Ja. Je tekst wordt naar onze AI gestuurd om taken eruit te halen en daarna weggegooid. Er wordt niets aan je identiteit gekoppeld opgeslagen, er verlaat niets je browser behalve de aanvraag zelf, en er is geen account."
+        },
+        {
+          "q": "Waarom is een brain dump nuttig bij ADHD?",
+          "a": "Volwassenen met ADHD hebben vaak een werkgeheugen dat vol zit met half afgemaakte gedachten. Die mentale rommel is een vorm van overweldiging op zich. De inhoud eruit halen, ook al is het rommelig, maakt cognitieve ruimte vrij en maakt de bruikbare taken zichtbaar genoeg om er iets mee te doen."
+        },
+        {
+          "q": "Hoe vaak moet ik een brain dump doen?",
+          "a": "Wanneer je hoofd vol voelt en je vastloopt. Sommige mensen doen het één keer per week, anderen elke ochtend, weer anderen alleen als ze overweldigd zijn. Er is geen regel. Het signaal is intern: als het zou helpen, doe het dan."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Zodra je een takenlijst hebt, gebruik dan [kies er één](/tools/pick-one) om één starttaak naar boven te halen, of sorteer de hele lijst met de [ADHD-Eisenhower-matrix](/tools/eisenhower-matrix). Stuur de engste door de [takensplitter](/tools/task-splitter) om hem in kleine stappen op te delen. Time-box de eerste stap met de [ADHD-pomodoro-timer](/tools/pomodoro) of de [visuele timer](/tools/visual-timer). Als alleen beginnen het lastige deel is, open dan een [body doubling-ruimte](/tools/body-doubling-room) en werk naast iemand. Bekijk de [volledige tool-bibliotheek](/tools)."
+  },
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De webtool maakt je hoofd één keer leeg. De Doubly iOS-app onthoudt je dumps, laat de ene taak zien die je als volgende moet doen, en gebruikt verantwoordings-check-ins van echte mensen zodat de lijst niet weer verandert in rommel.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly Brain dump-tool",
+    "appDescription": "Een gratis online brain dump-tool. Typ alles wat in je hoofd zit, de AI haalt de bruikbare taken eruit. Gemaakt voor ADHD-breinen.",
+    "howToName": "Zo gebruik je de brain dump-tool",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

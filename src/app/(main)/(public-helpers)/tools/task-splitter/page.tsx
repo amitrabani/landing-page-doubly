@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../../_components/Breadcrumbs';
 import SoftAppCTA from '../../_components/SoftAppCTA';
@@ -7,13 +10,14 @@ import TaskSplitterTool from './TaskSplitterTool';
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/task-splitter';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const PAGE_SLUG = 'task-splitter';
 const PRIMARY_KEYWORD = 'task breakdown tool';
 
 export const metadata: Metadata = {
   title: 'Free Task Breakdown Tool - Break Down Any Task | Doubly',
   description:
     'Type a task you cannot start. Free AI tool breaks it into small, doable steps with time estimates. No signup, built for ADHD brains.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Free Task Breakdown Tool - Break Down Any Task',
     description:

@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Eisenhower-matrix online (ADHD-editie) | Doubly",
+    "description": "Gratis Eisenhower-matrix online met ADHD-vriendelijke kwadranten zoals \"saai maar belangrijk\", geen schoolboeklabels. Sleep taken, sla lokaal op.",
+    "ogTitle": "Eisenhower-matrix online (ADHD-editie)",
+    "ogDescription": "ADHD-vriendelijke Eisenhower-matrix met kwadranten zoals \"saai maar belangrijk\". Sleep, sla lokaal op, gratis.",
+    "twitterTitle": "Eisenhower-matrix online (ADHD-editie)",
+    "twitterDescription": "ADHD-vriendelijke kwadranten. Sleep taken, sla op in je browser, geen registratie."
+  },
+  "h1": "Eisenhower-matrix online, ADHD-editie",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Eisenhower-matrix online",
+  "answerCapsule": "**Een Eisenhower-matrix sorteert taken op belang en urgentie in vier kwadranten, zodat je ziet wat je moet doen, wat je moet inplannen, wat je kunt negeren en wat je kunt schrappen.** Deze versie ruilt de schoolboeklabels in voor ADHD-vriendelijke, zoals \"saai maar belangrijk\". Sleep of tik om te sorteren. Wordt opgeslagen in je browser.",
+  "intro": "De klassieke matrix stelt bij elke taak twee vragen: is het belangrijk, en is het urgent. ADHD-breinen weten het antwoord vaak wel, maar verstijven bij het sorteren. Door de kwadranten te benoemen naar hoe ze voelen in plaats van naar hun categorie, gaat het sorteren opeens vanzelf.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo gebruik je de matrix",
+      "steps": [
+        {
+          "name": "Gooi je taken erin",
+          "text": "Typ taken één voor één en druk op enter, of plak een lijst met een regel per taak. Ze belanden in de ongesorteerde rij."
+        },
+        {
+          "name": "Sorteer elke taak in een kwadrant",
+          "text": "Op desktop sleep je een taak in een kwadrant. Op mobiel tik je de taak aan om hem te selecteren en tik je daarna op het kwadrant. Wat goed voelt, klopt meestal."
+        },
+        {
+          "name": "Kijk naar de stapel saai-maar-belangrijk",
+          "text": "Dat is de stapel die stilletjes je volgende week bepaalt. Als je vandaag maar op één kwadrant actie onderneemt, kies dan deze."
+        },
+        {
+          "name": "Skip, schrap of plan de rest in",
+          "text": "In brand gaat vandaag. Luidruchtig kan wachten of gedelegeerd worden. Schrappen mag gewoon schrappen zijn. De lijst hoeft niet af."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom een ADHD-invalshoek de matrix verandert",
+      "steps": null,
+      "paragraphs": [
+        "De Eisenhower-matrix is uitstekend in het zichtbaar maken van de taken die mensen stilletjes vermijden, en dat is vaak het belangrijkste wat een prioriteringstool kan doen. De vier standaardlabels (\"Belangrijk + Niet urgent\" enzovoort) kloppen technisch, maar lezen als een quiz. Voor een ADHD-brein dat al worstelt met een belasting van de executieve functies is die quiz nóg een beslissing voordat de taak überhaupt begint.",
+        "De kwadranten hernoemen naar hun emotionele signatuur verandert de startdrempel. \"In brand\" is duidelijk. \"Saai maar belangrijk\" is degene die de meeste mensen overslaan en waarvan ze het meest spijt hebben dat ze hem oversloegen (belastingformulieren, follow-ups, die tandartsafspraak die ze steeds verzetten). \"Luidruchtig maar overslaanbaar\" benoemt de dingen die aandacht opeisen zonder die te verdienen. \"Deze schrappen\" geeft toestemming om te verwijderen, iets wat klassiek productiviteitsadvies zelden hardop zegt.",
+        "De cognitieve belasting verlagen bij het prioriteren is precies het soort ondersteunende structuur dat organisaties als [CHADD](https://chadd.org/about-adhd/overview/) aanraden bij ADHD op volwassen leeftijd. De matrix is in de eerste plaats een denkhulp en pas daarna een tracking-app. Gebruik hem voor een wekelijkse reset, niet als permanente vervanging van je to-dolijst."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Wat is de Eisenhower-matrix?",
+          "a": "De Eisenhower-matrix is een prioriteringstool die taken sorteert op twee vragen: is het belangrijk, en is het urgent. Daar komen vier vakjes uit, van \"doe het nu\" tot \"laat het vallen\". De matrix wordt toegeschreven aan president Dwight Eisenhower en werd bekend door Stephen Covey in The 7 Habits of Highly Effective People."
+        },
+        {
+          "q": "Waarom gebruikt deze versie andere labels?",
+          "a": "De schoolboeknamen voor de kwadranten (\"Belangrijk + Niet urgent\", enz.) beschrijven categorieën, maar zetten ADHD-breinen zelden in beweging. Namen als \"saai maar belangrijk\" en \"luidruchtig maar overslaanbaar\" beschrijven hoe de taak echt voelt, waardoor je ze makkelijker herkent en sorteert. De onderliggende matrix is identiek."
+        },
+        {
+          "q": "Hoe werkt het slepen en neerzetten?",
+          "a": "Op desktop sleep je een taak uit de ongesorteerde rij naar een kwadrant, of tussen kwadranten. Op mobiel tik je een taak aan om hem te selecteren en tik je daarna op het kwadrant waar je hem wilt hebben. Je kunt ook op het pijltje van een gesorteerde taak tikken om hem terug te sturen naar ongesorteerd."
+        },
+        {
+          "q": "Worden mijn taken opgeslagen?",
+          "a": "Ja, alleen in je browser, via localStorage. Er wordt niets naar een server gestuurd, niets is gekoppeld aan een account, en als je de lijst wist, wordt de opslag mee gewist."
+        },
+        {
+          "q": "Welk kwadrant doe ik het eerst als ik ADHD heb?",
+          "a": "Het meeste ADHD-productiviteitsadvies is het eens: het kwadrant saai-maar-belangrijk is het hefboompunt. Het kwadrant in-brand trekt vanzelf de aandacht, zonder erom te vragen. Saai-maar-belangrijk is wat eindeloos wordt uitgesteld en de volgende brand veroorzaakt. Elke dag één saai-maar-belangrijke taak doen is een ritme met veel impact."
+        },
+        {
+          "q": "Hoe verschilt dit van een gewone to-do-app?",
+          "a": "Een to-do-app geeft je een platte lijst en gaat ervan uit dat je kunt prioriteren. De matrix dwingt een sortering op twee assen af, waardoor de dingen zichtbaar worden die je stilletjes hebt vermeden. Het is meer een denktool dan een tracking-tool, en werkt het best voor een wekelijkse reset in plaats van een dagelijkse checklist."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Zit je hoofd te vol om überhaupt te sorteren? Begin dan met een [brain dump](/tools/brain-dump) om de chaos naar buiten te brengen. Zijn zelfs vier kwadranten te veel? Gebruik dan [kies er één](/tools/pick-one) om één taak naar boven te halen om mee te beginnen. Heb je eenmaal een item uit een kwadrant gekozen, splits het dan op in haalbare stappen met de [takensplitter](/tools/task-splitter) en time-box de eerste stap met de [ADHD-pomodoro-timer](/tools/pomodoro). Bekijk de [volledige tool-bibliotheek](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De webmatrix is een wekelijkse denktool. De Doubly iOS-app zet de volgende stap: zodra je hebt gesorteerd wat ertoe doet, haalt de app de ene saai-maar-belangrijke taak naar voren die je vandaag moet doen, en gebruikt hij verantwoordings-check-ins met echte mensen zodat het ook echt gebeurt.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly Eisenhower-matrix (ADHD-editie)",
+    "appDescription": "Een gratis online Eisenhower-matrix met ADHD-vriendelijke kwadrantnamen. Sleep taken naar \"in brand\", \"saai maar belangrijk\", \"luidruchtig maar overslaanbaar\" of \"deze schrappen\". Wordt lokaal opgeslagen.",
+    "howToName": "Zo gebruik je de Eisenhower-matrix online tool",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

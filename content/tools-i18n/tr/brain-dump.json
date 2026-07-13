@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Ücretsiz Beyin Boşaltma Aracı - Kafanı Boşalt | Doubly",
+    "description": "Ücretsiz çevrimiçi beyin boşaltma aracı. Aklındaki her şeyi dök, yapay zeka yapılabilir görevleri çıkarıp gerisini atsın. Kayıt yok. ADHD beyinleri için.",
+    "ogTitle": "Ücretsiz Beyin Boşaltma Aracı - Kafanı Boşalt",
+    "ogDescription": "Aklındaki her şeyi dök, yapay zeka yapılabilir görevleri çıkarsın. Ücretsiz, kayıt yok.",
+    "twitterTitle": "Ücretsiz Çevrimiçi Beyin Boşaltma Aracı",
+    "twitterDescription": "Aklındaki her şeyi dök, yapay zeka yapılabilir görevleri çıkarsın."
+  },
+  "h1": "Ücretsiz beyin boşaltma aracı",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "breadcrumbLabel": "Beyin Boşaltma Aracı",
+  "answerCapsule": "**Bir beyin boşaltma aracı, kafandaki her şeyi tek bir yere boşaltmanı, ardından yalnızca yapılabilir görevleri çıkarmasını sağlar; böylece sadece boşa dönüp durmak yerine bir şey yapabilirsin.** Yukarıya özgürce yaz. Araç, dökülenleri okur, duyguları ve içini dökmeyi görmezden gelir ve kısa bir yapılacaklar listesi döndürür. Ücretsiz, kayıt yok, hiçbir şey saklanmıyor.",
+  "intro": "“Çok fazla şey var, başlayamıyorum ama çok fazla şey var” şeklindeki zihinsel döngüyü kırmak, beyin boşaltmanın işidir. Plan yapmak için değil, kafanı boşaltmak için yazarsın. Plan, harekete geçebileceğin bir liste olarak öbür uçtan kendiliğinden çıkar.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Çevrimiçi beyin boşaltma nasıl yapılır",
+      "steps": [
+        {
+          "name": "Kafandaki her şeyi yaz",
+          "text": "Yapı yok, düzenleme yok. Görevler, endişeler, yarım düşünceler, şikayetler, fikirler. Hepsini kafandan çıkar ve sayfaya dök."
+        },
+        {
+          "name": "'Görevleri çıkar'a bas",
+          "text": "Yapay zeka dökülenleri okur, duyguları ve içini dökmeleri görmezden gelir ve yalnızca yapılabilir maddeleri kısa bir liste olarak döndürür."
+        },
+        {
+          "name": "Birini seç",
+          "text": "Sadece bir tane. En küçüğünü. Bittiğinde işaretle."
+        },
+        {
+          "name": "İhtiyacın olduğunda geri dön",
+          "text": "Yarın sabah, bir saat sonra ya da bir hafta sonra. Kafan harekete geçemeyecek kadar dolduğunda araç burada."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Beyin boşaltmalar ADHD beyinlerinde neden işe yarar",
+      "paragraphs": [
+        "ADHD'li yetişkinler, çalışma belleğinde beynin taşıyacak şekilde tasarlandığından daha fazlasını taşıma eğilimindedir. Kapanmamış döngüler, yarım düşünülmüş görevler, söylemek istedikleri şeyler, neredeyse unuttukları şeyler. Araştırmacılar bunu bir odak başarısızlığı değil, bir çalışma belleği yükü sorunu olarak tanımlar. Beyin meşguldür, sadece senin onu meşgul etmesini istediğin şeyle değil.",
+        "Bu düşünceleri bir sayfaya dışsallaştırmak yükü azaltır. David Allen'ın “Getting Things Done” kitabı buna kapanmamış döngüyü yakalama der. Bir madde bir kez kağıda döküldüğünde, beyin onu zihninde tekrar tekrar çalıştırmayı bırakır. Özellikle ADHD için bu, felç olmuş olmakla başlayabilmek arasındaki fark olabilir.",
+        "Aracın eklediği şey ikinci adımdır: yalnızca yapılabilir maddeleri geri çıkarmak; böylece dökülenleri tekrar okuyup neyin sayıldığına karar vermek zorunda kalmazsın. [CHADD](https://chadd.org/about-adhd/overview/) gibi kuruluşlar, düşünceleri dışsallaştırmayı temel bir ADHD dostu strateji olarak önerir."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "faqs": [
+        {
+          "q": "Beyin boşaltma nedir?",
+          "a": "Beyin boşaltma, çalışma belleğini boşaltmak için kafandaki her şeyi sıralamadan ya da yargılamadan tek bir sayfaya yazma eylemidir. Amaç düzenlemek değil, dışsallaştırmaktır. Düşünceler bir kez dışarı çıktığında, onlarla ne yapacağına karar verebilirsin."
+        },
+        {
+          "q": "Bu, normal bir not uygulamasından nasıl farklı?",
+          "a": "Bir not uygulaması sana boş bir sayfa verir. Bu araç, döktüğün şeyi okur ve duyguları, gözlemleri ve içini dökmeleri görmezden gelerek yalnızca somut, yapılabilir görevleri çıkarır. Kendin yazmadan kısa bir yapılacaklar listesi elde edersin."
+        },
+        {
+          "q": "Beyin boşaltmam gizli mi?",
+          "a": "Evet. Metnin, görevleri çıkarmak için yapay zekamıza gönderilir ve ardından silinir. Kimliğinle ilişkilendirilerek hiçbir şey saklanmaz, isteğin kendisi dışında tarayıcından hiçbir şey çıkmaz ve hesap yoktur."
+        },
+        {
+          "q": "Beyin boşaltma ADHD için neden faydalı?",
+          "a": "ADHD'li yetişkinlerin çalışma belleği çoğu zaman yarım kalmış düşüncelerle doludur. Bu zihinsel karmaşa kendi başına bir tür bunalmışlıktır. İçindekileri dağınık bir şekilde de olsa dışarı çıkarmak bilişsel alan açar ve yapılabilir maddeleri harekete geçilecek kadar görünür kılar."
+        },
+        {
+          "q": "Ne sıklıkla beyin boşaltma yapmalıyım?",
+          "a": "Kafan dolu ve ellerin takılmış hissettiği her an. Bazı insanlar haftada bir yapar, bazıları her sabah, bazıları yalnızca bunaldığında. Kural yok. Sinyal içseldir: yardımcı olacaksa, yap."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "Bir görev listen olduğunda, başlanacak tek bir görevi öne çıkarmak için [birini seç](/tools/pick-one) aracını kullan ya da tüm listeyi [ADHD Eisenhower matrisiyle](/tools/eisenhower-matrix) sırala. En korkutucusunu küçük adımlara bölmek için [görev bölme aracına](/tools/task-splitter) gönder. İlk adımı [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) ya da [görsel zamanlayıcıyla](/tools/visual-timer) bir zaman kutusuna al. Zor kısım yalnız başlamaksa, bir [body doubling odası](/tools/body-doubling-room) aç ve birinin yanında çalış. [Tüm araç kütüphanesine](/tools) göz at."
+  },
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Web aracı kafanı tek seferliğine boşaltır. Doubly iOS uygulaması ise dökümlerini hatırlar, sıradaki yapman gereken tek görevi öne çıkarır ve listenin tekrar karmaşaya dönüşmemesi için gerçek insanlardan gelen hesap verebilirlik yoklamalarını kullanır.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly Beyin Boşaltma Aracı",
+    "appDescription": "Ücretsiz çevrimiçi bir beyin boşaltma aracı. Kafandaki her şeyi yaz, yapay zeka yapılabilir görevleri çıkarsın. ADHD beyinleri için tasarlandı.",
+    "howToName": "Beyin boşaltma aracı nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

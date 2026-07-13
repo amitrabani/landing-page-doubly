@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Matriz de Eisenhower online (edición ADHD) | Doubly",
+    "description": "Matriz de Eisenhower online con cuadrantes para el ADHD como «aburrido pero importante» en vez de las de manual. Arrastra tareas, guarda en local, sin registro.",
+    "ogTitle": "Matriz de Eisenhower online (edición ADHD)",
+    "ogDescription": "Matriz de Eisenhower pensada para el ADHD con cuadrantes como «aburrido pero importante». Arrastra, guarda en local, gratis.",
+    "twitterTitle": "Matriz de Eisenhower online (edición ADHD)",
+    "twitterDescription": "Cuadrantes pensados para el ADHD. Arrastra tareas, guarda en tu navegador, sin registro."
+  },
+  "h1": "Matriz de Eisenhower online, edición ADHD",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbTools": "Herramientas",
+  "breadcrumbLabel": "Matriz de Eisenhower online",
+  "answerCapsule": "**Una matriz de Eisenhower ordena las tareas por importancia y urgencia en cuatro cuadrantes para que veas qué hacer, qué programar, qué ignorar y qué descartar.** Esta versión cambia las etiquetas de manual por otras pensadas para el ADHD, como «aburrido pero importante». Arrastra o toca para ordenar. Se guarda en tu navegador.",
+  "intro": "La matriz clásica hace dos preguntas sobre cada tarea: ¿es importante? y ¿es urgente? Los cerebros con ADHD suelen saber la respuesta, pero se bloquean al ordenar. Nombrar los cuadrantes por cómo se sienten, y no por su categoría, hace que ordenar sea instantáneo.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Cómo usar la matriz",
+      "steps": [
+        {
+          "name": "Vuelca tus tareas",
+          "text": "Escribe las tareas de una en una y pulsa Enter, o pega una lista separada por saltos de línea. Aparecen en la fila sin ordenar."
+        },
+        {
+          "name": "Ordena cada tarea en un cuadrante",
+          "text": "En el ordenador, arrastra una tarea a un cuadrante. En el móvil, toca la tarea para seleccionarla y luego toca el cuadrante. El que te parezca bien suele ser el correcto."
+        },
+        {
+          "name": "Mira el montón de lo aburrido pero importante",
+          "text": "Ese es el que, en silencio, crea tu próxima semana. Si hoy solo actúas sobre un cuadrante, que sea este."
+        },
+        {
+          "name": "Sáltate, descarta o programa el resto",
+          "text": "Lo que está en llamas va hoy. Lo ruidoso puede esperar o delegarse. Lo que toca descartar puede descartarse sin más. No hace falta terminar la lista."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por qué el enfoque para el ADHD cambia la matriz",
+      "steps": null,
+      "paragraphs": [
+        "La matriz de Eisenhower es excelente para sacar a la luz las tareas que la gente evita en silencio, que suele ser lo más importante que puede hacer una herramienta de priorización. Las cuatro etiquetas estándar («Importante + No urgente», y demás) son técnicamente correctas, pero se leen como un examen. Para un cerebro con ADHD que ya está lidiando con una carga de función ejecutiva, ese examen es una decisión más antes de que la tarea siquiera empiece.",
+        "Cambiar el nombre de los cuadrantes por su huella emocional cambia el coste de activación. «En llamas» es obvio. «Aburrido pero importante» es el que casi todos se saltan y el que más lamentan saltarse (la declaración de impuestos, los seguimientos, la cita con el dentista que llevan tiempo aplazando). «Ruidoso pero prescindible» pone nombre a las cosas que exigen atención sin merecerla. «Para descartar» da permiso para borrar, algo que los consejos de productividad clásicos rara vez dicen en voz alta.",
+        "Reducir la carga cognitiva en el paso de priorización es justo el tipo de andamiaje ambiental que organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan para el ADHD en adultos. La matriz es, ante todo, una ayuda para pensar y, en segundo lugar, una app de seguimiento. Úsala para un reinicio semanal, no como sustituto permanente de tu lista de tareas."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Preguntas frecuentes",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "¿Qué es la matriz de Eisenhower?",
+          "a": "La matriz de Eisenhower es una herramienta de priorización que ordena las tareas según dos preguntas: ¿es importante? y ¿es urgente? De ahí salen cuatro casillas, desde «hazlo ahora» hasta «descártalo». Se atribuye al presidente Dwight Eisenhower y la popularizó Stephen Covey en Los 7 hábitos de la gente altamente efectiva."
+        },
+        {
+          "q": "¿Por qué esta versión usa etiquetas distintas?",
+          "a": "Los nombres de manual de los cuadrantes («Importante + No urgente», etc.) describen categorías, pero rara vez movilizan a los cerebros con ADHD. Nombres como «aburrido pero importante» y «ruidoso pero prescindible» describen cómo se siente la tarea de verdad, y eso hace que sea más fácil reconocerla y ordenarla. La matriz de fondo es idéntica."
+        },
+        {
+          "q": "¿Cómo uso el arrastrar y soltar?",
+          "a": "En el ordenador, arrastra una tarea desde la fila sin ordenar a cualquier cuadrante, o entre cuadrantes. En el móvil, toca una tarea para seleccionarla y luego toca el cuadrante donde la quieres. También puedes tocar la flecha de cualquier tarea ya ordenada para devolverla a la fila sin ordenar."
+        },
+        {
+          "q": "¿Se guardan mis tareas?",
+          "a": "Sí, solo en tu navegador, mediante localStorage. No se envía nada a ningún servidor, nada queda vinculado a una cuenta y, si vacías la lista, también se borra el almacenamiento."
+        },
+        {
+          "q": "¿Por qué cuadrante debería empezar si tengo ADHD?",
+          "a": "La mayoría de los consejos de productividad para el ADHD coinciden: el cuadrante de lo aburrido pero importante es el punto de apoyo. El cuadrante de lo que está en llamas reclama atención sin que se lo pidas. Lo aburrido pero importante es lo que tiende a posponerse para siempre y a crear el próximo incendio. Hacer una tarea aburrida pero importante al día es un ritmo de alto impacto."
+        },
+        {
+          "q": "¿En qué se diferencia de una app de tareas normal?",
+          "a": "Una app de tareas te da una lista plana y da por hecho que sabes priorizar. La matriz obliga a ordenar en dos ejes, lo que saca a la luz lo que llevas tiempo evitando en silencio. Es más una herramienta para pensar que para hacer seguimiento, y funciona mejor para un reinicio semanal que como lista diaria."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Herramientas relacionadas",
+    "body": "Si tienes la cabeza demasiado llena para siquiera ordenar, empieza con un [volcado mental](/tools/brain-dump) para sacar el caos afuera. Si hasta cuatro cuadrantes te parecen demasiado, usa [elige una](/tools/pick-one) para hacer aparecer una única tarea con la que empezar. Cuando ya hayas elegido un elemento de un cuadrante, divídelo en pasos realizables con la [herramienta para dividir tareas](/tools/task-splitter) y ponle un límite de tiempo al primer paso con el [temporizador pomodoro para el ADHD](/tools/pomodoro). Explora la [biblioteca completa de herramientas](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Pruébalo en la app",
+    "body": "La matriz web es una herramienta semanal para pensar. La app de Doubly para iOS da el siguiente paso: una vez que hayas ordenado lo que importa, la app saca a la luz la única tarea aburrida pero importante que hacer hoy y usa seguimientos de responsabilidad con personas reales para que de verdad ocurra.",
+    "label": "Pruébalo en la app"
+  },
+  "jsonld": {
+    "appName": "Matriz de Eisenhower de Doubly (edición ADHD)",
+    "appDescription": "Una matriz de Eisenhower online y gratis con nombres de cuadrante pensados para el ADHD. Arrastra las tareas a «en llamas», «aburrido pero importante», «ruidoso pero prescindible» o «para descartar». Se guarda en local.",
+    "howToName": "Cómo usar la herramienta de matriz de Eisenhower online",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,16 +1,21 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../_components/Breadcrumbs';
 import SoftAppCTA from '../_components/SoftAppCTA';
 
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_URL = `${SITE_URL}/learn`;
+const PAGE_PATH = '/learn';
+const PAGE_SLUG = '_learn';
 
 export const metadata: Metadata = {
   title: 'Learn - ADHD Focus, Tools & Strategies | Doubly',
   description:
     'Plain-language guides on ADHD focus, time-blindness, brain dumping, and getting unstuck. Honest, evidence-based, no shame.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Learn - ADHD Focus, Tools & Strategies',
     description: 'Plain-language guides on ADHD focus, time-blindness, and getting unstuck.',

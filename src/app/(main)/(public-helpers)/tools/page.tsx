@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../_components/Breadcrumbs';
 import SoftAppCTA from '../_components/SoftAppCTA';
@@ -6,12 +9,14 @@ import { tools } from '@/lib/tools';
 
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_URL = `${SITE_URL}/tools`;
+const PAGE_PATH = '/tools';
+const PAGE_SLUG = '_index';
 
 export const metadata: Metadata = {
   title: 'Free ADHD Tools That Help You Start | Doubly',
   description:
     'Free, no-signup tools designed for ADHD brains. Pomodoro timers, brain dumps, and more - built for the moment you need to start, not just plan.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Free ADHD Tools That Help You Start',
     description:

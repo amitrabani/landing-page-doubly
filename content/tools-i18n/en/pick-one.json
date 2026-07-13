@@ -1,0 +1,95 @@
+{
+  "slug": "pick-one",
+  "meta": {
+    "title": "Pick One: Random Task Picker for Overwhelm | Doubly",
+    "description": "Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random. Free, no signup, built for ADHD brains.",
+    "ogTitle": "Pick One: Random Task Picker for Overwhelm",
+    "ogDescription": "Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random.",
+    "twitterTitle": "Pick One: A Task Picker for Overwhelm",
+    "twitterDescription": "Paste a messy list, get one thing to start with."
+  },
+  "h1": "Pick one. Just one.",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Pick One Task Tool",
+  "answerCapsule": "**A pick one task tool removes the choosing step. Paste your list, choose a mode (smallest, scariest, random), and get one thing to start with.** It is built for the moment a list of ten tasks reads as one giant unstartable thing. Nothing is saved on our server.",
+  "intro": "When the whole list feels impossible, the bottleneck is rarely the doing. It is the deciding. Pick one strips the decision out and hands you a starting point. You can always pick again.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "How to use the pick one tool",
+      "steps": [
+        {
+          "name": "Paste your list",
+          "text": "One per line, or messy with commas, or copy-pasted from a notes app. The tool figures it out."
+        },
+        {
+          "name": "Choose a mode",
+          "text": "Smallest for momentum, Scariest for relief, Just pick one for full surrender."
+        },
+        {
+          "name": "Tap Pick one for me",
+          "text": "You get one item, big and clear, with a one-line reason. That is the one."
+        },
+        {
+          "name": "Did it, or not this one",
+          "text": "Mark it done and get the next pick, or skip and get a different one. No judgment either way."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Why this works for ADHD brains",
+      "paragraphs": [
+        "ADHD adults frequently describe being stuck not because a task is hard, but because every option looks equally available and none demands attention. Researchers call this an executive-function bottleneck around prioritization and initiation, not a motivation failure.",
+        "The barrier is the choice itself. Behavioral economists describe this as choice overload: more options, slower decisions, more avoidance. For an ADHD brain that already pays an initiation tax on every task, the cost compounds. Offloading the pick lets you skip the decision and start moving.",
+        "Organizations like [CHADD](https://chadd.org/about-adhd/overview/) recommend reducing choice points as a core ADHD-friendly strategy. The smallest mode leans on momentum (a tiny win sparks the next one). The scariest mode leans on relief (the heavy thing gone makes the rest feel lighter). The random mode leans on surrender (any choice beats no choice)."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Frequently asked questions",
+      "faqs": [
+        {
+          "q": "How does the pick one tool decide which task to choose?",
+          "a": "You pick the mode. Smallest grabs the shortest item, the easiest to start. Scariest picks the one most likely to be heavy (long, or mentioning things like taxes, doctors, or replies you owe). Just pick one is plain random. Nothing leaves your browser."
+        },
+        {
+          "q": "Why would I want a tool to choose for me?",
+          "a": "Decision fatigue is real. Choosing what to start when overwhelmed costs more energy than the task itself. Offloading the choice to a tool lets you skip the spin and start moving. You can always override the pick."
+        },
+        {
+          "q": "Is this useful for ADHD?",
+          "a": "Yes. ADHD brains often stall at the choosing step, not the doing step. Removing the choice and being told \"start with this one\" bypasses a common stuck point. It is the same logic behind the \"one next step\" pattern."
+        },
+        {
+          "q": "Does it save my list?",
+          "a": "Your list stays in your browser via localStorage. Nothing is sent to any server. Clear the field and the storage clears with it. There is no account."
+        },
+        {
+          "q": "What is the difference between Smallest and Scariest?",
+          "a": "Smallest is about momentum. Knock out a tiny win, then ride the wave. Scariest is about relief. Get the heavy thing off your back so the rest of the list feels lighter. Both are valid, use whichever you need today."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Related tools",
+    "body": "If the list still feels too long after picking one, run a [brain dump](/tools/brain-dump) first to clear the mental clutter. To sort the list by importance and urgency instead of picking blindly, open the [ADHD Eisenhower matrix](/tools/eisenhower-matrix). Got the pick? Split it into doable steps with the [task breakdown tool](/tools/task-splitter), then time-box the first step with the [ADHD pomodoro timer](/tools/pomodoro). Browse the [full tools library](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "The web tool picks one task from a pasted list. The Doubly iOS app remembers every list you ever dumped, surfaces the one task you should do next based on context and history, and uses real-people accountability check-ins so the chosen task actually happens.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": "Doubly Pick One Task Tool",
+    "appDescription": "A free online task picker. Paste a messy to-do list, the tool picks one thing to start with based on smallest, scariest, or random. Built for ADHD brains.",
+    "howToName": "How to use the pick one task tool",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

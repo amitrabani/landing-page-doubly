@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Svuota-cervello gratis online - Libera la mente | Doubly",
+    "description": "Svuota-cervello gratis online. Butta giù tutto ciò che hai in testa, l'IA estrae le attività concrete e scarta il resto. Senza registrazione. Per menti ADHD.",
+    "ogTitle": "Svuota-cervello gratis online - Libera la mente",
+    "ogDescription": "Butta giù tutto ciò che hai in testa, l'IA estrae le attività concrete. Gratis, senza registrazione.",
+    "twitterTitle": "Svuota-cervello gratis online",
+    "twitterDescription": "Butta giù tutto ciò che hai in testa, l'IA estrae le attività concrete."
+  },
+  "h1": "Strumento svuota-cervello gratuito",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "breadcrumbLabel": "Strumento svuota-cervello",
+  "answerCapsule": "**Uno strumento svuota-cervello ti fa scaricare in un unico posto tutto ciò che hai in testa, poi estrae solo le attività concrete così puoi fare qualcosa invece di girare a vuoto.** Scrivi liberamente qui sopra. Lo strumento legge ciò che hai buttato giù, ignora emozioni e sfoghi, e restituisce una breve lista di cose da fare. Gratis, senza registrazione, nulla viene salvato.",
+  "intro": "Il loop mentale del «c'è troppo, non riesco a iniziare, ma c'è troppo» è proprio ciò che lo svuota-cervello serve a spezzare. Scrivi per svuotare la testa, non per pianificare. Il piano esce dall'altro lato come una lista su cui puoi agire.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come fare uno svuota-cervello online",
+      "steps": [
+        {
+          "name": "Scrivi tutto ciò che hai in testa",
+          "text": "Nessuna struttura, nessuna correzione. Attività, preoccupazioni, pensieri a metà, lamentele, idee. Tirali fuori dalla testa e mettili sulla pagina."
+        },
+        {
+          "name": "Premi Estrai le attività",
+          "text": "L'IA legge ciò che hai scritto, ignora emozioni e sfoghi, e restituisce solo le cose concrete come una breve lista."
+        },
+        {
+          "name": "Scegline una",
+          "text": "Una sola. La più piccola. Spuntala quando è fatta."
+        },
+        {
+          "name": "Torna quando ne hai bisogno",
+          "text": "Domani mattina, tra un'ora o tra una settimana. Lo strumento è qui ogni volta che hai la testa troppo piena per agire."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché lo svuota-cervello funziona per le menti ADHD",
+      "paragraphs": [
+        "Gli adulti con ADHD tendono a tenere nella memoria di lavoro più di quanto il cervello sia fatto per reggere. Cicli aperti, attività pensate a metà, cose che volevano dire, cose che stavano per dimenticare. I ricercatori lo descrivono come un problema di carico della memoria di lavoro, non un difetto di concentrazione. Il cervello è occupato, solo non con ciò con cui vorresti che lo fosse.",
+        "Esternalizzare quei pensieri su una pagina riduce il carico. David Allen, nel suo «Getting Things Done», lo chiama cattura dei cicli aperti (open-loop capture). Una volta che una cosa è su carta, il cervello smette di rimuginarci sopra. Per l'ADHD in particolare, questa può essere la differenza tra il restare paralizzati e il riuscire a iniziare.",
+        "Ciò che lo strumento aggiunge è il secondo passo: estrarre solo le cose concrete così non devi rileggere tutto e decidere cosa contava. Organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) raccomandano di esternalizzare i pensieri come strategia fondamentale a misura di ADHD."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Cos'è uno svuota-cervello?",
+          "a": "Uno svuota-cervello è l'atto di scrivere su un'unica pagina tutto ciò che hai in testa, senza ordinarlo né giudicarlo, per liberare la memoria di lavoro. Il punto non è organizzare, è esternalizzare. Una volta che i pensieri sono fuori, puoi decidere cosa farne."
+        },
+        {
+          "q": "In cosa è diverso da una normale app per le note?",
+          "a": "Un'app per le note ti dà una pagina bianca. Questo strumento legge ciò che hai buttato giù ed estrae solo le attività concrete e fattibili, ignorando emozioni, osservazioni e sfoghi. Ottieni una breve lista di cose da fare senza scriverla tu."
+        },
+        {
+          "q": "Il mio svuota-cervello è privato?",
+          "a": "Sì. Il tuo testo viene inviato alla nostra IA per estrarre le attività e poi viene scartato. Niente viene salvato collegandolo alla tua identità, niente lascia il tuo browser oltre alla richiesta stessa, e non c'è nessun account."
+        },
+        {
+          "q": "Perché lo svuota-cervello è utile per l'ADHD?",
+          "a": "Gli adulti con ADHD hanno spesso la memoria di lavoro carica di pensieri lasciati a metà. Quel disordine mentale è già di per sé una forma di sovraccarico. Tirare fuori tutto, anche in modo disordinato, libera spazio cognitivo e rende le cose concrete abbastanza visibili da poterci agire."
+        },
+        {
+          "q": "Ogni quanto dovrei fare uno svuota-cervello?",
+          "a": "Ogni volta che senti la testa piena e le mani bloccate. C'è chi lo fa una volta a settimana, chi ogni mattina, chi solo quando è sopraffatto. Non c'è una regola. Il segnale è interno: se pensi che ti aiuterebbe, fallo."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Una volta che hai una lista di attività, usa [scegline una](/tools/pick-one) per far emergere una singola attività da cui partire, oppure ordina tutta la lista con la [matrice di Eisenhower per l'ADHD](/tools/eisenhower-matrix). Manda quella che ti spaventa di più nello [strumento per scomporre le attività](/tools/task-splitter) per dividerla in piccoli passi. Dai un tempo limite al primo passo con il [timer pomodoro per l'ADHD](/tools/pomodoro) o il [timer visivo](/tools/visual-timer). Se la parte difficile è iniziare da solo, apri una [stanza di body doubling](/tools/body-doubling-room) e lavora accanto a qualcuno. Sfoglia la [libreria completa di strumenti](/tools)."
+  },
+  "cta": {
+    "headline": "Provalo nell'app",
+    "body": "Lo strumento web ti libera la testa una volta. L'app Doubly per iOS ricorda i tuoi svuota-cervello, fa emergere l'unica attività da fare dopo e usa i controlli di responsabilità di persone reali così la lista non torna a diventare disordine.",
+    "label": "Provalo nell'app"
+  },
+  "jsonld": {
+    "appName": "Strumento svuota-cervello Doubly",
+    "appDescription": "Uno strumento svuota-cervello gratuito online. Scrivi tutto ciò che hai in testa, l'IA estrae le attività concrete. Fatto per menti ADHD.",
+    "howToName": "Come usare lo strumento svuota-cervello",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

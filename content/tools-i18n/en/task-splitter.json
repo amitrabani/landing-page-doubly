@@ -1,0 +1,95 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Free Task Breakdown Tool - Break Down Any Task | Doubly",
+    "description": "Type a task you cannot start. Free AI tool breaks it into small, doable steps with time estimates. No signup, built for ADHD brains.",
+    "ogTitle": "Free Task Breakdown Tool - Break Down Any Task",
+    "ogDescription": "Type a task you cannot start. Free AI tool breaks it into small, doable steps with time estimates. No signup.",
+    "twitterTitle": "Free Task Breakdown Tool",
+    "twitterDescription": "Type a task you cannot start. AI splits it into small, doable steps with time estimates."
+  },
+  "h1": "Free task breakdown tool",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Task Breakdown Tool",
+  "answerCapsule": "**A task breakdown tool turns one task that feels too big into a short list of small, doable steps so an overwhelmed brain has a clear place to start.** Type a task above. The tool returns ordered sub-steps with time estimates. Built for ADHD brains, free, no signup. Refresh the page and your input is gone.",
+  "intro": "Most productivity tools assume you can plan. This one assumes you cannot start. Type the task that has been sitting on your list for a week and let the AI cut it into the smallest version of itself. Then do one step.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "How to break down a task",
+      "steps": [
+        {
+          "name": "Type the task",
+          "text": "One sentence. \"Clean the kitchen.\" \"Reply to inbox.\" \"Write the report.\" Don't add context or excuses, just the verb and the thing."
+        },
+        {
+          "name": "Hit Break it down",
+          "text": "The AI returns a short list of steps with time estimates. Each step is a few minutes - small enough to start without thinking."
+        },
+        {
+          "name": "Do step one",
+          "text": "Just step one. Don't read ahead. Tick it off. Then step two. Momentum will do the rest."
+        },
+        {
+          "name": "Stop when stuck",
+          "text": "If a step still feels too big, paste it back into the tool and split it again. You can split a split."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Why this works for ADHD brains",
+      "paragraphs": [
+        "Task initiation, the act of starting something, is one of the executive functions most affected by ADHD. The brain reads a vague, multi-step task as a single overwhelming unit and freezes. Researchers like Russell Barkley describe this as a deficit in the internal representation of time and effort, not a willpower problem.",
+        "A small, concrete step does the opposite. “Walk to the kitchen” or “open the file” takes the activation energy from impossible to manageable. The smaller the first step, the higher the chance the brain will accept it. That is the whole game.",
+        "Bodies like [CHADD](https://chadd.org/about-adhd/overview/) recommend breaking large tasks into small steps as a core ADHD-friendly strategy. Doubly does that mechanically, in two seconds, so you don’t have to plan it before you can start."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Frequently asked questions",
+      "faqs": [
+        {
+          "q": "How do I break down a task that feels too big?",
+          "a": "Type the task as one short sentence (\"clean the garage\", \"write the report\") and let the tool split it. Each step is short enough to start without thinking. Pick the first one and do it. Don't plan past that."
+        },
+        {
+          "q": "Why is breaking a task into steps so helpful for ADHD?",
+          "a": "ADHD brains under-produce dopamine for tasks the brain reads as \"too big to finish.\" A small, finite step is the brain's preferred unit of work. Research from Russell Barkley and others links this to executive-function differences in task initiation, not laziness."
+        },
+        {
+          "q": "Does the tool save my tasks?",
+          "a": "No. Nothing leaves your browser except the task you type, which is sent to our AI to break it down and then discarded. No account, no email, no history. Refresh the page and it is gone."
+        },
+        {
+          "q": "How long should each sub-step be?",
+          "a": "The tool aims for steps that take a few minutes each. If a step still feels too big, paste that step back in as a fresh task and split it again. There is no rule against splitting a split."
+        },
+        {
+          "q": "What if the steps are not quite right?",
+          "a": "They are a starting point, not a contract. Ignore steps that do not apply, reorder them in your head, and stop when the task is done. The point is to get unstuck, not to follow a perfect plan."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Related tools",
+    "body": "If your head is full of more than one task, start with the [brain dump tool](/tools/brain-dump) and let the AI pull the actionable items out first, or sort the whole list with the [ADHD Eisenhower matrix](/tools/eisenhower-matrix) and run [pick one](/tools/pick-one) to surface a starting task. Once you have a step list here, time-box the first one with the [ADHD pomodoro timer](/tools/pomodoro) or the [visual timer](/tools/visual-timer) so you can see the work shrinking. If starting alone is the hard part, open a [body doubling room](/tools/body-doubling-room) with a friend. Browse the [full tools library](/tools)."
+  },
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "The web tool breaks down one task at a time. The Doubly iOS app stores your breakdowns, surfaces the next step automatically, and uses accountability check-ins from real people to keep you moving.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": "Doubly Task Breakdown Tool",
+    "appDescription": "A free AI-powered task breakdown tool. Type any task you cannot start, get back small, doable steps with time estimates. Built for ADHD brains.",
+    "howToName": "How to use the task breakdown tool",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

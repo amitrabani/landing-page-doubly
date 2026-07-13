@@ -1,0 +1,101 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Free Brown Noise Generator for ADHD Focus | Doubly",
+    "description": "Free brown noise generator that runs in your browser. Brown, pink, and white. No signup, no ads, sleep timer included. Built for ADHD focus.",
+    "ogTitle": "Free Brown Noise Generator for ADHD Focus",
+    "ogDescription": "A free brown noise player with a sleep timer. Brown, pink, and white. Runs offline in your browser.",
+    "twitterTitle": "Free Brown Noise Generator",
+    "twitterDescription": "Brown, pink, and white. Free, no signup, runs in your browser."
+  },
+  "h1": "Free Brown Noise Generator",
+  "breadcrumbLabel": "Brown Noise Generator",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Brown noise is a deep, low-frequency sound that masks distractions and gives a busy ADHD brain something steady to settle on.** This free ambient sound generator plays brown, pink, and white right in your browser. No signup, no ads, no audio files to download. Pick a sound, set the volume, add a sleep timer if you want, and get back to work.",
+  "intro": "The generator above runs on the Web Audio API, so the sound is created on your device in real time. That means no streaming, no buffering, and it keeps working if your wifi drops. Try brown first. If it feels too heavy, switch to pink. Most ADHD adults land on brown.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "How to use the brown noise generator",
+      "steps": [
+        {
+          "name": "Pick a sound",
+          "text": "Brown is the deep one most people search for. If brown feels too heavy, try pink. White is the brightest and the hardest to ignore."
+        },
+        {
+          "name": "Hit play",
+          "text": "The first tap creates the audio engine in your browser. Give it a half second on slower phones. After that, switching sounds is instant."
+        },
+        {
+          "name": "Find your volume",
+          "text": "Low enough that you can still hear someone talking to you at a normal voice. If you have to raise your voice to be heard over it, it is too loud."
+        },
+        {
+          "name": "Set a sleep timer if needed",
+          "text": "Pick 15, 30, 60, or 90 minutes. The sound fades out gently at the end so it does not jolt you. Leave it off if you want it running all day."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Why brown noise works for ADHD brains",
+      "paragraphs": [
+        "ADHD brains tend to orient toward novel sounds. A door slamming, a phone buzz, two people starting a conversation behind you. Each one pulls a thread of attention away from what you were doing, and pulling it back costs real time and effort.",
+        "Brown noise does not make you focus. It removes the things that keep yanking your focus away. A steady, predictable sound covers the unpredictable ones, so your brain stops firing the orienting response every few seconds.",
+        "There is also a small but interesting research finding here. In a 2007 study, [Söderlund, Sikström, and Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) found that moderate white noise improved cognitive performance in children with attention difficulties, while it slightly hurt performance in neurotypical children. The proposed mechanism is stochastic resonance, the idea that a noisy brain may need a bit of external noise to land in its working range.",
+        "The science is still early, but the lived-experience reports are loud and consistent. [CHADD](https://chadd.org/about-adhd/overview/) and similar bodies treat sensory tools like background sound as a reasonable thing to try. If it helps you, that is enough."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Frequently asked questions",
+      "faqs": [
+        {
+          "q": "What is brown noise?",
+          "a": "Brown noise is a deep, rumbly sound with more energy in the low frequencies, named after the random \"Brownian motion\" math that generates it. It sounds like a steady waterfall or heavy rain on a roof. Compared with white noise, it is darker and warmer, which most people find less harsh for long sessions."
+        },
+        {
+          "q": "Is this an ambient sound generator?",
+          "a": "Yes. Brown noise is the most popular setting, but the same player also generates pink and white. Three ambient sounds in total, all created live in your browser with no audio files downloaded. Pick whichever one fades into the background for your brain."
+        },
+        {
+          "q": "Brown noise vs pink noise vs white noise, which one should I pick?",
+          "a": "White noise is even across all frequencies and sounds like a TV hiss. Pink noise drops the high frequencies a little so it feels softer, like steady rainfall. Brown noise drops them even more, so it feels deep and grounding. If white noise feels harsh, try pink. If pink still feels bright, try brown. Pick what you can comfortably ignore."
+        },
+        {
+          "q": "Is brown noise good for ADHD focus?",
+          "a": "Some ADHD adults focus better with steady background sound, and a 2007 study from Söderlund and colleagues found that moderate auditory noise actually improved cognitive performance in children with attention difficulties. The likely mechanism is masking. A steady sound covers unpredictable noises (talking, traffic, a humming fridge) so your brain stops orienting toward every new sound."
+        },
+        {
+          "q": "Is it safe to listen to brown noise all day?",
+          "a": "Yes, at a reasonable volume. The same hearing-safety rules apply as for music. Keep the volume low enough that you can comfortably hear someone speaking at a normal voice in the same room. The CDC recommends limiting prolonged exposure above 70 dB. If your ears feel tired or ring after a session, the volume is too high."
+        },
+        {
+          "q": "Why is brown noise trending on TikTok?",
+          "a": "ADHD adults on TikTok started posting that brown noise quieted the constant inner mental chatter, often described as \"the noise in my head went away.\" That single observation went viral in 2022 and 2023, and a wave of people tried it. The science is preliminary, but the lived-experience reports are strong enough that it is worth trying for yourself."
+        },
+        {
+          "q": "Does this work offline?",
+          "a": "Yes. The sound is generated in your browser using the Web Audio API, not streamed from a server. Once the page loads, no internet connection is required. Nothing is recorded, nothing is uploaded, and there are no ads or trackers in the player."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Related tools",
+    "body": "Brown noise pairs naturally with a focus timer. Try the [ADHD pomodoro timer](/tools/pomodoro) for structured 25-minute sprints, or the [visual timer](/tools/visual-timer) if you want a shrinking pie wedge that doubles as a time blindness clock. Browse the [full tools library](/tools) or read the [Doubly learn library](/learn) for guides on focus, brain dumping, and getting unstuck."
+  },
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "Brown noise helps you settle into a task. The Doubly iOS app helps you pick the task in the first place. Brain dump, one clear next step, and accountability check-ins from real people.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": "Doubly Brown Noise Generator",
+    "appDescription": "A free in-browser brown noise generator with pink and white. No signup, sleep timer included, works offline.",
+    "howToName": "How to use the brown noise generator",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

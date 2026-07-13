@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Free Brain Dump Tool Online - Clear Your Head | Doubly",
+    "description": "Free brain dump tool online. Dump everything on your mind, AI pulls out the actionable tasks and drops the rest. No signup. Built for ADHD brains.",
+    "ogTitle": "Free Brain Dump Tool Online - Clear Your Head",
+    "ogDescription": "Dump everything on your mind, AI pulls out the actionable tasks. Free, no signup.",
+    "twitterTitle": "Free Brain Dump Tool Online",
+    "twitterDescription": "Dump everything on your mind, AI pulls out the actionable tasks."
+  },
+  "h1": "Free brain dump tool",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Brain Dump Tool",
+  "answerCapsule": "**A brain dump tool lets you offload everything in your head in one place, then pulls out only the actionable tasks so you can do something instead of just spinning.** Type freely above. The tool reads the dump, ignores emotions and venting, and returns a short to-do list. Free, no signup, nothing stored.",
+  "intro": "The mental loop of “there is too much, I cannot start, but there is too much” is the brain dump’s job to break. You write to empty the head, not to plan. The plan falls out the other side as a list you can act on.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "How to brain dump online",
+      "steps": [
+        {
+          "name": "Type everything in your head",
+          "text": "No structure, no editing. Tasks, worries, half-thoughts, complaints, ideas. Get it out of your head and onto the page."
+        },
+        {
+          "name": "Hit Pull out the tasks",
+          "text": "The AI reads the dump, ignores the emotions and venting, and returns only the actionable items as a short list."
+        },
+        {
+          "name": "Pick one",
+          "text": "Just one. The smallest one. Tick it off when it is done."
+        },
+        {
+          "name": "Come back when you need to",
+          "text": "Tomorrow morning, or in an hour, or in a week. The tool is here whenever your head is too full to act."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Why brain dumps work for ADHD brains",
+      "paragraphs": [
+        "ADHD adults tend to carry more in working memory than the brain is built to hold. Open loops, half-thought tasks, things they meant to say, things they almost forgot. Researchers describe this as a working-memory load problem, not a focus failure. The brain is busy, just not with what you want it to be busy with.",
+        "Externalizing those thoughts onto a page reduces the load. David Allen’s “Getting Things Done” calls this an open-loop capture. Once an item is on paper, the brain stops re-running it. For ADHD specifically, this can be the difference between paralyzed and able to start.",
+        "What the tool adds is the second step: pulling only the actionable items back out so you don’t have to re-read the dump and decide what counted. Bodies like [CHADD](https://chadd.org/about-adhd/overview/) recommend externalizing thoughts as a core ADHD-friendly strategy."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Frequently asked questions",
+      "faqs": [
+        {
+          "q": "What is a brain dump?",
+          "a": "A brain dump is the act of writing out everything in your head onto one page, without sorting or judging it, to clear working memory. The point is not to organize, it is to externalize. Once the thoughts are out, you can decide what to do with them."
+        },
+        {
+          "q": "How is this different from a regular notes app?",
+          "a": "A notes app gives you a blank page. This tool reads what you dumped and pulls out only the concrete, actionable tasks, ignoring emotions, observations, and venting. You get a short to-do list without writing one yourself."
+        },
+        {
+          "q": "Is my brain dump private?",
+          "a": "Yes. Your text is sent to our AI to extract tasks and is then discarded. Nothing is stored against your identity, nothing leaves your browser besides the request itself, and there is no account."
+        },
+        {
+          "q": "Why is brain dumping useful for ADHD?",
+          "a": "ADHD adults often have working memory loaded with half-finished thoughts. That mental clutter is its own kind of overwhelm. Getting the contents out, even messily, frees up cognitive space and makes the actionable items visible enough to act on."
+        },
+        {
+          "q": "How often should I brain dump?",
+          "a": "Whenever your head feels full and your hands feel stuck. Some people do it once a week, some do it every morning, some only when overwhelmed. There is no rule. The signal is internal: if it would help, do it."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Related tools",
+    "body": "Once you have a task list, use [pick one](/tools/pick-one) to surface a single starting task, or sort the whole list with the [ADHD Eisenhower matrix](/tools/eisenhower-matrix). Send the scariest one through the [task breakdown tool](/tools/task-splitter) to split it into small steps. Time-box the first step with the [ADHD pomodoro timer](/tools/pomodoro) or the [visual timer](/tools/visual-timer). If starting alone is the hard part, open a [body doubling room](/tools/body-doubling-room) and work next to someone. Browse the [full tools library](/tools)."
+  },
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "The web tool clears your head once. The Doubly iOS app remembers your dumps, surfaces the one task you should do next, and uses accountability check-ins from real people so the list does not turn back into clutter.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": "Doubly Brain Dump Tool",
+    "appDescription": "A free online brain dump tool. Type everything in your head, AI extracts the actionable tasks. Built for ADHD brains.",
+    "howToName": "How to use the brain dump tool",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

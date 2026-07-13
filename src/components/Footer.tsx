@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useT } from '@/i18n/TranslationProvider';
+import { useT, useLocale } from '@/i18n/TranslationProvider';
 import { tools } from '@/lib/tools';
+import { toolHref, toolsHubHref, learnHref } from '@/i18n/toolsManifest';
 
 // CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
 const linkClass =
@@ -14,6 +15,9 @@ const linkClass =
 
 export default function Footer() {
   const t = useT();
+  const locale = useLocale();
+  // Tools + Learn link into the visitor's locale only where that page has been
+  // translated (see toolsManifest); the legal/support pages stay English-only.
   return (
     <footer className="py-12 px-6 border-t border-charcoal/5 bg-gradient-to-b from-cream to-warm">
       <nav
@@ -27,7 +31,7 @@ export default function Footer() {
           {tools
             .filter((tool) => tool.status === 'live')
             .map((tool) => (
-              <Link key={tool.slug} href={`/tools/${tool.slug}`} className={linkClass}>
+              <Link key={tool.slug} href={toolHref(locale, tool.slug)} className={linkClass}>
                 {tool.title}
               </Link>
             ))}
@@ -43,10 +47,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
-          <Link href="/tools" className={linkClass}>
+          <Link href={toolsHubHref(locale)} className={linkClass}>
             {t.footer.tools}
           </Link>
-          <Link href="/learn" className={linkClass}>
+          <Link href={learnHref(locale)} className={linkClass}>
             {t.footer.learn}
           </Link>
           <Link href="/privacy" className={linkClass}>

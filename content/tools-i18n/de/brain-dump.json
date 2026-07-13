@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Kostenloses Brain-Dump-Tool - Kopf frei | Doubly",
+    "description": "Kostenloses Brain-Dump-Tool. Kipp alles aus dem Kopf, die KI zieht die machbaren Aufgaben heraus und wirft den Rest weg. Ohne Anmeldung. Für ADHD-Gehirne.",
+    "ogTitle": "Kostenloses Brain-Dump-Tool - Kopf frei",
+    "ogDescription": "Kipp alles aus dem Kopf, die KI zieht die machbaren Aufgaben heraus. Kostenlos, ohne Anmeldung.",
+    "twitterTitle": "Kostenloses Brain-Dump-Tool",
+    "twitterDescription": "Kipp alles aus dem Kopf, die KI zieht die machbaren Aufgaben heraus."
+  },
+  "h1": "Kostenloses Brain-Dump-Tool",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Brain-Dump-Tool",
+  "answerCapsule": "**Mit einem Brain-Dump-Tool lädst du alles, was dir im Kopf herumschwirrt, an einem Ort ab, und es zieht nur die machbaren Aufgaben heraus, damit du etwas tun kannst, statt dich nur im Kreis zu drehen.** Tipp oben einfach drauflos. Das Tool liest den Dump, ignoriert Gefühle und Frust und gibt dir eine kurze To-do-Liste zurück. Kostenlos, ohne Anmeldung, nichts wird gespeichert.",
+  "intro": "Die Gedankenschleife „es ist zu viel, ich kann nicht anfangen, aber es ist zu viel“ zu durchbrechen, ist die Aufgabe des Brain Dumps. Du schreibst, um den Kopf zu leeren, nicht um zu planen. Der Plan fällt am anderen Ende von selbst raus, als Liste, mit der du etwas anfangen kannst.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So machst du online einen Brain Dump",
+      "steps": [
+        {
+          "name": "Tipp alles ein, was dir im Kopf herumgeht",
+          "text": "Keine Struktur, kein Bearbeiten. Aufgaben, Sorgen, halbe Gedanken, Beschwerden, Ideen. Hol es aus deinem Kopf und bring es aufs Papier."
+        },
+        {
+          "name": "Tipp auf „Aufgaben herausziehen“",
+          "text": "Die KI liest den Dump, ignoriert die Gefühle und den Frust und gibt dir nur die machbaren Punkte als kurze Liste zurück."
+        },
+        {
+          "name": "Wähl eine aus",
+          "text": "Nur eine. Die kleinste. Hak sie ab, wenn sie erledigt ist."
+        },
+        {
+          "name": "Komm wieder, wenn du es brauchst",
+          "text": "Morgen früh, in einer Stunde oder in einer Woche. Das Tool ist da, wann immer dein Kopf zu voll ist, um ins Tun zu kommen."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum Brain Dumps bei ADHD-Gehirnen funktionieren",
+      "paragraphs": [
+        "Erwachsene mit ADHD tragen oft mehr im Arbeitsgedächtnis mit sich herum, als das Gehirn eigentlich halten kann. Offene Schleifen, halb gedachte Aufgaben, Dinge, die man sagen wollte, Dinge, die man fast vergessen hätte. Forscher beschreiben das als ein Problem der Arbeitsgedächtnis-Belastung, nicht als Versagen der Konzentration. Das Gehirn ist beschäftigt, nur eben nicht mit dem, womit es sich beschäftigen soll.",
+        "Diese Gedanken auf Papier auszulagern, verringert die Last. David Allens „Getting Things Done“ nennt das ein Erfassen offener Schleifen. Sobald ein Punkt auf dem Papier steht, hört das Gehirn auf, ihn immer wieder abzuspielen. Gerade bei ADHD kann das den Unterschied ausmachen zwischen wie gelähmt und in der Lage, anzufangen.",
+        "Was das Tool hinzufügt, ist der zweite Schritt: nur die machbaren Punkte wieder herauszuziehen, damit du den Dump nicht noch einmal durchlesen und entscheiden musst, was zählt. Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) empfehlen das Auslagern von Gedanken als eine zentrale ADHD-freundliche Strategie."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Was ist ein Brain Dump?",
+          "a": "Ein Brain Dump ist, alles, was dir im Kopf ist, auf eine Seite zu schreiben, ohne es zu sortieren oder zu bewerten, um das Arbeitsgedächtnis zu leeren. Es geht nicht darum, zu ordnen, sondern darum, es nach außen zu bringen. Sobald die Gedanken draußen sind, kannst du entscheiden, was du mit ihnen machst."
+        },
+        {
+          "q": "Wie unterscheidet sich das von einer normalen Notiz-App?",
+          "a": "Eine Notiz-App gibt dir eine leere Seite. Dieses Tool liest, was du rausgekippt hast, und zieht nur die konkreten, machbaren Aufgaben heraus, Gefühle, Beobachtungen und Frust ignoriert es. Du bekommst eine kurze To-do-Liste, ohne sie selbst zu schreiben."
+        },
+        {
+          "q": "Ist mein Brain Dump privat?",
+          "a": "Ja. Dein Text wird an unsere KI geschickt, um die Aufgaben herauszuziehen, und danach verworfen. Nichts wird mit deiner Identität gespeichert, nichts verlässt deinen Browser außer der Anfrage selbst, und es gibt kein Konto."
+        },
+        {
+          "q": "Warum ist ein Brain Dump bei ADHD hilfreich?",
+          "a": "Bei Erwachsenen mit ADHD ist das Arbeitsgedächtnis oft mit halb fertigen Gedanken überladen. Dieser mentale Ballast ist eine eigene Form von Überforderung. Den Inhalt herauszuholen, auch wenn es chaotisch ist, schafft geistigen Freiraum und macht die machbaren Punkte sichtbar genug, um sie anzugehen."
+        },
+        {
+          "q": "Wie oft sollte ich einen Brain Dump machen?",
+          "a": "Immer dann, wenn sich dein Kopf voll und deine Hände wie festgefahren anfühlen. Manche machen es einmal die Woche, manche jeden Morgen, manche nur, wenn sie überfordert sind. Es gibt keine Regel. Das Signal kommt von innen: Wenn es helfen würde, mach es."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Sobald du eine Aufgabenliste hast, nutz [Pick One](/tools/pick-one), um eine einzelne Startaufgabe hervorzuholen, oder sortier die ganze Liste mit der [ADHD-Eisenhower-Matrix](/tools/eisenhower-matrix). Schick die furchteinflößendste durch das [Tool zum Aufgaben aufteilen](/tools/task-splitter), um sie in kleine Schritte zu zerlegen. Gib dem ersten Schritt mit dem [ADHD-Pomodoro-Timer](/tools/pomodoro) oder dem [visuellen Timer](/tools/visual-timer) ein festes Zeitfenster. Wenn das Alleine-Anfangen der schwere Teil ist, öffne einen [Body-Doubling-Raum](/tools/body-doubling-room) und arbeite neben jemandem. Stöber in der [gesamten Tool-Bibliothek](/tools)."
+  },
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Das Web-Tool leert deinen Kopf einmal. Die Doubly-iOS-App merkt sich deine Dumps, zeigt dir automatisch die eine Aufgabe, die du als Nächstes machen solltest, und nutzt Verbindlichkeits-Check-ins mit echten Menschen, damit die Liste nicht wieder zu Ballast wird.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly Brain-Dump-Tool",
+    "appDescription": "Ein kostenloses Online-Brain-Dump-Tool. Tipp alles ein, was dir im Kopf ist, und die KI zieht die machbaren Aufgaben heraus. Gemacht für ADHD-Gehirne.",
+    "howToName": "So nutzt du das Brain-Dump-Tool",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../../_components/Breadcrumbs';
 import SoftAppCTA from '../../_components/SoftAppCTA';
@@ -7,13 +10,14 @@ import PickOneTool from './PickOneTool';
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/pick-one';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const PAGE_SLUG = 'pick-one';
 const PRIMARY_KEYWORD = 'pick one task tool';
 
 export const metadata: Metadata = {
   title: 'Pick One: Random Task Picker for Overwhelm | Doubly',
   description:
     'Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random. Free, no signup, built for ADHD brains.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Pick One: Random Task Picker for Overwhelm',
     description:

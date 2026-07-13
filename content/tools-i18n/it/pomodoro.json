@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Timer Pomodoro ADHD gratis - Concentrati a sprint | Doubly",
+    "description": "Timer pomodoro gratuito pensato per le menti ADHD. Sprint di concentrazione da 25 minuti, pause da 5, senza registrazione. Salva i progressi nel browser.",
+    "ogTitle": "Timer Pomodoro ADHD gratis - Concentrati a sprint",
+    "ogDescription": "Un timer pomodoro che si adatta a come funziona davvero un cervello ADHD. Gratis, senza registrazione, funziona nel browser.",
+    "twitterTitle": "Timer Pomodoro ADHD gratis",
+    "twitterDescription": "Un timer pomodoro che si adatta a come funziona davvero un cervello ADHD. Gratis, senza registrazione."
+  },
+  "h1": "Timer Pomodoro ADHD gratuito",
+  "breadcrumbLabel": "Timer Pomodoro ADHD",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "answerCapsule": "**Un timer pomodoro per l’ADHD divide il lavoro in sprint brevi e definiti - 25 minuti di concentrazione, poi una pausa di 5 minuti - così un cervello bloccato o sopraffatto ha un punto di partenza chiaro e fattibile.** Questo timer gratuito funziona nel tuo browser, salva i progressi in locale e ti lascia personalizzare la durata dello sprint per adattarlo al tuo cervello. Scegli un’attività, premi Avvia e fermati quando suona.",
+  "intro": "La Tecnica del Pomodoro è un metodo di concentrazione basato su intervalli di lavoro a tempo. Per gli adulti con ADHD funziona perché rende il tempo visibile: uno sprint di 25 minuti trasforma “devo fare questa cosa enorme” in “devo solo lavorare finché il timer non suona”. La pausa fa parte del patto, non è qualcosa che devi guadagnarti.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come usare il timer",
+      "steps": [
+        {
+          "name": "Scegli un’attività",
+          "text": "Una sola. Se hai una lista, guardala, scegli la cosa più piccola che puoi iniziare adesso e mettila via."
+        },
+        {
+          "name": "Premi Avvia",
+          "text": "Parte uno sprint di concentrazione da 25 minuti. Non pensare a finire l’intera attività - lavora e basta finché il timer non suona."
+        },
+        {
+          "name": "Fai la pausa di 5 minuti",
+          "text": "Alzati. Bevi acqua. Non aprire i social. La pausa fa parte della tecnica, non è un premio che puoi saltare."
+        },
+        {
+          "name": "Dopo 4 sprint, fai una pausa lunga",
+          "text": "Un riposo di 15 minuti. È qui che la maggior parte dei cervelli ADHD consolida davvero ciò su cui ha appena lavorato."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché funziona per i cervelli ADHD",
+      "steps": null,
+      "paragraphs": [
+        "Gli adulti con ADHD sperimentano la **cecità temporale**: lo scarto tra “adesso” e “non adesso” si avverte in modo più netto della distanza analogica tra, poniamo, “tra 25 minuti” e “tra 4 ore”. Ricercatori come Russell Barkley e altri l’hanno documentata come una caratteristica centrale delle differenze nelle funzioni esecutive dell’ADHD, non come una colpa morale.",
+        "Un timer pomodoro colma quello scarto rendendo il tempo concreto. Puoi *vedere* i 25 minuti che si assottigliano. L’attività non è più infinita - dura quanto uno sprint. È questo passaggio, dall’astratto al finito, che fa sembrare possibile iniziare.",
+        "Anche le pause obbligate contano. Molti adulti con ADHD tirano avanti fino al burnout perché non si fidano della propria capacità di ripartire. Un timer con una pausa integrata ti dà il permesso di fermarti prima di crollare. [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder) e organizzazioni simili raccomandano intervalli strutturati come strumento pratico per gestire le difficoltà di concentrazione legate all’ADHD."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Perché la tecnica del pomodoro è utile per l’ADHD?",
+          "a": "Esternalizza il tempo. I cervelli ADHD faticano spesso con la cecità temporale - la sensazione che un’attività richieda un’eternità, oppure nessun tempo. Uno sprint visibile di 25 minuti trasforma quell’angoscia astratta in una distanza finita e percorribile. La pausa è già inclusa, così smetti di andare in spirale sul fatto se puoi concedertene una."
+        },
+        {
+          "q": "25 minuti sono la durata giusta per l’ADHD?",
+          "a": "Per alcuni sì, per altri no. Molti adulti con ADHD si trovano meglio con sprint più brevi (10–15 minuti) quando è difficile iniziare, e più lunghi (35–50 minuti) una volta entrati nel flow. Usa il pulsante di personalizzazione sotto il timer per impostare la tua durata. La Tecnica del Pomodoro ufficiale usa 25/5, ma ciò che conta è il principio - lavora, poi fai una pausa."
+        },
+        {
+          "q": "Devo installare qualcosa o registrarmi?",
+          "a": "No. Il timer funziona interamente nel tuo browser. I tuoi progressi (sessioni completate e durate personalizzate) vengono salvati in locale sul tuo dispositivo. Niente lascia il tuo computer o telefono. Nessun account, nessuna email."
+        },
+        {
+          "q": "Il timer continua a scorrere se cambio scheda?",
+          "a": "Sì. Il timer si basa sull’ora reale del giorno, non su uno script che si mette in pausa quando la scheda è in secondo piano. Anche il titolo della scheda del browser si aggiorna con il tempo rimanente, così puoi darci un’occhiata mentre lavori in un’altra finestra."
+        },
+        {
+          "q": "Cosa succede dopo quattro pomodori?",
+          "a": "Ti guadagni una pausa lunga - 15 minuti invece di 5 per impostazione predefinita. Questo riposo più lungo fa parte della Tecnica del Pomodoro standard e dà al tuo cervello una vera finestra di recupero prima del prossimo blocco di concentrazione."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Se uno sprint di 25 minuti ti sembra lungo, prova il [timer visivo](/tools/visual-timer). Stesso quadrante a spicchio che si riduce, la durata che vuoi, e funziona anche come orologio per la cecità temporale se il problema di fondo è perdere la cognizione del tempo. Se la difficoltà è l’opposto, sapere quando fermarti, prova il [timer per l’iperfocus](/tools/hyperfocus-timer) per promemoria vocali ricorrenti a intervalli fissi. Abbina il timer al [generatore di rumore marrone](/tools/brown-noise) se il rumore dell’ufficio o una mente affollata continuano a tirarti fuori dallo sprint. Sfoglia la [libreria completa di strumenti](/tools) o leggi la [libreria di risorse Doubly](/learn) per guide su concentrazione, svuota-cervello e come sbloccarti."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Il timer web ti tiene concentrato per uno sprint. L’app Doubly per iOS ti aiuta a decidere su cosa concentrarti in primo luogo - svuota-cervello, un unico passo chiaro e controlli di responsabilità da parte di persone reali.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": "Timer Pomodoro ADHD Doubly",
+    "appDescription": "Un timer pomodoro gratuito pensato per le menti ADHD. Durate di concentrazione e pausa personalizzabili, basato su browser, senza registrazione.",
+    "howToName": "Come usare il timer pomodoro ADHD",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Ücretsiz Görev Bölme Aracı - Her Görevi Böl | Doubly",
+    "description": "Başlayamadığın bir görev yaz. Ücretsiz yapay zeka aracı onu süre tahminleriyle küçük, yapılabilir adımlara böler. Kayıt yok, ADHD beyinleri için.",
+    "ogTitle": "Ücretsiz Görev Bölme Aracı - Her Görevi Böl",
+    "ogDescription": "Başlayamadığın bir görev yaz. Ücretsiz yapay zeka aracı onu süre tahminleriyle küçük, yapılabilir adımlara böler. Kayıt yok.",
+    "twitterTitle": "Ücretsiz Görev Bölme Aracı",
+    "twitterDescription": "Başlayamadığın bir görev yaz. Yapay zeka onu süre tahminleriyle küçük, yapılabilir adımlara böler."
+  },
+  "h1": "Ücretsiz görev bölme aracı",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "breadcrumbLabel": "Görev Bölme Aracı",
+  "answerCapsule": "**Bir görev bölme aracı, çok büyük hissettiren bir görevi küçük, yapılabilir adımlardan oluşan kısa bir listeye dönüştürür; böylece bunalmış bir beynin başlaması için net bir yeri olur.** Yukarıya bir görev yaz. Araç, süre tahminleriyle sıralı alt adımlar döndürür. ADHD beyinleri için tasarlandı, ücretsiz, kayıt yok. Sayfayı yenile, yazdıkların kaybolur.",
+  "intro": "Çoğu üretkenlik aracı planlayabildiğini varsayar. Bu araç başlayamadığını varsayar. Bir haftadır listende duran görevi yaz ve yapay zekanın onu kendisinin en küçük haline bölmesine izin ver. Sonra tek bir adım at.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Bir görevi nasıl bölersin",
+      "steps": [
+        {
+          "name": "Görevi yaz",
+          "text": "Tek cümle. \"Mutfağı temizle.\" \"Gelen kutusuna cevap yaz.\" \"Raporu yaz.\" Bağlam ya da bahane ekleme, sadece fiil ve o şey."
+        },
+        {
+          "name": "'Böl'e bas",
+          "text": "Yapay zeka, süre tahminleriyle kısa bir adım listesi döndürür. Her adım birkaç dakikalık - düşünmeden başlayabileceğin kadar küçük."
+        },
+        {
+          "name": "İlk adımı at",
+          "text": "Sadece ilk adım. İleriyi okuma. İşaretle. Sonra ikinci adım. Gerisini momentum halleder."
+        },
+        {
+          "name": "Takıldığında dur",
+          "text": "Bir adım hâlâ çok büyük hissettiriyorsa, onu tekrar araca yapıştır ve yeniden böl. Bölünmüş bir şeyi tekrar bölebilirsin."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Bu, ADHD beyinlerinde neden işe yarar",
+      "paragraphs": [
+        "Bir şeye başlama eylemi olan görev başlatma, ADHD'den en çok etkilenen yürütücü işlevlerden biridir. Beyin, belirsiz ve çok adımlı bir görevi tek ve bunaltıcı bir bütün olarak algılar ve donar. Russell Barkley gibi araştırmacılar bunu bir irade sorunu değil, zamanın ve çabanın içsel temsilindeki bir eksiklik olarak tanımlar.",
+        "Küçük ve somut bir adım bunun tersini yapar. \"Mutfağa yürü\" ya da \"dosyayı aç\", harekete geçme enerjisini imkansızdan yönetilebilire indirir. İlk adım ne kadar küçükse, beynin onu kabul etme olasılığı o kadar yüksek olur. Bütün mesele bu.",
+        "[CHADD](https://chadd.org/about-adhd/overview/) gibi kuruluşlar, büyük görevleri küçük adımlara bölmeyi temel bir ADHD dostu strateji olarak önerir. Doubly bunu iki saniyede, mekanik olarak yapar; böylece başlayabilmek için önceden plan yapmak zorunda kalmazsın."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "faqs": [
+        {
+          "q": "Çok büyük hissettiren bir görevi nasıl bölerim?",
+          "a": "Görevi kısa tek bir cümle olarak yaz (\"garajı temizle\", \"raporu yaz\") ve aracın onu bölmesine izin ver. Her adım, düşünmeden başlayabileceğin kadar kısadır. İlkini seç ve yap. Ötesini planlama."
+        },
+        {
+          "q": "Bir görevi adımlara bölmek ADHD için neden bu kadar yardımcı olur?",
+          "a": "ADHD beyinleri, \"bitirilemeyecek kadar büyük\" olarak algıladığı görevler için yeterince dopamin üretmez. Küçük ve sınırlı bir adım, beynin tercih ettiği iş birimidir. Russell Barkley ve diğerlerinin araştırmaları bunu tembellikle değil, görev başlatmadaki yürütücü işlev farklılıklarıyla ilişkilendirir."
+        },
+        {
+          "q": "Araç görevlerimi kaydediyor mu?",
+          "a": "Hayır. Yazdığın görev dışında hiçbir şey tarayıcından çıkmaz; o görev de bölünmesi için yapay zekamıza gönderilir ve ardından silinir. Hesap yok, e-posta yok, geçmiş yok. Sayfayı yenile, gitti."
+        },
+        {
+          "q": "Her alt adım ne kadar sürmeli?",
+          "a": "Araç, her biri birkaç dakika süren adımları hedefler. Bir adım hâlâ çok büyük hissettiriyorsa, o adımı yeni bir görev olarak tekrar yapıştır ve yeniden böl. Bölünmüş bir şeyi yeniden bölmeyi yasaklayan bir kural yok."
+        },
+        {
+          "q": "Ya adımlar tam doğru değilse?",
+          "a": "Onlar bir başlangıç noktasıdır, bir sözleşme değil. Sana uymayan adımları görmezden gel, kafanda yeniden sırala ve görev bittiğinde dur. Amaç, mükemmel bir planı izlemek değil, takıldığın yerden kurtulmak."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "Kafan birden fazla görevle doluysa, önce [beyin boşaltma aracıyla](/tools/brain-dump) başla ve yapay zekanın yapılabilir olanları çıkarmasına izin ver ya da tüm listeyi [ADHD Eisenhower matrisiyle](/tools/eisenhower-matrix) sırala ve başlanacak bir görevi öne çıkarmak için [birini seç](/tools/pick-one) aracını çalıştır. Burada bir adım listesi oluşturduğunda, işin küçüldüğünü görebilmek için ilkini [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) ya da [görsel zamanlayıcıyla](/tools/visual-timer) bir zaman kutusuna al. Zor kısım yalnız başlamaksa, bir arkadaşınla [body doubling odası](/tools/body-doubling-room) aç. [Tüm araç kütüphanesine](/tools) göz at."
+  },
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Web aracı tek seferde bir görevi böler. Doubly iOS uygulaması ise bölmelerini saklar, sonraki adımı otomatik olarak öne çıkarır ve devam etmeni sağlamak için gerçek insanlardan gelen hesap verebilirlik yoklamalarını kullanır.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly Görev Bölme Aracı",
+    "appDescription": "Ücretsiz, yapay zeka destekli bir görev bölme aracı. Başlayamadığın herhangi bir görevi yaz, süre tahminleriyle küçük, yapılabilir adımlar al. ADHD beyinleri için tasarlandı.",
+    "howToName": "Görev bölme aracı nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../../_components/Breadcrumbs';
 import SoftAppCTA from '../../_components/SoftAppCTA';
@@ -7,13 +10,14 @@ import HyperfocusTimer from './HyperfocusTimer';
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/hyperfocus-timer';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const PAGE_SLUG = 'hyperfocus-timer';
 const PRIMARY_KEYWORD = 'hyperfocus timer';
 
 export const metadata: Metadata = {
   title: 'Free Hyperfocus Timer + ADHD Check-In Alarm | Doubly',
   description:
     'A free hyperfocus interrupt timer that pings you every X minutes and announces the time out loud so you do not lose six hours. No signup, runs in your browser.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Free Hyperfocus Timer + ADHD Check-In Alarm',
     description:

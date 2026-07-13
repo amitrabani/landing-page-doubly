@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Learn - ADHD Focus, Tools & Strategies | Doubly",
+    "description": "Plain-language guides on ADHD focus, time-blindness, brain dumping, and getting unstuck. Honest, evidence-based, no shame.",
+    "ogTitle": "Learn - ADHD Focus, Tools & Strategies",
+    "ogDescription": "Plain-language guides on ADHD focus, time-blindness, and getting unstuck.",
+    "twitterTitle": "Learn - ADHD Focus, Tools & Strategies",
+    "twitterDescription": "Plain-language guides on ADHD focus, time-blindness, and getting unstuck."
+  },
+  "h1": "Learn",
+  "breadcrumbLabel": "Learn",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Plain-language guides on how an ADHD brain handles focus, time, and follow-through. Written with real people in mind, not algorithms. Evidence-based, no shame, no clinical claims.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "First articles ship next week",
+      "paragraphs": [
+        "We’re writing the first batch now - covering time-blindness, the science of brain dumping, and why traditional productivity advice keeps failing ADHD adults.",
+        "In the meantime, try the [free ADHD pomodoro timer](/tools/pomodoro) or browse the [full tools library](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "The Doubly iOS app helps you start, not just plan. Brain dump the chaos, get one clear next step, and stay accountable to real people who care about your progress.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

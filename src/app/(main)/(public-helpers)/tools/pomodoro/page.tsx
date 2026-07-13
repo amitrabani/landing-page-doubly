@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../../_components/Breadcrumbs';
 import SoftAppCTA from '../../_components/SoftAppCTA';
@@ -7,13 +10,14 @@ import PomodoroTimer from './PomodoroTimer';
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/pomodoro';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const PAGE_SLUG = 'pomodoro';
 const PRIMARY_KEYWORD = 'ADHD pomodoro timer';
 
 export const metadata: Metadata = {
   title: 'Free ADHD Pomodoro Timer - Focus in Sprints | Doubly',
   description:
     'Free pomodoro timer built for ADHD brains. 25-minute focus sprints, 5-minute breaks, no signup. Saves your progress in your browser.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Free ADHD Pomodoro Timer - Focus in Sprints',
     description:

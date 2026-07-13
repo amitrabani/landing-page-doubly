@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Çevrimiçi Eisenhower Matrisi (ADHD) | Doubly",
+    "description": "'Sıkıcı ama önemli' gibi ADHD dostu çeyrekleri olan ücretsiz çevrimiçi Eisenhower matrisi. Görevleri sürükle, tarayıcında kaydet, kayıt yok.",
+    "ogTitle": "Çevrimiçi Eisenhower Matrisi (ADHD Sürümü)",
+    "ogDescription": "“Sıkıcı ama önemli” gibi çeyreklere sahip ADHD dostu Eisenhower matrisi. Sürükle, yerel kaydet, ücretsiz.",
+    "twitterTitle": "Çevrimiçi Eisenhower Matrisi (ADHD Sürümü)",
+    "twitterDescription": "ADHD dostu çeyrekler. Görevleri sürükle, tarayıcında kaydet, kayıt yok."
+  },
+  "h1": "Çevrimiçi Eisenhower matrisi, ADHD sürümü",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "breadcrumbLabel": "Çevrimiçi Eisenhower Matrisi",
+  "answerCapsule": "**Bir Eisenhower matrisi, görevleri önem ve aciliyete göre dört çeyreğe ayırır; böylece neyi yapacağını, neyi programlayacağını, neyi görmezden geleceğini ve neyi bırakacağını görebilirsin.** Bu sürüm, ders kitabı etiketlerini “sıkıcı ama önemli” gibi ADHD dostu olanlarla değiştirir. Sıralamak için sürükle ya da dokun. Tarayıcında kaydedilir.",
+  "intro": "Klasik matris her görev hakkında iki soru sorar: önemli mi ve acil mi? ADHD beyinleri çoğu zaman cevabı bilir ama sıralamada donup kalır. Çeyrekleri kategorilerine göre değil, nasıl hissettirdiklerine göre adlandırmak, sıralamayı anında yapılır kılar.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Matris nasıl kullanılır",
+      "steps": [
+        {
+          "name": "Görevlerini dök",
+          "text": "Görevleri tek tek yazıp enter'a bas ya da satır sonlarıyla ayrılmış bir listeyi yapıştır. Sıralanmamış satıra düşerler."
+        },
+        {
+          "name": "Her görevi bir çeyreğe ayır",
+          "text": "Masaüstünde bir görevi bir çeyreğe sürükle. Mobilde görevi seçmek için ona dokun, sonra çeyreğe dokun. Sana doğru gelen genellikle doğrudur."
+        },
+        {
+          "name": "Sıkıcı-ama-önemli yığınına bak",
+          "text": "Gelecek haftayı sessizce yaratan odur. Bugün yalnızca tek bir çeyrekte harekete geçeceksen, işte bu odur."
+        },
+        {
+          "name": "Gerisini atla, bırak ya da programla",
+          "text": "“Yangın var” bugüne gider. Gürültülü olan bekleyebilir ya da devredilebilir. Bırak, gerçekten bırakmak olabilir. Listenin tamamlanması şart değil."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "ADHD çerçevelemesi matrisi neden değiştirir",
+      "steps": null,
+      "paragraphs": [
+        "Eisenhower matrisi, insanların sessizce kaçındığı görevleri gün yüzüne çıkarmakta çok başarılıdır; bu da çoğu zaman bir önceliklendirme aracının yapabileceği en önemli şeydir. Standart dört etiket (“Önemli + Acil Değil” gibi) teknik olarak doğrudur ama bir sınav gibi okunur. Zaten bir yürütücü işlev yükünü idare eden bir ADHD beyni için bu sınav, görev daha başlamadan önce verilmesi gereken bir karar daha demektir.",
+        "Çeyrekleri duygusal imzalarına göre yeniden adlandırmak, harekete geçme maliyetini değiştirir. “Yangın var” apaçık ortadadır. “Sıkıcı ama önemli”, çoğu insanın atladığı ve atladığına en çok pişman olduğu olandır (vergi formları, geri dönüşler, sürekli ertelenen diş hekimi randevusu). “Gürültülü ama atlanabilir”, hak etmeden dikkat isteyen şeyleri adlandırır. “Bunları bırak” ise silmeye izin verir; klasik üretkenlik tavsiyeleri bunu nadiren açıkça söyler.",
+        "Önceliklendirme aşamasındaki bilişsel yükü azaltmak, tam olarak [CHADD](https://chadd.org/about-adhd/overview/) gibi kuruluşların yetişkin ADHD'si için önerdiği türden çevresel bir destektir. Matris önce bir düşünme aracıdır, sonra bir takip uygulaması. Onu kalıcı bir yapılacaklar listesi yerine değil, haftalık bir sıfırlama için kullan."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Eisenhower matrisi nedir?",
+          "a": "Eisenhower matrisi, görevleri iki soruya göre sıralayan bir önceliklendirme aracıdır: önemli mi ve acil mi? Bundan “şimdi yap”tan “bırak”a kadar dört kutu çıkar. Başkan Dwight Eisenhower'a atfedilir ve Stephen Covey tarafından The 7 Habits of Highly Effective People kitabında popülerleştirilmiştir."
+        },
+        {
+          "q": "Bu sürüm neden farklı etiketler kullanıyor?",
+          "a": "Ders kitabındaki çeyrek adları (“Önemli + Acil Değil” vb.) kategorileri tanımlar ama ADHD beyinlerini nadiren harekete geçirir. “Sıkıcı ama önemli” ve “gürültülü ama atlanabilir” gibi adlar, görevin gerçekte nasıl hissettirdiğini tanımlar; bu da onları tanımayı ve sıralamayı kolaylaştırır. Alttaki matris ise birebir aynıdır."
+        },
+        {
+          "q": "Sürükle ve bırak nasıl kullanılır?",
+          "a": "Masaüstünde bir görevi sıralanmamış satırdan herhangi bir çeyreğe ya da çeyrekler arasında sürükle. Mobilde bir görevi seçmek için ona dokun, sonra onu koymak istediğin çeyreğe dokun. Ayrıca sıralanmış herhangi bir görevi sıralanmamışa geri göndermek için üzerindeki oka dokunabilirsin."
+        },
+        {
+          "q": "Görevlerim kaydediliyor mu?",
+          "a": "Evet, yalnızca tarayıcında, localStorage aracılığıyla. Hiçbir şey herhangi bir sunucuya gönderilmez, hiçbir şey bir hesaba bağlanmaz ve listeyi temizlediğinde depolama da onunla birlikte temizlenir."
+        },
+        {
+          "q": "ADHD'liysem önce hangi çeyreği yapmalıyım?",
+          "a": "Çoğu ADHD üretkenlik tavsiyesi hemfikirdir: sıkıcı-ama-önemli çeyreği kaldıraç noktasıdır. Yangın-var çeyreği istenmeden dikkati çeker. Sıkıcı-ama-önemli ise sonsuza dek ertelenmeye ve bir sonraki yangını çıkarmaya meyilli olandır. Günde bir sıkıcı-ama-önemli görev yapmak, yüksek etkili bir ritimdir."
+        },
+        {
+          "q": "Bu, normal bir yapılacaklar uygulamasından nasıl farklı?",
+          "a": "Bir yapılacaklar uygulaması sana düz bir liste verir ve önceliklendirebileceğini varsayar. Matris ise iki eksenli bir sıralamayı zorunlu kılar; bu da sessizce kaçındığın maddeleri gün yüzüne çıkarır. Bir takip aracından çok bir düşünme aracıdır ve günlük bir kontrol listesinden ziyade haftalık bir sıfırlama için en iyi şekilde işe yarar."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "Kafan sıralama yapamayacak kadar doluysa, kaosu dışsallaştırmak için bir [beyin boşaltmayla](/tools/brain-dump) başla. Dört çeyrek bile fazlaysa, başlanacak tek bir görevi öne çıkarmak için [birini seç](/tools/pick-one) aracını kullan. Bir çeyrek maddesi seçildiğinde, onu [görev bölme aracıyla](/tools/task-splitter) yapılabilir adımlara böl ve ilk adımı [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) bir zaman kutusuna al. [Tüm araç kütüphanesine](/tools) göz at."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Web matrisi haftalık bir düşünme aracıdır. Doubly iOS uygulaması ise bir sonraki adımı atar: neyin önemli olduğunu sıraladığında, uygulama bugün yapılacak tek sıkıcı-ama-önemli görevi öne çıkarır ve gerçekten olması için gerçek insanlardan gelen hesap verebilirlik yoklamalarını kullanır.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly Eisenhower Matrisi (ADHD Sürümü)",
+    "appDescription": "ADHD dostu çeyrek adlarına sahip ücretsiz çevrimiçi bir Eisenhower matrisi. Görevleri “yangın var”, “sıkıcı ama önemli”, “gürültülü ama atlanabilir” ya da “bunları bırak” çeyreklerine sürükle. Yerel olarak kaydeder.",
+    "howToName": "Çevrimiçi Eisenhower matrisi aracı nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

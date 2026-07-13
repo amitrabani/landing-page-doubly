@@ -14,6 +14,7 @@ import type { Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useT, useLocale } from '@/i18n/TranslationProvider';
+import { toolsHubHref } from '@/i18n/toolsManifest';
 import { defaultLocale } from '@/i18n/config';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { EASE, SPRING, SPRING_SOFT } from '@/lib/motion';
@@ -120,7 +121,7 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/tools" className="text-sm text-muted hover:text-charcoal transition-colors">
+            <Link href={toolsHubHref(locale)} className="text-sm text-muted hover:text-charcoal transition-colors">
               {t.navbar.tools}
             </Link>
             {desktopLinks.map(({ id, label }) => (
@@ -192,7 +193,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-6">
               <motion.div variants={menuItemVariants}>
                 <Link
-                  href="/tools"
+                  href={toolsHubHref(locale)}
                   onClick={() => setMobileOpen(false)}
                   className="text-xl font-medium text-charcoal"
                 >

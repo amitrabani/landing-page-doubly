@@ -5,10 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/gen-tools-manifest.mjs",
     "build": "next build",
+    "gen:tools-manifest": "node scripts/gen-tools-manifest.mjs",
     "start": "next start",
     "lint": "next lint",
-    "check:i18n": "node scripts/check-translations.mjs"
+    "check:i18n": "node scripts/check-translations.mjs",
+    "check:tools-content": "node scripts/check-tools-content.mjs",
+    "check:locale": "node scripts/check-locale-detection.mjs",
+    "check:links": "node scripts/check-built-links.mjs"
   },
   "keywords": [],
   "author": "",

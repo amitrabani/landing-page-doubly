@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Matriz de Eisenhower Online (Edição TDAH) | Doubly",
+    "description": "Matriz de Eisenhower online e gratuita com quadrantes para TDAH, tipo \"chato mas importante\". Arraste tarefas, salve no navegador, sem cadastro.",
+    "ogTitle": "Matriz de Eisenhower Online (Edição TDAH)",
+    "ogDescription": "Matriz de Eisenhower pensada para o TDAH com quadrantes tipo \"chato mas importante\". Arraste, salve no navegador, de graça.",
+    "twitterTitle": "Matriz de Eisenhower Online (Edição TDAH)",
+    "twitterDescription": "Quadrantes pensados para o TDAH. Arraste tarefas, salve no navegador, sem cadastro."
+  },
+  "h1": "Matriz de Eisenhower online, edição TDAH",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "breadcrumbLabel": "Matriz de Eisenhower Online",
+  "answerCapsule": "**A matriz de Eisenhower organiza as tarefas por importância e urgência em quatro quadrantes, para você enxergar o que fazer, o que agendar, o que ignorar e o que largar.** Esta versão troca os rótulos de manual por outros pensados para o TDAH, tipo “chato mas importante”. Arraste ou toque para organizar. Salva no seu navegador.",
+  "intro": "A matriz clássica faz duas perguntas sobre cada tarefa: ela é importante e ela é urgente? Cérebros com TDAH geralmente sabem a resposta, mas travam na hora de organizar. Nomear os quadrantes pelo que eles fazem você sentir, não pela categoria, deixa a organização instantânea.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar a matriz",
+      "steps": [
+        {
+          "name": "Despeje suas tarefas",
+          "text": "Digite as tarefas uma por uma e aperte enter, ou cole uma lista separada por quebras de linha. Elas caem na linha das não organizadas."
+        },
+        {
+          "name": "Organize cada tarefa em um quadrante",
+          "text": "No computador, arraste a tarefa para um quadrante. No celular, toque na tarefa para selecioná-la e depois toque no quadrante. O que parecer certo geralmente é o certo."
+        },
+        {
+          "name": "Olhe para o monte do chato mas importante",
+          "text": "É esse que, no silêncio, constrói a sua próxima semana. Se você for agir em só um quadrante hoje, que seja esse."
+        },
+        {
+          "name": "Pule, largue ou agende o resto",
+          "text": "Pegando fogo é para hoje. Barulhento pode esperar ou ser delegado. Largar pode ser largar mesmo. A lista não precisa ser toda feita."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que a abordagem para TDAH muda a matriz",
+      "steps": null,
+      "paragraphs": [
+        "A matriz de Eisenhower é ótima para trazer à tona as tarefas que a gente evita no silêncio, que muitas vezes é a coisa mais importante que uma ferramenta de priorização pode fazer. Os quatro rótulos padrão (“Importante + Não Urgente” e por aí vai) são tecnicamente corretos, mas parecem um teste. Para um cérebro com TDAH que já lida com uma carga de função executiva, esse teste é mais uma decisão antes mesmo de a tarefa começar.",
+        "Renomear os quadrantes pela sua assinatura emocional muda o custo de ativação. “Pegando fogo” é óbvio. “Chato mas importante” é o que a maioria das pessoas pula e mais se arrepende de ter pulado (declaração de imposto, retornos pendentes, aquela consulta no dentista que você vive remarcando). “Barulhento mas dispensável” dá nome às coisas que exigem atenção sem merecer. “Pode largar” dá permissão para deletar, coisa que os conselhos clássicos de produtividade raramente dizem em voz alta.",
+        "Reduzir a carga cognitiva na etapa de priorização é exatamente o tipo de apoio ambiental que instituições como a [CHADD](https://chadd.org/about-adhd/overview/) recomendam para o TDAH em adultos. A matriz é, antes de tudo, um apoio para pensar, e só depois um app de acompanhamento. Use ela para uma reorganização semanal, não como substituta permanente da sua lista de tarefas."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "O que é a matriz de Eisenhower?",
+          "a": "A matriz de Eisenhower é uma ferramenta de priorização que organiza as tarefas por duas perguntas: ela é importante e ela é urgente? Disso saem quatro caixas, do \"faça agora\" ao \"pode largar\". Ela é atribuída ao presidente Dwight Eisenhower e foi popularizada por Stephen Covey em Os 7 Hábitos das Pessoas Altamente Eficazes."
+        },
+        {
+          "q": "Por que esta versão usa rótulos diferentes?",
+          "a": "Os nomes dos quadrantes de manual (\"Importante + Não Urgente\" etc.) descrevem categorias, mas raramente movem cérebros com TDAH. Nomes como \"chato mas importante\" e \"barulhento mas dispensável\" descrevem como a tarefa realmente parece, o que torna mais fácil reconhecer e organizar. A matriz por trás é idêntica."
+        },
+        {
+          "q": "Como eu uso o arrastar e soltar?",
+          "a": "No computador, arraste uma tarefa da linha das não organizadas para qualquer quadrante, ou de um quadrante para outro. No celular, toque em uma tarefa para selecioná-la e depois toque no quadrante em que você quer colocá-la. Você também pode tocar na seta de qualquer tarefa já organizada para mandá-la de volta para as não organizadas."
+        },
+        {
+          "q": "Minhas tarefas ficam salvas?",
+          "a": "Sim, só no seu navegador, via localStorage. Nada é enviado para nenhum servidor, nada fica ligado a uma conta, e limpar a lista já limpa o armazenamento junto."
+        },
+        {
+          "q": "Se eu tenho TDAH, qual quadrante eu faço primeiro?",
+          "a": "A maioria dos conselhos de produtividade para TDAH concorda: o quadrante chato mas importante é o ponto de alavanca. O quadrante pegando fogo puxa a atenção sem nem precisar pedir. O chato mas importante é o que tende a ser adiado para sempre e virar o próximo incêndio. Fazer uma tarefa chata mas importante por dia é um ritmo de alto impacto."
+        },
+        {
+          "q": "Como isso é diferente de um app de tarefas comum?",
+          "a": "Um app de tarefas te dá uma lista plana e parte do princípio de que você consegue priorizar. A matriz força uma organização em dois eixos, que traz à tona os itens que você vem evitando no silêncio. É mais uma ferramenta para pensar do que para acompanhar, e funciona melhor para uma reorganização semanal do que como checklist diário."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Se sua cabeça está cheia demais até para organizar, comece com um [despejo mental](/tools/brain-dump) para colocar o caos para fora. Se até quatro quadrantes for demais, use o [escolher uma](/tools/pick-one) para trazer à tona uma única tarefa para começar. Depois de escolher um item de um quadrante, divida ele em passos possíveis com a [ferramenta de divisão de tarefas](/tools/task-splitter) e cronometre o primeiro passo com o [timer pomodoro para TDAH](/tools/pomodoro). Explore a [biblioteca completa de ferramentas](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "A matriz da web é uma ferramenta semanal para pensar. O app Doubly para iOS faz o próximo passo: depois que você organizou o que importa, o app traz à tona a única tarefa chata mas importante para fazer hoje e usa check-ins de cobrança com pessoas reais para que ela realmente aconteça.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Matriz de Eisenhower do Doubly (Edição TDAH)",
+    "appDescription": "Uma matriz de Eisenhower online e gratuita com nomes de quadrante pensados para o TDAH. Arraste tarefas para \"pegando fogo\", \"chato mas importante\", \"barulhento mas dispensável\" ou \"pode largar\". Salva localmente.",
+    "howToName": "Como usar a ferramenta de matriz de Eisenhower online",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

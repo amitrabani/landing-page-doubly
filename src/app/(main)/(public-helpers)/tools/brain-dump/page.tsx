@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { buildPathAlternates } from '@/i18n/alternates';
+import { localesWithPack } from '@/lib/toolsContent';
+import { nonDefaultLocales } from '@/i18n/config';
 import Link from 'next/link';
 import Breadcrumbs from '../../_components/Breadcrumbs';
 import SoftAppCTA from '../../_components/SoftAppCTA';
@@ -7,13 +10,14 @@ import BrainDumpTool from './BrainDumpTool';
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_PATH = '/tools/brain-dump';
 const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const PAGE_SLUG = 'brain-dump';
 const PRIMARY_KEYWORD = 'brain dump tool';
 
 export const metadata: Metadata = {
   title: 'Free Brain Dump Tool Online - Clear Your Head | Doubly',
   description:
     'Free brain dump tool online. Dump everything on your mind, AI pulls out the actionable tasks and drops the rest. No signup. Built for ADHD brains.',
-  alternates: { canonical: PAGE_URL },
+  alternates: buildPathAlternates('en', PAGE_PATH, localesWithPack(PAGE_SLUG, nonDefaultLocales)),
   openGraph: {
     title: 'Free Brain Dump Tool Online - Clear Your Head',
     description:

@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Matrice d'Eisenhower en ligne (édition TDAH) | Doubly",
+    "description": "Matrice d'Eisenhower gratuite en ligne, quadrants pensés TDAH comme « ennuyeux mais important ». Glisse tes tâches, sauvegarde en local, sans inscription.",
+    "ogTitle": "Matrice d'Eisenhower en ligne (édition TDAH)",
+    "ogDescription": "Matrice d'Eisenhower pensée TDAH, avec des quadrants comme « ennuyeux mais important ». Glisse, sauvegarde en local, gratuit.",
+    "twitterTitle": "Matrice d'Eisenhower en ligne (édition TDAH)",
+    "twitterDescription": "Des quadrants pensés TDAH. Glisse tes tâches, sauvegarde dans ton navigateur, sans inscription."
+  },
+  "h1": "Matrice d'Eisenhower en ligne, édition TDAH",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "breadcrumbLabel": "Matrice d'Eisenhower en ligne",
+  "answerCapsule": "**Une matrice d'Eisenhower trie tes tâches par importance et urgence en quatre quadrants, pour que tu voies quoi faire, quoi planifier, quoi ignorer et quoi laisser tomber.** Cette version remplace les étiquettes scolaires par des noms pensés TDAH, comme « ennuyeux mais important ». Glisse ou tape pour trier. Tout est sauvegardé dans ton navigateur.",
+  "intro": "La matrice classique pose deux questions sur chaque tâche : est-elle importante, et est-elle urgente ? Les cerveaux TDAH connaissent souvent la réponse, mais se figent au moment de trier. Nommer les quadrants par ce qu'ils font ressentir, plutôt que par leur catégorie, rend le tri instantané.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser la matrice",
+      "steps": [
+        {
+          "name": "Déverse tes tâches",
+          "text": "Écris tes tâches une par une et appuie sur Entrée, ou colle une liste avec un retour à la ligne entre chaque. Elles atterrissent dans la rangée des non triées."
+        },
+        {
+          "name": "Trie chaque tâche dans un quadrant",
+          "text": "Sur ordinateur, fais glisser une tâche dans un quadrant. Sur mobile, tape la tâche pour la sélectionner, puis tape le quadrant. Le quadrant qui te semble le bon est généralement le bon."
+        },
+        {
+          "name": "Regarde la pile ennuyeux-mais-important",
+          "text": "C'est elle qui fabrique discrètement ta semaine prochaine. Si tu n'agis que sur un seul quadrant aujourd'hui, c'est celui-là."
+        },
+        {
+          "name": "Ignore, laisse tomber ou planifie le reste",
+          "text": "« En feu » passe aujourd'hui. « Bruyant » peut attendre ou être délégué. « À laisser tomber » a le droit d'être laissé tomber. La liste n'a pas besoin d'être terminée."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi un cadrage TDAH change la matrice",
+      "steps": null,
+      "paragraphs": [
+        "La matrice d'Eisenhower excelle à faire remonter les tâches qu'on évite discrètement, ce qui est souvent la chose la plus utile qu'un outil de priorisation puisse faire. Les quatre étiquettes standard (« Important + Non urgent », etc.) sont techniquement exactes, mais elles se lisent comme un questionnaire. Pour un cerveau TDAH qui compose déjà avec une charge de fonctions exécutives, ce questionnaire, c'est une décision de plus avant même que la tâche commence.",
+        "Renommer les quadrants d'après leur signature émotionnelle change le coût d'activation. « En feu » est évident. « Ennuyeux mais important » est celui que la plupart des gens sautent et regrettent le plus d'avoir sauté (déclarations d'impôts, relances, ce rendez-vous chez le dentiste qu'ils repoussent depuis des semaines). « Bruyant mais négligeable » nomme les choses qui réclament de l'attention sans la mériter. « À laisser tomber » donne la permission de supprimer, ce que les conseils de productivité classiques disent rarement à voix haute.",
+        "Réduire la charge cognitive au moment de la priorisation, c'est exactement le genre d'étayage environnemental que des organismes comme [CHADD](https://chadd.org/about-adhd/overview/) recommandent pour le TDAH de l'adulte. La matrice est d'abord une aide à la réflexion, une appli de suivi ensuite. Utilise-la pour une remise à zéro hebdomadaire, pas comme un remplacement permanent de ta liste de tâches."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Qu'est-ce que la matrice d'Eisenhower ?",
+          "a": "La matrice d'Eisenhower est un outil de priorisation qui trie les tâches selon deux questions : est-elle importante, et est-elle urgente ? Il en ressort quatre cases, de « fais-le maintenant » à « laisse tomber ». On l'attribue au président Dwight Eisenhower, et elle a été popularisée par Stephen Covey dans The 7 Habits of Highly Effective People."
+        },
+        {
+          "q": "Pourquoi cette version utilise-t-elle des étiquettes différentes ?",
+          "a": "Les noms de quadrants scolaires (« Important + Non urgent », etc.) décrivent des catégories, mais font rarement bouger les cerveaux TDAH. Des noms comme « ennuyeux mais important » et « bruyant mais négligeable » décrivent ce que la tâche fait vraiment ressentir, ce qui les rend plus faciles à reconnaître et à trier. La matrice sous-jacente est identique."
+        },
+        {
+          "q": "Comment utiliser le glisser-déposer ?",
+          "a": "Sur ordinateur, fais glisser une tâche depuis la rangée des non triées vers n'importe quel quadrant, ou d'un quadrant à l'autre. Sur mobile, tape une tâche pour la sélectionner, puis tape le quadrant où tu veux la mettre. Tu peux aussi taper la flèche sur n'importe quelle tâche triée pour la renvoyer dans les non triées."
+        },
+        {
+          "q": "Mes tâches sont-elles sauvegardées ?",
+          "a": "Oui, dans ton navigateur uniquement, via localStorage. Rien n'est envoyé à un serveur, rien n'est lié à un compte, et vider la liste efface le stockage avec elle."
+        },
+        {
+          "q": "Par quel quadrant commencer si j'ai un TDAH ?",
+          "a": "La plupart des conseils de productivité pour le TDAH sont d'accord : le quadrant ennuyeux-mais-important est le point de levier. Le quadrant « en feu » attire l'attention sans qu'on le lui demande. L'ennuyeux-mais-important, c'est ce qui a tendance à être repoussé éternellement et à provoquer le prochain incendie. Faire une tâche ennuyeuse-mais-importante par jour est un rythme à fort impact."
+        },
+        {
+          "q": "En quoi est-ce différent d'une appli de to-do classique ?",
+          "a": "Une appli de to-do te donne une liste à plat et suppose que tu sais prioriser. La matrice impose un tri sur deux axes, ce qui fait remonter les éléments que tu évitais discrètement. C'est un outil de réflexion plus qu'un outil de suivi, et il marche mieux pour une remise à zéro hebdomadaire que pour une checklist quotidienne."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Si ta tête est trop pleine pour trier, commence par un [vide-cerveau](/tools/brain-dump) pour externaliser le chaos. Si même quatre quadrants, c'est trop, utilise [choisis-en une](/tools/pick-one) pour faire remonter une seule tâche par où commencer. Une fois qu'un élément d'un quadrant est choisi, découpe-le en étapes faisables avec l'[outil de découpage de tâches](/tools/task-splitter) et minute la première étape avec le [minuteur Pomodoro TDAH](/tools/pomodoro). Parcours la [bibliothèque complète d'outils](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Essaie-le dans l'appli",
+    "body": "La matrice web est un outil de réflexion hebdomadaire. L'appli Doubly sur iOS fait l'étape suivante : une fois que tu as trié ce qui compte, l'appli fait remonter la seule tâche ennuyeuse-mais-importante à faire aujourd'hui et utilise des points de suivi de responsabilisation avec de vraies personnes, pour que ça se fasse vraiment.",
+    "label": "Essaie-le dans l'appli"
+  },
+  "jsonld": {
+    "appName": "Matrice d'Eisenhower Doubly (édition TDAH)",
+    "appDescription": "Une matrice d'Eisenhower gratuite en ligne, avec des noms de quadrants pensés TDAH. Fais glisser tes tâches dans « en feu », « ennuyeux mais important », « bruyant mais négligeable » ou « à laisser tomber ». Sauvegarde en local.",
+    "howToName": "Comment utiliser l'outil de matrice d'Eisenhower en ligne",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

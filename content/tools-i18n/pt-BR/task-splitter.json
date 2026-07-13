@@ -1,0 +1,101 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Ferramenta grátis para dividir tarefas | Doubly",
+    "description": "Digite uma tarefa que você não consegue começar. Uma IA grátis divide em passos pequenos e possíveis com tempos estimados. Sem cadastro, feito para o TDAH.",
+    "ogTitle": "Ferramenta grátis para dividir tarefas - Divida qualquer tarefa",
+    "ogDescription": "Digite uma tarefa que você não consegue começar. Uma IA grátis divide em passos pequenos e possíveis com tempos estimados. Sem cadastro.",
+    "twitterTitle": "Ferramenta grátis para dividir tarefas",
+    "twitterDescription": "Digite uma tarefa que você não consegue começar. A IA divide em passos pequenos e possíveis com tempos estimados."
+  },
+  "h1": "Ferramenta grátis para dividir tarefas",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "breadcrumbLabel": "Ferramenta para dividir tarefas",
+  "answerCapsule": "**Uma ferramenta para dividir tarefas transforma uma tarefa que parece grande demais em uma lista curta de passos pequenos e possíveis, para que um cérebro sobrecarregado tenha um ponto de partida claro.** Digite uma tarefa acima. A ferramenta devolve sub-passos ordenados com tempos estimados. Feita para cérebros com TDAH, grátis, sem cadastro. Atualize a página e o que você digitou some.",
+  "intro": "A maioria dos apps de produtividade parte do princípio de que você consegue planejar. Este parte do princípio de que você não consegue começar. Digite a tarefa que está parada na sua lista há uma semana e deixe a IA cortá-la na menor versão possível dela mesma. Depois, faça um passo.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como dividir uma tarefa",
+      "steps": [
+        {
+          "name": "Digite a tarefa",
+          "text": "Uma frase. \"Limpar a cozinha.\" \"Responder os e-mails.\" \"Escrever o relatório.\" Não adicione contexto nem desculpas, só o verbo e a coisa."
+        },
+        {
+          "name": "Toque em Dividir",
+          "text": "A IA devolve uma lista curta de passos com tempos estimados. Cada passo leva poucos minutos, pequeno o bastante para começar sem pensar."
+        },
+        {
+          "name": "Faça o primeiro passo",
+          "text": "Só o primeiro passo. Não leia os próximos. Marque como feito. Depois o segundo. O impulso faz o resto."
+        },
+        {
+          "name": "Pare quando travar",
+          "text": "Se um passo ainda parecer grande demais, cole ele de volta na ferramenta e divida de novo. Você pode dividir uma divisão."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que isso funciona para cérebros com TDAH",
+      "paragraphs": [
+        "A iniciação de tarefas, o ato de começar algo, é uma das funções executivas mais afetadas pelo TDAH. O cérebro lê uma tarefa vaga e cheia de passos como uma única unidade avassaladora e trava. Pesquisadores como Russell Barkley descrevem isso como um déficit na representação interna do tempo e do esforço, não como um problema de força de vontade.",
+        "Um passo pequeno e concreto faz o contrário. “Ir até a cozinha” ou “abrir o arquivo” leva a energia de ativação de impossível para administrável. Quanto menor o primeiro passo, maior a chance de o cérebro aceitá-lo. É disso que se trata.",
+        "Organizações como [CHADD](https://chadd.org/about-adhd/overview/) recomendam dividir tarefas grandes em passos pequenos como uma estratégia central para quem tem TDAH. O Doubly faz isso de forma mecânica, em dois segundos, para que você não precise planejar antes de conseguir começar."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "Como eu divido uma tarefa que parece grande demais?",
+          "a": "Digite a tarefa como uma frase curta (\"limpar a garagem\", \"escrever o relatório\") e deixe a ferramenta dividir. Cada passo é curto o bastante para começar sem pensar. Escolha o primeiro e faça. Não planeje além disso."
+        },
+        {
+          "q": "Por que dividir uma tarefa em passos ajuda tanto no TDAH?",
+          "a": "Cérebros com TDAH produzem pouca dopamina para tarefas que o cérebro lê como \"grandes demais para terminar\". Um passo pequeno e finito é a unidade de trabalho preferida do cérebro. Pesquisas de Russell Barkley e outros ligam isso a diferenças de função executiva na iniciação de tarefas, não a preguiça."
+        },
+        {
+          "q": "A ferramenta salva as minhas tarefas?",
+          "a": "Não. Nada sai do seu navegador além da tarefa que você digita, que é enviada para a nossa IA dividir e depois descartada. Sem conta, sem e-mail, sem histórico. Atualize a página e ela some."
+        },
+        {
+          "q": "Quanto tempo cada sub-passo deve levar?",
+          "a": "A ferramenta busca passos que levem poucos minutos cada. Se um passo ainda parecer grande demais, cole esse passo de volta como uma tarefa nova e divida de novo. Não existe regra contra dividir uma divisão."
+        },
+        {
+          "q": "E se os passos não estiverem certinhos?",
+          "a": "Eles são um ponto de partida, não um contrato. Ignore os passos que não se aplicam, reordene na sua cabeça e pare quando a tarefa estiver pronta. O objetivo é destravar, não seguir um plano perfeito."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Se a sua cabeça está cheia de mais de uma tarefa, comece pela [ferramenta de despejo mental](/tools/brain-dump) e deixe a IA tirar primeiro os itens acionáveis, ou organize a lista inteira com a [matriz de Eisenhower para TDAH](/tools/eisenhower-matrix) e use o [escolha uma](/tools/pick-one) para revelar uma tarefa por onde começar. Quando já tiver uma lista de passos aqui, marque o tempo do primeiro com o [timer pomodoro para TDAH](/tools/pomodoro) ou o [timer visual](/tools/visual-timer) para ver o trabalho encolhendo. Se o difícil é começar sozinho, abra uma [sala de acompanhamento](/tools/body-doubling-room) com um amigo. Explore a [biblioteca completa de ferramentas](/tools)."
+  },
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "A ferramenta web divide uma tarefa por vez. O app do Doubly para iOS guarda as suas divisões, mostra o próximo passo automaticamente e usa check-ins de cobrança de pessoas reais para te manter em movimento.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Ferramenta de dividir tarefas do Doubly",
+    "appDescription": "Uma ferramenta grátis com IA para dividir tarefas. Digite qualquer tarefa que você não consegue começar e receba passos pequenos e possíveis com tempos estimados. Feita para cérebros com TDAH.",
+    "howToName": "Como usar a ferramenta para dividir tarefas",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

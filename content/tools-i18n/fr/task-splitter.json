@@ -1,0 +1,95 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Outil gratuit de découpage de tâches | Doubly",
+    "description": "Écris une tâche que tu n’arrives pas à commencer. Notre outil IA gratuit la découpe en petites étapes faisables avec des durées. Sans inscription, pensé TDAH.",
+    "ogTitle": "Outil gratuit de découpage de tâches - Découpe n’importe quelle tâche",
+    "ogDescription": "Écris une tâche que tu n’arrives pas à commencer. Notre outil IA gratuit la découpe en petites étapes faisables avec des durées. Sans inscription.",
+    "twitterTitle": "Outil gratuit de découpage de tâches",
+    "twitterDescription": "Écris une tâche que tu n’arrives pas à commencer. L’IA la découpe en petites étapes faisables avec des durées estimées."
+  },
+  "h1": "Outil gratuit de découpage de tâches",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "breadcrumbLabel": "Outil de découpage de tâches",
+  "answerCapsule": "**Un outil de découpage de tâches transforme une tâche qui paraît trop grosse en une courte liste de petites étapes faisables, pour qu’un cerveau débordé ait un point de départ clair.** Écris une tâche ci-dessus. L’outil renvoie des sous-étapes ordonnées avec des durées estimées. Conçu pour les cerveaux TDAH, gratuit, sans inscription. Recharge la page et ce que tu as écrit disparaît.",
+  "intro": "La plupart des applis de productivité supposent que tu sais planifier. Celle-ci suppose que tu n’arrives pas à commencer. Écris la tâche qui traîne sur ta liste depuis une semaine et laisse l’IA la réduire à sa plus petite version. Puis fais une seule étape.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment découper une tâche",
+      "steps": [
+        {
+          "name": "Écris la tâche",
+          "text": "Une seule phrase. « Nettoyer la cuisine. » « Répondre aux e-mails. » « Écrire le rapport. » N’ajoute ni contexte ni excuses, juste le verbe et la chose."
+        },
+        {
+          "name": "Appuie sur Découper",
+          "text": "L’IA renvoie une courte liste d’étapes avec des durées estimées. Chaque étape dure quelques minutes, assez courte pour la commencer sans réfléchir."
+        },
+        {
+          "name": "Fais l’étape une",
+          "text": "Juste l’étape une. Ne lis pas la suite. Coche-la. Puis l’étape deux. L’élan fera le reste."
+        },
+        {
+          "name": "Arrête-toi quand tu bloques",
+          "text": "Si une étape paraît encore trop grosse, recolle-la dans l’outil et découpe-la à nouveau. Tu peux découper un découpage."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi ça marche pour les cerveaux TDAH",
+      "paragraphs": [
+        "L’initiation des tâches, le fait de commencer quelque chose, est l’une des fonctions exécutives les plus touchées par le TDAH. Le cerveau lit une tâche vague et en plusieurs étapes comme un seul bloc écrasant, et il se fige. Des chercheurs comme Russell Barkley décrivent cela comme un déficit de la représentation interne du temps et de l’effort, pas comme un problème de volonté.",
+        "Une petite étape concrète fait l’inverse. « Aller jusqu’à la cuisine » ou « ouvrir le fichier » fait passer l’énergie d’activation d’impossible à gérable. Plus la première étape est petite, plus le cerveau a de chances de l’accepter. C’est tout le jeu.",
+        "Des organismes comme [CHADD](https://chadd.org/about-adhd/overview/) recommandent de découper les grandes tâches en petites étapes, comme stratégie de base adaptée au TDAH. Doubly le fait mécaniquement, en deux secondes, pour que tu n’aies pas à le planifier avant de pouvoir commencer."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Comment découper une tâche qui paraît trop grosse ?",
+          "a": "Écris la tâche en une courte phrase (« nettoyer le garage », « écrire le rapport ») et laisse l’outil la découper. Chaque étape est assez courte pour la commencer sans réfléchir. Choisis la première et fais-la. Ne planifie rien au-delà."
+        },
+        {
+          "q": "Pourquoi découper une tâche en étapes aide-t-il autant avec le TDAH ?",
+          "a": "Les cerveaux TDAH produisent trop peu de dopamine pour les tâches perçues comme « trop grosses pour être terminées ». Une petite étape bien délimitée est l’unité de travail que le cerveau préfère. Les travaux de Russell Barkley et d’autres relient cela à des différences de fonction exécutive dans l’initiation des tâches, pas à de la paresse."
+        },
+        {
+          "q": "L’outil enregistre-t-il mes tâches ?",
+          "a": "Non. Rien ne quitte ton navigateur, à part la tâche que tu écris, qui est envoyée à notre IA pour être découpée, puis supprimée. Pas de compte, pas d’e-mail, pas d’historique. Recharge la page et tout disparaît."
+        },
+        {
+          "q": "Combien de temps doit durer chaque sous-étape ?",
+          "a": "L’outil vise des étapes de quelques minutes chacune. Si une étape paraît encore trop grosse, recolle-la comme une nouvelle tâche et découpe-la à nouveau. Rien n’interdit de découper un découpage."
+        },
+        {
+          "q": "Et si les étapes ne sont pas tout à fait justes ?",
+          "a": "Ce sont un point de départ, pas un contrat. Ignore les étapes qui ne s’appliquent pas, réorganise-les dans ta tête, et arrête-toi quand la tâche est finie. Le but, c’est de te débloquer, pas de suivre un plan parfait."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Si ta tête déborde de plus d’une tâche, commence par l’[outil de vide-cerveau](/tools/brain-dump) et laisse l’IA en extraire d’abord les éléments actionnables, ou trie toute la liste avec la [matrice d’Eisenhower TDAH](/tools/eisenhower-matrix) puis lance [choisis-en une](/tools/pick-one) pour faire remonter une tâche par où commencer. Une fois que tu as une liste d’étapes ici, chronomètre la première avec le [minuteur Pomodoro TDAH](/tools/pomodoro) ou le [minuteur visuel](/tools/visual-timer) pour voir le travail rétrécir. Si le plus dur, c’est de commencer seul, ouvre une [salle de body doubling](/tools/body-doubling-room) avec un ami. Parcours la [bibliothèque complète d’outils](/tools)."
+  },
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "L’outil web découpe une tâche à la fois. L’appli Doubly sur iOS enregistre tes découpages, fait remonter automatiquement la prochaine étape et utilise des points de suivi de responsabilisation avec de vraies personnes pour te faire avancer.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Outil de découpage de tâches Doubly",
+    "appDescription": "Un outil gratuit de découpage de tâches propulsé par l’IA. Écris n’importe quelle tâche que tu n’arrives pas à commencer et récupère de petites étapes faisables avec des durées estimées. Conçu pour les cerveaux TDAH.",
+    "howToName": "Comment utiliser l’outil de découpage de tâches",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

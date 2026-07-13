@@ -1,0 +1,101 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Gratis takensplitter - Elke taak opsplitsen | Doubly",
+    "description": "Typ een taak waar je niet aan kunt beginnen. Gratis AI-tool splitst hem in kleine, haalbare stappen met tijdsinschattingen. Geen registratie, voor ADHD-breinen.",
+    "ogTitle": "Gratis takensplitter - Elke taak opsplitsen",
+    "ogDescription": "Typ een taak waar je niet aan kunt beginnen. Gratis AI-tool splitst hem in kleine, haalbare stappen met tijdsinschattingen. Geen registratie.",
+    "twitterTitle": "Gratis takensplitter",
+    "twitterDescription": "Typ een taak waar je niet aan kunt beginnen. AI splitst hem in kleine, haalbare stappen met tijdsinschattingen."
+  },
+  "h1": "Gratis takensplitter",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Takensplitter",
+  "answerCapsule": "**Een takensplitter verandert één taak die te groot voelt in een kort lijstje kleine, haalbare stappen, zodat een overweldigd brein een duidelijke plek heeft om te beginnen.** Typ hierboven een taak. De tool geeft geordende substappen met tijdsinschattingen terug. Gemaakt voor ADHD-breinen, gratis, geen registratie. Ververs de pagina en je invoer is weg.",
+  "intro": "De meeste productiviteitstools gaan ervan uit dat je kunt plannen. Deze gaat ervan uit dat je niet kunt beginnen. Typ de taak die al een week op je lijst staat en laat de AI hem in de kleinst mogelijke versie van zichzelf hakken. Doe daarna één stap.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo splits je een taak op",
+      "steps": [
+        {
+          "name": "Typ de taak",
+          "text": "Eén zin. \"Keuken schoonmaken.\" \"Inbox beantwoorden.\" \"Rapport schrijven.\" Geen context of smoesjes, alleen het werkwoord en het ding."
+        },
+        {
+          "name": "Tik op Splits het op",
+          "text": "De AI geeft een kort lijstje stappen met tijdsinschattingen terug. Elke stap duurt een paar minuten, klein genoeg om zonder nadenken te beginnen."
+        },
+        {
+          "name": "Doe stap één",
+          "text": "Alleen stap één. Lees niet vooruit. Vink hem af. Dan stap twee. Het momentum doet de rest."
+        },
+        {
+          "name": "Stop als je vastloopt",
+          "text": "Voelt een stap nog steeds te groot? Plak hem terug in de tool en splits hem opnieuw. Je mag een splitsing splitsen."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom dit werkt voor ADHD-breinen",
+      "paragraphs": [
+        "Taakinitiatie, het daadwerkelijk ergens aan beginnen, is een van de executieve functies die het sterkst door ADHD worden geraakt. Het brein leest een vage taak met meerdere stappen als één overweldigend geheel en bevriest. Onderzoekers als Russell Barkley beschrijven dit als een tekort in de interne representatie van tijd en inspanning, niet als een probleem van wilskracht.",
+        "Een kleine, concrete stap doet het tegenovergestelde. “Loop naar de keuken” of “open het bestand” brengt de activatie-energie van onmogelijk naar behapbaar. Hoe kleiner de eerste stap, hoe groter de kans dat het brein hem accepteert. Dat is het hele spel.",
+        "Organisaties als [CHADD](https://chadd.org/about-adhd/overview/) raden aan om grote taken op te delen in kleine stappen, als kernstrategie die vriendelijk is voor ADHD. Doubly doet dat mechanisch, in twee seconden, zodat je het niet hoeft te plannen voordat je kunt beginnen."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "faqs": [
+        {
+          "q": "Hoe splits ik een taak op die te groot voelt?",
+          "a": "Typ de taak als één korte zin (\"garage schoonmaken\", \"het rapport schrijven\") en laat de tool hem opsplitsen. Elke stap is kort genoeg om zonder nadenken te beginnen. Kies de eerste en doe hem. Plan niet verder dan dat."
+        },
+        {
+          "q": "Waarom helpt het opdelen van een taak in stappen zo goed bij ADHD?",
+          "a": "ADHD-breinen maken te weinig dopamine aan voor taken die het brein leest als \"te groot om af te maken.\" Een kleine, afgebakende stap is de werkeenheid die het brein het liefst heeft. Onderzoek van Russell Barkley en anderen koppelt dit aan verschillen in executieve functies bij taakinitiatie, niet aan luiheid."
+        },
+        {
+          "q": "Slaat de tool mijn taken op?",
+          "a": "Nee. Er verlaat niets je browser, behalve de taak die je typt. Die gaat naar onze AI om hem op te splitsen en wordt daarna weggegooid. Geen account, geen e-mail, geen geschiedenis. Ververs de pagina en hij is weg."
+        },
+        {
+          "q": "Hoe lang zou elke substap moeten zijn?",
+          "a": "De tool mikt op stappen van een paar minuten elk. Voelt een stap nog steeds te groot? Plak die stap terug als een nieuwe taak en splits hem opnieuw. Er is geen regel tegen het splitsen van een splitsing."
+        },
+        {
+          "q": "Wat als de stappen niet helemaal kloppen?",
+          "a": "De stappen zijn een vertrekpunt, geen contract. Negeer stappen die niet van toepassing zijn, zet ze in je hoofd in een andere volgorde, en stop als de taak klaar is. Het doel is om weer op gang te komen, niet om een perfect plan te volgen."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Zit je hoofd vol met meer dan één taak? Begin dan met de [brain dump-tool](/tools/brain-dump) en laat de AI eerst de bruikbare taken eruit halen, of sorteer de hele lijst met de [ADHD-Eisenhower-matrix](/tools/eisenhower-matrix) en gebruik [kies er één](/tools/pick-one) om een starttaak naar boven te halen. Zodra je hier een lijst met stappen hebt, time-box de eerste met de [ADHD-pomodoro-timer](/tools/pomodoro) of de [visuele timer](/tools/visual-timer), zodat je het werk ziet krimpen. Als alleen beginnen het lastige deel is, open dan een [body doubling-ruimte](/tools/body-doubling-room) met een vriend. Bekijk de [volledige tool-bibliotheek](/tools)."
+  },
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De webtool splitst één taak per keer op. De Doubly iOS-app bewaart je opsplitsingen, laat automatisch de volgende stap zien, en gebruikt verantwoordings-check-ins van echte mensen om je in beweging te houden.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly Takensplitter",
+    "appDescription": "Een gratis takensplitter op basis van AI. Typ elke taak waar je niet aan kunt beginnen en krijg kleine, haalbare stappen met tijdsinschattingen terug. Gemaakt voor ADHD-breinen.",
+    "howToName": "Zo gebruik je de takensplitter",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

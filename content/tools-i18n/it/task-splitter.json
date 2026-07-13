@@ -1,0 +1,101 @@
+{
+  "slug": "task-splitter",
+  "meta": {
+    "title": "Scomponi attività gratis: dividi ogni task | Doubly",
+    "description": "Scrivi un’attività che non riesci a iniziare. L’IA gratuita la divide in piccoli passi fattibili con stime di tempo. Senza registrazione, per menti ADHD.",
+    "ogTitle": "Scomponi attività gratis: dividi ogni task",
+    "ogDescription": "Scrivi un’attività che non riesci a iniziare. L’IA gratuita la divide in piccoli passi fattibili con stime di tempo. Senza registrazione.",
+    "twitterTitle": "Strumento gratuito per scomporre le attività",
+    "twitterDescription": "Scrivi un’attività che non riesci a iniziare. L’IA la divide in piccoli passi fattibili con stime di tempo."
+  },
+  "h1": "Strumento gratuito per scomporre le attività",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "breadcrumbLabel": "Strumento per scomporre le attività",
+  "answerCapsule": "**Uno strumento per scomporre le attività trasforma un’attività che sembra troppo grande in una breve lista di piccoli passi fattibili, così un cervello sopraffatto ha un punto di partenza chiaro.** Scrivi un’attività qui sopra. Lo strumento restituisce sotto-passi ordinati con stime di tempo. Fatto per le menti ADHD, gratis, senza registrazione. Aggiorna la pagina e ciò che hai scritto sparisce.",
+  "intro": "La maggior parte delle app di produttività dà per scontato che tu sappia pianificare. Questa dà per scontato che tu non riesca a iniziare. Scrivi l’attività ferma sulla tua lista da una settimana e lascia che l’IA la riduca alla sua versione più piccola. Poi fai un passo.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come scomporre un’attività",
+      "steps": [
+        {
+          "name": "Scrivi l’attività",
+          "text": "Una frase. «Pulire la cucina.» «Rispondere alle email.» «Scrivere il report.» Non aggiungere contesto o scuse, solo il verbo e la cosa."
+        },
+        {
+          "name": "Premi Scomponi",
+          "text": "L’IA restituisce una breve lista di passi con stime di tempo. Ogni passo dura pochi minuti, abbastanza piccolo da iniziare senza pensarci."
+        },
+        {
+          "name": "Fai il primo passo",
+          "text": "Solo il primo passo. Non leggere avanti. Spuntalo. Poi il secondo. Lo slancio farà il resto."
+        },
+        {
+          "name": "Fermati quando ti blocchi",
+          "text": "Se un passo sembra ancora troppo grande, riscrivilo nello strumento e dividilo di nuovo. Puoi dividere una divisione."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché funziona per le menti ADHD",
+      "paragraphs": [
+        "L’avvio delle attività, l’atto di cominciare qualcosa, è una delle funzioni esecutive più colpite dall’ADHD. Il cervello legge un’attività vaga e composta da più passaggi come un unico blocco che sopraffà, e si blocca. Ricercatori come Russell Barkley lo descrivono come un deficit nella rappresentazione interna del tempo e dello sforzo, non un problema di forza di volontà.",
+        "Un passo piccolo e concreto fa l’opposto. «Vai in cucina» o «apri il file» porta l’energia di attivazione da impossibile a gestibile. Più piccolo è il primo passo, più alta è la probabilità che il cervello lo accetti. È tutto qui il gioco.",
+        "Organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) consigliano di scomporre le grandi attività in piccoli passi come strategia fondamentale a misura di ADHD. Doubly lo fa in modo meccanico, in due secondi, così non devi pianificarlo prima di poter iniziare."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Come scompongo un’attività che sembra troppo grande?",
+          "a": "Scrivi l’attività come una breve frase («pulire il garage», «scrivere il report») e lascia che lo strumento la divida. Ogni passo è abbastanza breve da iniziare senza pensarci. Scegli il primo e fallo. Non pianificare oltre."
+        },
+        {
+          "q": "Perché scomporre un’attività in passi aiuta così tanto con l’ADHD?",
+          "a": "I cervelli ADHD producono meno dopamina per le attività che il cervello legge come «troppo grandi da finire». Un passo piccolo e definito è l’unità di lavoro preferita dal cervello. Le ricerche di Russell Barkley e altri collegano tutto questo a differenze nelle funzioni esecutive legate all’avvio delle attività, non alla pigrizia."
+        },
+        {
+          "q": "Lo strumento salva le mie attività?",
+          "a": "No. Niente lascia il tuo browser tranne l’attività che scrivi, che viene inviata alla nostra IA per scomporla e poi scartata. Nessun account, nessuna email, nessuna cronologia. Aggiorna la pagina e sparisce."
+        },
+        {
+          "q": "Quanto dovrebbe durare ogni sotto-passo?",
+          "a": "Lo strumento punta a passi che durano pochi minuti ciascuno. Se un passo sembra ancora troppo grande, rimettilo come nuova attività e dividilo di nuovo. Non c’è nessuna regola che vieti di dividere una divisione."
+        },
+        {
+          "q": "E se i passi non fossero del tutto giusti?",
+          "a": "Sono un punto di partenza, non un contratto. Ignora i passi che non ti servono, riordinali nella tua testa e fermati quando l’attività è finita. L’obiettivo è sbloccarti, non seguire un piano perfetto."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Se hai in testa più di un’attività, parti dallo [strumento svuota-cervello](/tools/brain-dump) e lascia che l’IA estragga prima le cose concrete, oppure ordina l’intera lista con la [matrice di Eisenhower per l’ADHD](/tools/eisenhower-matrix) e usa [scegline una](/tools/pick-one) per far emergere un’attività da cui partire. Una volta che hai una lista di passi qui, cronometra il primo con il [timer pomodoro per l’ADHD](/tools/pomodoro) o il [timer visivo](/tools/visual-timer) così puoi vedere il lavoro rimpicciolirsi. Se la parte difficile è iniziare da solo, apri una [stanza di body doubling](/tools/body-doubling-room) con un amico. Esplora la [libreria completa degli strumenti](/tools)."
+  },
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Lo strumento web scompone un’attività alla volta. L’app Doubly per iOS salva le tue scomposizioni, fa emergere automaticamente il passo successivo e usa controlli di responsabilità da parte di persone reali per tenerti in movimento.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": "Strumento Doubly per scomporre le attività",
+    "appDescription": "Uno strumento gratuito basato sull’IA per scomporre le attività. Scrivi qualsiasi attività che non riesci a iniziare e ricevi piccoli passi fattibili con stime di tempo. Fatto per le menti ADHD.",
+    "howToName": "Come usare lo strumento per scomporre le attività",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

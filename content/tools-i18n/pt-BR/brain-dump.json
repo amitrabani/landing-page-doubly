@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Ferramenta grátis de despejo mental | Doubly",
+    "description": "Despejo mental grátis online. Solta tudo que está na sua cabeça e a IA tira só as tarefas possíveis, jogando o resto fora. Sem cadastro, feita para o TDAH.",
+    "ogTitle": "Ferramenta grátis de despejo mental - Esvazie a cabeça",
+    "ogDescription": "Solta tudo que está na sua cabeça e a IA tira as tarefas possíveis. Grátis, sem cadastro.",
+    "twitterTitle": "Ferramenta grátis de despejo mental",
+    "twitterDescription": "Solta tudo que está na sua cabeça e a IA tira as tarefas possíveis."
+  },
+  "h1": "Ferramenta grátis de despejo mental",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "breadcrumbLabel": "Ferramenta de despejo mental",
+  "answerCapsule": "**Uma ferramenta de despejo mental deixa você tirar da cabeça, em um só lugar, tudo o que está lá dentro e depois separa só as tarefas possíveis, para você fazer algo em vez de só ficar girando em círculos.** Digite à vontade acima. A ferramenta lê o despejo, ignora as emoções e o desabafo e devolve uma lista curta de afazeres. Grátis, sem cadastro, nada é guardado.",
+  "intro": "Aquele loop mental de “tem coisa demais, não consigo começar, mas tem coisa demais” é justamente o que o despejo mental existe para quebrar. Você escreve para esvaziar a cabeça, não para planejar. O plano cai do outro lado como uma lista em que você consegue agir.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como fazer um despejo mental online",
+      "steps": [
+        {
+          "name": "Digite tudo que está na sua cabeça",
+          "text": "Sem estrutura, sem edição. Tarefas, preocupações, pensamentos pela metade, reclamações, ideias. Tire tudo da cabeça e jogue na página."
+        },
+        {
+          "name": "Toque em Extrair as tarefas",
+          "text": "A IA lê o despejo, ignora as emoções e o desabafo e devolve só os itens possíveis em uma lista curta."
+        },
+        {
+          "name": "Escolha uma",
+          "text": "Só uma. A menor de todas. Marque como feita quando terminar."
+        },
+        {
+          "name": "Volte quando precisar",
+          "text": "Amanhã de manhã, daqui a uma hora ou daqui a uma semana. A ferramenta está aqui sempre que a sua cabeça estiver cheia demais para agir."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que o despejo mental funciona para cérebros com TDAH",
+      "paragraphs": [
+        "Adultos com TDAH costumam carregar mais na memória de trabalho do que o cérebro foi feito para segurar. Loops abertos, tarefas pensadas pela metade, coisas que queriam dizer, coisas que quase esqueceram. Pesquisadores descrevem isso como um problema de sobrecarga da memória de trabalho, não como uma falha de foco. O cérebro está ocupado, só que não com aquilo que você quer que ele esteja ocupado.",
+        "Externalizar esses pensamentos numa página reduz essa carga. O “Getting Things Done”, de David Allen, chama isso de captura de loops abertos. Assim que um item vai para o papel, o cérebro para de ficar repetindo ele. No caso do TDAH especificamente, isso pode ser a diferença entre ficar paralisado e conseguir começar.",
+        "O que a ferramenta acrescenta é o segundo passo: separar de novo só os itens possíveis, para você não precisar reler o despejo e decidir o que contava. Organizações como a [CHADD](https://chadd.org/about-adhd/overview/) recomendam externalizar os pensamentos como uma estratégia central e amigável para quem tem TDAH."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "O que é um despejo mental?",
+          "a": "Um despejo mental é o ato de colocar no papel tudo o que está na sua cabeça em uma única página, sem organizar nem julgar, para liberar a memória de trabalho. A ideia não é organizar, é externalizar. Assim que os pensamentos saem, você pode decidir o que fazer com eles."
+        },
+        {
+          "q": "Como isso é diferente de um app de notas comum?",
+          "a": "Um app de notas te dá uma página em branco. Esta ferramenta lê o que você despejou e separa só as tarefas concretas e possíveis, ignorando emoções, observações e desabafos. Você recebe uma lista curta de afazeres sem precisar escrever uma."
+        },
+        {
+          "q": "O meu despejo mental é privado?",
+          "a": "Sim. O seu texto é enviado para a nossa IA extrair as tarefas e depois é descartado. Nada é guardado ligado à sua identidade, nada sai do seu navegador além da própria requisição e não existe conta."
+        },
+        {
+          "q": "Por que o despejo mental é útil para o TDAH?",
+          "a": "Adultos com TDAH costumam ter a memória de trabalho lotada de pensamentos pela metade. Essa bagunça mental é um tipo de sobrecarga por si só. Tirar tudo isso da cabeça, mesmo que de forma bagunçada, libera espaço cognitivo e deixa os itens possíveis visíveis o suficiente para você agir sobre eles."
+        },
+        {
+          "q": "Com que frequência devo fazer um despejo mental?",
+          "a": "Sempre que a sua cabeça parecer cheia e as suas mãos parecerem travadas. Tem gente que faz uma vez por semana, tem gente que faz toda manhã, tem gente que só faz quando está sobrecarregada. Não existe regra. O sinal é interno: se for ajudar, faça."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Quando você já tiver uma lista de tarefas, use o [escolha uma](/tools/pick-one) para revelar uma única tarefa por onde começar, ou organize a lista inteira com a [matriz de Eisenhower para TDAH](/tools/eisenhower-matrix). Mande a mais assustadora para a [ferramenta para dividir tarefas](/tools/task-splitter) e quebre ela em passos pequenos. Marque o tempo do primeiro passo com o [timer pomodoro para TDAH](/tools/pomodoro) ou o [timer visual](/tools/visual-timer). Se o difícil é começar sozinho, abra uma [sala de acompanhamento](/tools/body-doubling-room) e trabalhe ao lado de alguém. Explore a [biblioteca completa de ferramentas](/tools)."
+  },
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "A ferramenta web esvazia a sua cabeça uma vez. O app do Doubly para iOS guarda os seus despejos, mostra a única tarefa que você deve fazer a seguir e usa check-ins de cobrança de pessoas reais para que a lista não vire bagunça de novo.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Ferramenta de despejo mental do Doubly",
+    "appDescription": "Uma ferramenta grátis de despejo mental online. Digite tudo o que está na sua cabeça e a IA extrai as tarefas possíveis. Feita para cérebros com TDAH.",
+    "howToName": "Como usar a ferramenta de despejo mental",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

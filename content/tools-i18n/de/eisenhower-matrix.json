@@ -1,0 +1,105 @@
+{
+  "slug": "eisenhower-matrix",
+  "meta": {
+    "title": "Eisenhower-Matrix online (ADHD-Edition) | Doubly",
+    "description": "Kostenlose Eisenhower-Matrix mit ADHD-freundlichen Quadranten wie „langweilig, aber wichtig“ statt Lehrbuch-Begriffen. Ziehen, lokal speichern, ohne Anmeldung.",
+    "ogTitle": "Eisenhower-Matrix online (ADHD-Edition)",
+    "ogDescription": "ADHD-freundliche Eisenhower-Matrix mit Quadranten wie „langweilig, aber wichtig“. Ziehen, lokal speichern, kostenlos.",
+    "twitterTitle": "Eisenhower-Matrix online (ADHD-Edition)",
+    "twitterDescription": "ADHD-freundliche Quadranten. Aufgaben ziehen, im Browser speichern, ohne Anmeldung."
+  },
+  "h1": "Eisenhower-Matrix online, ADHD-Edition",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Eisenhower-Matrix online",
+  "answerCapsule": "**Eine Eisenhower-Matrix sortiert Aufgaben nach Wichtigkeit und Dringlichkeit in vier Quadranten, damit du siehst, was zu tun ist, was du einplanen, was du ignorieren und was du streichen kannst.** Diese Version tauscht die Lehrbuch-Begriffe gegen ADHD-freundliche aus, wie „langweilig, aber wichtig“. Zum Sortieren ziehen oder tippen. Speichert in deinem Browser.",
+  "intro": "Die klassische Matrix stellt zu jeder Aufgabe zwei Fragen: Ist sie wichtig, und ist sie dringend? ADHD-Gehirne kennen die Antwort oft, erstarren aber beim Sortieren. Die Quadranten danach zu benennen, wie sie sich anfühlen, statt nach ihrer Kategorie, macht das Sortieren blitzschnell.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du die Matrix",
+      "steps": [
+        {
+          "name": "Kipp deine Aufgaben rein",
+          "text": "Tipp Aufgaben einzeln ein und drück Enter, oder füg eine Liste mit Zeilenumbrüchen getrennt ein. Sie landen in der unsortierten Zeile."
+        },
+        {
+          "name": "Sortier jede Aufgabe in einen Quadranten",
+          "text": "Am Desktop ziehst du eine Aufgabe in einen Quadranten. Am Handy tippst du die Aufgabe an, um sie auszuwählen, und dann den Quadranten. Was sich richtig anfühlt, ist meistens auch richtig."
+        },
+        {
+          "name": "Schau dir den Stapel „langweilig, aber wichtig“ an",
+          "text": "Das ist der, der still und leise deine nächste Woche entstehen lässt. Wenn du heute nur an einem Quadranten arbeitest, dann an diesem."
+        },
+        {
+          "name": "Überspring, streich oder plan den Rest",
+          "text": "Was brennt, kommt heute dran. Lautes kann warten oder abgegeben werden. Weg darf einfach weg. Die Liste muss nicht abgearbeitet werden."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum die ADHD-Perspektive die Matrix verändert",
+      "steps": null,
+      "paragraphs": [
+        "Die Eisenhower-Matrix ist hervorragend darin, genau die Aufgaben ans Licht zu holen, die man still und leise vor sich herschiebt, und das ist oft das Wichtigste, was ein Priorisierungs-Tool leisten kann. Die vier Standard-Labels („Wichtig + Nicht dringend“ und so weiter) sind technisch korrekt, lesen sich aber wie ein Quiz. Für ein ADHD-Gehirn, das ohnehin schon mit einer Belastung der exekutiven Funktionen jongliert, ist dieses Quiz eine weitere Entscheidung, noch bevor die Aufgabe überhaupt beginnt.",
+        "Die Quadranten nach ihrer emotionalen Signatur zu benennen, verändert den Startaufwand. „Brennt“ ist eindeutig. „Langweilig, aber wichtig“ ist der, den die meisten überspringen und am meisten bereuen, übersprungen zu haben (Steuererklärung, Rückmeldungen, der Zahnarzttermin, den sie ständig verschieben). „Laut, aber verzichtbar“ benennt die Dinge, die Aufmerksamkeit fordern, ohne sie zu verdienen. „Weg damit“ gibt die Erlaubnis zu löschen, was klassische Produktivitätsratschläge nur selten laut aussprechen.",
+        "Die kognitive Last beim Priorisieren zu senken, ist genau die Art von äußerer Struktur, die Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) für Erwachsene mit ADHD empfehlen. Die Matrix ist zuerst eine Denkhilfe und erst danach eine Tracking-App. Nutz sie für einen wöchentlichen Neustart, nicht als dauerhaften Ersatz für deine To-do-Liste."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Was ist die Eisenhower-Matrix?",
+          "a": "Die Eisenhower-Matrix ist ein Priorisierungs-Tool, das Aufgaben anhand von zwei Fragen sortiert: Ist sie wichtig, und ist sie dringend? Daraus ergeben sich vier Felder, von „sofort erledigen“ bis „streichen“. Sie wird Präsident Dwight Eisenhower zugeschrieben und wurde von Stephen Covey in „Die 7 Wege zur Effektivität“ bekannt gemacht."
+        },
+        {
+          "q": "Warum verwendet diese Version andere Begriffe?",
+          "a": "Die Lehrbuch-Namen der Quadranten („Wichtig + Nicht dringend“ usw.) beschreiben Kategorien, bewegen ADHD-Gehirne aber selten. Namen wie „langweilig, aber wichtig“ und „laut, aber verzichtbar“ beschreiben, wie sich die Aufgabe tatsächlich anfühlt, und das macht sie leichter zu erkennen und zu sortieren. Die Matrix dahinter ist dieselbe."
+        },
+        {
+          "q": "Wie funktioniert das Ziehen und Ablegen?",
+          "a": "Am Desktop ziehst du eine Aufgabe aus der unsortierten Zeile in einen beliebigen Quadranten oder zwischen den Quadranten hin und her. Am Handy tippst du eine Aufgabe an, um sie auszuwählen, und dann den Quadranten, in den sie soll. Du kannst auch bei jeder sortierten Aufgabe auf den Pfeil tippen, um sie zurück zu „unsortiert“ zu schicken."
+        },
+        {
+          "q": "Werden meine Aufgaben gespeichert?",
+          "a": "Ja, aber nur in deinem Browser, über localStorage. Nichts wird an einen Server geschickt, nichts ist mit einem Konto verknüpft, und wenn du die Liste leerst, wird auch der Speicher geleert."
+        },
+        {
+          "q": "Welchen Quadranten sollte ich zuerst angehen, wenn ich ADHD habe?",
+          "a": "Die meisten ADHD-Produktivitätstipps sind sich einig: Der Quadrant „langweilig, aber wichtig“ ist der Hebel. Der Quadrant „brennt“ zieht Aufmerksamkeit auf sich, ohne dass man ihn darum bitten müsste. „Langweilig, aber wichtig“ ist das, was ewig aufgeschoben wird und das nächste Feuer entfacht. Eine „langweilig, aber wichtig“-Aufgabe pro Tag zu erledigen, ist ein Rhythmus mit großer Wirkung."
+        },
+        {
+          "q": "Wie unterscheidet sich das von einer normalen To-do-App?",
+          "a": "Eine To-do-App gibt dir eine flache Liste und setzt voraus, dass du priorisieren kannst. Die Matrix erzwingt ein Sortieren nach zwei Achsen, wodurch die Punkte sichtbar werden, die du still und leise vermieden hast. Sie ist eher ein Denk- als ein Tracking-Tool und eignet sich am besten für einen wöchentlichen Neustart statt für eine tägliche Checkliste."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Wenn dein Kopf zu voll zum Sortieren ist, fang mit einem [Brain Dump](/tools/brain-dump) an, um das Chaos nach außen zu bringen. Wenn selbst vier Quadranten zu viel sind, nutz [Pick One](/tools/pick-one), um eine einzelne Startaufgabe hervorzuholen. Sobald ein Punkt aus einem Quadranten gewählt ist, zerleg ihn mit dem [Tool zum Aufgaben-Aufteilen](/tools/task-splitter) in machbare Schritte und begrenze den ersten Schritt mit dem [ADHD-Pomodoro-Timer](/tools/pomodoro) zeitlich. Stöber in der [gesamten Tool-Bibliothek](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Die Web-Matrix ist ein Denk-Tool für einmal die Woche. Die Doubly-iOS-App übernimmt den nächsten Schritt: Sobald du sortiert hast, was zählt, zeigt dir die App die eine „langweilig, aber wichtig“-Aufgabe, die heute dran ist, und nutzt Verbindlichkeits-Check-ins mit echten Menschen, damit sie wirklich passiert.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly Eisenhower-Matrix (ADHD-Edition)",
+    "appDescription": "Eine kostenlose Online-Eisenhower-Matrix mit ADHD-freundlichen Quadranten-Namen. Zieh Aufgaben in „brennt“, „langweilig, aber wichtig“, „laut, aber verzichtbar“ oder „weg damit“. Speichert lokal.",
+    "howToName": "So nutzt du die Eisenhower-Matrix online",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Minuteur Pomodoro TDAH gratuit - Focus par sprints | Doubly",
+    "description": "Minuteur Pomodoro gratuit pour les cerveaux TDAH. Sprints de focus de 25 min, pauses de 5 min, sans inscription. Progression enregistrée dans ton navigateur.",
+    "ogTitle": "Minuteur Pomodoro TDAH gratuit - Focus par sprints",
+    "ogDescription": "Un minuteur Pomodoro adapté au fonctionnement réel d’un cerveau TDAH. Gratuit, sans inscription, dans ton navigateur.",
+    "twitterTitle": "Minuteur Pomodoro TDAH gratuit",
+    "twitterDescription": "Un minuteur Pomodoro adapté au fonctionnement réel d’un cerveau TDAH. Gratuit, sans inscription."
+  },
+  "h1": "Minuteur Pomodoro TDAH gratuit",
+  "breadcrumbLabel": "Minuteur Pomodoro TDAH",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "answerCapsule": "**Un minuteur Pomodoro pour le TDAH découpe le travail en sprints courts et finis - 25 minutes de focus, puis une pause de 5 minutes - pour qu’un cerveau bloqué ou débordé ait un point de départ clair et faisable.** Ce minuteur gratuit tourne dans ton navigateur, enregistre ta progression en local et te laisse ajuster la durée des sprints pour qu’elle colle à ton cerveau. Choisis une tâche, appuie sur Démarrer, et arrête-toi quand ça sonne.",
+  "intro": "La technique Pomodoro est une méthode de focus construite autour d’intervalles de travail chronométrés. Pour les adultes TDAH, elle fonctionne parce qu’elle rend le temps visible : un sprint de 25 minutes transforme « je dois faire ce truc énorme » en « je dois juste travailler jusqu’à ce que le minuteur sonne ». La pause fait partie du deal, ce n’est pas quelque chose que tu dois mériter.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser le minuteur",
+      "steps": [
+        {
+          "name": "Choisis une tâche",
+          "text": "Une seule. Si tu as une liste, regarde-la, choisis la plus petite chose que tu peux commencer maintenant, et range la liste."
+        },
+        {
+          "name": "Appuie sur Démarrer",
+          "text": "Un sprint de focus de 25 minutes commence. Ne te soucie pas de finir toute la tâche - travaille juste jusqu’à ce que le minuteur sonne."
+        },
+        {
+          "name": "Prends la pause de 5 minutes",
+          "text": "Lève-toi. Bois de l’eau. N’ouvre pas les réseaux sociaux. La pause fait partie de la technique, ce n’est pas une récompense que tu peux sauter."
+        },
+        {
+          "name": "Après 4 sprints, prends une longue pause",
+          "text": "Un repos de 15 minutes. C’est le moment où la plupart des cerveaux TDAH consolident vraiment ce sur quoi ils viennent de travailler."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi ça marche pour les cerveaux TDAH",
+      "steps": null,
+      "paragraphs": [
+        "Les adultes TDAH vivent une **cécité temporelle** : l’écart entre « maintenant » et « pas maintenant » se ressent plus fortement que la distance analogique entre, disons, « dans 25 minutes » et « dans 4 heures ». Les chercheurs Russell Barkley et d’autres ont documenté cela comme une caractéristique centrale des différences de fonctions exécutives dans le TDAH, pas comme un défaut moral.",
+        "Un minuteur Pomodoro comble cet écart en rendant le temps concret. Tu peux *voir* les 25 minutes diminuer. La tâche n’est plus infinie - elle a la durée d’un seul sprint. Ce basculement, de l’abstrait au fini, c’est ce qui rend le fait de commencer possible.",
+        "Les pauses imposées comptent aussi. Beaucoup d’adultes TDAH tiennent bon jusqu’à l’épuisement parce qu’ils ne font pas confiance à leur propre capacité à revenir. Un minuteur avec une pause intégrée te donne la permission de t’arrêter avant de craquer. [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder, l’association pour les enfants et adultes atteints de TDAH) et des organismes similaires recommandent des intervalles structurés comme un outil pratique pour gérer les difficultés de focus liées au TDAH."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Pourquoi la technique Pomodoro est-elle utile pour le TDAH ?",
+          "a": "Elle externalise le temps. Les cerveaux TDAH ont souvent du mal avec la cécité temporelle - cette impression qu’une tâche va durer une éternité, ou ne prendre aucun temps. Un sprint visible de 25 minutes transforme cette angoisse abstraite en une distance finie et franchissable. La pause est intégrée, alors tu arrêtes de tourner en boucle pour savoir si tu as le droit d’en prendre une."
+        },
+        {
+          "q": "25 minutes, est-ce la bonne durée pour le TDAH ?",
+          "a": "Pour certains oui, pour d’autres non. Beaucoup d’adultes TDAH s’en sortent mieux avec des sprints plus courts (10 à 15 minutes) quand l’initiation est difficile, et plus longs (35 à 50 minutes) une fois entrés dans le flow. Utilise le bouton de personnalisation sous le minuteur pour définir la tienne. La technique Pomodoro officielle utilise 25/5, mais c’est le principe - travailler, puis faire une pause - qui compte."
+        },
+        {
+          "q": "Dois-je installer quelque chose ou m’inscrire ?",
+          "a": "Non. Le minuteur tourne entièrement dans ton navigateur. Ta progression (sessions terminées et durées personnalisées) est enregistrée en local sur ton appareil. Rien ne quitte ton ordinateur ou ton téléphone. Pas de compte, pas d’e-mail."
+        },
+        {
+          "q": "Le minuteur continue-t-il de tourner si je change d’onglet ?",
+          "a": "Oui. Le minuteur se base sur l’heure réelle, pas sur un script qui se met en pause quand l’onglet est en arrière-plan. Le titre de l’onglet du navigateur affiche aussi le temps restant, pour que tu puisses y jeter un œil pendant que tu travailles dans une autre fenêtre."
+        },
+        {
+          "q": "Que se passe-t-il après quatre pomodoros ?",
+          "a": "Tu gagnes une longue pause - 15 minutes par défaut au lieu de 5. Ce repos plus long fait partie de la technique Pomodoro standard et donne à ton cerveau une vraie fenêtre de récupération avant le prochain bloc de focus."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Si un sprint de 25 minutes te paraît long, essaie le [minuteur visuel](/tools/visual-timer). Le même cadran dont la part se réduit, la durée que tu veux, et il fait aussi office d’horloge de cécité temporelle si perdre la notion du temps est le vrai problème. Si c’est l’inverse ton souci, savoir quand t’arrêter, essaie le [minuteur d’hyperfocus](/tools/hyperfocus-timer) pour des points de contrôle parlés qui reviennent à intervalle fixe. Associe le minuteur au [générateur de bruit brun](/tools/brown-noise) si le bruit du bureau ou un esprit trop agité te sort sans cesse du sprint. Parcours la [bibliothèque complète d’outils](/tools) ou lis la [bibliothèque de ressources Doubly](/learn) pour des guides sur le focus, le vide-cerveau et comment te débloquer."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "Le minuteur web te garde concentré le temps d’un sprint. L’appli Doubly sur iOS t’aide à décider sur quoi te concentrer en premier lieu - vide-cerveau, une seule prochaine étape claire, et des points de suivi de responsabilisation avec de vraies personnes.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Minuteur Pomodoro TDAH Doubly",
+    "appDescription": "Un minuteur Pomodoro gratuit conçu pour les cerveaux TDAH. Durées de focus et de pause personnalisables, dans le navigateur, sans inscription.",
+    "howToName": "Comment utiliser le minuteur Pomodoro TDAH",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

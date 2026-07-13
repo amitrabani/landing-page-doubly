@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Kostenloser ADHD-Pomodoro-Timer: Fokus | Doubly",
+    "description": "Kostenloser Pomodoro-Timer für ADHD-Gehirne. 25 Minuten Fokus, 5 Minuten Pause, keine Anmeldung. Speichert deinen Fortschritt in deinem Browser.",
+    "ogTitle": "Kostenloser ADHD-Pomodoro-Timer: Fokus in Sprints",
+    "ogDescription": "Ein Pomodoro-Timer, der zu der Art passt, wie ein ADHD-Gehirn wirklich funktioniert. Kostenlos, keine Anmeldung, läuft in deinem Browser.",
+    "twitterTitle": "Kostenloser ADHD-Pomodoro-Timer",
+    "twitterDescription": "Ein Pomodoro-Timer, der zu der Art passt, wie ein ADHD-Gehirn wirklich funktioniert. Kostenlos, keine Anmeldung."
+  },
+  "h1": "Kostenloser ADHD-Pomodoro-Timer",
+  "breadcrumbLabel": "ADHD-Pomodoro-Timer",
+  "breadcrumbHome": "Start",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Ein ADHD-Pomodoro-Timer zerlegt die Arbeit in kurze, klar begrenzte Sprints: 25 Minuten Fokus, dann 5 Minuten Pause, damit ein festgefahrenes oder überfordertes Gehirn einen klaren, machbaren Startpunkt hat.** Dieser kostenlose Timer läuft in deinem Browser, speichert den Fortschritt lokal und lässt dich die Sprint-Länge anpassen, damit sie zu deinem Gehirn passt. Wähl eine Aufgabe, tipp auf Start und hör auf, wenn es klingelt.",
+  "intro": "Die Pomodoro-Technik ist eine Fokus-Methode rund um zeitlich begrenzte Arbeitsintervalle. Bei Erwachsenen mit ADHD funktioniert sie, weil sie Zeit sichtbar macht: Ein 25-Minuten-Sprint verwandelt „Ich muss diese riesige Sache erledigen“ in „Ich muss nur arbeiten, bis der Timer klingelt“. Die Pause gehört dazu, sie ist nichts, das du dir erst verdienen musst.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du den Timer",
+      "steps": [
+        {
+          "name": "Wähl eine Aufgabe",
+          "text": "Nur eine. Wenn du eine Liste hast, schau sie an, wähl die kleinste Sache, die du jetzt anfangen kannst, und leg die Liste weg."
+        },
+        {
+          "name": "Tipp auf Start",
+          "text": "Ein 25-minütiger Fokus-Sprint beginnt. Mach dir keine Gedanken darüber, die ganze Aufgabe fertigzustellen, arbeite einfach, bis der Timer klingelt."
+        },
+        {
+          "name": "Mach die 5-minütige Pause",
+          "text": "Steh auf. Trink Wasser. Öffne keine sozialen Medien. Die Pause ist Teil der Technik, keine Belohnung, die du überspringen kannst."
+        },
+        {
+          "name": "Mach nach 4 Sprints eine lange Pause",
+          "text": "Eine 15-minütige Ruhepause. Genau dann verankern die meisten ADHD-Gehirne wirklich das, woran sie gerade gearbeitet haben."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum das für ADHD-Gehirne funktioniert",
+      "steps": null,
+      "paragraphs": [
+        "Erwachsene mit ADHD erleben **Zeitblindheit**: Die Kluft zwischen „jetzt“ und „nicht jetzt“ wird stärker empfunden als der graduelle Abstand zwischen, sagen wir, „in 25 Minuten“ und „in 4 Stunden“. Die Forscher Russell Barkley und andere haben das als ein Kernmerkmal der Unterschiede in den exekutiven Funktionen bei ADHD dokumentiert, nicht als moralisches Versagen.",
+        "Ein Pomodoro-Timer schließt diese Kluft, indem er Zeit greifbar macht. Du kannst *sehen*, wie die 25 Minuten schrumpfen. Die Aufgabe ist nicht mehr unendlich, sie ist so lang wie ein Sprint. Genau dieser Wechsel vom Abstrakten zum Begrenzten lässt das Anfangen möglich erscheinen.",
+        "Auch die festen Pausen sind wichtig. Viele Erwachsene mit ADHD machen bis zum Burnout weiter, weil sie ihrer eigenen Fähigkeit, zurückzukommen, nicht trauen. Ein Timer mit eingebauter Pause gibt dir die Erlaubnis, aufzuhören, bevor du zusammenbrichst. [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder) und ähnliche Organisationen empfehlen strukturierte Intervalle als praktisches Mittel, um ADHD-bedingte Fokusprobleme in den Griff zu bekommen."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Warum hilft die Pomodoro-Technik bei ADHD?",
+          "a": "Sie externalisiert Zeit. ADHD-Gehirne haben oft mit Zeitblindheit zu kämpfen, dem gefühlten Eindruck, dass eine Aufgabe ewig dauert oder gar keine Zeit braucht. Ein sichtbarer 25-Minuten-Sprint verwandelt dieses abstrakte Grauen in eine begrenzte, überschaubare Strecke. Die Pause ist eingebaut, damit du nicht länger darüber grübelst, ob du dir eine gönnen darfst."
+        },
+        {
+          "q": "Sind 25 Minuten die richtige Länge bei ADHD?",
+          "a": "Für manche ja, für andere nein. Vielen Erwachsenen mit ADHD gelingt es besser mit kürzeren Sprints (10–15 Minuten), wenn das Anfangen schwerfällt, und mit längeren (35–50 Minuten), sobald sie im Flow sind. Nutz den Anpassen-Button unter dem Timer, um deine eigene Länge festzulegen. Die offizielle Pomodoro-Technik nutzt 25/5, aber worauf es ankommt, ist das Prinzip: arbeiten, dann Pause."
+        },
+        {
+          "q": "Muss ich etwas installieren oder mich anmelden?",
+          "a": "Nein. Der Timer läuft komplett in deinem Browser. Dein Fortschritt (abgeschlossene Sitzungen und eigene Zeiten) wird lokal auf deinem Gerät gespeichert. Nichts verlässt deinen Computer oder dein Handy. Kein Konto, keine E-Mail."
+        },
+        {
+          "q": "Läuft der Timer weiter, wenn ich den Tab wechsle?",
+          "a": "Ja. Der Timer basiert auf der tatsächlichen Uhrzeit, nicht auf einem Skript, das pausiert, wenn der Tab im Hintergrund ist. Der Titel des Browser-Tabs zeigt außerdem die verbleibende Zeit an, sodass du einen Blick darauf werfen kannst, während du in einem anderen Fenster arbeitest."
+        },
+        {
+          "q": "Was passiert nach vier Pomodoros?",
+          "a": "Du bekommst eine lange Pause, standardmäßig 15 statt 5 Minuten. Diese längere Ruhepause gehört zur klassischen Pomodoro-Technik und gibt deinem Gehirn ein echtes Erholungsfenster vor dem nächsten Fokus-Block."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Wenn sich ein 25-Minuten-Sprint lang anfühlt, probier den [visuellen Timer](/tools/visual-timer). Dieselbe schrumpfende Kreissegment-Anzeige, jede beliebige Dauer, und er dient nebenbei als Uhr gegen Zeitblindheit, falls das Verlieren des Zeitgefühls das eigentliche Problem ist. Wenn es umgekehrt ist, also zu wissen, wann man aufhören sollte, probier den [Hyperfokus-Timer](/tools/hyperfocus-timer) für wiederkehrende gesprochene Check-ins in festen Abständen. Kombinier den Timer mit dem [Brown-Noise-Generator](/tools/brown-noise), falls Bürolärm oder ein überfüllter Kopf dich immer wieder aus dem Sprint reißt. Stöber in der [kompletten Tool-Bibliothek](/tools) oder lies die [Doubly-Wissensbibliothek](/learn) mit Anleitungen zu Fokus, Brain Dumping und dem Wieder-ins-Tun-Kommen."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Der Web-Timer hält dich für einen Sprint fokussiert. Die Doubly-iOS-App hilft dir zu entscheiden, worauf du dich überhaupt konzentrieren sollst: Brain Dump, ein klarer nächster Schritt und Verbindlichkeits-Check-ins von echten Menschen.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly ADHD-Pomodoro-Timer",
+    "appDescription": "Ein kostenloser Pomodoro-Timer für ADHD-Gehirne. Anpassbare Fokus- und Pausenzeiten, browserbasiert, keine Anmeldung.",
+    "howToName": "So nutzt du den ADHD-Pomodoro-Timer",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "slug": "pick-one",
+  "meta": {
+    "title": "Choisis-en une : une tâche quand tu es débordé | Doubly",
+    "description": "Colle ta liste de tâches en vrac, reçois une chose par où commencer. La plus petite, la plus intimidante ou au hasard. Gratuit, sans inscription, pensé TDAH.",
+    "ogTitle": "Choisis-en une : le sélecteur de tâche anti-trop-plein",
+    "ogDescription": "Colle ta liste de tâches en vrac, reçois une chose par où commencer. La plus petite, la plus intimidante ou au hasard.",
+    "twitterTitle": "Choisis-en une : un sélecteur de tâche anti-trop-plein",
+    "twitterDescription": "Colle ta liste en vrac, reçois une chose par où commencer."
+  },
+  "h1": "Choisis-en une. Une seule.",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "breadcrumbLabel": "Outil Choisis-en une",
+  "answerCapsule": "**Un outil « choisis-en une » supprime l’étape du choix. Colle ta liste, choisis un mode (la plus petite, la plus intimidante, au hasard) et obtiens une seule chose par où commencer.** Il est fait pour le moment où une liste de dix tâches se lit comme un seul bloc géant impossible à commencer. Rien n’est enregistré sur notre serveur.",
+  "intro": "Quand la liste entière paraît impossible, le point de blocage, c’est rarement l’action. C’est la décision. Choisis-en une élimine la décision et te tend un point de départ. Tu peux toujours en choisir une autre.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser l’outil choisis-en une",
+      "steps": [
+        {
+          "name": "Colle ta liste",
+          "text": "Une par ligne, ou en vrac avec des virgules, ou copiée-collée depuis une appli de notes. L’outil s’en débrouille."
+        },
+        {
+          "name": "Choisis un mode",
+          "text": "La plus petite pour l’élan, La plus intimidante pour le soulagement, Au hasard pour tout lâcher."
+        },
+        {
+          "name": "Appuie sur Choisis-en une pour moi",
+          "text": "Tu obtiens une seule chose, affichée en grand et bien clair, avec une raison en une ligne. C’est celle-là."
+        },
+        {
+          "name": "Fait, ou pas celle-là",
+          "text": "Coche-la et reçois la suivante, ou passe et obtiens-en une autre. Aucun jugement, quoi que tu choisisses."
+        }
+      ],
+      "faqs": null,
+      "paragraphs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi ça marche pour les cerveaux TDAH",
+      "paragraphs": [
+        "Les adultes TDAH décrivent souvent le fait de rester bloqués non pas parce qu’une tâche est difficile, mais parce que chaque option paraît aussi accessible que les autres et qu’aucune ne s’impose. Les chercheurs parlent d’un point de blocage des fonctions exécutives autour de la priorisation et de l’initiation, pas d’un manque de motivation.",
+        "L’obstacle, c’est le choix lui-même. Les économistes comportementaux appellent ça la surcharge de choix : plus d’options, des décisions plus lentes, plus d’évitement. Pour un cerveau TDAH qui paie déjà une taxe d’initiation sur chaque tâche, le coût s’accumule. Déléguer le choix te permet de sauter la décision et de te mettre en mouvement.",
+        "Des organismes comme [CHADD](https://chadd.org/about-adhd/overview/) recommandent de réduire les points de décision comme stratégie de base adaptée au TDAH. Le mode « la plus petite » mise sur l’élan (une petite victoire en déclenche une autre). Le mode « la plus intimidante » mise sur le soulagement (une fois la grosse chose évacuée, le reste paraît plus léger). Le mode « au hasard » mise sur le lâcher-prise (n’importe quel choix vaut mieux que pas de choix)."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Comment l’outil choisis-en une décide-t-il quelle tâche choisir ?",
+          "a": "C’est toi qui choisis le mode. La plus petite attrape l’élément le plus court, le plus facile à commencer. La plus intimidante choisit celui qui a le plus de chances d’être lourd (long, ou qui évoque des choses comme les impôts, les médecins ou les réponses que tu dois). Au hasard, c’est purement aléatoire. Rien ne quitte ton navigateur."
+        },
+        {
+          "q": "Pourquoi voudrais-je qu’un outil choisisse à ma place ?",
+          "a": "La fatigue décisionnelle, c’est réel. Choisir par où commencer quand on est débordé coûte plus d’énergie que la tâche elle-même. Déléguer le choix à un outil te permet d’éviter de tourner en rond et de te mettre en mouvement. Tu peux toujours passer outre le choix proposé."
+        },
+        {
+          "q": "Est-ce utile pour le TDAH ?",
+          "a": "Oui. Les cerveaux TDAH calent souvent à l’étape du choix, pas à l’étape de l’action. Supprimer le choix et s’entendre dire « commence par celle-là » contourne un point de blocage courant. C’est la même logique que le principe de la « prochaine étape unique »."
+        },
+        {
+          "q": "Est-ce que l’outil enregistre ma liste ?",
+          "a": "Ta liste reste dans ton navigateur via le localStorage. Rien n’est envoyé à un serveur. Vide le champ et le stockage se vide avec lui. Il n’y a pas de compte."
+        },
+        {
+          "q": "Quelle est la différence entre La plus petite et La plus intimidante ?",
+          "a": "La plus petite, c’est une histoire d’élan. Décroche une petite victoire, puis surfe sur la vague. La plus intimidante, c’est une histoire de soulagement. Débarrasse-toi de la grosse chose pour que le reste de la liste paraisse plus léger. Les deux sont valables, utilise celui dont tu as besoin aujourd’hui."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Si la liste te paraît encore trop longue après en avoir choisi une, commence par un [vide-cerveau](/tools/brain-dump) pour dégager le fouillis mental. Pour trier la liste par importance et par urgence au lieu de choisir à l’aveugle, ouvre la [matrice d’Eisenhower TDAH](/tools/eisenhower-matrix). Tu as ton élue ? Découpe-la en étapes faisables avec l’[outil de découpage de tâches](/tools/task-splitter), puis chronomètre la première étape avec le [minuteur Pomodoro TDAH](/tools/pomodoro). Parcours la [bibliothèque complète d’outils](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "L’outil web choisit une tâche dans une liste collée. L’appli Doubly sur iOS se souvient de chaque liste que tu as vidée, fait remonter la seule tâche à faire ensuite en fonction du contexte et de l’historique, et utilise des points de suivi de responsabilisation avec de vraies personnes pour que la tâche choisie se fasse vraiment.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Outil Choisis-en une Doubly",
+    "appDescription": "Un sélecteur de tâche gratuit en ligne. Colle ta liste de tâches en vrac, l’outil choisit une chose par où commencer selon la plus petite, la plus intimidante ou au hasard. Conçu pour les cerveaux TDAH.",
+    "howToName": "Comment utiliser l’outil choisis-en une",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

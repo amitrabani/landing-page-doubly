@@ -1,0 +1,101 @@
+{
+  "slug": "pick-one",
+  "meta": {
+    "title": "Escolha uma: seletor de tarefas para a sobrecarga | Doubly",
+    "description": "Cole uma lista de tarefas bagunçada e receba uma coisa por onde começar. A menor, a mais assustadora ou aleatória. Grátis, sem cadastro, feita para o TDAH.",
+    "ogTitle": "Escolha uma: seletor aleatório de tarefas para a sobrecarga",
+    "ogDescription": "Cole uma lista de tarefas bagunçada e receba uma coisa por onde começar. A menor, a mais assustadora ou aleatória.",
+    "twitterTitle": "Escolha uma: um seletor de tarefas para a sobrecarga",
+    "twitterDescription": "Cole uma lista bagunçada e receba uma coisa por onde começar."
+  },
+  "h1": "Escolha uma. Só uma.",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "breadcrumbLabel": "Ferramenta Escolha uma",
+  "answerCapsule": "**Uma ferramenta escolha uma remove o passo de escolher. Cole a sua lista, escolha um modo (a menor, a mais assustadora, aleatória) e receba uma coisa por onde começar.** Ela foi feita para o momento em que uma lista de dez tarefas parece uma única coisa gigante e impossível de começar. Nada é guardado no nosso servidor.",
+  "intro": "Quando a lista inteira parece impossível, o gargalo quase nunca é fazer. É decidir. O escolha uma tira a decisão da frente e te entrega um ponto de partida. Você sempre pode escolher de novo.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar a ferramenta escolha uma",
+      "steps": [
+        {
+          "name": "Cole a sua lista",
+          "text": "Uma por linha, ou tudo bagunçado com vírgulas, ou copiado de um app de notas. A ferramenta se vira."
+        },
+        {
+          "name": "Escolha um modo",
+          "text": "A menor para ganhar embalo, A mais assustadora para aliviar, Uma qualquer para se entregar de vez."
+        },
+        {
+          "name": "Toque em Escolha uma por mim",
+          "text": "Você recebe um item, grande e claro, com um motivo em uma linha. É essa aí."
+        },
+        {
+          "name": "Feita, ou essa não",
+          "text": "Marque como feita e receba a próxima escolha, ou pule e receba outra. Sem julgamento de qualquer jeito."
+        }
+      ],
+      "faqs": null,
+      "paragraphs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que isso funciona para cérebros com TDAH",
+      "paragraphs": [
+        "Adultos com TDAH costumam descrever que ficam travados não porque uma tarefa é difícil, mas porque toda opção parece igualmente disponível e nenhuma exige atenção. Pesquisadores chamam isso de gargalo da função executiva na priorização e na iniciação, não de uma falha de motivação.",
+        "A barreira é a própria escolha. Economistas comportamentais descrevem isso como sobrecarga de escolha: mais opções, decisões mais lentas, mais fuga. Para um cérebro com TDAH que já paga um pedágio de iniciação em toda tarefa, o custo se acumula. Delegar a escolha deixa você pular a decisão e começar a se mexer.",
+        "Organizações como a [CHADD](https://chadd.org/about-adhd/overview/) recomendam reduzir os pontos de decisão como uma estratégia central e amigável para quem tem TDAH. O modo A menor aposta no embalo (uma vitória pequena puxa a próxima). O modo A mais assustadora aposta no alívio (com a coisa pesada fora do caminho, o resto fica mais leve). O modo Uma qualquer aposta na entrega (qualquer escolha é melhor que nenhuma)."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "Como a ferramenta escolha uma decide qual tarefa escolher?",
+          "a": "Você escolhe o modo. A menor pega o item mais curto, o mais fácil de começar. A mais assustadora escolhe o que tem mais cara de pesado (longo, ou que fala de coisas como impostos, médicos ou respostas que você está devendo). Uma qualquer é puro aleatório. Nada sai do seu navegador."
+        },
+        {
+          "q": "Por que eu iria querer uma ferramenta escolhendo por mim?",
+          "a": "A fadiga de decisão é real. Escolher por onde começar quando você está sobrecarregado gasta mais energia do que a própria tarefa. Delegar a escolha para uma ferramenta deixa você pular esse ficar girando em círculos e começar a se mexer. Você sempre pode ignorar a escolha e pegar outra."
+        },
+        {
+          "q": "Isso é útil para o TDAH?",
+          "a": "Sim. Cérebros com TDAH costumam travar no passo de escolher, não no de fazer. Tirar a escolha e ouvir \"comece por esta\" contorna um ponto de travamento comum. É a mesma lógica por trás do padrão do \"um próximo passo\"."
+        },
+        {
+          "q": "Ela guarda a minha lista?",
+          "a": "A sua lista fica no seu navegador, no localStorage. Nada é enviado para nenhum servidor. Limpe o campo e o armazenamento é limpo junto. Não existe conta."
+        },
+        {
+          "q": "Qual é a diferença entre A menor e A mais assustadora?",
+          "a": "A menor é sobre embalo. Tire de letra uma vitória pequena e depois surfe na onda. A mais assustadora é sobre alívio. Tire o peso das suas costas para o resto da lista parecer mais leve. As duas são válidas, use a que você precisar hoje."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Se a lista ainda parecer longa demais depois de escolher uma, faça antes um [despejo mental](/tools/brain-dump) para limpar a bagunça mental. Para organizar a lista por importância e urgência em vez de escolher no escuro, abra a [matriz de Eisenhower para TDAH](/tools/eisenhower-matrix). Já tem a escolhida? Divida ela em passos possíveis com a [ferramenta para dividir tarefas](/tools/task-splitter) e depois marque o tempo do primeiro passo com o [timer pomodoro para TDAH](/tools/pomodoro). Explore a [biblioteca completa de ferramentas](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "A ferramenta web escolhe uma tarefa de uma lista colada. O app do Doubly para iOS lembra de cada lista que você já despejou, mostra a única tarefa que você deve fazer a seguir com base no contexto e no histórico, e usa check-ins de cobrança de pessoas reais para que a tarefa escolhida realmente aconteça.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Ferramenta Escolha uma do Doubly",
+    "appDescription": "Um seletor de tarefas grátis online. Cole uma lista de tarefas bagunçada e a ferramenta escolhe uma coisa por onde começar com base em: a menor, a mais assustadora ou aleatória. Feita para cérebros com TDAH.",
+    "howToName": "Como usar a ferramenta escolha uma",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

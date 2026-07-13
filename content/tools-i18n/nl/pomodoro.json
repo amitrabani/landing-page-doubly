@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Gratis ADHD Pomodoro-timer - Focus in sprints | Doubly",
+    "description": "Gratis pomodoro-timer voor ADHD-breinen. Focussprints van 25 minuten, pauzes van 5 minuten, geen account. Slaat je voortgang op in je browser.",
+    "ogTitle": "Gratis ADHD Pomodoro-timer - Focus in sprints",
+    "ogDescription": "Een pomodoro-timer die past bij hoe een ADHD-brein echt werkt. Gratis, geen account, draait in je browser.",
+    "twitterTitle": "Gratis ADHD Pomodoro-timer",
+    "twitterDescription": "Een pomodoro-timer die past bij hoe een ADHD-brein echt werkt. Gratis, geen account."
+  },
+  "h1": "Gratis ADHD Pomodoro-timer",
+  "breadcrumbLabel": "ADHD Pomodoro-timer",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Een ADHD pomodoro-timer verdeelt werk in korte, afgebakende sprints - 25 minuten focus, dan een pauze van 5 minuten - zodat een vastgelopen of overweldigd brein een duidelijke, haalbare plek heeft om te beginnen.** Deze gratis timer draait in je browser, slaat je voortgang lokaal op en laat je de sprintlengte aanpassen zodat hij bij je brein past. Kies één taak, druk op Start en stop wanneer hij afgaat.",
+  "intro": "De Pomodoro-techniek is een focusmethode die is opgebouwd rond getimede werkintervallen. Voor volwassenen met ADHD werkt het omdat het tijd zichtbaar maakt: een sprint van 25 minuten verandert “ik moet dit enorme ding doen” in “ik hoef alleen maar te werken tot de timer afgaat.” De pauze hoort erbij, het is niet iets wat je moet verdienen.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo gebruik je de timer",
+      "steps": [
+        {
+          "name": "Kies één taak",
+          "text": "Maar één. Heb je een lijst? Bekijk hem, kies het kleinste dat je nu kunt beginnen, en leg de lijst weg."
+        },
+        {
+          "name": "Druk op Start",
+          "text": "Een focussprint van 25 minuten begint. Maak je geen zorgen over het afmaken van de hele taak - werk gewoon tot de timer afgaat."
+        },
+        {
+          "name": "Neem de pauze van 5 minuten",
+          "text": "Sta op. Drink water. Open geen social media. De pauze hoort bij de techniek, het is geen beloning die je kunt overslaan."
+        },
+        {
+          "name": "Neem na 4 sprints een lange pauze",
+          "text": "Vijftien minuten rust. Dit is het moment waarop de meeste ADHD-breinen echt verwerken waaraan ze net hebben gewerkt."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom dit werkt voor ADHD-breinen",
+      "steps": null,
+      "paragraphs": [
+        "Volwassenen met ADHD ervaren **tijdblindheid**: de kloof tussen “nu” en “niet nu” voelt scherper dan het geleidelijke verschil tussen, zeg, “over 25 minuten” en “over 4 uur.” Onderzoekers als Russell Barkley en anderen hebben dit gedocumenteerd als een kernkenmerk van verschillen in executieve functies bij ADHD, geen morele tekortkoming.",
+        "Een pomodoro-timer dicht die kloof door tijd concreet te maken. Je kunt de 25 minuten *zien* krimpen. De taak is niet meer oneindig - hij duurt precies één sprint. Die verschuiving, van abstract naar afgebakend, is wat beginnen mogelijk laat voelen.",
+        "De ingebouwde pauzes doen er ook toe. Veel volwassenen met ADHD blijven doorgaan tot een burn-out omdat ze niet vertrouwen op hun eigen vermogen om terug te keren. Een timer met een ingebouwde pauze geeft je toestemming om te stoppen voordat je instort. [CHADD](https://chadd.org/about-adhd/overview/) (kinderen en volwassenen met aandachtstekortstoornis met hyperactiviteit) en soortgelijke organisaties raden gestructureerde intervallen aan als praktisch hulpmiddel om ADHD-gerelateerde focusproblemen aan te pakken."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Waarom is de Pomodoro-techniek nuttig bij ADHD?",
+          "a": "Het maakt tijd tastbaar. ADHD-breinen worstelen vaak met tijdblindheid - het gevoel dat een taak eeuwig zal duren, of juist helemaal geen tijd kost. Een zichtbare sprint van 25 minuten verandert die abstracte angst in een afgebakende, overbrugbare afstand. De pauze zit erin ingebouwd, dus je hoeft niet meer te blijven malen over de vraag of je er wel een mag nemen."
+        },
+        {
+          "q": "Is 25 minuten de juiste lengte voor ADHD?",
+          "a": "Voor sommigen wel, voor anderen niet. Veel volwassenen met ADHD doen het beter met kortere sprints (10–15 minuten) als beginnen moeilijk is, en langere (35–50 minuten) zodra ze in een flow zitten. Gebruik de aanpasknop onder de timer om je eigen lengte in te stellen. De officiële Pomodoro-techniek gebruikt 25/5, maar het gaat om het principe - werken, dan pauzeren."
+        },
+        {
+          "q": "Moet ik iets installeren of een account aanmaken?",
+          "a": "Nee. De timer draait volledig in je browser. Je voortgang (voltooide sessies en aangepaste lengtes) wordt lokaal op je apparaat opgeslagen. Er verlaat niets je computer of telefoon. Geen account, geen e-mail."
+        },
+        {
+          "q": "Blijft de timer lopen als ik van tabblad wissel?",
+          "a": "Ja. De timer is gebaseerd op de werkelijke tijd van de dag, niet op een script dat pauzeert wanneer het tabblad op de achtergrond staat. De titel van het browsertabblad toont ook de resterende tijd, zodat je er even naar kunt kijken terwijl je in een ander venster werkt."
+        },
+        {
+          "q": "Wat gebeurt er na vier pomodoro's?",
+          "a": "Je verdient een lange pauze - standaard 15 minuten in plaats van 5. Deze langere rust hoort bij de standaard Pomodoro-techniek en geeft je brein een echt herstelmoment voor het volgende focusblok."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Voelt een sprint van 25 minuten lang? Probeer de [visuele timer](/tools/visual-timer). Dezelfde krimpende taartpuntschijf, elke gewenste duur, en hij werkt ook als tijdblindheidsklok als het verliezen van je tijdsbesef het diepere probleem is. Is het juist andersom, weten wanneer je moet stoppen? Probeer de [hyperfocus-timer](/tools/hyperfocus-timer) voor terugkerende gesproken check-ins op een vast interval. Combineer de timer met de [bruineruisgenerator](/tools/brown-noise) als kantoorgeluid of een druk hoofd je steeds uit de sprint trekt. Blader door de [volledige toolbibliotheek](/tools) of lees de [Doubly leerbibliotheek](/learn) voor gidsen over focus, brain dumpen en weer op gang komen."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De webtimer houdt je één sprint gefocust. De Doubly iOS-app helpt je überhaupt te bepalen waarop je je moet richten - brain dump, één duidelijke volgende stap en verantwoording-check-ins van echte mensen.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly ADHD Pomodoro-timer",
+    "appDescription": "Een gratis pomodoro-timer voor ADHD-breinen. Aanpasbare focus- en pauzelengtes, browsergebaseerd, geen account.",
+    "howToName": "Zo gebruik je de ADHD Pomodoro-timer",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

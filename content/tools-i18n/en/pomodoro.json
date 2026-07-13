@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Free ADHD Pomodoro Timer - Focus in Sprints | Doubly",
+    "description": "Free pomodoro timer built for ADHD brains. 25-minute focus sprints, 5-minute breaks, no signup. Saves your progress in your browser.",
+    "ogTitle": "Free ADHD Pomodoro Timer - Focus in Sprints",
+    "ogDescription": "A pomodoro timer that fits how an ADHD brain actually works. Free, no signup, runs in your browser.",
+    "twitterTitle": "Free ADHD Pomodoro Timer",
+    "twitterDescription": "A pomodoro timer that fits how an ADHD brain actually works. Free, no signup."
+  },
+  "h1": "Free ADHD Pomodoro Timer",
+  "breadcrumbLabel": "ADHD Pomodoro Timer",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**An ADHD pomodoro timer breaks work into short, finite sprints - 25 minutes of focus, then a 5-minute break - so a stuck or overwhelmed brain has a clear, doable place to start.** This free timer runs in your browser, saves progress locally, and lets you customize the sprint length so it fits your brain. Pick one task, hit Start, and stop when it rings.",
+  "intro": "The Pomodoro Technique is a focus method built around timed work intervals. For ADHD adults, it works because it makes time visible: a 25-minute sprint turns “I have to do this huge thing” into “I just have to work until the timer rings.” The break is part of the deal, not something you have to earn.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "How to use the timer",
+      "steps": [
+        {
+          "name": "Pick one task",
+          "text": "Just one. If you have a list, look at it, pick the smallest thing you can start now, and put the list away."
+        },
+        {
+          "name": "Hit Start",
+          "text": "A 25-minute focus sprint begins. Don’t worry about finishing the whole task - just work until the timer rings."
+        },
+        {
+          "name": "Take the 5-minute break",
+          "text": "Stand up. Drink water. Don’t open social media. The break is part of the technique, not a reward you can skip."
+        },
+        {
+          "name": "After 4 sprints, take a long break",
+          "text": "A 15-minute rest. This is when most ADHD brains actually consolidate what they just worked on."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Why this works for ADHD brains",
+      "steps": null,
+      "paragraphs": [
+        "ADHD adults experience **time-blindness**: the gap between “now” and “not now” is felt more sharply than the analog distance between, say, “in 25 minutes” and “in 4 hours.” Researchers Russell Barkley and others have documented this as a core feature of executive-function differences in ADHD, not a moral failing.",
+        "A pomodoro timer fixes that gap by making time concrete. You can *see* the 25 minutes shrinking. The task isn’t infinite anymore - it’s the length of one sprint. That shift, from abstract to finite, is what makes starting feel possible.",
+        "The forced breaks matter too. Many ADHD adults push through until burnout because they don’t trust their own ability to come back. A timer with a built-in break gives you permission to stop before you crash. [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder) and similar bodies recommend structured intervals as a practical tool for managing ADHD-related focus difficulties."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Frequently asked questions",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Why is the pomodoro technique helpful for ADHD?",
+          "a": "It externalizes time. ADHD brains often struggle with time-blindness - the felt sense that a task will take forever, or no time at all. A visible 25-minute sprint turns that abstract dread into a finite, walkable distance. The break is built in, so you stop spiraling on whether you can take one."
+        },
+        {
+          "q": "Is 25 minutes the right length for ADHD?",
+          "a": "For some yes, for others no. Many ADHD adults do better with shorter sprints (10–15 minutes) when initiation is hard, and longer ones (35–50 minutes) once they hit flow. Use the customize button below the timer to set your own. The official Pomodoro Technique uses 25/5, but the principle - work, then break - is what matters."
+        },
+        {
+          "q": "Do I need to install anything or sign up?",
+          "a": "No. The timer runs entirely in your browser. Your progress (completed sessions and custom durations) is saved locally on your device. Nothing leaves your computer or phone. No account, no email."
+        },
+        {
+          "q": "Will the timer keep running if I switch tabs?",
+          "a": "Yes. The timer is based on the actual time of day, not on a script that pauses when the tab is in the background. The browser tab title also updates with the remaining time so you can glance at it while working in another window."
+        },
+        {
+          "q": "What happens after four pomodoros?",
+          "a": "You earn a long break - 15 minutes by default instead of 5. This longer rest is part of the standard Pomodoro Technique and gives your brain a real recovery window before the next focus block."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Related tools",
+    "body": "If a 25-minute sprint feels long, try the [visual timer](/tools/visual-timer). Same shrinking-wedge dial, any duration you want, and it doubles as a time blindness clock if losing track of time is the deeper issue. If the trouble is the opposite, knowing when to stop, try the [hyperfocus timer](/tools/hyperfocus-timer) for recurring spoken check-ins on a fixed interval. Pair the timer with the [brown noise generator](/tools/brown-noise) if office noise or a busy mind keeps pulling you out of the sprint. Browse the [full tools library](/tools) or read the [Doubly learn library](/learn) for guides on focus, brain dumping, and getting unstuck."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Try it in the app",
+    "body": "The web timer keeps you focused for one sprint. The Doubly iOS app helps you decide what to focus on in the first place - brain dump, one clear next step, and accountability check-ins from real people.",
+    "label": "Try it in the app"
+  },
+  "jsonld": {
+    "appName": "Doubly ADHD Pomodoro Timer",
+    "appDescription": "A free pomodoro timer built for ADHD brains. Customizable focus and break durations, browser-based, no signup.",
+    "howToName": "How to use the ADHD pomodoro timer",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

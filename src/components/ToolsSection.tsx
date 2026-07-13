@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { tools } from '@/lib/tools';
 import { getDictionary } from '@/i18n/dictionaries';
 import { defaultLocale, type Locale } from '@/i18n/config';
+import { toolHref, toolsHubHref } from '@/i18n/toolsManifest';
 
 // Server-rendered so every tool link is present in the initial HTML for crawlers.
 // The homepage is the most-crawled page on the site; linking each tool directly
@@ -31,7 +32,7 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
           {live.map((tool) => (
             <li key={tool.slug}>
               <Link
-                href={`/tools/${tool.slug}`}
+                href={toolHref(locale, tool.slug)}
                 className="group block h-full rounded-2xl bg-white/70 border border-warm-dark/30 p-5 hover:border-lavender hover:shadow-[0_4px_20px_rgba(184,169,212,0.15)] transition-all"
               >
                 <div className="flex items-center gap-2">
@@ -60,7 +61,7 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
 
         <div className="mt-8 text-center">
           <Link
-            href="/tools"
+            href={toolsHubHref(locale)}
             className="inline-flex items-center gap-1 text-sm font-medium text-lavender-dark hover:text-charcoal transition-colors"
           >
             {t.toolsSection.browseAll} <span aria-hidden="true">&rarr;</span>

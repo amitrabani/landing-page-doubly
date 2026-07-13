@@ -1,0 +1,101 @@
+{
+  "slug": "pick-one",
+  "meta": {
+    "title": "Kies er één: taakkiezer bij overweldiging | Doubly",
+    "description": "Plak je rommelige takenlijst, krijg één ding om mee te beginnen. Kleinste, engste of willekeurig. Gratis, geen registratie, voor ADHD-breinen.",
+    "ogTitle": "Kies er één: taakkiezer bij overweldiging",
+    "ogDescription": "Plak je rommelige takenlijst, krijg één ding om mee te beginnen. Kleinste, engste of willekeurig.",
+    "twitterTitle": "Kies er één: een taakkiezer bij overweldiging",
+    "twitterDescription": "Plak je rommelige lijst, krijg één ding om mee te beginnen."
+  },
+  "h1": "Kies er één. Gewoon één.",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "breadcrumbLabel": "Kies er één-tool",
+  "answerCapsule": "**Een kies er één-tool haalt de keuzestap weg. Plak je lijst, kies een modus (kleinste, engste, willekeurig) en krijg één ding om mee te beginnen.** Hij is gemaakt voor het moment dat een lijst van tien taken aanvoelt als één gigantisch ding waar je niet aan kunt beginnen. Er wordt niets op onze server opgeslagen.",
+  "intro": "Als de hele lijst onmogelijk voelt, zit het knelpunt zelden in het doen. Het zit in het beslissen. Kies er één haalt de beslissing weg en geeft je een startpunt. Je kunt altijd opnieuw kiezen.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo gebruik je de kies er één-tool",
+      "steps": [
+        {
+          "name": "Plak je lijst",
+          "text": "Eén per regel, of rommelig met komma's, of geplakt uit een notitie-app. De tool snapt het wel."
+        },
+        {
+          "name": "Kies een modus",
+          "text": "Kleinste voor momentum, Engste voor opluchting, Kies er gewoon één voor volledige overgave."
+        },
+        {
+          "name": "Tik op Kies er één voor mij",
+          "text": "Je krijgt één item, groot en duidelijk, met een reden van één regel. Dat is 'm."
+        },
+        {
+          "name": "Gedaan, of toch niet deze",
+          "text": "Vink hem af en krijg de volgende keuze, of sla hem over en krijg een andere. Geen oordeel, hoe dan ook."
+        }
+      ],
+      "faqs": null,
+      "paragraphs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom dit werkt voor ADHD-breinen",
+      "paragraphs": [
+        "Volwassenen met ADHD beschrijven vaak dat ze vastzitten, niet omdat een taak moeilijk is, maar omdat elke optie er even beschikbaar uitziet en niets om aandacht vraagt. Onderzoekers noemen dit een knelpunt in de executieve functies rond prioriteren en beginnen, niet een gebrek aan motivatie.",
+        "De barrière is de keuze zelf. Gedragseconomen noemen dit keuzestress: meer opties, tragere beslissingen, meer vermijding. Voor een ADHD-brein dat al bij elke taak extra energie kwijt is om te beginnen, stapelen de kosten zich op. Door de keuze uit handen te geven, sla je de beslissing over en kom je in beweging.",
+        "Organisaties als [CHADD](https://chadd.org/about-adhd/overview/) raden aan om keuzemomenten te verminderen, als kernstrategie die vriendelijk is voor ADHD. De modus Kleinste leunt op momentum (een klein succesje zet het volgende in gang). De modus Engste leunt op opluchting (als het zware ding weg is, voelt de rest lichter). De modus Willekeurig leunt op overgave (elke keuze is beter dan geen keuze)."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "faqs": [
+        {
+          "q": "Hoe bepaalt de kies er één-tool welke taak hij kiest?",
+          "a": "Jij kiest de modus. Kleinste pakt het kortste item, het makkelijkst om aan te beginnen. Engste kiest degene die het zwaarst aanvoelt (lang, of iets over belasting, dokters of antwoorden die je nog schuldig bent). Kies er gewoon één is puur willekeurig. Er verlaat niets je browser."
+        },
+        {
+          "q": "Waarom zou ik een tool voor mij willen laten kiezen?",
+          "a": "Beslismoeheid is echt. Kiezen waar je begint als je overweldigd bent, kost meer energie dan de taak zelf. Door de keuze aan een tool over te laten, sla je het malen over en kom je in beweging. Je kunt de keuze altijd overrulen."
+        },
+        {
+          "q": "Is dit nuttig bij ADHD?",
+          "a": "Ja. ADHD-breinen lopen vaak vast bij de keuzestap, niet bij de doe-stap. De keuze weghalen en te horen krijgen \"begin met deze\" omzeilt een veelvoorkomend vastloop-moment. Het is dezelfde logica achter het patroon van de \"ene volgende stap\"."
+        },
+        {
+          "q": "Slaat het mijn lijst op?",
+          "a": "Je lijst blijft in je browser via localStorage. Er wordt niets naar een server gestuurd. Wis het veld en de opslag wordt mee gewist. Er is geen account."
+        },
+        {
+          "q": "Wat is het verschil tussen Kleinste en Engste?",
+          "a": "Kleinste draait om momentum. Scoor een klein succesje en surf mee op de golf. Engste draait om opluchting. Haal het zware ding van je schouders zodat de rest van de lijst lichter voelt. Beide zijn prima, gebruik wat je vandaag nodig hebt."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Als de lijst na het kiezen nog steeds te lang voelt, doe dan eerst een [brain dump](/tools/brain-dump) om de mentale rommel op te ruimen. Om de lijst te sorteren op belang en urgentie in plaats van blind te kiezen, open je de [ADHD-Eisenhower-matrix](/tools/eisenhower-matrix). Keuze gemaakt? Splits hem op in haalbare stappen met de [takensplitter](/tools/task-splitter) en time-box de eerste stap met de [ADHD-pomodoro-timer](/tools/pomodoro). Bekijk de [volledige tool-bibliotheek](/tools)."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De webtool kiest één taak uit een geplakte lijst. De Doubly iOS-app onthoudt elke lijst die je ooit hebt gedumpt, laat de ene taak zien die je als volgende moet doen op basis van context en geschiedenis, en gebruikt verantwoordings-check-ins van echte mensen zodat de gekozen taak ook echt gebeurt.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly Kies er één-tool",
+    "appDescription": "Een gratis online taakkiezer. Plak een rommelige takenlijst, de tool kiest één ding om mee te beginnen op basis van kleinste, engste of willekeurig. Gemaakt voor ADHD-breinen.",
+    "howToName": "Zo gebruik je de kies er één-tool",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

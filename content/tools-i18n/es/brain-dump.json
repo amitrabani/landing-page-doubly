@@ -1,0 +1,95 @@
+{
+  "slug": "brain-dump",
+  "meta": {
+    "title": "Volcado mental online gratis: despeja tu mente | Doubly",
+    "description": "Herramienta de volcado mental gratis. Suéltalo todo, la IA extrae las tareas accionables y descarta el resto. Sin registro. Para cerebros con ADHD.",
+    "ogTitle": "Volcado mental online gratis: despeja tu mente",
+    "ogDescription": "Suéltalo todo, la IA extrae las tareas accionables. Gratis, sin registro.",
+    "twitterTitle": "Volcado mental online gratis",
+    "twitterDescription": "Suéltalo todo, la IA extrae las tareas accionables."
+  },
+  "h1": "Herramienta de volcado mental gratis",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbTools": "Herramientas",
+  "breadcrumbLabel": "Herramienta de volcado mental",
+  "answerCapsule": "**Una herramienta de volcado mental te deja soltar en un solo lugar todo lo que tienes en la cabeza y luego extrae solo las tareas accionables, para que puedas hacer algo en vez de solo darle vueltas.** Escribe libremente arriba. La herramienta lee el volcado, ignora las emociones y el desahogo, y te devuelve una lista corta de pendientes. Gratis, sin registro, no se guarda nada.",
+  "intro": "El bucle mental de «hay demasiado, no puedo empezar, pero hay demasiado» es justo lo que el volcado mental viene a romper. Escribes para vaciar la cabeza, no para planear. El plan sale por el otro lado como una lista con la que sí puedes actuar.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Cómo hacer un volcado mental online",
+      "steps": [
+        {
+          "name": "Escribe todo lo que tienes en la cabeza",
+          "text": "Sin estructura, sin editar. Tareas, preocupaciones, pensamientos a medias, quejas, ideas. Sácalo de tu cabeza y ponlo en la página."
+        },
+        {
+          "name": "Pulsa Extraer las tareas",
+          "text": "La IA lee el volcado, ignora las emociones y el desahogo, y devuelve solo lo accionable en forma de lista corta."
+        },
+        {
+          "name": "Elige una",
+          "text": "Solo una. La más pequeña. Márcala cuando la termines."
+        },
+        {
+          "name": "Vuelve cuando lo necesites",
+          "text": "Mañana por la mañana, o en una hora, o en una semana. La herramienta está aquí siempre que tengas la cabeza demasiado llena para actuar."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por qué los volcados mentales funcionan para cerebros con ADHD",
+      "paragraphs": [
+        "Los adultos con ADHD tienden a cargar en la memoria de trabajo más de lo que el cerebro está hecho para sostener. Bucles abiertos, tareas a medio pensar, cosas que querían decir, cosas que casi olvidan. Los investigadores describen esto como un problema de carga de la memoria de trabajo, no como una falla de enfoque. El cerebro está ocupado, solo que no con lo que tú quieres que se ocupe.",
+        "Externalizar esos pensamientos en una página reduce la carga. David Allen, en su libro «Getting Things Done», lo llama capturar los bucles abiertos. Una vez que algo está en papel, el cerebro deja de repetirlo. En el caso del ADHD en concreto, esto puede ser la diferencia entre estar paralizado y poder empezar.",
+        "Lo que la herramienta añade es el segundo paso: sacar solo lo accionable para que no tengas que releer el volcado y decidir qué contaba. Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan externalizar los pensamientos como una estrategia clave y amigable con el ADHD."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "q": "¿Qué es un volcado mental?",
+          "a": "Un volcado mental es el acto de escribir en una sola página todo lo que tienes en la cabeza, sin ordenarlo ni juzgarlo, para despejar la memoria de trabajo. El objetivo no es organizar, es externalizar. Una vez que los pensamientos están fuera, puedes decidir qué hacer con ellos."
+        },
+        {
+          "q": "¿En qué se diferencia de una app de notas normal?",
+          "a": "Una app de notas te da una página en blanco. Esta herramienta lee lo que soltaste y extrae solo las tareas concretas y accionables, ignorando emociones, observaciones y desahogos. Consigues una lista corta de pendientes sin escribirla tú."
+        },
+        {
+          "q": "¿Mi volcado mental es privado?",
+          "a": "Sí. Tu texto se envía a nuestra IA para extraer las tareas y luego se descarta. No se guarda nada asociado a tu identidad, nada sale de tu navegador aparte de la propia petición, y no hay ninguna cuenta."
+        },
+        {
+          "q": "¿Por qué el volcado mental es útil para el ADHD?",
+          "a": "Los adultos con ADHD suelen tener la memoria de trabajo llena de pensamientos a medio terminar. Ese desorden mental es, en sí mismo, una forma de agobio. Sacar el contenido, aunque sea de forma caótica, libera espacio cognitivo y hace que lo accionable se vuelva lo bastante visible como para actuar."
+        },
+        {
+          "q": "¿Con qué frecuencia debería hacer un volcado mental?",
+          "a": "Siempre que sientas la cabeza llena y las manos bloqueadas. Algunas personas lo hacen una vez a la semana, otras cada mañana, otras solo cuando están abrumadas. No hay ninguna regla. La señal es interna: si te fuera a ayudar, hazlo."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Herramientas relacionadas",
+    "body": "Cuando ya tengas una lista de tareas, usa [elegir una](/tools/pick-one) para hacer aparecer una única tarea con la que empezar, u ordena la lista completa con la [matriz de Eisenhower para el ADHD](/tools/eisenhower-matrix). Manda la que más miedo te dé a la [herramienta para dividir tareas](/tools/task-splitter) y pártela en pasos pequeños. Ponle un límite de tiempo al primer paso con el [temporizador pomodoro para el ADHD](/tools/pomodoro) o el [temporizador visual](/tools/visual-timer). Si empezar en solitario es lo difícil, abre una [sala de body doubling](/tools/body-doubling-room) y trabaja al lado de alguien. Explora la [biblioteca completa de herramientas](/tools)."
+  },
+  "cta": {
+    "headline": "Pruébalo en la app",
+    "body": "La herramienta web despeja tu mente una vez. La app de Doubly para iOS recuerda tus volcados, hace aparecer la única tarea que deberías hacer a continuación y usa seguimientos de responsabilidad con personas reales para que la lista no vuelva a convertirse en desorden.",
+    "label": "Pruébalo en la app"
+  },
+  "jsonld": {
+    "appName": "Herramienta de volcado mental de Doubly",
+    "appDescription": "Una herramienta gratuita de volcado mental online. Escribe todo lo que tienes en la cabeza y la IA extrae las tareas accionables. Hecha para cerebros con ADHD.",
+    "howToName": "Cómo usar la herramienta de volcado mental",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}
