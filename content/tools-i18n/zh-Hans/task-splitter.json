@@ -25,7 +25,7 @@
         },
         {
           "name": "点「拆解它」",
-          "text": "AI 会返回一份带时间估算的简短步骤清单。每一步都只要几分钟——小到不用思考就能开始。"
+          "text": "AI 会返回一份带时间估算的简短步骤清单。每一步都只要几分钟,小到不用思考就能开始。"
         },
         {
           "name": "做第一步",
@@ -81,7 +81,7 @@
   ],
   "related": {
     "heading": "相关工具",
-    "body": "如果你脑子里塞着不止一个任务,先从[大脑清空工具](/tools/brain-dump)开始,让 AI 先把能落地的事挑出来;或者用 [ADHD 艾森豪威尔矩阵](/tools/eisenhower-matrix)给整份清单排个序,再用[挑一个](/tools/pick-one)找出一个起步任务。当你在这里得到一份步骤清单后,用 [ADHD 番茄钟](/tools/pomodoro)或[可视计时器](/tools/visual-timer)给第一步定个时间盒,这样你就能看着工作一点点变少。如果难的地方是一个人开始,那就和朋友开一个[身旁陪伴房间](/tools/body-doubling-room)。浏览[完整工具库](/tools)。"
+    "body": "如果你脑子里塞着不止一个任务,先从[大脑清空工具](/tools/brain-dump)开始,让 AI 先把能落地的事挑出来;或者用 [ADHD 艾森豪威尔矩阵](/tools/eisenhower-matrix)给整份清单排个序,再用[挑一个](/tools/pick-one)找出一个起步任务。当你在这里得到一份步骤清单后,用 [ADHD 番茄钟](/tools/pomodoro)或[可视化计时器](/tools/visual-timer)给第一步定个时间盒,这样你就能看着工作一点点变少。如果难的地方是一个人开始,那就和朋友开一个[身旁陪伴室](/tools/body-doubling-room)。浏览[完整工具库](/tools)。"
   },
   "cta": {
     "headline": "在应用里试试",

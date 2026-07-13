@@ -41,9 +41,9 @@
       "kind": "paragraphs",
       "heading": "Por qué los volcados mentales funcionan para cerebros con ADHD",
       "paragraphs": [
-        "Los adultos con ADHD tienden a cargar en la memoria de trabajo más de lo que el cerebro está hecho para sostener. Bucles abiertos, tareas a medio pensar, cosas que querían decir, cosas que casi olvidan. Los investigadores describen esto como un problema de carga de la memoria de trabajo, no como una falla de enfoque. El cerebro está ocupado, solo que no con lo que tú quieres que se ocupe.",
+        "Los adultos con ADHD tienden a cargar en la memoria de trabajo más de lo que el cerebro está hecho para sostener. Bucles abiertos, tareas a medio pensar, cosas que querían decir, cosas que casi olvidan. Los investigadores describen esto como un problema de carga de la memoria de trabajo, no como un fallo de enfoque. El cerebro está ocupado, solo que no con lo que tú quieres que se ocupe.",
         "Externalizar esos pensamientos en una página reduce la carga. David Allen, en su libro «Getting Things Done», lo llama capturar los bucles abiertos. Una vez que algo está en papel, el cerebro deja de repetirlo. En el caso del ADHD en concreto, esto puede ser la diferencia entre estar paralizado y poder empezar.",
-        "Lo que la herramienta añade es el segundo paso: sacar solo lo accionable para que no tengas que releer el volcado y decidir qué contaba. Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan externalizar los pensamientos como una estrategia clave y amigable con el ADHD."
+        "Lo que la herramienta añade es el segundo paso: sacar solo lo accionable para que no tengas que releer el volcado y decidir qué contaba. Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan externalizar los pensamientos como una estrategia clave y adaptada al ADHD."
       ]
     },
     {
@@ -75,11 +75,11 @@
   ],
   "related": {
     "heading": "Herramientas relacionadas",
-    "body": "Cuando ya tengas una lista de tareas, usa [elegir una](/tools/pick-one) para hacer aparecer una única tarea con la que empezar, u ordena la lista completa con la [matriz de Eisenhower para el ADHD](/tools/eisenhower-matrix). Manda la que más miedo te dé a la [herramienta para dividir tareas](/tools/task-splitter) y pártela en pasos pequeños. Ponle un límite de tiempo al primer paso con el [temporizador pomodoro para el ADHD](/tools/pomodoro) o el [temporizador visual](/tools/visual-timer). Si empezar en solitario es lo difícil, abre una [sala de body doubling](/tools/body-doubling-room) y trabaja al lado de alguien. Explora la [biblioteca completa de herramientas](/tools)."
+    "body": "Cuando ya tengas una lista de tareas, usa [elegir una](/tools/pick-one) para sacar a la luz una única tarea con la que empezar, u ordena la lista completa con la [matriz de Eisenhower para el ADHD](/tools/eisenhower-matrix). Manda la que más miedo te dé a la [herramienta para dividir tareas](/tools/task-splitter) y pártela en pasos pequeños. Ponle un límite de tiempo al primer paso con el [temporizador pomodoro para el ADHD](/tools/pomodoro) o el [temporizador visual](/tools/visual-timer). Si empezar en solitario es lo difícil, abre una [sala de body doubling](/tools/body-doubling-room) y trabaja al lado de alguien. Explora la [biblioteca completa de herramientas](/tools)."
   },
   "cta": {
     "headline": "Pruébalo en la app",
-    "body": "La herramienta web despeja tu mente una vez. La app de Doubly para iOS recuerda tus volcados, hace aparecer la única tarea que deberías hacer a continuación y usa seguimientos de responsabilidad con personas reales para que la lista no vuelva a convertirse en desorden.",
+    "body": "La herramienta web despeja tu mente una vez. La app de Doubly para iOS recuerda tus volcados, saca a la luz la única tarea que deberías hacer a continuación y usa seguimientos de responsabilidad con personas reales para que la lista no vuelva a convertirse en desorden.",
     "label": "Pruébalo en la app"
   },
   "jsonld": {
