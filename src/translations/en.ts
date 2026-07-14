@@ -478,6 +478,370 @@ const en = {
     ogDescription:
       'Brain dump the chaos, get one clear next step, and use accountability to actually follow through.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Task Breakdown Tool',
+      description:
+        'Type a task you cannot start. AI splits it into small, doable steps with time estimates. Built for ADHD brains.',
+    },
+    'brain-dump': {
+      title: 'Brain Dump Tool',
+      description:
+        'Dump everything in your head, AI pulls out only the actionable tasks. No signup, nothing stored.',
+    },
+    'pick-one': {
+      title: 'Pick One Task Tool',
+      description:
+        'Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random. Built for the moment ten tasks reads as one giant unstartable thing.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower Matrix (ADHD Edition)',
+      description:
+        'Drag tasks into quadrants like "boring but important" instead of textbook labels. The matrix that finally fits an ADHD brain. Saves locally.',
+    },
+    'pomodoro': {
+      title: 'ADHD Pomodoro Timer',
+      description:
+        '25-minute work, 5-minute break - the focus method that finally fits an ADHD brain. Free, no signup, works offline.',
+    },
+    'visual-timer': {
+      title: 'Visual Timer / Time Blindness Clock',
+      description:
+        'A shrinking pie wedge so you can see time passing instead of reading digits. Doubles as a time blindness clock for ADHD adults.',
+    },
+    'brown-noise': {
+      title: 'Ambient Sound Generator',
+      description:
+        'Free in-browser ambient sound generator. Brown noise plus pink and white. Steady background sound to quiet a busy ADHD brain. Sleep timer included, works offline.',
+    },
+    'body-doubling-room': {
+      title: 'Body Doubling Room',
+      description:
+        'Free two-person focus room. Share a link, work side by side over peer-to-peer video, run a shared timer. No signup, no install.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hyperfocus Interrupt Timer',
+      description:
+        'Recurring spoken check-ins every X minutes and an optional hard stop, so an ADHD hyperfocus session does not eat your whole afternoon.',
+    },
+  },
+
+  // Interactive tool widget copy (the timers, splitter, matrix, ...).
+  // These widgets render on BOTH /tools/* (English) and /{locale}/tools/*, so every
+  // string here must exist in all 15 dictionaries; check:i18n enforces that.
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'What is the task you cannot start?',
+      inputPlaceholder: 'e.g. File my expense report',
+      submit: 'Break it down',
+      submitting: 'Breaking it down…',
+      privacyNote: 'Private. Nothing is saved on our server.',
+      charactersLeft: (count: number) => `${count} characters left`,
+      presetsIntro: 'Or try one of these:',
+      presets: {
+        cleanKitchen: 'Clean the kitchen',
+        doLaundry: 'Do laundry',
+        replyInbox: 'Reply to inbox',
+        planWeekendTrip: 'Plan a weekend trip',
+        fileTaxes: 'File my taxes',
+        cleanBathroom: 'Clean the bathroom',
+      },
+      loading: 'Breaking it into steps…',
+      errorRateLimit: 'You are going fast. Wait a moment and try again.',
+      errorGeneric: 'Could not break that down right now. Try again in a few seconds.',
+      tryAgain: 'Try again',
+      taskLabel: 'Task',
+      urgencyLabels: { low: 'Low urgency', medium: 'Medium urgency', high: 'High urgency' },
+      stepsDone: (done: number, total: number) => `${done}/${total} steps done`,
+      minTotal: (min: number) => `~${min} min total`,
+      allDoneMessage: 'Done. That wasn’t as scary as it looked, right?',
+      emptyState:
+        'Couldn’t find clear sub-steps for that one. Try rephrasing as an action, like “Write the project plan” or “Clean the garage.”',
+    },
+    brainDump: {
+      label: 'Dump everything in your head. Doesn’t need to be organized.',
+      placeholder:
+        'I keep forgetting to call the dentist and the kitchen is a mess.\nFeeling overwhelmed about the project at work. Need to buy groceries\nfor dinner tonight and respond to Sarah’s email from last week.',
+      privacy: 'Private. Nothing is saved on our server.',
+      charactersLeft: (remaining: number) => `${remaining} characters left.`,
+      clear: 'Clear',
+      submit: 'Pull out the tasks',
+      submitting: 'Pulling out tasks…',
+      loading: 'Reading your dump and pulling out the actionable bits…',
+      errorRateLimited: 'You are going fast. Wait a moment and try again.',
+      errorGeneric: 'Could not extract tasks right now. Try again in a few seconds.',
+      tryAgain: 'Try again',
+      empty:
+        'We didn’t find anything that looked like a concrete task in there. That can be a good sign. If you were venting, that counts. If you meant to list things to do, try being a bit more specific (“email Sarah” instead of “Sarah stuff”).',
+      resultsTitle: 'Actionable tasks',
+      doneCount: (done: number, total: number) => `${done}/${total} done`,
+      footer: 'Pick one. Just one. Do it now, then come back for the next.',
+    },
+    pickOne: {
+      inputLabel: 'Paste your list. One per line, or just messy with commas. Whatever.',
+      inputPlaceholder:
+        'reply to mom\nbook the dentist\nfile expenses\nfinish the slide deck\nwater the plants',
+      itemsDetected: (count: number) => `${count} item${count === 1 ? '' : 's'} detected`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} item${count === 1 ? '' : 's'} detected, ${left} left`,
+      clearEverything: 'Clear everything',
+      modeLegend: 'How should we pick?',
+      modes: {
+        smallest: {
+          label: 'Smallest',
+          reason: 'Shortest item on the list. Start tiny, build momentum.',
+        },
+        scariest: {
+          label: 'Scariest',
+          reason: 'The one you would rather not look at. Doing it first frees the day.',
+        },
+        random: {
+          label: 'Just pick one',
+          reason: 'No deliberation. The list picked itself. Just start.',
+        },
+      },
+      pickCta: 'Pick one for me',
+      pickAnotherCta: 'Pick another',
+      emptyHint: 'Add at least one item, then tap pick.',
+      readyHint: 'Ready. Tap “Pick one for me” whenever you can’t decide.',
+      allDoneTitle: 'List handled.',
+      allDoneBody:
+        'Every item is either done or skipped. You can clear the list, or reset to bring skipped items back into the pool.',
+      bringSkippedBack: 'Bring skipped back',
+      startFreshList: 'Start a fresh list',
+      pickedEyebrow: 'Start with this one',
+      didIt: 'Did it',
+      notThisOne: 'Not this one',
+      pickAgain: 'Pick again',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} done, ${skipped} skipped, ${left} left`,
+    },
+    eisenhower: {
+      inputLabel: 'Add a task',
+      inputPlaceholder: 'Add a task and hit enter (or paste many separated by line breaks)',
+      addButton: 'Add',
+      totals: (total: number, unsorted: number) =>
+        `${total} task${total === 1 ? '' : 's'} total, ${unsorted} unsorted`,
+      clearAll: 'Clear everything',
+      unsortedHeading: (count: number) => `Unsorted (${count})`,
+      unsortedListLabel: 'Unsorted tasks',
+      removeTask: (text: string) => `Remove ${text}`,
+      placeHint: 'Now tap a quadrant to place it.',
+      placeHintDesktop: 'Or drag and drop on desktop.',
+      quadrantRegionLabel: (label: string) => `${label} quadrant`,
+      quadrantCountLabel: (count: number, label: string) => `${count} tasks in ${label}`,
+      dropHere: 'Drop here',
+      sendBackToUnsorted: 'Send back to unsorted',
+      moveBackToUnsorted: (text: string) => `Move ${text} back to unsorted`,
+      empty: 'Empty',
+      emptyState:
+        'Add a task above to get started. Everything saves in your browser, nothing on our server.',
+      hintLabel: 'Doubly hint:',
+      hintBody:
+        'The boring-but-important pile is the one most people skip and most regret skipping. If you only do one thing today, pick from there.',
+      quadrants: {
+        fire: {
+          label: 'On fire',
+          sub: 'Do today, not tomorrow.',
+          textbook: 'Important + Urgent',
+        },
+        boring: {
+          label: 'Boring but important',
+          sub: 'The actual wins. Schedule them, do not skip them.',
+          textbook: 'Important + Not Urgent',
+        },
+        noisy: {
+          label: 'Noisy but skippable',
+          sub: 'Loud, but not your problem. Delegate, defer, ignore.',
+          textbook: 'Urgent + Not Important',
+        },
+        drop: {
+          label: 'Drop these',
+          sub: 'It is allowed. The list does not have to be done.',
+          textbook: 'Not Important + Not Urgent',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Pomodoro timer',
+      modeTablistLabel: 'Timer mode',
+      modes: {
+        work: 'Focus',
+        'short-break': 'Short break',
+        'long-break': 'Long break',
+      },
+      dialLabel: (mode: string, time: string) => `${mode} timer. ${time} remaining.`,
+      sessionsToday: (count: number) => `Sessions completed today: ${count}`,
+      soundToggle: 'Sound at session end',
+      customizeDurations: 'Customize durations',
+      hideSettings: 'Hide settings',
+      focusMinutes: 'Focus (min)',
+      shortBreakMinutes: 'Short break (min)',
+      longBreakMinutes: 'Long break (min)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Visual countdown timer',
+      dialAriaLabel: (remaining: string) => `Visual timer dial. ${remaining} remaining.`,
+      seconds: (s: number) => `${s} seconds`,
+      minutes: (m: number) => `${m} minute${m === 1 ? '' : 's'}`,
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m} minute${m === 1 ? '' : 's'} ${s} seconds`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `Counting down from ${minutes} min`,
+      setFor: (minutes: number) => `Set for ${minutes} min`,
+      paused: 'Paused',
+      timeIsUp: 'Time is up',
+      presetsLabel: 'Duration presets',
+      presetMinutes: (minutes: number) => `${minutes} min`,
+      custom: 'Custom',
+      minutesLabel: 'Minutes',
+      set: 'Set',
+      soundWhenDone: 'Sound when time is up',
+    },
+    brownNoise: {
+      play: (sound: string) => `Play ${sound}`,
+      pause: (sound: string) => `Pause ${sound}`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Choose an ambient sound',
+      soundGroupLabel: 'Ambient sound',
+      volume: 'Volume',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'Sleep timer',
+      sleepOff: 'Off',
+      sleepMinutes: (minutes: number) => `${minutes} min`,
+      privacyNote: 'Runs in your browser. Nothing recorded, nothing uploaded.',
+      sounds: {
+        brown: {
+          name: 'Brown',
+          description: 'Deep, rumbly. Like a distant waterfall. The TikTok one.',
+        },
+        pink: {
+          name: 'Pink',
+          description: 'Softer than white, less bassy than brown. Balanced.',
+        },
+        white: {
+          name: 'White',
+          description: 'The hiss of an old TV. Bright and even.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Hyperfocus interrupt timer',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes} min`,
+      hoursShort: (hours: number) => `${hours} h`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} h ${minutes} min`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'less than a minute';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} hour${hours === 1 ? '' : 's'}`);
+        if (minutes > 0) parts.push(`${minutes} minute${minutes === 1 ? '' : 's'}`);
+        return parts.join(' and ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `Check-in every ${interval}, no hard stop`,
+      stripWithCap: (interval: string, cap: string) =>
+        `Check-in every ${interval}, hard stop at ${cap}`,
+      summaryNoCap: (interval: string) => `Check in every **${interval}** with no hard stop.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `Check in every **${interval}** with a hard stop at **${cap}**.`,
+
+      // Setup
+      intervalHeading: 'Check in every',
+      custom: 'Custom',
+      minutes: 'Minutes',
+      set: 'Set',
+      jitterNote: 'Check-ins are jittered by about ten percent so the brain cannot pre-dismiss them.',
+      moreOptions: 'More options',
+      hideOptions: 'Hide options',
+      taskLabel: 'What are you working on? (optional)',
+      taskPlaceholder: 'e.g. tax forms, design review, the script',
+      taskHint: 'Used in spoken check-ins so you hear what you sat down to do.',
+      hardStopHeading: 'Hard stop after',
+      hardStopHint:
+        'A louder alert fires once the cap is reached so a six-hour spiral cannot sneak past you.',
+      capOff: 'Off',
+      capHours: (hours: number) => `${hours}h`,
+      noHardStop: 'no hard stop',
+      alertsHeading: 'Alerts',
+      chime: 'Chime',
+      voice: 'Voice',
+      notify: 'Notify',
+      alertsHint:
+        'Chime gets louder if a check-in is ignored. Voice speaks the time and elapsed duration. Notify fires a browser notification when the tab is in the background.',
+      notificationsBlocked:
+        'Notifications are blocked in this browser. Enable them in site settings to use this.',
+      notificationsUnsupported: 'Your browser does not support web notifications.',
+      startSession: 'Start session',
+
+      // Live session
+      statElapsed: 'Elapsed',
+      statNextCheckIn: 'Next check-in',
+      statCap: 'Cap',
+      statusNow: 'Now',
+      statusPaused: 'Paused',
+      statusCapHit: 'Cap hit',
+      statusOff: 'Off',
+      workingOn: (task: string) => `Working on **${task}**`,
+      checkInHeading: 'Quick check-in',
+      checkInBody: (clock: string, elapsed: string) =>
+        `It is ${clock} and you have been at this for ${elapsed}. Are you still on the task you started, or is it time to surface?`,
+      stillGoing: 'Still going',
+      takeABreak: 'Take a break',
+      stopSession: 'Stop session',
+      capHeading: 'Session cap reached',
+      capBody: (minutes: number) =>
+        `You set a hard stop at ${minutes} minutes. Stand up, drink water, eat something. The work will still be here.`,
+      pause: 'Pause',
+      resume: 'Resume',
+      endSession: 'End session',
+      checkInLog: 'Check-in log',
+      logContinue: 'kept going',
+      logBreak: 'took a break',
+      logStop: 'stopped',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ Check in | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Check in. It's ${clock}. You've been working on ${task} for ${elapsed}.`
+          : `Check in. It's ${clock}. You've been working for ${elapsed}.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Session cap reached. It's ${clock}. You've been at this for ${elapsed}. Time to stop.`,
+      notificationCheckInTitle: 'Hyperfocus check-in',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `It's ${clock}. You've been at this for ${elapsed}.`,
+      notificationCapTitle: 'Hyperfocus cap reached',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `It's ${clock}. You've been at this for ${elapsed}. Time to stop.`,
+    },
+    shared: {
+      start: 'Start',
+      pause: 'Pause',
+      resume: 'Resume',
+      done: 'Done',
+      reset: 'Reset',
+      skip: 'Skip',
+      skipAria: 'Skip to next session',
+      startSession: 'Start a focus session',
+      creatingRoom: 'Creating room...',
+    },
+    chrome: {
+      tryInApp: 'Try it in the app',
+      appStoreAria: (label: string) => `${label} on the App Store`,
+      breadcrumbAria: 'Breadcrumb',
+    },
+  },
+
 } as const;
 
 export default en;

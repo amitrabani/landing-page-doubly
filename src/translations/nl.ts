@@ -478,6 +478,370 @@ const nl = {
     ogDescription:
       'Dump de chaos uit je hoofd, krijg één duidelijke volgende stap, en gebruik verantwoording om echt door te zetten.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Takensplitter',
+      description:
+        'Typ een taak waar je niet aan kunt beginnen. De AI deelt hem op in kleine, haalbare stappen met een tijdsinschatting. Gemaakt voor ADHD-breinen.',
+    },
+    'brain-dump': {
+      title: 'Brain dump-tool',
+      description:
+        'Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie, niets wordt opgeslagen.',
+    },
+    'pick-one': {
+      title: 'Kies één taak',
+      description:
+        'Plak je rommelige to-dolijst en je krijgt één ding om mee te beginnen: de kleinste, de engste, of gewoon willekeurig. Voor het moment dat tien taken aanvoelen als één groot blok waar je niet aan begint.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower-matrix (ADHD-editie)',
+      description:
+        'Sleep taken naar vakjes als "saai maar belangrijk" in plaats van naar labels uit een managementboek. De matrix die eindelijk past bij een ADHD-brein. Alles blijft lokaal opgeslagen.',
+    },
+    'pomodoro': {
+      title: 'ADHD-pomodoro-timer',
+      description:
+        '25 minuten werken, 5 minuten pauze - de focusmethode die eindelijk past bij een ADHD-brein. Gratis, geen registratie, werkt offline.',
+    },
+    'visual-timer': {
+      title: 'Visuele timer / tijdblindheidsklok',
+      description:
+        'Een krimpende taartpunt, zodat je de tijd ziet verstrijken in plaats van cijfers te moeten lezen. Werkt ook als tijdblindheidsklok voor volwassenen met ADHD.',
+    },
+    'brown-noise': {
+      title: 'Generator voor achtergrondgeluid',
+      description:
+        'Gratis generator voor achtergrondgeluid in je browser. Bruine ruis, plus roze en witte ruis. Constant geluid dat een druk ADHD-brein tot rust brengt. Met slaaptimer, werkt offline.',
+    },
+    'body-doubling-room': {
+      title: 'Body doubling-ruimte',
+      description:
+        'Gratis focusruimte voor twee. Deel een link, werk zij aan zij via peer-to-peer video en laat een gedeelde timer lopen. Geen registratie, geen installatie.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hyperfocus-onderbrekingstimer',
+      description:
+        'Gesproken check-ins om de zoveel minuten en een optionele harde stop, zodat een ADHD-hyperfocus niet je hele middag opslokt.',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'Aan welke taak lukt het je niet om te beginnen?',
+      inputPlaceholder: 'bijv. Mijn declaratie indienen',
+      submit: 'Splits het op',
+      submitting: 'Bezig met opsplitsen…',
+      privacyNote: 'Privé. Er wordt niets op onze server opgeslagen.',
+      charactersLeft: (count: number) => `Nog ${count} ${count === 1 ? 'teken' : 'tekens'}`,
+      presetsIntro: 'Of probeer een van deze:',
+      presets: {
+        cleanKitchen: 'De keuken schoonmaken',
+        doLaundry: 'De was doen',
+        replyInbox: 'Mijn inbox beantwoorden',
+        planWeekendTrip: 'Een weekendje weg plannen',
+        fileTaxes: 'Mijn belastingaangifte doen',
+        cleanBathroom: 'De badkamer schoonmaken',
+      },
+      loading: 'Bezig met opdelen in stappen…',
+      errorRateLimit: 'Je gaat snel. Wacht heel even en probeer het opnieuw.',
+      errorGeneric: 'Kon dit nu niet opsplitsen. Probeer het over een paar seconden opnieuw.',
+      tryAgain: 'Opnieuw proberen',
+      taskLabel: 'Taak',
+      urgencyLabels: { low: 'Lage urgentie', medium: 'Gemiddelde urgentie', high: 'Hoge urgentie' },
+      stepsDone: (done: number, total: number) => `${done}/${total} stappen klaar`,
+      minTotal: (min: number) => `~${min} min totaal`,
+      allDoneMessage: 'Klaar. Dat viel best mee, toch?',
+      emptyState:
+        'Kon hier geen duidelijke deelstappen in vinden. Probeer het als actie te formuleren, zoals “Het projectplan schrijven” of “De garage opruimen.”',
+    },
+    brainDump: {
+      label: 'Gooi eruit wat er in je hoofd zit. Hoeft niet geordend te zijn.',
+      placeholder:
+        'Ik vergeet steeds de tandarts te bellen en de keuken is een puinhoop.\nIk voel me overweldigd door dat project op werk. Moet nog boodschappen doen\nvoor vanavond en de mail van Sarah van vorige week beantwoorden.',
+      privacy: 'Privé. Er wordt niets op onze server opgeslagen.',
+      charactersLeft: (remaining: number) =>
+        `Nog ${remaining} ${remaining === 1 ? 'teken' : 'tekens'}.`,
+      clear: 'Wissen',
+      submit: 'Haal de taken eruit',
+      submitting: 'Taken eruit halen…',
+      loading: 'We lezen je dump en halen eruit wat je kunt doen…',
+      errorRateLimited: 'Je gaat snel. Wacht heel even en probeer het opnieuw.',
+      errorGeneric: 'Kon er nu geen taken uit halen. Probeer het over een paar seconden opnieuw.',
+      tryAgain: 'Opnieuw proberen',
+      empty:
+        'We vonden hier niets dat op een concrete taak leek. Dat kan een goed teken zijn. Als je even stoom afblies: dat telt ook. Wilde je opsommen wat je moet doen, wees dan iets specifieker (“Sarah mailen” in plaats van “dat gedoe met Sarah”).',
+      resultsTitle: 'Taken die je kunt doen',
+      doneCount: (done: number, total: number) => `${done}/${total} klaar`,
+      footer: 'Kies er één. Eén maar. Doe hem nu en kom daarna terug voor de volgende.',
+    },
+    pickOne: {
+      inputLabel: 'Plak je lijst. Eén per regel, of gewoon rommelig met komma’s. Maakt niet uit.',
+      inputPlaceholder:
+        'mama terugbellen\ntandarts inplannen\ndeclaratie indienen\npresentatie afmaken\nplanten water geven',
+      itemsDetected: (count: number) => `${count} ${count === 1 ? 'item' : 'items'} gevonden`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} ${count === 1 ? 'item' : 'items'} gevonden, nog ${left} te gaan`,
+      clearEverything: 'Alles wissen',
+      modeLegend: 'Hoe zullen we kiezen?',
+      modes: {
+        smallest: {
+          label: 'Kleinste',
+          reason: 'Het kortste item op de lijst. Begin klein, bouw momentum op.',
+        },
+        scariest: {
+          label: 'Engste',
+          reason: 'Die waar je liever niet naar kijkt. Doe hem eerst en je dag is vrij.',
+        },
+        random: {
+          label: 'Kies er gewoon één',
+          reason: 'Niet wikken en wegen. De lijst koos zelf. Begin gewoon.',
+        },
+      },
+      pickCta: 'Kies er één voor mij',
+      pickAnotherCta: 'Kies een andere',
+      emptyHint: 'Voeg minstens één item toe en tik dan op kiezen.',
+      readyHint: 'Klaar. Tik op “Kies er één voor mij” zodra je niet kunt kiezen.',
+      allDoneTitle: 'Lijst afgehandeld.',
+      allDoneBody:
+        'Elk item is gedaan of overgeslagen. Je kunt de lijst wissen, of resetten om overgeslagen items weer mee te laten doen.',
+      bringSkippedBack: 'Overgeslagen terughalen',
+      startFreshList: 'Begin een nieuwe lijst',
+      pickedEyebrow: 'Begin met deze',
+      didIt: 'Gedaan',
+      notThisOne: 'Deze niet',
+      pickAgain: 'Kies opnieuw',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} klaar, ${skipped} overgeslagen, nog ${left} te gaan`,
+    },
+    eisenhower: {
+      inputLabel: 'Voeg een taak toe',
+      inputPlaceholder:
+        'Typ een taak en druk op enter (of plak er meerdere, gescheiden door regeleinden)',
+      addButton: 'Toevoegen',
+      totals: (total: number, unsorted: number) =>
+        `${total} ${total === 1 ? 'taak' : 'taken'} totaal, ${unsorted} ongesorteerd`,
+      clearAll: 'Alles wissen',
+      unsortedHeading: (count: number) => `Ongesorteerd (${count})`,
+      unsortedListLabel: 'Ongesorteerde taken',
+      removeTask: (text: string) => `${text} verwijderen`,
+      placeHint: 'Tik nu op een kwadrant om hem te plaatsen.',
+      placeHintDesktop: 'Of sleep hem op desktop.',
+      quadrantRegionLabel: (label: string) => `Kwadrant ${label}`,
+      quadrantCountLabel: (count: number, label: string) => `${count} taken in ${label}`,
+      dropHere: 'Sleep hier',
+      sendBackToUnsorted: 'Terug naar ongesorteerd',
+      moveBackToUnsorted: (text: string) => `${text} terugzetten naar ongesorteerd`,
+      empty: 'Leeg',
+      emptyState:
+        'Voeg hierboven een taak toe om te beginnen. Alles wordt in je browser opgeslagen, niets op onze server.',
+      hintLabel: 'Doubly-tip:',
+      hintBody:
+        'De stapel “saai maar belangrijk” is precies die de meeste mensen overslaan en waar ze het meest spijt van krijgen. Doe je vandaag maar één ding, kies dan daaruit.',
+      quadrants: {
+        fire: {
+          label: 'In brand',
+          sub: 'Vandaag doen, niet morgen.',
+          textbook: 'Belangrijk + Urgent',
+        },
+        boring: {
+          label: 'Saai maar belangrijk',
+          sub: 'Hier zit de echte winst. Plan ze in, sla ze niet over.',
+          textbook: 'Belangrijk + Niet urgent',
+        },
+        noisy: {
+          label: 'Veel herrie, weinig nut',
+          sub: 'Luid, maar niet jouw probleem. Delegeer, stel uit, negeer.',
+          textbook: 'Urgent + Niet belangrijk',
+        },
+        drop: {
+          label: 'Laat maar vallen',
+          sub: 'Dat mag. De lijst hoeft niet af.',
+          textbook: 'Niet belangrijk + Niet urgent',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Pomodoro-timer',
+      modeTablistLabel: 'Timermodus',
+      modes: {
+        work: 'Focus',
+        'short-break': 'Korte pauze',
+        'long-break': 'Lange pauze',
+      },
+      dialLabel: (mode: string, time: string) => `${mode}-timer. Nog ${time} te gaan.`,
+      sessionsToday: (count: number) => `Sessies vandaag afgerond: ${count}`,
+      soundToggle: 'Geluid aan het eind van een sessie',
+      customizeDurations: 'Tijden aanpassen',
+      hideSettings: 'Instellingen verbergen',
+      focusMinutes: 'Focus (min)',
+      shortBreakMinutes: 'Korte pauze (min)',
+      longBreakMinutes: 'Lange pauze (min)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Visuele afteltimer',
+      dialAriaLabel: (remaining: string) => `Wijzerplaat van de visuele timer. Nog ${remaining}.`,
+      seconds: (s: number) => `${s} ${s === 1 ? 'seconde' : 'seconden'}`,
+      minutes: (m: number) => `${m} ${m === 1 ? 'minuut' : 'minuten'}`,
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m} ${m === 1 ? 'minuut' : 'minuten'} ${s} ${s === 1 ? 'seconde' : 'seconden'}`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `Telt af vanaf ${minutes} min`,
+      setFor: (minutes: number) => `Ingesteld op ${minutes} min`,
+      paused: 'Gepauzeerd',
+      timeIsUp: 'De tijd is om',
+      presetsLabel: 'Voorinstellingen',
+      presetMinutes: (minutes: number) => `${minutes} min`,
+      custom: 'Aangepast',
+      minutesLabel: 'Minuten',
+      set: 'Instellen',
+      soundWhenDone: 'Geluid als de tijd om is',
+    },
+    brownNoise: {
+      play: (sound: string) => `${sound} afspelen`,
+      pause: (sound: string) => `${sound} pauzeren`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Kies een achtergrondgeluid',
+      soundGroupLabel: 'Achtergrondgeluid',
+      volume: 'Volume',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'Slaaptimer',
+      sleepOff: 'Uit',
+      sleepMinutes: (minutes: number) => `${minutes} min`,
+      privacyNote: 'Draait in je browser. Niets opgenomen, niets geüpload.',
+      sounds: {
+        brown: {
+          name: 'Bruin',
+          description: 'Diep en rommelend. Als een waterval in de verte. Die van TikTok.',
+        },
+        pink: {
+          name: 'Roze',
+          description: 'Zachter dan wit, minder bas dan bruin. Mooi in balans.',
+        },
+        white: {
+          name: 'Wit',
+          description: 'Het gesis van een oude tv. Helder en gelijkmatig.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Hyperfocus-onderbrekingstimer',
+
+      // Tijdsduur. Elke formulering staat hier, zodat elke taal zijn eigen
+      // meervoudsvormen, eenheden en woordvolgorde kan kiezen.
+      minutesShort: (minutes: number) => `${minutes} min`,
+      hoursShort: (hours: number) => `${hours} u`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} u ${minutes} min`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'minder dan een minuut';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} uur`);
+        if (minutes > 0) parts.push(`${minutes} ${minutes === 1 ? 'minuut' : 'minuten'}`);
+        return parts.join(' en ');
+      },
+
+      // Sessiebalk. Tekst tussen ** wordt benadrukt weergegeven.
+      stripNoCap: (interval: string) => `Check-in elke ${interval}, geen harde stop`,
+      stripWithCap: (interval: string, cap: string) =>
+        `Check-in elke ${interval}, harde stop na ${cap}`,
+      summaryNoCap: (interval: string) => `Check in elke **${interval}**, zonder harde stop.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `Check in elke **${interval}**, met een harde stop na **${cap}**.`,
+
+      // Instellen
+      intervalHeading: 'Check in elke',
+      custom: 'Aangepast',
+      minutes: 'Minuten',
+      set: 'Instellen',
+      jitterNote:
+        'Check-ins schuiven zo’n tien procent heen en weer, zodat je brein ze niet vooraf kan wegwuiven.',
+      moreOptions: 'Meer opties',
+      hideOptions: 'Opties verbergen',
+      taskLabel: 'Waar werk je aan? (optioneel)',
+      taskPlaceholder: 'bijv. belastingaangifte, designreview, het script',
+      taskHint: 'Wordt gebruikt in gesproken check-ins, zodat je hoort waarvoor je ging zitten.',
+      hardStopHeading: 'Harde stop na',
+      hardStopHint:
+        'Zodra de limiet bereikt is, klinkt er een luider alarm, zodat een spiraal van zes uur niet ongemerkt voorbijglipt.',
+      capOff: 'Uit',
+      capHours: (hours: number) => `${hours}u`,
+      noHardStop: 'geen harde stop',
+      alertsHeading: 'Waarschuwingen',
+      chime: 'Geluid',
+      voice: 'Stem',
+      notify: 'Melding',
+      alertsHint:
+        'Het geluid wordt luider als je een check-in negeert. De stem noemt de tijd en hoelang je bezig bent. Melding stuurt een browsermelding als het tabblad op de achtergrond staat.',
+      notificationsBlocked:
+        'Meldingen zijn geblokkeerd in deze browser. Zet ze aan in de site-instellingen om dit te gebruiken.',
+      notificationsUnsupported: 'Je browser ondersteunt geen webmeldingen.',
+      startSession: 'Sessie starten',
+
+      // Lopende sessie
+      statElapsed: 'Verstreken',
+      statNextCheckIn: 'Volgende check-in',
+      statCap: 'Limiet',
+      statusNow: 'Nu',
+      statusPaused: 'Gepauzeerd',
+      statusCapHit: 'Limiet bereikt',
+      statusOff: 'Uit',
+      workingOn: (task: string) => `Bezig met **${task}**`,
+      checkInHeading: 'Korte check-in',
+      checkInBody: (clock: string, elapsed: string) =>
+        `Het is ${clock} en je bent hier al ${elapsed} mee bezig. Ben je nog met de taak bezig waarmee je begon, of is het tijd om even boven water te komen?`,
+      stillGoing: 'Ik ga door',
+      takeABreak: 'Even pauze',
+      stopSession: 'Sessie stoppen',
+      capHeading: 'Sessielimiet bereikt',
+      capBody: (minutes: number) =>
+        `Je had een harde stop op ${minutes} ${minutes === 1 ? 'minuut' : 'minuten'} gezet. Sta op, drink water, eet iets. Het werk is er straks nog.`,
+      pause: 'Pauzeren',
+      resume: 'Hervatten',
+      endSession: 'Sessie beëindigen',
+      checkInLog: 'Check-in-log',
+      logContinue: 'ging door',
+      logBreak: 'nam pauze',
+      logStop: 'stopte',
+
+      // Titel van het browsertabblad als er een check-in wacht op de achtergrond.
+      tabAlert: '⚠ Check in | Doubly',
+
+      // Wordt hardop uitgesproken (SpeechSynthesis) en als systeemmelding getoond.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Even inchecken. Het is ${clock}. Je bent al ${elapsed} bezig met ${task}.`
+          : `Even inchecken. Het is ${clock}. Je bent al ${elapsed} aan het werk.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Je sessielimiet is bereikt. Het is ${clock}. Je bent hier al ${elapsed} mee bezig. Tijd om te stoppen.`,
+      notificationCheckInTitle: 'Hyperfocus-check-in',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `Het is ${clock}. Je bent hier al ${elapsed} mee bezig.`,
+      notificationCapTitle: 'Hyperfocuslimiet bereikt',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `Het is ${clock}. Je bent hier al ${elapsed} mee bezig. Tijd om te stoppen.`,
+    },
+    shared: {
+      start: 'Starten',
+      pause: 'Pauzeren',
+      resume: 'Hervatten',
+      done: 'Klaar',
+      reset: 'Resetten',
+      skip: 'Overslaan',
+      skipAria: 'Ga door naar de volgende sessie',
+      startSession: 'Start een focussessie',
+      creatingRoom: 'Ruimte aanmaken...',
+    },
+    chrome: {
+      tryInApp: 'Probeer het in de app',
+      appStoreAria: (label: string) => `${label} in de App Store`,
+      breadcrumbAria: 'Kruimelpad',
+    },
+  },
+
 };
 
 export default nl;

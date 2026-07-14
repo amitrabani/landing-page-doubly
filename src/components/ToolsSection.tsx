@@ -9,8 +9,6 @@ import { toolHref, toolsHubHref } from '@/i18n/toolsManifest';
 // from here raises their crawl priority and passes link equity (helps indexation).
 // Because this stays a server component it can't use the client-side useT()
 // provider; the locale is passed in as a prop and the dictionary read directly.
-// Tool titles/descriptions stay English on purpose: they mirror the
-// English-only /tools/* pages they link to.
 export default function ToolsSection({ locale = defaultLocale }: { locale?: Locale }) {
   const t = getDictionary(locale);
   const live = tools.filter((tool) => tool.status === 'live');
@@ -37,7 +35,7 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
               >
                 <div className="flex items-center gap-2">
                   <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
-                    {tool.title}
+                    {t.toolCards[tool.slug].title}
                   </h3>
                   {tool.hot && (
                     <span className="inline-flex items-center gap-1 rounded-full bg-lavender/20 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-lavender-dark">
@@ -46,7 +44,7 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
                   )}
                 </div>
                 <p className="mt-1.5 text-sm text-charcoal-light leading-6 line-clamp-2">
-                  {tool.description}
+                  {t.toolCards[tool.slug].description}
                 </p>
                 <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-lavender-dark">
                   {t.toolsSection.openTool}{' '}

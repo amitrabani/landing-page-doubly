@@ -2,6 +2,7 @@ import Breadcrumbs from '@/app/(main)/(public-helpers)/_components/Breadcrumbs';
 import SoftAppCTA from '@/app/(main)/(public-helpers)/_components/SoftAppCTA';
 import { InlineMd, ParagraphsMd } from '@/components/MarkdownLite';
 import { localePath } from '@/i18n/alternates';
+import { getDictionary } from '@/i18n/dictionaries';
 import { localizedHref } from '@/i18n/links';
 import { SITE_URL } from '@/lib/sitemap-data';
 import type { Locale } from '@/i18n/config';
@@ -32,6 +33,9 @@ export default function ToolArticle({ content, locale, slug, widget }: Props) {
   const pageUrl = `${SITE_URL}${localePath(locale, `/tools/${slug}`)}`;
   const homeUrl = `${SITE_URL}${localePath(locale, '/')}`;
   const toolsUrl = `${SITE_URL}${localePath(locale, '/tools')}`;
+  // A pack may leave breadcrumbTools null; the UI dictionary already has the
+  // word "Tools" in every locale, so fall back to that rather than to English.
+  const toolsLabel = content.breadcrumbTools ?? getDictionary(locale).navbar.tools;
 
   const stepsSection = content.sections.find((s) => s.kind === 'steps');
   const faqSection = content.sections.find((s) => s.kind === 'faq');
@@ -42,7 +46,7 @@ export default function ToolArticle({ content, locale, slug, widget }: Props) {
     '@id': `${pageUrl}#breadcrumb`,
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: content.breadcrumbHome, item: homeUrl },
-      { '@type': 'ListItem', position: 2, name: content.breadcrumbTools ?? 'Tools', item: toolsUrl },
+      { '@type': 'ListItem', position: 2, name: toolsLabel, item: toolsUrl },
       { '@type': 'ListItem', position: 3, name: content.breadcrumbLabel, item: pageUrl },
     ],
   };
@@ -109,8 +113,8 @@ export default function ToolArticle({ content, locale, slug, widget }: Props) {
         <Breadcrumbs
           items={[
             { label: content.breadcrumbHome, href: localizedHref(locale, '/') },
-            // Falls back to the English hub until this locale's hub is translated.
-            { label: content.breadcrumbTools ?? 'Tools', href: localizedHref(locale, '/tools') },
+            // Href falls back to the English hub until this locale's hub is translated.
+            { label: toolsLabel, href: localizedHref(locale, '/tools') },
             { label: content.breadcrumbLabel },
           ]}
         />

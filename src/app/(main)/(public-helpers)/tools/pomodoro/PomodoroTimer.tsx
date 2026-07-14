@@ -1,6 +1,7 @@
 'use client';
 
-import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
+import { useT } from '@/i18n/TranslationProvider';
 import TimerDial, { type WedgeTone } from '../../_components/TimerDial';
 import TimerControls from '../../_components/TimerControls';
 
@@ -29,12 +30,6 @@ const DEFAULTS: Settings = {
 };
 
 const STORAGE_KEY = 'doubly:pomodoro:v1';
-
-const MODE_LABEL: Record<Mode, string> = {
-  work: 'Focus',
-  'short-break': 'Short break',
-  'long-break': 'Long break',
-};
 
 const MODE_TONE: Record<Mode, WedgeTone> = {
   work: 'coral',
@@ -171,6 +166,15 @@ const CARD_STYLE: React.CSSProperties = {
 };
 
 export default function PomodoroTimer() {
+  const copy = useT().toolWidgets.pomodoro;
+  const modeLabels = useMemo<Record<Mode, string>>(
+    () => ({
+      work: copy.modes.work,
+      'short-break': copy.modes['short-break'],
+      'long-break': copy.modes['long-break'],
+    }),
+    [copy],
+  );
   const [settings, setSettings] = useState<Settings>(DEFAULTS);
   const [state, dispatch] = useReducer(reducer, initialState(DEFAULTS));
   const [hydrated, setHydrated] = useState(false);
@@ -266,14 +270,14 @@ export default function PomodoroTimer() {
     if (typeof document === 'undefined') return;
     if (originalTitleRef.current === null) originalTitleRef.current = document.title;
     if (state.status === 'running') {
-      document.title = `${format(state.remainingMs)} | ${MODE_LABEL[state.mode]} | Doubly`;
+      document.title = copy.documentTitle(format(state.remainingMs), modeLabels[state.mode]);
     } else if (originalTitleRef.current) {
       document.title = originalTitleRef.current;
     }
     return () => {
       if (originalTitleRef.current) document.title = originalTitleRef.current;
     };
-  }, [state.status, state.remainingMs, state.mode]);
+  }, [state.status, state.remainingMs, state.mode, copy, modeLabels]);
 
   const start = useCallback(() => {
     if (state.status === 'idle') {
@@ -324,11 +328,15 @@ export default function PomodoroTimer() {
 
   return (
     <section
-      aria-label="Pomodoro timer"
+      aria-label={copy.timerLabel}
       className="rounded-3xl border border-warm-dark/30 shadow-[0_4px_30px_rgba(45,43,50,0.06)] p-6 sm:p-10"
       style={CARD_STYLE}
     >
-      <div role="tablist" aria-label="Timer mode" className="flex flex-wrap justify-center gap-2 mb-8">
+      <div
+        role="tablist"
+        aria-label={copy.modeTablistLabel}
+        className="flex flex-wrap justify-center gap-2 mb-8"
+      >
         {(['work', 'short-break', 'long-break'] as Mode[]).map((m) => {
           const active = state.mode === m;
           return (
@@ -345,7 +353,7 @@ export default function PomodoroTimer() {
               }
               style={active ? { background: MODE_TAB_GRADIENT[m] } : undefined}
             >
-              {MODE_LABEL[m]}
+              {modeLabels[m]}
             </button>
           );
         })}
@@ -357,12 +365,9 @@ export default function PomodoroTimer() {
           tone={MODE_TONE[state.mode]}
           display={display}
           status={state.status}
-          ariaLabel={`${MODE_LABEL[state.mode]} timer. ${display} remaining.`}
+          ariaLabel={copy.dialLabel(modeLabels[state.mode], display)}
         />
-        <p className="text-sm text-muted">
-          Sessions completed today:{' '}
-          <span className="text-charcoal font-medium">{state.completedWorkSessions}</span>
-        </p>
+        <p className="text-sm text-muted">{copy.sessionsToday(state.completedWorkSessions)}</p>
       </div>
 
       <div className="mt-8">
@@ -384,7 +389,7 @@ export default function PomodoroTimer() {
             onChange={(e) => setSettings((s) => ({ ...s, soundEnabled: e.target.checked }))}
             className="h-4 w-4 rounded accent-lavender-dark"
           />
-          Sound at session end
+          {copy.soundToggle}
         </label>
         <button
           type="button"
@@ -393,7 +398,7 @@ export default function PomodoroTimer() {
           aria-controls="pomodoro-settings"
           className="text-sm font-medium text-lavender-dark hover:underline"
         >
-          {settingsOpen ? 'Hide settings' : 'Customize durations'}
+          {settingsOpen ? copy.hideSettings : copy.customizeDurations}
         </button>
       </div>
 
@@ -403,17 +408,17 @@ export default function PomodoroTimer() {
           className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 rounded-2xl bg-white/40 backdrop-blur-sm p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]"
         >
           <DurationInput
-            label="Focus (min)"
+            label={copy.focusMinutes}
             value={settings.durations.work}
             onChange={(n) => updateDuration('work', n)}
           />
           <DurationInput
-            label="Short break (min)"
+            label={copy.shortBreakMinutes}
             value={settings.durations.short}
             onChange={(n) => updateDuration('short', n)}
           />
           <DurationInput
-            label="Long break (min)"
+            label={copy.longBreakMinutes}
             value={settings.durations.long}
             onChange={(n) => updateDuration('long', n)}
           />

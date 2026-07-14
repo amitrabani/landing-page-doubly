@@ -1,7 +1,8 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { createSoundBuffer, SOUND_DESCRIPTIONS, SOUND_LABELS, type SoundType } from './sounds';
+import { useT } from '@/i18n/TranslationProvider';
+import { createSoundBuffer, SOUND_ORDER, type SoundType } from './sounds';
 
 type SleepMinutes = 0 | 15 | 30 | 60 | 90;
 
@@ -14,14 +15,7 @@ type Persisted = {
 const STORAGE_KEY = 'doubly:brown-noise:v1';
 const DEFAULT_VOLUME = 60;
 const FADE_SECONDS = 2;
-const SOUND_ORDER: SoundType[] = ['brown', 'pink', 'white'];
-const SLEEP_OPTIONS: { value: SleepMinutes; label: string }[] = [
-  { value: 0, label: 'Off' },
-  { value: 15, label: '15 min' },
-  { value: 30, label: '30 min' },
-  { value: 60, label: '60 min' },
-  { value: 90, label: '90 min' },
-];
+const SLEEP_OPTIONS: SleepMinutes[] = [0, 15, 30, 60, 90];
 
 function loadPersisted(): Partial<Persisted> {
   if (typeof window === 'undefined') return {};
@@ -41,6 +35,8 @@ function volumeToGain(volume: number): number {
 }
 
 export default function BrownNoisePlayer() {
+  const t = useT();
+  const copy = t.toolWidgets.brownNoise;
   const [sound, setSound] = useState<SoundType>('brown');
   const [volume, setVolume] = useState<number>(DEFAULT_VOLUME);
   const [sleep, setSleep] = useState<SleepMinutes>(0);
@@ -81,11 +77,11 @@ export default function BrownNoisePlayer() {
 
   useEffect(() => {
     if (isPlaying) {
-      document.title = `▶ ${SOUND_LABELS[sound]} · Doubly`;
+      document.title = copy.documentTitle(copy.sounds[sound].name);
     } else if (originalTitleRef.current) {
       document.title = originalTitleRef.current;
     }
-  }, [isPlaying, sound]);
+  }, [copy, isPlaying, sound]);
 
   const clearSleepTimer = useCallback(() => {
     if (sleepTimerRef.current !== null) {
@@ -254,7 +250,11 @@ export default function BrownNoisePlayer() {
         <button
           type="button"
           onClick={togglePlay}
-          aria-label={isPlaying ? `Pause ${SOUND_LABELS[sound]}` : `Play ${SOUND_LABELS[sound]}`}
+          aria-label={
+            isPlaying
+              ? copy.pause(copy.sounds[sound].name)
+              : copy.play(copy.sounds[sound].name)
+          }
           aria-pressed={isPlaying}
           className="group relative flex h-32 w-32 sm:h-40 sm:w-40 items-center justify-center rounded-full bg-charcoal text-cream transition-transform active:scale-[0.97] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-lavender/50"
         >
@@ -271,13 +271,13 @@ export default function BrownNoisePlayer() {
         </button>
 
         <p className="mt-4 text-sm text-charcoal-light text-center max-w-xs">
-          {SOUND_DESCRIPTIONS[sound]}
+          {copy.sounds[sound].description}
         </p>
       </div>
 
       <fieldset className="mt-6">
-        <legend className="sr-only">Choose an ambient sound</legend>
-        <div role="radiogroup" aria-label="Ambient sound" className="grid grid-cols-3 gap-2">
+        <legend className="sr-only">{copy.chooseSound}</legend>
+        <div role="radiogroup" aria-label={copy.soundGroupLabel} className="grid grid-cols-3 gap-2">
           {SOUND_ORDER.map((type) => {
             const selected = sound === type;
             return (
@@ -294,7 +294,7 @@ export default function BrownNoisePlayer() {
                     : 'bg-warm/60 text-charcoal hover:bg-warm-dark/40',
                 ].join(' ')}
               >
-                {SOUND_LABELS[type]}
+                {copy.sounds[type].name}
               </button>
             );
           })}
@@ -303,8 +303,8 @@ export default function BrownNoisePlayer() {
 
       <div className="mt-6">
         <label htmlFor="bn-volume" className="flex items-center justify-between text-sm text-charcoal-light mb-2">
-          <span>Volume</span>
-          <span className="tabular-nums text-muted">{volume}%</span>
+          <span>{copy.volume}</span>
+          <span className="tabular-nums text-muted">{copy.volumePercent(volume)}</span>
         </label>
         <input
           id="bn-volume"
@@ -320,18 +320,18 @@ export default function BrownNoisePlayer() {
 
       <div className="mt-6">
         <label htmlFor="bn-sleep" className="block text-sm text-charcoal-light mb-2">
-          Sleep timer
+          {copy.sleepTimer}
         </label>
-        <div role="radiogroup" aria-label="Sleep timer" className="grid grid-cols-5 gap-2">
-          {SLEEP_OPTIONS.map((opt) => {
-            const selected = sleep === opt.value;
+        <div role="radiogroup" aria-label={copy.sleepTimer} className="grid grid-cols-5 gap-2">
+          {SLEEP_OPTIONS.map((value) => {
+            const selected = sleep === value;
             return (
               <button
-                key={opt.value}
+                key={value}
                 type="button"
                 role="radio"
                 aria-checked={selected}
-                onClick={() => setSleep(opt.value)}
+                onClick={() => setSleep(value)}
                 className={[
                   'rounded-lg px-2 py-2 text-xs font-medium transition-colors',
                   selected
@@ -339,16 +339,14 @@ export default function BrownNoisePlayer() {
                     : 'bg-warm/60 text-charcoal hover:bg-warm-dark/40',
                 ].join(' ')}
               >
-                {opt.label}
+                {value === 0 ? copy.sleepOff : copy.sleepMinutes(value)}
               </button>
             );
           })}
         </div>
       </div>
 
-      <p className="mt-6 text-xs text-muted text-center">
-        Runs in your browser. Nothing recorded, nothing uploaded.
-      </p>
+      <p className="mt-6 text-xs text-muted text-center">{copy.privacyNote}</p>
     </div>
   );
 }

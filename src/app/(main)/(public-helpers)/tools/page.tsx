@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Breadcrumbs from '../_components/Breadcrumbs';
 import SoftAppCTA from '../_components/SoftAppCTA';
 import { tools } from '@/lib/tools';
+import en from '@/translations/en';
 
 const SITE_URL = 'https://usedoubly.com';
 const PAGE_URL = `${SITE_URL}/tools`;
@@ -93,9 +94,9 @@ export default function ToolsHubPage() {
                     className="block h-full rounded-2xl bg-white border border-warm-dark/30 p-6 hover:border-lavender hover:shadow-[0_4px_20px_rgba(184,169,212,0.15)] transition-all"
                   >
                     <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal mb-2">
-                      {tool.title}
+                      {en.toolCards[tool.slug].title}
                     </h3>
-                    <p className="text-sm text-charcoal-light leading-6">{tool.description}</p>
+                    <p className="text-sm text-charcoal-light leading-6">{en.toolCards[tool.slug].description}</p>
                     <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-lavender-dark">
                       Open tool <span aria-hidden="true">&rarr;</span>
                     </span>
@@ -103,9 +104,9 @@ export default function ToolsHubPage() {
                 ) : (
                   <div className="h-full rounded-2xl bg-warm/50 border border-warm-dark/20 p-6 opacity-70">
                     <h3 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal mb-2">
-                      {tool.title}
+                      {en.toolCards[tool.slug].title}
                     </h3>
-                    <p className="text-sm text-charcoal-light leading-6">{tool.description}</p>
+                    <p className="text-sm text-charcoal-light leading-6">{en.toolCards[tool.slug].description}</p>
                     <span className="mt-4 inline-block text-xs uppercase tracking-wider text-muted">
                       Coming soon
                     </span>

@@ -478,6 +478,371 @@ const es = {
     ogDescription:
       'Suelta el caos en un volcado mental, consigue un siguiente paso claro y usa la responsabilidad compartida para cumplir de verdad.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Herramienta para dividir tareas',
+      description:
+        'Escribe una tarea que no consigues empezar. La IA la divide en pasos pequeños y abordables, con su tiempo estimado. Hecha para cerebros con TDAH.',
+    },
+    'brain-dump': {
+      title: 'Herramienta de volcado mental',
+      description:
+        'Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro, no se guarda nada.',
+    },
+    'pick-one': {
+      title: 'Herramienta para elegir una tarea',
+      description:
+        'Pega una lista de pendientes caótica y te devuelve una sola cosa con la que empezar. La más pequeña, la que más miedo da o una al azar. Hecha para cuando diez tareas se convierten en un único bloque gigante imposible de empezar.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matriz de Eisenhower (edición TDAH)',
+      description:
+        'Arrastra las tareas a cuadrantes como «aburrido pero importante» en vez de etiquetas de manual. La matriz que por fin encaja con un cerebro con TDAH. Se guarda en tu navegador.',
+    },
+    'pomodoro': {
+      title: 'Temporizador Pomodoro para el TDAH',
+      description:
+        '25 minutos de trabajo, 5 de descanso: el método de concentración que por fin encaja con un cerebro con TDAH. Gratis, sin registro, funciona sin conexión.',
+    },
+    'visual-timer': {
+      title: 'Temporizador visual / reloj para la ceguera al tiempo',
+      description:
+        'Una porción de tarta que se encoge para que veas pasar el tiempo en vez de leer números. Sirve también como reloj contra la ceguera al tiempo en adultos con TDAH.',
+    },
+    'brown-noise': {
+      title: 'Generador de sonido ambiental',
+      description:
+        'Generador de sonido ambiental gratis en el navegador. Ruido marrón, rosa y blanco. Un fondo sonoro constante para calmar un cerebro con TDAH que no para. Incluye temporizador para dormir y funciona sin conexión.',
+    },
+    'body-doubling-room': {
+      title: 'Sala de body doubling',
+      description:
+        'Sala de concentración gratis para dos personas. Comparte un enlace, trabaja codo con codo por videollamada P2P y pon en marcha un temporizador compartido. Sin registro, sin instalar nada.',
+    },
+    'hyperfocus-timer': {
+      title: 'Temporizador para interrumpir la hiperconcentración',
+      description:
+        'Avisos hablados que se repiten cada X minutos y un tope definitivo opcional, para que una sesión de hiperconcentración con TDAH no se te coma la tarde entera.',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: '¿Qué tarea no consigues empezar?',
+      inputPlaceholder: 'p. ej. Entregar el informe de gastos',
+      submit: 'Divídela',
+      submitting: 'Dividiéndola…',
+      privacyNote: 'Privado. No guardamos nada en nuestro servidor.',
+      charactersLeft: (count: number) => `Quedan ${count} caracteres`,
+      presetsIntro: 'O prueba una de estas:',
+      presets: {
+        cleanKitchen: 'Limpiar la cocina',
+        doLaundry: 'Lavar la ropa',
+        replyInbox: 'Responder los correos',
+        planWeekendTrip: 'Planear una escapada',
+        fileTaxes: 'Hacer la declaración',
+        cleanBathroom: 'Limpiar el baño',
+      },
+      loading: 'Dividiéndola en pasos…',
+      errorRateLimit: 'Vas muy rápido. Espera un momento e inténtalo de nuevo.',
+      errorGeneric: 'No se pudo dividir ahora mismo. Inténtalo de nuevo en unos segundos.',
+      tryAgain: 'Inténtalo de nuevo',
+      taskLabel: 'Tarea',
+      urgencyLabels: { low: 'Urgencia baja', medium: 'Urgencia media', high: 'Urgencia alta' },
+      stepsDone: (done: number, total: number) => `${done}/${total} pasos hechos`,
+      minTotal: (min: number) => `~${min} min en total`,
+      allDoneMessage: 'Todo listo. No fue tan difícil, ¿verdad?',
+      emptyState:
+        'No encontramos subpasos claros para eso. Prueba a plantearlo como una acción, tipo «Escribir el plan del proyecto» o «Limpiar el garaje».',
+    },
+    brainDump: {
+      label: 'Suelta todo lo que tienes en la cabeza. No hace falta que esté ordenado.',
+      placeholder:
+        'Siempre se me olvida llamar al dentista y la cocina es un desastre.\nEstoy agobiado con el proyecto del trabajo. Tengo que comprar comida\npara la cena de hoy y responder al correo de Sara de la semana pasada.',
+      privacy: 'Privado. No guardamos nada en nuestro servidor.',
+      charactersLeft: (remaining: number) => `Quedan ${remaining} caracteres.`,
+      clear: 'Borrar',
+      submit: 'Extraer las tareas',
+      submitting: 'Extrayendo las tareas…',
+      loading: 'Leyendo tu volcado y sacando lo accionable…',
+      errorRateLimited: 'Vas muy rápido. Espera un momento e inténtalo de nuevo.',
+      errorGeneric:
+        'No se pudieron extraer las tareas ahora mismo. Inténtalo de nuevo en unos segundos.',
+      tryAgain: 'Inténtalo de nuevo',
+      empty:
+        'No encontramos ahí dentro nada que pareciera una tarea concreta. Puede ser buena señal. Si te estabas desahogando, también cuenta. Si querías listar cosas por hacer, prueba a ser un poco más concreto («escribir a Sara» en vez de «tema Sara»).',
+      resultsTitle: 'Tareas accionables',
+      doneCount: (done: number, total: number) => `${done}/${total} hechas`,
+      footer: 'Elige una. Solo una. Hazla ahora y vuelve luego a por la siguiente.',
+    },
+    pickOne: {
+      inputLabel: 'Pega tu lista. Una por línea, o un lío con comas. Da igual.',
+      inputPlaceholder:
+        'responder a mamá\npedir cita con el dentista\npasar los gastos\nterminar la presentación\nregar las plantas',
+      itemsDetected: (count: number) =>
+        `${count} elemento${count === 1 ? '' : 's'} detectado${count === 1 ? '' : 's'}`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} elemento${count === 1 ? '' : 's'} detectado${count === 1 ? '' : 's'}, ${left} pendiente${left === 1 ? '' : 's'}`,
+      clearEverything: 'Borrar todo',
+      modeLegend: '¿Cómo elegimos?',
+      modes: {
+        smallest: {
+          label: 'La más pequeña',
+          reason: 'Lo más corto de la lista. Empieza mínimo y coge impulso.',
+        },
+        scariest: {
+          label: 'La que más miedo da',
+          reason: 'Esa que prefieres ni mirar. Hacerla primero te libera el día.',
+        },
+        random: {
+          label: 'Elige una y ya',
+          reason: 'Sin darle vueltas. La lista ha elegido sola. Solo empieza.',
+        },
+      },
+      pickCta: 'Elige una por mí',
+      pickAnotherCta: 'Elige otra',
+      emptyHint: 'Añade al menos un elemento y luego toca elegir.',
+      readyHint: 'Listo. Toca «Elige una por mí» cuando no puedas decidirte.',
+      allDoneTitle: 'Lista resuelta.',
+      allDoneBody:
+        'Cada elemento está hecho o saltado. Puedes borrar la lista o reiniciarla para devolver los saltados al montón.',
+      bringSkippedBack: 'Recuperar los saltados',
+      startFreshList: 'Empezar una lista nueva',
+      pickedEyebrow: 'Empieza por esta',
+      didIt: 'Hecha',
+      notThisOne: 'Esta no',
+      pickAgain: 'Elegir otra vez',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} hecha${done === 1 ? '' : 's'}, ${skipped} saltada${skipped === 1 ? '' : 's'}, ${left} pendiente${left === 1 ? '' : 's'}`,
+    },
+    eisenhower: {
+      inputLabel: 'Añade una tarea',
+      inputPlaceholder:
+        'Añade una tarea y pulsa Enter (o pega varias separadas por saltos de línea)',
+      addButton: 'Añadir',
+      totals: (total: number, unsorted: number) =>
+        `${total} tarea${total === 1 ? '' : 's'} en total, ${unsorted} sin clasificar`,
+      clearAll: 'Borrar todo',
+      unsortedHeading: (count: number) => `Sin clasificar (${count})`,
+      unsortedListLabel: 'Tareas sin clasificar',
+      removeTask: (text: string) => `Quitar ${text}`,
+      placeHint: 'Ahora toca un cuadrante para colocarla.',
+      placeHintDesktop: 'O arrástrala y suéltala en el ordenador.',
+      quadrantRegionLabel: (label: string) => `Cuadrante ${label}`,
+      quadrantCountLabel: (count: number, label: string) => `${count} tareas en ${label}`,
+      dropHere: 'Suéltala aquí',
+      sendBackToUnsorted: 'Devolver a sin clasificar',
+      moveBackToUnsorted: (text: string) => `Devolver ${text} a sin clasificar`,
+      empty: 'Vacío',
+      emptyState:
+        'Añade una tarea arriba para empezar. Todo se guarda en tu navegador, nada en nuestro servidor.',
+      hintLabel: 'Consejo de Doubly:',
+      hintBody:
+        'El montón de lo aburrido pero importante es el que casi todo el mundo se salta y el que más se acaba lamentando. Si hoy solo haces una cosa, elígela de ahí.',
+      quadrants: {
+        fire: {
+          label: 'Ardiendo',
+          sub: 'Hazlo hoy, no mañana.',
+          textbook: 'Importante + Urgente',
+        },
+        boring: {
+          label: 'Aburrido pero importante',
+          sub: 'Aquí están las victorias de verdad. Prográmalo, no lo saltes.',
+          textbook: 'Importante + No urgente',
+        },
+        noisy: {
+          label: 'Ruidoso pero prescindible',
+          sub: 'Hace mucho ruido, pero no es tu problema. Delega, aplaza, ignora.',
+          textbook: 'Urgente + No importante',
+        },
+        drop: {
+          label: 'Suéltalas',
+          sub: 'Está permitido. La lista no tiene por qué terminarse.',
+          textbook: 'No importante + No urgente',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Temporizador Pomodoro',
+      modeTablistLabel: 'Modo del temporizador',
+      modes: {
+        work: 'Enfoque',
+        'short-break': 'Descanso corto',
+        'long-break': 'Descanso largo',
+      },
+      dialLabel: (mode: string, time: string) => `Temporizador de ${mode}. Quedan ${time}.`,
+      sessionsToday: (count: number) => `Sesiones completadas hoy: ${count}`,
+      soundToggle: 'Sonido al terminar la sesión',
+      customizeDurations: 'Personalizar duraciones',
+      hideSettings: 'Ocultar ajustes',
+      focusMinutes: 'Enfoque (min)',
+      shortBreakMinutes: 'Descanso corto (min)',
+      longBreakMinutes: 'Descanso largo (min)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Temporizador visual de cuenta atrás',
+      dialAriaLabel: (remaining: string) => `Esfera del temporizador visual. Quedan ${remaining}.`,
+      seconds: (s: number) => `${s} segundos`,
+      minutes: (m: number) => `${m} minuto${m === 1 ? '' : 's'}`,
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m} minuto${m === 1 ? '' : 's'} y ${s} segundos`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `Cuenta atrás desde ${minutes} min`,
+      setFor: (minutes: number) => `Ajustado a ${minutes} min`,
+      paused: 'En pausa',
+      timeIsUp: 'Se acabó el tiempo',
+      presetsLabel: 'Duraciones predefinidas',
+      presetMinutes: (minutes: number) => `${minutes} min`,
+      custom: 'Personalizado',
+      minutesLabel: 'Minutos',
+      set: 'Ajustar',
+      soundWhenDone: 'Sonido al acabar el tiempo',
+    },
+    brownNoise: {
+      play: (sound: string) => `Reproducir ${sound}`,
+      pause: (sound: string) => `Pausar ${sound}`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Elige un sonido ambiental',
+      soundGroupLabel: 'Sonido ambiental',
+      volume: 'Volumen',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'Temporizador para dormir',
+      sleepOff: 'Apagado',
+      sleepMinutes: (minutes: number) => `${minutes} min`,
+      privacyNote: 'Funciona en tu navegador. No se graba nada, no se sube nada.',
+      sounds: {
+        brown: {
+          name: 'Marrón',
+          description: 'Grave y retumbante. Como una cascada lejana. El famoso de TikTok.',
+        },
+        pink: {
+          name: 'Rosa',
+          description: 'Más suave que el blanco, menos grave que el marrón. Equilibrado.',
+        },
+        white: {
+          name: 'Blanco',
+          description: 'El siseo de una tele antigua. Brillante y uniforme.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Temporizador para interrumpir la hiperconcentración',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes} min`,
+      hoursShort: (hours: number) => `${hours} h`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} h ${minutes} min`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'menos de un minuto';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} hora${hours === 1 ? '' : 's'}`);
+        if (minutes > 0) parts.push(`${minutes} minuto${minutes === 1 ? '' : 's'}`);
+        return parts.join(' y ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `Aviso cada ${interval}, sin parada obligatoria`,
+      stripWithCap: (interval: string, cap: string) =>
+        `Aviso cada ${interval}, parada obligatoria tras ${cap}`,
+      summaryNoCap: (interval: string) => `Te avisamos cada **${interval}**, sin parada obligatoria.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `Te avisamos cada **${interval}**, con parada obligatoria tras **${cap}**.`,
+
+      // Setup
+      intervalHeading: 'Avísame cada',
+      custom: 'Personalizado',
+      minutes: 'Minutos',
+      set: 'Ajustar',
+      jitterNote:
+        'Los avisos se desplazan un diez por ciento más o menos para que el cerebro no pueda descartarlos de antemano.',
+      moreOptions: 'Más opciones',
+      hideOptions: 'Ocultar opciones',
+      taskLabel: '¿En qué estás trabajando? (opcional)',
+      taskPlaceholder: 'p. ej. la declaración, la revisión de diseño, el guion',
+      taskHint: 'Se usa en los avisos hablados, para que oigas a qué te sentaste.',
+      hardStopHeading: 'Parada obligatoria tras',
+      hardStopHint:
+        'Al llegar al tope suena una alerta más fuerte, para que no se te cuele una espiral de seis horas.',
+      capOff: 'Sin tope',
+      capHours: (hours: number) => `${hours} h`,
+      noHardStop: 'sin parada obligatoria',
+      alertsHeading: 'Alertas',
+      chime: 'Campana',
+      voice: 'Voz',
+      notify: 'Notificar',
+      alertsHint:
+        'La campana suena más fuerte si ignoras un aviso. La voz dice la hora y el tiempo que llevas. Notificar lanza una notificación del navegador cuando la pestaña está en segundo plano.',
+      notificationsBlocked:
+        'Las notificaciones están bloqueadas en este navegador. Actívalas en los ajustes del sitio para usar esto.',
+      notificationsUnsupported: 'Tu navegador no admite notificaciones web.',
+      startSession: 'Empezar sesión',
+
+      // Live session
+      statElapsed: 'Transcurrido',
+      statNextCheckIn: 'Próximo aviso',
+      statCap: 'Tope',
+      statusNow: 'Ahora',
+      statusPaused: 'En pausa',
+      statusCapHit: 'Tope alcanzado',
+      statusOff: 'Ninguno',
+      workingOn: (task: string) => `Trabajando en **${task}**`,
+      checkInHeading: 'Aviso rápido',
+      checkInBody: (clock: string, elapsed: string) =>
+        `Son las ${clock} y llevas ${elapsed} con esto. ¿Sigues en la tarea que empezaste o toca salir a la superficie?`,
+      stillGoing: 'Sigo con ello',
+      takeABreak: 'Tomar un descanso',
+      stopSession: 'Parar la sesión',
+      capHeading: 'Has llegado al tope de la sesión',
+      capBody: (minutes: number) =>
+        `Pusiste una parada obligatoria a los ${minutes} minutos. Levántate, bebe agua, come algo. El trabajo va a seguir aquí.`,
+      pause: 'Pausar',
+      resume: 'Reanudar',
+      endSession: 'Terminar sesión',
+      checkInLog: 'Registro de avisos',
+      logContinue: 'seguiste',
+      logBreak: 'descansaste',
+      logStop: 'paraste',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ Aviso | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Un aviso. Son las ${clock}. Llevas ${elapsed} trabajando en ${task}.`
+          : `Un aviso. Son las ${clock}. Llevas ${elapsed} trabajando.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Has llegado al tope de la sesión. Son las ${clock}. Llevas ${elapsed} con esto. Hora de parar.`,
+      notificationCheckInTitle: 'Aviso de hiperconcentración',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `Son las ${clock}. Llevas ${elapsed} con esto.`,
+      notificationCapTitle: 'Has llegado al tope de hiperconcentración',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `Son las ${clock}. Llevas ${elapsed} con esto. Hora de parar.`,
+    },
+    shared: {
+      start: 'Empezar',
+      pause: 'Pausar',
+      resume: 'Reanudar',
+      done: 'Hecho',
+      reset: 'Reiniciar',
+      skip: 'Saltar',
+      skipAria: 'Saltar a la siguiente sesión',
+      startSession: 'Empezar una sesión de enfoque',
+      creatingRoom: 'Creando la sala...',
+    },
+    chrome: {
+      tryInApp: 'Pruébalo en la app',
+      appStoreAria: (label: string) => `${label} en la App Store`,
+      breadcrumbAria: 'Ruta de navegación',
+    },
+  },
+
 };
 
 export default es;

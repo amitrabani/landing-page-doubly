@@ -32,7 +32,7 @@ export default function Footer() {
             .filter((tool) => tool.status === 'live')
             .map((tool) => (
               <Link key={tool.slug} href={toolHref(locale, tool.slug)} className={linkClass}>
-                {tool.title}
+                {t.toolCards[tool.slug].title}
               </Link>
             ))}
         </div>

@@ -478,6 +478,364 @@ const zhHans = {
     ogDescription:
       '把混乱一键清空,得到一个清晰的下一步,再靠监督陪伴真正坚持到底。',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: '任务拆解工具',
+      description:
+        '输入一个你开不了头的任务,AI 会把它拆成一个个能做到的小步骤,还带时间估算。为 ADHD 大脑打造。',
+    },
+    'brain-dump': {
+      title: '大脑清空工具',
+      description:
+        '把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册,不留存任何内容。',
+    },
+    'pick-one': {
+      title: '挑一个任务',
+      description:
+        '粘贴一份乱糟糟的待办清单,只带走一件可以先做的事。最小的、最让你发怵的,或者随机挑一个。专为十件事在眼前糊成一团、根本无从下手的那一刻而做。',
+    },
+    'eisenhower-matrix': {
+      title: '艾森豪威尔矩阵(ADHD 版)',
+      description:
+        '把任务拖进「无聊却重要」这样的象限,而不是教科书上的标签。这个矩阵,终于是照着 ADHD 大脑做的。数据保存在本地。',
+    },
+    'pomodoro': {
+      title: 'ADHD 番茄钟',
+      description:
+        '专注 25 分钟,休息 5 分钟,这套专注法终于适合 ADHD 大脑。免费,无需注册,离线也能用。',
+    },
+    'visual-timer': {
+      title: '可视化计时器 / 时间盲视时钟',
+      description:
+        '一块慢慢变小的扇形,让你亲眼看见时间在流走,而不是去读数字。对 ADHD 成年人来说,它也是一个时间盲视时钟。',
+    },
+    'brown-noise': {
+      title: '环境音生成器',
+      description:
+        '在浏览器里直接用的免费环境音生成器。棕噪音,外加粉红噪音和白噪音。用稳定的背景声安抚忙个不停的 ADHD 大脑。自带睡眠定时器,离线也能用。',
+    },
+    'body-doubling-room': {
+      title: '身旁陪伴室',
+      description:
+        '免费的双人专注房间。分享一个链接,通过点对点视频并肩做事,共用一个计时器。无需注册,无需安装。',
+    },
+    'hyperfocus-timer': {
+      title: '超专注中断计时器',
+      description:
+        '每隔 X 分钟用语音提醒你一次,还能设一个硬性停止时间,免得一场 ADHD 超专注把你一整个下午都耗光。',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: '哪个任务你迟迟开不了头?',
+      inputPlaceholder: '例如:提交报销单',
+      submit: '拆解它',
+      submitting: '正在拆解……',
+      privacyNote: '私密。我们的服务器不保存任何内容。',
+      charactersLeft: (count: number) => `还可以输入 ${count} 字`,
+      presetsIntro: '或者试试这些:',
+      presets: {
+        cleanKitchen: '打扫厨房',
+        doLaundry: '洗衣服',
+        replyInbox: '回复邮件',
+        planWeekendTrip: '计划周末出游',
+        fileTaxes: '报税',
+        cleanBathroom: '打扫浴室',
+      },
+      loading: '正在拆成一个个小步……',
+      errorRateLimit: '你太快啦。稍等片刻再试。',
+      errorGeneric: '暂时拆解不了。几秒后再试一次。',
+      tryAgain: '重试',
+      taskLabel: '任务',
+      urgencyLabels: { low: '紧急度低', medium: '紧急度中', high: '紧急度高' },
+      stepsDone: (done: number, total: number) => `已完成 ${done}/${total} 步`,
+      minTotal: (min: number) => `共约 ${min} 分钟`,
+      allDoneMessage: '搞定。没有看上去那么吓人吧?',
+      emptyState:
+        '这个没法拆出清晰的小步。换成一个动作试试,比如「写项目计划」或「打扫车库」。',
+    },
+    brainDump: {
+      label: '把脑子里的一切都倒出来。不用整理。',
+      placeholder:
+        '我总忘记给牙医打电话,厨房也乱成一团。\n工作上那个项目让我喘不过气。今晚要买菜做饭,\n还得回 Sarah 上周发来的邮件。',
+      privacy: '私密。我们的服务器不保存任何内容。',
+      charactersLeft: (remaining: number) => `还可以输入 ${remaining} 字。`,
+      clear: '清空',
+      submit: '把任务挑出来',
+      submitting: '正在挑出任务……',
+      loading: '正在读你倒出来的内容,挑出能落地的部分……',
+      errorRateLimited: '你太快啦。稍等片刻再试。',
+      errorGeneric: '暂时提取不出任务。几秒后再试一次。',
+      tryAgain: '重试',
+      empty:
+        '这里面没找到像是具体任务的东西。这未必是坏事。如果你只是想倾诉一下,那也算数。如果你本来是想列出要做的事,试着说得具体一点(写「给 Sarah 发邮件」,而不是「Sarah 的事」)。',
+      resultsTitle: '能落地的任务',
+      doneCount: (done: number, total: number) => `已完成 ${done}/${total} 项`,
+      footer: '挑一个。就一个。现在就做,做完再回来拿下一个。',
+    },
+    pickOne: {
+      inputLabel: '把你的清单粘进来。一行一个,或者用逗号乱写一气。随便。',
+      inputPlaceholder: '回复妈妈\n预约牙医\n提交报销\n做完幻灯片\n给植物浇水',
+      itemsDetected: (count: number) => `识别到 ${count} 项`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `识别到 ${count} 项,还剩 ${left} 项`,
+      clearEverything: '全部清空',
+      modeLegend: '要怎么挑?',
+      modes: {
+        smallest: {
+          label: '最小的',
+          reason: '清单上最短的一项。从小处起步,攒起势头。',
+        },
+        scariest: {
+          label: '最吓人的',
+          reason: '你最不想看的那一项。先干掉它,一整天都轻松了。',
+        },
+        random: {
+          label: '随便挑一个',
+          reason: '不用纠结。清单自己选好了。开始就行。',
+        },
+      },
+      pickCta: '帮我挑一个',
+      pickAnotherCta: '再挑一个',
+      emptyHint: '至少添加一项,再点挑选。',
+      readyHint: '准备好了。拿不定主意时,就点「帮我挑一个」。',
+      allDoneTitle: '清单搞定了。',
+      allDoneBody:
+        '每一项要么做完了,要么跳过了。你可以清空清单,也可以重置一下,把跳过的重新放回来。',
+      bringSkippedBack: '把跳过的放回来',
+      startFreshList: '开一份新清单',
+      pickedEyebrow: '就从这个开始',
+      didIt: '做完了',
+      notThisOne: '不要这个',
+      pickAgain: '重新挑',
+      progress: (done: number, skipped: number, left: number) =>
+        `已完成 ${done} 项,跳过 ${skipped} 项,还剩 ${left} 项`,
+    },
+    eisenhower: {
+      inputLabel: '添加任务',
+      inputPlaceholder: '输入任务后按回车(也可以按行粘贴多条)',
+      addButton: '添加',
+      totals: (total: number, unsorted: number) =>
+        `共 ${total} 项任务,${unsorted} 项待归类`,
+      clearAll: '全部清空',
+      unsortedHeading: (count: number) => `待归类(${count})`,
+      unsortedListLabel: '待归类的任务',
+      removeTask: (text: string) => `移除「${text}」`,
+      placeHint: '点一个象限,把它放进去。',
+      placeHintDesktop: '在电脑上也可以直接拖拽。',
+      quadrantRegionLabel: (label: string) => `${label}象限`,
+      quadrantCountLabel: (count: number, label: string) => `${label}里有 ${count} 项任务`,
+      dropHere: '放到这里',
+      sendBackToUnsorted: '退回待归类',
+      moveBackToUnsorted: (text: string) => `把「${text}」退回待归类`,
+      empty: '空',
+      emptyState:
+        '在上面添加一个任务就能开始。所有内容都存在你的浏览器里,我们的服务器上什么都没有。',
+      hintLabel: 'Doubly 小提示:',
+      hintBody:
+        '「无聊却重要」那一堆,是大多数人会跳过、事后又最后悔跳过的。今天如果只做一件事,就从那里挑。',
+      quadrants: {
+        fire: {
+          label: '火烧眉毛',
+          sub: '今天就做,别拖到明天。',
+          textbook: '重要 + 紧急',
+        },
+        boring: {
+          label: '无聊却重要',
+          sub: '真正有回报的事。排进日程,别跳过。',
+          textbook: '重要 + 不紧急',
+        },
+        noisy: {
+          label: '吵闹但可略过',
+          sub: '动静很大,但不是你的问题。交给别人、往后放,或者干脆无视。',
+          textbook: '紧急 + 不重要',
+        },
+        drop: {
+          label: '直接放弃',
+          sub: '这是允许的。清单不一定非要做完。',
+          textbook: '不重要 + 不紧急',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: '番茄钟',
+      modeTablistLabel: '计时模式',
+      modes: {
+        work: '专注',
+        'short-break': '短休息',
+        'long-break': '长休息',
+      },
+      dialLabel: (mode: string, time: string) => `${mode}计时。还剩 ${time}。`,
+      sessionsToday: (count: number) => `今天已完成 ${count} 轮`,
+      soundToggle: '结束时响提示音',
+      customizeDurations: '自定义时长',
+      hideSettings: '隐藏设置',
+      focusMinutes: '专注(分钟)',
+      shortBreakMinutes: '短休息(分钟)',
+      longBreakMinutes: '长休息(分钟)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: '可视化倒计时器',
+      dialAriaLabel: (remaining: string) => `可视化计时表盘。还剩 ${remaining}。`,
+      seconds: (s: number) => `${s} 秒`,
+      minutes: (m: number) => `${m} 分钟`,
+      minutesAndSeconds: (m: number, s: number) => `${m} 分 ${s} 秒`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `正在从 ${minutes} 分钟倒数`,
+      setFor: (minutes: number) => `已设为 ${minutes} 分钟`,
+      paused: '已暂停',
+      timeIsUp: '时间到',
+      presetsLabel: '时长预设',
+      presetMinutes: (minutes: number) => `${minutes} 分钟`,
+      custom: '自定义',
+      minutesLabel: '分钟',
+      set: '设定',
+      soundWhenDone: '时间到时响提示音',
+    },
+    brownNoise: {
+      play: (sound: string) => `播放${sound}`,
+      pause: (sound: string) => `暂停${sound}`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: '选择一种环境音',
+      soundGroupLabel: '环境音',
+      volume: '音量',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: '睡眠定时',
+      sleepOff: '关闭',
+      sleepMinutes: (minutes: number) => `${minutes} 分钟`,
+      privacyNote: '在你的浏览器里运行。不录音,不上传。',
+      sounds: {
+        brown: {
+          name: '棕噪音',
+          description: '低沉,隆隆作响。像远处的瀑布。TikTok 上很火的那种。',
+        },
+        pink: {
+          name: '粉红噪音',
+          description: '比白噪音柔和,低音又没棕噪音那么重。很均衡。',
+        },
+        white: {
+          name: '白噪音',
+          description: '像老电视的沙沙声。明亮而均匀。',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: '超专注中断计时器',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes} 分钟`,
+      hoursShort: (hours: number) => `${hours} 小时`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} 小时 ${minutes} 分钟`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return '不到一分钟';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} 小时`);
+        if (minutes > 0) parts.push(`${minutes} 分钟`);
+        return parts.join(' ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `每 ${interval}提醒一次,不设硬性停止`,
+      stripWithCap: (interval: string, cap: string) =>
+        `每 ${interval}提醒一次,${cap}后硬性停止`,
+      summaryNoCap: (interval: string) => `每 **${interval}**提醒你一次,不设硬性停止。`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `每 **${interval}**提醒你一次,并在 **${cap}**后硬性停止。`,
+
+      // Setup
+      intervalHeading: '每隔多久提醒一次',
+      custom: '自定义',
+      minutes: '分钟',
+      set: '设定',
+      jitterNote: '提醒时间会有大约百分之十的随机浮动,免得大脑提前就把它无视掉。',
+      moreOptions: '更多选项',
+      hideOptions: '收起选项',
+      taskLabel: '你在做什么?(选填)',
+      taskPlaceholder: '例如:报税表、设计评审、那个脚本',
+      taskHint: '语音提醒里会念出来,让你听见自己本来坐下要做的事。',
+      hardStopHeading: '硬性停止时间',
+      hardStopHint:
+        '到了上限会响起更大声的提醒,免得一场六小时的沉迷悄悄溜过去。',
+      capOff: '关闭',
+      capHours: (hours: number) => `${hours} 小时`,
+      noHardStop: '不设硬性停止',
+      alertsHeading: '提醒方式',
+      chime: '提示音',
+      voice: '语音',
+      notify: '通知',
+      alertsHint:
+        '提醒被忽略时,提示音会越来越响。语音会念出当前时间和已经过去多久。标签页切到后台时,通知会发送浏览器通知。',
+      notificationsBlocked:
+        '这个浏览器屏蔽了通知。请在站点设置里允许通知后再使用。',
+      notificationsUnsupported: '你的浏览器不支持网页通知。',
+      startSession: '开始专注',
+
+      // Live session
+      statElapsed: '已用时',
+      statNextCheckIn: '下次提醒',
+      statCap: '上限',
+      statusNow: '现在',
+      statusPaused: '已暂停',
+      statusCapHit: '已到上限',
+      statusOff: '关闭',
+      workingOn: (task: string) => `正在做 **${task}**`,
+      checkInHeading: '快速确认一下',
+      checkInBody: (clock: string, elapsed: string) =>
+        `现在是 ${clock},你已经连着做了 ${elapsed}。还在做原本那件事,还是该冒个头了?`,
+      stillGoing: '继续做',
+      takeABreak: '休息一下',
+      stopSession: '结束这一轮',
+      capHeading: '已到设定上限',
+      capBody: (minutes: number) =>
+        `你把硬性停止设在了 ${minutes} 分钟。站起来,喝点水,吃点东西。活儿跑不掉。`,
+      pause: '暂停',
+      resume: '继续',
+      endSession: '结束',
+      checkInLog: '提醒记录',
+      logContinue: '继续做了',
+      logBreak: '休息了一下',
+      logStop: '停下了',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ 该看一眼了 | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `确认一下。现在是 ${clock}。你在${task}上已经花了 ${elapsed}。`
+          : `确认一下。现在是 ${clock}。你已经连着做了 ${elapsed}。`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `到设定的上限了。现在是 ${clock}。你已经连着做了 ${elapsed}。该停下来了。`,
+      notificationCheckInTitle: '超专注提醒',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `现在是 ${clock}。你已经连着做了 ${elapsed}。`,
+      notificationCapTitle: '已到超专注上限',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `现在是 ${clock}。你已经连着做了 ${elapsed}。该停下来了。`,
+    },
+    shared: {
+      start: '开始',
+      pause: '暂停',
+      resume: '继续',
+      done: '完成',
+      reset: '重置',
+      skip: '跳过',
+      skipAria: '跳到下一轮',
+      startSession: '开始一轮专注',
+      creatingRoom: '正在创建房间……',
+    },
+    chrome: {
+      tryInApp: '在应用里试试',
+      appStoreAria: (label: string) => `在 App Store 查看${label}`,
+      breadcrumbAria: '面包屑导航',
+    },
+  },
 };
 
 export default zhHans;

@@ -1,19 +1,23 @@
 'use client';
 
 import { useCallback, useRef, useState } from 'react';
+import { useLocale, useT } from '@/i18n/TranslationProvider';
 
 type Subtask = { text: string; duration: string | null };
 type TaskResult = { title: string; subtasks: Subtask[]; urgency: 'low' | 'medium' | 'high' | null };
+type ErrorKind = 'rateLimit' | 'generic';
 
 const MAX_LENGTH = 200;
 
+// Labels come from the dictionary (the clicked label is also what we send to the
+// AI, so a localized visitor gets a breakdown in their own language).
 const PRESETS = [
-  { label: 'Clean the kitchen', icon: '🍳' },
-  { label: 'Do laundry', icon: '🧺' },
-  { label: 'Reply to inbox', icon: '✉️' },
-  { label: 'Plan a weekend trip', icon: '🧳' },
-  { label: 'File my taxes', icon: '🧾' },
-  { label: 'Clean the bathroom', icon: '🚿' },
+  { key: 'cleanKitchen', icon: '🍳' },
+  { key: 'doLaundry', icon: '🧺' },
+  { key: 'replyInbox', icon: '✉️' },
+  { key: 'planWeekendTrip', icon: '🧳' },
+  { key: 'fileTaxes', icon: '🧾' },
+  { key: 'cleanBathroom', icon: '🚿' },
 ] as const;
 
 function parseMinutes(d: string | null): number {
@@ -23,57 +27,64 @@ function parseMinutes(d: string | null): number {
 }
 
 export default function TaskSplitterTool() {
+  const t = useT();
+  const locale = useLocale();
+  const copy = t.toolWidgets.taskSplitter;
   const [input, setInput] = useState('');
   const [activeTask, setActiveTask] = useState<string | null>(null);
   const [result, setResult] = useState<TaskResult | null>(null);
   const [checked, setChecked] = useState<Set<number>>(new Set());
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<ErrorKind | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  const splitTask = useCallback(async (task: string) => {
-    const trimmed = task.trim();
-    if (!trimmed || trimmed.length < 2 || trimmed.length > MAX_LENGTH) return;
+  const splitTask = useCallback(
+    async (task: string) => {
+      const trimmed = task.trim();
+      if (!trimmed || trimmed.length < 2 || trimmed.length > MAX_LENGTH) return;
 
-    abortRef.current?.abort();
-    const controller = new AbortController();
-    abortRef.current = controller;
+      abortRef.current?.abort();
+      const controller = new AbortController();
+      abortRef.current = controller;
 
-    setActiveTask(trimmed);
-    setResult(null);
-    setChecked(new Set());
-    setError(null);
-    setLoading(true);
+      setActiveTask(trimmed);
+      setResult(null);
+      setChecked(new Set());
+      setError(null);
+      setLoading(true);
 
-    try {
-      const res = await fetch('/api/split-task', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ task: trimmed }),
-        signal: controller.signal,
-      });
+      try {
+        // Sending the locale makes the AI answer in the page's language.
+        const res = await fetch('/api/split-task', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ task: trimmed, locale }),
+          signal: controller.signal,
+        });
 
-      if (controller.signal.aborted) return;
+        if (controller.signal.aborted) return;
 
-      if (res.status === 429) {
-        setError('You are going fast. Wait a moment and try again.');
-        return;
+        if (res.status === 429) {
+          setError('rateLimit');
+          return;
+        }
+        if (!res.ok) {
+          setError('generic');
+          return;
+        }
+        const data = (await res.json()) as TaskResult;
+        if (controller.signal.aborted) return;
+        setResult(data);
+      } catch (err) {
+        if (controller.signal.aborted) return;
+        if (err instanceof DOMException && err.name === 'AbortError') return;
+        setError('generic');
+      } finally {
+        if (!controller.signal.aborted) setLoading(false);
       }
-      if (!res.ok) {
-        setError('Could not break that down right now. Try again in a few seconds.');
-        return;
-      }
-      const data = (await res.json()) as TaskResult;
-      if (controller.signal.aborted) return;
-      setResult(data);
-    } catch (err) {
-      if (controller.signal.aborted) return;
-      if (err instanceof DOMException && err.name === 'AbortError') return;
-      setError('Could not break that down right now. Try again in a few seconds.');
-    } finally {
-      if (!controller.signal.aborted) setLoading(false);
-    }
-  }, []);
+    },
+    [locale],
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -98,7 +109,7 @@ export default function TaskSplitterTool() {
     <div className="rounded-3xl bg-white border border-charcoal/8 shadow-sm shadow-charcoal/5 p-5 sm:p-7">
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
         <label htmlFor="task-splitter-input" className="text-sm font-medium text-charcoal">
-          What is the task you cannot start?
+          {copy.inputLabel}
         </label>
         <div className="flex flex-col sm:flex-row gap-2">
           <input
@@ -106,7 +117,7 @@ export default function TaskSplitterTool() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value.slice(0, MAX_LENGTH))}
-            placeholder="e.g. File my expense report"
+            placeholder={copy.inputPlaceholder}
             autoComplete="off"
             maxLength={MAX_LENGTH}
             className="flex-1 rounded-2xl px-5 py-3 text-base bg-cream border border-charcoal/10 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/50 focus:ring-2 focus:ring-lavender/15 transition-all"
@@ -116,36 +127,39 @@ export default function TaskSplitterTool() {
             disabled={loading || !input.trim()}
             className="rounded-2xl px-6 py-3 text-base font-semibold bg-charcoal text-cream hover:bg-charcoal-light transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {loading ? 'Breaking it down…' : 'Break it down'}
+            {loading ? copy.submitting : copy.submit}
           </button>
         </div>
         <div className="flex items-center justify-between text-xs text-muted-light">
-          <span>Private. Nothing is saved on our server.</span>
-          <span aria-live="polite">{remaining} characters left</span>
+          <span>{copy.privacyNote}</span>
+          <span aria-live="polite">{copy.charactersLeft(remaining)}</span>
         </div>
       </form>
 
       <div className="mt-5">
-        <div className="text-xs font-medium text-muted mb-2">Or try one of these:</div>
+        <div className="text-xs font-medium text-muted mb-2">{copy.presetsIntro}</div>
         <div className="flex flex-wrap gap-2">
-          {PRESETS.map((p) => (
-            <button
-              key={p.label}
-              type="button"
-              onClick={() => {
-                setInput(p.label);
-                splitTask(p.label);
-              }}
-              className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
-                activeTask === p.label
-                  ? 'bg-lavender text-white'
-                  : 'bg-warm/60 text-charcoal-light border border-warm-dark/40 hover:border-lavender/40'
-              }`}
-            >
-              <span className="mr-1.5" aria-hidden="true">{p.icon}</span>
-              {p.label}
-            </button>
-          ))}
+          {PRESETS.map((p) => {
+            const label = copy.presets[p.key];
+            return (
+              <button
+                key={p.key}
+                type="button"
+                onClick={() => {
+                  setInput(label);
+                  splitTask(label);
+                }}
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
+                  activeTask === label
+                    ? 'bg-lavender text-white'
+                    : 'bg-warm/60 text-charcoal-light border border-warm-dark/40 hover:border-lavender/40'
+                }`}
+              >
+                <span className="me-1.5" aria-hidden="true">{p.icon}</span>
+                {label}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -153,20 +167,20 @@ export default function TaskSplitterTool() {
         {loading && (
           <div className="flex items-center gap-3 text-sm text-muted">
             <span className="inline-block w-2 h-2 rounded-full bg-lavender animate-pulse" />
-            Breaking it into steps…
+            {copy.loading}
           </div>
         )}
 
         {error && !loading && (
           <div className="rounded-2xl bg-coral-light/10 border border-coral-light/40 px-4 py-3 text-sm text-coral-dark">
-            {error}{' '}
+            {error === 'rateLimit' ? copy.errorRateLimit : copy.errorGeneric}{' '}
             {activeTask && (
               <button
                 type="button"
                 onClick={() => splitTask(activeTask)}
-                className="ml-1 underline font-medium hover:no-underline"
+                className="ms-1 underline font-medium hover:no-underline"
               >
-                Try again
+                {copy.tryAgain}
               </button>
             )}
           </div>
@@ -176,7 +190,7 @@ export default function TaskSplitterTool() {
           <div className="rounded-2xl bg-cream border border-charcoal/8 p-5">
             <div className="flex items-center justify-between mb-4">
               <div>
-                <div className="text-xs font-medium text-lavender-dark mb-0.5">Task</div>
+                <div className="text-xs font-medium text-lavender-dark mb-0.5">{copy.taskLabel}</div>
                 <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
                   {result.title}
                 </h3>
@@ -191,7 +205,7 @@ export default function TaskSplitterTool() {
                         : 'bg-sage/15 text-sage-dark'
                   }`}
                 >
-                  {result.urgency.charAt(0).toUpperCase() + result.urgency.slice(1)} urgency
+                  {copy.urgencyLabels[result.urgency]}
                 </span>
               )}
             </div>
@@ -199,8 +213,8 @@ export default function TaskSplitterTool() {
             {subtasks.length > 0 ? (
               <>
                 <div className="flex items-center justify-between text-xs font-medium text-muted-light mb-2">
-                  <span>{checked.size}/{subtasks.length} steps done</span>
-                  {totalMinutes > 0 && <span>~{totalMinutes} min total</span>}
+                  <span>{copy.stepsDone(checked.size, subtasks.length)}</span>
+                  {totalMinutes > 0 && <span>{copy.minTotal(totalMinutes)}</span>}
                 </div>
                 <ul className="space-y-2">
                   {subtasks.map((st, i) => (
@@ -208,7 +222,7 @@ export default function TaskSplitterTool() {
                       <button
                         type="button"
                         onClick={() => toggleCheck(i)}
-                        className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
+                        className={`w-full flex items-center gap-3 rounded-xl px-4 py-3 text-start transition-all ${
                           checked.has(i)
                             ? 'bg-sage/15 border border-sage/20'
                             : 'bg-white border border-charcoal/8 hover:border-lavender/30'
@@ -250,15 +264,12 @@ export default function TaskSplitterTool() {
                 </ul>
                 {allDone && (
                   <div className="mt-5 text-center text-sm text-sage-dark font-medium">
-                    Done. That wasn&rsquo;t as scary as it looked, right?
+                    {copy.allDoneMessage}
                   </div>
                 )}
               </>
             ) : (
-              <p className="text-sm text-muted">
-                Couldn&rsquo;t find clear sub-steps for that one. Try rephrasing as an action,
-                like &ldquo;Write the project plan&rdquo; or &ldquo;Clean the garage.&rdquo;
-              </p>
+              <p className="text-sm text-muted">{copy.emptyState}</p>
             )}
           </div>
         )}

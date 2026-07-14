@@ -478,6 +478,368 @@ const it = {
     ogDescription:
       'Svuota il caos, ottieni un unico passo chiaro e usa la responsabilità per portare davvero a termine.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Strumento per scomporre le attività',
+      description:
+        'Scrivi un’attività che non riesci a iniziare. L’IA la divide in piccoli passi fattibili con stime di tempo. Fatto per le menti ADHD.',
+    },
+    'brain-dump': {
+      title: 'Strumento svuota-cervello',
+      description:
+        'Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione, niente viene salvato.',
+    },
+    'pick-one': {
+      title: 'Strumento «scegline una»',
+      description:
+        'Incolla la tua lista disordinata e ottieni una cosa sola da cui partire. La più piccola, la più spaventosa o a caso. Fatto per quando dieci attività sembrano un unico blocco impossibile da iniziare.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matrice di Eisenhower (edizione ADHD)',
+      description:
+        'Trascina le attività in quadranti come «noioso ma importante», al posto delle etichette da manuale. La matrice che finalmente si adatta a una mente ADHD. Si salva in locale.',
+    },
+    'pomodoro': {
+      title: 'Timer Pomodoro per l’ADHD',
+      description:
+        '25 minuti di lavoro, 5 di pausa: il metodo di concentrazione che finalmente si adatta a una mente ADHD. Gratis, senza registrazione, funziona offline.',
+    },
+    'visual-timer': {
+      title: 'Timer visivo / orologio per la cecità temporale',
+      description:
+        'Uno spicchio che si riduce: vedi il tempo che passa invece di leggere dei numeri. Funziona anche come orologio per la cecità temporale negli adulti con ADHD.',
+    },
+    'brown-noise': {
+      title: 'Generatore di suoni ambientali',
+      description:
+        'Generatore di suoni ambientali gratuito, direttamente nel browser. Rumore marrone, rosa e bianco. Un sottofondo costante per calmare una mente ADHD sempre accesa. Con timer di spegnimento, funziona offline.',
+    },
+    'body-doubling-room': {
+      title: 'Stanza di body doubling',
+      description:
+        'Stanza di concentrazione gratuita per due. Condividi un link e lavorate fianco a fianco in video peer-to-peer, con un timer condiviso. Senza registrazione, niente da installare.',
+    },
+    'hyperfocus-timer': {
+      title: 'Timer per interrompere l’iperfocus',
+      description:
+        'Ogni X minuti una voce ti richiama, più un limite massimo facoltativo, così una sessione di iperfocus ADHD non si mangia tutto il pomeriggio.',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'Qual è l’attività che non riesci a iniziare?',
+      inputPlaceholder: 'es. Compilare la nota spese',
+      submit: 'Dividila',
+      submitting: 'La sto dividendo…',
+      privacyNote: 'Privato. Non salviamo nulla sul nostro server.',
+      charactersLeft: (count: number) => `${count} caratteri rimasti`,
+      presetsIntro: 'Oppure prova una di queste:',
+      presets: {
+        cleanKitchen: 'Pulire la cucina',
+        doLaundry: 'Fare il bucato',
+        replyInbox: 'Rispondere alle email',
+        planWeekendTrip: 'Organizzare un weekend',
+        fileTaxes: 'Fare la dichiarazione dei redditi',
+        cleanBathroom: 'Pulire il bagno',
+      },
+      loading: 'La sto dividendo in passaggi…',
+      errorRateLimit: 'Stai andando veloce. Aspetta un attimo e riprova.',
+      errorGeneric: 'Non riesco a dividerla adesso. Riprova tra qualche secondo.',
+      tryAgain: 'Riprova',
+      taskLabel: 'Attività',
+      urgencyLabels: { low: 'Urgenza bassa', medium: 'Urgenza media', high: 'Urgenza alta' },
+      stepsDone: (done: number, total: number) => `${done}/${total} passaggi completati`,
+      minTotal: (min: number) => `~${min} min in totale`,
+      allDoneMessage: 'Fatto. Non è stato così difficile, vero?',
+      emptyState:
+        'Non ho trovato passaggi chiari per questa. Prova a riformularla come un’azione, tipo «Scrivere il piano del progetto» o «Pulire il garage».',
+    },
+    brainDump: {
+      label: 'Butta fuori tutto quello che hai in testa. Non serve che sia ordinato.',
+      placeholder:
+        'Continuo a dimenticare di chiamare il dentista e la cucina è un disastro.\nMi sento sopraffatto dal progetto al lavoro. Devo fare la spesa per la\ncena di stasera e rispondere all’email di Sara della settimana scorsa.',
+      privacy: 'Privato. Non salviamo nulla sul nostro server.',
+      charactersLeft: (remaining: number) => `${remaining} caratteri rimasti.`,
+      clear: 'Svuota',
+      submit: 'Tira fuori le attività',
+      submitting: 'Sto tirando fuori le attività…',
+      loading: 'Sto leggendo il tuo sfogo e tiro fuori le cose concrete…',
+      errorRateLimited: 'Stai andando veloce. Aspetta un attimo e riprova.',
+      errorGeneric: 'Non riesco a estrarre le attività adesso. Riprova tra qualche secondo.',
+      tryAgain: 'Riprova',
+      empty:
+        'Non abbiamo trovato niente che somigliasse a un’attività concreta. Può essere un buon segno. Se ti stavi sfogando, vale lo stesso. Se volevi elencare cose da fare, prova a essere un po’ più specifico («scrivere a Sara» invece di «cose di Sara»).',
+      resultsTitle: 'Attività concrete',
+      doneCount: (done: number, total: number) => `${done}/${total} fatte`,
+      footer: 'Scegline una. Solo una. Falla adesso, poi torna per la prossima.',
+    },
+    pickOne: {
+      inputLabel: 'Incolla la tua lista. Una per riga, o alla rinfusa con le virgole. Come ti pare.',
+      inputPlaceholder:
+        'rispondere a mamma\nprenotare il dentista\nfare la nota spese\nfinire le slide\nannaffiare le piante',
+      itemsDetected: (count: number) =>
+        `${count} element${count === 1 ? 'o rilevato' : 'i rilevati'}`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} element${count === 1 ? 'o rilevato' : 'i rilevati'}, ${left} rimast${left === 1 ? 'o' : 'i'}`,
+      clearEverything: 'Svuota tutto',
+      modeLegend: 'Come scegliamo?',
+      modes: {
+        smallest: {
+          label: 'La più piccola',
+          reason: 'L’elemento più corto della lista. Inizia in piccolo, prendi slancio.',
+        },
+        scariest: {
+          label: 'La più spaventosa',
+          reason: 'Quella che preferiresti non guardare. Farla per prima ti libera la giornata.',
+        },
+        random: {
+          label: 'Scegli e basta',
+          reason: 'Niente ragionamenti. Ha scelto la lista. Tu inizia e basta.',
+        },
+      },
+      pickCta: 'Scegline una per me',
+      pickAnotherCta: 'Scegline un’altra',
+      emptyHint: 'Aggiungi almeno un elemento, poi tocca scegli.',
+      readyHint: 'Pronto. Tocca «Scegline una per me» quando non riesci a decidere.',
+      allDoneTitle: 'Lista sistemata.',
+      allDoneBody:
+        'Ogni elemento è fatto o saltato. Puoi svuotare la lista, oppure azzerarla per rimettere in gioco quelli saltati.',
+      bringSkippedBack: 'Rimetti i saltati',
+      startFreshList: 'Inizia una nuova lista',
+      pickedEyebrow: 'Inizia da questa',
+      didIt: 'Fatta',
+      notThisOne: 'Non questa',
+      pickAgain: 'Scegli di nuovo',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} fatte, ${skipped} saltate, ${left} rimaste`,
+    },
+    eisenhower: {
+      inputLabel: 'Aggiungi un’attività',
+      inputPlaceholder: 'Aggiungi un’attività e premi invio (o incollane tante separate da a capo)',
+      addButton: 'Aggiungi',
+      totals: (total: number, unsorted: number) =>
+        `${total} attività in totale, ${unsorted} da smistare`,
+      clearAll: 'Svuota tutto',
+      unsortedHeading: (count: number) => `Da smistare (${count})`,
+      unsortedListLabel: 'Attività da smistare',
+      removeTask: (text: string) => `Rimuovi ${text}`,
+      placeHint: 'Ora tocca un quadrante per posizionarla.',
+      placeHintDesktop: 'Oppure trascinala, da computer.',
+      quadrantRegionLabel: (label: string) => `Quadrante ${label}`,
+      quadrantCountLabel: (count: number, label: string) => `${count} attività in ${label}`,
+      dropHere: 'Trascina qui',
+      sendBackToUnsorted: 'Rimetti da smistare',
+      moveBackToUnsorted: (text: string) => `Rimetti ${text} tra le attività da smistare`,
+      empty: 'Vuoto',
+      emptyState:
+        'Aggiungi un’attività qui sopra per iniziare. Tutto si salva nel tuo browser, niente sul nostro server.',
+      hintLabel: 'Suggerimento Doubly:',
+      hintBody:
+        'Il mucchio noioso ma importante è quello che quasi tutti saltano e che quasi tutti rimpiangono di aver saltato. Se oggi fai una cosa sola, prendila da lì.',
+      quadrants: {
+        fire: {
+          label: 'In fiamme',
+          sub: 'Da fare oggi, non domani.',
+          textbook: 'Importante + Urgente',
+        },
+        boring: {
+          label: 'Noioso ma importante',
+          sub: 'Le vere vittorie. Mettile in agenda, non saltarle.',
+          textbook: 'Importante + Non urgente',
+        },
+        noisy: {
+          label: 'Rumoroso ma saltabile',
+          sub: 'Fa rumore, ma non è un tuo problema. Delega, rimanda, ignora.',
+          textbook: 'Urgente + Non importante',
+        },
+        drop: {
+          label: 'Lascia perdere',
+          sub: 'È permesso. Non serve finire la lista.',
+          textbook: 'Non importante + Non urgente',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Timer Pomodoro',
+      modeTablistLabel: 'Modalità del timer',
+      modes: {
+        work: 'Concentrazione',
+        'short-break': 'Pausa breve',
+        'long-break': 'Pausa lunga',
+      },
+      dialLabel: (mode: string, time: string) => `Timer ${mode}. ${time} rimanenti.`,
+      sessionsToday: (count: number) => `Sessioni completate oggi: ${count}`,
+      soundToggle: 'Suono a fine sessione',
+      customizeDurations: 'Personalizza le durate',
+      hideSettings: 'Nascondi impostazioni',
+      focusMinutes: 'Concentrazione (min)',
+      shortBreakMinutes: 'Pausa breve (min)',
+      longBreakMinutes: 'Pausa lunga (min)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Timer visivo con conto alla rovescia',
+      dialAriaLabel: (remaining: string) => `Quadrante del timer visivo. ${remaining} rimanenti.`,
+      seconds: (s: number) => `${s} second${s === 1 ? 'o' : 'i'}`,
+      minutes: (m: number) => `${m} minut${m === 1 ? 'o' : 'i'}`,
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m} minut${m === 1 ? 'o' : 'i'} e ${s} second${s === 1 ? 'o' : 'i'}`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `Conto alla rovescia da ${minutes} min`,
+      setFor: (minutes: number) => `Impostato su ${minutes} min`,
+      paused: 'In pausa',
+      timeIsUp: 'Tempo scaduto',
+      presetsLabel: 'Durate predefinite',
+      presetMinutes: (minutes: number) => `${minutes} min`,
+      custom: 'Personalizza',
+      minutesLabel: 'Minuti',
+      set: 'Imposta',
+      soundWhenDone: 'Suono a tempo scaduto',
+    },
+    brownNoise: {
+      play: (sound: string) => `Riproduci ${sound}`,
+      pause: (sound: string) => `Metti in pausa ${sound}`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Scegli un suono ambientale',
+      soundGroupLabel: 'Suono ambientale',
+      volume: 'Volume',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'Timer di spegnimento',
+      sleepOff: 'Off',
+      sleepMinutes: (minutes: number) => `${minutes} min`,
+      privacyNote: 'Funziona nel tuo browser. Niente viene registrato, niente viene caricato.',
+      sounds: {
+        brown: {
+          name: 'Marrone',
+          description: 'Profondo, rimbombante. Come una cascata lontana. Quello di TikTok.',
+        },
+        pink: {
+          name: 'Rosa',
+          description: 'Più morbido del bianco, meno basso del marrone. Equilibrato.',
+        },
+        white: {
+          name: 'Bianco',
+          description: 'Il fruscio di una vecchia TV. Brillante e uniforme.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Timer per interrompere l’iperfocus',
+
+      // Durate. Ogni formulazione sta qui, così ogni lingua sceglie i suoi
+      // plurali, le sue unità e il suo ordine delle parole.
+      minutesShort: (minutes: number) => `${minutes} min`,
+      hoursShort: (hours: number) => `${hours} h`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} h ${minutes} min`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'meno di un minuto';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} or${hours === 1 ? 'a' : 'e'}`);
+        if (minutes > 0) parts.push(`${minutes} minut${minutes === 1 ? 'o' : 'i'}`);
+        return parts.join(' e ');
+      },
+
+      // Riga della sessione. Il testo tra ** viene evidenziato.
+      stripNoCap: (interval: string) => `Controllo ogni ${interval}, senza limite massimo`,
+      stripWithCap: (interval: string, cap: string) =>
+        `Controllo ogni ${interval}, stop obbligatorio a ${cap}`,
+      summaryNoCap: (interval: string) => `Ti richiamo ogni **${interval}**, senza limite massimo.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `Ti richiamo ogni **${interval}**, con stop obbligatorio a **${cap}**.`,
+
+      // Configurazione
+      intervalHeading: 'Controlla ogni',
+      custom: 'Personalizza',
+      minutes: 'Minuti',
+      set: 'Imposta',
+      jitterNote:
+        'I controlli variano di circa il dieci percento, così il cervello non riesce a ignorarli in anticipo.',
+      moreOptions: 'Altre opzioni',
+      hideOptions: 'Nascondi opzioni',
+      taskLabel: 'A cosa stai lavorando? (facoltativo)',
+      taskPlaceholder: 'es. la dichiarazione, la revisione del design, il copione',
+      taskHint: 'Usato nei controlli vocali, così senti cosa ti eri messo a fare.',
+      hardStopHeading: 'Stop obbligatorio dopo',
+      hardStopHint:
+        'Al limite parte un avviso più forte, così una spirale da sei ore non ti passa sotto il naso.',
+      capOff: 'Off',
+      capHours: (hours: number) => `${hours}h`,
+      noHardStop: 'senza limite',
+      alertsHeading: 'Avvisi',
+      chime: 'Suono',
+      voice: 'Voce',
+      notify: 'Notifica',
+      alertsHint:
+        'Il suono si alza se ignori un controllo. La voce dice l’ora e da quanto stai lavorando. La notifica arriva dal browser quando la scheda è in secondo piano.',
+      notificationsBlocked:
+        'Le notifiche sono bloccate in questo browser. Attivale nelle impostazioni del sito per usarle.',
+      notificationsUnsupported: 'Il tuo browser non supporta le notifiche web.',
+      startSession: 'Inizia la sessione',
+
+      // Sessione in corso
+      statElapsed: 'Trascorso',
+      statNextCheckIn: 'Prossimo controllo',
+      statCap: 'Limite',
+      statusNow: 'Adesso',
+      statusPaused: 'In pausa',
+      statusCapHit: 'Limite raggiunto',
+      statusOff: 'Off',
+      workingOn: (task: string) => `Stai lavorando su **${task}**`,
+      checkInHeading: 'Controllo veloce',
+      checkInBody: (clock: string, elapsed: string) =>
+        `Sono le ${clock} e ci stai lavorando da ${elapsed}. Sei ancora sull’attività che avevi iniziato o è ora di riemergere?`,
+      stillGoing: 'Vado avanti',
+      takeABreak: 'Faccio una pausa',
+      stopSession: 'Chiudi la sessione',
+      capHeading: 'Limite di sessione raggiunto',
+      capBody: (minutes: number) =>
+        `Avevi messo uno stop obbligatorio a ${minutes} minuti. Alzati, bevi acqua, mangia qualcosa. Il lavoro resta qui.`,
+      pause: 'Pausa',
+      resume: 'Riprendi',
+      endSession: 'Termina sessione',
+      checkInLog: 'Registro dei controlli',
+      logContinue: 'hai continuato',
+      logBreak: 'hai fatto una pausa',
+      logStop: 'hai smesso',
+
+      // Titolo della scheda del browser quando un controllo aspetta in secondo piano.
+      tabAlert: '⚠ Controllo | Doubly',
+
+      // Letto ad alta voce (SpeechSynthesis) e inviato come notifica di sistema.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Controllo. Sono le ${clock}. Stai lavorando su ${task} da ${elapsed}.`
+          : `Controllo. Sono le ${clock}. Stai lavorando da ${elapsed}.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Limite di sessione raggiunto. Sono le ${clock}. Ci stai lavorando da ${elapsed}. È ora di fermarti.`,
+      notificationCheckInTitle: 'Controllo iperfocus',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `Sono le ${clock}. Ci stai lavorando da ${elapsed}.`,
+      notificationCapTitle: 'Limite di iperfocus raggiunto',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `Sono le ${clock}. Ci stai lavorando da ${elapsed}. È ora di fermarti.`,
+    },
+    shared: {
+      start: 'Avvia',
+      pause: 'Pausa',
+      resume: 'Riprendi',
+      done: 'Fatto',
+      reset: 'Azzera',
+      skip: 'Salta',
+      skipAria: 'Salta alla sessione successiva',
+      startSession: 'Inizia una sessione di concentrazione',
+      creatingRoom: 'Creazione della stanza...',
+    },
+    chrome: {
+      tryInApp: 'Provalo nell’app',
+      appStoreAria: (label: string) => `${label} sull’App Store`,
+      breadcrumbAria: 'Percorso di navigazione',
+    },
+  },
 };
 
 export default it;

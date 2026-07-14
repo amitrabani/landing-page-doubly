@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 
 // Maps each tool slug to its interactive widget. The widgets are the same
-// client components the English pages render (their in-widget UI copy stays
-// English for now — SEO content around them is what's localized). Reusing them
-// keeps a single source of truth for the tool behavior across all locales.
+// client components the English pages render; they read their own copy from the
+// active locale's dictionary, so no strings are passed in from here. Reusing
+// them keeps a single source of truth for the tool behavior across all locales.
 import TaskSplitterTool from '@/app/(main)/(public-helpers)/tools/task-splitter/TaskSplitterTool';
 import BrainDumpTool from '@/app/(main)/(public-helpers)/tools/brain-dump/BrainDumpTool';
 import PickOneTool from '@/app/(main)/(public-helpers)/tools/pick-one/PickOneTool';
@@ -25,7 +25,6 @@ export const toolWidgets: Record<string, ReactNode> = {
       presets={[1, 3, 5, 10, 15, 25, 60]}
       defaultMinutes={10}
       storageKey="doubly:visual-timer:v1"
-      ariaLabel="Visual countdown timer"
     />
   ),
   'brown-noise': <BrownNoisePlayer />,

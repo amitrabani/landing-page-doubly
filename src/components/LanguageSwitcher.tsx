@@ -1,12 +1,20 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { locales, localeNames, defaultLocale, type Locale } from '@/i18n/config';
+import { locales, localeNames, defaultLocale, isLocale, type Locale } from '@/i18n/config';
+import { localizedHref } from '@/i18n/links';
 import { useLocale, useT } from '@/i18n/TranslationProvider';
 
-function homePath(locale: Locale): string {
-  return locale === defaultLocale ? '/' : `/${locale}`;
+// Drops the "/{locale}" prefix off the current path, yielding the canonical
+// (English, unprefixed) path that localizedHref knows how to re-localize.
+function canonicalPath(pathname: string): string {
+  const segments = pathname.split('/').filter(Boolean);
+  if (segments.length > 0 && isLocale(segments[0]) && segments[0] !== defaultLocale) {
+    segments.shift();
+  }
+  return segments.length > 0 ? `/${segments.join('/')}` : '/';
 }
 
 // Language picker. Persists the choice in the NEXT_LOCALE cookie (so the root
@@ -14,6 +22,7 @@ function homePath(locale: Locale): string {
 // by a different root layout with its own <html lang/dir>.
 export default function LanguageSwitcher({ className = '' }: { className?: string }) {
   const current = useLocale();
+  const pathname = usePathname();
   const t = useT();
   const reduced = useReducedMotion();
   const [open, setOpen] = useState(false);
@@ -38,9 +47,11 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
   function choose(locale: Locale) {
     document.cookie = `NEXT_LOCALE=${locale};path=/;max-age=31536000;samesite=lax`;
     setOpen(false);
-    if (locale !== current) {
-      window.location.assign(homePath(locale));
-    }
+    if (locale === current) return;
+    // Stay on the page the reader is actually on. localizedHref keeps the link
+    // on the English page when this locale has no pack for it, so switching can
+    // never land on a 404.
+    window.location.assign(localizedHref(locale, canonicalPath(pathname || '/')));
   }
 
   return (

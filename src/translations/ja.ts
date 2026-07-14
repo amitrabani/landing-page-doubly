@@ -478,6 +478,366 @@ const ja = {
     ogDescription:
       '混乱をブレインダンプし、はっきりした次の一歩を得て、アカウンタビリティで最後までやり遂げる。',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'タスク分解ツール',
+      description:
+        '始められないタスクを打ち込むだけ。AIが、すぐ手をつけられる小さなステップに分けて、それぞれの所要時間の目安まで出します。ADHDの脳のために。',
+    },
+    'brain-dump': {
+      title: 'ブレインダンプツール',
+      description:
+        '頭の中のすべてを吐き出せば、AIが実行できるタスクだけを取り出します。登録不要、保存もなし。',
+    },
+    'pick-one': {
+      title: 'ひとつ選ぶツール',
+      description:
+        'ぐちゃぐちゃのToDoリストを貼り付ければ、最初に取りかかる1つが返ってきます。一番小さいもの、一番こわいもの、それかランダムで。10個のタスクが、手のつけられない大きなかたまり1つに見えてしまうときのために。',
+    },
+    'eisenhower-matrix': {
+      title: 'アイゼンハワー・マトリクス（ADHD版）',
+      description:
+        '教科書どおりのラベルではなく、「退屈だけど大事」のような枠にタスクをドラッグ。ADHDの脳にやっと合うマトリクスです。データは端末の中に保存されます。',
+    },
+    'pomodoro': {
+      title: 'ADHD向けポモドーロタイマー',
+      description:
+        '25分の作業、5分の休憩。ADHDの脳にやっと合う集中法です。無料、登録不要、オフラインでも動きます。',
+    },
+    'visual-timer': {
+      title: 'ビジュアルタイマー / タイムブラインドネス時計',
+      description:
+        '数字を読むのではなく、円が少しずつ欠けていくのを見て、時間が過ぎるのを目でつかめます。時間感覚のずれ（タイムブラインドネス）に悩むADHDの大人のための時計としても。',
+    },
+    'brown-noise': {
+      title: '環境音の生成ツール',
+      description:
+        'ブラウザで使える無料の環境音生成ツール。ブラウンノイズに、ピンクノイズとホワイトノイズも。ざわつくADHDの脳を静める、ゆらぎのない背景音。スリープタイマーつき、オフラインでも動きます。',
+    },
+    'body-doubling-room': {
+      title: 'ボディダブリング・ルーム',
+      description:
+        '2人用の無料フォーカスルーム。リンクを共有すれば、P2Pのビデオでとなりに座っているように一緒に作業できて、タイマーも共有できます。登録もインストールも不要。',
+    },
+    'hyperfocus-timer': {
+      title: '過集中の中断タイマー',
+      description:
+        'X分おきに声で呼びかけて、必要なら強制ストップも。ADHDの過集中で午後がまるごと消えてしまうのを防ぎます。',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: '始められないタスクは何ですか？',
+      inputPlaceholder: '例：経費精算を提出する',
+      submit: '分解する',
+      submitting: '分解しています…',
+      privacyNote: '非公開。サーバーには何も保存されません。',
+      charactersLeft: (count: number) => `残り${count}文字`,
+      presetsIntro: 'または、こちらを試してみて：',
+      presets: {
+        cleanKitchen: 'キッチンを掃除する',
+        doLaundry: '洗濯をする',
+        replyInbox: 'たまったメールに返信する',
+        planWeekendTrip: '週末の旅行を計画する',
+        fileTaxes: '確定申告をする',
+        cleanBathroom: 'お風呂を掃除する',
+      },
+      loading: 'ステップに分解しています…',
+      errorRateLimit: 'ペースが速すぎます。少し待ってから、もう一度お試しください。',
+      errorGeneric: '今は分解できませんでした。数秒後にもう一度お試しください。',
+      tryAgain: 'もう一度',
+      taskLabel: 'タスク',
+      urgencyLabels: { low: '緊急度：低', medium: '緊急度：中', high: '緊急度：高' },
+      stepsDone: (done: number, total: number) => `${done}/${total} ステップ完了`,
+      minTotal: (min: number) => `合計 約${min}分`,
+      allDoneMessage: 'ぜんぶ完了。そんなに難しくなかったでしょう？',
+      emptyState:
+        'そのタスクからは、はっきりしたステップが見つかりませんでした。「企画書を書く」「ガレージを掃除する」のように、行動のかたちで書き直してみてください。',
+    },
+    brainDump: {
+      label: '頭の中のものを全部吐き出して。整理は不要です。',
+      placeholder:
+        '歯医者に電話するのをずっと忘れてるし、キッチンはぐちゃぐちゃ。\n仕事のプロジェクトのことで圧倒されてる。今夜の夕食の食料品を買わないと\nいけないし、先週のSarahのメールにも返信しないと。',
+      privacy: '非公開。サーバーには何も保存されません。',
+      charactersLeft: (remaining: number) => `残り${remaining}文字。`,
+      clear: 'クリア',
+      submit: 'タスクを取り出す',
+      submitting: 'タスクを取り出しています…',
+      loading: '書いてくれたものを読んで、実行できる部分を取り出しています…',
+      errorRateLimited: 'ペースが速すぎます。少し待ってから、もう一度お試しください。',
+      errorGeneric: '今はタスクを取り出せませんでした。数秒後にもう一度お試しください。',
+      tryAgain: 'もう一度',
+      empty:
+        '具体的なタスクらしいものは、見つかりませんでした。それは良い兆しかもしれません。ただ吐き出したかっただけなら、それで十分です。やることを書き出すつもりだったなら、もう少し具体的にしてみて（「Sarahのこと」ではなく「Sarahにメールする」のように）。',
+      resultsTitle: '実行できるタスク',
+      doneCount: (done: number, total: number) => `${done}/${total} 完了`,
+      footer: 'ひとつ選んで。ひとつだけ。今それをやって、終わったら次に戻ってきて。',
+    },
+    pickOne: {
+      inputLabel: 'リストを貼り付けて。1行に1つでも、カンマ区切りのごちゃごちゃでも。なんでもいい。',
+      inputPlaceholder:
+        '母に返信\n歯医者を予約\n経費を提出\nスライドを仕上げる\n植物に水やり',
+      itemsDetected: (count: number) => `${count}件を検出`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count}件を検出、残り${left}件`,
+      clearEverything: 'すべてクリア',
+      modeLegend: 'どうやって選ぶ？',
+      modes: {
+        smallest: {
+          label: '一番小さいもの',
+          reason: 'リストで一番短いもの。小さく始めて、勢いをつける。',
+        },
+        scariest: {
+          label: '一番こわいもの',
+          reason: '見たくないやつ。最初に片付けると、一日が軽くなる。',
+        },
+        random: {
+          label: 'とにかく1つ',
+          reason: '迷わない。リストが自分で選んだ。あとは始めるだけ。',
+        },
+      },
+      pickCta: '1つ選んで',
+      pickAnotherCta: '別のを選ぶ',
+      emptyHint: '項目を1つ以上追加してから、選ぶをタップ。',
+      readyHint: '準備OK。決められないときは「1つ選んで」をタップ。',
+      allDoneTitle: 'リスト、片付きました。',
+      allDoneBody:
+        'すべての項目が、完了かスキップ済みです。リストをクリアするか、リセットしてスキップした項目を戻せます。',
+      bringSkippedBack: 'スキップした分を戻す',
+      startFreshList: '新しいリストを作る',
+      pickedEyebrow: 'これから始めよう',
+      didIt: 'やった',
+      notThisOne: 'これじゃない',
+      pickAgain: 'もう一度選ぶ',
+      progress: (done: number, skipped: number, left: number) =>
+        `完了${done}件、スキップ${skipped}件、残り${left}件`,
+    },
+    eisenhower: {
+      inputLabel: 'タスクを追加',
+      inputPlaceholder: 'タスクを入力してEnter（改行で区切って複数貼り付けもOK）',
+      addButton: '追加',
+      totals: (total: number, unsorted: number) =>
+        `合計${total}件、未分類${unsorted}件`,
+      clearAll: 'すべてクリア',
+      unsortedHeading: (count: number) => `未分類（${count}）`,
+      unsortedListLabel: '未分類のタスク',
+      removeTask: (text: string) => `${text}を削除`,
+      placeHint: 'あとは、置きたいマスをタップ。',
+      placeHintDesktop: 'パソコンならドラッグ＆ドロップでも。',
+      quadrantRegionLabel: (label: string) => `「${label}」のマス`,
+      quadrantCountLabel: (count: number, label: string) => `「${label}」に${count}件のタスク`,
+      dropHere: 'ここにドロップ',
+      sendBackToUnsorted: '未分類に戻す',
+      moveBackToUnsorted: (text: string) => `${text}を未分類に戻す`,
+      empty: '空',
+      emptyState:
+        '上からタスクを追加して始めましょう。データはブラウザの中に保存され、サーバーには何も残りません。',
+      hintLabel: 'Doublyのヒント：',
+      hintBody:
+        '「退屈だけど大事」の山は、多くの人が飛ばして、いちばん後悔する場所です。今日ひとつだけやるなら、そこから選んで。',
+      quadrants: {
+        fire: {
+          label: '炎上中',
+          sub: '明日ではなく、今日やる。',
+          textbook: '重要かつ緊急',
+        },
+        boring: {
+          label: '退屈だけど大事',
+          sub: '本当の成果はここ。予定に入れて、飛ばさない。',
+          textbook: '重要だが緊急ではない',
+        },
+        noisy: {
+          label: 'うるさいけど飛ばせる',
+          sub: '声は大きいけど、あなたの問題じゃない。任せる、後回し、無視。',
+          textbook: '緊急だが重要ではない',
+        },
+        drop: {
+          label: '手放す',
+          sub: 'やめていい。リストは全部やらなくていい。',
+          textbook: '重要でも緊急でもない',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'ポモドーロタイマー',
+      modeTablistLabel: 'タイマーのモード',
+      modes: {
+        work: '集中',
+        'short-break': '短い休憩',
+        'long-break': '長い休憩',
+      },
+      dialLabel: (mode: string, time: string) => `${mode}タイマー。残り${time}。`,
+      sessionsToday: (count: number) => `今日の完了セッション：${count}件`,
+      soundToggle: 'セッション終了時に音を鳴らす',
+      customizeDurations: '時間をカスタマイズ',
+      hideSettings: '設定を隠す',
+      focusMinutes: '集中（分）',
+      shortBreakMinutes: '短い休憩（分）',
+      longBreakMinutes: '長い休憩（分）',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'ビジュアル・カウントダウンタイマー',
+      dialAriaLabel: (remaining: string) => `ビジュアルタイマーの文字盤。残り${remaining}。`,
+      seconds: (s: number) => `${s}秒`,
+      minutes: (m: number) => `${m}分`,
+      minutesAndSeconds: (m: number, s: number) => `${m}分${s}秒`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `${minutes}分からカウントダウン中`,
+      setFor: (minutes: number) => `${minutes}分にセット`,
+      paused: '一時停止中',
+      timeIsUp: '時間です',
+      presetsLabel: '時間のプリセット',
+      presetMinutes: (minutes: number) => `${minutes}分`,
+      custom: 'カスタム',
+      minutesLabel: '分',
+      set: 'セット',
+      soundWhenDone: '終了時に音を鳴らす',
+    },
+    brownNoise: {
+      play: (sound: string) => `${sound}ノイズを再生`,
+      pause: (sound: string) => `${sound}ノイズを一時停止`,
+      documentTitle: (sound: string) => `▶ ${sound}ノイズ · Doubly`,
+      chooseSound: '環境音を選ぶ',
+      soundGroupLabel: '環境音',
+      volume: '音量',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'スリープタイマー',
+      sleepOff: 'オフ',
+      sleepMinutes: (minutes: number) => `${minutes}分`,
+      privacyNote: 'ブラウザの中で動きます。録音も、アップロードもありません。',
+      sounds: {
+        brown: {
+          name: 'ブラウン',
+          description: '低くて、ゴロゴロした音。遠くの滝のよう。TikTokで話題のあれ。',
+        },
+        pink: {
+          name: 'ピンク',
+          description: 'ホワイトよりやわらかく、ブラウンより低音は控えめ。バランス型。',
+        },
+        white: {
+          name: 'ホワイト',
+          description: '砂嵐のようなサーッという音。明るくて、むらがない。',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: '過集中の中断タイマー',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes}分`,
+      hoursShort: (hours: number) => `${hours}時間`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours}時間${minutes}分`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return '1分足らず';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours}時間`);
+        if (minutes > 0) parts.push(`${minutes}分`);
+        return parts.join('');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `${interval}ごとに声かけ、強制ストップなし`,
+      stripWithCap: (interval: string, cap: string) =>
+        `${interval}ごとに声かけ、${cap}で強制ストップ`,
+      summaryNoCap: (interval: string) => `**${interval}**ごとに声をかけます。強制ストップはなし。`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `**${interval}**ごとに声をかけて、**${cap}**で強制ストップします。`,
+
+      // Setup
+      intervalHeading: '声かけの間隔',
+      custom: 'カスタム',
+      minutes: '分',
+      set: 'セット',
+      jitterNote: '声かけのタイミングは1割ほどずらしています。脳が先回りして受け流せないように。',
+      moreOptions: '詳細オプション',
+      hideOptions: 'オプションを隠す',
+      taskLabel: '今、何に取り組んでいますか？（任意）',
+      taskPlaceholder: '例：確定申告、デザインレビュー、台本',
+      taskHint: '音声の声かけで読み上げられるので、何をしに座ったのかを耳で思い出せます。',
+      hardStopHeading: '強制ストップまで',
+      hardStopHint:
+        '上限に達すると、大きめのアラートが1回鳴ります。6時間の沼にはまったまま気づかない、を防ぎます。',
+      capOff: 'オフ',
+      capHours: (hours: number) => `${hours}時間`,
+      noHardStop: '強制ストップなし',
+      alertsHeading: 'アラート',
+      chime: 'チャイム',
+      voice: '音声',
+      notify: '通知',
+      alertsHint:
+        'チャイムは、声かけを無視すると音が大きくなります。音声は時刻と経過時間を読み上げます。通知は、タブが裏に回っているときにブラウザ通知を出します。',
+      notificationsBlocked:
+        'このブラウザでは通知がブロックされています。サイトの設定で許可してください。',
+      notificationsUnsupported: 'お使いのブラウザは、ブラウザ通知に対応していません。',
+      startSession: 'セッションを開始',
+
+      // Live session
+      statElapsed: '経過',
+      statNextCheckIn: '次の声かけ',
+      statCap: '上限',
+      statusNow: '今',
+      statusPaused: '一時停止中',
+      statusCapHit: '上限に到達',
+      statusOff: 'オフ',
+      workingOn: (task: string) => `**${task}**に取り組み中`,
+      checkInHeading: '声かけタイム',
+      checkInBody: (clock: string, elapsed: string) =>
+        `今は${clock}、ここまで${elapsed}続けています。まだ最初に始めた作業のままですか？それとも、そろそろ顔を上げるタイミング？`,
+      stillGoing: 'まだ続ける',
+      takeABreak: '休憩する',
+      stopSession: 'セッションを終了',
+      capHeading: 'セッションの上限に到達',
+      capBody: (minutes: number) =>
+        `${minutes}分で強制ストップに設定していました。立ち上がって、水を飲んで、何か食べて。仕事は逃げません。`,
+      pause: '一時停止',
+      resume: '再開',
+      endSession: 'セッションを終了',
+      checkInLog: '声かけの記録',
+      logContinue: '続けた',
+      logBreak: '休憩した',
+      logStop: 'やめた',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ 声かけ | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `声かけの時間です。今は${clock}。${task}に取り組み始めて${elapsed}経ちました。`
+          : `声かけの時間です。今は${clock}。作業を始めて${elapsed}経ちました。`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `セッションの上限に達しました。今は${clock}。ここまで${elapsed}続けています。そろそろ手を止めましょう。`,
+      notificationCheckInTitle: '過集中の声かけ',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `今は${clock}。ここまで${elapsed}続けています。`,
+      notificationCapTitle: '過集中の上限に到達',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `今は${clock}。ここまで${elapsed}続けています。そろそろ手を止めましょう。`,
+    },
+    shared: {
+      start: '開始',
+      pause: '一時停止',
+      resume: '再開',
+      done: '完了',
+      reset: 'リセット',
+      skip: 'スキップ',
+      skipAria: '次のセッションへスキップ',
+      startSession: '集中セッションを始める',
+      creatingRoom: 'ルームを作成中...',
+    },
+    chrome: {
+      tryInApp: 'アプリで試す',
+      appStoreAria: (label: string) => `App Storeで${label}`,
+      breadcrumbAria: 'パンくずリスト',
+    },
+  },
+
 };
 
 export default ja;

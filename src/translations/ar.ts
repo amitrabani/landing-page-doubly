@@ -478,6 +478,539 @@ const ar = {
     ogDescription:
       'فرّغ الفوضى من دماغك، واحصل على خطوة تالية واضحة واحدة، واستخدم المساءلة لتُكمل فعلاً.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'أداة تقسيم المهام',
+      description:
+        'اكتب مهمة لا تستطيع البدء بها، فيقسّمها الذكاء الاصطناعي إلى خطوات صغيرة قابلة للتنفيذ مع تقدير لوقت كل خطوة. مصمّمة لعقول ADHD.',
+    },
+    'brain-dump': {
+      title: 'أداة تفريغ الدماغ',
+      description:
+        'أفرِغ كل ما في رأسك، ويستخرج الذكاء الاصطناعي المهام القابلة للتنفيذ فقط. بدون تسجيل، ولا شيء يُحفَظ.',
+    },
+    'pick-one': {
+      title: 'أداة «اختر واحدة»',
+      description:
+        'الصق قائمة مهام فوضوية، واخرج بمهمة واحدة تبدأ بها: الأصغر، أو الأكثر إخافةً، أو واحدة عشوائية. مصمّمة للحظة التي تتحوّل فيها عشر مهام إلى كتلة واحدة ضخمة يستحيل البدء بها.',
+    },
+    'eisenhower-matrix': {
+      title: 'مصفوفة Eisenhower (نسخة ADHD)',
+      description:
+        'اسحب المهام إلى مربّعات مثل «مملّة لكنها مهمة» بدل التسميات النظرية الجافة. أخيراً مصفوفة تناسب عقل ADHD. تُحفَظ محلياً.',
+    },
+    'pomodoro': {
+      title: 'مؤقّت Pomodoro لـ ADHD',
+      description:
+        '25 دقيقة عمل و5 دقائق راحة. أخيراً طريقة تركيز تناسب عقل ADHD. مجاني، بدون تسجيل، ويعمل دون إنترنت.',
+    },
+    'visual-timer': {
+      title: 'المؤقّت المرئي / ساعة عمى الوقت',
+      description:
+        'شريحة دائرية تتقلّص أمام عينيك، فترى الوقت يمرّ بدل أن تقرأ أرقاماً. تصلح أيضاً كساعة لعمى الوقت لدى البالغين من أصحاب ADHD.',
+    },
+    'brown-noise': {
+      title: 'مولّد أصوات محيطة',
+      description:
+        'مولّد أصوات محيطة مجاني داخل المتصفّح. ضجيج بنّي، وأيضاً وردي وأبيض. صوت خلفية ثابت يهدّئ عقل ADHD المزدحم. مؤقّت نوم مضمّن، ويعمل دون إنترنت.',
+    },
+    'body-doubling-room': {
+      title: 'غرفة المرافقة أثناء العمل',
+      description:
+        'غرفة تركيز مجانية لشخصين. شارِك الرابط، واعملا جنباً إلى جنب عبر فيديو مباشر بينكما، مع مؤقّت مشترك. بدون تسجيل ولا تثبيت.',
+    },
+    'hyperfocus-timer': {
+      title: 'مؤقّت مقاطعة فرط التركيز',
+      description:
+        'اطمئنانات منطوقة تتكرّر كل عدد من الدقائق تختاره، وإيقاف نهائي اختياري، حتى لا تلتهم جلسة فرط تركيز واحدة فترة ما بعد الظهر كلها.',
+    },
+  },
+
+  // Free ADHD tool widgets.
+  // Arabic counts follow the classic agreement rules: 1 = singular, 2 = dual,
+  // 3–10 = broken plural, 11+ (and 0) = singular accusative (tamyeez).
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'ما المهمة التي لا تستطيع البدء بها؟',
+      inputPlaceholder: 'مثلاً: قدّم تقرير المصروفات',
+      submit: 'قسّمها',
+      submitting: 'جارٍ تقسيمها…',
+      privacyNote: 'خاص. لا شيء يُحفَظ على خادمنا.',
+      charactersLeft: (count: number) => {
+        if (count === 0) return 'لم يبقَ أي حرف';
+        if (count === 1) return 'بقي حرف واحد';
+        if (count === 2) return 'بقي حرفان';
+        if (count % 100 >= 3 && count % 100 <= 10) return `بقي ${count} أحرف`;
+        if (count % 100 >= 11 && count % 100 <= 99) return `بقي ${count} حرفاً`;
+        return `بقي ${count} حرف`;
+      },
+      presetsIntro: 'أو جرّب واحدة من هذه:',
+      presets: {
+        cleanKitchen: 'نظّف المطبخ',
+        doLaundry: 'اغسل الملابس',
+        replyInbox: 'رُدّ على البريد',
+        planWeekendTrip: 'خطّط لرحلة نهاية الأسبوع',
+        fileTaxes: 'قدّم إقراري الضريبي',
+        cleanBathroom: 'نظّف الحمّام',
+      },
+      loading: 'جارٍ تقسيمها إلى خطوات…',
+      errorRateLimit: 'أنت تتحرّك بسرعة. انتظر لحظة ثم حاول مرة أخرى.',
+      errorGeneric: 'تعذّر تقسيمها الآن. حاول مرة أخرى بعد بضع ثوانٍ.',
+      tryAgain: 'حاول مرة أخرى',
+      taskLabel: 'مهمة',
+      urgencyLabels: { low: 'أولوية منخفضة', medium: 'أولوية متوسطة', high: 'أولوية عالية' },
+      stepsDone: (done: number, total: number) => {
+        const noun = total % 100 >= 3 && total % 100 <= 10 ? 'خطوات' : 'خطوة';
+        return `${done}/${total} ${noun} مكتملة`;
+      },
+      minTotal: (min: number) => {
+        const noun = min % 100 >= 3 && min % 100 <= 10 ? 'دقائق' : 'دقيقة';
+        return `~${min} ${noun} إجمالاً`;
+      },
+      allDoneMessage: 'انتهى. لم يكن مخيفاً بقدر ما بدا، أليس كذلك؟',
+      emptyState:
+        'لم نجد خطوات فرعية واضحة لهذه المهمة. جرّب صياغتها كإجراء، مثل «اكتب خطة المشروع» أو «نظّف المرآب».',
+    },
+    brainDump: {
+      label: 'أفرِغ كل ما في رأسك. لا حاجة لأن يكون منظّماً.',
+      placeholder:
+        'أنسى دائماً أن أتصل بطبيب الأسنان، والمطبخ فوضى.\nأشعر بالإرهاق بسبب مشروع العمل. أحتاج شراء البقالة\nلعشاء الليلة والرد على رسالة سارة من الأسبوع الماضي.',
+      privacy: 'خاص. لا شيء يُحفَظ على خادمنا.',
+      charactersLeft: (remaining: number) => {
+        if (remaining === 0) return 'لم يبقَ أي حرف.';
+        if (remaining === 1) return 'بقي حرف واحد.';
+        if (remaining === 2) return 'بقي حرفان.';
+        if (remaining % 100 >= 3 && remaining % 100 <= 10) return `بقي ${remaining} أحرف.`;
+        if (remaining % 100 >= 11 && remaining % 100 <= 99) return `بقي ${remaining} حرفاً.`;
+        return `بقي ${remaining} حرف.`;
+      },
+      clear: 'مسح',
+      submit: 'استخرج المهام',
+      submitting: 'جارٍ استخراج المهام…',
+      loading: 'نقرأ ما فرّغته ونستخرج منه ما يمكن تنفيذه…',
+      errorRateLimited: 'أنت تتحرّك بسرعة. انتظر لحظة ثم حاول مرة أخرى.',
+      errorGeneric: 'تعذّر استخراج المهام الآن. حاول مرة أخرى بعد بضع ثوانٍ.',
+      tryAgain: 'حاول مرة أخرى',
+      empty:
+        'لم نجد هنا شيئاً يشبه مهمة ملموسة. قد تكون هذه علامة جيدة. إذا كنت تُفرّغ ما بداخلك فحسب، فهذا يُحتسب. أمّا إذا قصدت سرد أمور لتفعلها، فحاول أن تكون أكثر تحديداً («راسل سارة» بدل «موضوع سارة»).',
+      resultsTitle: 'مهام قابلة للتنفيذ',
+      doneCount: (done: number, total: number) => `${done}/${total} مكتملة`,
+      footer: 'اختر واحدة. واحدة فقط. نفّذها الآن، ثم عُد للتالية.',
+    },
+    pickOne: {
+      inputLabel: 'الصق قائمتك. واحدة في كل سطر، أو مبعثرة بفواصل. لا يهم.',
+      inputPlaceholder:
+        'رُدّ على أمي\nاحجز موعد طبيب الأسنان\nقدّم تقرير المصروفات\nأنهِ العرض التقديمي\nاسقِ النباتات',
+      itemsDetected: (count: number) => {
+        if (count === 0) return 'لم يتم العثور على أي عنصر';
+        if (count === 1) return 'تم العثور على عنصر واحد';
+        if (count === 2) return 'تم العثور على عنصرين';
+        if (count % 100 >= 3 && count % 100 <= 10) return `تم العثور على ${count} عناصر`;
+        if (count % 100 >= 11 && count % 100 <= 99) return `تم العثور على ${count} عنصراً`;
+        return `تم العثور على ${count} عنصر`;
+      },
+      itemsDetectedWithLeft: (count: number, left: number) => {
+        const found =
+          count === 0
+            ? 'لم يتم العثور على أي عنصر'
+            : count === 1
+              ? 'تم العثور على عنصر واحد'
+              : count === 2
+                ? 'تم العثور على عنصرين'
+                : count % 100 >= 3 && count % 100 <= 10
+                  ? `تم العثور على ${count} عناصر`
+                  : count % 100 >= 11 && count % 100 <= 99
+                    ? `تم العثور على ${count} عنصراً`
+                    : `تم العثور على ${count} عنصر`;
+        return `${found}، بقي منها ${left}`;
+      },
+      clearEverything: 'امسح كل شيء',
+      modeLegend: 'كيف نختار؟',
+      modes: {
+        smallest: {
+          label: 'الأصغر',
+          reason: 'أقصر عنصر في القائمة. ابدأ صغيراً واصنع الزخم.',
+        },
+        scariest: {
+          label: 'الأكثر إخافةً',
+          reason: 'ذاك الذي تفضّل ألّا تنظر إليه. إنجازه أولاً يحرّر يومك كله.',
+        },
+        random: {
+          label: 'اختر واحدة فحسب',
+          reason: 'بلا تفكير. القائمة اختارت بنفسها. ابدأ فقط.',
+        },
+      },
+      pickCta: 'اختر لي واحدة',
+      pickAnotherCta: 'اختر غيرها',
+      emptyHint: 'أضف عنصراً واحداً على الأقل، ثم اضغط على الاختيار.',
+      readyHint: 'جاهز. اضغط «اختر لي واحدة» متى عجزت عن الحسم.',
+      allDoneTitle: 'انتهت القائمة.',
+      allDoneBody:
+        'كل عنصر إمّا أُنجز أو تُخطّي. يمكنك مسح القائمة، أو إعادة الضبط لإرجاع العناصر المتخطّاة إلى المجموعة.',
+      bringSkippedBack: 'أرجِع المتخطّاة',
+      startFreshList: 'ابدأ قائمة جديدة',
+      pickedEyebrow: 'ابدأ بهذه',
+      didIt: 'أنجزتها',
+      notThisOne: 'ليست هذه',
+      pickAgain: 'اختر مرة أخرى',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} مكتملة، ${skipped} متخطّاة، ${left} متبقّية`,
+    },
+    eisenhower: {
+      inputLabel: 'أضف مهمة',
+      inputPlaceholder: 'أضف مهمة واضغط Enter (أو الصق عدّة مهام مفصولة بأسطر)',
+      addButton: 'أضف',
+      totals: (total: number, unsorted: number) => {
+        const tasks =
+          total === 0
+            ? 'لا مهام'
+            : total === 1
+              ? 'مهمة واحدة'
+              : total === 2
+                ? 'مهمتان'
+                : total % 100 >= 3 && total % 100 <= 10
+                  ? `${total} مهام`
+                  : `${total} مهمة`;
+        const rest =
+          unsorted === 0
+            ? 'كلها مصنّفة'
+            : unsorted === 1
+              ? 'منها واحدة غير مصنّفة'
+              : `منها ${unsorted} غير مصنّفة`;
+        return `${tasks} إجمالاً، ${rest}`;
+      },
+      clearAll: 'امسح كل شيء',
+      unsortedHeading: (count: number) => `غير مصنّفة (${count})`,
+      unsortedListLabel: 'المهام غير المصنّفة',
+      removeTask: (text: string) => `احذف ${text}`,
+      placeHint: 'الآن اضغط على مربّع لتضعها فيه.',
+      placeHintDesktop: 'أو اسحبها وأفلتها على سطح المكتب.',
+      quadrantRegionLabel: (label: string) => `مربّع ${label}`,
+      quadrantCountLabel: (count: number, label: string) => {
+        if (count === 0) return `لا مهام في ${label}`;
+        if (count === 1) return `مهمة واحدة في ${label}`;
+        if (count === 2) return `مهمتان في ${label}`;
+        if (count % 100 >= 3 && count % 100 <= 10) return `${count} مهام في ${label}`;
+        return `${count} مهمة في ${label}`;
+      },
+      dropHere: 'أفلِتها هنا',
+      sendBackToUnsorted: 'أعِدها إلى غير المصنّفة',
+      moveBackToUnsorted: (text: string) => `أعِد ${text} إلى غير المصنّفة`,
+      empty: 'فارغ',
+      emptyState:
+        'أضف مهمة في الأعلى للبدء. كل شيء يُحفَظ في متصفّحك، ولا شيء على خادمنا.',
+      hintLabel: 'تلميح من Doubly:',
+      hintBody:
+        'كومة «مملّة لكنها مهمة» هي التي يتخطّاها معظم الناس، وهي التي يندمون على تخطّيها أكثر من غيرها. إذا كنت ستفعل شيئاً واحداً اليوم، فاختر منها.',
+      quadrants: {
+        fire: {
+          label: 'مشتعلة',
+          sub: 'افعلها اليوم، لا غداً.',
+          textbook: 'مهم + عاجل',
+        },
+        boring: {
+          label: 'مملّة لكنها مهمة',
+          sub: 'هنا المكاسب الحقيقية. جدولها ولا تتخطّاها.',
+          textbook: 'مهم + غير عاجل',
+        },
+        noisy: {
+          label: 'ضجيج يمكن تجاهله',
+          sub: 'صاخبة، لكنها ليست مشكلتك. فوّضها أو أجّلها أو تجاهلها.',
+          textbook: 'عاجل + غير مهم',
+        },
+        drop: {
+          label: 'اترك هذه',
+          sub: 'مسموح لك. القائمة ليست ملزمة بأن تُنجَز كلها.',
+          textbook: 'غير مهم + غير عاجل',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'مؤقّت Pomodoro',
+      modeTablistLabel: 'وضع المؤقّت',
+      modes: {
+        work: 'تركيز',
+        'short-break': 'استراحة قصيرة',
+        'long-break': 'استراحة طويلة',
+      },
+      dialLabel: (mode: string, time: string) => `مؤقّت ${mode}. بقي ${time}.`,
+      sessionsToday: (count: number) => `الجلسات المكتملة اليوم: ${count}`,
+      soundToggle: 'صوت عند انتهاء الجلسة',
+      customizeDurations: 'خصّص المدد',
+      hideSettings: 'إخفاء الإعدادات',
+      focusMinutes: 'التركيز (دقائق)',
+      shortBreakMinutes: 'استراحة قصيرة (دقائق)',
+      longBreakMinutes: 'استراحة طويلة (دقائق)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'مؤقّت تنازلي مرئي',
+      dialAriaLabel: (remaining: string) => `قرص المؤقّت المرئي. بقي ${remaining}.`,
+      seconds: (s: number) => {
+        if (s === 1) return 'ثانية واحدة';
+        if (s === 2) return 'ثانيتان';
+        if (s % 100 >= 3 && s % 100 <= 10) return `${s} ثوانٍ`;
+        return `${s} ثانية`;
+      },
+      minutes: (m: number) => {
+        if (m === 1) return 'دقيقة واحدة';
+        if (m === 2) return 'دقيقتان';
+        if (m % 100 >= 3 && m % 100 <= 10) return `${m} دقائق`;
+        return `${m} دقيقة`;
+      },
+      minutesAndSeconds: (m: number, s: number) => {
+        const minutes =
+          m === 1
+            ? 'دقيقة واحدة'
+            : m === 2
+              ? 'دقيقتان'
+              : m % 100 >= 3 && m % 100 <= 10
+                ? `${m} دقائق`
+                : `${m} دقيقة`;
+        const seconds =
+          s === 1
+            ? 'ثانية واحدة'
+            : s === 2
+              ? 'ثانيتان'
+              : s % 100 >= 3 && s % 100 <= 10
+                ? `${s} ثوانٍ`
+                : `${s} ثانية`;
+        return `${minutes} و${seconds}`;
+      },
+      documentTitle: (time: string) => `${time} | Doubly`,
+      // After a preposition (من / على) the dual takes its genitive form: دقيقتين.
+      countingDown: (minutes: number) => {
+        if (minutes === 1) return 'عدّ تنازلي من دقيقة واحدة';
+        if (minutes === 2) return 'عدّ تنازلي من دقيقتين';
+        const noun = minutes % 100 >= 3 && minutes % 100 <= 10 ? 'دقائق' : 'دقيقة';
+        return `عدّ تنازلي من ${minutes} ${noun}`;
+      },
+      setFor: (minutes: number) => {
+        if (minutes === 1) return 'مضبوط على دقيقة واحدة';
+        if (minutes === 2) return 'مضبوط على دقيقتين';
+        const noun = minutes % 100 >= 3 && minutes % 100 <= 10 ? 'دقائق' : 'دقيقة';
+        return `مضبوط على ${minutes} ${noun}`;
+      },
+      paused: 'متوقّف مؤقتاً',
+      timeIsUp: 'انتهى الوقت',
+      presetsLabel: 'مدد جاهزة',
+      presetMinutes: (minutes: number) => {
+        if (minutes === 1) return 'دقيقة';
+        if (minutes === 2) return 'دقيقتان';
+        if (minutes % 100 >= 3 && minutes % 100 <= 10) return `${minutes} دقائق`;
+        return `${minutes} دقيقة`;
+      },
+      custom: 'مخصّص',
+      minutesLabel: 'الدقائق',
+      set: 'اضبط',
+      soundWhenDone: 'صوت عند انتهاء الوقت',
+    },
+    brownNoise: {
+      play: (sound: string) => `تشغيل ${sound}`,
+      pause: (sound: string) => `إيقاف ${sound}`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'اختر صوتاً محيطاً',
+      soundGroupLabel: 'صوت محيط',
+      volume: 'مستوى الصوت',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'مؤقّت النوم',
+      sleepOff: 'إيقاف',
+      sleepMinutes: (minutes: number) => {
+        if (minutes === 1) return 'دقيقة';
+        if (minutes === 2) return 'دقيقتان';
+        if (minutes % 100 >= 3 && minutes % 100 <= 10) return `${minutes} دقائق`;
+        return `${minutes} دقيقة`;
+      },
+      privacyNote: 'يعمل داخل متصفّحك. لا شيء يُسجَّل، ولا شيء يُرفَع.',
+      sounds: {
+        brown: {
+          name: 'ضجيج بنّي',
+          description: 'عميق ومدوٍّ. كشلّال بعيد. الصوت المشهور على TikTok.',
+        },
+        pink: {
+          name: 'ضجيج وردي',
+          description: 'أنعم من الأبيض، وأقلّ عمقاً من البنّي. متوازن.',
+        },
+        white: {
+          name: 'ضجيج أبيض',
+          description: 'أزيز تلفاز قديم. ساطع ومتساوٍ.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'مؤقّت مقاطعة فرط التركيز',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order. These feed “اطمئنان كل …” and
+      // “إيقاف نهائي عند …”, so the dual takes its genitive form (ساعتين,
+      // دقيقتين), which also reads naturally on a bare chip.
+      minutesShort: (minutes: number) => {
+        if (minutes === 1) return 'دقيقة';
+        if (minutes === 2) return 'دقيقتين';
+        if (minutes % 100 >= 3 && minutes % 100 <= 10) return `${minutes} دقائق`;
+        return `${minutes} دقيقة`;
+      },
+      hoursShort: (hours: number) => {
+        if (hours === 1) return 'ساعة';
+        if (hours === 2) return 'ساعتين';
+        if (hours % 100 >= 3 && hours % 100 <= 10) return `${hours} ساعات`;
+        return `${hours} ساعة`;
+      },
+      hoursMinutesShort: (hours: number, minutes: number) => {
+        const h =
+          hours === 1
+            ? 'ساعة'
+            : hours === 2
+              ? 'ساعتين'
+              : hours % 100 >= 3 && hours % 100 <= 10
+                ? `${hours} ساعات`
+                : `${hours} ساعة`;
+        const m =
+          minutes === 1
+            ? 'دقيقة'
+            : minutes === 2
+              ? 'دقيقتين'
+              : minutes % 100 >= 3 && minutes % 100 <= 10
+                ? `${minutes} دقائق`
+                : `${minutes} دقيقة`;
+        return `${h} و${m}`;
+      },
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'أقل من دقيقة';
+        const parts: string[] = [];
+        if (hours > 0) {
+          parts.push(
+            hours === 1
+              ? 'ساعة واحدة'
+              : hours === 2
+                ? 'ساعتين'
+                : hours % 100 >= 3 && hours % 100 <= 10
+                  ? `${hours} ساعات`
+                  : `${hours} ساعة`,
+          );
+        }
+        if (minutes > 0) {
+          parts.push(
+            minutes === 1
+              ? 'دقيقة واحدة'
+              : minutes === 2
+                ? 'دقيقتين'
+                : minutes % 100 >= 3 && minutes % 100 <= 10
+                  ? `${minutes} دقائق`
+                  : `${minutes} دقيقة`,
+          );
+        }
+        return parts.join(' و');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `اطمئنان كل ${interval}، بلا إيقاف نهائي`,
+      stripWithCap: (interval: string, cap: string) =>
+        `اطمئنان كل ${interval}، إيقاف نهائي عند ${cap}`,
+      summaryNoCap: (interval: string) => `اطمئنان كل **${interval}** بلا إيقاف نهائي.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `اطمئنان كل **${interval}** مع إيقاف نهائي عند **${cap}**.`,
+
+      // Setup
+      intervalHeading: 'اطمئنان كل',
+      custom: 'مخصّص',
+      minutes: 'الدقائق',
+      set: 'اضبط',
+      jitterNote:
+        'تتغيّر مواعيد الاطمئنان عشوائياً بنحو عشرة بالمئة، حتى لا يعتاد عليها عقلك ويتجاهلها مسبقاً.',
+      moreOptions: 'خيارات أكثر',
+      hideOptions: 'إخفاء الخيارات',
+      taskLabel: 'على ماذا تعمل؟ (اختياري)',
+      taskPlaceholder: 'مثلاً: الإقرار الضريبي، مراجعة التصميم، النص',
+      taskHint: 'يُستخدم في الاطمئنانات المنطوقة لتسمع ما جلست لتفعله.',
+      hardStopHeading: 'إيقاف نهائي بعد',
+      hardStopHint:
+        'ينطلق تنبيه أعلى صوتاً عند بلوغ الحدّ، حتى لا تمرّ عليك دوّامة من ست ساعات دون أن تنتبه.',
+      capOff: 'بلا حدّ',
+      capHours: (hours: number) => {
+        if (hours === 1) return 'ساعة';
+        if (hours === 2) return 'ساعتين';
+        if (hours % 100 >= 3 && hours % 100 <= 10) return `${hours} ساعات`;
+        return `${hours} ساعة`;
+      },
+      noHardStop: 'بلا إيقاف نهائي',
+      alertsHeading: 'التنبيهات',
+      chime: 'رنين',
+      voice: 'صوت',
+      notify: 'إشعار',
+      alertsHint:
+        'يعلو الرنين إذا تجاهلت الاطمئنان. والصوت ينطق الوقت والمدة المنقضية. والإشعار يظهر في المتصفّح عندما يكون التبويب في الخلفية.',
+      notificationsBlocked:
+        'الإشعارات محظورة في هذا المتصفّح. فعّلها من إعدادات الموقع لاستخدام هذه الميزة.',
+      notificationsUnsupported: 'متصفّحك لا يدعم إشعارات الويب.',
+      startSession: 'ابدأ الجلسة',
+
+      // Live session
+      statElapsed: 'المنقضي',
+      statNextCheckIn: 'الاطمئنان التالي',
+      statCap: 'الحدّ',
+      statusNow: 'الآن',
+      statusPaused: 'متوقّف مؤقتاً',
+      statusCapHit: 'بلغت الحدّ',
+      statusOff: 'معطّل',
+      workingOn: (task: string) => `تعمل على **${task}**`,
+      checkInHeading: 'اطمئنان سريع',
+      checkInBody: (clock: string, elapsed: string) =>
+        `الساعة ${clock}، وأنت منشغل بهذا منذ ${elapsed}. هل ما زلت على المهمة التي بدأتها، أم حان وقت الخروج إلى السطح؟`,
+      stillGoing: 'ما زلت مستمراً',
+      takeABreak: 'خذ استراحة',
+      stopSession: 'أوقف الجلسة',
+      capHeading: 'بلغت حدّ الجلسة',
+      capBody: (minutes: number) => {
+        const noun = minutes % 100 >= 3 && minutes % 100 <= 10 ? 'دقائق' : 'دقيقة';
+        return `ضبطت إيقافاً نهائياً عند ${minutes} ${noun}. قف، اشرب ماءً، تناول شيئاً. العمل سيبقى هنا.`;
+      },
+      pause: 'إيقاف مؤقت',
+      resume: 'استئناف',
+      endSession: 'أنهِ الجلسة',
+      checkInLog: 'سجلّ الاطمئنانات',
+      logContinue: 'واصل العمل',
+      logBreak: 'أخذ استراحة',
+      logStop: 'توقّف',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ اطمئنان | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `اطمئنان سريع. الساعة الآن ${clock}. أنت تعمل على ${task} منذ ${elapsed}.`
+          : `اطمئنان سريع. الساعة الآن ${clock}. أنت تعمل منذ ${elapsed}.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `بلغت حدّ الجلسة. الساعة الآن ${clock}. أنت منشغل بهذا منذ ${elapsed}. حان وقت التوقّف.`,
+      notificationCheckInTitle: 'اطمئنان فرط التركيز',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `الساعة الآن ${clock}. أنت منشغل بهذا منذ ${elapsed}.`,
+      notificationCapTitle: 'بلغت حدّ فرط التركيز',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `الساعة الآن ${clock}. أنت منشغل بهذا منذ ${elapsed}. حان وقت التوقّف.`,
+    },
+    shared: {
+      start: 'ابدأ',
+      pause: 'إيقاف مؤقت',
+      resume: 'استئناف',
+      done: 'تم',
+      reset: 'إعادة ضبط',
+      skip: 'تخطَّ',
+      skipAria: 'تخطَّ إلى الجلسة التالية',
+      startSession: 'ابدأ جلسة تركيز',
+      creatingRoom: 'جارٍ إنشاء الغرفة...',
+    },
+    chrome: {
+      tryInApp: 'جرّبه في التطبيق',
+      appStoreAria: (label: string) => `${label} على App Store`,
+      breadcrumbAria: 'مسار التنقّل',
+    },
+  },
+
 };
 
 export default ar;

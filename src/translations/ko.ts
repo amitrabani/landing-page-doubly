@@ -478,6 +478,365 @@ const ko = {
     ogDescription:
       '혼란을 브레인 덤프하고, 명확한 다음 단계 하나를 받고, 함께하기로 실제로 끝까지 해내세요.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: '할 일 쪼개기 도구',
+      description:
+        '도저히 시작이 안 되는 할 일을 적어보세요. AI가 할 만한 작은 단계로 쪼개고 예상 시간까지 붙여줘요. ADHD 뇌에 맞춰 만들었어요.',
+    },
+    'brain-dump': {
+      title: '브레인 덤프 도구',
+      description:
+        '머릿속에 있는 걸 다 쏟아내면 AI가 실행할 수 있는 할 일만 뽑아내요. 가입도 필요 없고, 아무것도 저장되지 않아요.',
+    },
+    'pick-one': {
+      title: '하나 고르기 도구',
+      description:
+        '뒤죽박죽인 할 일 목록을 붙여넣으면 시작할 일 하나를 골라줘요. 가장 작은 것, 가장 겁나는 것, 아니면 무작위로. 할 일 열 개가 거대한 덩어리 하나로 보여서 손도 못 대는 순간을 위해 만들었어요.',
+    },
+    'eisenhower-matrix': {
+      title: '아이젠하워 매트릭스 (ADHD 버전)',
+      description:
+        '교과서에 나오는 딱딱한 분류 대신 "지루하지만 중요한" 같은 칸에 할 일을 끌어다 놓으세요. 드디어 ADHD 뇌에 맞는 매트릭스예요. 내용은 브라우저에 저장돼요.',
+    },
+    'pomodoro': {
+      title: 'ADHD 포모도로 타이머',
+      description:
+        '25분 집중, 5분 휴식. 드디어 ADHD 뇌에 맞는 집중법이에요. 무료, 가입 없이, 오프라인에서도 돼요.',
+    },
+    'visual-timer': {
+      title: '시각 타이머 / 시간 감각 시계',
+      description:
+        '숫자를 읽는 대신, 줄어드는 원형 조각으로 시간이 흘러가는 걸 눈으로 볼 수 있어요. ADHD 성인을 위한 시간 감각 시계로도 쓸 수 있어요.',
+    },
+    'brown-noise': {
+      title: '브라운 노이즈 생성기',
+      description:
+        '브라우저에서 바로 쓰는 무료 배경 소음 생성기. 브라운 노이즈에 핑크와 화이트까지. 쉴 새 없이 돌아가는 ADHD 뇌를 가라앉히는 일정한 배경 소리예요. 취침 타이머도 있고, 오프라인에서도 돼요.',
+    },
+    'body-doubling-room': {
+      title: '바디 더블링 방',
+      description:
+        '두 사람이 쓰는 무료 집중 공간. 링크를 공유하고, P2P 영상으로 나란히 앉아 일하고, 타이머를 함께 돌리세요. 가입도 설치도 없어요.',
+    },
+    'hyperfocus-timer': {
+      title: '하이퍼포커스 중단 타이머',
+      description:
+        '몇 분 간격으로 음성 체크인이 반복되고, 원하면 강제 종료도 걸어둘 수 있어요. ADHD 하이퍼포커스가 오후를 통째로 삼켜버리지 않도록요.',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: '시작이 안 되는 할 일이 뭔가요?',
+      inputPlaceholder: '예: 경비 정산서 제출하기',
+      submit: '쪼개기',
+      submitting: '쪼개는 중…',
+      privacyNote: '비공개예요. 서버에 아무것도 저장되지 않아요.',
+      charactersLeft: (count: number) => `${count}자 남음`,
+      presetsIntro: '아니면 이런 것도 해보세요:',
+      presets: {
+        cleanKitchen: '주방 청소하기',
+        doLaundry: '빨래하기',
+        replyInbox: '메일함 답장하기',
+        planWeekendTrip: '주말 여행 계획하기',
+        fileTaxes: '세금 신고하기',
+        cleanBathroom: '욕실 청소하기',
+      },
+      loading: '단계로 쪼개는 중…',
+      errorRateLimit: '너무 빨라요. 잠깐 기다렸다가 다시 시도해 주세요.',
+      errorGeneric: '지금은 쪼갤 수 없어요. 몇 초 뒤에 다시 시도해 주세요.',
+      tryAgain: '다시 시도',
+      taskLabel: '할 일',
+      urgencyLabels: { low: '긴급도 낮음', medium: '긴급도 보통', high: '긴급도 높음' },
+      stepsDone: (done: number, total: number) => `${done}/${total}단계 완료`,
+      minTotal: (min: number) => `총 약 ${min}분`,
+      allDoneMessage: '다 끝났어요. 생각보다 어렵지 않았죠?',
+      emptyState:
+        '그건 명확한 단계로 나누기 어려웠어요. “프로젝트 계획서 쓰기”나 “창고 정리하기”처럼 행동으로 바꿔서 다시 적어보세요.',
+    },
+    brainDump: {
+      label: '머릿속에 있는 걸 다 쏟아내세요. 정리하지 않아도 돼요.',
+      placeholder:
+        '치과 예약을 자꾸 까먹고 주방은 엉망이에요.\n회사 프로젝트 때문에 압도당하는 기분이에요. 오늘 저녁 장도 봐야 하고\n지난주에 온 지민이 메일에도 답장해야 해요.',
+      privacy: '비공개예요. 서버에 아무것도 저장되지 않아요.',
+      charactersLeft: (remaining: number) => `${remaining}자 남았어요.`,
+      clear: '지우기',
+      submit: '할 일 뽑아내기',
+      submitting: '뽑아내는 중…',
+      loading: '적으신 내용을 읽고 실행할 수 있는 것만 뽑아내는 중…',
+      errorRateLimited: '너무 빨라요. 잠깐 기다렸다가 다시 시도해 주세요.',
+      errorGeneric: '지금은 할 일을 뽑아낼 수 없어요. 몇 초 뒤에 다시 시도해 주세요.',
+      tryAgain: '다시 시도',
+      empty:
+        '구체적인 할 일처럼 보이는 게 없었어요. 좋은 신호일 수도 있어요. 그냥 마음을 털어놓은 거라면 그것도 충분해요. 할 일을 적으려던 거였다면 조금 더 구체적으로 써보세요(“지민이 관련 일” 대신 “지민이에게 메일 보내기”처럼요).',
+      resultsTitle: '실행할 수 있는 할 일',
+      doneCount: (done: number, total: number) => `${done}/${total} 완료`,
+      footer: '하나만 고르세요. 딱 하나요. 지금 하고 나서 다음 걸 하러 오세요.',
+    },
+    pickOne: {
+      inputLabel: '목록을 붙여넣으세요. 한 줄에 하나씩, 아니면 쉼표로 대충 써도 돼요.',
+      inputPlaceholder:
+        '엄마한테 답장하기\n치과 예약하기\n경비 정산하기\n발표 자료 마무리하기\n화분에 물 주기',
+      itemsDetected: (count: number) => `${count}개 인식됨`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count}개 인식됨, ${left}개 남음`,
+      clearEverything: '전부 지우기',
+      modeLegend: '어떻게 골라줄까요?',
+      modes: {
+        smallest: {
+          label: '가장 작은 것',
+          reason: '목록에서 가장 짧은 것. 작게 시작해서 흐름을 만들어요.',
+        },
+        scariest: {
+          label: '가장 겁나는 것',
+          reason: '쳐다보기도 싫은 그것. 먼저 해치우면 하루가 편해져요.',
+        },
+        random: {
+          label: '그냥 하나',
+          reason: '고민은 그만. 목록이 알아서 골랐어요. 그냥 시작하세요.',
+        },
+      },
+      pickCta: '하나 골라줘',
+      pickAnotherCta: '다른 것 고르기',
+      emptyHint: '항목을 하나 이상 추가한 뒤 눌러보세요.',
+      readyHint: '준비됐어요. 결정이 안 될 때 “하나 골라줘”를 누르세요.',
+      allDoneTitle: '목록 정리 끝.',
+      allDoneBody:
+        '모든 항목이 완료됐거나 건너뛰어졌어요. 목록을 지우거나, 초기화해서 건너뛴 항목을 다시 불러올 수 있어요.',
+      bringSkippedBack: '건너뛴 것 되돌리기',
+      startFreshList: '새 목록 시작하기',
+      pickedEyebrow: '이것부터 시작하세요',
+      didIt: '했어요',
+      notThisOne: '이건 말고',
+      pickAgain: '다시 고르기',
+      progress: (done: number, skipped: number, left: number) =>
+        `완료 ${done}, 건너뜀 ${skipped}, 남음 ${left}`,
+    },
+    eisenhower: {
+      inputLabel: '할 일 추가',
+      inputPlaceholder: '할 일을 입력하고 엔터 (줄바꿈으로 여러 개 붙여넣어도 돼요)',
+      addButton: '추가',
+      totals: (total: number, unsorted: number) => `총 ${total}개, 미분류 ${unsorted}개`,
+      clearAll: '전부 지우기',
+      unsortedHeading: (count: number) => `미분류 (${count})`,
+      unsortedListLabel: '미분류 할 일',
+      removeTask: (text: string) => `${text} 삭제`,
+      placeHint: '이제 칸을 눌러서 넣어보세요.',
+      placeHintDesktop: '데스크톱에서는 끌어다 놓아도 돼요.',
+      quadrantRegionLabel: (label: string) => `${label} 칸`,
+      quadrantCountLabel: (count: number, label: string) => `${label}에 할 일 ${count}개`,
+      dropHere: '여기에 놓기',
+      sendBackToUnsorted: '미분류로 되돌리기',
+      moveBackToUnsorted: (text: string) => `${text} 미분류로 되돌리기`,
+      empty: '비어 있음',
+      emptyState:
+        '위에 할 일을 추가해서 시작하세요. 모든 내용은 브라우저에 저장되고, 서버에는 아무것도 저장되지 않아요.',
+      hintLabel: 'Doubly 팁:',
+      hintBody:
+        '“지루하지만 중요한” 칸은 대부분이 건너뛰고, 건너뛴 걸 가장 후회하는 칸이에요. 오늘 딱 하나만 한다면 거기서 고르세요.',
+      quadrants: {
+        fire: {
+          label: '발등에 불',
+          sub: '내일 말고 오늘 하세요.',
+          textbook: '중요 + 긴급',
+        },
+        boring: {
+          label: '지루하지만 중요한',
+          sub: '진짜 성과가 나오는 곳. 일정을 잡고, 건너뛰지 마세요.',
+          textbook: '중요 + 긴급하지 않음',
+        },
+        noisy: {
+          label: '시끄럽지만 넘겨도 되는',
+          sub: '요란하지만 당신 문제는 아니에요. 넘기거나, 미루거나, 무시하세요.',
+          textbook: '긴급 + 중요하지 않음',
+        },
+        drop: {
+          label: '버려도 되는',
+          sub: '그래도 괜찮아요. 목록을 다 끝낼 필요는 없어요.',
+          textbook: '중요하지 않음 + 긴급하지 않음',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: '포모도로 타이머',
+      modeTablistLabel: '타이머 모드',
+      modes: {
+        work: '집중',
+        'short-break': '짧은 휴식',
+        'long-break': '긴 휴식',
+      },
+      dialLabel: (mode: string, time: string) => `${mode} 타이머. ${time} 남음.`,
+      sessionsToday: (count: number) => `오늘 완료한 세션: ${count}개`,
+      soundToggle: '세션 끝날 때 소리',
+      customizeDurations: '시간 직접 설정',
+      hideSettings: '설정 숨기기',
+      focusMinutes: '집중 (분)',
+      shortBreakMinutes: '짧은 휴식 (분)',
+      longBreakMinutes: '긴 휴식 (분)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: '시각 카운트다운 타이머',
+      dialAriaLabel: (remaining: string) => `시각 타이머 다이얼. ${remaining} 남음.`,
+      seconds: (s: number) => `${s}초`,
+      minutes: (m: number) => `${m}분`,
+      minutesAndSeconds: (m: number, s: number) => `${m}분 ${s}초`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `${minutes}분부터 카운트다운 중`,
+      setFor: (minutes: number) => `${minutes}분으로 설정됨`,
+      paused: '일시정지',
+      timeIsUp: '시간 끝',
+      presetsLabel: '시간 프리셋',
+      presetMinutes: (minutes: number) => `${minutes}분`,
+      custom: '직접 입력',
+      minutesLabel: '분',
+      set: '설정',
+      soundWhenDone: '시간이 다 되면 소리',
+    },
+    brownNoise: {
+      play: (sound: string) => `${sound} 재생`,
+      pause: (sound: string) => `${sound} 일시정지`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: '배경 소음 고르기',
+      soundGroupLabel: '배경 소음',
+      volume: '음량',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: '취침 타이머',
+      sleepOff: '끔',
+      sleepMinutes: (minutes: number) => `${minutes}분`,
+      privacyNote: '브라우저에서 바로 재생돼요. 녹음도, 업로드도 없어요.',
+      sounds: {
+        brown: {
+          name: '브라운',
+          description: '깊고 묵직해요. 멀리서 들리는 폭포처럼. 틱톡에서 유명한 그 소리요.',
+        },
+        pink: {
+          name: '핑크',
+          description: '화이트보다 부드럽고 브라운보다 가벼워요. 균형 잡힌 소리예요.',
+        },
+        white: {
+          name: '화이트',
+          description: '옛날 TV의 지직거리는 소리. 밝고 고르게 퍼져요.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: '하이퍼포커스 중단 타이머',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes}분`,
+      hoursShort: (hours: number) => `${hours}시간`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours}시간 ${minutes}분`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return '1분 미만';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours}시간`);
+        if (minutes > 0) parts.push(`${minutes}분`);
+        return parts.join(' ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `${interval}마다 체크인, 강제 종료 없음`,
+      stripWithCap: (interval: string, cap: string) =>
+        `${interval}마다 체크인, ${cap} 뒤 강제 종료`,
+      summaryNoCap: (interval: string) => `**${interval}**마다 체크인하고, 강제 종료는 없어요.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `**${interval}**마다 체크인하고, **${cap}** 뒤에 강제로 멈춰요.`,
+
+      // Setup
+      intervalHeading: '체크인 간격',
+      custom: '직접 입력',
+      minutes: '분',
+      set: '설정',
+      jitterNote: '체크인 시간은 10% 정도 무작위로 흔들려요. 뇌가 미리 무시해버리지 못하도록요.',
+      moreOptions: '옵션 더 보기',
+      hideOptions: '옵션 숨기기',
+      taskLabel: '무슨 일을 하고 있나요? (선택)',
+      taskPlaceholder: '예: 세금 신고서, 디자인 리뷰, 대본',
+      taskHint: '음성 체크인에서 읽어줘요. 원래 하려던 일이 뭐였는지 다시 떠올릴 수 있게요.',
+      hardStopHeading: '강제 종료 시점',
+      hardStopHint:
+        '설정한 시간에 도달하면 더 큰 알림이 울려요. 여섯 시간짜리 몰입이 몰래 지나가버리지 않도록요.',
+      capOff: '끔',
+      capHours: (hours: number) => `${hours}시간`,
+      noHardStop: '강제 종료 없음',
+      alertsHeading: '알림 방식',
+      chime: '차임',
+      voice: '음성',
+      notify: '알림',
+      alertsHint:
+        '차임은 체크인을 무시하면 점점 커져요. 음성은 현재 시각과 경과 시간을 읽어줘요. 알림은 탭이 백그라운드에 있을 때 브라우저 알림을 띄워요.',
+      notificationsBlocked:
+        '이 브라우저에서 알림이 차단돼 있어요. 사이트 설정에서 알림을 허용해 주세요.',
+      notificationsUnsupported: '이 브라우저는 웹 알림을 지원하지 않아요.',
+      startSession: '세션 시작',
+
+      // Live session
+      statElapsed: '경과',
+      statNextCheckIn: '다음 체크인',
+      statCap: '한도',
+      statusNow: '지금',
+      statusPaused: '일시정지',
+      statusCapHit: '한도 도달',
+      statusOff: '끔',
+      workingOn: (task: string) => `**${task}** 작업 중`,
+      checkInHeading: '잠깐 체크인',
+      checkInBody: (clock: string, elapsed: string) =>
+        `지금 ${clock}이고, ${elapsed} 동안 이걸 하고 있어요. 아직 처음 시작한 그 일을 하고 있나요, 아니면 이제 나올 시간인가요?`,
+      stillGoing: '계속할래요',
+      takeABreak: '쉴래요',
+      stopSession: '세션 끝내기',
+      capHeading: '세션 한도에 도달했어요',
+      capBody: (minutes: number) =>
+        `${minutes}분으로 강제 종료를 설정해 두셨어요. 일어나서 물 마시고 뭐라도 드세요. 일은 도망가지 않아요.`,
+      pause: '일시정지',
+      resume: '다시 시작',
+      endSession: '세션 종료',
+      checkInLog: '체크인 기록',
+      logContinue: '계속함',
+      logBreak: '쉬었음',
+      logStop: '중단함',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ 체크인 | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `체크인이에요. 지금 ${clock}이에요. ${task} 작업을 ${elapsed} 동안 하고 있어요.`
+          : `체크인이에요. 지금 ${clock}이에요. ${elapsed} 동안 집중하고 있어요.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `세션 한도에 도달했어요. 지금 ${clock}이에요. ${elapsed} 동안 계속하고 있어요. 이제 멈출 시간이에요.`,
+      notificationCheckInTitle: '하이퍼포커스 체크인',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `지금 ${clock}이에요. ${elapsed} 동안 계속하고 있어요.`,
+      notificationCapTitle: '하이퍼포커스 한도 도달',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `지금 ${clock}이에요. ${elapsed} 동안 계속하고 있어요. 이제 멈출 시간이에요.`,
+    },
+    shared: {
+      start: '시작',
+      pause: '일시정지',
+      resume: '다시 시작',
+      done: '완료',
+      reset: '초기화',
+      skip: '건너뛰기',
+      skipAria: '다음 세션으로 건너뛰기',
+      startSession: '집중 세션 시작하기',
+      creatingRoom: '방 만드는 중...',
+    },
+    chrome: {
+      tryInApp: '앱에서 해보기',
+      appStoreAria: (label: string) => `App Store에서 ${label} 보기`,
+      breadcrumbAria: '탐색 경로',
+    },
+  },
+
 };
 
 export default ko;

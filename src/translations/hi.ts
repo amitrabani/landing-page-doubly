@@ -478,6 +478,366 @@ const hi = {
     ogDescription:
       'अफ़रा-तफ़री को ब्रेन डंप करें, एक साफ़ अगला कदम पाएँ, और सचमुच पूरा करने के लिए जवाबदेही का इस्तेमाल करें।',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'काम बाँटने वाला टूल',
+      description:
+        'कोई ऐसा काम टाइप करें जो शुरू ही नहीं हो पा रहा। AI उसे छोटे, करने लायक कदमों में बाँट देता है, हर कदम के लिए अंदाज़न समय के साथ। ADHD दिमाग़ों के लिए बना।',
+    },
+    'brain-dump': {
+      title: 'ब्रेन डंप टूल',
+      description:
+        'जो भी दिमाग़ में है सब बाहर निकालें, AI उसमें से सिर्फ़ करने लायक काम छाँट लेता है। न साइन-अप, कुछ भी सहेजा नहीं जाता।',
+    },
+    'pick-one': {
+      title: 'एक काम चुनने वाला टूल',
+      description:
+        'अपनी उलझी हुई टू-डू लिस्ट पेस्ट करें, शुरू करने के लिए एक ही काम पाएँ। सबसे छोटा, सबसे डरावना, या बेतरतीब कोई एक। उस पल के लिए बना जब दस काम मिलकर एक ऐसा पहाड़ लगने लगते हैं जिसे छूने का मन ही नहीं करता।',
+    },
+    'eisenhower-matrix': {
+      title: 'आइज़नहावर मैट्रिक्स (ADHD एडिशन)',
+      description:
+        'किताबी लेबल के बजाय "उबाऊ लेकिन ज़रूरी" जैसे ख़ानों में काम खींचकर डालें। वह मैट्रिक्स जो आख़िरकार ADHD दिमाग़ के हिसाब से चलता है। सब कुछ आपके ब्राउज़र में ही सेव रहता है।',
+    },
+    'pomodoro': {
+      title: 'ADHD पोमोडोरो टाइमर',
+      description:
+        '25 मिनट काम, 5 मिनट ब्रेक - फ़ोकस का वह तरीक़ा जो आख़िरकार ADHD दिमाग़ के हिसाब से चलता है। मुफ़्त, न साइन-अप, ऑफ़लाइन भी चलता है।',
+    },
+    'visual-timer': {
+      title: 'विज़ुअल टाइमर / टाइम ब्लाइंडनेस घड़ी',
+      description:
+        'एक सिकुड़ता हुआ गोल टुकड़ा, ताकि समय अंकों में पढ़ने के बजाय आपको बीतता हुआ दिखे। ADHD वाले वयस्कों के लिए टाइम ब्लाइंडनेस घड़ी का काम भी करता है।',
+    },
+    'brown-noise': {
+      title: 'एंबियंट साउंड जेनरेटर',
+      description:
+        'मुफ़्त, ब्राउज़र में चलने वाला एंबियंट साउंड जेनरेटर। ब्राउन नॉइज़ के साथ पिंक और व्हाइट भी। बेचैन ADHD दिमाग़ को शांत करने वाली एकसार बैकग्राउंड आवाज़। स्लीप टाइमर शामिल, ऑफ़लाइन भी चलता है।',
+    },
+    'body-doubling-room': {
+      title: 'बॉडी डबलिंग रूम',
+      description:
+        'दो लोगों का मुफ़्त फ़ोकस रूम। एक लिंक शेयर करें, पीयर-टू-पीयर वीडियो पर साथ बैठकर काम करें, एक साझा टाइमर चलाएँ। न साइन-अप, न इंस्टॉल।',
+    },
+    'hyperfocus-timer': {
+      title: 'हाइपरफ़ोकस इंटरप्ट टाइमर',
+      description:
+        'हर X मिनट पर बोलकर टोकने वाले चेक-इन, और चाहें तो एक पक्का स्टॉप, ताकि हाइपरफ़ोकस का एक सेशन आपकी पूरी दोपहर न खा जाए।',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'वह कौन-सा काम है जो आप शुरू नहीं कर पा रहे?',
+      inputPlaceholder: 'जैसे: ख़र्च की रिपोर्ट जमा करना',
+      submit: 'इसे बाँटें',
+      submitting: 'बाँटा जा रहा है…',
+      privacyNote: 'निजी। हमारे सर्वर पर कुछ भी सेव नहीं होता।',
+      charactersLeft: (count: number) => `${count} अक्षर बचे`,
+      presetsIntro: 'या इनमें से कोई आज़माएँ:',
+      presets: {
+        cleanKitchen: 'रसोई साफ़ करें',
+        doLaundry: 'कपड़े धोएँ',
+        replyInbox: 'इनबॉक्स के जवाब दें',
+        planWeekendTrip: 'वीकेंड ट्रिप प्लान करें',
+        fileTaxes: 'टैक्स भरें',
+        cleanBathroom: 'बाथरूम साफ़ करें',
+      },
+      loading: 'इसे कदमों में बाँटा जा रहा है…',
+      errorRateLimit: 'आप बहुत तेज़ चल रहे हैं। एक पल रुकें और फिर कोशिश करें।',
+      errorGeneric: 'अभी इसे बाँट नहीं सके। कुछ सेकंड बाद फिर कोशिश करें।',
+      tryAgain: 'फिर से कोशिश करें',
+      taskLabel: 'काम',
+      urgencyLabels: { low: 'कम अर्जेंसी', medium: 'मध्यम अर्जेंसी', high: 'ज़्यादा अर्जेंसी' },
+      stepsDone: (done: number, total: number) => `${done}/${total} कदम पूरे`,
+      minTotal: (min: number) => `कुल ~${min} मिनट`,
+      allDoneMessage: 'सब हो गया। इतना मुश्किल भी नहीं था, है ना?',
+      emptyState:
+        'इसके लिए साफ़ कदम नहीं मिल पाए। इसे किसी काम की तरह लिखकर देखें, जैसे “प्रोजेक्ट प्लान लिखें” या “गैराज साफ़ करें”।',
+    },
+    brainDump: {
+      label: 'दिमाग़ में जो कुछ है सब बाहर निकाल दें। व्यवस्थित होने की ज़रूरत नहीं।',
+      placeholder:
+        'मैं डेंटिस्ट को कॉल करना भूलता रहता हूँ और रसोई बिखरी पड़ी है।\nऑफ़िस के प्रोजेक्ट को लेकर घबराहट हो रही है। आज रात के खाने के लिए\nकिराना लाना है और सारा के पिछले हफ़्ते वाले ईमेल का जवाब देना है।',
+      privacy: 'निजी। हमारे सर्वर पर कुछ भी सेव नहीं होता।',
+      charactersLeft: (remaining: number) => `${remaining} अक्षर बचे।`,
+      clear: 'साफ़ करें',
+      submit: 'काम निकालें',
+      submitting: 'काम निकाले जा रहे हैं…',
+      loading: 'आपका डंप पढ़कर करने लायक चीज़ें निकाली जा रही हैं…',
+      errorRateLimited: 'आप बहुत तेज़ चल रहे हैं। एक पल रुकें और फिर कोशिश करें।',
+      errorGeneric: 'अभी काम नहीं निकाल सके। कुछ सेकंड बाद फिर कोशिश करें।',
+      tryAgain: 'फिर से कोशिश करें',
+      empty:
+        'इसमें हमें कोई ठोस काम जैसा कुछ नहीं मिला। यह अच्छी बात भी हो सकती है। अगर आप बस मन हल्का कर रहे थे, तो वह भी मायने रखता है। अगर आप करने की चीज़ें लिखना चाहते थे, तो थोड़ा और साफ़ लिखें (“सारा वाला काम” की जगह “सारा को ईमेल करें”)।',
+      resultsTitle: 'करने लायक काम',
+      doneCount: (done: number, total: number) => `${done}/${total} पूरे`,
+      footer: 'एक चुनें। बस एक। उसे अभी करें, फिर अगले के लिए लौटें।',
+    },
+    pickOne: {
+      inputLabel: 'अपनी लिस्ट पेस्ट करें। हर लाइन में एक, या कॉमा से बिखरी हुई। जैसी भी हो।',
+      inputPlaceholder:
+        'माँ को जवाब देना\nडेंटिस्ट की अपॉइंटमेंट लेना\nख़र्च की रिपोर्ट जमा करना\nस्लाइड डेक ख़त्म करना\nपौधों को पानी देना',
+      itemsDetected: (count: number) => `${count} आइटम मिल${count === 1 ? 'ा' : 'े'}`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} आइटम मिल${count === 1 ? 'ा' : 'े'}, ${left} बाकी`,
+      clearEverything: 'सब कुछ साफ़ करें',
+      modeLegend: 'हम कैसे चुनें?',
+      modes: {
+        smallest: {
+          label: 'सबसे छोटा',
+          reason: 'लिस्ट का सबसे छोटा काम। नन्हा शुरू करें, रफ़्तार बनाएँ।',
+        },
+        scariest: {
+          label: 'सबसे डरावना',
+          reason: 'वह जिसकी तरफ़ देखने का भी मन नहीं। इसे पहले कर लें, पूरा दिन हल्का हो जाएगा।',
+        },
+        random: {
+          label: 'बस कोई एक चुनें',
+          reason: 'कोई सोच-विचार नहीं। लिस्ट ने ख़ुद चुन लिया। बस शुरू करें।',
+        },
+      },
+      pickCta: 'मेरे लिए एक चुनें',
+      pickAnotherCta: 'दूसरा चुनें',
+      emptyHint: 'कम से कम एक आइटम जोड़ें, फिर चुनें पर टैप करें।',
+      readyHint: 'तैयार। जब भी तय न कर पाएँ, “मेरे लिए एक चुनें” पर टैप करें।',
+      allDoneTitle: 'लिस्ट निपट गई।',
+      allDoneBody:
+        'हर आइटम या तो पूरा हो गया है या छोड़ दिया गया। आप लिस्ट साफ़ कर सकते हैं, या रीसेट करके छोड़े गए आइटम वापस ला सकते हैं।',
+      bringSkippedBack: 'छोड़े गए वापस लाएँ',
+      startFreshList: 'नई लिस्ट शुरू करें',
+      pickedEyebrow: 'इसी से शुरू करें',
+      didIt: 'कर लिया',
+      notThisOne: 'यह नहीं',
+      pickAgain: 'फिर से चुनें',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} पूरे, ${skipped} छोड़े, ${left} बाकी`,
+    },
+    eisenhower: {
+      inputLabel: 'काम जोड़ें',
+      inputPlaceholder: 'काम लिखें और एंटर दबाएँ (या कई काम अलग-अलग लाइनों में पेस्ट करें)',
+      addButton: 'जोड़ें',
+      totals: (total: number, unsorted: number) => `कुल ${total} काम, ${unsorted} बिना छँटे`,
+      clearAll: 'सब कुछ साफ़ करें',
+      unsortedHeading: (count: number) => `बिना छँटे (${count})`,
+      unsortedListLabel: 'बिना छँटे काम',
+      removeTask: (text: string) => `${text} हटाएँ`,
+      placeHint: 'अब इसे रखने के लिए किसी ख़ाने पर टैप करें।',
+      placeHintDesktop: 'या डेस्कटॉप पर खींचकर छोड़ें।',
+      quadrantRegionLabel: (label: string) => `${label} ख़ाना`,
+      quadrantCountLabel: (count: number, label: string) => `${label} में ${count} काम`,
+      dropHere: 'यहाँ छोड़ें',
+      sendBackToUnsorted: 'बिना छँटे में वापस भेजें',
+      moveBackToUnsorted: (text: string) => `${text} को बिना छँटे में वापस भेजें`,
+      empty: 'ख़ाली',
+      emptyState:
+        'शुरू करने के लिए ऊपर कोई काम जोड़ें। सब कुछ आपके ब्राउज़र में सेव होता है, हमारे सर्वर पर कुछ नहीं।',
+      hintLabel: 'Doubly की सलाह:',
+      hintBody:
+        'उबाऊ-लेकिन-ज़रूरी वाला ढेर वही है जिसे ज़्यादातर लोग टाल देते हैं और सबसे ज़्यादा पछताते हैं। अगर आज सिर्फ़ एक चीज़ करनी है, तो वहीं से चुनें।',
+      quadrants: {
+        fire: {
+          label: 'आग लगी है',
+          sub: 'आज करें, कल नहीं।',
+          textbook: 'ज़रूरी + तात्कालिक',
+        },
+        boring: {
+          label: 'उबाऊ लेकिन ज़रूरी',
+          sub: 'असली जीत यहीं है। समय तय करें, टालें नहीं।',
+          textbook: 'ज़रूरी + तात्कालिक नहीं',
+        },
+        noisy: {
+          label: 'शोर, पर छोड़ने लायक',
+          sub: 'शोर बहुत है, पर आपकी समस्या नहीं। किसी और को दें, टालें, या रहने दें।',
+          textbook: 'तात्कालिक + ज़रूरी नहीं',
+        },
+        drop: {
+          label: 'इन्हें छोड़ दें',
+          sub: 'यह चलता है। पूरी लिस्ट पूरी करना ज़रूरी नहीं।',
+          textbook: 'ज़रूरी नहीं + तात्कालिक नहीं',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'पोमोडोरो टाइमर',
+      modeTablistLabel: 'टाइमर मोड',
+      modes: {
+        work: 'फ़ोकस',
+        'short-break': 'छोटा ब्रेक',
+        'long-break': 'लंबा ब्रेक',
+      },
+      dialLabel: (mode: string, time: string) => `${mode} टाइमर। ${time} बाकी।`,
+      sessionsToday: (count: number) => `आज पूरे हुए सेशन: ${count}`,
+      soundToggle: 'सेशन ख़त्म होने पर आवाज़',
+      customizeDurations: 'अवधि अपने हिसाब से सेट करें',
+      hideSettings: 'सेटिंग्स छिपाएँ',
+      focusMinutes: 'फ़ोकस (मिनट)',
+      shortBreakMinutes: 'छोटा ब्रेक (मिनट)',
+      longBreakMinutes: 'लंबा ब्रेक (मिनट)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'विज़ुअल काउंटडाउन टाइमर',
+      dialAriaLabel: (remaining: string) => `विज़ुअल टाइमर डायल। ${remaining} बाकी।`,
+      seconds: (s: number) => `${s} सेकंड`,
+      minutes: (m: number) => `${m} मिनट`,
+      minutesAndSeconds: (m: number, s: number) => `${m} मिनट ${s} सेकंड`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `${minutes} मिनट से गिनती चल रही है`,
+      setFor: (minutes: number) => `${minutes} मिनट के लिए सेट`,
+      paused: 'रुका हुआ',
+      timeIsUp: 'समय पूरा हुआ',
+      presetsLabel: 'तय अवधियाँ',
+      presetMinutes: (minutes: number) => `${minutes} मिनट`,
+      custom: 'अपनी मर्ज़ी से',
+      minutesLabel: 'मिनट',
+      set: 'सेट करें',
+      soundWhenDone: 'समय पूरा होने पर आवाज़',
+    },
+    brownNoise: {
+      play: (sound: string) => `${sound} चलाएँ`,
+      pause: (sound: string) => `${sound} रोकें`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'कोई एंबियंट साउंड चुनें',
+      soundGroupLabel: 'एंबियंट साउंड',
+      volume: 'वॉल्यूम',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'स्लीप टाइमर',
+      sleepOff: 'बंद',
+      sleepMinutes: (minutes: number) => `${minutes} मिनट`,
+      privacyNote: 'आपके ब्राउज़र में ही चलता है। कुछ रिकॉर्ड नहीं होता, कुछ अपलोड नहीं होता।',
+      sounds: {
+        brown: {
+          name: 'ब्राउन',
+          description: 'गहरी, गड़गड़ाती हुई। दूर के झरने जैसी। वही जो TikTok पर छाई है।',
+        },
+        pink: {
+          name: 'पिंक',
+          description: 'व्हाइट से नरम, ब्राउन से कम भारी। संतुलित।',
+        },
+        white: {
+          name: 'व्हाइट',
+          description: 'पुराने TV की सरसराहट। तीखी और एकसार।',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'हाइपरफ़ोकस इंटरप्ट टाइमर',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes} मिनट`,
+      hoursShort: (hours: number) => `${hours} ${hours === 1 ? 'घंटा' : 'घंटे'}`,
+      hoursMinutesShort: (hours: number, minutes: number) =>
+        `${hours} ${hours === 1 ? 'घंटा' : 'घंटे'} ${minutes} मिनट`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'एक मिनट से भी कम';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} ${hours === 1 ? 'घंटा' : 'घंटे'}`);
+        if (minutes > 0) parts.push(`${minutes} मिनट`);
+        return parts.join(' ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `हर ${interval} में चेक-इन, कोई पक्का स्टॉप नहीं`,
+      stripWithCap: (interval: string, cap: string) =>
+        `हर ${interval} में चेक-इन, ${cap} पर पक्का स्टॉप`,
+      summaryNoCap: (interval: string) => `हर **${interval}** में चेक-इन, कोई पक्का स्टॉप नहीं।`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `हर **${interval}** में चेक-इन, **${cap}** पर पक्का स्टॉप।`,
+
+      // Setup
+      intervalHeading: 'चेक-इन का अंतराल',
+      custom: 'अपनी मर्ज़ी से',
+      minutes: 'मिनट',
+      set: 'सेट करें',
+      jitterNote:
+        'चेक-इन के समय में करीब दस प्रतिशत का उलट-फेर रहता है, ताकि दिमाग़ उन्हें पहले से अनदेखा करना न सीख ले।',
+      moreOptions: 'और विकल्प',
+      hideOptions: 'विकल्प छिपाएँ',
+      taskLabel: 'आप किस पर काम कर रहे हैं? (वैकल्पिक)',
+      taskPlaceholder: 'जैसे: टैक्स के फ़ॉर्म, डिज़ाइन रिव्यू, स्क्रिप्ट',
+      taskHint: 'बोलकर होने वाले चेक-इन में इस्तेमाल होता है, ताकि आपको सुनाई दे कि आप बैठे किस काम के लिए थे।',
+      hardStopHeading: 'पक्का स्टॉप इतनी देर बाद',
+      hardStopHint:
+        'सीमा पूरी होते ही एक तेज़ अलर्ट बजता है, ताकि छह घंटे का चक्कर चुपचाप न निकल जाए।',
+      capOff: 'बंद',
+      capHours: (hours: number) => `${hours}घं`,
+      noHardStop: 'कोई पक्का स्टॉप नहीं',
+      alertsHeading: 'अलर्ट',
+      chime: 'घंटी',
+      voice: 'आवाज़',
+      notify: 'नोटिफ़िकेशन',
+      alertsHint:
+        'चेक-इन अनदेखा करने पर घंटी और तेज़ हो जाती है। आवाज़ आपको समय और अब तक बीता वक़्त बोलकर बताती है। टैब बैकग्राउंड में हो तो नोटिफ़िकेशन ब्राउज़र में दिखता है।',
+      notificationsBlocked:
+        'इस ब्राउज़र में नोटिफ़िकेशन ब्लॉक हैं। इसे इस्तेमाल करने के लिए साइट सेटिंग्स में इन्हें चालू करें।',
+      notificationsUnsupported: 'आपका ब्राउज़र वेब नोटिफ़िकेशन सपोर्ट नहीं करता।',
+      startSession: 'सेशन शुरू करें',
+
+      // Live session
+      statElapsed: 'बीता समय',
+      statNextCheckIn: 'अगला चेक-इन',
+      statCap: 'सीमा',
+      statusNow: 'अभी',
+      statusPaused: 'रुका हुआ',
+      statusCapHit: 'सीमा पूरी',
+      statusOff: 'बंद',
+      workingOn: (task: string) => `**${task}** पर काम चल रहा है`,
+      checkInHeading: 'छोटा चेक-इन',
+      checkInBody: (clock: string, elapsed: string) =>
+        `अभी ${clock} बजे हैं और आप ${elapsed} से इसी पर लगे हैं। क्या आप अब भी उसी काम पर हैं जो शुरू किया था, या बाहर निकलने का वक़्त हो गया?`,
+      stillGoing: 'अभी जारी है',
+      takeABreak: 'ब्रेक लें',
+      stopSession: 'सेशन रोकें',
+      capHeading: 'सेशन की सीमा पूरी',
+      capBody: (minutes: number) =>
+        `आपने ${minutes} मिनट पर पक्का स्टॉप लगाया था। उठें, पानी पिएँ, कुछ खा लें। काम यहीं रहेगा।`,
+      pause: 'रोकें',
+      resume: 'फिर से शुरू करें',
+      endSession: 'सेशन ख़त्म करें',
+      checkInLog: 'चेक-इन लॉग',
+      logContinue: 'जारी रखा',
+      logBreak: 'ब्रेक लिया',
+      logStop: 'रोक दिया',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ चेक-इन | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `चेक-इन। ${clock} बज रहे हैं। आप ${elapsed} से ${task} पर काम कर रहे हैं।`
+          : `चेक-इन। ${clock} बज रहे हैं। आप ${elapsed} से काम कर रहे हैं।`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `सेशन की सीमा पूरी हो गई। ${clock} बज रहे हैं। आप ${elapsed} से इसी पर लगे हैं। अब रुकने का वक़्त है।`,
+      notificationCheckInTitle: 'हाइपरफ़ोकस चेक-इन',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `${clock} बज रहे हैं। आप ${elapsed} से इसी पर लगे हैं।`,
+      notificationCapTitle: 'हाइपरफ़ोकस की सीमा पूरी',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `${clock} बज रहे हैं। आप ${elapsed} से इसी पर लगे हैं। अब रुकने का वक़्त है।`,
+    },
+    shared: {
+      start: 'शुरू करें',
+      pause: 'रोकें',
+      resume: 'फिर से शुरू करें',
+      done: 'हो गया',
+      reset: 'रीसेट करें',
+      skip: 'छोड़ें',
+      skipAria: 'अगले सेशन पर जाएँ',
+      startSession: 'फ़ोकस सेशन शुरू करें',
+      creatingRoom: 'रूम बनाया जा रहा है...',
+    },
+    chrome: {
+      tryInApp: 'ऐप में आज़माएँ',
+      appStoreAria: (label: string) => `App Store पर ${label}`,
+      breadcrumbAria: 'ब्रेडक्रम्ब',
+    },
+  },
 };
 
 export default hi;
