@@ -1,0 +1,86 @@
+{
+  "slug": "_index",
+  "meta": {
+    "title": "Kostenlose ADHS-Tools, die beim Anfangen helfen | Doubly",
+    "description": "Kostenlose ADHS-Tools ohne Anmeldung: Pomodoro-Timer, Brain Dump und mehr. Gemacht für den Moment, in dem du anfangen musst, nicht nur planen.",
+    "ogTitle": "Kostenlose ADHS-Tools, die beim Anfangen helfen",
+    "ogDescription": "Keine Anmeldung. Keine Pop-ups. Kostenlose Tools für ADHS-Gehirne, vom Team hinter der Doubly-App.",
+    "twitterTitle": "Kostenlose ADHS-Tools, die beim Anfangen helfen",
+    "twitterDescription": "Keine Anmeldung. Keine Pop-ups. Kostenlose Tools für ADHS-Gehirne."
+  },
+  "h1": "Kostenlose ADHS-Tools, die beim Anfangen helfen",
+  "breadcrumbLabel": "Tools",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Kostenlose Tools ohne Anmeldung, gemacht für ADHS-Gehirne. Für den Moment, in dem dir alles zu viel wird, nicht für den Moment, in dem du in Ruhe planen könntest. Läuft im Browser. Dein Fortschritt bleibt gespeichert. Aufhören kannst du jederzeit.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Verfügbare Tools",
+      "paragraphs": null
+    }
+  ],
+  "related": null,
+  "cards": [
+    {
+      "slug": "task-splitter",
+      "title": "Tool zum Aufteilen von Aufgaben",
+      "description": "Tipp eine Aufgabe ein, die du nicht anfangen kannst. Die KI zerlegt sie in kleine, machbare Schritte mit Zeitschätzung. Gemacht für ADHS-Gehirne."
+    },
+    {
+      "slug": "brain-dump",
+      "title": "Brain-Dump-Tool",
+      "description": "Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung, nichts wird gespeichert."
+    },
+    {
+      "slug": "pick-one",
+      "title": "Pick One: eine Aufgabe wählen",
+      "description": "Füg deine chaotische To-do-Liste ein und bekomm eine einzige Aufgabe zum Anfangen. Die kleinste, die unangenehmste oder eine zufällige. Für den Moment, in dem sich zehn Aufgaben wie ein einziger Klotz anfühlen, den du nicht anpacken kannst."
+    },
+    {
+      "slug": "eisenhower-matrix",
+      "title": "Eisenhower-Matrix (ADHS-Edition)",
+      "description": "Zieh Aufgaben in Quadranten wie „langweilig, aber wichtig“ statt in Lehrbuch-Kategorien. Die Matrix, die endlich zu einem ADHS-Gehirn passt. Wird lokal gespeichert."
+    },
+    {
+      "slug": "pomodoro",
+      "title": "ADHS-Pomodoro-Timer",
+      "description": "25 Minuten arbeiten, 5 Minuten Pause - die Fokusmethode, die endlich zu einem ADHS-Gehirn passt. Kostenlos, ohne Anmeldung, funktioniert offline."
+    },
+    {
+      "slug": "visual-timer",
+      "title": "Visueller Timer / Zeitblindheits-Uhr",
+      "description": "Ein schrumpfendes Tortenstück, damit du Zeit vergehen siehst, statt Ziffern zu lesen. Funktioniert auch als Zeitblindheits-Uhr für Erwachsene mit ADHS."
+    },
+    {
+      "slug": "brown-noise",
+      "title": "Generator für Hintergrundgeräusche",
+      "description": "Kostenloser Geräuschgenerator direkt im Browser. Brown Noise plus Pink und White Noise. Gleichmäßiger Klangteppich, der ein unruhiges ADHS-Gehirn beruhigt. Mit Sleep-Timer, funktioniert offline."
+    },
+    {
+      "slug": "body-doubling-room",
+      "title": "Body-Doubling-Raum",
+      "description": "Kostenloser Fokusraum für zwei. Link teilen, per Peer-to-Peer-Video nebeneinander arbeiten, gemeinsamen Timer laufen lassen. Ohne Anmeldung, ohne Installation."
+    },
+    {
+      "slug": "hyperfocus-timer",
+      "title": "Hyperfokus-Timer mit Check-ins",
+      "description": "Wiederkehrende gesprochene Check-ins alle X Minuten, dazu ein optionaler harter Stopp, damit eine ADHS-Hyperfokus-Session nicht deinen ganzen Nachmittag auffrisst."
+    }
+  ],
+  "openTool": "Tool öffnen",
+  "comingSoon": "Bald verfügbar",
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Die Web-Tools helfen dir, eine Aufgabe anzufangen. Die Doubly-iOS-App hilft dir dabei, dranzubleiben - Brain Dump, ein klarer nächster Schritt und Verbindlichkeits-Check-ins mit echten Menschen.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": "Kostenlose ADHS-Tools, die beim Anfangen helfen",
+    "collectionDescription": "Eine wachsende Sammlung kostenloser Tools ohne Anmeldung, gemacht für ADHS-Gehirne, vom Team hinter der Doubly-App."
+  }
+}

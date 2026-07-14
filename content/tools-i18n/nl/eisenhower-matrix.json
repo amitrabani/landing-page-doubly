@@ -2,7 +2,7 @@
   "slug": "eisenhower-matrix",
   "meta": {
     "title": "Eisenhower-matrix online (ADHD-editie) | Doubly",
-    "description": "Gratis Eisenhower-matrix online met ADHD-vriendelijke kwadranten zoals \"saai maar belangrijk\", geen schoolboeklabels. Sleep taken, sla lokaal op.",
+    "description": "Gratis Eisenhower-matrix online met ADHD-vriendelijke kwadranten zoals \"saai maar belangrijk\". Sleep taken, sla lokaal op, geen registratie.",
     "ogTitle": "Eisenhower-matrix online (ADHD-editie)",
     "ogDescription": "ADHD-vriendelijke Eisenhower-matrix met kwadranten zoals \"saai maar belangrijk\". Sleep, sla lokaal op, gratis.",
     "twitterTitle": "Eisenhower-matrix online (ADHD-editie)",
@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Eisenhower-matrix online",
-  "answerCapsule": "**Een Eisenhower-matrix sorteert taken op belang en urgentie in vier kwadranten, zodat je ziet wat je moet doen, wat je moet inplannen, wat je kunt negeren en wat je kunt schrappen.** Deze versie ruilt de schoolboeklabels in voor ADHD-vriendelijke, zoals \"saai maar belangrijk\". Sleep of tik om te sorteren. Wordt opgeslagen in je browser.",
+  "answerCapsule": "**Een Eisenhower-matrix sorteert taken op belang en urgentie in vier kwadranten, zodat je ziet wat je moet doen, wat je moet inplannen, wat je kunt negeren en wat je kunt schrappen.** Deze versie ruilt de schoolboeklabels in voor ADHD-vriendelijke, zoals “saai maar belangrijk”. Sleep of tik om te sorteren. Wordt opgeslagen in je browser.",
   "intro": "De klassieke matrix stelt bij elke taak twee vragen: is het belangrijk, en is het urgent. ADHD-breinen weten het antwoord vaak wel, maar verstijven bij het sorteren. Door de kwadranten te benoemen naar hoe ze voelen in plaats van naar hun categorie, gaat het sorteren opeens vanzelf.",
   "sections": [
     {
@@ -44,8 +44,8 @@
       "heading": "Waarom een ADHD-invalshoek de matrix verandert",
       "steps": null,
       "paragraphs": [
-        "De Eisenhower-matrix is uitstekend in het zichtbaar maken van de taken die mensen stilletjes vermijden, en dat is vaak het belangrijkste wat een prioriteringstool kan doen. De vier standaardlabels (\"Belangrijk + Niet urgent\" enzovoort) kloppen technisch, maar lezen als een quiz. Voor een ADHD-brein dat al worstelt met een belasting van de executieve functies is die quiz nóg een beslissing voordat de taak überhaupt begint.",
-        "De kwadranten hernoemen naar hun emotionele signatuur verandert de startdrempel. \"In brand\" is duidelijk. \"Saai maar belangrijk\" is degene die de meeste mensen overslaan en waarvan ze het meest spijt hebben dat ze hem oversloegen (belastingformulieren, follow-ups, die tandartsafspraak die ze steeds verzetten). \"Luidruchtig maar overslaanbaar\" benoemt de dingen die aandacht opeisen zonder die te verdienen. \"Deze schrappen\" geeft toestemming om te verwijderen, iets wat klassiek productiviteitsadvies zelden hardop zegt.",
+        "De Eisenhower-matrix is uitstekend in het zichtbaar maken van de taken die mensen stilletjes vermijden, en dat is vaak het belangrijkste wat een prioriteringstool kan doen. De vier standaardlabels (“Belangrijk + Niet urgent” enzovoort) kloppen technisch, maar lezen als een quiz. Voor een ADHD-brein dat al een flinke belasting van de executieve functies draagt, is die quiz nóg een beslissing voordat de taak überhaupt begint.",
+        "De kwadranten hernoemen naar hun emotionele signatuur verandert de startdrempel. “In brand” is duidelijk. “Saai maar belangrijk” is degene die de meeste mensen overslaan en waarvan ze het meest spijt hebben dat ze hem oversloegen (belastingformulieren, follow-ups, die tandartsafspraak die ze steeds verzetten). “Luidruchtig maar overslaanbaar” benoemt de dingen die aandacht opeisen zonder die te verdienen. “Deze schrappen” geeft toestemming om te schrappen, iets wat klassiek productiviteitsadvies zelden hardop zegt.",
         "De cognitieve belasting verlagen bij het prioriteren is precies het soort ondersteunende structuur dat organisaties als [CHADD](https://chadd.org/about-adhd/overview/) aanraden bij ADHD op volwassen leeftijd. De matrix is in de eerste plaats een denkhulp en pas daarna een tracking-app. Gebruik hem voor een wekelijkse reset, niet als permanente vervanging van je to-dolijst."
       ],
       "faqs": null
@@ -58,7 +58,7 @@
       "faqs": [
         {
           "q": "Wat is de Eisenhower-matrix?",
-          "a": "De Eisenhower-matrix is een prioriteringstool die taken sorteert op twee vragen: is het belangrijk, en is het urgent. Daar komen vier vakjes uit, van \"doe het nu\" tot \"laat het vallen\". De matrix wordt toegeschreven aan president Dwight Eisenhower en werd bekend door Stephen Covey in The 7 Habits of Highly Effective People."
+          "a": "De Eisenhower-matrix is een prioriteringstool die taken sorteert op twee vragen: is het belangrijk, en is het urgent. Daar komen vier vakjes uit, van \"doe het nu\" tot \"laat het vallen\". De matrix wordt toegeschreven aan president Dwight Eisenhower en werd populair gemaakt door Stephen Covey in The 7 Habits of Highly Effective People."
         },
         {
           "q": "Waarom gebruikt deze versie andere labels?",

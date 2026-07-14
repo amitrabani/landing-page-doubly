@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "ADHS-Fokus: Kostenloser Brown-Noise-Generator | Doubly",
+    "description": "Brown-Noise-Generator für ADHS-Fokus, kostenlos und direkt im Browser. Brown, Pink und White. Ohne Anmeldung, ohne Werbung, mit Sleep-Timer.",
+    "ogTitle": "Kostenloser Brown-Noise-Generator für ADHS-Fokus",
+    "ogDescription": "Ein kostenloser Brown-Noise-Player mit Sleep-Timer. Brown, Pink und White. Läuft offline in deinem Browser.",
+    "twitterTitle": "Kostenloser Brown-Noise-Generator",
+    "twitterDescription": "Brown, Pink und White. Kostenlos, ohne Anmeldung, läuft in deinem Browser."
+  },
+  "h1": "Kostenloser Brown-Noise-Generator",
+  "breadcrumbLabel": "Brown-Noise-Generator",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Brown Noise ist ein tiefes, niederfrequentes Rauschen, das Ablenkungen überdeckt und einem unruhigen ADHS-Gehirn etwas Gleichmäßiges gibt, an dem es zur Ruhe kommen kann.** Dieser kostenlose Generator für Hintergrundgeräusche spielt Brown, Pink und White direkt in deinem Browser. Ohne Anmeldung, ohne Werbung, ohne Audiodateien zum Herunterladen. Wähl ein Geräusch, stell die Lautstärke ein, setz bei Bedarf einen Sleep-Timer und mach weiter mit deiner Arbeit.",
+  "intro": "Der Generator oben läuft über die Web Audio API, das Geräusch entsteht also in Echtzeit auf deinem Gerät. Das heißt: kein Streaming, kein Puffern, und er läuft weiter, wenn dein WLAN ausfällt. Probier zuerst Brown. Wenn es sich zu schwer anfühlt, wechsel zu Pink. Die meisten Erwachsenen mit ADHS bleiben bei Brown.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du den Brown-Noise-Generator",
+      "steps": [
+        {
+          "name": "Wähl ein Geräusch",
+          "text": "Brown ist das tiefe Rauschen, nach dem die meisten suchen. Wenn Brown sich zu schwer anfühlt, probier Pink. White ist das hellste und am schwersten zu ignorieren."
+        },
+        {
+          "name": "Drück auf Play",
+          "text": "Beim ersten Tippen wird die Audio-Engine in deinem Browser aufgebaut. Auf langsameren Handys gib ihr eine halbe Sekunde. Danach wechselst du ohne Verzögerung zwischen den Geräuschen."
+        },
+        {
+          "name": "Finde deine Lautstärke",
+          "text": "Leise genug, dass du jemanden noch hören kannst, der in normaler Lautstärke mit dir spricht. Wenn du deine Stimme heben musst, um gehört zu werden, ist es zu laut."
+        },
+        {
+          "name": "Setz bei Bedarf einen Sleep-Timer",
+          "text": "Wähl 15, 30, 60 oder 90 Minuten. Am Ende wird das Geräusch sanft ausgeblendet, damit es dich nicht aufschreckt. Lass ihn aus, wenn es den ganzen Tag laufen soll."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum Brown Noise bei ADHS-Gehirnen funktioniert",
+      "paragraphs": [
+        "ADHS-Gehirne richten sich fast automatisch auf neue Geräusche aus. Eine zuschlagende Tür, ein vibrierendes Handy, zwei Leute, die hinter dir ein Gespräch anfangen. Jedes davon zieht einen Teil deiner Aufmerksamkeit von dem weg, was du gerade gemacht hast, und sie zurückzuholen kostet dich echte Zeit und echte Kraft.",
+        "Brown Noise sorgt nicht dafür, dass du dich konzentrierst. Es nimmt die Dinge weg, die dir ständig den Fokus rauben. Ein gleichmäßiges, vorhersehbares Geräusch überdeckt die unvorhersehbaren, sodass dein Gehirn nicht mehr alle paar Sekunden die Orientierungsreaktion abfeuert.",
+        "Dazu gibt es auch ein kleines, aber spannendes Forschungsergebnis. In einer Studie von 2007 fanden [Söderlund, Sikström und Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) heraus, dass moderates weißes Rauschen die kognitive Leistung von Kindern mit Aufmerksamkeitsschwierigkeiten verbesserte, während es die Leistung neurotypischer Kinder leicht verschlechterte. Als Mechanismus wird die stochastische Resonanz vorgeschlagen, also die Idee, dass ein verrauschtes Gehirn ein bisschen Rauschen von außen braucht, um in seinen optimalen Arbeitsbereich zu kommen.",
+        "Die Forschung steht noch am Anfang, aber die Erfahrungsberichte sind laut und erstaunlich einheitlich. [CHADD](https://chadd.org/about-adhd/overview/) und ähnliche Organisationen sehen sensorische Hilfsmittel wie Hintergrundgeräusche als etwas, das man vernünftigerweise ausprobieren kann. Wenn es dir hilft, reicht das."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Was ist Brown Noise?",
+          "a": "Brown Noise (braunes Rauschen) ist ein tiefes, grollendes Geräusch mit mehr Energie in den tiefen Frequenzen, benannt nach der zufälligen „Brownschen Bewegung“, mit der es mathematisch erzeugt wird. Es klingt wie ein gleichmäßiger Wasserfall oder wie starker Regen auf einem Dach. Im Vergleich zu weißem Rauschen ist es dunkler und wärmer, was die meisten Menschen bei langen Sitzungen als weniger anstrengend empfinden."
+        },
+        {
+          "q": "Ist das ein Generator für Hintergrundgeräusche?",
+          "a": "Ja. Brown Noise ist die beliebteste Einstellung, aber derselbe Player erzeugt auch Pink und White. Insgesamt drei Hintergrundgeräusche, alle live in deinem Browser erzeugt, ohne dass Audiodateien heruntergeladen werden. Nimm das, was für dein Gehirn am besten in den Hintergrund rückt."
+        },
+        {
+          "q": "Brown Noise, Pink Noise oder White Noise: Was soll ich nehmen?",
+          "a": "White Noise (weißes Rauschen) ist über alle Frequenzen gleich verteilt und klingt wie das Rauschen eines Fernsehers ohne Signal. Pink Noise (rosa Rauschen) senkt die hohen Frequenzen etwas ab und wirkt dadurch weicher, wie gleichmäßiger Regen. Brown Noise senkt sie noch stärker ab und fühlt sich deshalb tief und erdend an. Wenn White Noise sich hart anfühlt, probier Pink. Wenn Pink dir immer noch zu hell ist, nimm Brown. Wähl das, was du bequem ignorieren kannst."
+        },
+        {
+          "q": "Ist Brown Noise gut für den Fokus bei ADHS?",
+          "a": "Manche Erwachsene mit ADHS können sich mit gleichmäßigen Hintergrundgeräuschen besser konzentrieren, und eine Studie von Söderlund und Kollegen aus dem Jahr 2007 fand heraus, dass moderates akustisches Rauschen die kognitive Leistung von Kindern mit Aufmerksamkeitsschwierigkeiten tatsächlich verbesserte. Der wahrscheinliche Mechanismus ist das Überdecken: Ein gleichmäßiges Geräusch deckt unvorhersehbare Geräusche ab (Gespräche, Verkehr, ein brummender Kühlschrank), sodass dein Gehirn sich nicht mehr auf jedes neue Geräusch ausrichtet."
+        },
+        {
+          "q": "Ist es unbedenklich, den ganzen Tag Brown Noise zu hören?",
+          "a": "Ja, bei vernünftiger Lautstärke. Es gelten dieselben Regeln zum Schutz des Gehörs wie bei Musik. Halt die Lautstärke niedrig genug, dass du jemanden im selben Raum bequem verstehen kannst, der in normaler Lautstärke spricht. Die CDC empfiehlt, dauerhafte Belastung über 70 dB zu begrenzen. Wenn deine Ohren sich nach einer Sitzung müde anfühlen oder klingeln, ist die Lautstärke zu hoch."
+        },
+        {
+          "q": "Warum ist Brown Noise gerade auf TikTok so angesagt?",
+          "a": "Erwachsene mit ADHS haben auf TikTok angefangen zu posten, dass Brown Noise das ständige innere Gedankenrauschen beruhigt, oft beschrieben als „der Lärm in meinem Kopf war plötzlich weg“. Diese eine Beobachtung ging 2022 und 2023 viral, und eine ganze Welle von Leuten hat es ausprobiert. Die Forschung dazu steht noch am Anfang, aber die Erfahrungsberichte sind stark genug, dass es sich lohnt, es selbst auszuprobieren."
+        },
+        {
+          "q": "Funktioniert das offline?",
+          "a": "Ja. Das Geräusch wird über die Web Audio API in deinem Browser erzeugt und nicht von einem Server gestreamt. Sobald die Seite geladen ist, brauchst du keine Internetverbindung mehr. Es wird nichts aufgezeichnet, nichts hochgeladen, und im Player gibt es keine Werbung und keine Tracker."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Brown Noise passt von Natur aus gut zu einem Fokus-Timer. Probier den [ADHS-Pomodoro-Timer](/tools/pomodoro) für strukturierte 25-Minuten-Sprints oder den [visuellen Timer](/tools/visual-timer), wenn du ein schrumpfendes Kreissegment willst, das nebenbei als Uhr gegen Zeitblindheit dient. Stöber in der [kompletten Tool-Bibliothek](/tools) oder lies die [Doubly-Wissensbibliothek](/learn) mit Anleitungen zu Fokus, Brain Dumping und dem Wieder-ins-Tun-Kommen."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Brown Noise hilft dir, in einer Aufgabe anzukommen. Die Doubly-iOS-App hilft dir überhaupt erst dabei, die Aufgabe auszuwählen: Brain Dump, ein klarer nächster Schritt und Verbindlichkeits-Check-ins von echten Menschen.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly Brown-Noise-Generator",
+    "appDescription": "Ein kostenloser Brown-Noise-Generator im Browser, mit Pink und White. Ohne Anmeldung, mit Sleep-Timer, funktioniert offline.",
+    "howToName": "So nutzt du den Brown-Noise-Generator",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

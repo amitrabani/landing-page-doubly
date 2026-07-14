@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "ADHD 专注、工具与策略 - 学习资源库 | Doubly",
+    "description": "ADHD 专注、时间盲视、大脑清空、不再卡住,全是大白话指南。讲实话,讲证据,不让你自责。",
+    "ogTitle": "ADHD 专注、工具与策略 - 学习资源库",
+    "ogDescription": "ADHD 专注、时间盲视、不再卡住,全是大白话指南。",
+    "twitterTitle": "ADHD 专注、工具与策略 - 学习资源库",
+    "twitterDescription": "ADHD 专注、时间盲视、不再卡住,全是大白话指南。"
+  },
+  "h1": "学习资源库",
+  "breadcrumbLabel": "学习资源库",
+  "breadcrumbHome": "首页",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "用大白话讲清楚 ADHD 大脑在专注、时间和把事做完这几件事上到底是怎么运转的。写给活生生的人看,不是写给算法看。讲证据,不让你自责,也不下任何临床结论。",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "首批文章下周上线",
+      "paragraphs": [
+        "第一批我们正在写:时间盲视、大脑清空背后的科学,还有为什么传统的效率建议在 ADHD 成年人身上一次次失灵。",
+        "在这之前,先试试[免费的 ADHD 番茄钟](/tools/pomodoro),或者逛逛[完整工具库](/tools)。"
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "在应用里试试",
+    "body": "Doubly iOS 应用帮你真正开始,而不只是做计划。把脑子里的一团乱麻倒出来,只留一个清晰的下一步,再让真正在乎你进展的人陪你坚持下去。",
+    "label": "在应用里试试"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

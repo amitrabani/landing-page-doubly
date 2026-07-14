@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Aprender - Foco no TDAH, ferramentas e estratégias | Doubly",
+    "description": "Guias em linguagem simples sobre foco no TDAH, cegueira temporal, despejo mental e como destravar. Direto ao ponto, com base em evidências e sem culpa.",
+    "ogTitle": "Aprender - Foco no TDAH, ferramentas e estratégias",
+    "ogDescription": "Guias em linguagem simples sobre foco no TDAH, cegueira temporal e como destravar.",
+    "twitterTitle": "Aprender - Foco no TDAH, ferramentas e estratégias",
+    "twitterDescription": "Guias em linguagem simples sobre foco no TDAH, cegueira temporal e como destravar."
+  },
+  "h1": "Aprender",
+  "breadcrumbLabel": "Aprender",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Guias em linguagem simples sobre como o cérebro com TDAH lida com foco, tempo e terminar o que começa. Escritos pensando em gente de verdade, não em algoritmo. Com base em evidências, sem culpa e sem promessa clínica.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Os primeiros artigos saem semana que vem",
+      "paragraphs": [
+        "Estamos escrevendo a primeira leva agora: cegueira temporal, a ciência por trás do despejo mental e por que o conselho de produtividade de sempre continua não funcionando para adultos com TDAH.",
+        "Enquanto isso, teste o [timer pomodoro grátis para TDAH](/tools/pomodoro) ou explore a [biblioteca completa de ferramentas](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "O app do Doubly para iOS te ajuda a começar, não só a planejar. Faça um despejo mental do caos, receba um único próximo passo claro e conte com a cobrança de gente de verdade que se importa com o seu progresso.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

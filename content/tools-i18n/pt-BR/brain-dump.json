@@ -1,12 +1,12 @@
 {
   "slug": "brain-dump",
   "meta": {
-    "title": "Ferramenta grátis de despejo mental | Doubly",
-    "description": "Despejo mental grátis online. Solta tudo que está na sua cabeça e a IA tira só as tarefas possíveis, jogando o resto fora. Sem cadastro, feita para o TDAH.",
-    "ogTitle": "Ferramenta grátis de despejo mental - Esvazie a cabeça",
-    "ogDescription": "Solta tudo que está na sua cabeça e a IA tira as tarefas possíveis. Grátis, sem cadastro.",
-    "twitterTitle": "Ferramenta grátis de despejo mental",
-    "twitterDescription": "Solta tudo que está na sua cabeça e a IA tira as tarefas possíveis."
+    "title": "Despejo mental grátis online - Esvazie a cabeça | Doubly",
+    "description": "Despejo mental grátis online. Solte tudo que está na sua cabeça, a IA separa as tarefas possíveis e joga o resto fora. Sem cadastro. Feita para o TDAH.",
+    "ogTitle": "Despejo mental grátis online - Esvazie a cabeça",
+    "ogDescription": "Solte tudo que está na sua cabeça e a IA separa as tarefas possíveis. Grátis, sem cadastro.",
+    "twitterTitle": "Ferramenta grátis de despejo mental online",
+    "twitterDescription": "Solte tudo que está na sua cabeça e a IA separa as tarefas possíveis."
   },
   "h1": "Ferramenta grátis de despejo mental",
   "breadcrumbHome": "Início",
@@ -75,7 +75,7 @@
   ],
   "related": {
     "heading": "Ferramentas relacionadas",
-    "body": "Quando você já tiver uma lista de tarefas, use o [escolha uma](/tools/pick-one) para revelar uma única tarefa por onde começar, ou organize a lista inteira com a [matriz de Eisenhower para TDAH](/tools/eisenhower-matrix). Mande a mais assustadora para a [ferramenta para dividir tarefas](/tools/task-splitter) e quebre ela em passos pequenos. Marque o tempo do primeiro passo com o [timer pomodoro para TDAH](/tools/pomodoro) ou o [timer visual](/tools/visual-timer). Se o difícil é começar sozinho, abra uma [sala de acompanhamento](/tools/body-doubling-room) e trabalhe ao lado de alguém. Explore a [biblioteca completa de ferramentas](/tools)."
+    "body": "Quando você já tiver uma lista de tarefas, use o [escolha uma](/tools/pick-one) para revelar uma única tarefa por onde começar, ou organize a lista inteira com a [matriz de Eisenhower para TDAH](/tools/eisenhower-matrix). Mande a mais assustadora para a [ferramenta para dividir tarefas](/tools/task-splitter) e quebre ela em passos pequenos. Marque o tempo do primeiro passo com o [timer pomodoro para TDAH](/tools/pomodoro) ou o [timer visual](/tools/visual-timer). Se o difícil é começar sozinho, abra uma [sala de body doubling](/tools/body-doubling-room) e trabalhe ao lado de alguém. Explore a [biblioteca completa de ferramentas](/tools)."
   },
   "cta": {
     "headline": "Experimente no app",

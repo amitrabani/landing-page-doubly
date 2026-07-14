@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Timer iperfocus ADHD gratis + controlli vocali | Doubly",
+    "description": "Un timer gratuito che interrompe l’iperfocus: ti avvisa ogni X minuti e annuncia l’ora ad alta voce, così non perdi sei ore. Senza registrazione, funziona nel browser.",
+    "ogTitle": "Timer per l’iperfocus gratis + controlli vocali ADHD",
+    "ogDescription": "Programma controlli parlati e ad alto volume, così una sessione di iperfocus non si mangia tutto il pomeriggio. Gratis, senza registrazione.",
+    "twitterTitle": "Timer per l’iperfocus gratis + controlli vocali ADHD",
+    "twitterDescription": "Controlli parlati e ad alto volume a intervalli fissi. Gratis, senza registrazione."
+  },
+  "h1": "Timer per l’iperfocus gratuito",
+  "breadcrumbLabel": "Timer per l’iperfocus",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "answerCapsule": "**Un timer per l’iperfocus programma controlli ricorrenti, ogni 20-45 minuti per impostazione predefinita, così un tunnel di concentrazione tipico dell’ADHD non può inghiottire in silenzio sei ore della tua giornata.** Questa versione gratuita da browser suona, se vuoi annuncia l’ora e l’attività che hai scritto, e ti chiede se ci sei ancora dietro. Un limite massimo separato scatta una sola volta, alla durata di sessione che hai impostato. Nessuna registrazione, nessuna installazione, le tue impostazioni restano sul tuo dispositivo.",
+  "intro": "L’iperfocus è la metà dell’ADHD di cui si parla poco. La metà che da fuori sembra produttività, mentre dentro il tunnel ti dimentichi di bere, salti riunioni e riemergi alle 19 chiedendoti dove sia finito il pomeriggio. La soluzione non è più concentrazione. È un’interruzione affidabile, che rompe l’incantesimo quanto basta per scegliere cosa succede dopo.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come usare il timer per l’iperfocus",
+      "steps": [
+        {
+          "name": "Dai un nome all’attività per cui ti sei seduto",
+          "text": "Scrivi una riga breve: “moduli delle tasse”, “lo script”, “revisione del design”. È facoltativo, ma consigliato. Il controllo vocale te la rileggerà, ed è la migliore difesa possibile contro un cambio di scheda che si trasforma in tre ore di lavoro su tutt’altro."
+        },
+        {
+          "name": "Scegli un intervallo tra i controlli",
+          "text": "30 minuti è un buon valore predefinito. Usa 20 se tendi a ignorare l’avviso, 45 o 60 se gli intervalli più brevi ti fanno a pezzi il flow."
+        },
+        {
+          "name": "Imposta un limite massimo (facoltativo ma consigliato)",
+          "text": "Scegli una durata totale massima per la sessione. Il limite è un avviso separato e più forte, che scatta una sola volta, per quanti pulsanti “vado avanti” tu abbia premuto."
+        },
+        {
+          "name": "Premi Avvia e lavora",
+          "text": "Quando scatta il controllo, la pagina suona, se vuoi annuncia l’ora e la tua attività, e ti chiede se ci sei ancora dietro. Scegli Vado avanti, Faccio una pausa o Stop."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché funziona per i cervelli ADHD",
+      "paragraphs": [
+        "L’ADHD viene spesso descritto come un deficit di attenzione, ma ricercatori come il dottor Russell Barkley lo inquadrano più correttamente come una differenza nell’autoregolazione, inclusa la regolazione dell’attenzione stessa. Questo significa che i cervelli ADHD non prestano soltanto troppo poca attenzione: a volte ne prestano troppa. L’iperfocus è ciò che succede quando un argomento è abbastanza nuovo, interessante o stimolante da far smettere di funzionare il solito meccanismo che sposta l’attenzione. Il tunnel si restringe e il mondo là fuori sbiadisce.",
+        "Da dentro, una sessione di iperfocus sembra flow. Da fuori, sono pranzi saltati, messaggi senza risposta e una schiena a pezzi. Il costo è reale anche quando il lavoro viene bene. Un controllo ricorrente e udibile è un modo a basso sforzo per esternalizzare quell’automonitoraggio che un cervello ADHD dentro il tunnel non riesce a fare da sé. È lo stesso principio dietro un conto alla rovescia visivo per la cecità temporale, applicato alla modalità di fallimento opposta.",
+        "Il motivo per cui l’ora annunciata a voce conta: i segnali visivi vengono assorbiti dal lavoro. Puoi guardare un orologio e non vederlo. L’audio arriva in modo diverso, soprattutto il suono di una frase, che la parte del cervello dedicata al linguaggio deve elaborare prima di poterla ignorare. [CHADD](https://chadd.org/about-adhd/overview/), l’associazione nazionale di riferimento per l’ADHD negli Stati Uniti, elenca gli indizi esterni e i supporti strutturati per la gestione del tempo tra le strategie pratiche consigliate agli adulti con ADHD."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Che cos’è un timer per l’iperfocus?",
+          "a": "Un timer per l’iperfocus è un allarme ricorrente che ti interrompe a intervalli fissi, di solito ogni 20-45 minuti, così una sessione di concentrazione profonda ha già integrato un momento in cui riemergi. Invece di fare il conto alla rovescia verso la fine di un unico blocco, continua a scattare per tutta la sessione, ed è proprio ciò di cui hanno davvero bisogno le persone con l’iperfocus tipico dell’ADHD. L’avviso è ad alto volume o parlato, così buca la visione a tunnel."
+        },
+        {
+          "q": "In cosa è diverso da un timer pomodoro?",
+          "a": "Un timer pomodoro alterna un blocco di concentrazione da 25 minuti e una pausa da 5 minuti, ed è pensato per chi fatica a iniziare. Un timer per l’iperfocus è pensato per il problema opposto: iniziare non è un problema, fermarsi sì. Non ti impone una pausa, ti tira soltanto fuori dal tunnel quanto basta per accorgerti dell’ora, della data, della tua vescica e del fatto che forse non dovresti più stare lì a farlo."
+        },
+        {
+          "q": "Perché conta l’annuncio dell’ora?",
+          "a": "Durante un episodio di iperfocus la percezione del tempo sparisce. Un controllo dell’ora annunciato a voce funziona dove un’occhiata all’orologio non basta, perché l’audio ti raggiunge anche quando gli occhi sono incollati allo schermo. Sentire “sono le 14:45, sei lì da due ore” è quello che rompe l’incantesimo. Il solo suono è facile da liquidare."
+        },
+        {
+          "q": "Quale intervallo dovrei scegliere?",
+          "a": "Parti da 30 minuti. Se ti accorgi che ignori il suono o lo metti a tacere, scendi a 20. Se l’intervallo ti spezza il flow invece di proteggerti da esso, prova 45 o 60. L’obiettivo è l’intervallo più lungo che riesce comunque a farti riemergere a prendere aria in modo affidabile. Non c’è una risposta giusta, solo quella che funziona per il tuo cervello questa settimana."
+        },
+        {
+          "q": "A cosa serve il limite massimo?",
+          "a": "Il limite di sessione è un avviso più forte e dal suono diverso, che scatta a una durata totale massima, di default 2 ore. Copre il caso in cui premi “vado avanti” a ogni controllo e saresti rimasto alla scrivania fino a mezzanotte. È un segnale separato, non un controllo, così il cervello rettiliano non può confonderlo con quello solito."
+        },
+        {
+          "q": "L’annuncio vocale funziona sul mio telefono?",
+          "a": "Usa la Web Speech API del browser, che funziona su Safari per iOS, Chrome per Android e i browser desktop moderni. Su iOS la pagina deve restare aperta e potresti dover toccare una volta la pagina, così il browser sa che hai autorizzato l’audio. Se il telefono è in silenzioso, il suono sarà muto, ma l’annuncio vocale esce comunque dall’altoparlante."
+        },
+        {
+          "q": "Il timer continua a funzionare se la scheda è in secondo piano?",
+          "a": "Sì. L’intervallo è ancorato all’ora reale, non a un contatore JavaScript che i browser rallentano nelle schede in secondo piano. Il controllo scatta in orario anche se sei passato a un’altra finestra. Se dai il permesso, quando la scheda è nascosta parte una notifica desktop, il titolo della pagina lampeggia, e il suono diventa più forte e più frequente più a lungo lo ignori. Sui dispositivi supportati viene richiesto un wake lock dello schermo."
+        },
+        {
+          "q": "Perché l’orario del controllo cambia di un minuto o due a ogni giro?",
+          "a": "Ogni intervallo viene variato di circa il dieci percento, di proposito. Un avviso perfettamente prevedibile è quello che un cervello in iperfocus impara ad anticipare e a scartare prima ancora di registrarlo consapevolmente. Un piccolo scarto imprevedibile, a volte 27 minuti, a volte 33, manda all’aria quell’ignorare preventivo. La media sulla sessione resta comunque l’intervallo che hai scelto."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Se la difficoltà è iniziare, invece che fermarsi, prova il [timer pomodoro ADHD](/tools/pomodoro) per sprint brevi e finiti, con le pause già incluse. Per un conto alla rovescia a sessione singola che puoi guardare invece di leggere, il [timer visivo](/tools/visual-timer) funziona anche da orologio per la cecità temporale. Se il rumore di fondo dell’ufficio o quello dentro la tua testa continua a ributtarti nel tunnel, mettici sotto il [generatore di rumore marrone](/tools/brown-noise). Sfoglia la [libreria completa di strumenti](/tools)."
+  },
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Un timer può tirarti fuori dal tunnel. L’app Doubly per iOS ti aiuta a scegliere cosa fare della prossima ora: svuota il caos che hai in testa, fai emergere un unico passo chiaro e renditi responsabile davanti a persone vere, che sanno bene cosa si prova a perdere un pomeriggio.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": "Timer per l’iperfocus di Doubly",
+    "appDescription": "Un timer per l’iperfocus online e gratuito, con controlli vocali ricorrenti e un limite massimo di sessione facoltativo. Pensato per gli adulti con ADHD che perdono ore nella visione a tunnel.",
+    "howToName": "Come usare il timer per l’iperfocus",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

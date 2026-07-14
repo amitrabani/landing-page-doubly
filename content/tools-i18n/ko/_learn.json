@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "ADHD 집중력 가이드 - 도구와 전략 | Doubly",
+    "description": "ADHD 집중력, 시간 감각 상실, 브레인 덤프, 막힌 것 풀기까지 쉬운 말로 풀어낸 가이드. 솔직하게, 근거를 바탕으로, 자책은 빼고 썼어요.",
+    "ogTitle": "ADHD 집중력 가이드 - 도구와 전략",
+    "ogDescription": "ADHD 집중력, 시간 감각 상실, 막힌 것 풀기를 쉬운 말로 풀어낸 가이드.",
+    "twitterTitle": "ADHD 집중력 가이드 - 도구와 전략",
+    "twitterDescription": "ADHD 집중력, 시간 감각 상실, 막힌 것 풀기를 쉬운 말로 풀어낸 가이드."
+  },
+  "h1": "알아보기",
+  "breadcrumbLabel": "알아보기",
+  "breadcrumbHome": "홈",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "ADHD 뇌가 집중과 시간을 어떻게 다루는지, 왜 시작한 일을 끝까지 해내기가 그렇게 어려운지 쉬운 말로 풀어낸 가이드예요. 검색 알고리즘이 아니라 진짜 사람을 생각하면서 썼어요. 근거를 바탕으로 하되, 자책하게 만들지 않고, 진단이나 치료를 이야기하지도 않아요.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "첫 글은 다음 주에 올라와요",
+      "paragraphs": [
+        "지금 첫 글들을 쓰고 있어요. 시간 감각 상실, 브레인 덤프의 과학, 그리고 흔한 생산성 조언이 ADHD 성인에게는 왜 자꾸 안 통하는지를 다뤄요.",
+        "그사이에 [무료 ADHD 포모도로 타이머](/tools/pomodoro)를 써보거나 [전체 도구 라이브러리](/tools)를 둘러보세요."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "앱에서 써보기",
+    "body": "Doubly iOS 앱은 계획만 세우게 두지 않고 시작하게 도와줘요. 뒤엉킨 머릿속을 브레인 덤프로 쏟아내면 또렷한 다음 단계 하나가 남고, 내 진전을 응원하는 실제 사람들과 서로 확인해 주면서 계속 나아갈 수 있어요.",
+    "label": "앱에서 써보기"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "_index",
+  "meta": {
+    "title": "免费 ADHD 工具 - 帮你真正开始 | Doubly",
+    "description": "为 ADHD 大脑打造的免费工具,无需注册。番茄钟、大脑清空等等,专为「该开始了」的那一刻而做,而不只是用来做计划。",
+    "ogTitle": "免费 ADHD 工具 - 帮你真正开始",
+    "ogDescription": "无需注册,没有弹窗。来自 Doubly 团队,为 ADHD 大脑打造的免费工具。",
+    "twitterTitle": "免费 ADHD 工具 - 帮你真正开始",
+    "twitterDescription": "无需注册,没有弹窗。为 ADHD 大脑打造的免费工具。"
+  },
+  "h1": "帮你真正开始的免费 ADHD 工具",
+  "breadcrumbLabel": "工具",
+  "breadcrumbHome": "首页",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "为 ADHD 大脑打造的免费工具,无需注册。它们是为你脑子一团乱、什么都开不了头的那一刻做的,不是为你已经准备好做计划的那一刻。打开浏览器就能用,进度会保存,想走随时走。",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "现有工具",
+      "paragraphs": null
+    }
+  ],
+  "related": null,
+  "cards": [
+    {
+      "slug": "task-splitter",
+      "title": "任务拆解工具",
+      "description": "输入一个你开不了头的任务,AI 会把它拆成一个个能做到的小步骤,还带时间估算。为 ADHD 大脑打造。"
+    },
+    {
+      "slug": "brain-dump",
+      "title": "大脑清空工具",
+      "description": "把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册,不留存任何内容。"
+    },
+    {
+      "slug": "pick-one",
+      "title": "挑一个任务",
+      "description": "粘贴一份乱糟糟的待办清单,只带走一件可以先做的事。最小的、最让你发怵的,或者随机挑一个。专为十件事在眼前糊成一团、根本无从下手的那一刻而做。"
+    },
+    {
+      "slug": "eisenhower-matrix",
+      "title": "艾森豪威尔矩阵(ADHD 版)",
+      "description": "把任务拖进「无聊却重要」这样的象限,而不是教科书上的标签。这个矩阵,终于是照着 ADHD 大脑做的。数据保存在本地。"
+    },
+    {
+      "slug": "pomodoro",
+      "title": "ADHD 番茄钟",
+      "description": "专注 25 分钟,休息 5 分钟,这套专注法终于适合 ADHD 大脑。免费,无需注册,离线也能用。"
+    },
+    {
+      "slug": "visual-timer",
+      "title": "可视化计时器 / 时间盲视时钟",
+      "description": "一块慢慢变小的扇形,让你亲眼看见时间在流走,而不是去读数字。对 ADHD 成年人来说,它也是一个时间盲视时钟。"
+    },
+    {
+      "slug": "brown-noise",
+      "title": "环境音生成器",
+      "description": "在浏览器里直接用的免费环境音生成器。棕噪音,外加粉红噪音和白噪音。用稳定的背景声安抚忙个不停的 ADHD 大脑。自带睡眠定时器,离线也能用。"
+    },
+    {
+      "slug": "body-doubling-room",
+      "title": "身旁陪伴室",
+      "description": "免费的双人专注房间。分享一个链接,通过点对点视频并肩做事,共用一个计时器。无需注册,无需安装。"
+    },
+    {
+      "slug": "hyperfocus-timer",
+      "title": "超专注中断计时器",
+      "description": "每隔 X 分钟用语音提醒你一次,还能设一个硬性停止时间,免得一场 ADHD 超专注把你一整个下午都耗光。"
+    }
+  ],
+  "openTool": "打开工具",
+  "comingSoon": "即将推出",
+  "cta": {
+    "headline": "在应用里试试",
+    "body": "网页版工具帮你开始一个任务。Doubly 的 iOS 应用帮你一直做下去:大脑清空、一个清晰的下一步,还有真人陪你打卡、督促你别停下。",
+    "label": "在应用里试试"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": "帮你真正开始的免费 ADHD 工具",
+    "collectionDescription": "一套还在不断变多的免费工具,无需注册,由 Doubly 应用背后的团队为 ADHD 大脑打造。"
+  }
+}

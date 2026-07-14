@@ -1,19 +1,19 @@
 {
   "slug": "pomodoro",
   "meta": {
-    "title": "Temporizador Pomodoro para el ADHD gratis | Doubly",
-    "description": "Temporizador pomodoro gratis para cerebros con ADHD. Intervalos de enfoque de 25 min, descansos de 5, sin registro. Guarda tu progreso en el navegador.",
-    "ogTitle": "Temporizador Pomodoro para el ADHD gratis: enfócate por intervalos",
-    "ogDescription": "Un temporizador pomodoro que encaja con cómo funciona de verdad un cerebro con ADHD. Gratis, sin registro, corre en tu navegador.",
-    "twitterTitle": "Temporizador Pomodoro para el ADHD gratis",
-    "twitterDescription": "Un temporizador pomodoro que encaja con cómo funciona de verdad un cerebro con ADHD. Gratis, sin registro."
+    "title": "Temporizador Pomodoro para el TDAH gratis | Doubly",
+    "description": "Temporizador pomodoro gratis para cerebros con TDAH. Intervalos de enfoque de 25 min y descansos de 5, sin registro. Guarda tu progreso en el navegador.",
+    "ogTitle": "Temporizador Pomodoro para el TDAH gratis: enfócate por intervalos",
+    "ogDescription": "Un temporizador pomodoro que encaja con cómo funciona de verdad un cerebro con TDAH. Gratis, sin registro y desde el navegador.",
+    "twitterTitle": "Temporizador Pomodoro para el TDAH gratis",
+    "twitterDescription": "Un temporizador pomodoro que encaja con cómo funciona de verdad un cerebro con TDAH. Gratis y sin registro."
   },
-  "h1": "Temporizador Pomodoro para el ADHD gratis",
-  "breadcrumbLabel": "Temporizador Pomodoro para el ADHD",
+  "h1": "Temporizador Pomodoro para el TDAH gratis",
+  "breadcrumbLabel": "Temporizador Pomodoro para el TDAH",
   "breadcrumbHome": "Inicio",
   "breadcrumbTools": "Herramientas",
-  "answerCapsule": "**Un temporizador pomodoro para el ADHD divide el trabajo en intervalos cortos y finitos - 25 minutos de enfoque y luego un descanso de 5 minutos - para que un cerebro bloqueado o abrumado tenga un punto de partida claro y realizable.** Este temporizador gratis corre en tu navegador, guarda el progreso de forma local y te deja personalizar la duración del intervalo para que encaje con tu cerebro. Elige una tarea, pulsa Empezar y para cuando suene.",
-  "intro": "La Técnica Pomodoro es un método de enfoque construido en torno a intervalos de trabajo cronometrados. Para los adultos con ADHD funciona porque hace visible el tiempo: un intervalo de 25 minutos convierte «tengo que hacer esta cosa enorme» en «solo tengo que trabajar hasta que suene el temporizador». El descanso es parte del trato, no algo que tengas que ganarte.",
+  "answerCapsule": "**Un temporizador pomodoro para el TDAH divide el trabajo en intervalos cortos y con final a la vista - 25 minutos de enfoque y luego un descanso de 5 minutos - para que un cerebro bloqueado o desbordado tenga un punto de partida claro y asumible.** Este temporizador gratuito funciona en tu navegador, guarda el progreso en tu dispositivo y te deja ajustar la duración del intervalo para que encaje con tu cerebro. Elige una tarea, pulsa Empezar y para cuando suene.",
+  "intro": "La Técnica Pomodoro es un método de enfoque basado en intervalos de trabajo cronometrados. A los adultos con TDAH les funciona porque hace visible el tiempo: un intervalo de 25 minutos convierte «tengo que hacer esta cosa enorme» en «solo tengo que trabajar hasta que suene el temporizador». El descanso viene incluido en el trato, no es algo que tengas que ganarte.",
   "sections": [
     {
       "kind": "steps",
@@ -21,19 +21,19 @@
       "steps": [
         {
           "name": "Elige una tarea",
-          "text": "Solo una. Si tienes una lista, míralas, elige la cosa más pequeña que puedas empezar ahora y guarda la lista."
+          "text": "Solo una. Si tienes una lista, mírala, elige lo más pequeño que puedas empezar ahora mismo y guarda la lista."
         },
         {
           "name": "Pulsa Empezar",
-          "text": "Empieza un intervalo de enfoque de 25 minutos. No te preocupes por terminar toda la tarea - solo trabaja hasta que suene el temporizador."
+          "text": "Arranca un intervalo de enfoque de 25 minutos. No te agobies por terminar toda la tarea - basta con que trabajes hasta que suene el temporizador."
         },
         {
           "name": "Tómate el descanso de 5 minutos",
-          "text": "Levántate. Bebe agua. No abras las redes sociales. El descanso es parte de la técnica, no una recompensa que puedas saltarte."
+          "text": "Levántate. Bebe agua. No abras las redes sociales. El descanso forma parte de la técnica, no es un premio que puedas saltarte."
         },
         {
           "name": "Tras 4 intervalos, tómate un descanso largo",
-          "text": "Un descanso de 15 minutos. Es cuando la mayoría de los cerebros con ADHD consolidan de verdad lo que acaban de trabajar."
+          "text": "Un descanso de 15 minutos. Es el momento en el que la mayoría de los cerebros con TDAH consolidan de verdad lo que acaban de trabajar."
         }
       ],
       "paragraphs": null,
@@ -41,12 +41,12 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Por qué esto funciona para cerebros con ADHD",
+      "heading": "Por qué funciona en los cerebros con TDAH",
       "steps": null,
       "paragraphs": [
-        "Los adultos con ADHD experimentan la **ceguera al tiempo**: la brecha entre «ahora» y «ahora no» se siente con más fuerza que la distancia analógica entre, digamos, «en 25 minutos» y «en 4 horas». Investigadores como Russell Barkley y otros lo han documentado como un rasgo central de las diferencias de función ejecutiva en el ADHD, no como una falla moral.",
-        "Un temporizador pomodoro arregla esa brecha al hacer el tiempo concreto. Puedes *ver* cómo los 25 minutos se encogen. La tarea ya no es infinita - dura lo que un intervalo. Ese cambio, de lo abstracto a lo finito, es lo que hace que empezar se sienta posible.",
-        "Los descansos forzados también importan. Muchos adultos con ADHD aguantan hasta el agotamiento porque no confían en su propia capacidad de volver. Un temporizador con un descanso incorporado te da permiso para parar antes de derrumbarte. [CHADD](https://chadd.org/about-adhd/overview/) (Niños y Adultos con Trastorno por Déficit de Atención/Hiperactividad) y organismos similares recomiendan los intervalos estructurados como una herramienta práctica para manejar las dificultades de enfoque relacionadas con el ADHD."
+        "Los adultos con TDAH viven la **ceguera al tiempo**: la distancia entre «ahora» y «ahora no» se siente con mucha más fuerza que la distancia real entre, pongamos, «dentro de 25 minutos» y «dentro de 4 horas». Investigadores como Russell Barkley lo han documentado como un rasgo central de las diferencias en la función ejecutiva del TDAH, no como un fallo de voluntad.",
+        "Un temporizador pomodoro cierra esa brecha porque vuelve concreto el tiempo. Puedes *ver* cómo se encogen los 25 minutos. La tarea deja de ser infinita - dura lo que dura un intervalo. Ese salto de lo abstracto a lo finito es lo que hace que empezar se sienta posible.",
+        "Los descansos obligatorios también cuentan. Muchos adultos con TDAH tiran hasta agotarse porque no se fían de su propia capacidad de retomar el trabajo. Un temporizador con descanso incorporado te da permiso para parar antes de venirte abajo. [CHADD](https://chadd.org/about-adhd/overview/) (Niños y Adultos con Trastorno por Déficit de Atención e Hiperactividad) y otras entidades similares recomiendan los intervalos estructurados como herramienta práctica para manejar las dificultades de enfoque propias del TDAH."
       ],
       "faqs": null
     },
@@ -57,31 +57,31 @@
       "paragraphs": null,
       "faqs": [
         {
-          "q": "¿Por qué la técnica pomodoro es útil para el ADHD?",
-          "a": "Externaliza el tiempo. Los cerebros con ADHD suelen tener problemas con la ceguera al tiempo - la sensación de que una tarea va a tardar una eternidad, o nada de tiempo. Un intervalo visible de 25 minutos convierte ese temor abstracto en una distancia finita y recorrible. El descanso viene incorporado, así que dejas de darle vueltas a si puedes tomarte uno."
+          "q": "¿Por qué la técnica pomodoro va bien para el TDAH?",
+          "a": "Porque saca el tiempo fuera de tu cabeza. Los cerebros con TDAH suelen chocar con la ceguera al tiempo - esa sensación de que una tarea va a durar una eternidad, o nada. Un intervalo visible de 25 minutos convierte ese temor abstracto en una distancia finita y recorrible. El descanso ya viene incluido, así que dejas de darle vueltas a si te lo puedes tomar."
         },
         {
-          "q": "¿25 minutos es la duración adecuada para el ADHD?",
-          "a": "Para algunos sí, para otros no. A muchos adultos con ADHD les va mejor con intervalos más cortos (10–15 minutos) cuando cuesta arrancar, y más largos (35–50 minutos) una vez que entran en flujo. Usa el botón de personalizar debajo del temporizador para poner el tuyo. La Técnica Pomodoro oficial usa 25/5, pero lo que importa es el principio - trabaja y luego descansa."
+          "q": "¿25 minutos es la duración adecuada para el TDAH?",
+          "a": "Para unos sí y para otros no. A muchos adultos con TDAH les va mejor un intervalo corto (10–15 minutos) cuando lo difícil es arrancar, y uno más largo (35–50 minutos) cuando ya han entrado en flujo. Usa el botón de personalizar que hay debajo del temporizador para poner el tuyo. La Técnica Pomodoro oficial usa 25/5, pero lo que importa es el principio - primero trabajar y después descansar."
         },
         {
           "q": "¿Necesito instalar algo o registrarme?",
-          "a": "No. El temporizador corre por completo en tu navegador. Tu progreso (sesiones completadas y duraciones personalizadas) se guarda de forma local en tu dispositivo. Nada sale de tu ordenador o tu teléfono. Sin cuenta, sin correo."
+          "a": "No. El temporizador funciona por completo en tu navegador. Tu progreso (las sesiones completadas y las duraciones personalizadas) se guarda en tu propio dispositivo. No sale nada de tu ordenador ni de tu móvil. Sin cuenta y sin correo."
         },
         {
-          "q": "¿El temporizador sigue corriendo si cambio de pestaña?",
-          "a": "Sí. El temporizador se basa en la hora real del día, no en un script que se pausa cuando la pestaña está en segundo plano. El título de la pestaña del navegador también se actualiza con el tiempo restante, así puedes echarle un vistazo mientras trabajas en otra ventana."
+          "q": "¿El temporizador sigue en marcha si cambio de pestaña?",
+          "a": "Sí. El temporizador se basa en la hora real del día, no en un script que se pausa cuando la pestaña queda en segundo plano. El título de la pestaña del navegador también se actualiza con el tiempo restante, así que puedes echarle un vistazo mientras trabajas en otra ventana."
         },
         {
           "q": "¿Qué pasa después de cuatro pomodoros?",
-          "a": "Te ganas un descanso largo - 15 minutos por defecto en lugar de 5. Este descanso más largo es parte de la Técnica Pomodoro estándar y le da a tu cerebro una ventana real de recuperación antes del siguiente bloque de enfoque."
+          "a": "Te ganas un descanso largo - 15 minutos por defecto en lugar de 5. Ese descanso más largo forma parte de la Técnica Pomodoro estándar y le da a tu cerebro una ventana real de recuperación antes del siguiente bloque de enfoque."
         }
       ]
     }
   ],
   "related": {
     "heading": "Herramientas relacionadas",
-    "body": "Si un intervalo de 25 minutos se te hace largo, prueba el [temporizador visual](/tools/visual-timer). El mismo dial de cuña que se encoge, con la duración que quieras, y sirve también como reloj para la ceguera al tiempo si perder la noción del tiempo es el problema de fondo. Si lo que te cuesta es lo contrario, saber cuándo parar, prueba el [temporizador para la hiperconcentración](/tools/hyperfocus-timer) para recibir avisos hablados recurrentes en un intervalo fijo. Combina el temporizador con el [generador de ruido marrón](/tools/brown-noise) si el ruido de la oficina o una mente inquieta te sacan del intervalo. Explora la [biblioteca completa de herramientas](/tools) o lee la [biblioteca de aprendizaje de Doubly](/learn) para encontrar guías sobre enfoque, volcado mental y cómo desbloquearte."
+    "body": "Si un intervalo de 25 minutos se te hace largo, prueba el [temporizador visual](/tools/visual-timer). El mismo dial de cuña que se encoge, con la duración que quieras, y que sirve además como reloj contra la ceguera al tiempo si el problema de fondo es que pierdes la noción de la hora. Si te pasa justo lo contrario y lo que te cuesta es saber cuándo parar, prueba el [temporizador para la hiperconcentración](/tools/hyperfocus-timer) y recibe avisos hablados cada cierto tiempo. Combina el temporizador con el [generador de ruido marrón](/tools/brown-noise) si el ruido de la oficina o una mente inquieta te sacan del intervalo. Echa un vistazo a la [biblioteca completa de herramientas](/tools) o entra en la [biblioteca de aprendizaje de Doubly](/learn) para encontrar guías sobre enfoque, volcado mental y cómo desbloquearte."
   },
   "cards": null,
   "openTool": null,
@@ -92,9 +92,9 @@
     "label": "Pruébalo en la app"
   },
   "jsonld": {
-    "appName": "Temporizador Pomodoro para el ADHD de Doubly",
-    "appDescription": "Un temporizador pomodoro gratis hecho para cerebros con ADHD. Duraciones de enfoque y descanso personalizables, funciona en el navegador, sin registro.",
-    "howToName": "Cómo usar el temporizador pomodoro para el ADHD",
+    "appName": "Temporizador Pomodoro para el TDAH de Doubly",
+    "appDescription": "Un temporizador pomodoro gratuito hecho para cerebros con TDAH. Duraciones de enfoque y descanso personalizables, funciona en el navegador y sin registro.",
+    "howToName": "Cómo usar el temporizador pomodoro para el TDAH",
     "collectionName": null,
     "collectionDescription": null
   }

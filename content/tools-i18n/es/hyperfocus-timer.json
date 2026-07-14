@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Temporizador TDAH gratis para hiperconcentración | Doubly",
+    "description": "Temporizador de hiperconcentración para TDAH: te avisa cada X minutos y dice la hora en voz alta para que no se te vayan seis horas. Gratis, sin registro.",
+    "ogTitle": "Temporizador de hiperconcentración gratis + avisos para el TDAH",
+    "ogDescription": "Programa avisos hablados y sonoros para que una sesión de hiperconcentración no se coma toda tu tarde. Gratis, sin registro.",
+    "twitterTitle": "Temporizador de hiperconcentración gratis + avisos para el TDAH",
+    "twitterDescription": "Avisos hablados y sonoros en un intervalo fijo. Gratis, sin registro."
+  },
+  "h1": "Temporizador de hiperconcentración gratis",
+  "breadcrumbLabel": "Temporizador de hiperconcentración",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbTools": "Herramientas",
+  "answerCapsule": "**Un temporizador de hiperconcentración programa avisos recurrentes, cada 20 a 45 minutos por defecto, para que un túnel de enfoque propio del TDAH no se trague en silencio seis horas de tu día.** Esta versión gratis en el navegador suena, si quieres dice en voz alta la hora y la tarea que anotaste, y te pregunta si sigues en ella. Una parada obligatoria aparte se dispara una sola vez al llegar a la duración máxima de sesión que fijes. Sin registro, sin instalar nada, y tus ajustes se quedan en tu dispositivo.",
+  "intro": "La hiperconcentración es la mitad del TDAH de la que casi nunca se habla. La mitad que desde fuera parece productividad, mientras dentro del túnel te olvidas de beber agua, te pierdes reuniones y sales a la superficie a las 7 de la tarde preguntándote adónde se fue la tarde. La solución no es más enfoque. Es una interrupción fiable que rompa el hechizo el tiempo suficiente para elegir qué pasa después.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Cómo usar el temporizador de hiperconcentración",
+      "steps": [
+        {
+          "name": "Ponle nombre a la tarea por la que te sentaste",
+          "text": "Escribe una línea corta: «los impuestos», «el guion», «revisión de diseño». Es opcional, pero recomendable. El aviso hablado te la leerá en voz alta, y esa es la mejor defensa que existe contra ese cambio de pestaña que se convierte en tres horas de trabajo que no tocaba."
+        },
+        {
+          "name": "Elige un intervalo entre avisos",
+          "text": "30 minutos es un valor por defecto sensato. Usa 20 si sueles ignorar el aviso, y de 45 a 60 si los intervalos cortos te destrozan el flujo."
+        },
+        {
+          "name": "Fija una parada obligatoria (opcional, pero recomendable)",
+          "text": "Elige una duración total máxima para la sesión. El tope es un aviso aparte y más fuerte que se dispara una sola vez, sin importar cuántas veces hayas pulsado «Sigo en ello»."
+        },
+        {
+          "name": "Pulsa Empezar y ponte a trabajar",
+          "text": "Cuando llegue el aviso, la página suena, si quieres dice en voz alta la hora y tu tarea, y te pregunta si sigues en ella. Elige Sigo en ello, Tomar un descanso o Parar."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por qué esto funciona en cerebros con TDAH",
+      "paragraphs": [
+        "El TDAH suele describirse como un déficit de atención, pero investigadores como el Dr. Russell Barkley lo enmarcan con más precisión como una diferencia en la autorregulación, incluida la regulación de la atención misma. Eso significa que los cerebros con TDAH no solo prestan poca atención: también prestan demasiada. La hiperconcentración es lo que ocurre cuando un tema es lo bastante novedoso, interesante o estimulante como para que la maquinaria habitual de cambiar el foco deje de dispararse. El túnel se estrecha y el mundo de fuera se desvanece.",
+        "Desde dentro, una sesión de hiperconcentración se vive como un estado de flujo. Desde fuera son comidas saltadas, mensajes sin responder y una espalda agarrotada. El coste es real aunque el trabajo salga bien. Un aviso sonoro y recurrente externaliza, casi sin esfuerzo, esa autosupervisión que un cerebro con TDAH metido en el túnel no puede hacer por sí solo. Es el mismo principio que hay detrás de una cuenta atrás visual para la ceguera al tiempo, aplicado al fallo contrario.",
+        "Por qué importa que diga la hora en voz alta: las señales visuales se absorben dentro del trabajo. Puedes mirar un reloj y no verlo. El audio llega de otra forma, sobre todo el sonido de una frase, que la parte del lenguaje de tu cerebro tiene que procesar antes de poder ignorarla. [CHADD](https://chadd.org/about-adhd/overview/), el recurso nacional sobre el TDAH en Estados Unidos, incluye las señales externas y los apoyos estructurados para el tiempo entre las estrategias prácticas recomendadas para adultos con TDAH."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "q": "¿Qué es un temporizador de hiperconcentración?",
+          "a": "Un temporizador de hiperconcentración es una alarma recurrente que te interrumpe en un intervalo fijo, normalmente cada 20 a 45 minutos, para que una sesión de concentración profunda lleve incorporada una salida a la superficie. En vez de contar hacia atrás hasta el final de un solo intervalo, se vuelve a disparar durante toda la sesión, que es lo que de verdad necesita quien tiene una hiperconcentración propia del TDAH. El aviso es fuerte o hablado, para que atraviese la visión de túnel."
+        },
+        {
+          "q": "¿En qué se diferencia de un temporizador pomodoro?",
+          "a": "Un temporizador pomodoro alterna entre un intervalo de enfoque de 25 minutos y un descanso de 5, y está hecho para quien tiene dificultades para empezar. Un temporizador de hiperconcentración está hecho para el problema contrario: empezar va bien, parar no. No te obliga a descansar, solo te saca del túnel el tiempo suficiente para que notes la hora, el día, tu vejiga y si de verdad deberías seguir haciendo esto."
+        },
+        {
+          "q": "¿Por qué importa que anuncie la hora?",
+          "a": "Durante un episodio de hiperconcentración, la sensación del paso del tiempo desaparece. Un aviso hablado de la hora funciona donde no funciona una mirada al reloj, porque el audio te alcanza incluso con los ojos clavados en la pantalla. Oír «son las 2:45 de la tarde, llevas dos horas en esto» es lo que rompe el hechizo. El sonido por sí solo es fácil de ignorar."
+        },
+        {
+          "q": "¿Qué intervalo debería elegir?",
+          "a": "Empieza con 30 minutos. Si ves que ignoras el sonido o lo entierras, bájalo a 20. Si el intervalo te rompe el flujo en vez de protegerte de él, prueba con 45 o 60. La meta es el intervalo más largo que aún te saque a tomar aire de forma fiable. No hay una respuesta correcta, solo la que le funcione a tu cerebro esta semana."
+        },
+        {
+          "q": "¿Para qué sirve la parada obligatoria?",
+          "a": "El tope de sesión es un aviso más fuerte y con un sonido distinto que llega a una duración total máxima, 2 horas por defecto. Cubre el caso en el que pulsas «Sigo en ello» en cada aviso y te habrías quedado en el escritorio hasta medianoche. Es una señal aparte, no un aviso de control más, para que el cerebro reptiliano no pueda confundirla con el de siempre."
+        },
+        {
+          "q": "¿El aviso hablado funcionará en mi móvil?",
+          "a": "Usa la Web Speech API del navegador, que funciona en las versiones modernas de Safari en iOS, Chrome en Android y los navegadores de escritorio. En iOS la página tiene que quedarse abierta y puede que necesites tocar una vez sobre ella para que el navegador sepa que permitiste el audio. Si tu móvil está en silencio, el sonido quedará silenciado, pero el aviso hablado sigue saliendo por el altavoz."
+        },
+        {
+          "q": "¿El temporizador sigue corriendo cuando la pestaña está en segundo plano?",
+          "a": "Sí. El intervalo está anclado al reloj real, no a un contador de JavaScript de esos que los navegadores ralentizan en las pestañas en segundo plano. El aviso llega a su hora aunque te hayas cambiado a otra ventana. Si das permiso, se lanza una notificación de escritorio cuando la pestaña está oculta, el título de la pestaña parpadea y el sonido se vuelve más fuerte y más frecuente cuanto más lo ignoras. En los dispositivos compatibles se solicita un bloqueo de pantalla activa (wake lock)."
+        },
+        {
+          "q": "¿Por qué la hora del aviso varía un minuto o dos en cada ronda?",
+          "a": "Cada intervalo lleva a propósito una variación de alrededor del diez por ciento. Un aviso perfectamente predecible es de los que un cerebro hiperconcentrado aprende a anticipar y a descartar antes incluso de registrarlo conscientemente. Un pequeño desfase impredecible, a veces 27 minutos, a veces 33, desactiva ese descarte anticipado. El promedio a lo largo de la sesión sigue siendo el intervalo que elegiste."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Herramientas relacionadas",
+    "body": "Si el problema es empezar y no parar, prueba el [temporizador pomodoro para el TDAH](/tools/pomodoro) para intervalos cortos y finitos con descansos incorporados. Para una cuenta atrás de una sola sesión que puedas mirar de reojo en vez de leer, el [temporizador visual](/tools/visual-timer) sirve además como reloj para la ceguera al tiempo. Si el ruido de fondo de la oficina o el de tu propia cabeza te siguen empujando de vuelta al túnel, pon debajo el [generador de ruido marrón](/tools/brown-noise). Explora la [biblioteca completa de herramientas](/tools)."
+  },
+  "cta": {
+    "headline": "Pruébalo en la app",
+    "body": "Un temporizador puede sacarte del túnel. La app de Doubly para iOS te ayuda a elegir qué hacer con la próxima hora: suelta el caos en un volcado mental, saca a la luz un siguiente paso claro y rinde cuentas ante personas reales que saben lo que se siente al perder una tarde entera.",
+    "label": "Pruébalo en la app"
+  },
+  "jsonld": {
+    "appName": "Temporizador de hiperconcentración de Doubly",
+    "appDescription": "Un temporizador de hiperconcentración gratuito, en el navegador, con avisos hablados recurrentes y una parada obligatoria opcional. Hecho para adultos con TDAH que pierden horas por la visión de túnel.",
+    "howToName": "Cómo usar el temporizador de hiperconcentración",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

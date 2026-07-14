@@ -1,8 +1,8 @@
 {
   "slug": "pick-one",
   "meta": {
-    "title": "Eine Aufgabe wählen bei Überforderung | Doubly",
-    "description": "Füg deine chaotische To-do-Liste ein und bekomm eine Sache zum Anfangen. Kleinste, gruseligste oder zufällig. Kostenlos, ohne Anmeldung, für ADHD-Gehirne.",
+    "title": "ADHS: Eine Aufgabe wählen bei Überforderung | Doubly",
+    "description": "Für ADHS-Gehirne: Füg deine chaotische To-do-Liste ein und bekomm eine Sache zum Anfangen. Kleinste, gruseligste oder zufällig. Kostenlos, ohne Anmeldung.",
     "ogTitle": "Eine Aufgabe wählen: Auswahl bei Überforderung",
     "ogDescription": "Füg deine chaotische To-do-Liste ein und bekomm eine Sache zum Anfangen. Kleinste, gruseligste oder zufällig.",
     "twitterTitle": "Eine Aufgabe wählen: ein Tool bei Überforderung",
@@ -32,7 +32,7 @@
           "text": "Du bekommst eine Sache, groß und klar, mit einer kurzen Begründung. Das ist die eine."
         },
         {
-          "name": "Erledigt, oder doch nicht die",
+          "name": "Erledigt, oder doch nicht die richtige",
           "text": "Hak sie ab und bekomm die nächste, oder überspring sie und bekomm eine andere. Ohne Wertung, so oder so."
         }
       ],
@@ -41,11 +41,11 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Warum das für ADHD-Gehirne funktioniert",
+      "heading": "Warum das für ADHS-Gehirne funktioniert",
       "paragraphs": [
-        "Erwachsene mit ADHD beschreiben oft, dass sie feststecken, nicht weil eine Aufgabe schwer ist, sondern weil jede Option gleich verfügbar wirkt und keine die Aufmerksamkeit einfordert. Forschende nennen das einen Engpass der exekutiven Funktionen rund um Priorisierung und Initiierung, kein Versagen der Motivation.",
-        "Die Hürde ist die Wahl selbst. Verhaltensökonomen beschreiben das als Choice Overload: mehr Optionen, langsamere Entscheidungen, mehr Vermeidung. Für ein ADHD-Gehirn, das ohnehin bei jeder Aufgabe eine Startsteuer zahlt, summieren sich die Kosten. Wenn du das Wählen abgibst, überspringst du die Entscheidung und kommst in Bewegung.",
-        "Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) empfehlen, Entscheidungspunkte zu reduzieren, als eine zentrale ADHD-freundliche Strategie. Der Kleinste-Modus setzt auf Schwung (ein winziger Erfolg zündet den nächsten). Der Gruseligste-Modus setzt auf Erleichterung (ist das schwere Ding weg, fühlt sich der Rest leichter an). Der Zufallsmodus setzt aufs Loslassen (jede Wahl ist besser als keine Wahl)."
+        "Erwachsene mit ADHS beschreiben oft, dass sie feststecken, nicht weil eine Aufgabe schwer ist, sondern weil jede Option gleich verfügbar wirkt und keine die Aufmerksamkeit einfordert. Forschende nennen das einen Engpass der exekutiven Funktionen rund um Priorisierung und Initiierung, kein Versagen der Motivation.",
+        "Die Hürde ist die Wahl selbst. Verhaltensökonomen beschreiben das als Choice Overload: mehr Optionen, langsamere Entscheidungen, mehr Vermeidung. Für ein ADHS-Gehirn, das bei jeder Aufgabe ohnehin eine Anlaufhürde überwinden muss, summieren sich diese Kosten. Wenn du das Wählen abgibst, überspringst du die Entscheidung und kommst in Bewegung.",
+        "Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) empfehlen, Entscheidungspunkte zu reduzieren, als eine zentrale ADHS-freundliche Strategie. Der Kleinste-Modus setzt auf Schwung (ein winziger Erfolg zündet den nächsten). Der Gruseligste-Modus setzt auf Erleichterung (ist das schwere Ding weg, fühlt sich der Rest leichter an). Der Zufallsmodus setzt aufs Loslassen (jede Wahl ist besser als keine Wahl)."
       ],
       "steps": null,
       "faqs": null
@@ -63,16 +63,16 @@
           "a": "Entscheidungsmüdigkeit ist real. Auszusuchen, womit man anfängt, kostet bei Überforderung mehr Energie als die Aufgabe selbst. Wenn du die Wahl an ein Tool abgibst, überspringst du das Kreiseln und kommst in Bewegung. Du kannst die Wahl jederzeit überstimmen."
         },
         {
-          "q": "Ist das hilfreich bei ADHD?",
-          "a": "Ja. ADHD-Gehirne bleiben oft beim Wählen hängen, nicht beim Tun. Die Wahl wegzunehmen und gesagt zu bekommen „Fang mit dieser an“ umgeht einen häufigen Punkt des Feststeckens. Es ist dieselbe Logik wie hinter dem Muster „ein nächster Schritt“."
+          "q": "Ist das hilfreich bei ADHS?",
+          "a": "Ja. ADHS-Gehirne bleiben oft beim Wählen hängen, nicht beim Tun. Die Wahl abzunehmen und einfach zu sagen „Fang mit dieser an“ umgeht einen häufigen Punkt des Feststeckens. Dahinter steckt dieselbe Logik wie hinter dem Prinzip „ein nächster Schritt“."
         },
         {
           "q": "Speichert es meine Liste?",
-          "a": "Deine Liste bleibt über localStorage in deinem Browser. Es wird nichts an irgendeinen Server gesendet. Leerst du das Feld, wird auch der Speicher geleert. Es gibt kein Konto."
+          "a": "Deine Liste bleibt per localStorage in deinem Browser. Nichts davon wird an einen Server gesendet. Leerst du das Feld, wird auch der Speicher geleert. Ein Konto brauchst du nicht."
         },
         {
           "q": "Was ist der Unterschied zwischen Kleinste und Gruseligste?",
-          "a": "Bei Kleinste geht es um Schwung. Hol dir einen winzigen Erfolg und reite dann die Welle. Bei Gruseligste geht es um Erleichterung. Bring das schwere Ding hinter dich, damit sich der Rest der Liste leichter anfühlt. Beides ist gültig, nimm, was du heute brauchst."
+          "a": "Bei Kleinste geht es um Schwung. Hol dir einen winzigen Erfolg und reite dann die Welle. Bei Gruseligste geht es um Erleichterung. Bring das schwere Ding hinter dich, damit sich der Rest der Liste leichter anfühlt. Beides ist völlig okay, nimm, was du heute brauchst."
         }
       ],
       "steps": null,
@@ -81,7 +81,7 @@
   ],
   "related": {
     "heading": "Verwandte Tools",
-    "body": "Wenn sich die Liste auch nach dem Wählen noch zu lang anfühlt, mach erst einen [Brain Dump](/tools/brain-dump), um den mentalen Ballast loszuwerden. Um die Liste nach Wichtigkeit und Dringlichkeit zu sortieren, statt blind zu wählen, öffne die [ADHD-Eisenhower-Matrix](/tools/eisenhower-matrix). Aufgabe gewählt? Zerleg sie mit dem [Tool zum Aufgaben-Aufteilen](/tools/task-splitter) in machbare Schritte und begrenze den ersten Schritt dann zeitlich mit dem [ADHD-Pomodoro-Timer](/tools/pomodoro). Stöber in der [kompletten Tool-Bibliothek](/tools)."
+    "body": "Wenn sich die Liste auch nach dem Wählen noch zu lang anfühlt, mach erst einen [Brain Dump](/tools/brain-dump), um den mentalen Ballast loszuwerden. Um die Liste nach Wichtigkeit und Dringlichkeit zu sortieren, statt blind zu wählen, öffne die [ADHS-Eisenhower-Matrix](/tools/eisenhower-matrix). Aufgabe gewählt? Zerleg sie mit dem [Tool zum Aufgaben-Aufteilen](/tools/task-splitter) in machbare Schritte und begrenze den ersten Schritt dann zeitlich mit dem [ADHS-Pomodoro-Timer](/tools/pomodoro). Stöber in der [kompletten Tool-Bibliothek](/tools)."
   },
   "cards": null,
   "openTool": null,
@@ -93,7 +93,7 @@
   },
   "jsonld": {
     "appName": "Doubly Tool zum Wählen einer Aufgabe",
-    "appDescription": "Ein kostenloses Online-Tool zum Wählen einer Aufgabe. Füg eine chaotische To-do-Liste ein, und das Tool wählt anhand von kleinste, gruseligste oder zufällig eine Sache zum Anfangen. Für ADHD-Gehirne gemacht.",
+    "appDescription": "Ein kostenloses Online-Tool zum Wählen einer Aufgabe. Füg eine chaotische To-do-Liste ein, und das Tool wählt anhand von kleinste, gruseligste oder zufällig eine Sache zum Anfangen. Für ADHS-Gehirne gemacht.",
     "howToName": "So nutzt du das Tool zum Wählen einer Aufgabe",
     "collectionName": null,
     "collectionDescription": null

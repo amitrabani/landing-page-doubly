@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Gratis hyperfocus-timer + ADHD-check-in-alarm | Doubly",
+    "description": "Gratis hyperfocus-timer die je elke X minuten onderbreekt en de tijd hardop noemt, zodat je niet zes uur kwijtraakt. Geen registratie, draait in je browser.",
+    "ogTitle": "Gratis hyperfocus-timer + ADHD-check-in-alarm",
+    "ogDescription": "Plan luide, gesproken check-ins, zodat een hyperfocus-sessie niet je hele middag opeet. Gratis, geen registratie.",
+    "twitterTitle": "Gratis hyperfocus-timer + ADHD-check-in-alarm",
+    "twitterDescription": "Luide, gesproken check-ins op een vast interval. Gratis, geen registratie."
+  },
+  "h1": "Gratis hyperfocus-timer",
+  "breadcrumbLabel": "Hyperfocus-timer",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Een hyperfocus-timer plant terugkerende check-ins in, standaard elke 20 tot 45 minuten, zodat een ADHD-focustunnel niet ongemerkt zes uur van je dag opslokt.** Deze gratis browserversie geeft een geluidssignaal, noemt eventueel de tijd en de taak die je hebt opgeschreven, en vraagt of je er nog mee bezig bent. Daarnaast gaat er één keer een harde stop af bij de maximale sessieduur die je zelf instelt. Geen registratie, geen installatie, je instellingen blijven op je eigen apparaat.",
+  "intro": "Hyperfocus is de helft van ADHD waar bijna niemand het over heeft. De helft die van buiten productief lijkt, terwijl je in de tunnel vergeet te drinken, afspraken mist en om 19.00 uur weer bovenkomt met de vraag waar de middag gebleven is. De oplossing is niet méér focus. Wat je nodig hebt is een betrouwbare onderbreking, eentje die de betovering lang genoeg verbreekt om zelf te kiezen wat er daarna gebeurt.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo gebruik je de hyperfocus-timer",
+      "steps": [
+        {
+          "name": "Benoem de taak waarvoor je bent gaan zitten",
+          "text": "Typ één korte regel: \"belastingaangifte\", \"het script\", \"design review\". Hoeft niet, maar doe het toch. De gesproken check-in leest hem hardop voor, en dat is je beste verdediging tegen dat ene tabblad dat ontaardt in drie uur totaal ander werk."
+        },
+        {
+          "name": "Kies een check-in-interval",
+          "text": "30 minuten is een prima standaard. Neem 20 als je de melding toch vaak negeert, en 45 tot 60 als kortere intervallen je flow juist kapotmaken."
+        },
+        {
+          "name": "Stel een harde stop in (optioneel, maar doe het)",
+          "text": "Kies een maximale totale sessieduur. Die grens is een aparte, hardere melding die één keer afgaat, hoe vaak je ook op \"nog bezig\" hebt gedrukt."
+        },
+        {
+          "name": "Druk op Start en ga aan de slag",
+          "text": "Bij elke check-in geeft de pagina een geluidssignaal, noemt eventueel de tijd en je taak, en vraagt of je er nog mee bezig bent. Kies Nog bezig, Pauze nemen of Stoppen."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom dit werkt voor ADHD-breinen",
+      "paragraphs": [
+        "ADHD wordt vaak omschreven als een tekort aan aandacht, maar onderzoekers als dr. Russell Barkley leggen het treffender uit: het is een verschil in zelfregulatie, inclusief het reguleren van je aandacht zelf. ADHD-breinen geven dus niet alleen te weinig aandacht, ze geven er soms ook veel te veel. Hyperfocus ontstaat als een onderwerp zo nieuw, interessant of prikkelend is dat het schakelmechanisme van je aandacht er gewoon mee ophoudt. De tunnel wordt smal en de wereld daarbuiten vervaagt.",
+        "Van binnenuit voelt een hyperfocus-sessie als flow. Van buitenaf zie je overgeslagen lunches, onbeantwoorde berichten en een stijve rug. De prijs is echt, ook als het werk goed is. Een terugkerende, hoorbare check-in kost bijna geen moeite en legt het toezicht op jezelf buiten je hoofd, precies wat een ADHD-brein in de tunnel niet meer voor elkaar krijgt. Het is hetzelfde principe als een visuele aftelklok bij tijdblindheid, alleen toegepast op het omgekeerde probleem.",
+        "Waarom die gesproken tijd zo belangrijk is: visuele signalen worden opgeslokt door het werk. Je kunt naar een klok kijken zonder hem te zien. Geluid komt anders binnen, zeker het geluid van een zin, want die moet je taalcentrum eerst verwerken voordat het hem kan negeren. [CHADD](https://chadd.org/about-adhd/overview/), de Amerikaanse landelijke ADHD-organisatie, noemt externe signalen en structuur rond tijd als praktische strategieën voor volwassenen met ADHD."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "faqs": [
+        {
+          "q": "Wat is een hyperfocus-timer?",
+          "a": "Een hyperfocus-timer is een terugkerend alarm dat je op een vast interval onderbreekt, meestal elke 20 tot 45 minuten, zodat een diep geconcentreerde sessie een ingebouwd moment krijgt om even boven water te komen. Hij telt niet af naar het einde van één blok, maar gaat de hele sessie door telkens opnieuw af, en dat is precies wat mensen met ADHD-hyperfocus nodig hebben. De melding is luid of gesproken, zodat hij door je tunnelvisie heen breekt."
+        },
+        {
+          "q": "Wat is het verschil met een pomodoro-timer?",
+          "a": "Een pomodoro-timer wisselt een focusblok van 25 minuten af met een pauze van 5 minuten en is gemaakt voor mensen die moeilijk beginnen. Een hyperfocus-timer is gemaakt voor het omgekeerde probleem: beginnen gaat prima, stoppen niet. Hij dwingt je niet tot een pauze, hij trekt je alleen even uit de tunnel: lang genoeg om de tijd te zien, de datum, je blaas, en of je hier eigenlijk nog wel mee bezig zou moeten zijn."
+        },
+        {
+          "q": "Waarom is het uitspreken van de tijd zo belangrijk?",
+          "a": "Tijdens een hyperfocus-episode verdwijnt je gevoel voor tijd volledig. Een gesproken tijdcheck werkt waar een blik op de klok faalt, want geluid bereikt je ook als je ogen aan het scherm vastgeplakt zitten. \"Het is 14.45 uur, je bent hier nu twee uur mee bezig\" horen: dát verbreekt de betovering. Alleen een piepje wuif je te makkelijk weg."
+        },
+        {
+          "q": "Welk interval moet ik kiezen?",
+          "a": "Begin met 30 minuten. Merk je dat je het geluidje negeert of wegklikt, ga dan naar 20. Breekt het interval juist je flow in plaats van dat het je beschermt, probeer dan 45 of 60. Je zoekt het langste interval dat je nog steeds betrouwbaar even boven water haalt. Er is geen goed antwoord, alleen het antwoord dat deze week werkt voor jouw brein."
+        },
+        {
+          "q": "Waar is de harde stop voor?",
+          "a": "De sessiegrens is een hardere melding met een ander geluid, bij een maximale totale duur van standaard 2 uur. Die vangt het geval af waarin je bij elke check-in op \"nog bezig\" drukt en anders tot middernacht aan je bureau was blijven zitten. Het is een apart signaal en geen check-in, zodat je reptielenbrein het niet met de gewone melding verwart."
+        },
+        {
+          "q": "Werkt de gesproken melding op mijn telefoon?",
+          "a": "Hij gebruikt de Web Speech API van de browser, die werkt in moderne iOS Safari, Android Chrome en desktopbrowsers. Op iOS moet de pagina open blijven en moet je misschien één keer op de pagina tikken, zodat de browser weet dat je geluid toestaat. Staat je telefoon op stil, dan hoor je het geluidssignaal niet, maar de gesproken melding komt nog steeds uit de speaker."
+        },
+        {
+          "q": "Loopt de timer door als het tabblad op de achtergrond staat?",
+          "a": "Ja. Het interval hangt aan de echte klok, niet aan een JavaScript-teller die browsers op achtergrondtabbladen afknijpen. De check-in gaat gewoon op tijd af, ook als je naar een ander venster bent geschakeld. Geef je toestemming, dan krijg je een melding op je bureaublad als het tabblad verborgen is, knippert de paginatitel en wordt het geluidssignaal luider en vaker naarmate je het langer negeert. Op apparaten die het ondersteunen houden we het scherm wakker."
+        },
+        {
+          "q": "Waarom verschilt het check-in-moment per ronde een minuut of twee?",
+          "a": "Elk interval schuift met opzet zo'n tien procent heen en weer. Een perfect voorspelbare melding is precies het soort dat een brein in hyperfocus leert aanvoelen en al wegwuift voordat hij bewust doordringt. Een kleine, onvoorspelbare verschuiving, soms 27 minuten, soms 33, doorbreekt dat automatische negeren. Gemiddeld over de sessie kom je nog steeds uit op het interval dat je hebt gekozen."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Is beginnen het probleem in plaats van stoppen, probeer dan de [ADHD-pomodoro-timer](/tools/pomodoro) voor korte sprintjes met een duidelijk einde en ingebouwde pauzes. Wil je één sessie kunnen aflezen met een blik in plaats van een getal te moeten lezen, dan doet de [visuele timer](/tools/visual-timer) ook dienst als klok tegen tijdblindheid. Trekt het achtergrondlawaai van kantoor of van je eigen hoofd je steeds de tunnel in, zet er dan de [bruineruisgenerator](/tools/brown-noise) onder. Bekijk de [volledige tool-bibliotheek](/tools)."
+  },
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "Een timer kan je uit de tunnel trekken. De Doubly iOS-app helpt je kiezen wat je met het volgende uur doet: dump de chaos uit je hoofd, haal er één duidelijke volgende stap uit en leg verantwoording af aan echte mensen die weten hoe het voelt om een middag kwijt te raken.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly hyperfocus-timer met check-ins",
+    "appDescription": "Een gratis online hyperfocus-timer met terugkerende gesproken check-ins en een optionele harde stop. Gemaakt voor volwassenen met ADHD die uren kwijtraken aan tunnelvisie.",
+    "howToName": "Zo gebruik je de hyperfocus-timer",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

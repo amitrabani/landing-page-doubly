@@ -1,0 +1,119 @@
+{
+  "slug": "visual-timer",
+  "meta": {
+    "title": "Minuteur visuel gratuit + cécité temporelle | Doubly",
+    "description": "Minuteur visuel gratuit : une part de cadran qui se réduit pour voir le temps passer. Fait aussi office d’horloge de cécité temporelle TDAH. Sans inscription.",
+    "ogTitle": "Minuteur visuel gratuit + horloge de cécité temporelle",
+    "ogDescription": "Un minuteur visuel dont la part de cadran se réduit et qui transforme des minutes abstraites en quelque chose que tu peux voir. Conçu pour servir d’horloge de cécité temporelle pour le TDAH.",
+    "twitterTitle": "Minuteur visuel gratuit + horloge de cécité temporelle",
+    "twitterDescription": "Un minuteur dont la part se réduit et qui rend le temps visible. Gratuit, sans inscription."
+  },
+  "h1": "Minuteur visuel gratuit en ligne",
+  "breadcrumbLabel": "Minuteur visuel",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "answerCapsule": "**Un minuteur visuel est un compte à rebours qui affiche le temps sous la forme d’une part de cadran qui se réduit : tu vois ce qu’il reste sans lire de chiffres.** Cette version en ligne gratuite fonctionne dans n’importe quel navigateur, reste précise dans les onglets en arrière-plan, et fait aussi office d’horloge de cécité temporelle pour les adultes TDAH dont le sens interne du temps n’est pas fiable. Choisis une durée, appuie sur Démarrer, et regarde la part disparaître.",
+  "intro": "Les horloges numériques te demandent de lire des chiffres et de faire un calcul mental pour sentir ce qu’il te reste. Un minuteur visuel transforme ça en quelque chose que tes yeux font automatiquement. Utilise-le pour des sprints de focus, des sessions de révision, les transitions des enfants, des réunions avec des échéances souples, ou tout moment où le temps ressenti compte plus que le décompte exact des secondes.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser le minuteur visuel",
+      "steps": [
+        {
+          "name": "Choisis une durée",
+          "text": "Appuie sur un préréglage ou saisis un nombre de minutes personnalisé. Si une tâche te paraît énorme, choisis tout petit : deux ou cinq minutes. Ton dernier réglage est mémorisé pour la prochaine fois."
+        },
+        {
+          "name": "Appuie sur Démarrer",
+          "text": "La part colorée remplit le cadran et commence à se réduire. Tu peux y jeter un œil sans lire de chiffres."
+        },
+        {
+          "name": "Travaille, regarde ou attends",
+          "text": "Utilise-le pour des sprints de focus, les transitions des enfants, des temps de parole, des réunions, ou tout ce qui a besoin d’une échéance souple. Un coup d’œil rapide te dit ce qu’il reste sans te sortir de la tâche."
+        },
+        {
+          "name": "Réinitialise et recommence",
+          "text": "Quand la part a disparu, appuie sur Réinitialiser pour relancer la même durée, ou choisis un autre préréglage."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi un minuteur visuel fonctionne",
+      "paragraphs": [
+        "Lire une horloge numérique est une tâche en deux temps. D’abord tu lis les chiffres, puis tu les soustrais de l’heure cible pour savoir ce qu’il reste. Cette soustraction vit dans la mémoire de travail, c’est-à-dire exactement la ressource que tu essaies de protéger quand tu lances un minuteur. Une part qui se réduit supprime la soustraction. Ton système visuel perçoit le changement comme il perçoit un verre qui se vide.",
+        "Ça compte tout particulièrement pour les personnes dont le sens du temps est moins précis. Les enfants, les adultes TDAH ou autistes, les personnes qui apprennent une deuxième langue, et n’importe qui dans un moment de grand stress tirent tous profit d’une représentation analogique. La version scolaire de cet appareil, le Time Timer physique, est utilisée depuis des décennies dans l’enseignement spécialisé et recommandée par les ergothérapeutes pour accompagner les transitions."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Une horloge de cécité temporelle pour le TDAH",
+      "paragraphs": [
+        "Les gens cherchent cet outil sous deux noms différents, et ils veulent la même chose. Un minuteur visuel pour un usage général. Une horloge de cécité temporelle pour le TDAH. Le cadran est identique, et la raison pour laquelle il aide est la même.",
+        "Le Dr Russell Barkley, l’un des chercheurs les plus cités sur le TDAH, décrit le trouble comme étant fondamentalement une différence dans les systèmes cérébraux qui gèrent le délai, l’autorégulation et le sens ressenti du temps futur. Selon lui, le TDAH est moins un problème d’attention qu’un problème de temps, de motivation et d’auto-observation, traités autrement que dans les cerveaux non TDAH. Au quotidien, ça veut dire que le futur semble moins réel, que les échéances arrivent d’un coup, et que l’écart entre « j’ai tout mon temps » et « je n’ai plus de temps » est plus court qu’il ne devrait l’être.",
+        "L’aménagement standard, recommandé par les recommandations cliniques, consiste à externaliser le temps. Transformer l’abstrait en concret. Une part qui se réduit fait ça sans rien demander à la mémoire de travail. L’horloge n’est pas un remède à la cécité temporelle, c’est une prothèse. [CHADD](https://chadd.org/about-adhd/overview/), l’organisme national de référence sur le TDAH aux États-Unis, cite les aides à la gestion du temps et les repères visuels parmi les stratégies pratiques recommandées aux adultes."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Qu’est-ce qu’un minuteur visuel ?",
+          "a": "Un minuteur visuel est un compte à rebours qui affiche le temps sous la forme d’une zone colorée qui rétrécit, en général une part de cadran, au lieu de simples chiffres. Tu vois le temps restant d’un coup d’œil, sans faire le calcul mental qui consiste à soustraire l’heure actuelle de l’heure cible. Du coup, les enfants, les adultes neurodivergents et les gens pressés sentent plus facilement le temps qu’il leur reste."
+        },
+        {
+          "q": "Qu’est-ce que la cécité temporelle, et en quoi un minuteur visuel aide-t-il ?",
+          "a": "La cécité temporelle, c’est la difficulté à sentir combien de temps s’est écoulé ou combien il en reste. C’est une caractéristique reconnue du TDAH, liée à des différences de fonctions exécutives et de mémoire de travail. Un minuteur visuel aide en externalisant le temps. Au lieu de demander à ton cerveau de suivre la durée en interne, la part qui se réduit le fait pour toi, et tes yeux lisent directement ce qu’il reste."
+        },
+        {
+          "q": "À qui s’adresse un minuteur visuel ?",
+          "a": "À toute personne qui a du mal à lire une horloge numérique d’un simple coup d’œil. Ça inclut les enfants qui ne savent pas encore lire, les élèves qui font leurs devoirs, les adultes TDAH ou autistes, les gens en réunion qui ont besoin d’un cadrage temporel souple, et les enseignants qui veulent que leur classe gère son propre rythme. La part qui se réduit parle de la même façon à un enfant de cinq ans et à un adulte de quarante-cinq ans."
+        },
+        {
+          "q": "Sur quelle durée le régler si j’évite une tâche ?",
+          "a": "Commence de façon absurdement petite. Deux ou cinq minutes suffisent souvent à briser le mur de l’évitement, parce que ton cerveau arrête de protester contre le fait de terminer une tâche qu’il n’a jamais à terminer. Dis-toi que tu t’arrêteras quand la part aura disparu. Une fois sur deux environ, tu continueras, et l’autre fois tu auras au moins fait cinq minutes, ce qui est plus que zéro."
+        },
+        {
+          "q": "En quoi est-ce différent d’un minuteur Pomodoro ?",
+          "a": "Un minuteur Pomodoro est une routine structurée de 25 et 5 minutes, conçue pour un travail soutenu. Un minuteur visuel est un compte à rebours polyvalent, pour n’importe quelle durée. Utilise le Pomodoro quand tu veux une méthode de focus avec des pauses intégrées. Utilise celui-ci quand tu as besoin de sentir combien de temps prend quelque chose, que ce soit deux minutes de vaisselle ou une réunion de quarante-cinq minutes."
+        },
+        {
+          "q": "Le minuteur reste-t-il précis si je change d’onglet ?",
+          "a": "Oui. Les navigateurs brident le JavaScript en arrière-plan, donc un minuteur naïf peut dériver dans un onglet caché. Celui-ci enregistre une heure de fin absolue et relit l’heure réelle à chaque tick, si bien que le temps restant reste correct même après des heures passées en arrière-plan. Le titre de l’onglet affiche aussi le décompte."
+        },
+        {
+          "q": "Dois-je m’inscrire ou installer quelque chose ?",
+          "a": "Non. Tout l’outil tourne en local dans ton navigateur. Pas de compte, pas de mur d’e-mail, pas de pop-up. Ta dernière durée utilisée et ta préférence de son sont enregistrées dans le localStorage de ton appareil, et rien n’est envoyé à un serveur."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Pour des sprints de focus structurés de 25 et 5 minutes avec des pauses intégrées, essaie le [minuteur Pomodoro TDAH](/tools/pomodoro). Si le bruit ambiant ou un esprit trop agité te sort sans cesse du travail, superpose le [générateur de bruit brun](/tools/brown-noise) au minuteur. Si le problème, c’est de perdre tout un après-midi sur une seule tâche, le [minuteur d’hyperfocus](/tools/hyperfocus-timer) programme des points de contrôle parlés à intervalle régulier. Parcours la [bibliothèque complète d’outils](/tools) ou lis la [bibliothèque de ressources Doubly](/learn) pour aller plus loin."
+  },
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "Une horloge rend le temps visible. L’appli Doubly sur iOS rend visible tout le reste du système. Vide le chaos, fais remonter une seule prochaine étape claire, et rends-toi responsable auprès de vraies personnes qui savent vraiment ce que ça fait, la cécité temporelle.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Minuteur visuel Doubly",
+    "appDescription": "Un minuteur visuel en ligne gratuit avec une part de cadran qui se réduit. Fait office d’horloge de cécité temporelle pour les adultes TDAH. Dans le navigateur, sans inscription, adapté au mobile, précis même dans les onglets en arrière-plan.",
+    "howToName": "Comment utiliser le minuteur visuel en ligne",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

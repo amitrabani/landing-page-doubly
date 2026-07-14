@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "ADHS-Wissen: Fokus, Tools & Strategien | Doubly",
+    "description": "ADHS-Guides in klarer Sprache: Fokus, Zeitblindheit, Brain Dumps und wieder ins Tun kommen. Ehrlich, evidenzbasiert, ohne erhobenen Zeigefinger.",
+    "ogTitle": "ADHS-Wissen: Fokus, Tools & Strategien",
+    "ogDescription": "ADHS-Guides in klarer Sprache: Fokus, Zeitblindheit und wieder ins Tun kommen.",
+    "twitterTitle": "ADHS-Wissen: Fokus, Tools & Strategien",
+    "twitterDescription": "ADHS-Guides in klarer Sprache: Fokus, Zeitblindheit und wieder ins Tun kommen."
+  },
+  "h1": "Wissen",
+  "breadcrumbLabel": "Wissen",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Guides in klarer Sprache: wie ein ADHS-Gehirn mit Fokus, Zeit und dem Dranbleiben umgeht. Geschrieben für echte Menschen, nicht für Algorithmen. Evidenzbasiert, ohne erhobenen Zeigefinger, ohne medizinische Aussagen.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Die ersten Artikel kommen nächste Woche",
+      "paragraphs": [
+        "Wir sitzen gerade an den ersten Texten: über Zeitblindheit, die Wissenschaft hinter dem Brain Dump und darüber, warum klassische Produktivitätstipps bei Erwachsenen mit ADHS immer wieder scheitern.",
+        "Bis dahin: Probier den [kostenlosen ADHS-Pomodoro-Timer](/tools/pomodoro) oder stöber in der [gesamten Tool-Bibliothek](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Die Doubly-iOS-App hilft dir beim Anfangen, nicht nur beim Planen. Kipp das Chaos aus dem Kopf, bekomm einen klaren nächsten Schritt und bleib dran: mit Check-ins von echten Menschen, denen dein Fortschritt nicht egal ist.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

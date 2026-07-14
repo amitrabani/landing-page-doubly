@@ -1,0 +1,104 @@
+{
+  "slug": "body-doubling-room",
+  "meta": {
+    "title": "Salle de body doubling gratuite pour le TDAH | Doubly",
+    "description": "Salle de body doubling gratuite à deux : intro, bloc de focus, débrief. Partage un lien et travaille en vidéo à côté de quelqu’un. Sans inscription.",
+    "ogTitle": "Salle de body doubling gratuite pour le focus TDAH",
+    "ogDescription": "Une salle vidéo gratuite à deux : intro guidée, bloc de focus silencieux, débrief. Travaille à côté de quelqu’un, envoie un signe, débloque-toi. Sans inscription.",
+    "twitterTitle": "Salle de body doubling gratuite pour le focus TDAH",
+    "twitterDescription": "Une salle vidéo gratuite à deux : annonce ton objectif, concentre-toi à deux, termine par un court débrief."
+  },
+  "h1": "Salle de body doubling gratuite pour les adultes TDAH",
+  "breadcrumbLabel": "Salle de body doubling",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "answerCapsule": "**Une salle de body doubling est un petit espace vidéo où deux personnes déroulent ensemble un court rituel structuré : on se salue, chacun annonce son objectif, on se concentre en silence sur un minuteur partagé, puis on partage un rapide débrief.** Cette salle gratuite tourne dans ton navigateur, te connecte en pair-à-pair avec une autre personne, te guide à travers les trois étapes, et disparaît dès que tu la quittes. Conçue pour les adultes TDAH qui trouvent plus facile de commencer quand quelqu’un est là.",
+  "intro": "Le body doubling est une stratégie d’adaptation au TDAH éprouvée depuis longtemps. L’autre personne n’a pas besoin de t’aider. Elle n’a même pas besoin de parler pendant le bloc de focus. Ce qui fait que ça marche, c’est le petit rituel autour du silence : quelqu’un qui entend ton objectif, qui reste avec toi pendant que tu le fais, et qui écoute comment ça s’est passé. Cette salle reproduit ce schéma à n’importe quelle distance.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser la salle",
+      "steps": [
+        {
+          "name": "Lance une session et partage le lien",
+          "text": "Clique sur le bouton ci-dessus. Un lien de salle privée est créé instantanément. Envoie-le à un ami, un frère ou une sœur, un collègue, ou n’importe qui avec qui tu veux travailler. Le lien est la seule chose dont l’autre a besoin."
+        },
+        {
+          "name": "Intro : fais coucou et dis ton objectif à voix haute",
+          "text": "Quand ton partenaire rejoint la salle, vous arrivez tous les deux dans une intro de 60 secondes. Caméra allumée, une phrase chacun : « Sur ce bloc, je vais rédiger l’e-mail », « Je vais nettoyer la cuisine. » Le dire à voix haute, c’est ce qui fait que ça tient."
+        },
+        {
+          "name": "Focus : tête baissée sur un minuteur partagé",
+          "text": "L’un de vous appuie sur « Démarrer le focus » et le cadran partagé lance son compte à rebours. Travaillez en silence. Micro allumé ou micro coupé, les deux vont très bien. Tape sur l’emoji coucou ou pouce levé dès que tu veux saluer ton partenaire sans briser le calme."
+        },
+        {
+          "name": "Débrief : partage une réussite, un accroc",
+          "text": "Quand le minuteur atteint zéro, une petite célébration se lance et la salle enchaîne sur un court débrief. Dis à ton partenaire ce que tu as terminé et ce qui t’a fait trébucher. Appuie sur « Terminer la session » quand tu as fini."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi ça marche pour les cerveaux TDAH",
+      "paragraphs": [
+        "Commencer une tâche est souvent le moment le plus dur pour un cerveau TDAH. L’écart entre l’intention et le mouvement peut sembler énorme, même pour des tâches qu’on a envie de faire. Ce problème d’activation est une caractéristique documentée du dysfonctionnement exécutif lié au TDAH, pas une question de volonté.",
+        "Le body doubling aide parce qu’une autre personne concentrée dans le même espace joue le rôle de régulateur externe. Ton cerveau emprunte sa structure. Tu es responsabilisé en douceur, sans pression : personne ne juge ce que tu produis, mais t’arrêter ou partir scroller devient socialement visible. Ce tout petit poids social suffit à te garder sur la page.",
+        "Les travaux de chercheurs spécialisés dans le TDAH comme le Dr Russell Barkley et le Dr Edward Hallowell décrivent ce type d’étayage externe comme l’une des interventions les plus fiables pour les adultes TDAH. La base de connaissances de [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder, l’association pour les enfants et adultes atteints de TDAH) cite les stratégies de travail en parallèle parmi les soutiens recommandés pour les adultes qui gèrent des difficultés de concentration.",
+        "Le format vidéo compte, et les deux extrémités du rituel aussi. Les appels de co-working en audio seul aident certaines personnes, mais c’est la présence silencieuse et visible d’un autre humain au travail qui parle le plus aux adultes TDAH. La courte intro et le débrief à chaque bout sont un emprunt assumé à Focusmate, la plateforme de co-working qui a enregistré des dizaines de millions de ces sessions. Dire son objectif à voix haute, puis nommer ce qu’on a accompli, c’est ce qui transforme une fenêtre passive de travail à deux en quelque chose dont ton cerveau se souvient vraiment."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Qu’est-ce que le body doubling pour le TDAH ?",
+          "a": "Le body doubling, c’est le fait de travailler à côté d’une autre personne pour rendre le démarrage et le maintien sur la tâche plus faciles. L’autre personne n’a pas à t’aider sur le travail lui-même. C’est sa présence calme et concentrée qui abaisse le coût d’activation. Beaucoup d’adultes TDAH y voient le moyen le plus fiable de commencer une tâche qu’ils évitaient."
+        },
+        {
+          "q": "Comment fonctionne la salle de body doubling ?",
+          "a": "Tu cliques sur « Lancer une session de focus » et tu obtiens un lien de salle privée. Partage ce lien avec une autre personne. Quand elle rejoint, la salle vous guide à travers un rituel en trois étapes : une courte intro où vous vous saluez et dites votre objectif à voix haute, un bloc de focus silencieux sur un minuteur partagé, et un rapide débrief où vous partagez ce que vous avez fait. Rien n’est enregistré. La salle disparaît dès que vous la quittez tous les deux."
+        },
+        {
+          "q": "Pourquoi une intro et un débrief ?",
+          "a": "Dire son objectif à voix haute à un autre humain, c’est ce à quoi la plupart des adultes TDAH attribuent le fait d’avoir enfin démarré. Ça transforme une intention floue en un petit engagement. Le débrief fait le même tour de magie à l’autre bout. Nommer ce que tu as terminé, même brièvement, rend le travail réel et rend la session suivante plus facile à lancer. La structure est empruntée aux plateformes de co-working comme Focusmate, où ce schéma exact a porté des millions de sessions."
+        },
+        {
+          "q": "Dois-je installer quelque chose ou m’inscrire ?",
+          "a": "Non. La salle tourne entièrement dans ton navigateur. Pas d’inscription, pas d’e-mail, pas d’appli à installer. Tu peux rejoindre depuis un téléphone ou un ordinateur portable. L’accès à la caméra et au micro est facultatif dans les deux cas. Si tu les refuses, tu apparais quand même dans la salle avec une tuile fantôme."
+        },
+        {
+          "q": "Puis-je envoyer une réaction sans réactiver mon micro ?",
+          "a": "Oui. Il y a quatre boutons de réaction rapide à chaque phase : un coucou, un pouce levé, un cœur et un cotillon. Appuie sur l’un d’eux et un emoji tout doux remonte sur les deux écrans. C’est le moyen le plus simple de saluer ton partenaire en plein focus sans casser la concentration de l’un ni de l’autre."
+        },
+        {
+          "q": "Peut-on être plus de deux ?",
+          "a": "Pas dans cette salle. Le body doubling marche mieux à deux, parce qu’il y a un seul partenaire de focus évident et aucune dynamique de groupe à gérer. Si une troisième personne ouvre le lien, elle verra un écran « salle pleine » et un bouton pour lancer sa propre salle en un clic."
+        },
+        {
+          "q": "Et si mon partenaire annule ou ne vient pas ?",
+          "a": "Tu peux quand même utiliser la salle en solo en attendant. La session structurée attend le partenaire avant de se déverrouiller, mais tout le reste reste disponible : l’aperçu caméra, le lien d’invitation, le champ de l’objectif. Si l’autre ne peut pas venir, envoie-lui un nouveau lien la prochaine fois. Lancer une salle est gratuit."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Une fois ta session lancée, associe la salle au [minuteur Pomodoro TDAH](/tools/pomodoro) si tu veux enchaîner plusieurs sprints de focus à la suite. Si un bloc de 25 minutes te paraît trop long, ouvre un [minuteur visuel](/tools/visual-timer) sur un second écran pour que la part continue de se réduire dans ta vision périphérique. Et si une pièce bruyante t’empêche de te poser, glisse le [générateur de bruit brun](/tools/brown-noise) en dessous. La [bibliothèque complète d’outils](/tools) rassemble tout au même endroit."
+  },
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "La salle de body doubling t’aide à lancer une session. L’appli Doubly sur iOS t’aide à savoir quoi lancer en premier lieu - vide-cerveau, une seule prochaine étape claire, et des points de suivi de responsabilisation avec de vraies personnes.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "jsonld": {
+    "appName": "Salle de body doubling Doubly",
+    "appDescription": "Une salle de body doubling gratuite à deux. Vidéo en pair-à-pair, minuteur partagé et objectif de focus commun. Conçue pour les adultes TDAH.",
+    "howToName": "Comment utiliser la salle de body doubling",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

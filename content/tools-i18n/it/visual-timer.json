@@ -1,0 +1,119 @@
+{
+  "slug": "visual-timer",
+  "meta": {
+    "title": "Timer visivo gratis + orologio cecità temporale | Doubly",
+    "description": "Timer visivo gratuito con spicchio che si riduce: vedi il tempo che passa. Funziona anche come orologio per la cecità temporale ADHD. Senza registrazione.",
+    "ogTitle": "Timer visivo gratis + orologio per la cecità temporale",
+    "ogDescription": "Un timer visivo a spicchio che si riduce e trasforma i minuti astratti in qualcosa che puoi vedere. Pensato per funzionare come orologio per la cecità temporale nell’ADHD.",
+    "twitterTitle": "Timer visivo gratis + orologio per la cecità temporale",
+    "twitterDescription": "Un timer a spicchio che si riduce e rende il tempo visibile. Gratis, senza registrazione."
+  },
+  "h1": "Timer visivo online gratuito",
+  "breadcrumbLabel": "Timer visivo",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "answerCapsule": "**Un timer visivo è un conto alla rovescia che mostra il tempo come uno spicchio che si riduce, così vedi quanto ne resta senza leggere delle cifre.** Questa versione online gratuita funziona in qualsiasi browser, resta precisa anche nelle schede in secondo piano e serve anche da orologio per la cecità temporale per gli adulti con ADHD, il cui senso interno del tempo è inaffidabile. Scegli una durata, premi Avvia e guarda lo spicchio sparire.",
+  "intro": "Gli orologi digitali ti chiedono di leggere dei numeri e di fare un calcolo a mente per sentire quanto tempo resta. Un timer visivo trasforma tutto questo in qualcosa che i tuoi occhi fanno da soli. Usalo per sprint di concentrazione, sessioni di studio, transizioni dei bambini, riunioni con scadenze morbide o per qualsiasi momento in cui la sensazione del tempo conta più del conteggio esatto dei secondi.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come usare il timer visivo",
+      "steps": [
+        {
+          "name": "Scegli una durata",
+          "text": "Tocca un preset o inserisci un numero di minuti personalizzato. Se un’attività ti sembra enorme, scegli qualcosa di piccolo, tipo due o cinque minuti. L’ultima impostazione viene ricordata per la volta successiva."
+        },
+        {
+          "name": "Premi Avvia",
+          "text": "Lo spicchio colorato riempie il quadrante e inizia a ridursi. Puoi dargli un’occhiata senza leggere numeri."
+        },
+        {
+          "name": "Lavora, guarda o aspetta",
+          "text": "Usalo per sprint di concentrazione, transizioni dei bambini, timer per parlare in pubblico, riunioni o qualsiasi cosa abbia bisogno di una scadenza morbida. Un’occhiata rapida ti dice quanto ne resta senza tirarti fuori dall’attività."
+        },
+        {
+          "name": "Azzera e riusa",
+          "text": "Quando lo spicchio è sparito, premi Azzera per rifare la stessa durata, oppure tocca un preset diverso."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché un timer visivo funziona",
+      "paragraphs": [
+        "Leggere un orologio digitale è un compito in due passaggi. Prima leggi le cifre, poi le sottrai dall’orario di arrivo per capire quanto tempo resta. Quella sottrazione vive nella memoria di lavoro, che è esattamente la risorsa che stai cercando di proteggere quando imposti un timer. Uno spicchio che si riduce salta la sottrazione. Il tuo sistema visivo percepisce il cambiamento allo stesso modo in cui percepisce un bicchiere che si svuota.",
+        "Questo conta soprattutto per chi ha un senso del tempo meno preciso. Bambini, adulti con ADHD o autismo, persone che stanno imparando una seconda lingua e chiunque si trovi in un momento di forte stress traggono beneficio da una rappresentazione analogica. La versione da classe di questo strumento, il Time Timer fisico, è usata nell’educazione speciale da decenni ed è consigliata dai terapisti occupazionali per accompagnare le transizioni."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Un orologio per la cecità temporale nell’ADHD",
+      "paragraphs": [
+        "Le persone cercano questo strumento con due nomi diversi, ma vogliono la stessa cosa. Un timer visivo per uso generico. Un orologio per la cecità temporale legata all’ADHD. Il quadrante è identico, e il motivo per cui aiuta è lo stesso.",
+        "Il dottor Russell Barkley, uno dei ricercatori più citati sull’ADHD, descrive il disturbo come, alla base, una differenza nei sistemi cerebrali che gestiscono l’attesa, l’autoregolazione e la percezione del tempo futuro. Sostiene che l’ADHD sia meno un problema di attenzione e più un problema di tempo, motivazione e automonitoraggio, elaborati in modo diverso rispetto ai cervelli non ADHD. Nella vita di tutti i giorni questo significa che il futuro sembra meno reale, le scadenze arrivano all’improvviso e lo spazio tra “ho un sacco di tempo” e “non ho più tempo” è più breve di quanto dovrebbe essere.",
+        "L’adattamento standard, raccomandato dalle linee guida cliniche, è esternalizzare il tempo. Trasformare l’astratto in concreto. Uno spicchio che si riduce lo fa senza chiedere nulla alla memoria di lavoro. L’orologio non è una cura per la cecità temporale, è una protesi. [CHADD](https://chadd.org/about-adhd/overview/), l’associazione nazionale di riferimento per l’ADHD, elenca i supporti per la gestione del tempo e gli indizi visivi tra le strategie pratiche consigliate agli adulti."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Che cos’è un timer visivo?",
+          "a": "Un timer visivo è un conto alla rovescia che mostra il tempo come una forma colorata che si riduce, di solito uno spicchio, invece che solo con delle cifre. Vedi il tempo rimasto con un’occhiata, senza fare il calcolo mentale di sottrarre l’ora attuale da quella di arrivo. Questo rende più facile, per i bambini, per gli adulti neurodivergenti e per chiunque abbia fretta, sentire quanto tempo resta."
+        },
+        {
+          "q": "Che cos’è la cecità temporale e come aiuta un timer visivo?",
+          "a": "La cecità temporale è la difficoltà a percepire quanto tempo è passato o quanto ne resta. È una caratteristica riconosciuta dell’ADHD, legata a differenze nelle funzioni esecutive e nella memoria di lavoro. Un timer visivo aiuta esternalizzando il tempo. Invece di chiedere al tuo cervello di tenere il conto della durata dall’interno, lo fa lo spicchio che si riduce, e i tuoi occhi leggono quanto ne resta."
+        },
+        {
+          "q": "A chi serve un timer visivo?",
+          "a": "A chiunque fatichi a leggere al volo un orologio digitale. Questo include i bambini che non sanno ancora leggere, gli studenti alle prese con i compiti, gli adulti con ADHD o autismo, chi partecipa a riunioni che hanno bisogno di un limite di tempo morbido e gli insegnanti che vogliono che la classe si autoregoli. Lo spicchio che si riduce parla allo stesso modo a un bambino di cinque anni e a un adulto di quarantacinque."
+        },
+        {
+          "q": "Per quanto tempo dovrei impostarlo se sto evitando un’attività?",
+          "a": "Parti da una durata assurdamente piccola. Due o cinque minuti bastano spesso a rompere il muro dell’evitamento, perché il tuo cervello smette di protestare contro il fatto di dover finire un’attività che in realtà non deve finire affatto. Dì a te stesso che ti fermerai quando lo spicchio sarà sparito. Circa una volta su due andrai avanti, e nell’altra metà dei casi avrai comunque fatto cinque minuti, che è più di zero."
+        },
+        {
+          "q": "In cosa è diverso da un timer pomodoro?",
+          "a": "Un timer pomodoro è una routine strutturata da 25 e 5 minuti, pensata per il lavoro prolungato. Un timer visivo è un conto alla rovescia generico, per qualsiasi durata. Usa il pomodoro quando vuoi un metodo di concentrazione con le pause già incluse. Usa questo quando hai bisogno di sentire quanto dura una cosa, che siano due minuti di piatti da lavare o una riunione di quarantacinque minuti."
+        },
+        {
+          "q": "Il timer è preciso se cambio scheda?",
+          "a": "Sì. I browser rallentano il JavaScript in secondo piano, quindi un timer fatto male può sfasarsi in una scheda nascosta. Questo salva un orario di fine assoluto e rilegge l’ora reale a ogni tick, così il tempo rimanente resta corretto anche dopo che la scheda è rimasta in secondo piano per ore. Anche il titolo della scheda si aggiorna con il conto alla rovescia."
+        },
+        {
+          "q": "Devo registrarmi o installare qualcosa?",
+          "a": "No. Lo strumento funziona interamente in locale nel tuo browser. Nessun account, nessuna email da lasciare, nessun pop-up. L’ultima durata usata e la preferenza sul suono vengono salvate nel localStorage sul tuo dispositivo, e non viene inviato nulla a un server."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Per sprint di concentrazione strutturati da 25 e 5 minuti con le pause già incluse, prova il [timer pomodoro ADHD](/tools/pomodoro). Se il rumore di fondo o una mente affollata continuano a tirarti fuori dal lavoro, metti il [generatore di rumore marrone](/tools/brown-noise) sotto il timer. Se il problema è perdere un intero pomeriggio dietro a un’unica attività, il [timer per l’iperfocus](/tools/hyperfocus-timer) programma controlli vocali a intervalli ricorrenti. Sfoglia la [libreria completa di strumenti](/tools) o leggi la [libreria di risorse Doubly](/learn) per saperne di più."
+  },
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Un orologio rende visibile il tempo. L’app Doubly per iOS rende visibile tutto il resto del sistema. Svuota il caos che hai in testa, fai emergere un unico passo chiaro e renditi responsabile davanti a persone vere che sanno davvero cosa si prova con la cecità temporale.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": "Timer visivo di Doubly",
+    "appDescription": "Un timer visivo online gratuito con uno spicchio che si riduce. Funziona come orologio per la cecità temporale per gli adulti con ADHD. Basato sul browser, senza registrazione, adatto al mobile, preciso anche con le schede in secondo piano.",
+    "howToName": "Come usare il timer visivo online",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

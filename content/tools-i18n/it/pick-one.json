@@ -1,7 +1,7 @@
 {
   "slug": "pick-one",
   "meta": {
-    "title": "Scegline una: un’attività a caso per iniziare | Doubly",
+    "title": "Scegline una: selettore casuale di attività | Doubly",
     "description": "Incolla la tua lista disordinata e ottieni una cosa da cui iniziare. La più piccola, la più spaventosa o a caso. Gratis, senza registrazione, per menti ADHD.",
     "ogTitle": "Scegline una: selettore casuale di attività per il sovraccarico",
     "ogDescription": "Incolla la tua lista disordinata e ottieni una cosa da cui iniziare. La più piccola, la più spaventosa o a caso.",
@@ -13,7 +13,7 @@
   "breadcrumbTools": "Strumenti",
   "breadcrumbLabel": "Strumento Scegline una",
   "answerCapsule": "**Uno strumento «scegline una» elimina il passaggio della scelta. Incolla la tua lista, scegli una modalità (la più piccola, la più spaventosa, a caso) e ottieni una cosa da cui iniziare.** È pensato per il momento in cui una lista di dieci attività sembra un’unica cosa gigantesca e impossibile da iniziare. Non salviamo nulla sul nostro server.",
-  "intro": "Quando l’intera lista sembra impossibile, il collo di bottiglia raramente è il fare. È il decidere. «Scegline una» toglie di mezzo la decisione e ti offre un punto di partenza. Puoi sempre scegliere di nuovo.",
+  "intro": "Quando l’intera lista sembra impossibile, il collo di bottiglia raramente è il fare. È il decidere. «Scegline una» toglie di mezzo la decisione e ti dà un punto di partenza. Puoi sempre scegliere di nuovo.",
   "sections": [
     {
       "kind": "steps",
@@ -21,19 +21,19 @@
       "steps": [
         {
           "name": "Incolla la tua lista",
-          "text": "Una per riga, o disordinata con le virgole, o copiata e incollata da un’app di note. Lo strumento capisce da solo."
+          "text": "Una per riga, o alla rinfusa con le virgole, o copiata e incollata da un’app di note. Lo strumento la capisce da solo."
         },
         {
           "name": "Scegli una modalità",
-          "text": "La più piccola per lo slancio, La più spaventosa per il sollievo, Scegline una e basta per arrenderti del tutto."
+          "text": "«La più piccola» per lo slancio, «La più spaventosa» per il sollievo, «Scegline una e basta» per arrenderti del tutto."
         },
         {
           "name": "Tocca «Scegline una per me»",
-          "text": "Ottieni un solo elemento, grande e chiaro, con una spiegazione in una riga. È quella giusta."
+          "text": "Ottieni un solo elemento, grande e chiaro, con una spiegazione in una riga. È quella."
         },
         {
           "name": "Fatta, oppure non questa",
-          "text": "Segnala come completata e ottieni la prossima scelta, oppure saltala e prendine un’altra. Nessun giudizio in ogni caso."
+          "text": "Segnala come fatta e ricevi la prossima scelta, oppure saltala e prendine un’altra. Nessun giudizio, in entrambi i casi."
         }
       ],
       "faqs": null,
@@ -43,9 +43,9 @@
       "kind": "paragraphs",
       "heading": "Perché funziona per le menti ADHD",
       "paragraphs": [
-        "Gli adulti con ADHD raccontano spesso di sentirsi bloccati non perché un’attività sia difficile, ma perché ogni opzione sembra ugualmente disponibile e nessuna reclama attenzione. I ricercatori lo chiamano un collo di bottiglia delle funzioni esecutive attorno alla definizione delle priorità e all’avvio, non una mancanza di motivazione.",
+        "Gli adulti con ADHD raccontano spesso di sentirsi bloccati non perché un’attività sia difficile, ma perché ogni opzione sembra ugualmente disponibile e nessuna reclama attenzione. I ricercatori lo chiamano un collo di bottiglia delle funzioni esecutive legato alla definizione delle priorità e all’avvio, non una mancanza di motivazione.",
         "La barriera è la scelta stessa. Gli economisti comportamentali la chiamano sovraccarico di scelta: più opzioni, decisioni più lente, più evitamento. Per un cervello ADHD che paga già una tassa d’avvio su ogni attività, il costo si accumula. Delegare la scelta ti permette di saltare la decisione e metterti in moto.",
-        "Organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) consigliano di ridurre i punti di scelta come strategia di base per chi ha l’ADHD. La modalità «la più piccola» punta sullo slancio (una piccola vittoria accende la successiva). La modalità «la più spaventosa» punta sul sollievo (tolta di mezzo la cosa pesante, il resto sembra più leggero). La modalità «a caso» punta sull’arrendersi (qualsiasi scelta è meglio di nessuna scelta)."
+        "Organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) consigliano di ridurre i punti di scelta come strategia di base a misura di ADHD. La modalità «la più piccola» punta sullo slancio (una piccola vittoria accende la successiva). La modalità «la più spaventosa» punta sul sollievo (tolta di mezzo la cosa pesante, il resto sembra più leggero). La modalità «a caso» punta sulla resa (qualsiasi scelta è meglio di nessuna scelta)."
       ],
       "steps": null,
       "faqs": null
@@ -60,19 +60,19 @@
         },
         {
           "q": "Perché dovrei volere uno strumento che sceglie al posto mio?",
-          "a": "L’affaticamento da decisione è reale. Scegliere da dove iniziare quando sei sopraffatto costa più energia dell’attività stessa. Delegare la scelta a uno strumento ti permette di saltare il rimuginare e metterti in moto. Puoi sempre annullare la scelta."
+          "a": "L’affaticamento decisionale è reale. Scegliere da cosa iniziare quando sei sopraffatto costa più energia dell’attività stessa. Delegare la scelta a uno strumento ti permette di saltare il rimuginare e metterti in moto. E puoi sempre ignorare la scelta e decidere tu."
         },
         {
           "q": "È utile per l’ADHD?",
-          "a": "Sì. Le menti ADHD spesso si inceppano nella fase della scelta, non in quella del fare. Togliere la scelta e sentirsi dire «inizia da questa» aggira un punto di blocco molto comune. È la stessa logica dietro lo schema del «prossimo unico passo»."
+          "a": "Sì. Le menti ADHD spesso si inceppano nella fase della scelta, non in quella del fare. Togliere di mezzo la scelta e sentirsi dire «inizia da questa» aggira un punto di blocco molto comune. È la stessa logica dietro lo schema dell’«unico prossimo passo»."
         },
         {
           "q": "Salva la mia lista?",
-          "a": "La tua lista resta nel tuo browser tramite localStorage. Nulla viene inviato ad alcun server. Svuota il campo e anche la memoria si svuota con esso. Non c’è alcun account."
+          "a": "La tua lista resta nel tuo browser tramite localStorage. Nulla viene inviato ad alcun server. Svuota il campo e con esso si svuota anche la memoria. Non c’è alcun account."
         },
         {
           "q": "Qual è la differenza tra «la più piccola» e «la più spaventosa»?",
-          "a": "«La più piccola» riguarda lo slancio. Ottieni una piccola vittoria, poi cavalca l’onda. «La più spaventosa» riguarda il sollievo. Togliti di dosso la cosa pesante così il resto della lista sembra più leggero. Sono entrambe valide, usa quella che ti serve oggi."
+          "a": "«La più piccola» riguarda lo slancio. Ottieni una piccola vittoria, poi cavalca l’onda. «La più spaventosa» riguarda il sollievo. Togliti di dosso la cosa pesante, così il resto della lista sembra più leggero. Sono entrambe valide, usa quella che ti serve oggi."
         }
       ],
       "steps": null,
@@ -88,12 +88,12 @@
   "comingSoon": null,
   "cta": {
     "headline": "Provalo nell’app",
-    "body": "Lo strumento web sceglie un’attività da una lista incollata. L’app Doubly per iOS ricorda ogni lista che hai mai svuotato, fa emergere l’unica attività che dovresti fare dopo in base al contesto e alla cronologia, e usa controlli di responsabilità con persone reali così l’attività scelta viene davvero fatta.",
+    "body": "Lo strumento web sceglie un’attività da una lista incollata. L’app Doubly per iOS ricorda ogni lista che hai mai svuotato, fa emergere l’unica attività che dovresti fare dopo in base al contesto e alla cronologia, e usa controlli di responsabilità con persone reali, così l’attività scelta viene davvero fatta.",
     "label": "Provalo nell’app"
   },
   "jsonld": {
     "appName": "Strumento Scegline una di Doubly",
-    "appDescription": "Un selettore di attività online e gratuito. Incolla una lista disordinata e lo strumento sceglie una cosa da cui iniziare in base a: la più piccola, la più spaventosa o a caso. Fatto per le menti ADHD.",
+    "appDescription": "Un selettore di attività online e gratuito. Incolla una lista di cose da fare disordinata e lo strumento sceglie una cosa da cui iniziare in base a: la più piccola, la più spaventosa o a caso. Fatto per le menti ADHD.",
     "howToName": "Come usare lo strumento «scegline una»",
     "collectionName": null,
     "collectionDescription": null

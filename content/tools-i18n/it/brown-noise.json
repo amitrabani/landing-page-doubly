@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Generatore di rumore marrone gratis per l’ADHD | Doubly",
+    "description": "Generatore di rumore marrone gratuito nel browser. Marrone, rosa e bianco. Senza registrazione, con timer di spegnimento. Fatto per la concentrazione ADHD.",
+    "ogTitle": "Generatore di rumore marrone gratis per la concentrazione ADHD",
+    "ogDescription": "Un lettore di rumore marrone gratuito con timer di spegnimento. Marrone, rosa e bianco. Funziona offline nel tuo browser.",
+    "twitterTitle": "Generatore di rumore marrone gratuito",
+    "twitterDescription": "Marrone, rosa e bianco. Gratis, senza registrazione, funziona nel browser."
+  },
+  "h1": "Generatore di rumore marrone gratuito",
+  "breadcrumbLabel": "Generatore di rumore marrone",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Strumenti",
+  "answerCapsule": "**Il rumore marrone è un suono profondo, a bassa frequenza, che copre le distrazioni e dà a un cervello ADHD in fermento qualcosa di stabile su cui posarsi.** Questo generatore di suoni ambientali gratuito riproduce rumore marrone, rosa e bianco direttamente nel tuo browser. Nessuna registrazione, nessuna pubblicità, nessun file audio da scaricare. Scegli un suono, regola il volume, aggiungi un timer di spegnimento se vuoi, e torna al lavoro.",
+  "intro": "Il generatore qui sopra funziona con la Web Audio API, quindi il suono viene creato sul tuo dispositivo in tempo reale. Vuol dire niente streaming, niente buffering, e continua a funzionare anche se salta il wifi. Prova prima il marrone. Se ti sembra troppo pesante, passa al rosa. La maggior parte degli adulti con ADHD si trova bene con il marrone.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Come usare il generatore di rumore marrone",
+      "steps": [
+        {
+          "name": "Scegli un suono",
+          "text": "Il marrone è quello profondo che cercano quasi tutti. Se il marrone ti sembra troppo pesante, prova il rosa. Il bianco è il più brillante e il più difficile da ignorare."
+        },
+        {
+          "name": "Premi play",
+          "text": "Il primo tocco crea il motore audio nel tuo browser. Sui telefoni più lenti dagli mezzo secondo. Dopo, cambiare suono è istantaneo."
+        },
+        {
+          "name": "Trova il tuo volume",
+          "text": "Abbastanza basso da riuscire ancora a sentire qualcuno che ti parla con un tono di voce normale. Se devi alzare la voce per farti sentire, è troppo alto."
+        },
+        {
+          "name": "Imposta un timer di spegnimento, se ti serve",
+          "text": "Scegli 15, 30, 60 o 90 minuti. Alla fine il suono sfuma dolcemente, così non ti fa sobbalzare. Lascialo disattivato se vuoi tenerlo acceso tutto il giorno."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Perché il rumore marrone funziona per i cervelli ADHD",
+      "paragraphs": [
+        "I cervelli ADHD tendono a orientarsi verso i suoni nuovi. Una porta che sbatte, un telefono che vibra, due persone che iniziano a parlare dietro di te. Ognuno di questi tira via un filo di attenzione da quello che stavi facendo, e riportarla indietro costa tempo e fatica reali.",
+        "Il rumore marrone non ti fa concentrare. Toglie di mezzo le cose che continuano a strapparti via la concentrazione. Un suono stabile e prevedibile copre quelli imprevedibili, così il tuo cervello smette di attivare la risposta di orientamento ogni pochi secondi.",
+        "C’è anche un dato di ricerca piccolo ma interessante. In uno studio del 2007, [Söderlund, Sikström e Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) hanno scoperto che un rumore bianco moderato migliorava le prestazioni cognitive nei bambini con difficoltà di attenzione, mentre le peggiorava leggermente nei bambini neurotipici. Il meccanismo proposto è la risonanza stocastica: l’idea che un cervello “rumoroso” possa aver bisogno di un po’ di rumore esterno per rientrare nel suo intervallo di funzionamento.",
+        "La scienza è ancora agli inizi, ma i racconti di chi lo usa sono forti e coerenti. [CHADD](https://chadd.org/about-adhd/overview/) e organizzazioni simili considerano gli strumenti sensoriali come il suono di sottofondo una cosa ragionevole da provare. Se a te funziona, tanto basta."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Domande frequenti",
+      "faqs": [
+        {
+          "q": "Che cos’è il rumore marrone?",
+          "a": "Il rumore marrone è un suono profondo e cupo, con più energia sulle basse frequenze, e prende il nome dalla matematica casuale del “moto browniano” che lo genera. Suona come una cascata costante o una pioggia battente sul tetto. Rispetto al rumore bianco è più scuro e più caldo, e la maggior parte delle persone lo trova meno aggressivo nelle sessioni lunghe."
+        },
+        {
+          "q": "È un generatore di suoni ambientali?",
+          "a": "Sì. Il rumore marrone è l’impostazione più gettonata, ma lo stesso lettore genera anche rumore rosa e bianco. Tre suoni ambientali in tutto, creati dal vivo nel tuo browser senza scaricare nessun file audio. Scegli quello che, per il tuo cervello, si dissolve meglio sullo sfondo."
+        },
+        {
+          "q": "Rumore marrone, rosa o bianco: quale scegliere?",
+          "a": "Il rumore bianco è uniforme su tutte le frequenze e suona come il fruscio di una TV. Il rumore rosa abbassa un po’ le alte frequenze, quindi risulta più morbido, come una pioggia costante. Il rumore marrone le abbassa ancora di più, quindi risulta profondo e avvolgente. Se il rumore bianco ti sembra aggressivo, prova il rosa. Se il rosa ti sembra ancora troppo brillante, prova il marrone. Scegli quello che riesci a ignorare senza sforzo."
+        },
+        {
+          "q": "Il rumore marrone aiuta la concentrazione con l’ADHD?",
+          "a": "Alcuni adulti con ADHD si concentrano meglio con un suono di sottofondo costante, e uno studio del 2007 di Söderlund e colleghi ha rilevato che un rumore uditivo moderato migliorava davvero le prestazioni cognitive nei bambini con difficoltà di attenzione. Il meccanismo più probabile è il mascheramento: un suono stabile copre i rumori imprevedibili (voci, traffico, un frigorifero che ronza) così il tuo cervello smette di orientarsi verso ogni nuovo suono."
+        },
+        {
+          "q": "È sicuro ascoltare rumore marrone tutto il giorno?",
+          "a": "Sì, a un volume ragionevole. Valgono le stesse regole di sicurezza per l’udito che valgono per la musica. Tieni il volume abbastanza basso da riuscire a sentire senza sforzo qualcuno che parla con un tono di voce normale nella stessa stanza. Il CDC raccomanda di limitare l’esposizione prolungata sopra i 70 dB. Se dopo una sessione senti le orecchie stanche o che fischiano, il volume è troppo alto."
+        },
+        {
+          "q": "Perché il rumore marrone spopola su TikTok?",
+          "a": "Su TikTok gli adulti con ADHD hanno iniziato a raccontare che il rumore marrone zittiva il continuo chiacchiericcio mentale, descrivendolo spesso come “il rumore nella mia testa è sparito”. Quella singola osservazione è diventata virale nel 2022 e nel 2023, e un’ondata di persone ha voluto provarlo. La scienza è ancora preliminare, ma i racconti di chi lo usa sono abbastanza convincenti da valere un tentativo in prima persona."
+        },
+        {
+          "q": "Funziona offline?",
+          "a": "Sì. Il suono viene generato nel tuo browser tramite la Web Audio API, non trasmesso in streaming da un server. Una volta caricata la pagina, non serve alcuna connessione a internet. Non viene registrato nulla, non viene caricato nulla, e nel lettore non ci sono pubblicità né tracker."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Strumenti correlati",
+    "body": "Il rumore marrone si abbina naturalmente a un timer per la concentrazione. Prova il [timer pomodoro ADHD](/tools/pomodoro) per sprint strutturati da 25 minuti, oppure il [timer visivo](/tools/visual-timer) se vuoi uno spicchio che si riduce e che funziona anche come orologio per la cecità temporale. Sfoglia la [libreria completa di strumenti](/tools) o leggi la [libreria di risorse Doubly](/learn) per guide su concentrazione, svuota-cervello e come sbloccarti."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Il rumore marrone ti aiuta a entrare in un’attività. L’app Doubly per iOS ti aiuta a scegliere l’attività, prima ancora: svuota-cervello, un unico passo chiaro e controlli di responsabilità da parte di persone reali.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": "Generatore di rumore marrone di Doubly",
+    "appDescription": "Un generatore di rumore marrone gratuito che funziona nel browser, con rumore rosa e bianco. Senza registrazione, con timer di spegnimento, funziona offline.",
+    "howToName": "Come usare il generatore di rumore marrone",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

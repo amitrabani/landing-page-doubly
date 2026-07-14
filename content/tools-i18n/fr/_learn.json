@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Guides TDAH : concentration, outils et stratégies | Doubly",
+    "description": "Guides en langage clair sur le TDAH : concentration, cécité temporelle, vide-cerveau, comment se débloquer. Fondés sur des preuves, sans culpabilité.",
+    "ogTitle": "Guides TDAH : concentration, outils et stratégies",
+    "ogDescription": "Des guides en langage clair sur la concentration TDAH, la cécité temporelle et comment se débloquer.",
+    "twitterTitle": "Guides TDAH : concentration, outils et stratégies",
+    "twitterDescription": "Des guides en langage clair sur la concentration TDAH, la cécité temporelle et comment se débloquer."
+  },
+  "h1": "Apprendre",
+  "breadcrumbLabel": "Apprendre",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Des guides en langage clair sur la façon dont un cerveau TDAH gère la concentration, le temps et le fait d’aller au bout des choses. Écrits pour de vraies personnes, pas pour des algorithmes. Fondés sur des preuves, sans culpabilisation et sans prétendre soigner quoi que ce soit.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Les premiers articles arrivent la semaine prochaine",
+      "paragraphs": [
+        "On rédige les premiers en ce moment : la cécité temporelle, ce que dit vraiment la science du vide-cerveau, et pourquoi les conseils de productivité classiques tombent systématiquement à plat pour les adultes TDAH.",
+        "En attendant, essaie le [minuteur Pomodoro TDAH gratuit](/tools/pomodoro) ou parcours la [bibliothèque complète d’outils](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "L’appli Doubly sur iOS t’aide à commencer, pas seulement à planifier. Vide le chaos de ta tête, repars avec une seule étape claire, et rends des comptes à de vraies personnes qui tiennent à tes progrès.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

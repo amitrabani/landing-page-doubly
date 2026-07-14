@@ -3,7 +3,7 @@ const es = {
   common: {
     tryInDoubly: 'Pruébalo en Doubly',
     changeLanguage: 'Cambiar idioma',
-    socialProof: (count: number) => `Únete a ${count.toLocaleString('es-ES')} personas con ADHD`,
+    socialProof: (count: number) => `Únete a ${count.toLocaleString('es-ES')} personas con TDAH`,
   },
 
   // Navbar
@@ -20,7 +20,7 @@ const es = {
 
   // Hero
   hero: {
-    badge: 'Hecho para cerebros con ADHD',
+    badge: 'Hecho para cerebros con TDAH',
     titlePrefix: 'Cuando tu cerebro tiene ',
     titleHighlight: '47 pestañas abiertas',
     subtitle: 'Convierte el caos en un siguiente paso claro en menos de un minuto.',
@@ -46,7 +46,7 @@ const es = {
 
   // Problem
   problem: {
-    title: 'El ADHD no es solo ser desorganizado',
+    title: 'El TDAH no es solo ser desorganizado',
     titleHighlight: 'desorganizado',
     subtitle:
       'Es una batalla diaria con un cerebro que no coopera con tus propias intenciones.',
@@ -86,11 +86,11 @@ const es = {
 
   // Guide
   guide: {
-    title: 'Hecho específicamente para cerebros con ADHD a los que les cuesta empezar',
+    title: 'Hecho específicamente para cerebros con TDAH a los que les cuesta empezar',
     subtitle:
-      'La mayoría de las apps de productividad asumen que tu cerebro está listo para planear. Doubly está hecha para el momento en que estás abrumado, bloqueado o evitando, basándose en cómo funciona realmente el ADHD.',
+      'La mayoría de las apps de productividad asumen que tu cerebro está listo para planear. Doubly está hecha para el momento en que estás abrumado, bloqueado o evitando, basándose en cómo funciona realmente el TDAH.',
     proofPoints: [
-      'Hecho para la fricción del ADHD, no para la productividad genérica',
+      'Hecho para la fricción del TDAH, no para la productividad genérica',
       'Ayuda a reducir la resistencia a iniciar',
       'Da estructura sin abrumarte',
     ],
@@ -406,18 +406,18 @@ const es = {
   // FAQ
   // ToolsSection
   toolsSection: {
-    title: 'Herramientas gratis para el ADHD que puedes usar ahora mismo',
+    title: 'Herramientas gratis para el TDAH que puedes usar ahora mismo',
     subtitle: 'Sin registro ni ventanas emergentes. Abre una en tu navegador en cuanto te quedes bloqueado.',
     hot: 'Popular',
     openTool: 'Abrir herramienta',
-    browseAll: 'Ver todas las herramientas gratis para el ADHD',
+    browseAll: 'Ver todas las herramientas gratis para el TDAH',
   },
 
   faq: {
     title: 'Preguntas',
     items: [
       {
-        q: '¿Doubly es solo para personas diagnosticadas con ADHD?',
+        q: '¿Doubly es solo para personas diagnosticadas con TDAH?',
         a: 'No. Doubly es para cualquiera que tenga problemas para empezar, se sienta abrumado o tenga desorden mental. No necesitas un diagnóstico, solo un cerebro que a veces se bloquea cuando hay demasiado que hacer.',
       },
       {
@@ -447,20 +447,20 @@ const es = {
   finalCta: {
     title: 'Tu cerebro no necesita más presión',
     highlight: 'Necesita una forma de empezar.',
-    subtitle: 'Para mentes con ADHD cansadas de darle vueltas a todo, evitar y quedarse atrás.',
+    subtitle: 'Para mentes con TDAH cansadas de darle vueltas a todo, evitar y quedarse atrás.',
     cta: 'Descárgala en la App Store',
   },
 
   // Footer
   footer: {
     brand: 'Doubly',
-    freeTools: 'Herramientas gratis para el ADHD',
+    freeTools: 'Herramientas gratis para el TDAH',
     tools: 'Herramientas',
     learn: 'Aprender',
     privacy: 'Privacidad',
     terms: 'Términos',
     support: 'Soporte',
-    copyright: (year: number) => `© ${year} Doubly. Hecho para cerebros con ADHD.`,
+    copyright: (year: number) => `© ${year} Doubly. Hecho para cerebros con TDAH.`,
   },
 
   // StickyBar
@@ -470,11 +470,11 @@ const es = {
 
   // Layout metadata
   metadata: {
-    title: 'Doubly | La app de ADHD que te ayuda a empezar',
+    title: 'Doubly | La app para el TDAH que te ayuda a empezar',
     description:
-      'Suelta el caos en un volcado mental, consigue un siguiente paso claro y usa la responsabilidad compartida para cumplir de verdad. Hecho para mentes con ADHD que necesitan ayuda para empezar, no solo para planear.',
-    keywords: ['ADHD', 'productividad', 'volcado mental', 'gestión de tareas', 'responsabilidad compartida', 'enfoque'],
-    ogTitle: 'Doubly | La app de ADHD que te ayuda a empezar',
+      'Suelta el caos en un volcado mental, consigue un siguiente paso claro y usa la responsabilidad compartida para cumplir de verdad. Hecho para mentes con TDAH que necesitan ayuda para empezar, no solo para planear.',
+    keywords: ['TDAH', 'productividad', 'volcado mental', 'gestión de tareas', 'responsabilidad compartida', 'enfoque'],
+    ogTitle: 'Doubly | La app para el TDAH que te ayuda a empezar',
     ogDescription:
       'Suelta el caos en un volcado mental, consigue un siguiente paso claro y usa la responsabilidad compartida para cumplir de verdad.',
   },

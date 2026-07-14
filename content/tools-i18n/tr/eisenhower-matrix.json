@@ -1,8 +1,8 @@
 {
   "slug": "eisenhower-matrix",
   "meta": {
-    "title": "Çevrimiçi Eisenhower Matrisi (ADHD) | Doubly",
-    "description": "'Sıkıcı ama önemli' gibi ADHD dostu çeyrekleri olan ücretsiz çevrimiçi Eisenhower matrisi. Görevleri sürükle, tarayıcında kaydet, kayıt yok.",
+    "title": "Çevrimiçi Eisenhower Matrisi (ADHD Sürümü) | Doubly",
+    "description": "Ders kitabı etiketleri yerine “sıkıcı ama önemli” gibi ADHD dostu çeyrekleri olan ücretsiz Eisenhower matrisi. Görevleri sürükle, yerel kaydet, kayıt yok.",
     "ogTitle": "Çevrimiçi Eisenhower Matrisi (ADHD Sürümü)",
     "ogDescription": "“Sıkıcı ama önemli” gibi çeyreklere sahip ADHD dostu Eisenhower matrisi. Sürükle, yerel kaydet, ücretsiz.",
     "twitterTitle": "Çevrimiçi Eisenhower Matrisi (ADHD Sürümü)",
@@ -33,7 +33,7 @@
         },
         {
           "name": "Gerisini atla, bırak ya da programla",
-          "text": "“Yangın var” bugüne gider. Gürültülü olan bekleyebilir ya da devredilebilir. Bırak, gerçekten bırakmak olabilir. Listenin tamamlanması şart değil."
+          "text": "“Yangın var” bugüne gider. “Gürültülü” olan bekleyebilir ya da devredilebilir. “Bırak” gerçekten bırakmak olabilir. Listenin bitmesi şart değil."
         }
       ],
       "paragraphs": null,
@@ -85,14 +85,14 @@
   ],
   "related": {
     "heading": "İlgili araçlar",
-    "body": "Kafan sıralama yapamayacak kadar doluysa, kaosu dışsallaştırmak için bir [beyin boşaltmayla](/tools/brain-dump) başla. Dört çeyrek bile fazlaysa, başlanacak tek bir görevi öne çıkarmak için [birini seç](/tools/pick-one) aracını kullan. Bir çeyrek maddesi seçildiğinde, onu [görev bölme aracıyla](/tools/task-splitter) yapılabilir adımlara böl ve ilk adımı [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) bir zaman kutusuna al. [Tüm araç kütüphanesine](/tools) göz at."
+    "body": "Kafan sıralama yapamayacak kadar doluysa, kaosu dışsallaştırmak için bir [beyin boşaltmayla](/tools/brain-dump) başla. Dört çeyrek bile fazlaysa, başlanacak tek bir görevi öne çıkarmak için [birini seç](/tools/pick-one) aracını kullan. Bir çeyrek maddesi seçildiğinde, onu [görev bölme aracıyla](/tools/task-splitter) yapılabilir adımlara böl ve ilk adım için [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) bir zaman kutusu ayır. [Tüm araç kütüphanesine](/tools) göz at."
   },
   "cards": null,
   "openTool": null,
   "comingSoon": null,
   "cta": {
     "headline": "Uygulamada dene",
-    "body": "Web matrisi haftalık bir düşünme aracıdır. Doubly iOS uygulaması ise bir sonraki adımı atar: neyin önemli olduğunu sıraladığında, uygulama bugün yapılacak tek sıkıcı-ama-önemli görevi öne çıkarır ve gerçekten olması için gerçek insanlardan gelen hesap verebilirlik yoklamalarını kullanır.",
+    "body": "Web matrisi haftalık bir düşünme aracıdır. Doubly iOS uygulaması ise bir sonraki adımı atar: neyin önemli olduğunu sıraladığında, uygulama bugün yapılacak tek sıkıcı-ama-önemli görevi öne çıkarır ve bunun gerçekten olması için gerçek insanlarla hesap verebilirlik yoklamaları kullanır.",
     "label": "Uygulamada dene"
   },
   "jsonld": {

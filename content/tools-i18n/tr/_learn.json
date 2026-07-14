@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Öğren - ADHD'de Odak, Araçlar ve Stratejiler | Doubly",
+    "description": "ADHD'de odak, zaman körlüğü, beyin boşaltma ve takıldığın yerden kurtulma üzerine sade dilde rehberler. Dürüst, kanıta dayalı, utandırmaca yok.",
+    "ogTitle": "Öğren - ADHD'de Odak, Araçlar ve Stratejiler",
+    "ogDescription": "Odak, zaman körlüğü ve takıldığın yerden kurtulma üzerine sade dilde ADHD rehberleri.",
+    "twitterTitle": "Öğren - ADHD'de Odak, Araçlar ve Stratejiler",
+    "twitterDescription": "Odak, zaman körlüğü ve takıldığın yerden kurtulma üzerine sade dilde ADHD rehberleri."
+  },
+  "h1": "Öğren",
+  "breadcrumbLabel": "Öğren",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "ADHD'li bir beynin odak, zaman ve başladığı işi bitirme konusunda nasıl çalıştığını anlatan sade dilde rehberler. Algoritmalar için değil, gerçek insanlar için yazıldı. Kanıta dayalı, utandırmaca yok, klinik iddia yok.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "İlk yazılar önümüzdeki hafta yayında",
+      "paragraphs": [
+        "İlk seriyi şu anda yazıyoruz: zaman körlüğü, beyin boşaltmanın arkasındaki bilim ve klasik üretkenlik tavsiyelerinin ADHD'li yetişkinlerde neden bir türlü tutmadığı.",
+        "Bu arada [ücretsiz ADHD pomodoro zamanlayıcısını](/tools/pomodoro) deneyebilir ya da [tüm araç kütüphanesine](/tools) göz atabilirsin."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Doubly iOS uygulaması sadece plan yapmana değil, başlamana yardım eder. Kafandaki karmaşayı dök, tek bir net sonraki adımı gör ve ilerlemeni gerçekten önemseyen insanlara karşı hesap verebilir kal.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "_index",
+  "meta": {
+    "title": "Gratis ADHD-tools die je op gang helpen | Doubly",
+    "description": "Gratis ADHD-tools zonder registratie: pomodoro-timers, brain dumps en meer. Gemaakt voor het moment dat je vastloopt, niet voor het moment dat je rustig plant.",
+    "ogTitle": "Gratis ADHD-tools die je op gang helpen",
+    "ogDescription": "Geen registratie. Geen pop-ups. Gratis tools voor ADHD-breinen, van het team achter de Doubly-app.",
+    "twitterTitle": "Gratis ADHD-tools die je op gang helpen",
+    "twitterDescription": "Geen registratie. Geen pop-ups. Gratis tools voor ADHD-breinen."
+  },
+  "h1": "Gratis ADHD-tools die je op gang helpen",
+  "breadcrumbLabel": "Tools",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Gratis tools zonder registratie, gemaakt voor ADHD-breinen. Bedoeld voor het moment dat het je te veel wordt, niet voor het moment dat je rustig kunt gaan plannen. Je gebruikt ze gewoon in je browser, je voortgang blijft bewaard en je stopt wanneer je wilt.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Beschikbare tools",
+      "paragraphs": null
+    }
+  ],
+  "related": null,
+  "cards": [
+    {
+      "slug": "task-splitter",
+      "title": "Takensplitter",
+      "description": "Typ een taak waar je niet aan kunt beginnen. De AI deelt hem op in kleine, haalbare stappen met een tijdsinschatting. Gemaakt voor ADHD-breinen."
+    },
+    {
+      "slug": "brain-dump",
+      "title": "Brain dump-tool",
+      "description": "Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie, niets wordt opgeslagen."
+    },
+    {
+      "slug": "pick-one",
+      "title": "Kies één taak",
+      "description": "Plak je rommelige to-dolijst en je krijgt één ding om mee te beginnen: de kleinste, de engste, of gewoon willekeurig. Voor het moment dat tien taken aanvoelen als één groot blok waar je niet aan begint."
+    },
+    {
+      "slug": "eisenhower-matrix",
+      "title": "Eisenhower-matrix (ADHD-editie)",
+      "description": "Sleep taken naar vakjes als \"saai maar belangrijk\" in plaats van naar labels uit een managementboek. De matrix die eindelijk past bij een ADHD-brein. Alles blijft lokaal opgeslagen."
+    },
+    {
+      "slug": "pomodoro",
+      "title": "ADHD-pomodoro-timer",
+      "description": "25 minuten werken, 5 minuten pauze - de focusmethode die eindelijk past bij een ADHD-brein. Gratis, geen registratie, werkt offline."
+    },
+    {
+      "slug": "visual-timer",
+      "title": "Visuele timer / tijdblindheidsklok",
+      "description": "Een krimpende taartpunt, zodat je de tijd ziet verstrijken in plaats van cijfers te moeten lezen. Werkt ook als tijdblindheidsklok voor volwassenen met ADHD."
+    },
+    {
+      "slug": "brown-noise",
+      "title": "Generator voor achtergrondgeluid",
+      "description": "Gratis generator voor achtergrondgeluid in je browser. Bruine ruis, plus roze en witte ruis. Constant geluid dat een druk ADHD-brein tot rust brengt. Met slaaptimer, werkt offline."
+    },
+    {
+      "slug": "body-doubling-room",
+      "title": "Body doubling-ruimte",
+      "description": "Gratis focusruimte voor twee. Deel een link, werk zij aan zij via peer-to-peer video en laat een gedeelde timer lopen. Geen registratie, geen installatie."
+    },
+    {
+      "slug": "hyperfocus-timer",
+      "title": "Hyperfocus-onderbrekingstimer",
+      "description": "Gesproken check-ins om de zoveel minuten en een optionele harde stop, zodat een ADHD-hyperfocus niet je hele middag opslokt."
+    }
+  ],
+  "openTool": "Tool openen",
+  "comingSoon": "Binnenkort",
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "Met de webtools begin je aan één taak. De Doubly iOS-app helpt je doorgaan - brain dump, één duidelijke volgende stap, en accountability-check-ins met echte mensen die je op koers houden.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": "Gratis ADHD-tools die je op gang helpen",
+    "collectionDescription": "Een groeiende verzameling gratis tools zonder registratie, gemaakt voor ADHD-breinen door het team achter de Doubly-app."
+  }
+}

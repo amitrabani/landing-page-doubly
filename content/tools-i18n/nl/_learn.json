@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Leren - ADHD-focus, tools en strategieën | Doubly",
+    "description": "ADHD-gidsen in gewone taal: over focus, tijdblindheid, brain dumps en weer op gang komen. Eerlijk, onderbouwd, zonder schaamte.",
+    "ogTitle": "Leren - ADHD-focus, tools en strategieën",
+    "ogDescription": "Gidsen in gewone taal over ADHD-focus, tijdblindheid en weer op gang komen.",
+    "twitterTitle": "Leren - ADHD-focus, tools en strategieën",
+    "twitterDescription": "Gidsen in gewone taal over ADHD-focus, tijdblindheid en weer op gang komen."
+  },
+  "h1": "Leren",
+  "breadcrumbLabel": "Leren",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Gidsen in gewone taal over hoe een ADHD-brein omgaat met focus, tijd en afmaken wat je begint. Geschreven voor echte mensen, niet voor algoritmes. Onderbouwd, zonder schaamte, geen medische claims.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "De eerste artikelen komen volgende week online",
+      "paragraphs": [
+        "We werken nu aan de eerste reeks: over tijdblindheid, de wetenschap achter de brain dump, en waarom standaard productiviteitsadvies keer op keer faalt bij volwassenen met ADHD.",
+        "Probeer in de tussentijd de [gratis ADHD-pomodoro-timer](/tools/pomodoro) of blader door de [volledige tool-bibliotheek](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "De Doubly iOS-app helpt je beginnen, niet alleen plannen. Dump de chaos uit je hoofd, krijg één duidelijke volgende stap, en blijf op koers met check-ins van echte mensen die met je meekijken.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

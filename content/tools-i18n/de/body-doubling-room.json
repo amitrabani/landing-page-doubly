@@ -1,0 +1,104 @@
+{
+  "slug": "body-doubling-room",
+  "meta": {
+    "title": "ADHS-Body-Doubling-Raum: kostenlos, ohne Anmeldung",
+    "description": "ADHS-Body-Doubling-Raum für zwei: Einstieg, Fokusblock, Abschluss. Teilt einen Link und arbeitet per Peer-to-Peer-Video zusammen. Kostenlos, ohne Anmeldung.",
+    "ogTitle": "ADHS-Body-Doubling-Raum, kostenlos und ohne Anmeldung",
+    "ogDescription": "Ein kostenloser Videoraum für zwei: geführter Einstieg, stiller Fokusblock, Abschluss. Zusammen arbeiten, kurz winken, gemeinsam wieder ins Tun kommen. Ohne Anmeldung.",
+    "twitterTitle": "ADHS-Body-Doubling-Raum, kostenlos und ohne Anmeldung",
+    "twitterDescription": "Ein kostenloser Videoraum für zwei: Ziel aussprechen, gemeinsam fokussieren, mit einer kurzen Reflexion abschließen."
+  },
+  "h1": "Kostenloser Body-Doubling-Raum für Erwachsene mit ADHS",
+  "breadcrumbLabel": "Body-Doubling-Raum",
+  "breadcrumbHome": "Startseite",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Ein Body-Doubling-Raum ist ein kleiner Videoraum, in dem zwei Menschen gemeinsam ein kurzes, festes Ritual durchlaufen: begrüßen, das eigene Ziel aussprechen, still auf einem gemeinsamen Timer fokussieren und danach kurz erzählen, wie es gelaufen ist.** Dieser kostenlose Raum läuft in deinem Browser, verbindet dich per Peer-to-Peer direkt mit einer anderen Person, führt dich durch alle drei Schritte und verschwindet, sobald du gehst. Gemacht für Erwachsene mit ADHS, denen das Anfangen leichter fällt, wenn jemand dabei ist.",
+  "intro": "Body Doubling ist eine seit Langem bewährte Strategie bei ADHS. Die andere Person muss dir nicht helfen. Sie muss während des Fokusblocks nicht einmal reden. Was es wirken lässt, ist das kleine Ritual rund um die Stille: jemand, der dein Ziel hört, der neben dir sitzt, während du es tust, und der hört, wie es gelaufen ist. Genau dieses Muster bildet dieser Raum nach, egal wie weit ihr voneinander entfernt seid.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du den Raum",
+      "steps": [
+        {
+          "name": "Starte eine Session und teil den Link",
+          "text": "Klick auf den Button oben. Ein privater Raum-Link wird sofort erstellt. Schick ihn an eine Freundin, deinen Bruder, eine Kollegin oder wen auch immer du beim Arbeiten dabeihaben willst. Der Link ist alles, was die Person braucht."
+        },
+        {
+          "name": "Einstieg: Winkt euch zu und sagt euer Ziel laut",
+          "text": "Sobald dein Partner dazukommt, landet ihr beide in einem 60-Sekunden-Einstieg. Kamera an, ein Satz pro Person: „In diesem Block schreibe ich den Entwurf für die E-Mail“, „Ich räume die Küche auf“. Es laut auszusprechen ist genau der Teil, der hängen bleibt."
+        },
+        {
+          "name": "Fokus: Kopf runter, gemeinsamer Timer",
+          "text": "Einer von euch tippt auf „Fokus starten“, und das gemeinsame Zifferblatt zählt herunter. Arbeitet in Stille. Mikro an oder Mikro aus, beides ist okay. Tipp jederzeit auf ein Winke- oder Daumen-hoch-Emoji, wenn du deinem Partner ein Zeichen geben willst, ohne die Ruhe zu brechen."
+        },
+        {
+          "name": "Abschluss: ein Erfolg, eine Hürde",
+          "text": "Wenn der Timer bei null ankommt, spielt eine kleine Feier-Animation, und der Raum geht in einen kurzen Abschluss über. Erzähl deinem Partner, was du fertig bekommen hast und woran du hängen geblieben bist. Tipp auf „Session beenden“, wenn ihr fertig seid."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum das für ADHS-Gehirne funktioniert",
+      "paragraphs": [
+        "Eine Aufgabe anzufangen ist für ein ADHS-Gehirn oft der schwerste Moment. Die Lücke zwischen Vorsatz und Bewegung kann sich riesig anfühlen, selbst bei Aufgaben, die man eigentlich machen will. Dieses Aktivierungsproblem ist ein dokumentiertes Merkmal der exekutiven Funktionsstörung bei ADHS, keine Frage von Willenskraft.",
+        "Body Doubling hilft, weil eine zweite, fokussierte Person im selben Raum wie ein äußerer Regler wirkt. Dein Gehirn borgt sich ihre Struktur. Du bist auf eine sanfte, druckarme Weise verbindlich: Niemand bewertet, was du lieferst, aber aufzuhören oder wegzuscrollen wird sozial sichtbar. Genau dieses kleine bisschen soziales Gewicht reicht, um dich bei der Sache zu halten.",
+        "Forscher wie Dr. Russell Barkley und Dr. Edward Hallowell beschreiben in ihrer Arbeit zu ADHS genau diese Art von äußerem Gerüst als eine der zuverlässigsten Hilfen für Erwachsene mit ADHS. Die Wissensdatenbank von [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder) führt Strategien des parallelen Arbeitens unter den empfohlenen Unterstützungen für Erwachsene auf, die mit Fokusproblemen zu kämpfen haben.",
+        "Das Videoformat ist wichtig, und das Ritual an beiden Enden genauso. Reine Audio-Calls zum gemeinsamen Arbeiten helfen manchen Menschen, aber was bei den meisten Erwachsenen mit ADHS wirkt, ist die sichtbare, stille Präsenz eines anderen arbeitenden Menschen. Der kurze Einstieg und der Abschluss sind bewusst bei Focusmate abgeschaut, der Co-Working-Plattform, die zig Millionen solcher Sessions protokolliert hat. Das Ziel laut auszusprechen und danach zu benennen, was du geschafft hast, macht aus einem passiven Co-Working-Fenster etwas, an das sich dein Gehirn tatsächlich erinnert."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Was ist Body Doubling bei ADHS?",
+          "a": "Body Doubling heißt, neben einer anderen Person zu arbeiten, damit das Anfangen und das Dranbleiben leichter fallen. Die andere Person muss bei der Arbeit selbst überhaupt nicht helfen. Es ist ihre ruhige, fokussierte Präsenz, die den Startwiderstand senkt. Viele Erwachsene mit ADHS sagen, es sei der zuverlässigste Weg, eine Aufgabe anzufangen, die sie schon lange vor sich herschieben."
+        },
+        {
+          "q": "Wie funktioniert der Body-Doubling-Raum?",
+          "a": "Du klickst auf „Fokus-Session starten“ und bekommst einen privaten Raum-Link. Teil diesen Link mit genau einer anderen Person. Sobald sie dazukommt, führt euch der Raum durch ein dreiteiliges Ritual: einen kurzen Einstieg, in dem ihr euch begrüßt und euer Ziel laut aussprecht, einen stillen Fokusblock auf einem gemeinsamen Timer und einen schnellen Abschluss, in dem ihr erzählt, was ihr geschafft habt. Nichts wird aufgezeichnet. Der Raum verschwindet, sobald ihr beide geht."
+        },
+        {
+          "q": "Wozu der Einstieg und der Abschluss?",
+          "a": "Sein Ziel laut vor einem anderen Menschen auszusprechen ist das, was die meisten Erwachsenen mit ADHS als den Auslöser fürs Loslegen nennen. Es macht aus einem vagen Vorsatz eine kleine Zusage. Der Abschluss macht am anderen Ende dasselbe. Zu benennen, was du fertig bekommen hast, und sei es nur kurz, lässt die Arbeit real werden und macht es leichter, die nächste Session zu starten. Die Struktur ist von Co-Working-Plattformen wie Focusmate übernommen, wo genau dieses Muster Millionen von Sessions angetrieben hat."
+        },
+        {
+          "q": "Muss ich etwas installieren oder mich anmelden?",
+          "a": "Nein. Der Raum läuft komplett in deinem Browser. Keine Anmeldung, keine E-Mail, keine App zum Installieren. Du kannst vom Handy oder vom Laptop aus dazukommen. Der Zugriff auf Kamera und Mikrofon ist jeweils optional. Wenn du beides weglässt, erscheinst du trotzdem im Raum, mit einer Geister-Kachel."
+        },
+        {
+          "q": "Kann ich reagieren, ohne die Stummschaltung aufzuheben?",
+          "a": "Ja. In jeder Phase gibt es vier Schnellreaktions-Buttons: Winken, Daumen hoch, Herz und Partykracher. Tipp einen an, und ein sanftes Emoji schwebt auf beiden Bildschirmen nach oben. Das ist der einfachste Weg, deinem Partner mitten im Fokus ein Zeichen zu geben, ohne die Konzentration von einem von euch zu brechen."
+        },
+        {
+          "q": "Können mehr als zwei Personen dazukommen?",
+          "a": "In diesem Raum nicht. Body Doubling funktioniert mit zwei Personen am besten, weil es genau einen klaren Fokus-Partner gibt und keine Gruppendynamik, die man managen muss. Wenn eine dritte Person den Link öffnet, sieht sie einen „Raum ist voll“-Bildschirm und einen Button, mit dem sie per Klick ihren eigenen Raum starten kann."
+        },
+        {
+          "q": "Was, wenn mein Partner absagt oder nicht auftaucht?",
+          "a": "Du kannst den Raum trotzdem allein nutzen, bis die Person kommt. Die strukturierte Session wartet auf den Partner, bevor sie freigeschaltet wird, aber alles andere bleibt verfügbar: die Kameravorschau, der Einladungslink, das Zielfeld. Wenn es diesmal nicht klappt, schick beim nächsten Mal einfach einen neuen Link. Räume zu starten ist kostenlos."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Sobald deine Session läuft, kombinier den Raum mit dem [ADHS-Pomodoro-Timer](/tools/pomodoro), wenn du mehrere Fokus-Sprints hintereinanderhängen willst. Falls sich ein 25-Minuten-Block zu lang anfühlt, leg einen [visuellen Timer](/tools/visual-timer) auf einen zweiten Bildschirm, damit das Kreissegment am Rand deines Blickfelds weiter schrumpft. Und wenn ein lauter Raum es schwer macht, reinzukommen, leg den [Brown-Noise-Generator](/tools/brown-noise) darunter. Die [komplette Tool-Bibliothek](/tools) sammelt alles an einem Ort."
+  },
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Der Body-Doubling-Raum hilft dir, eine Session zu starten. Die Doubly-iOS-App hilft dir herauszufinden, womit du überhaupt anfangen sollst: Brain Dump, ein klarer nächster Schritt und Check-ins mit echten Menschen, die dich in der Spur halten.",
+    "label": "Probier es in der App aus"
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "jsonld": {
+    "appName": "Doubly Body-Doubling-Raum",
+    "appDescription": "Ein kostenloser Body-Doubling-Raum für zwei Personen. Peer-to-Peer-Video, gemeinsamer Timer und ein gemeinsames Fokus-Ziel. Gemacht für Erwachsene mit ADHS.",
+    "howToName": "So nutzt du den Body-Doubling-Raum",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}
