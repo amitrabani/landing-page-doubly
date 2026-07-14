@@ -3,6 +3,10 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 import TimerDial from './TimerDial';
 import TimerControls from './TimerControls';
+import { useT } from '@/i18n/TranslationProvider';
+import type { Translations } from '@/translations/en';
+
+type TimerStrings = Translations['toolWidgets']['visualTimer'];
 
 type Status = 'idle' | 'running' | 'paused';
 
@@ -22,7 +26,7 @@ export type VisualTimerProps = {
   presets: number[];
   defaultMinutes: number;
   storageKey: string;
-  ariaLabel: string;
+  ariaLabel?: string;
 };
 
 type Action =
@@ -73,13 +77,13 @@ function formatTime(ms: number): string {
   return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
 }
 
-function describeDuration(ms: number): string {
+function describeDuration(ms: number, strings: TimerStrings): string {
   const total = Math.round(ms / 1000);
   const m = Math.floor(total / 60);
   const s = total % 60;
-  if (m === 0) return `${s} seconds`;
-  if (s === 0) return `${m} minute${m === 1 ? '' : 's'}`;
-  return `${m} minute${m === 1 ? '' : 's'} ${s} seconds`;
+  if (m === 0) return strings.seconds(s);
+  if (s === 0) return strings.minutes(m);
+  return strings.minutesAndSeconds(m, s);
 }
 
 function playChime(): void {
@@ -120,6 +124,8 @@ export default function VisualTimer({
   storageKey,
   ariaLabel,
 }: VisualTimerProps) {
+  const t = useT();
+  const strings = t.toolWidgets.visualTimer;
   const initialDurationMs = defaultMinutes * 60_000;
   const [state, dispatch] = useReducer(reducer, {
     status: 'idle',
@@ -179,14 +185,14 @@ export default function VisualTimer({
     if (typeof document === 'undefined') return;
     if (originalTitleRef.current === null) originalTitleRef.current = document.title;
     if (state.status === 'running') {
-      document.title = `${formatTime(state.remainingMs)} | Doubly`;
+      document.title = strings.documentTitle(formatTime(state.remainingMs));
     } else if (originalTitleRef.current) {
       document.title = originalTitleRef.current;
     }
     return () => {
       if (originalTitleRef.current) document.title = originalTitleRef.current;
     };
-  }, [state.status, state.remainingMs]);
+  }, [state.status, state.remainingMs, strings]);
 
   const start = useCallback(() => {
     if (state.status === 'idle') dispatch({ type: 'start' });
@@ -220,7 +226,7 @@ export default function VisualTimer({
 
   return (
     <section
-      aria-label={ariaLabel}
+      aria-label={ariaLabel ?? strings.ariaLabel}
       className="rounded-3xl border border-warm-dark/30 shadow-[0_4px_30px_rgba(45,43,50,0.06)] p-6 sm:p-10"
       style={CARD_STYLE}
     >
@@ -230,17 +236,17 @@ export default function VisualTimer({
           tone="coral"
           display={display}
           status={state.status}
-          ariaLabel={`Visual timer dial. ${describeDuration(state.remainingMs)} remaining.`}
+          ariaLabel={strings.dialAriaLabel(describeDuration(state.remainingMs, strings))}
         />
 
         <p className="text-sm text-muted">
           {isRunning
-            ? `Counting down from ${currentMinutes} min`
+            ? strings.countingDown(currentMinutes)
             : isPaused
-              ? 'Paused'
+              ? strings.paused
               : isFinished
-                ? 'Time is up'
-                : `Set for ${currentMinutes} min`}
+                ? strings.timeIsUp
+                : strings.setFor(currentMinutes)}
         </p>
       </div>
 
@@ -256,7 +262,7 @@ export default function VisualTimer({
 
       <div
         role="group"
-        aria-label="Duration presets"
+        aria-label={strings.presetsLabel}
         className="mt-8 flex flex-wrap items-center justify-center gap-2"
       >
         {presets.map((m) => {
@@ -280,7 +286,7 @@ export default function VisualTimer({
                   : undefined
               }
             >
-              {m} min
+              {strings.presetMinutes(m)}
             </button>
           );
         })}
@@ -300,7 +306,7 @@ export default function VisualTimer({
               : undefined
           }
         >
-          Custom
+          {strings.custom}
         </button>
       </div>
 
@@ -310,7 +316,7 @@ export default function VisualTimer({
           className="mt-4 flex flex-wrap items-end justify-center gap-3 rounded-2xl bg-white/40 backdrop-blur-sm p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]"
         >
           <label className="flex flex-col gap-1 text-sm text-charcoal-light">
-            <span>Minutes</span>
+            <span>{strings.minutesLabel}</span>
             <input
               type="number"
               min={1}
@@ -326,7 +332,7 @@ export default function VisualTimer({
             className="px-5 py-2 rounded-full text-cream font-medium shadow-[0_4px_12px_rgba(149,133,184,0.35),inset_0_1px_0_rgba(255,255,255,0.2)] hover:shadow-[0_6px_16px_rgba(149,133,184,0.4),inset_0_1px_0_rgba(255,255,255,0.25)] transition-shadow"
             style={{ background: 'linear-gradient(180deg, var(--color-lavender), var(--color-lavender-dark))' }}
           >
-            Set
+            {strings.set}
           </button>
         </div>
       )}
@@ -339,7 +345,7 @@ export default function VisualTimer({
             onChange={(e) => setSoundEnabled(e.target.checked)}
             className="h-4 w-4 rounded accent-lavender-dark"
           />
-          Sound when time is up
+          {strings.soundWhenDone}
         </label>
       </div>
     </section>

@@ -2,6 +2,14 @@
 
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
 
+import { htmlLang, isRtl } from '@/i18n/config';
+import { useLocale, useT } from '@/i18n/TranslationProvider';
+import type { Translations } from '@/translations/en';
+
+// Every user-facing string (including the spoken check-ins and the OS
+// notifications) comes from this sub-dictionary.
+type Strings = Translations['toolWidgets']['hyperfocus'];
+
 type Status = 'idle' | 'running' | 'paused' | 'check-in-due' | 'session-cap';
 
 type Settings = {
@@ -51,13 +59,11 @@ const DEFAULT_SETTINGS: Settings = {
 const JITTER_FRACTION = 0.1;
 
 const INTERVAL_PRESETS = [15, 20, 30, 45, 60, 90];
-const CAP_PRESETS: Array<{ label: string; value: number }> = [
-  { label: 'Off', value: 0 },
-  { label: '1h', value: 60 },
-  { label: '2h', value: 120 },
-  { label: '3h', value: 180 },
-  { label: '4h', value: 240 },
-];
+const CAP_PRESETS = [0, 60, 120, 180, 240];
+
+function capPresetLabel(min: number, s: Strings): string {
+  return min === 0 ? s.capOff : s.capHours(min / 60);
+}
 
 type Action =
   | { type: 'start'; now: number; firstCheckInAt: number; capAt: number | null }
@@ -150,20 +156,16 @@ function reducer(state: RunState, action: Action): RunState {
   }
 }
 
-function formatClock(ms: number): string {
+function formatClock(ms: number, lang: string): string {
   const date = new Date(ms);
-  return date.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+  return date.toLocaleTimeString(lang, { hour: 'numeric', minute: '2-digit' });
 }
 
-function formatDurationLong(ms: number): string {
+function formatDurationLong(ms: number, s: Strings): string {
   const total = Math.max(0, Math.floor(ms / 1000));
   const h = Math.floor(total / 3600);
   const m = Math.floor((total % 3600) / 60);
-  if (h === 0 && m === 0) return 'less than a minute';
-  const parts: string[] = [];
-  if (h > 0) parts.push(`${h} hour${h === 1 ? '' : 's'}`);
-  if (m > 0) parts.push(`${m} minute${m === 1 ? '' : 's'}`);
-  return parts.join(' and ');
+  return s.durationLong(h, m);
 }
 
 function formatDurationShort(ms: number): string {
@@ -259,11 +261,12 @@ function fireNotification(title: string, body: string): void {
   }
 }
 
-function speak(text: string): void {
+function speak(text: string, lang: string): void {
   try {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = lang;
     utter.rate = 0.95;
     utter.pitch = 1;
     utter.volume = 0.9;
@@ -271,6 +274,24 @@ function speak(text: string): void {
   } catch {
     // Speech failures are silent.
   }
+}
+
+// Dictionary sentences mark their emphasized run with **...** so a translation
+// can move the emphasis wherever its grammar puts the value.
+function Emphasis({ text, className }: { text: string; className: string }) {
+  return (
+    <>
+      {text.split('**').map((part, i) =>
+        i % 2 === 1 ? (
+          <span key={i} className={className}>
+            {part}
+          </span>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
 }
 
 const CARD_STYLE: React.CSSProperties = {
@@ -329,20 +350,22 @@ function StopGlyph({ className = 'w-3.5 h-3.5' }: { className?: string }) {
   );
 }
 
-function intervalLabelFor(min: number): string {
-  if (min < 60) return `${min} min`;
-  if (min % 60 === 0) return `${min / 60} h`;
+function intervalLabelFor(min: number, s: Strings): string {
+  if (min < 60) return s.minutesShort(min);
+  if (min % 60 === 0) return s.hoursShort(min / 60);
   const h = Math.floor(min / 60);
   const m = min % 60;
-  return `${h} h ${m} min`;
+  return s.hoursMinutesShort(h, m);
 }
 
-function capLabelFor(min: number): string {
-  if (min === 0) return 'no hard stop';
-  return `${min / 60} h`;
+function capLabelFor(min: number, s: Strings): string {
+  if (min === 0) return s.noHardStop;
+  return s.hoursShort(min / 60);
 }
 
 function SessionStrip({ intervalMin, capMin }: { intervalMin: number; capMin: number }) {
+  const s = useT().toolWidgets.hyperfocus;
+  const rtl = isRtl(useLocale());
   const capOff = capMin === 0;
   const totalMin = capOff ? Math.max(intervalMin * 4, intervalMin) : capMin;
   const rawCount = Math.floor(totalMin / Math.max(1, intervalMin));
@@ -354,8 +377,8 @@ function SessionStrip({ intervalMin, capMin }: { intervalMin: number; capMin: nu
       role="img"
       aria-label={
         capOff
-          ? `Check-in every ${intervalLabelFor(intervalMin)}, no hard stop`
-          : `Check-in every ${intervalLabelFor(intervalMin)}, hard stop at ${capLabelFor(capMin)}`
+          ? s.stripNoCap(intervalLabelFor(intervalMin, s))
+          : s.stripWithCap(intervalLabelFor(intervalMin, s), capLabelFor(capMin, s))
       }
       className="relative h-16 sm:h-20 w-full rounded-full overflow-hidden shadow-[inset_0_2px_6px_rgba(45,43,50,0.08),inset_0_0_0_1px_rgba(255,255,255,0.45)]"
       style={STRIP_STYLE}
@@ -363,10 +386,9 @@ function SessionStrip({ intervalMin, capMin }: { intervalMin: number; capMin: nu
       {capOff && (
         <div
           aria-hidden="true"
-          className="absolute inset-y-0 right-0 w-1/3 pointer-events-none"
+          className="absolute inset-y-0 end-0 w-1/3 pointer-events-none"
           style={{
-            background:
-              'linear-gradient(90deg, rgba(247,242,232,0) 0%, var(--color-cream) 90%)',
+            background: `linear-gradient(${rtl ? '270deg' : '90deg'}, rgba(247,242,232,0) 0%, var(--color-cream) 90%)`,
           }}
         />
       )}
@@ -377,8 +399,10 @@ function SessionStrip({ intervalMin, capMin }: { intervalMin: number; capMin: nu
         return (
           <div
             key={`bell-${i}`}
-            className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 text-charcoal"
-            style={{ left: `${pos * 100}%` }}
+            className={`absolute top-1/2 -translate-y-1/2 text-charcoal ${
+              rtl ? 'translate-x-1/2' : '-translate-x-1/2'
+            }`}
+            style={{ insetInlineStart: `${pos * 100}%` }}
           >
             <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-white/70 shadow-[0_1px_2px_rgba(45,43,50,0.18),inset_0_0_0_1px_rgba(255,255,255,0.6)]">
               <BellIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -389,7 +413,7 @@ function SessionStrip({ intervalMin, capMin }: { intervalMin: number; capMin: nu
 
       {!capOff && (
         <div
-          className="absolute top-1/2 right-3 -translate-y-1/2 text-cream"
+          className="absolute top-1/2 end-3 -translate-y-1/2 text-cream"
           aria-hidden="true"
         >
           <span
@@ -469,6 +493,11 @@ function NotifyChipIcon() {
 }
 
 export default function HyperfocusTimer() {
+  // `s` and `langTag` are stable for the life of the page (the provider hands
+  // out the imported dictionary module), so they can safely sit in the effect
+  // dependency lists below rather than being smuggled in through refs.
+  const s = useT().toolWidgets.hyperfocus;
+  const langTag = htmlLang[useLocale()];
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [hydrated, setHydrated] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialRunState());
@@ -545,11 +574,10 @@ export default function HyperfocusTimer() {
     if (now >= state.nextCheckInAt) {
       dispatch({ type: 'check-in-due', now });
       if (settings.soundEnabled) playChime(1);
-      const clock = formatClock(now);
-      const elapsedText = formatDurationLong(elapsedMs);
-      const taskPart = settings.task.trim() ? ` on ${settings.task.trim()}` : '';
+      const clock = formatClock(now, langTag);
+      const elapsedText = formatDurationLong(elapsedMs, s);
       if (settings.announceTime) {
-        speak(`Check in. It's ${clock}. You've been working${taskPart} for ${elapsedText}.`);
+        speak(s.checkInSpeech(clock, elapsedText, settings.task.trim()), langTag);
       }
       if (
         settings.notificationsEnabled &&
@@ -557,13 +585,13 @@ export default function HyperfocusTimer() {
         document.visibilityState === 'hidden'
       ) {
         fireNotification(
-          'Hyperfocus check-in',
-          `It's ${clock}. You've been at this for ${elapsedText}.`,
+          s.notificationCheckInTitle,
+          s.notificationCheckInBody(clock, elapsedText),
         );
       }
       reminderChimeRef.current = now;
     }
-  }, [state.status, state.nextCheckInAt, now, settings, elapsedMs]);
+  }, [state.status, state.nextCheckInAt, now, settings, elapsedMs, s, langTag]);
 
   useEffect(() => {
     if (state.status !== 'check-in-due') return;
@@ -591,8 +619,7 @@ export default function HyperfocusTimer() {
         return;
       }
       const seconds = Math.floor(Date.now() / 1000);
-      document.title =
-        seconds % 2 === 0 ? `⚠ Check in | Doubly` : originalTitleRef.current;
+      document.title = seconds % 2 === 0 ? s.tabAlert : originalTitleRef.current;
     };
     tick();
     const id = window.setInterval(tick, 1000);
@@ -600,7 +627,7 @@ export default function HyperfocusTimer() {
       window.clearInterval(id);
       if (originalTitleRef.current) document.title = originalTitleRef.current;
     };
-  }, [state.status]);
+  }, [state.status, s]);
 
   useEffect(() => {
     if (state.status !== 'running') return;
@@ -608,25 +635,20 @@ export default function HyperfocusTimer() {
     if (now >= state.capAt) {
       dispatch({ type: 'cap-hit', now });
       if (settings.soundEnabled) playChime(4);
-      const clock = formatClock(now);
-      const elapsedText = formatDurationLong(elapsedMs);
+      const clock = formatClock(now, langTag);
+      const elapsedText = formatDurationLong(elapsedMs, s);
       if (settings.announceTime) {
-        speak(
-          `Session cap reached. It's ${clock}. You've been at this for ${elapsedText}. Time to stop.`,
-        );
+        speak(s.capSpeech(clock, elapsedText), langTag);
       }
       if (
         settings.notificationsEnabled &&
         typeof document !== 'undefined' &&
         document.visibilityState === 'hidden'
       ) {
-        fireNotification(
-          'Hyperfocus cap reached',
-          `It's ${clock}. You've been at this for ${elapsedText}. Time to stop.`,
-        );
+        fireNotification(s.notificationCapTitle, s.notificationCapBody(clock, elapsedText));
       }
     }
-  }, [state.status, state.capAt, now, settings, elapsedMs]);
+  }, [state.status, state.capAt, now, settings, elapsedMs, s, langTag]);
 
   useEffect(() => {
     if (typeof navigator === 'undefined') return;
@@ -717,7 +739,7 @@ export default function HyperfocusTimer() {
 
   const applyInterval = useCallback((mins: number) => {
     const safe = Math.max(1, Math.min(240, Math.round(mins)));
-    setSettings((s) => ({ ...s, intervalMin: safe }));
+    setSettings((prev) => ({ ...prev, intervalMin: safe }));
     setCustomIntervalValue(String(safe));
   }, []);
 
@@ -734,7 +756,7 @@ export default function HyperfocusTimer() {
 
   return (
     <section
-      aria-label="Hyperfocus interrupt timer"
+      aria-label={s.ariaLabel}
       className="rounded-3xl border border-warm-dark/30 shadow-[0_4px_30px_rgba(45,43,50,0.06)] p-6 sm:p-10"
       style={CARD_STYLE}
     >
@@ -743,20 +765,23 @@ export default function HyperfocusTimer() {
           <SessionStrip intervalMin={settings.intervalMin} capMin={settings.maxSessionMin} />
 
           <p className="text-center text-lg sm:text-xl font-[family-name:var(--font-display)] text-charcoal leading-snug">
-            Check in every{' '}
-            <span className="font-bold">{intervalLabelFor(settings.intervalMin)}</span>
-            {settings.maxSessionMin > 0 ? (
-              <>
-                {' '}with a hard stop at{' '}
-                <span className="font-bold">{capLabelFor(settings.maxSessionMin)}</span>.
-              </>
-            ) : (
-              <> with no hard stop.</>
-            )}
+            <Emphasis
+              className="font-bold"
+              text={
+                settings.maxSessionMin > 0
+                  ? s.summaryWithCap(
+                      intervalLabelFor(settings.intervalMin, s),
+                      capLabelFor(settings.maxSessionMin, s),
+                    )
+                  : s.summaryNoCap(intervalLabelFor(settings.intervalMin, s))
+              }
+            />
           </p>
 
           <div>
-            <p className="text-sm font-medium text-charcoal mb-2 text-center">Check in every</p>
+            <p className="text-sm font-medium text-charcoal mb-2 text-center">
+              {s.intervalHeading}
+            </p>
             <div className="flex flex-wrap gap-2 justify-center">
               {INTERVAL_PRESETS.map((m) => {
                 const active = settings.intervalMin === m && !customIntervalOpen;
@@ -771,7 +796,7 @@ export default function HyperfocusTimer() {
                     className={active ? PILL_ACTIVE : PILL_INACTIVE}
                     style={active ? PILL_ACTIVE_STYLE : undefined}
                   >
-                    {m} min
+                    {s.minutesShort(m)}
                   </button>
                 );
               })}
@@ -783,7 +808,7 @@ export default function HyperfocusTimer() {
                 className={customIntervalOpen ? PILL_ACTIVE : PILL_INACTIVE}
                 style={customIntervalOpen ? PILL_ACTIVE_STYLE : undefined}
               >
-                Custom
+                {s.custom}
               </button>
             </div>
             {customIntervalOpen && (
@@ -792,7 +817,7 @@ export default function HyperfocusTimer() {
                 className="mt-3 flex flex-wrap items-end justify-center gap-3 rounded-2xl bg-white/40 backdrop-blur-sm p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]"
               >
                 <label className="flex flex-col gap-1 text-sm text-charcoal-light">
-                  <span>Minutes</span>
+                  <span>{s.minutes}</span>
                   <input
                     type="number"
                     min={1}
@@ -810,16 +835,14 @@ export default function HyperfocusTimer() {
                     background: 'linear-gradient(180deg, var(--color-lavender), var(--color-lavender-dark))',
                   }}
                 >
-                  Set
+                  {s.set}
                 </button>
               </div>
             )}
           </div>
 
           <div className="flex items-center justify-between gap-3 border-t border-warm-dark/20 pt-5">
-            <p className="text-xs text-muted">
-              Check-ins are jittered by about ten percent so the brain cannot pre-dismiss them.
-            </p>
+            <p className="text-xs text-muted">{s.jitterNote}</p>
             <button
               type="button"
               onClick={() => setCustomizeOpen((o) => !o)}
@@ -827,7 +850,7 @@ export default function HyperfocusTimer() {
               aria-controls="hyperfocus-customize"
               className="shrink-0 text-sm font-medium text-lavender-dark hover:underline"
             >
-              {customizeOpen ? 'Hide options' : 'More options'}
+              {customizeOpen ? s.hideOptions : s.moreOptions}
             </button>
           </div>
 
@@ -837,86 +860,78 @@ export default function HyperfocusTimer() {
               className="flex flex-col gap-5 rounded-2xl bg-white/40 backdrop-blur-sm p-5 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.5)]"
             >
               <label className="flex flex-col gap-2 text-sm text-charcoal-light">
-                <span className="font-medium text-charcoal">What are you working on? (optional)</span>
+                <span className="font-medium text-charcoal">{s.taskLabel}</span>
                 <input
                   type="text"
                   value={settings.task}
                   maxLength={80}
-                  onChange={(e) => setSettings((s) => ({ ...s, task: e.target.value }))}
-                  placeholder="e.g. tax forms, design review, the script"
+                  onChange={(e) => setSettings((prev) => ({ ...prev, task: e.target.value }))}
+                  placeholder={s.taskPlaceholder}
                   className="rounded-lg border border-warm-dark/40 bg-white px-3 py-2 text-charcoal focus:outline-none focus:ring-2 focus:ring-lavender"
                 />
-                <span className="text-xs text-muted">
-                  Used in spoken check-ins so you hear what you sat down to do.
-                </span>
+                <span className="text-xs text-muted">{s.taskHint}</span>
               </label>
 
               <div>
-                <p className="text-sm font-medium text-charcoal mb-2">Hard stop after</p>
+                <p className="text-sm font-medium text-charcoal mb-2">{s.hardStopHeading}</p>
                 <div className="flex flex-wrap gap-2">
                   {CAP_PRESETS.map((c) => {
-                    const active = settings.maxSessionMin === c.value;
+                    const active = settings.maxSessionMin === c;
                     return (
                       <button
-                        key={c.label}
+                        key={c}
                         type="button"
-                        onClick={() => setSettings((s) => ({ ...s, maxSessionMin: c.value }))}
+                        onClick={() => setSettings((prev) => ({ ...prev, maxSessionMin: c }))}
                         className={active ? PILL_ACTIVE : PILL_INACTIVE}
                         style={active ? PILL_ACTIVE_STYLE : undefined}
                       >
-                        {c.label}
+                        {capPresetLabel(c, s)}
                       </button>
                     );
                   })}
                 </div>
-                <p className="mt-2 text-xs text-muted">
-                  A louder alert fires once the cap is reached so a six-hour spiral cannot sneak past you.
-                </p>
+                <p className="mt-2 text-xs text-muted">{s.hardStopHint}</p>
               </div>
 
               <div>
-                <p className="text-sm font-medium text-charcoal mb-2">Alerts</p>
+                <p className="text-sm font-medium text-charcoal mb-2">{s.alertsHeading}</p>
                 <div className="flex flex-wrap gap-2">
                   <ToggleChip
                     active={settings.soundEnabled}
-                    onClick={() => setSettings((s) => ({ ...s, soundEnabled: !s.soundEnabled }))}
+                    onClick={() =>
+                      setSettings((prev) => ({ ...prev, soundEnabled: !prev.soundEnabled }))
+                    }
                     icon={<SoundChipIcon />}
-                    label="Chime"
+                    label={s.chime}
                   />
                   <ToggleChip
                     active={settings.announceTime}
-                    onClick={() => setSettings((s) => ({ ...s, announceTime: !s.announceTime }))}
+                    onClick={() =>
+                      setSettings((prev) => ({ ...prev, announceTime: !prev.announceTime }))
+                    }
                     icon={<VoiceChipIcon />}
-                    label="Voice"
+                    label={s.voice}
                   />
                   <ToggleChip
                     active={settings.notificationsEnabled && notificationState !== 'denied'}
                     disabled={notificationState === 'unsupported' || notificationState === 'denied'}
                     onClick={() => {
                       const next = !settings.notificationsEnabled;
-                      setSettings((s) => ({ ...s, notificationsEnabled: next }));
+                      setSettings((prev) => ({ ...prev, notificationsEnabled: next }));
                       if (next && notificationState === 'default') {
                         requestNotificationPermission().then((p) => setNotificationState(p));
                       }
                     }}
                     icon={<NotifyChipIcon />}
-                    label="Notify"
+                    label={s.notify}
                   />
                 </div>
-                <p className="mt-2 text-xs text-muted">
-                  Chime gets louder if a check-in is ignored. Voice speaks the time and elapsed
-                  duration. Notify fires a browser notification when the tab is in the background.
-                </p>
+                <p className="mt-2 text-xs text-muted">{s.alertsHint}</p>
                 {notificationState === 'denied' && (
-                  <p className="mt-1 text-xs text-muted">
-                    Notifications are blocked in this browser. Enable them in site settings to use
-                    this.
-                  </p>
+                  <p className="mt-1 text-xs text-muted">{s.notificationsBlocked}</p>
                 )}
                 {notificationState === 'unsupported' && (
-                  <p className="mt-1 text-xs text-muted">
-                    Your browser does not support web notifications.
-                  </p>
+                  <p className="mt-1 text-xs text-muted">{s.notificationsUnsupported}</p>
                 )}
               </div>
             </div>
@@ -924,7 +939,7 @@ export default function HyperfocusTimer() {
 
           <div className="flex justify-center">
             <button type="button" onClick={start} className={PRIMARY_CLASS} style={PRIMARY_STYLE}>
-              Start session
+              {s.startSession}
             </button>
           </div>
         </div>
@@ -933,24 +948,24 @@ export default function HyperfocusTimer() {
       {!isIdle && (
         <div className="flex flex-col items-center gap-6">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full text-center">
-            <StatBlock label="Elapsed" value={formatDurationShort(elapsedMs)} />
+            <StatBlock label={s.statElapsed} value={formatDurationShort(elapsedMs)} />
             <StatBlock
-              label="Next check-in"
+              label={s.statNextCheckIn}
               value={
                 isCheckInDue
-                  ? 'Now'
+                  ? s.statusNow
                   : isPaused
-                    ? 'Paused'
+                    ? s.statusPaused
                     : isSessionCap
-                      ? 'Cap hit'
+                      ? s.statusCapHit
                       : formatCountdown(remainingToCheckIn)
               }
             />
             <StatBlock
-              label="Cap"
+              label={s.statCap}
               value={
                 remainingToCap === null
-                  ? 'Off'
+                  ? s.statusOff
                   : isSessionCap
                     ? '00:00'
                     : formatDurationShort(remainingToCap)
@@ -960,8 +975,10 @@ export default function HyperfocusTimer() {
 
           {settings.task.trim() && (
             <p className="text-sm text-muted">
-              Working on{' '}
-              <span className="text-charcoal font-medium">{settings.task.trim()}</span>
+              <Emphasis
+                className="text-charcoal font-medium"
+                text={s.workingOn(settings.task.trim())}
+              />
             </p>
           )}
 
@@ -976,11 +993,10 @@ export default function HyperfocusTimer() {
                 id="check-in-heading"
                 className="font-[family-name:var(--font-display)] text-xl font-bold text-charcoal mb-1"
               >
-                Quick check-in
+                {s.checkInHeading}
               </h3>
               <p className="text-sm text-charcoal-light leading-6 mb-4">
-                It is {formatClock(now)} and you have been at this for {formatDurationLong(elapsedMs)}.
-                Are you still on the task you started, or is it time to surface?
+                {s.checkInBody(formatClock(now, langTag), formatDurationLong(elapsedMs, s))}
               </p>
               <div className="flex flex-wrap gap-2">
                 <button
@@ -989,21 +1005,21 @@ export default function HyperfocusTimer() {
                   className={PRIMARY_CLASS}
                   style={PRIMARY_STYLE}
                 >
-                  Still going
+                  {s.stillGoing}
                 </button>
                 <button
                   type="button"
                   onClick={() => acknowledge('break')}
                   className={GHOST_CLASS}
                 >
-                  Take a break
+                  {s.takeABreak}
                 </button>
                 <button
                   type="button"
                   onClick={() => acknowledge('stop')}
                   className={GHOST_CLASS}
                 >
-                  Stop session
+                  {s.stopSession}
                 </button>
               </div>
             </div>
@@ -1019,14 +1035,13 @@ export default function HyperfocusTimer() {
                 id="cap-heading"
                 className="font-[family-name:var(--font-display)] text-xl font-bold text-charcoal mb-1"
               >
-                Session cap reached
+                {s.capHeading}
               </h3>
               <p className="text-sm text-charcoal-light leading-6 mb-4">
-                You set a hard stop at {settings.maxSessionMin} minutes. Stand up, drink water,
-                eat something. The work will still be here.
+                {s.capBody(settings.maxSessionMin)}
               </p>
               <button type="button" onClick={reset} className={PRIMARY_CLASS} style={PRIMARY_STYLE}>
-                End session
+                {s.endSession}
               </button>
             </div>
           )}
@@ -1035,27 +1050,35 @@ export default function HyperfocusTimer() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {isRunning ? (
                 <button type="button" onClick={pause} className={PRIMARY_CLASS} style={PRIMARY_STYLE}>
-                  Pause
+                  {s.pause}
                 </button>
               ) : (
                 <button type="button" onClick={resume} className={PRIMARY_CLASS} style={PRIMARY_STYLE}>
-                  Resume
+                  {s.resume}
                 </button>
               )}
               <button type="button" onClick={reset} className={GHOST_CLASS}>
-                End session
+                {s.endSession}
               </button>
             </div>
           )}
 
           {state.checkIns.length > 0 && (
             <div className="w-full border-t border-warm-dark/20 pt-5">
-              <p className="text-sm font-medium text-charcoal mb-2">Check-in log</p>
+              <p className="text-sm font-medium text-charcoal mb-2">{s.checkInLog}</p>
               <ul className="space-y-1.5">
                 {state.checkIns.slice(-5).reverse().map((c) => (
                   <li key={c.at} className="text-sm text-charcoal-light flex items-center gap-2">
-                    <span className="tabular-nums text-muted w-14">{formatClock(c.at)}</span>
-                    <span className="capitalize">{c.action === 'continue' ? 'kept going' : c.action === 'break' ? 'took a break' : 'stopped'}</span>
+                    <span className="tabular-nums text-muted w-14">
+                      {formatClock(c.at, langTag)}
+                    </span>
+                    <span className="capitalize">
+                      {c.action === 'continue'
+                        ? s.logContinue
+                        : c.action === 'break'
+                          ? s.logBreak
+                          : s.logStop}
+                    </span>
                   </li>
                 ))}
               </ul>

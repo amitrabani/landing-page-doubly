@@ -64,14 +64,6 @@ export function createSoundBuffer(ctx: AudioContext, type: SoundType): AudioBuff
   return buffer;
 }
 
-export const SOUND_LABELS: Record<SoundType, string> = {
-  brown: 'Brown',
-  pink: 'Pink',
-  white: 'White',
-};
-
-export const SOUND_DESCRIPTIONS: Record<SoundType, string> = {
-  brown: 'Deep, rumbly. Like a distant waterfall. The TikTok one.',
-  pink: 'Softer than white, less bassy than brown. Balanced.',
-  white: 'The hiss of an old TV. Bright and even.',
-};
+// Stable ids only. The display name + description for each sound are localized
+// and resolved in the component from `t.toolWidgets.brownNoise.sounds[id]`.
+export const SOUND_ORDER: SoundType[] = ['brown', 'pink', 'white'];

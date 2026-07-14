@@ -529,6 +529,327 @@ const he = {
     },
   },
 
+  // Free ADHD tool widgets (timers, splitter, brain dump, matrix, noise, hyperfocus).
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'מה המשימה שאתם לא מצליחים להתחיל?',
+      inputPlaceholder: 'למשל: להגיש דוח הוצאות',
+      submit: 'פרקו את זה',
+      submitting: 'מפרק את זה…',
+      privacyNote: 'פרטי. שום דבר לא נשמר בשרת שלנו.',
+      charactersLeft: (count: number) => (count === 1 ? 'נשאר תו אחד' : `נשארו ${count} תווים`),
+      presetsIntro: 'או נסו אחת מאלה:',
+      presets: {
+        cleanKitchen: 'לנקות את המטבח',
+        doLaundry: 'לעשות כביסה',
+        replyInbox: 'לענות למיילים',
+        planWeekendTrip: 'לתכנן טיול סוף שבוע',
+        fileTaxes: 'להגיש דוח שנתי',
+        cleanBathroom: 'לנקות את חדר האמבטיה',
+      },
+      loading: 'מפרק את זה לצעדים…',
+      errorRateLimit: 'אתם מהירים מדי. חכו רגע ונסו שוב.',
+      errorGeneric: 'לא הצלחנו לפרק את זה כרגע. נסו שוב בעוד כמה שניות.',
+      tryAgain: 'נסו שוב',
+      taskLabel: 'משימה',
+      urgencyLabels: { low: 'דחיפות נמוכה', medium: 'דחיפות בינונית', high: 'דחיפות גבוהה' },
+      stepsDone: (done: number, total: number) => `${done}/${total} צעדים הושלמו`,
+      minTotal: (min: number) => `~${min} דקות בסך הכול`,
+      allDoneMessage: 'סיימתם. זה לא היה כל כך נורא, נכון?',
+      emptyState:
+        'לא מצאנו צעדי משנה ברורים לזה. נסו לנסח את זה כפעולה, למשל "לכתוב את תוכנית הפרויקט" או "לנקות את המחסן".',
+    },
+    brainDump: {
+      label: 'שחררו את כל מה שבראש. לא צריך שיהיה מסודר.',
+      placeholder:
+        'אני כל הזמן שוכח להתקשר לרופא השיניים והמטבח בלגן.\nאני מוצף מהפרויקט בעבודה. צריך לקנות מצרכים\nלארוחת ערב היום ולענות למייל של שרה מהשבוע שעבר.',
+      privacy: 'פרטי. שום דבר לא נשמר בשרת שלנו.',
+      charactersLeft: (remaining: number) =>
+        remaining === 1 ? 'נשאר תו אחד.' : `נשארו ${remaining} תווים.`,
+      clear: 'ניקוי',
+      submit: 'שלפו את המשימות',
+      submitting: 'שולף משימות…',
+      loading: 'קורא את מה שכתבתם ושולף את מה שאפשר לעשות…',
+      errorRateLimited: 'אתם מהירים מדי. חכו רגע ונסו שוב.',
+      errorGeneric: 'לא הצלחנו לחלץ משימות כרגע. נסו שוב בעוד כמה שניות.',
+      tryAgain: 'נסו שוב',
+      empty:
+        'לא מצאנו שם משהו שנראה כמו משימה קונקרטית. זה יכול להיות סימן טוב. אם רק הייתם צריכים לפרוק, גם זה נחשב. אם התכוונתם לרשום דברים לעשות, נסו להיות קצת יותר ספציפיים ("לשלוח מייל לשרה" במקום "עניינים עם שרה").',
+      resultsTitle: 'משימות בנות-ביצוע',
+      doneCount: (done: number, total: number) => `${done}/${total} הושלמו`,
+      footer: 'בחרו אחת. רק אחת. עשו אותה עכשיו, ואז חזרו לבאה.',
+    },
+    pickOne: {
+      inputLabel: 'הדביקו את הרשימה. שורה לכל פריט, או סתם מבולגן עם פסיקים. לא משנה.',
+      inputPlaceholder:
+        'לענות לאמא\nלקבוע תור לרופא שיניים\nלהגיש דוח הוצאות\nלסיים את המצגת\nלהשקות את הצמחים',
+      itemsDetected: (count: number) =>
+        count === 1 ? 'זוהה פריט אחד' : `זוהו ${count} פריטים`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count === 1 ? 'זוהה פריט אחד' : `זוהו ${count} פריטים`}, ${
+          left === 1 ? 'נשאר אחד' : `נשארו ${left}`
+        }`,
+      clearEverything: 'נקו הכול',
+      modeLegend: 'איך לבחור?',
+      modes: {
+        smallest: {
+          label: 'הכי קטן',
+          reason: 'הפריט הקצר ביותר ברשימה. תתחילו בקטן, תצברו מומנטום.',
+        },
+        scariest: {
+          label: 'הכי מפחיד',
+          reason: 'זה שאתם מעדיפים לא להסתכל עליו. לעשות אותו ראשון משחרר את כל היום.',
+        },
+        random: {
+          label: 'פשוט תבחרו אחד',
+          reason: 'בלי התלבטות. הרשימה בחרה בעצמה. פשוט תתחילו.',
+        },
+      },
+      pickCta: 'בחרו בשבילי',
+      pickAnotherCta: 'בחרו אחר',
+      emptyHint: 'הוסיפו לפחות פריט אחד, ואז הקישו על בחירה.',
+      readyHint: 'מוכן. הקישו על "בחרו בשבילי" בכל פעם שאתם לא מצליחים להחליט.',
+      allDoneTitle: 'הרשימה טופלה.',
+      allDoneBody:
+        'כל פריט הושלם או דולג. אפשר לנקות את הרשימה, או לאפס כדי להחזיר לבחירה את מה שדילגתם עליו.',
+      bringSkippedBack: 'החזירו את מה שדולג',
+      startFreshList: 'התחילו רשימה חדשה',
+      pickedEyebrow: 'תתחילו מזה',
+      didIt: 'עשיתי',
+      notThisOne: 'לא את זה',
+      pickAgain: 'בחרו שוב',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} הושלמו, ${skipped} דולגו, ${left} נשארו`,
+    },
+    eisenhower: {
+      inputLabel: 'הוספת משימה',
+      inputPlaceholder: 'הוסיפו משימה ולחצו אנטר (או הדביקו כמה, שורה לכל אחת)',
+      addButton: 'הוספה',
+      totals: (total: number, unsorted: number) =>
+        `${total === 1 ? 'משימה אחת' : `${total} משימות`} בסך הכול, ${unsorted} לא ממוינות`,
+      clearAll: 'נקו הכול',
+      unsortedHeading: (count: number) => `לא ממוינות (${count})`,
+      unsortedListLabel: 'משימות לא ממוינות',
+      removeTask: (text: string) => `הסרת ${text}`,
+      placeHint: 'עכשיו הקישו על רביע כדי לשבץ אותה.',
+      placeHintDesktop: 'או גררו ושחררו במחשב.',
+      quadrantRegionLabel: (label: string) => `רביע ${label}`,
+      quadrantCountLabel: (count: number, label: string) =>
+        `${count === 1 ? 'משימה אחת' : `${count} משימות`} ברביע ${label}`,
+      dropHere: 'שחררו כאן',
+      sendBackToUnsorted: 'החזירו ללא ממוינות',
+      moveBackToUnsorted: (text: string) => `החזרת ${text} ללא ממוינות`,
+      empty: 'ריק',
+      emptyState:
+        'הוסיפו משימה למעלה כדי להתחיל. הכול נשמר בדפדפן שלכם, שום דבר לא בשרת שלנו.',
+      hintLabel: 'טיפ של Doubly:',
+      hintBody:
+        'הערימה של "משעמם אבל חשוב" היא זו שרוב האנשים מדלגים עליה, ורוב האנשים מתחרטים על זה. אם אתם עושים היום רק דבר אחד, קחו אותו משם.',
+      quadrants: {
+        fire: {
+          label: 'בוער',
+          sub: 'לעשות היום, לא מחר.',
+          textbook: 'חשוב + דחוף',
+        },
+        boring: {
+          label: 'משעמם אבל חשוב',
+          sub: 'כאן קורים ההישגים האמיתיים. קבעו להם זמן, אל תדלגו עליהם.',
+          textbook: 'חשוב + לא דחוף',
+        },
+        noisy: {
+          label: 'רועש אבל אפשר לדלג',
+          sub: 'רועש, אבל לא הבעיה שלכם. האצילו, דחו, התעלמו.',
+          textbook: 'דחוף + לא חשוב',
+        },
+        drop: {
+          label: 'תוותרו על אלה',
+          sub: 'זה מותר. לא חייבים לסיים את כל הרשימה.',
+          textbook: 'לא חשוב + לא דחוף',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'טיימר פומודורו',
+      modeTablistLabel: 'מצב הטיימר',
+      modes: {
+        work: 'מיקוד',
+        'short-break': 'הפסקה קצרה',
+        'long-break': 'הפסקה ארוכה',
+      },
+      dialLabel: (mode: string, time: string) => `טיימר ${mode}. נותרו ${time}.`,
+      sessionsToday: (count: number) => `סבבים שהושלמו היום: ${count}`,
+      soundToggle: 'צליל בסוף הסבב',
+      customizeDurations: 'התאמת משכי הזמן',
+      hideSettings: 'הסתרת ההגדרות',
+      focusMinutes: 'מיקוד (דקות)',
+      shortBreakMinutes: 'הפסקה קצרה (דקות)',
+      longBreakMinutes: 'הפסקה ארוכה (דקות)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'טיימר ספירה לאחור ויזואלי',
+      dialAriaLabel: (remaining: string) => `חוגת טיימר ויזואלי. נותרו ${remaining}.`,
+      seconds: (s: number) => (s === 1 ? 'שנייה אחת' : `${s} שניות`),
+      minutes: (m: number) => (m === 1 ? 'דקה אחת' : `${m} דקות`),
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m === 1 ? 'דקה אחת' : `${m} דקות`} ${s === 1 ? 'ושנייה אחת' : `ו-${s} שניות`}`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) =>
+        minutes === 1 ? 'סופר לאחור מדקה אחת' : `סופר לאחור מ-${minutes} דקות`,
+      setFor: (minutes: number) =>
+        minutes === 1 ? 'מכוון לדקה אחת' : `מכוון ל-${minutes} דקות`,
+      paused: 'מושהה',
+      timeIsUp: 'הזמן נגמר',
+      presetsLabel: 'משכי זמן מוכנים',
+      presetMinutes: (minutes: number) => (minutes === 1 ? 'דקה' : `${minutes} דקות`),
+      custom: 'אחר',
+      minutesLabel: 'דקות',
+      set: 'קבעו',
+      soundWhenDone: 'צליל כשהזמן נגמר',
+    },
+    brownNoise: {
+      play: (sound: string) => `הפעלת רעש ${sound}`,
+      pause: (sound: string) => `השהיית רעש ${sound}`,
+      documentTitle: (sound: string) => `▶ רעש ${sound} · Doubly`,
+      chooseSound: 'בחרו צליל רקע',
+      soundGroupLabel: 'צליל רקע',
+      volume: 'עוצמה',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'טיימר שינה',
+      sleepOff: 'כבוי',
+      sleepMinutes: (minutes: number) => (minutes === 1 ? 'דקה' : `${minutes} דקות`),
+      privacyNote: 'רץ בדפדפן שלכם. שום דבר לא מוקלט ושום דבר לא נשלח החוצה.',
+      sounds: {
+        brown: {
+          name: 'חום',
+          description: 'עמוק ורועם. כמו מפל רחוק. זה מטיקטוק.',
+        },
+        pink: {
+          name: 'ורוד',
+          description: 'רך יותר מלבן, פחות באסי מחום. מאוזן.',
+        },
+        white: {
+          name: 'לבן',
+          description: 'הרחש של טלוויזיה ישנה. בהיר ואחיד.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'טיימר לקטיעת היפרפוקוס',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => (minutes === 1 ? 'דקה' : `${minutes} דקות`),
+      hoursShort: (hours: number) =>
+        hours === 1 ? 'שעה' : hours === 2 ? 'שעתיים' : `${hours} שעות`,
+      hoursMinutesShort: (hours: number, minutes: number) =>
+        `${hours === 1 ? 'שעה' : hours === 2 ? 'שעתיים' : `${hours} שעות`} ${
+          minutes === 1 ? 'ודקה' : `ו-${minutes} דקות`
+        }`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'פחות מדקה';
+        const h = hours === 1 ? 'שעה אחת' : hours === 2 ? 'שעתיים' : `${hours} שעות`;
+        const m = minutes === 1 ? 'דקה אחת' : `${minutes} דקות`;
+        if (hours > 0 && minutes > 0) return `${h} ${minutes === 1 ? 'ודקה אחת' : `ו-${m}`}`;
+        return hours > 0 ? h : m;
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `צ’ק-אין כל ${interval}, בלי עצירה קשיחה`,
+      stripWithCap: (interval: string, cap: string) =>
+        `צ’ק-אין כל ${interval}, עצירה קשיחה אחרי ${cap}`,
+      summaryNoCap: (interval: string) => `צ’ק-אין כל **${interval}**, בלי עצירה קשיחה.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `צ’ק-אין כל **${interval}**, עם עצירה קשיחה אחרי **${cap}**.`,
+
+      // Setup
+      intervalHeading: 'צ’ק-אין כל',
+      custom: 'אחר',
+      minutes: 'דקות',
+      set: 'קבעו',
+      jitterNote: 'זמני הצ’ק-אין מוזזים בכעשרה אחוזים, כדי שהמוח לא יוכל לפטור אותם מראש.',
+      moreOptions: 'עוד אפשרויות',
+      hideOptions: 'הסתרת האפשרויות',
+      taskLabel: 'על מה אתם עובדים? (לא חובה)',
+      taskPlaceholder: 'למשל: דוח שנתי, סקירת עיצוב, התסריט',
+      taskHint: 'משמש בצ’ק-אין הקולי, כדי שתשמעו על מה התיישבתם לעבוד.',
+      hardStopHeading: 'עצירה קשיחה אחרי',
+      hardStopHint:
+        'כשמגיעים לתקרה נשמעת התראה חזקה יותר, כדי ששקיעה של שש שעות לא תחמוק לכם מתחת לרדאר.',
+      capOff: 'כבוי',
+      capHours: (hours: number) =>
+        hours === 1 ? 'שעה' : hours === 2 ? 'שעתיים' : `${hours} שעות`,
+      noHardStop: 'בלי עצירה קשיחה',
+      alertsHeading: 'התראות',
+      chime: 'צליל',
+      voice: 'קול',
+      notify: 'התראה',
+      alertsHint:
+        'הצליל מתגבר אם מתעלמים מצ’ק-אין. הקול מקריא את השעה ואת הזמן שעבר. ההתראה קופצת כהתראת דפדפן כשהלשונית ברקע.',
+      notificationsBlocked: 'ההתראות חסומות בדפדפן הזה. אפשרו אותן בהגדרות האתר כדי להשתמש בזה.',
+      notificationsUnsupported: 'הדפדפן שלכם לא תומך בהתראות דפדפן.',
+      startSession: 'התחילו סבב',
+
+      // Live session
+      statElapsed: 'זמן שעבר',
+      statNextCheckIn: 'הצ’ק-אין הבא',
+      statCap: 'תקרה',
+      statusNow: 'עכשיו',
+      statusPaused: 'מושהה',
+      statusCapHit: 'הגעתם לתקרה',
+      statusOff: 'כבוי',
+      workingOn: (task: string) => `עובדים על **${task}**`,
+      checkInHeading: 'צ’ק-אין קצר',
+      checkInBody: (clock: string, elapsed: string) =>
+        `השעה ${clock} ואתם על זה כבר ${elapsed}. אתם עדיין במשימה שהתחלתם, או שהגיע הזמן לעלות לאוויר?`,
+      stillGoing: 'ממשיכים',
+      takeABreak: 'לוקחים הפסקה',
+      stopSession: 'עצירת הסבב',
+      capHeading: 'הגעתם לתקרת הסבב',
+      capBody: (minutes: number) =>
+        `קבעתם עצירה קשיחה אחרי ${minutes === 1 ? 'דקה אחת' : `${minutes} דקות`}. קומו, שתו מים, תאכלו משהו. העבודה תחכה לכם כאן.`,
+      pause: 'השהיה',
+      resume: 'המשך',
+      endSession: 'סיום הסבב',
+      checkInLog: 'יומן הצ’ק-אין',
+      logContinue: 'המשכתם',
+      logBreak: 'לקחתם הפסקה',
+      logStop: 'עצרתם',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ צ’ק-אין | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `רגע של בדיקה. השעה ${clock}. אתם עובדים על ${task} כבר ${elapsed}.`
+          : `רגע של בדיקה. השעה ${clock}. אתם עובדים כבר ${elapsed}.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `הגעתם לתקרת הסבב. השעה ${clock}. אתם על זה כבר ${elapsed}. הגיע הזמן לעצור.`,
+      notificationCheckInTitle: 'צ’ק-אין היפרפוקוס',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `השעה ${clock}. אתם על זה כבר ${elapsed}.`,
+      notificationCapTitle: 'הגעתם לתקרת ההיפרפוקוס',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `השעה ${clock}. אתם על זה כבר ${elapsed}. הגיע הזמן לעצור.`,
+    },
+    shared: {
+      start: 'התחילו',
+      pause: 'השהיה',
+      resume: 'המשך',
+      done: 'סיום',
+      reset: 'איפוס',
+      skip: 'דילוג',
+      skipAria: 'דילוג לסבב הבא',
+      startSession: 'התחילו סבב מיקוד',
+      creatingRoom: 'יוצר חדר...',
+    },
+    chrome: {
+      tryInApp: 'נסו את זה באפליקציה',
+      appStoreAria: (label: string) => `${label} ב-App Store`,
+      breadcrumbAria: 'שביל ניווט',
+    },
+  },
 };
 
 export default he;

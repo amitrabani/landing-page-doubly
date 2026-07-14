@@ -2,22 +2,15 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
+import { useT } from '@/i18n/TranslationProvider';
+
 const STORAGE_KEY = 'pick-one-input-v1';
 const MAX_LENGTH = 4000;
 
+// Stable English ids: they drive the picking logic and index the copy dictionary.
 type Mode = 'smallest' | 'scariest' | 'random';
 
-const MODE_LABEL: Record<Mode, string> = {
-  smallest: 'Smallest',
-  scariest: 'Scariest',
-  random: 'Just pick one',
-};
-
-const MODE_REASON: Record<Mode, string> = {
-  smallest: 'Shortest item on the list. Start tiny, build momentum.',
-  scariest: 'The one you would rather not look at. Doing it first frees the day.',
-  random: 'No deliberation. The list picked itself. Just start.',
-};
+const MODES: Mode[] = ['smallest', 'scariest', 'random'];
 
 const SCARY_WORDS = [
   'tax',
@@ -90,6 +83,9 @@ function pickIndex(items: string[], mode: Mode, excluded: Set<string>): number {
 }
 
 export default function PickOneTool() {
+  const t = useT();
+  const copy = t.toolWidgets.pickOne;
+
   const [input, setInput] = useState('');
   const [mode, setMode] = useState<Mode>('smallest');
   const [pickedIdx, setPickedIdx] = useState<number | null>(null);
@@ -168,13 +164,13 @@ export default function PickOneTool() {
   return (
     <div className="rounded-3xl bg-white border border-charcoal/8 shadow-sm shadow-charcoal/5 p-5 sm:p-7">
       <label htmlFor="pick-one-input" className="block text-sm font-medium text-charcoal mb-3">
-        Paste your list. One per line, or just messy with commas. Whatever.
+        {copy.inputLabel}
       </label>
       <textarea
         id="pick-one-input"
         value={input}
         onChange={(e) => setInput(e.target.value.slice(0, MAX_LENGTH))}
-        placeholder={'reply to mom\nbook the dentist\nfile expenses\nfinish the slide deck\nwater the plants'}
+        placeholder={copy.inputPlaceholder}
         rows={6}
         maxLength={MAX_LENGTH}
         className="w-full rounded-2xl px-5 py-4 text-base bg-cream border border-charcoal/10 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/50 focus:ring-2 focus:ring-lavender/15 transition-all resize-y min-h-[160px]"
@@ -182,8 +178,9 @@ export default function PickOneTool() {
 
       <div className="mt-3 flex items-center justify-between text-xs text-muted-light">
         <span aria-live="polite">
-          {items.length} item{items.length === 1 ? '' : 's'} detected
-          {excluded.size > 0 && remaining.length > 0 && ` , ${remaining.length} left`}
+          {excluded.size > 0 && remaining.length > 0
+            ? copy.itemsDetectedWithLeft(items.length, remaining.length)
+            : copy.itemsDetected(items.length)}
         </span>
         {input && (
           <button
@@ -191,15 +188,15 @@ export default function PickOneTool() {
             onClick={handleClear}
             className="underline hover:no-underline"
           >
-            Clear everything
+            {copy.clearEverything}
           </button>
         )}
       </div>
 
       <fieldset className="mt-6">
-        <legend className="text-sm font-medium text-charcoal mb-3">How should we pick?</legend>
+        <legend className="text-sm font-medium text-charcoal mb-3">{copy.modeLegend}</legend>
         <div className="flex flex-wrap gap-2">
-          {(Object.keys(MODE_LABEL) as Mode[]).map((m) => (
+          {MODES.map((m) => (
             <button
               key={m}
               type="button"
@@ -211,7 +208,7 @@ export default function PickOneTool() {
               }`}
               aria-pressed={mode === m}
             >
-              {MODE_LABEL[m]}
+              {copy.modes[m].label}
             </button>
           ))}
         </div>
@@ -224,31 +221,26 @@ export default function PickOneTool() {
           disabled={!canPick}
           className="rounded-2xl px-6 py-3 text-base font-semibold bg-charcoal text-cream hover:bg-charcoal-light transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {pickedText ? 'Pick another' : 'Pick one for me'}
+          {pickedText ? copy.pickAnotherCta : copy.pickCta}
         </button>
       </div>
 
       <div className="mt-6 min-h-[60px]" aria-live="polite">
         {!pickedText && items.length === 0 && (
-          <p className="text-sm text-muted-light">
-            Add at least one item, then tap pick.
-          </p>
+          <p className="text-sm text-muted-light">{copy.emptyHint}</p>
         )}
 
         {!pickedText && items.length > 0 && !allDone && (
-          <p className="text-sm text-muted-light">
-            Ready. Tap &ldquo;Pick one for me&rdquo; whenever you can&rsquo;t decide.
-          </p>
+          <p className="text-sm text-muted-light">{copy.readyHint}</p>
         )}
 
         {allDone && (
           <div className="rounded-2xl bg-sage/15 border border-sage/30 p-5">
             <p className="font-[family-name:var(--font-display)] text-base font-semibold text-sage-dark mb-2">
-              List handled.
+              {copy.allDoneTitle}
             </p>
             <p className="text-sm text-charcoal-light leading-6 mb-3">
-              Every item is either done or skipped. You can clear the list, or reset to bring skipped
-              items back into the pool.
+              {copy.allDoneBody}
             </p>
             <div className="flex gap-2">
               <button
@@ -256,14 +248,14 @@ export default function PickOneTool() {
                 onClick={handleReset}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white text-charcoal border border-charcoal/15 hover:border-lavender/40 transition-all"
               >
-                Bring skipped back
+                {copy.bringSkippedBack}
               </button>
               <button
                 type="button"
                 onClick={handleClear}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white text-charcoal border border-charcoal/15 hover:border-lavender/40 transition-all"
               >
-                Start a fresh list
+                {copy.startFreshList}
               </button>
             </div>
           </div>
@@ -272,13 +264,13 @@ export default function PickOneTool() {
         {pickedText && (
           <div className="rounded-2xl bg-cream border border-lavender/30 p-5 sm:p-6">
             <p className="text-xs uppercase tracking-wider text-lavender-dark font-semibold mb-2">
-              Start with this one
+              {copy.pickedEyebrow}
             </p>
             <p className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-bold text-charcoal leading-snug mb-3">
               {pickedText}
             </p>
             <p className="text-sm text-charcoal-light leading-6 mb-5">
-              {MODE_REASON[mode]}
+              {copy.modes[mode].reason}
             </p>
 
             <div className="flex flex-wrap gap-2">
@@ -287,27 +279,27 @@ export default function PickOneTool() {
                 onClick={handleDone}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-sage text-white hover:bg-sage-dark transition-all"
               >
-                Did it
+                {copy.didIt}
               </button>
               <button
                 type="button"
                 onClick={handleSkip}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white text-charcoal border border-charcoal/15 hover:border-lavender/40 transition-all"
               >
-                Not this one
+                {copy.notThisOne}
               </button>
               <button
                 type="button"
                 onClick={handlePick}
                 className="rounded-xl px-4 py-2 text-sm font-medium bg-white text-charcoal border border-charcoal/15 hover:border-lavender/40 transition-all"
               >
-                Pick again
+                {copy.pickAgain}
               </button>
             </div>
 
             {(done.size > 0 || skipped.size > 0) && (
               <p className="mt-4 text-xs text-muted-light">
-                {done.size} done , {skipped.size} skipped , {remaining.length} left
+                {copy.progress(done.size, skipped.size, remaining.length)}
               </p>
             )}
           </div>

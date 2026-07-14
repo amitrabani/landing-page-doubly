@@ -179,7 +179,6 @@ export default function VisualTimerPage() {
           presets={PRESETS}
           defaultMinutes={DEFAULT_MINUTES}
           storageKey="doubly:visual-timer:v1"
-          ariaLabel="Visual countdown timer"
         />
 
         <div className="mt-10 rounded-2xl bg-warm/60 border border-warm-dark/30 p-6">

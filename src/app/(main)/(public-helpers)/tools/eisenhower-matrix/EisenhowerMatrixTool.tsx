@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import { useT } from '@/i18n/TranslationProvider';
 
 const STORAGE_KEY = 'eisenhower-matrix-v1';
 
@@ -12,11 +13,10 @@ type Task = {
   quadrant: Quadrant;
 };
 
+// `key` is the persisted quadrant id (it is written to localStorage and used to
+// bucket tasks), so it stays English. Only the copy is localized, looked up by key.
 type QuadrantConfig = {
   key: Exclude<Quadrant, 'pool'>;
-  label: string;
-  sub: string;
-  textbook: string;
   accent: string;
   border: string;
   chip: string;
@@ -25,36 +25,24 @@ type QuadrantConfig = {
 const QUADRANTS: QuadrantConfig[] = [
   {
     key: 'fire',
-    label: 'On fire',
-    sub: 'Do today, not tomorrow.',
-    textbook: 'Important + Urgent',
     accent: 'bg-coral-light/15',
     border: 'border-coral/40',
     chip: 'bg-coral text-white',
   },
   {
     key: 'boring',
-    label: 'Boring but important',
-    sub: 'The actual wins. Schedule them, do not skip them.',
-    textbook: 'Important + Not Urgent',
     accent: 'bg-sage/15',
     border: 'border-sage/40',
     chip: 'bg-sage-dark text-white',
   },
   {
     key: 'noisy',
-    label: 'Noisy but skippable',
-    sub: 'Loud, but not your problem. Delegate, defer, ignore.',
-    textbook: 'Urgent + Not Important',
     accent: 'bg-sky-light/30',
     border: 'border-sky/40',
     chip: 'bg-sky text-charcoal',
   },
   {
     key: 'drop',
-    label: 'Drop these',
-    sub: 'It is allowed. The list does not have to be done.',
-    textbook: 'Not Important + Not Urgent',
     accent: 'bg-warm/60',
     border: 'border-warm-dark/40',
     chip: 'bg-charcoal text-cream',
@@ -87,6 +75,7 @@ function loadTasks(): Task[] {
 }
 
 export default function EisenhowerMatrixTool() {
+  const copy = useT().toolWidgets.eisenhower;
   const [tasks, setTasks] = useState<Task[]>([]);
   const [input, setInput] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -176,7 +165,7 @@ export default function EisenhowerMatrixTool() {
     <div className="rounded-3xl bg-white border border-charcoal/8 shadow-sm shadow-charcoal/5 p-5 sm:p-7">
       <div className="flex flex-col sm:flex-row gap-2">
         <label htmlFor="matrix-input" className="sr-only">
-          Add a task
+          {copy.inputLabel}
         </label>
         <input
           id="matrix-input"
@@ -184,7 +173,7 @@ export default function EisenhowerMatrixTool() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleInputKey}
-          placeholder="Add a task and hit enter (or paste many separated by line breaks)"
+          placeholder={copy.inputPlaceholder}
           maxLength={400}
           className="flex-1 rounded-2xl px-5 py-3 text-base bg-cream border border-charcoal/10 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/50 focus:ring-2 focus:ring-lavender/15 transition-all"
         />
@@ -194,21 +183,19 @@ export default function EisenhowerMatrixTool() {
           disabled={!input.trim()}
           className="rounded-2xl px-6 py-3 text-base font-semibold bg-charcoal text-cream hover:bg-charcoal-light transition-all disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          Add
+          {copy.addButton}
         </button>
       </div>
 
       {tasks.length > 0 && (
         <div className="mt-2 flex items-center justify-between text-xs text-muted-light">
-          <span>
-            {tasks.length} task{tasks.length === 1 ? '' : 's'} total , {pool.length} unsorted
-          </span>
+          <span>{copy.totals(tasks.length, pool.length)}</span>
           <button
             type="button"
             onClick={handleClearAll}
             className="underline hover:no-underline"
           >
-            Clear everything
+            {copy.clearAll}
           </button>
         </div>
       )}
@@ -216,9 +203,9 @@ export default function EisenhowerMatrixTool() {
       {pool.length > 0 && (
         <div className="mt-6">
           <h3 className="text-xs uppercase tracking-wider text-muted font-semibold mb-2">
-            Unsorted ({pool.length})
+            {copy.unsortedHeading(pool.length)}
           </h3>
-          <ul className="flex flex-wrap gap-2" aria-label="Unsorted tasks">
+          <ul className="flex flex-wrap gap-2" aria-label={copy.unsortedListLabel}>
             {pool.map((task) => (
               <li
                 key={task.id}
@@ -233,7 +220,7 @@ export default function EisenhowerMatrixTool() {
                 <button
                   type="button"
                   onClick={() => selectTask(task.id)}
-                  className="text-charcoal font-medium text-left"
+                  className="text-charcoal font-medium text-start"
                   aria-pressed={selectedId === task.id}
                 >
                   {task.text}
@@ -241,7 +228,7 @@ export default function EisenhowerMatrixTool() {
                 <button
                   type="button"
                   onClick={() => deleteTask(task.id)}
-                  aria-label={`Remove ${task.text}`}
+                  aria-label={copy.removeTask(task.text)}
                   className="text-muted-light hover:text-coral-dark transition-colors text-base leading-none"
                 >
                   ×
@@ -254,18 +241,19 @@ export default function EisenhowerMatrixTool() {
 
       {selectedId && (
         <div className="mt-4 rounded-2xl bg-lavender/10 border border-lavender/40 p-4 text-sm text-charcoal">
-          <p className="font-medium mb-2">Now tap a quadrant to place it.</p>
-          <p className="text-xs text-muted">Or drag and drop on desktop.</p>
+          <p className="font-medium mb-2">{copy.placeHint}</p>
+          <p className="text-xs text-muted">{copy.placeHintDesktop}</p>
         </div>
       )}
 
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {QUADRANTS.map((q) => {
           const items = tasksByQuadrant(q.key);
+          const qCopy = copy.quadrants[q.key];
           return (
             <section
               key={q.key}
-              aria-label={`${q.label} quadrant`}
+              aria-label={copy.quadrantRegionLabel(qCopy.label)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, q.key)}
               className={`rounded-2xl border-2 ${q.border} ${q.accent} p-4 min-h-[180px] transition-all ${
@@ -275,16 +263,16 @@ export default function EisenhowerMatrixTool() {
               <header className="flex items-start justify-between gap-2 mb-3">
                 <div className="min-w-0">
                   <h3 className="font-[family-name:var(--font-display)] text-base font-bold text-charcoal leading-snug">
-                    {q.label}
+                    {qCopy.label}
                   </h3>
-                  <p className="text-xs text-charcoal-light leading-5 mt-0.5">{q.sub}</p>
+                  <p className="text-xs text-charcoal-light leading-5 mt-0.5">{qCopy.sub}</p>
                   <p className="text-[10px] uppercase tracking-wider text-muted-light mt-1">
-                    {q.textbook}
+                    {qCopy.textbook}
                   </p>
                 </div>
                 <span
                   className={`shrink-0 rounded-full ${q.chip} text-xs font-semibold px-2 py-0.5`}
-                  aria-label={`${counts[q.key]} tasks in ${q.label}`}
+                  aria-label={copy.quadrantCountLabel(counts[q.key], qCopy.label)}
                 >
                   {counts[q.key]}
                 </span>
@@ -296,7 +284,7 @@ export default function EisenhowerMatrixTool() {
                   onClick={() => moveTask(selectedId, q.key)}
                   className="w-full rounded-xl bg-white border border-dashed border-lavender/60 text-sm font-medium text-lavender-dark py-2 mb-3 hover:bg-lavender/10 transition-all"
                 >
-                  Drop here
+                  {copy.dropHere}
                 </button>
               )}
 
@@ -315,7 +303,7 @@ export default function EisenhowerMatrixTool() {
                     <button
                       type="button"
                       onClick={() => selectTask(task.id)}
-                      className="flex-1 text-charcoal font-medium text-left min-w-0 truncate"
+                      className="flex-1 text-charcoal font-medium text-start min-w-0 truncate"
                       aria-pressed={selectedId === task.id}
                     >
                       {task.text}
@@ -323,16 +311,16 @@ export default function EisenhowerMatrixTool() {
                     <button
                       type="button"
                       onClick={() => moveTask(task.id, 'pool')}
-                      aria-label={`Move ${task.text} back to unsorted`}
+                      aria-label={copy.moveBackToUnsorted(task.text)}
                       className="text-xs text-muted-light hover:text-charcoal transition-colors"
-                      title="Send back to unsorted"
+                      title={copy.sendBackToUnsorted}
                     >
                       ↩
                     </button>
                     <button
                       type="button"
                       onClick={() => deleteTask(task.id)}
-                      aria-label={`Remove ${task.text}`}
+                      aria-label={copy.removeTask(task.text)}
                       className="text-muted-light hover:text-coral-dark transition-colors text-base leading-none"
                     >
                       ×
@@ -340,7 +328,7 @@ export default function EisenhowerMatrixTool() {
                   </li>
                 ))}
                 {items.length === 0 && !selectedId && (
-                  <li className="text-xs text-muted-light italic">Empty</li>
+                  <li className="text-xs text-muted-light italic">{copy.empty}</li>
                 )}
               </ul>
             </section>
@@ -349,16 +337,12 @@ export default function EisenhowerMatrixTool() {
       </div>
 
       {tasks.length === 0 && (
-        <p className="mt-6 text-sm text-muted-light text-center">
-          Add a task above to get started. Everything saves in your browser, nothing on our server.
-        </p>
+        <p className="mt-6 text-sm text-muted-light text-center">{copy.emptyState}</p>
       )}
 
       {counts.boring > 0 && pool.length === 0 && tasks.length >= 3 && (
         <div className="mt-6 rounded-2xl bg-sage/10 border border-sage/30 p-4 text-sm text-charcoal leading-6">
-          <strong className="text-sage-dark">Doubly hint:</strong> The boring-but-important pile is
-          the one most people skip and most regret skipping. If you only do one thing today, pick
-          from there.
+          <strong className="text-sage-dark">{copy.hintLabel}</strong> {copy.hintBody}
         </div>
       )}
     </div>

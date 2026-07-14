@@ -1,3 +1,7 @@
+'use client';
+
+import { useT } from '@/i18n/TranslationProvider';
+
 type Status = 'idle' | 'running' | 'paused';
 
 export type TimerControlsProps = {
@@ -31,10 +35,11 @@ export default function TimerControls({
   onReset,
   onSkip,
 }: TimerControlsProps) {
+  const t = useT().toolWidgets.shared;
   const isRunning = status === 'running';
   const isPaused = status === 'paused';
   const isFinished = status === 'idle' && remainingMs === 0;
-  const primaryLabel = isRunning ? 'Pause' : isPaused ? 'Resume' : isFinished ? 'Done' : 'Start';
+  const primaryLabel = isRunning ? t.pause : isPaused ? t.resume : isFinished ? t.done : t.start;
   const primaryDisabled = isFinished && !onSkip;
 
   return (
@@ -49,16 +54,14 @@ export default function TimerControls({
         {primaryLabel}
       </button>
       <button type="button" onClick={onReset} className={GHOST_CLASS}>
-        Reset
+        {t.reset}
       </button>
       {onSkip && (
-        <button
-          type="button"
-          onClick={onSkip}
-          aria-label="Skip to next session"
-          className={GHOST_CLASS}
-        >
-          Skip &rarr;
+        <button type="button" onClick={onSkip} aria-label={t.skipAria} className={GHOST_CLASS}>
+          {t.skip}{' '}
+          <span aria-hidden="true" className="inline-block rtl:rotate-180">
+            &rarr;
+          </span>
         </button>
       )}
     </div>

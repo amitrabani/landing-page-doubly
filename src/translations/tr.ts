@@ -529,6 +529,316 @@ const tr = {
     },
   },
 
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'Başlayamadığın görev ne?',
+      inputPlaceholder: 'örn. Masraf raporumu gönder',
+      submit: 'Parçalara böl',
+      submitting: 'Parçalara bölünüyor…',
+      privacyNote: 'Gizli. Sunucumuzda hiçbir şey saklanmıyor.',
+      charactersLeft: (count: number) => `${count} karakter kaldı`,
+      presetsIntro: 'Ya da bunlardan birini dene:',
+      presets: {
+        cleanKitchen: 'Mutfağı temizle',
+        doLaundry: 'Çamaşır yıka',
+        replyInbox: 'Gelen kutusuna cevap yaz',
+        planWeekendTrip: 'Hafta sonu gezisi planla',
+        fileTaxes: 'Vergi beyannamemi ver',
+        cleanBathroom: 'Banyoyu temizle',
+      },
+      loading: 'Adımlara bölünüyor…',
+      errorRateLimit: 'Çok hızlısın. Biraz bekleyip tekrar dene.',
+      errorGeneric: 'Şu an bunu bölemedik. Birkaç saniye sonra tekrar dene.',
+      tryAgain: 'Tekrar dene',
+      taskLabel: 'Görev',
+      urgencyLabels: { low: 'Düşük öncelik', medium: 'Orta öncelik', high: 'Yüksek öncelik' },
+      stepsDone: (done: number, total: number) => `${done}/${total} adım tamam`,
+      minTotal: (min: number) => `toplam ~${min} dk`,
+      allDoneMessage: 'Hepsi tamam. Göründüğü kadar korkutucu değilmiş, değil mi?',
+      emptyState:
+        'Bunun için net alt adımlar bulamadık. Bir eylem gibi yazmayı dene: “Proje planını yaz” ya da “Garajı temizle.”',
+    },
+    brainDump: {
+      label: 'Kafandaki her şeyi dök. Düzenli olmasına gerek yok.',
+      placeholder:
+        'Diş hekimini aramayı sürekli unutuyorum ve mutfak berbat halde.\nİşteki proje yüzünden bunalmış hissediyorum. Akşam yemeği için market\nalışverişi yapmam ve Sarah’ın geçen haftaki e-postasına cevap yazmam lazım.',
+      privacy: 'Gizli. Sunucumuzda hiçbir şey saklanmıyor.',
+      charactersLeft: (remaining: number) => `${remaining} karakter kaldı.`,
+      clear: 'Temizle',
+      submit: 'Görevleri çıkar',
+      submitting: 'Görevler çıkarılıyor…',
+      loading: 'Yazdıkların okunuyor, yapılabilir kısımlar çıkarılıyor…',
+      errorRateLimited: 'Çok hızlısın. Biraz bekleyip tekrar dene.',
+      errorGeneric: 'Şu an görevleri çıkaramadık. Birkaç saniye sonra tekrar dene.',
+      tryAgain: 'Tekrar dene',
+      empty:
+        'Burada somut bir göreve benzeyen bir şey bulamadık. Bu iyiye işaret olabilir. İçini döktüysen, o da sayılır. Yapılacakları listelemek istediysen biraz daha net ol (“Sarah ile ilgili şeyler” yerine “Sarah’a e-posta yaz”).',
+      resultsTitle: 'Yapılabilir görevler',
+      doneCount: (done: number, total: number) => `${done}/${total} tamam`,
+      footer: 'Birini seç. Sadece birini. Şimdi yap, sonra sıradakine dön.',
+    },
+    pickOne: {
+      inputLabel: 'Listeni yapıştır. Her satıra bir tane ya da virgüllerle karışık. Nasıl olursa.',
+      inputPlaceholder:
+        'anneme cevap yaz\ndiş hekiminden randevu al\nmasrafları gir\nsunumu bitir\nçiçekleri sula',
+      itemsDetected: (count: number) => `${count} öğe bulundu`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${count} öğe bulundu, ${left} kaldı`,
+      clearEverything: 'Hepsini temizle',
+      modeLegend: 'Nasıl seçelim?',
+      modes: {
+        smallest: {
+          label: 'En küçüğü',
+          reason: 'Listedeki en kısa iş. Küçük başla, momentum kazan.',
+        },
+        scariest: {
+          label: 'En korkutucusu',
+          reason: 'Yüzüne bakmak istemediğin iş. Önce onu yapmak günü rahatlatır.',
+        },
+        random: {
+          label: 'Sen seç',
+          reason: 'Düşünmek yok. Listeyi kadere bıraktık. Sadece başla.',
+        },
+      },
+      pickCta: 'Benim için birini seç',
+      pickAnotherCta: 'Başka bir tane seç',
+      emptyHint: 'En az bir öğe ekle, sonra seçtir.',
+      readyHint: 'Hazır. Karar veremediğinde “Benim için birini seç”e dokun.',
+      allDoneTitle: 'Liste hallolmuş.',
+      allDoneBody:
+        'Her öğe ya tamamlandı ya atlandı. Listeyi temizleyebilir ya da sıfırlayıp atlananları havuza geri getirebilirsin.',
+      bringSkippedBack: 'Atlananları geri getir',
+      startFreshList: 'Yeni bir liste başlat',
+      pickedEyebrow: 'Bununla başla',
+      didIt: 'Yaptım',
+      notThisOne: 'Bu olmasın',
+      pickAgain: 'Yeniden seç',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} tamam, ${skipped} atlandı, ${left} kaldı`,
+    },
+    eisenhower: {
+      inputLabel: 'Görev ekle',
+      inputPlaceholder: 'Bir görev ekleyip enter’a bas (ya da satır satır birçok görev yapıştır)',
+      addButton: 'Ekle',
+      totals: (total: number, unsorted: number) =>
+        `toplam ${total} görev, ${unsorted} yerleştirilmemiş`,
+      clearAll: 'Hepsini temizle',
+      unsortedHeading: (count: number) => `Yerleştirilmemiş (${count})`,
+      unsortedListLabel: 'Yerleştirilmemiş görevler',
+      removeTask: (text: string) => `${text} görevini kaldır`,
+      placeHint: 'Şimdi yerleştirmek için bir çeyreğe dokun.',
+      placeHintDesktop: 'Ya da masaüstünde sürükleyip bırak.',
+      quadrantRegionLabel: (label: string) => `${label} çeyreği`,
+      quadrantCountLabel: (count: number, label: string) => `${label} çeyreğinde ${count} görev`,
+      dropHere: 'Buraya bırak',
+      sendBackToUnsorted: 'Yerleştirilmemişlere geri gönder',
+      moveBackToUnsorted: (text: string) => `${text} görevini yerleştirilmemişlere geri taşı`,
+      empty: 'Boş',
+      emptyState:
+        'Başlamak için yukarıdan bir görev ekle. Her şey tarayıcında saklanır, sunucumuzda hiçbir şey tutulmaz.',
+      hintLabel: 'Doubly ipucu:',
+      hintBody:
+        'Sıkıcı ama önemli yığın, çoğu insanın atladığı ve atladığına en çok pişman olduğu yığındır. Bugün tek bir şey yapacaksan oradan seç.',
+      quadrants: {
+        fire: {
+          label: 'Alev alev',
+          sub: 'Yarın değil, bugün yap.',
+          textbook: 'Önemli + Acil',
+        },
+        boring: {
+          label: 'Sıkıcı ama önemli',
+          sub: 'Asıl kazançlar burada. Takvime koy, atlama.',
+          textbook: 'Önemli + Acil değil',
+        },
+        noisy: {
+          label: 'Gürültülü ama atlanabilir',
+          sub: 'Sesi çok çıkıyor ama senin sorunun değil. Devret, ertele, boş ver.',
+          textbook: 'Acil + Önemli değil',
+        },
+        drop: {
+          label: 'Bunları bırak',
+          sub: 'Buna izin var. Listenin bitmesi şart değil.',
+          textbook: 'Önemli değil + Acil değil',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Pomodoro zamanlayıcı',
+      modeTablistLabel: 'Zamanlayıcı modu',
+      modes: {
+        work: 'Odak',
+        'short-break': 'Kısa mola',
+        'long-break': 'Uzun mola',
+      },
+      dialLabel: (mode: string, time: string) => `${mode} zamanlayıcısı. ${time} kaldı.`,
+      sessionsToday: (count: number) => `Bugün tamamlanan seans: ${count}`,
+      soundToggle: 'Seans bitince ses',
+      customizeDurations: 'Süreleri özelleştir',
+      hideSettings: 'Ayarları gizle',
+      focusMinutes: 'Odak (dk)',
+      shortBreakMinutes: 'Kısa mola (dk)',
+      longBreakMinutes: 'Uzun mola (dk)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Görsel geri sayım zamanlayıcısı',
+      dialAriaLabel: (remaining: string) => `Görsel zamanlayıcı kadranı. ${remaining} kaldı.`,
+      seconds: (s: number) => `${s} saniye`,
+      minutes: (m: number) => `${m} dakika`,
+      minutesAndSeconds: (m: number, s: number) => `${m} dakika ${s} saniye`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `${minutes} dk’dan geri sayılıyor`,
+      setFor: (minutes: number) => `${minutes} dk için ayarlandı`,
+      paused: 'Duraklatıldı',
+      timeIsUp: 'Süre doldu',
+      presetsLabel: 'Hazır süreler',
+      presetMinutes: (minutes: number) => `${minutes} dk`,
+      custom: 'Özel',
+      minutesLabel: 'Dakika',
+      set: 'Ayarla',
+      soundWhenDone: 'Süre dolunca ses',
+    },
+    brownNoise: {
+      play: (sound: string) => `${sound} gürültüsünü çal`,
+      pause: (sound: string) => `${sound} gürültüsünü duraklat`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Bir ortam sesi seç',
+      soundGroupLabel: 'Ortam sesi',
+      volume: 'Ses seviyesi',
+      volumePercent: (percent: number) => `%${percent}`,
+      sleepTimer: 'Uyku zamanlayıcısı',
+      sleepOff: 'Kapalı',
+      sleepMinutes: (minutes: number) => `${minutes} dk`,
+      privacyNote: 'Tarayıcında çalışır. Hiçbir şey kaydedilmez, hiçbir şey yüklenmez.',
+      sounds: {
+        brown: {
+          name: 'Kahverengi',
+          description: 'Derin, gümbürtülü. Uzaktaki bir şelale gibi. TikTok’taki o ses.',
+        },
+        pink: {
+          name: 'Pembe',
+          description: 'Beyazdan daha yumuşak, kahverengiden daha az bas. Dengeli.',
+        },
+        white: {
+          name: 'Beyaz',
+          description: 'Eski bir televizyonun cızırtısı. Parlak ve düzgün.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Hiperfokus kesme zamanlayıcısı',
+
+      // Süreler. Her ifade burada durur ki her dil kendi çoğul biçimini,
+      // birimini ve sözcük sırasını seçebilsin.
+      minutesShort: (minutes: number) => `${minutes} dk`,
+      hoursShort: (hours: number) => `${hours} sa`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} sa ${minutes} dk`,
+      durationLong: (hours: number, minutes: number) => {
+        if (hours === 0 && minutes === 0) return 'bir dakikadan az';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} saat`);
+        if (minutes > 0) parts.push(`${minutes} dakika`);
+        return parts.join(' ');
+      },
+
+      // Seans şeridi. ** ile sarılan metin vurgulu gösterilir.
+      stripNoCap: (interval: string) => `${interval} arayla yoklama, kesin bitiş yok`,
+      stripWithCap: (interval: string, cap: string) =>
+        `${interval} arayla yoklama, ${cap} sonra kesin bitiş`,
+      summaryNoCap: (interval: string) => `**${interval}** arayla yoklama, kesin bitiş yok.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `**${interval}** arayla yoklama, **${cap}** sonra kesin bitiş.`,
+
+      // Kurulum
+      intervalHeading: 'Yoklama aralığı',
+      custom: 'Özel',
+      minutes: 'Dakika',
+      set: 'Ayarla',
+      jitterNote:
+        'Yoklamalar yaklaşık yüzde on kaydırılır, böylece beyin onları önceden savuşturamaz.',
+      moreOptions: 'Daha fazla seçenek',
+      hideOptions: 'Seçenekleri gizle',
+      taskLabel: 'Ne üzerinde çalışıyorsun? (isteğe bağlı)',
+      taskPlaceholder: 'örn. vergi evrakları, tasarım incelemesi, senaryo',
+      taskHint: 'Sesli yoklamalarda kullanılır, böylece ne yapmak için oturduğunu duyarsın.',
+      hardStopHeading: 'Kesin bitiş süresi',
+      hardStopHint:
+        'Sınıra ulaşıldığında daha yüksek sesli bir uyarı çalar, böylece altı saatlik bir sarmal fark edilmeden geçip gitmez.',
+      capOff: 'Kapalı',
+      capHours: (hours: number) => `${hours} sa`,
+      noHardStop: 'kesin bitiş yok',
+      alertsHeading: 'Uyarılar',
+      chime: 'Zil',
+      voice: 'Ses',
+      notify: 'Bildirim',
+      alertsHint:
+        'Yoklama görmezden gelinirse zil sesi yükselir. Ses, saati ve geçen süreyi söyler. Bildirim, sekme arka plandayken tarayıcı bildirimi gönderir.',
+      notificationsBlocked:
+        'Bu tarayıcıda bildirimler engellenmiş. Kullanmak için site ayarlarından izin ver.',
+      notificationsUnsupported: 'Tarayıcın web bildirimlerini desteklemiyor.',
+      startSession: 'Seansı başlat',
+
+      // Canlı seans
+      statElapsed: 'Geçen süre',
+      statNextCheckIn: 'Sonraki yoklama',
+      statCap: 'Sınır',
+      statusNow: 'Şimdi',
+      statusPaused: 'Duraklatıldı',
+      statusCapHit: 'Sınıra ulaşıldı',
+      statusOff: 'Kapalı',
+      workingOn: (task: string) => `**${task}** üzerinde çalışıyorsun`,
+      checkInHeading: 'Kısa yoklama',
+      checkInBody: (clock: string, elapsed: string) =>
+        `Saat ${clock} ve ${elapsed} süredir bununla uğraşıyorsun. Hâlâ başladığın işte misin, yoksa yüzeye çıkma vakti mi geldi?`,
+      stillGoing: 'Devam ediyorum',
+      takeABreak: 'Mola ver',
+      stopSession: 'Seansı durdur',
+      capHeading: 'Seans sınırına ulaşıldı',
+      capBody: (minutes: number) =>
+        `Kesin bitişi ${minutes} dakikaya ayarlamıştın. Ayağa kalk, su iç, bir şeyler ye. İş burada seni bekliyor olacak.`,
+      pause: 'Duraklat',
+      resume: 'Devam et',
+      endSession: 'Seansı bitir',
+      checkInLog: 'Yoklama kaydı',
+      logContinue: 'devam etti',
+      logBreak: 'mola verdi',
+      logStop: 'durdu',
+
+      // Yoklama arka plandaki sekmede beklerken tarayıcı sekmesinin başlığı.
+      tabAlert: '⚠ Yoklama | Doubly',
+
+      // Sesli okunur (SpeechSynthesis) ve işletim sistemi bildirimi olarak gönderilir.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Yoklama zamanı. Saat ${clock}. ${elapsed} süredir ${task} üzerinde çalışıyorsun.`
+          : `Yoklama zamanı. Saat ${clock}. ${elapsed} süredir çalışıyorsun.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Seans sınırına ulaşıldı. Saat ${clock}. ${elapsed} süredir bununla uğraşıyorsun. Durma vakti.`,
+      notificationCheckInTitle: 'Hiperfokus yoklaması',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `Saat ${clock}. ${elapsed} süredir bununla uğraşıyorsun.`,
+      notificationCapTitle: 'Hiperfokus sınırına ulaşıldı',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `Saat ${clock}. ${elapsed} süredir bununla uğraşıyorsun. Durma vakti.`,
+    },
+    shared: {
+      start: 'Başlat',
+      pause: 'Duraklat',
+      resume: 'Devam et',
+      done: 'Tamam',
+      reset: 'Sıfırla',
+      skip: 'Atla',
+      skipAria: 'Sonraki seansa atla',
+      startSession: 'Odak seansı başlat',
+      creatingRoom: 'Oda oluşturuluyor...',
+    },
+    chrome: {
+      tryInApp: 'Uygulamada dene',
+      appStoreAria: (label: string) => `App Store’da ${label}`,
+      breadcrumbAria: 'Gezinti yolu',
+    },
+  },
+
 };
 
 export default tr;

@@ -5,6 +5,7 @@ import SoftAppCTA from '@/app/(main)/(public-helpers)/_components/SoftAppCTA';
 import { ParagraphsMd } from '@/components/MarkdownLite';
 import { getToolsContent, localizedToolSlugs, localesWithPack } from '@/lib/toolsContent';
 import { buildPathAlternates, localePath } from '@/i18n/alternates';
+import { getDictionary } from '@/i18n/dictionaries';
 import { notFound } from 'next/navigation';
 import { isLocale, nonDefaultLocales, type Locale } from '@/i18n/config';
 import { SITE_URL } from '@/lib/sitemap-data';
@@ -55,6 +56,9 @@ export default async function LocalizedToolsHub({
   // Only surface tools that have a localized detail page in this locale.
   const localized = new Set(localizedToolSlugs(locale));
   const cards = content.cards.filter((c) => localized.has(c.slug));
+  // A pack may leave openTool null; reuse the UI dictionary's translated label
+  // rather than dropping the card link back to English.
+  const openToolLabel = content.openTool ?? getDictionary(locale).toolsSection.openTool;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -114,7 +118,7 @@ export default async function LocalizedToolsHub({
                   </h2>
                   <p className="text-sm text-charcoal-light leading-6">{card.description}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-lavender-dark">
-                    {content.openTool ?? 'Open tool'} <span aria-hidden="true">&rarr;</span>
+                    {openToolLabel} <span aria-hidden="true">&rarr;</span>
                   </span>
                 </Link>
               </li>

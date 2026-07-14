@@ -1,3 +1,13 @@
+// Russian plural picker: 1 минута / 2 минуты / 5 минут.
+// Module-scope helper, not a dictionary key, so structural parity with en.ts is unaffected.
+const plural = (n: number, one: string, few: string, many: string): string => {
+  const mod10 = Math.abs(n) % 10;
+  const mod100 = Math.abs(n) % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
+};
+
 const ru = {
   // Shared
   common: {
@@ -526,6 +536,322 @@ const ru = {
       title: 'Таймер прерывания гиперфокуса',
       description:
         'Голосовые напоминания каждые N минут и, если нужно, жёсткая остановка, чтобы гиперфокус при СДВГ не съел весь остаток дня.',
+    },
+  },
+
+  toolWidgets: {
+    taskSplitter: {
+      inputLabel: 'Какую задачу вы не можете начать?',
+      inputPlaceholder: 'например: Сдать отчёт о расходах',
+      submit: 'Разбить на шаги',
+      submitting: 'Разбиваю…',
+      privacyNote: 'Приватно. Ничего не сохраняется на нашем сервере.',
+      charactersLeft: (count: number) =>
+        `Осталось ${count} ${plural(count, 'символ', 'символа', 'символов')}`,
+      presetsIntro: 'Или попробуйте одну из этих:',
+      presets: {
+        cleanKitchen: 'Убраться на кухне',
+        doLaundry: 'Постирать бельё',
+        replyInbox: 'Ответить на письма',
+        planWeekendTrip: 'Спланировать поездку на выходные',
+        fileTaxes: 'Подать декларацию',
+        cleanBathroom: 'Убрать ванную',
+      },
+      loading: 'Разбиваю на шаги…',
+      errorRateLimit: 'Слишком быстро. Подождите секунду и попробуйте снова.',
+      errorGeneric: 'Сейчас не получилось разбить задачу. Попробуйте через пару секунд.',
+      tryAgain: 'Попробовать снова',
+      taskLabel: 'Задача',
+      urgencyLabels: { low: 'Низкая срочность', medium: 'Средняя срочность', high: 'Высокая срочность' },
+      stepsDone: (done: number, total: number) =>
+        `Сделано ${done} из ${total} ${plural(total, 'шага', 'шагов', 'шагов')}`,
+      minTotal: (min: number) => `~${min} мин всего`,
+      allDoneMessage: 'Готово. Это было не так страшно, как казалось, правда?',
+      emptyState:
+        'Не получилось выделить понятные шаги. Попробуйте сформулировать как действие: «Написать план проекта» или «Убрать в гараже».',
+    },
+    brainDump: {
+      label: 'Выгрузите всё, что в голове. Порядок не нужен.',
+      placeholder:
+        'Всё время забываю записаться к стоматологу, а на кухне бардак.\nПроект на работе накрывает с головой. Надо купить продукты\nна ужин и ответить на письмо Сары с прошлой недели.',
+      privacy: 'Приватно. Ничего не сохраняется на нашем сервере.',
+      charactersLeft: (remaining: number) =>
+        `Осталось ${remaining} ${plural(remaining, 'символ', 'символа', 'символов')}.`,
+      clear: 'Очистить',
+      submit: 'Вытащить задачи',
+      submitting: 'Вытаскиваю задачи…',
+      loading: 'Читаю вашу выгрузку и вытаскиваю то, что можно сделать…',
+      errorRateLimited: 'Слишком быстро. Подождите секунду и попробуйте снова.',
+      errorGeneric: 'Сейчас не получилось вытащить задачи. Попробуйте через пару секунд.',
+      tryAgain: 'Попробовать снова',
+      empty:
+        'Мы не нашли здесь ничего похожего на конкретную задачу. Это может быть хорошим знаком. Если вы просто выговорились, это тоже считается. Если хотели перечислить дела, попробуйте чуть конкретнее («написать Саре», а не «дела с Сарой»).',
+      resultsTitle: 'Задачи, которые можно сделать',
+      doneCount: (done: number, total: number) => `${done}/${total} готово`,
+      footer: 'Выберите одну. Только одну. Сделайте её сейчас и возвращайтесь за следующей.',
+    },
+    pickOne: {
+      inputLabel: 'Вставьте свой список. По одному в строке или просто через запятую. Как угодно.',
+      inputPlaceholder:
+        'ответить маме\nзаписаться к стоматологу\nсдать отчёт о расходах\nдоделать презентацию\nполить цветы',
+      itemsDetected: (count: number) =>
+        `${plural(count, 'Найден', 'Найдено', 'Найдено')} ${count} ${plural(count, 'пункт', 'пункта', 'пунктов')}`,
+      itemsDetectedWithLeft: (count: number, left: number) =>
+        `${plural(count, 'Найден', 'Найдено', 'Найдено')} ${count} ${plural(count, 'пункт', 'пункта', 'пунктов')}, осталось ${left}`,
+      clearEverything: 'Очистить всё',
+      modeLegend: 'Как выбираем?',
+      modes: {
+        smallest: {
+          label: 'Самое мелкое',
+          reason: 'Самый короткий пункт списка. Начните с малого, наберите разгон.',
+        },
+        scariest: {
+          label: 'Самое страшное',
+          reason: 'То, на что не хочется даже смотреть. Сделайте это первым и освободите день.',
+        },
+        random: {
+          label: 'Просто выбери',
+          reason: 'Никаких раздумий. Список выбрал сам. Просто начните.',
+        },
+      },
+      pickCta: 'Выбрать за меня',
+      pickAnotherCta: 'Выбрать другой',
+      emptyHint: 'Добавьте хотя бы один пункт и нажмите «Выбрать».',
+      readyHint: 'Готово. Нажмите «Выбрать за меня», когда не сможете решить.',
+      allDoneTitle: 'Список разобран.',
+      allDoneBody:
+        'Каждый пункт сделан или пропущен. Можно очистить список или сбросить его, чтобы вернуть пропущенные пункты.',
+      bringSkippedBack: 'Вернуть пропущенные',
+      startFreshList: 'Начать новый список',
+      pickedEyebrow: 'Начните с этого',
+      didIt: 'Сделано',
+      notThisOne: 'Не этот',
+      pickAgain: 'Выбрать снова',
+      progress: (done: number, skipped: number, left: number) =>
+        `${done} сделано , ${skipped} пропущено , ${left} осталось`,
+    },
+    eisenhower: {
+      inputLabel: 'Добавить задачу',
+      inputPlaceholder: 'Добавьте задачу и нажмите Enter (или вставьте сразу несколько, по одной в строке)',
+      addButton: 'Добавить',
+      totals: (total: number, unsorted: number) =>
+        `Всего ${total} ${plural(total, 'задача', 'задачи', 'задач')}, не разобрано ${unsorted}`,
+      clearAll: 'Очистить всё',
+      unsortedHeading: (count: number) => `Не разобрано (${count})`,
+      unsortedListLabel: 'Неразобранные задачи',
+      removeTask: (text: string) => `Удалить «${text}»`,
+      placeHint: 'Теперь нажмите на квадрант, чтобы поместить её туда.',
+      placeHintDesktop: 'Или перетащите мышью на компьютере.',
+      quadrantRegionLabel: (label: string) => `Квадрант «${label}»`,
+      quadrantCountLabel: (count: number, label: string) =>
+        `${count} ${plural(count, 'задача', 'задачи', 'задач')} в квадранте «${label}»`,
+      dropHere: 'Перетащите сюда',
+      sendBackToUnsorted: 'Вернуть в неразобранные',
+      moveBackToUnsorted: (text: string) => `Вернуть «${text}» в неразобранные`,
+      empty: 'Пусто',
+      emptyState:
+        'Добавьте задачу выше, чтобы начать. Всё сохраняется в вашем браузере, ничего на нашем сервере.',
+      hintLabel: 'Подсказка Doubly:',
+      hintBody:
+        'Стопку «скучное, но важное» чаще всего откладывают и потом больше всего об этом жалеют. Если сделаете сегодня одно дело, берите его оттуда.',
+      quadrants: {
+        fire: {
+          label: 'Горит',
+          sub: 'Сделать сегодня, а не завтра.',
+          textbook: 'Важное + срочное',
+        },
+        boring: {
+          label: 'Скучное, но важное',
+          sub: 'Настоящие победы. Запланируйте их и не пропускайте.',
+          textbook: 'Важное + несрочное',
+        },
+        noisy: {
+          label: 'Шумное, но необязательное',
+          sub: 'Громко, но это не ваша проблема. Делегируйте, отложите, игнорируйте.',
+          textbook: 'Срочное + неважное',
+        },
+        drop: {
+          label: 'Выбросить',
+          sub: 'Так можно. Список не обязан быть сделан до конца.',
+          textbook: 'Неважное + несрочное',
+        },
+      },
+    },
+    pomodoro: {
+      timerLabel: 'Таймер Pomodoro',
+      modeTablistLabel: 'Режим таймера',
+      modes: {
+        work: 'Фокус',
+        'short-break': 'Короткий перерыв',
+        'long-break': 'Длинный перерыв',
+      },
+      dialLabel: (mode: string, time: string) => `Таймер «${mode}». Осталось ${time}.`,
+      sessionsToday: (count: number) => `Сессий завершено сегодня: ${count}`,
+      soundToggle: 'Звук в конце сессии',
+      customizeDurations: 'Настроить длительность',
+      hideSettings: 'Скрыть настройки',
+      focusMinutes: 'Фокус (мин)',
+      shortBreakMinutes: 'Короткий перерыв (мин)',
+      longBreakMinutes: 'Длинный перерыв (мин)',
+      documentTitle: (time: string, mode: string) => `${time} | ${mode} | Doubly`,
+    },
+    visualTimer: {
+      ariaLabel: 'Визуальный таймер обратного отсчёта',
+      dialAriaLabel: (remaining: string) => `Циферблат визуального таймера. Осталось ${remaining}.`,
+      seconds: (s: number) => `${s} ${plural(s, 'секунда', 'секунды', 'секунд')}`,
+      minutes: (m: number) => `${m} ${plural(m, 'минута', 'минуты', 'минут')}`,
+      minutesAndSeconds: (m: number, s: number) =>
+        `${m} ${plural(m, 'минута', 'минуты', 'минут')} ${s} ${plural(s, 'секунда', 'секунды', 'секунд')}`,
+      documentTitle: (time: string) => `${time} | Doubly`,
+      countingDown: (minutes: number) => `Отсчёт от ${minutes} мин`,
+      setFor: (minutes: number) => `Задано ${minutes} мин`,
+      paused: 'Пауза',
+      timeIsUp: 'Время вышло',
+      presetsLabel: 'Готовые длительности',
+      presetMinutes: (minutes: number) => `${minutes} мин`,
+      custom: 'Своё',
+      minutesLabel: 'Минуты',
+      set: 'Задать',
+      soundWhenDone: 'Звук, когда время выйдет',
+    },
+    brownNoise: {
+      play: (sound: string) => `Включить «${sound}»`,
+      pause: (sound: string) => `Поставить «${sound}» на паузу`,
+      documentTitle: (sound: string) => `▶ ${sound} · Doubly`,
+      chooseSound: 'Выберите фоновый звук',
+      soundGroupLabel: 'Фоновый звук',
+      volume: 'Громкость',
+      volumePercent: (percent: number) => `${percent}%`,
+      sleepTimer: 'Таймер сна',
+      sleepOff: 'Выкл.',
+      sleepMinutes: (minutes: number) => `${minutes} мин`,
+      privacyNote: 'Работает в вашем браузере. Ничего не записывается и никуда не отправляется.',
+      sounds: {
+        brown: {
+          name: 'Коричневый',
+          description: 'Глубокий, рокочущий. Как далёкий водопад. Тот самый из TikTok.',
+        },
+        pink: {
+          name: 'Розовый',
+          description: 'Мягче белого, менее басовитый, чем коричневый. Сбалансированный.',
+        },
+        white: {
+          name: 'Белый',
+          description: 'Шипение старого телевизора. Яркий и ровный.',
+        },
+      },
+    },
+    hyperfocus: {
+      ariaLabel: 'Таймер прерывания гиперфокуса',
+
+      // Durations. Every phrasing lives here so a language can pick its own
+      // plural forms, units and word order.
+      minutesShort: (minutes: number) => `${minutes} мин`,
+      hoursShort: (hours: number) => `${hours} ч`,
+      hoursMinutesShort: (hours: number, minutes: number) => `${hours} ч ${minutes} мин`,
+      durationLong: (hours: number, minutes: number) => {
+        // Used only inside «вы работаете уже ...» — accusative duration forms.
+        if (hours === 0 && minutes === 0) return 'меньше минуты';
+        const parts: string[] = [];
+        if (hours > 0) parts.push(`${hours} ${plural(hours, 'час', 'часа', 'часов')}`);
+        if (minutes > 0) parts.push(`${minutes} ${plural(minutes, 'минуту', 'минуты', 'минут')}`);
+        return parts.join(' ');
+      },
+
+      // Session strip. Text wrapped in ** is rendered emphasized.
+      stripNoCap: (interval: string) => `Проверка каждые ${interval}, без жёсткой остановки`,
+      stripWithCap: (interval: string, cap: string) =>
+        `Проверка каждые ${interval}, жёсткая остановка через ${cap}`,
+      summaryNoCap: (interval: string) => `Проверка каждые **${interval}**, без жёсткой остановки.`,
+      summaryWithCap: (interval: string, cap: string) =>
+        `Проверка каждые **${interval}**, жёсткая остановка через **${cap}**.`,
+
+      // Setup
+      intervalHeading: 'Проверять каждые',
+      custom: 'Своё',
+      minutes: 'Минуты',
+      set: 'Задать',
+      jitterNote: 'Проверки сдвигаются примерно на десять процентов, чтобы мозг не научился отмахиваться от них заранее.',
+      moreOptions: 'Больше настроек',
+      hideOptions: 'Скрыть настройки',
+      taskLabel: 'Над чем вы работаете? (необязательно)',
+      taskPlaceholder: 'например: декларация, ревью дизайна, сценарий',
+      taskHint: 'Это озвучивается в проверках, чтобы вы слышали, ради чего сели.',
+      hardStopHeading: 'Жёсткая остановка через',
+      hardStopHint:
+        'Когда лимит достигнут, звучит более громкий сигнал, чтобы шестичасовая спираль не проскочила незаметно.',
+      capOff: 'Выкл.',
+      capHours: (hours: number) => `${hours} ч`,
+      noHardStop: 'без жёсткой остановки',
+      alertsHeading: 'Сигналы',
+      chime: 'Звук',
+      voice: 'Голос',
+      notify: 'Уведомление',
+      alertsHint:
+        'Звук становится громче, если проверку проигнорировать. Голос называет время и то, сколько вы уже работаете. Уведомление приходит в браузер, когда вкладка в фоне.',
+      notificationsBlocked:
+        'Уведомления заблокированы в этом браузере. Включите их в настройках сайта, чтобы пользоваться этим.',
+      notificationsUnsupported: 'Ваш браузер не поддерживает веб-уведомления.',
+      startSession: 'Начать сессию',
+
+      // Live session
+      statElapsed: 'Прошло',
+      statNextCheckIn: 'Следующая проверка',
+      statCap: 'Лимит',
+      statusNow: 'Сейчас',
+      statusPaused: 'Пауза',
+      statusCapHit: 'Лимит достигнут',
+      statusOff: 'Выкл.',
+      workingOn: (task: string) => `Работаете над **${task}**`,
+      checkInHeading: 'Быстрая проверка',
+      checkInBody: (clock: string, elapsed: string) =>
+        `Сейчас ${clock}, и вы занимаетесь этим уже ${elapsed}. Вы всё ещё делаете то, с чего начали, или пора вынырнуть?`,
+      stillGoing: 'Продолжаю',
+      takeABreak: 'Сделать перерыв',
+      stopSession: 'Остановить сессию',
+      capHeading: 'Лимит сессии достигнут',
+      capBody: (minutes: number) =>
+        `Вы поставили жёсткую остановку через ${minutes} ${plural(minutes, 'минуту', 'минуты', 'минут')}. Встаньте, выпейте воды, поешьте. Работа никуда не денется.`,
+      pause: 'Пауза',
+      resume: 'Продолжить',
+      endSession: 'Завершить сессию',
+      checkInLog: 'Журнал проверок',
+      logContinue: 'продолжили',
+      logBreak: 'сделали перерыв',
+      logStop: 'остановились',
+
+      // Browser tab title while a check-in is waiting in a background tab.
+      tabAlert: '⚠ Проверка | Doubly',
+
+      // Spoken aloud (SpeechSynthesis) and pushed as OS notifications.
+      checkInSpeech: (clock: string, elapsed: string, task: string) =>
+        task
+          ? `Проверка. Сейчас ${clock}. Над задачей «${task}» вы работаете уже ${elapsed}.`
+          : `Проверка. Сейчас ${clock}. Вы работаете уже ${elapsed}.`,
+      capSpeech: (clock: string, elapsed: string) =>
+        `Лимит сессии достигнут. Сейчас ${clock}. Вы занимаетесь этим уже ${elapsed}. Пора остановиться.`,
+      notificationCheckInTitle: 'Проверка гиперфокуса',
+      notificationCheckInBody: (clock: string, elapsed: string) =>
+        `Сейчас ${clock}. Вы занимаетесь этим уже ${elapsed}.`,
+      notificationCapTitle: 'Лимит гиперфокуса достигнут',
+      notificationCapBody: (clock: string, elapsed: string) =>
+        `Сейчас ${clock}. Вы занимаетесь этим уже ${elapsed}. Пора остановиться.`,
+    },
+    shared: {
+      start: 'Старт',
+      pause: 'Пауза',
+      resume: 'Продолжить',
+      done: 'Готово',
+      reset: 'Сброс',
+      skip: 'Пропустить',
+      skipAria: 'Перейти к следующей сессии',
+      startSession: 'Начать сессию фокуса',
+      creatingRoom: 'Создаём комнату...',
+    },
+    chrome: {
+      tryInApp: 'Попробовать в приложении',
+      appStoreAria: (label: string) => `${label} в App Store`,
+      breadcrumbAria: 'Навигационная цепочка',
     },
   },
 
