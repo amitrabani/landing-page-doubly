@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "ADHDの集中・ツール・戦略を学ぶ | Doubly",
+    "description": "ADHDの集中、時間感覚のズレ（タイムブラインドネス）、ブレインダンプ、動けなくなったときの抜け出し方を、やさしい言葉で解説。根拠にもとづいた、責めないガイドです。",
+    "ogTitle": "ADHDの集中・ツール・戦略を学ぶ",
+    "ogDescription": "ADHDの集中、時間感覚のズレ、動けなくなったときの抜け出し方を、やさしい言葉で解説します。",
+    "twitterTitle": "ADHDの集中・ツール・戦略を学ぶ",
+    "twitterDescription": "ADHDの集中、時間感覚のズレ、動けなくなったときの抜け出し方を、やさしい言葉で解説します。"
+  },
+  "h1": "学ぶ",
+  "breadcrumbLabel": "学ぶ",
+  "breadcrumbHome": "ホーム",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "ADHDの脳が、集中や時間、そして「最後までやり切る」ことをどう扱っているのか。それをやさしい言葉で書いたガイドです。検索アルゴリズムではなく、読む人に向けて書いています。根拠にもとづいて、責めることなく、医学的な断定もしません。",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "最初の記事は来週公開します",
+      "paragraphs": [
+        "いま最初の何本かを書いています。テーマは、時間感覚のズレ（タイムブラインドネス）、ブレインダンプの科学、そして世の中の生産性アドバイスがADHDの大人にことごとく効かない理由です。",
+        "それまでのあいだは、[無料のADHD向けポモドーロタイマー](/tools/pomodoro)を試すか、[ツールライブラリ全体](/tools)をのぞいてみてください。"
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "アプリで試す",
+    "body": "Doubly iOSアプリが助けてくれるのは、計画づくりではなく「始めること」です。頭の中のごちゃごちゃを吐き出せば、次の一歩が1つだけ返ってきます。しかも、あなたの進み具合を本気で気にかけてくれる実在の人たちに進捗を見せていくから、言いっぱなしで終わらず、ちゃんと続けられます。",
+    "label": "アプリで試す"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

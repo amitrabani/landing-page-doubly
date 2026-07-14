@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Ruido marrón para el TDAH: generador gratis | Doubly",
+    "description": "Generador de ruido marrón gratis para el TDAH, directo en tu navegador. Marrón, rosa y blanco. Sin registro, sin anuncios y con temporizador de apagado.",
+    "ogTitle": "Generador de ruido marrón gratis para concentrarte con TDAH",
+    "ogDescription": "Un reproductor de ruido marrón gratis con temporizador de apagado. Marrón, rosa y blanco. Funciona sin conexión en tu navegador.",
+    "twitterTitle": "Generador de ruido marrón gratis",
+    "twitterDescription": "Marrón, rosa y blanco. Gratis, sin registro, funciona en tu navegador."
+  },
+  "h1": "Generador de ruido marrón gratis",
+  "breadcrumbLabel": "Generador de ruido marrón",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbTools": "Herramientas",
+  "answerCapsule": "**El ruido marrón es un sonido grave, de baja frecuencia, que tapa las distracciones y le da al cerebro acelerado con TDAH algo estable en lo que asentarse.** Este generador de sonido ambiente gratis reproduce marrón, rosa y blanco directamente en tu navegador. Sin registro, sin anuncios, sin archivos de audio que descargar. Elige un sonido, ajusta el volumen, añade un temporizador de apagado si quieres y vuelve al trabajo.",
+  "intro": "El generador de arriba funciona con la Web Audio API, así que el sonido se crea en tu dispositivo en tiempo real. Eso significa que no hay streaming ni buffering, y sigue sonando aunque se te caiga el wifi. Prueba primero el marrón. Si se te hace demasiado pesado, cambia al rosa. La mayoría de los adultos con TDAH se quedan con el marrón.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Cómo usar el generador de ruido marrón",
+      "steps": [
+        {
+          "name": "Elige un sonido",
+          "text": "El marrón es el grave que casi todo el mundo busca. Si el marrón se te hace demasiado pesado, prueba el rosa. El blanco es el más brillante y el más difícil de ignorar."
+        },
+        {
+          "name": "Dale a reproducir",
+          "text": "El primer toque crea el motor de audio en tu navegador. Dale medio segundo en los móviles más lentos. A partir de ahí, cambiar de sonido es instantáneo."
+        },
+        {
+          "name": "Encuentra tu volumen",
+          "text": "Lo bastante bajo como para que todavía puedas oír a alguien que te habla en un tono normal. Si tienes que levantar la voz para que te oigan por encima, está demasiado alto."
+        },
+        {
+          "name": "Pon un temporizador de apagado si lo necesitas",
+          "text": "Elige 15, 30, 60 o 90 minutos. El sonido se desvanece suavemente al final para que no te sobresalte. Déjalo apagado si quieres que suene todo el día."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por qué el ruido marrón funciona en cerebros con TDAH",
+      "paragraphs": [
+        "Los cerebros con TDAH tienden a orientarse hacia cualquier sonido nuevo. Una puerta que se cierra de golpe, la vibración de un móvil, dos personas que se ponen a hablar detrás de ti. Cada uno se lleva un hilo de tu atención lejos de lo que estabas haciendo, y recuperarla cuesta tiempo y esfuerzo de verdad.",
+        "El ruido marrón no hace que te concentres. Elimina lo que no para de robarte la concentración. Un sonido estable y predecible tapa los impredecibles, de modo que tu cerebro deja de disparar la respuesta de orientación cada pocos segundos.",
+        "También hay aquí un hallazgo científico pequeño pero interesante. En un estudio de 2007, [Söderlund, Sikström y Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) encontraron que un ruido blanco moderado mejoraba el rendimiento cognitivo en niños con dificultades de atención, mientras que lo empeoraba ligeramente en niños neurotípicos. El mecanismo propuesto es la resonancia estocástica: la idea de que un cerebro ruidoso puede necesitar algo de ruido externo para situarse en su rango de funcionamiento.",
+        "La ciencia todavía está en pañales, pero los relatos de quienes lo viven son contundentes y consistentes. [CHADD](https://chadd.org/about-adhd/overview/) y organismos similares consideran que las herramientas sensoriales, como el sonido de fondo, son algo razonable que probar. Si a ti te ayuda, con eso basta."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Preguntas frecuentes",
+      "faqs": [
+        {
+          "q": "¿Qué es el ruido marrón?",
+          "a": "El ruido marrón es un sonido grave y retumbante con más energía en las frecuencias bajas, llamado así por las matemáticas del «movimiento browniano» aleatorio que lo generan. Suena como una cascada constante o como lluvia fuerte sobre un tejado. Comparado con el ruido blanco, es más oscuro y cálido, y a la mayoría de la gente le resulta menos áspero en sesiones largas."
+        },
+        {
+          "q": "¿Esto es un generador de sonido ambiente?",
+          "a": "Sí. El ruido marrón es la opción más popular, pero el mismo reproductor también genera rosa y blanco. Tres sonidos ambiente en total, todos creados en directo en tu navegador y sin descargar ningún archivo de audio. Elige el que mejor se difumine en el fondo para tu cerebro."
+        },
+        {
+          "q": "Ruido marrón vs. ruido rosa vs. ruido blanco: ¿cuál elijo?",
+          "a": "El ruido blanco es uniforme en todas las frecuencias y suena como el siseo de un televisor. El ruido rosa baja un poco las frecuencias altas, así que se siente más suave, como lluvia constante. El ruido marrón las baja aún más, así que se siente grave y te ancla. Si el ruido blanco te resulta áspero, prueba el rosa. Si el rosa todavía te suena brillante, prueba el marrón. Elige el que puedas ignorar cómodamente."
+        },
+        {
+          "q": "¿El ruido marrón ayuda a concentrarse con TDAH?",
+          "a": "Algunos adultos con TDAH se concentran mejor con un sonido de fondo estable, y un estudio de 2007 de Söderlund y sus colegas encontró que un ruido auditivo moderado sí mejoraba el rendimiento cognitivo en niños con dificultades de atención. El mecanismo probable es el enmascaramiento. Un sonido estable tapa los ruidos impredecibles (gente hablando, el tráfico, una nevera que zumba) para que tu cerebro deje de orientarse hacia cada sonido nuevo."
+        },
+        {
+          "q": "¿Es seguro escuchar ruido marrón todo el día?",
+          "a": "Sí, a un volumen razonable. Se aplican las mismas reglas de seguridad auditiva que con la música. Mantén el volumen lo bastante bajo como para oír cómodamente a alguien que habla en tono normal en la misma habitación. Los CDC recomiendan limitar la exposición prolongada por encima de 70 dB. Si te quedan los oídos cansados o te pitan después de una sesión, el volumen está demasiado alto."
+        },
+        {
+          "q": "¿Por qué el ruido marrón se puso de moda en TikTok?",
+          "a": "Muchos adultos con TDAH empezaron a publicar en TikTok que el ruido marrón callaba el parloteo mental constante, algo que solían describir como «el ruido de mi cabeza desapareció». Esa sola observación se hizo viral en 2022 y 2023, y una ola de gente lo probó. La ciencia es preliminar, pero los relatos de quienes lo viven son lo bastante fuertes como para que valga la pena probarlo por ti mismo."
+        },
+        {
+          "q": "¿Funciona sin conexión?",
+          "a": "Sí. El sonido se genera en tu navegador con la Web Audio API, no se transmite desde un servidor. Una vez que la página carga, no hace falta conexión a internet. No se graba nada, no se sube nada y el reproductor no tiene anuncios ni rastreadores."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Herramientas relacionadas",
+    "body": "El ruido marrón combina de forma natural con un temporizador de enfoque. Prueba el [temporizador pomodoro para el TDAH](/tools/pomodoro) para hacer intervalos estructurados de 25 minutos, o el [temporizador visual](/tools/visual-timer) si quieres una cuña que se encoge y que sirve además como reloj para la ceguera al tiempo. Explora la [biblioteca completa de herramientas](/tools) o lee la [biblioteca de aprendizaje de Doubly](/learn) para encontrar guías sobre concentración, volcado mental y cómo desbloquearte."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Pruébalo en la app",
+    "body": "El ruido marrón te ayuda a meterte en una tarea. La app de Doubly para iOS te ayuda a decidir cuál es esa tarea. Volcado mental, un siguiente paso claro y seguimientos con personas reales que te piden cuentas.",
+    "label": "Pruébalo en la app"
+  },
+  "jsonld": {
+    "appName": "Generador de ruido marrón de Doubly",
+    "appDescription": "Un generador de ruido marrón gratis que funciona en el navegador, con rosa y blanco. Sin registro, con temporizador de apagado, funciona sin conexión.",
+    "howToName": "Cómo usar el generador de ruido marrón",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

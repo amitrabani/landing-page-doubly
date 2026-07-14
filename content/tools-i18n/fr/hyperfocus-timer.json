@@ -1,0 +1,108 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Minuteur d’hyperfocus gratuit + alarme TDAH | Doubly",
+    "description": "Minuteur d’hyperfocus gratuit : il te relance toutes les X minutes et annonce l’heure à voix haute pour ne pas perdre six heures. Sans inscription.",
+    "ogTitle": "Minuteur d’hyperfocus gratuit + alarme de contrôle TDAH",
+    "ogDescription": "Programme des points de contrôle sonores et parlés pour qu’une session d’hyperfocus n’avale pas tout ton après-midi. Gratuit, sans inscription.",
+    "twitterTitle": "Minuteur d’hyperfocus gratuit + alarme de contrôle TDAH",
+    "twitterDescription": "Des points de contrôle sonores et parlés, à intervalle fixe. Gratuit, sans inscription."
+  },
+  "h1": "Minuteur d’hyperfocus gratuit",
+  "breadcrumbLabel": "Minuteur d’hyperfocus",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "answerCapsule": "**Un minuteur d’hyperfocus programme des points de contrôle récurrents, toutes les 20 à 45 minutes par défaut, pour qu’un tunnel de focus façon TDAH ne puisse pas engloutir six heures de ta journée en douce.** Cette version gratuite, dans le navigateur, sonne, peut annoncer l’heure et la tâche que tu as notée à voix haute, et te demande si tu es toujours dessus. Une limite d’arrêt net, distincte, se déclenche une seule fois à la durée de session maximale que tu as fixée. Sans inscription, sans installation, tes réglages restent sur ton appareil.",
+  "intro": "L’hyperfocus est la moitié dont on parle le moins dans le TDAH. Celle qui a l’air productive vue de l’extérieur, pendant qu’à l’intérieur du tunnel tu oublies de boire, tu rates des réunions et tu refais surface à 19 h en te demandant où est passé l’après-midi. La solution, ce n’est pas plus de focus. C’est une interruption fiable, qui brise le sort assez longtemps pour que tu choisisses ce qui vient ensuite.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser le minuteur d’hyperfocus",
+      "steps": [
+        {
+          "name": "Nomme la tâche pour laquelle tu t’es installé",
+          "text": "Écris une seule ligne courte : « la déclaration d’impôts », « le script », « la revue de design ». C’est facultatif, mais recommandé. Le point de contrôle parlé te la relira, et c’est la meilleure défense qui soit contre le changement d’onglet qui se transforme en trois heures de travail sans rapport."
+        },
+        {
+          "name": "Choisis un intervalle de contrôle",
+          "text": "30 minutes est un bon réglage par défaut. Passe à 20 si tu as tendance à ignorer l’alerte, à 45 ou 60 si des intervalles plus courts te découpent ton flow."
+        },
+        {
+          "name": "Fixe un arrêt net (facultatif, mais recommandé)",
+          "text": "Choisis une durée totale maximale pour la session. Cette limite est une alerte distincte et plus forte, qui ne se déclenche qu’une fois, peu importe le nombre de fois où tu as appuyé sur « je continue »."
+        },
+        {
+          "name": "Appuie sur Démarrer et travaille",
+          "text": "Quand le point de contrôle se déclenche, la page sonne, annonce éventuellement l’heure et ta tâche, et te demande si tu es toujours dessus. Choisis « Je continue », « Faire une pause » ou « Arrêter »."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi ça marche pour les cerveaux TDAH",
+      "paragraphs": [
+        "On décrit souvent le TDAH comme un déficit de l’attention, mais des chercheurs comme le Dr Russell Barkley le présentent plus justement comme une différence d’autorégulation, y compris la régulation de l’attention elle-même. Autrement dit, les cerveaux TDAH ne font pas que sous-investir leur attention : ils la sur-investissent aussi. L’hyperfocus, c’est ce qui arrive quand un sujet est assez nouveau, intéressant ou stimulant pour que la mécanique habituelle de bascule de l’attention cesse de se déclencher. Le tunnel se resserre et le monde extérieur s’efface.",
+        "De l’intérieur, une session d’hyperfocus ressemble à du flow. De l’extérieur : des repas sautés, des messages sans réponse et un dos raide. Le coût est réel, même quand le travail est bon. Un point de contrôle audible et récurrent est un moyen peu coûteux d’externaliser l’auto-surveillance qu’un cerveau TDAH, une fois dans le tunnel, ne peut plus assurer tout seul. C’est le même principe que le compte à rebours visuel pour la cécité temporelle, appliqué au problème inverse.",
+        "Pourquoi l’heure annoncée à voix haute compte : les signaux visuels se font absorber par le travail. Tu peux regarder une horloge sans la voir. L’audio, lui, atterrit autrement, surtout le son d’une phrase, que la zone du langage de ton cerveau doit décoder avant de pouvoir l’ignorer. [CHADD](https://chadd.org/about-adhd/overview/), la ressource nationale américaine sur le TDAH, cite les repères externes et les supports de structuration du temps parmi les stratégies pratiques recommandées aux adultes TDAH."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Qu’est-ce qu’un minuteur d’hyperfocus ?",
+          "a": "Un minuteur d’hyperfocus est une alarme récurrente qui t’interrompt à intervalle fixe, en général toutes les 20 à 45 minutes, pour qu’une session de focus intense intègre d’office un moment où tu remontes à la surface. Au lieu de décompter jusqu’à la fin d’un seul bloc, il se redéclenche pendant toute la session, et c’est exactement ce dont ont besoin les personnes sujettes à l’hyperfocus façon TDAH. L’alerte est forte ou parlée, pour percer la vision en tunnel."
+        },
+        {
+          "q": "En quoi est-ce différent d’un minuteur Pomodoro ?",
+          "a": "Un minuteur Pomodoro alterne un bloc de focus de 25 minutes et une pause de 5 minutes, et il est conçu pour les gens qui ont du mal à commencer. Un minuteur d’hyperfocus est conçu pour le problème inverse : commencer, ça va ; s’arrêter, non. Il ne t’impose pas de pause, il te sort juste du tunnel assez longtemps pour que tu remarques l’heure, la date, ta vessie, et si tu devrais encore être en train de faire ça."
+        },
+        {
+          "q": "Pourquoi l’annonce de l’heure est-elle importante ?",
+          "a": "Pendant un épisode d’hyperfocus, la sensation du temps qui passe disparaît. Un rappel de l’heure à voix haute fonctionne là où un coup d’œil à l’horloge échoue, parce que le son t’atteint même quand tes yeux sont rivés à l’écran. C’est le fait d’entendre « il est 14 h 45, ça fait deux heures que tu es dessus » qui brise le sort. La sonnerie seule est trop facile à balayer."
+        },
+        {
+          "q": "Quel intervalle choisir ?",
+          "a": "Commence par 30 minutes. Si tu te surprends à ignorer la sonnerie ou à l’étouffer, descends à 20. Si l’intervalle casse ton flow au lieu de t’en protéger, essaie 45 ou 60. L’objectif, c’est l’intervalle le plus long qui te fasse quand même remonter respirer de façon fiable. Il n’y a pas de bonne réponse, seulement celle qui marche pour ton cerveau cette semaine."
+        },
+        {
+          "q": "À quoi sert l’arrêt net ?",
+          "a": "Une limite de session est une alerte plus forte, au son différent, placée à une durée totale maximale, fixée à 2 heures par défaut. Elle rattrape le cas où tu cliques sur « je continue » à chaque point de contrôle et où tu serais resté au bureau jusqu’à minuit. C’est un signal distinct, pas un point de contrôle, pour que ton cerveau reptilien ne puisse pas le confondre avec l’alerte habituelle."
+        },
+        {
+          "q": "Est-ce que l’annonce vocale fonctionne sur mon téléphone ?",
+          "a": "Elle utilise l’API Web Speech du navigateur, qui fonctionne sur les versions récentes de Safari iOS, de Chrome Android et sur les navigateurs de bureau. Sur iOS, la page doit rester ouverte et tu devras peut-être appuyer une fois dessus pour que le navigateur sache que tu autorises le son. Si ton téléphone est en silencieux, la sonnerie sera coupée, mais l’annonce vocale passe quand même par le haut-parleur."
+        },
+        {
+          "q": "Le minuteur continue-t-il de tourner quand l’onglet est en arrière-plan ?",
+          "a": "Oui. L’intervalle est calé sur l’horloge réelle, pas sur un compteur JavaScript que les navigateurs ralentissent dans les onglets en arrière-plan. Le point de contrôle se déclenche à l’heure même si tu as changé de fenêtre. Si tu en donnes l’autorisation, une notification s’affiche sur le bureau quand l’onglet est masqué, le titre de la page clignote, et la sonnerie devient plus forte et plus fréquente à mesure que tu l’ignores. Un maintien de l’écran allumé (wake lock) est demandé sur les appareils compatibles."
+        },
+        {
+          "q": "Pourquoi l’heure du point de contrôle varie-t-elle d’une minute ou deux à chaque tour ?",
+          "a": "Chaque intervalle est décalé d’environ dix pour cent, et c’est volontaire. Une alerte parfaitement prévisible, c’est le genre d’alerte qu’un cerveau en hyperfocus apprend à anticiper et à écarter avant même de l’enregistrer consciemment. Un petit décalage imprévisible, parfois 27 minutes, parfois 33, met en échec cette mise à l’écart préventive. La moyenne sur la session reste l’intervalle que tu as choisi."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Si ton souci, c’est de commencer plutôt que de t’arrêter, essaie le [minuteur Pomodoro TDAH](/tools/pomodoro) pour des sprints courts et finis, avec des pauses intégrées. Pour un compte à rebours d’une seule session que tu peux regarder au lieu de lire, le [minuteur visuel](/tools/visual-timer) fait aussi office d’horloge de cécité temporelle. Si le bruit du bureau, ou celui qui tourne dans ta tête, n’arrête pas de te ramener dans le tunnel, superpose le [générateur de bruit brun](/tools/brown-noise) par-dessous. Parcours la [bibliothèque complète d’outils](/tools).",
+    "_comment": null
+  },
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "Un minuteur peut te sortir du tunnel. L’appli Doubly sur iOS t’aide à décider quoi faire de l’heure qui vient : vide le chaos, fais remonter une seule prochaine étape claire, et rends-toi responsable auprès de vraies personnes qui savent ce que ça fait, de perdre un après-midi.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Minuteur d’interruption d’hyperfocus Doubly",
+    "appDescription": "Un minuteur d’hyperfocus gratuit en ligne, avec des points de contrôle parlés récurrents et une limite d’arrêt net facultative. Conçu pour les adultes TDAH qui perdent des heures en vision tunnel.",
+    "howToName": "Comment utiliser le minuteur d’hyperfocus",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

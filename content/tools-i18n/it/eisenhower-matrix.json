@@ -2,7 +2,7 @@
   "slug": "eisenhower-matrix",
   "meta": {
     "title": "Matrice di Eisenhower online (ADHD) | Doubly",
-    "description": "Matrice di Eisenhower gratuita con quadranti a misura di ADHD come «noioso ma importante». Trascina le attività, salva in locale, senza registrazione.",
+    "description": "Matrice di Eisenhower online gratuita con quadranti a misura di ADHD come «noioso ma importante». Trascina le attività, salva in locale, senza registrazione.",
     "ogTitle": "Matrice di Eisenhower online (edizione ADHD)",
     "ogDescription": "Matrice di Eisenhower a misura di ADHD con quadranti come «noioso ma importante». Trascina, salva in locale, gratis.",
     "twitterTitle": "Matrice di Eisenhower online (edizione ADHD)",
@@ -13,7 +13,7 @@
   "breadcrumbTools": "Strumenti",
   "breadcrumbLabel": "Matrice di Eisenhower online",
   "answerCapsule": "**Una matrice di Eisenhower ordina le attività per importanza e urgenza in quattro quadranti, così vedi cosa fare, cosa programmare, cosa ignorare e cosa lasciar perdere.** Questa versione sostituisce le etichette da manuale con altre a misura di ADHD, come «noioso ma importante». Trascina o tocca per ordinare. Si salva nel tuo browser.",
-  "intro": "La matrice classica pone due domande su ogni attività: è importante ed è urgente? I cervelli ADHD spesso conoscono la risposta ma si bloccano al momento di ordinare. Dare ai quadranti un nome basato su come li senti, e non sulla loro categoria, rende l'ordinamento istantaneo.",
+  "intro": "La matrice classica pone due domande su ogni attività: è importante ed è urgente? I cervelli ADHD spesso conoscono la risposta, ma si bloccano al momento di ordinare. Dare ai quadranti un nome basato su come li senti, e non sulla loro categoria, rende l’ordinamento istantaneo.",
   "sections": [
     {
       "kind": "steps",
@@ -21,11 +21,11 @@
       "steps": [
         {
           "name": "Butta dentro le tue attività",
-          "text": "Scrivi le attività una alla volta e premi invio, oppure incolla una lista separata da a capo. Finiscono nella riga non ordinata."
+          "text": "Scrivi le attività una alla volta e premi invio, oppure incolla una lista separata da a capo. Finiscono nella riga delle non ordinate."
         },
         {
           "name": "Ordina ogni attività in un quadrante",
-          "text": "Su desktop, trascina un'attività in un quadrante. Su mobile, tocca l'attività per selezionarla, poi tocca il quadrante. Quello che ti sembra giusto di solito lo è."
+          "text": "Su desktop, trascina un’attività in un quadrante. Su mobile, tocca l’attività per selezionarla, poi tocca il quadrante. Quello che ti sembra giusto di solito lo è."
         },
         {
           "name": "Guarda la pila del noioso-ma-importante",
@@ -41,12 +41,12 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Perché un'impostazione a misura di ADHD cambia la matrice",
+      "heading": "Perché un’impostazione a misura di ADHD cambia la matrice",
       "steps": null,
       "paragraphs": [
-        "La matrice di Eisenhower è ottima nel far emergere le attività che le persone evitano in silenzio, che spesso è la cosa più importante che uno strumento per stabilire le priorità possa fare. Le quattro etichette standard («Importante + Non urgente» e così via) sono tecnicamente corrette, ma sembrano un quiz. Per un cervello ADHD che sta già gestendo un carico di funzioni esecutive, quel quiz è una decisione in più prima ancora che l'attività cominci.",
-        "Rinominare i quadranti in base alla loro impronta emotiva cambia il costo di attivazione. «In fiamme» è ovvio. «Noioso ma importante» è quello che quasi tutti saltano e che quasi tutti si pentono di aver saltato (moduli delle tasse, cose da ricontattare, l'appuntamento dal dentista che continui a rimandare). «Rumoroso ma ignorabile» dà un nome alle cose che pretendono attenzione senza meritarla. «Lascia perdere» dà il permesso di eliminare, cosa che i classici consigli di produttività raramente dicono ad alta voce.",
-        "Ridurre il carico cognitivo nel momento in cui stabilisci le priorità è esattamente il tipo di supporto ambientale che organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) consigliano per l'ADHD negli adulti. La matrice è prima di tutto un aiuto per pensare, e solo in secondo luogo un'app per tenere traccia. Usala per un reset settimanale, non come sostituto permanente della tua lista di cose da fare."
+        "La matrice di Eisenhower è ottima nel far emergere le attività che le persone evitano in silenzio, che spesso è la cosa più importante che uno strumento per stabilire le priorità possa fare. Le quattro etichette standard («Importante + Non urgente» e così via) sono tecnicamente corrette, ma sembrano un quiz. Per un cervello ADHD che sta già gestendo un carico di funzioni esecutive, quel quiz è una decisione in più prima ancora che l’attività cominci.",
+        "Rinominare i quadranti in base alla loro impronta emotiva cambia il costo di attivazione. «In fiamme» è ovvio. «Noioso ma importante» è quello che quasi tutti saltano e che quasi tutti si pentono di aver saltato (moduli delle tasse, cose da ricontattare, l’appuntamento dal dentista che continui a rimandare). «Rumoroso ma ignorabile» dà un nome alle cose che pretendono attenzione senza meritarla. «Lascia perdere» dà il permesso di eliminare, cosa che i classici consigli di produttività raramente dicono ad alta voce.",
+        "Ridurre il carico cognitivo nel momento in cui stabilisci le priorità è esattamente il tipo di supporto ambientale che organizzazioni come [CHADD](https://chadd.org/about-adhd/overview/) consigliano per l’ADHD negli adulti. La matrice è prima di tutto un aiuto per pensare, e solo in secondo luogo un’app per tenere traccia. Usala per un reset settimanale, non come sostituto permanente della tua lista di cose da fare."
       ],
       "faqs": null
     },
@@ -57,43 +57,43 @@
       "paragraphs": null,
       "faqs": [
         {
-          "q": "Cos'è la matrice di Eisenhower?",
-          "a": "La matrice di Eisenhower è uno strumento per stabilire le priorità che ordina le attività in base a due domande: è importante ed è urgente? Ne escono quattro caselle, da «fallo ora» a «lascia perdere». È attribuita al presidente Dwight Eisenhower ed è stata resa popolare da Stephen Covey nel libro The 7 Habits of Highly Effective People."
+          "q": "Cos’è la matrice di Eisenhower?",
+          "a": "La matrice di Eisenhower è uno strumento per stabilire le priorità che ordina le attività in base a due domande: è importante ed è urgente? Ne escono quattro caselle, da «fallo ora» a «lascia perdere». È attribuita al presidente Dwight Eisenhower ed è stata resa popolare da Stephen Covey in The 7 Habits of Highly Effective People."
         },
         {
           "q": "Perché questa versione usa etichette diverse?",
-          "a": "I nomi dei quadranti da manuale («Importante + Non urgente», ecc.) descrivono categorie ma raramente smuovono i cervelli ADHD. Nomi come «noioso ma importante» e «rumoroso ma ignorabile» descrivono come l'attività si sente davvero, il che li rende più facili da riconoscere e ordinare. La matrice di fondo è identica."
+          "a": "I nomi dei quadranti da manuale («Importante + Non urgente», ecc.) descrivono categorie, ma raramente smuovono i cervelli ADHD. Nomi come «noioso ma importante» e «rumoroso ma ignorabile» descrivono come l’attività si sente davvero, il che li rende più facili da riconoscere e da ordinare. La matrice di fondo è identica."
         },
         {
-          "q": "Come funziona il trascinamento?",
-          "a": "Su desktop, trascina un'attività dalla riga non ordinata in un quadrante qualsiasi, o da un quadrante all'altro. Su mobile, tocca un'attività per selezionarla, poi tocca il quadrante in cui vuoi metterla. Puoi anche toccare la freccia su qualsiasi attività ordinata per rimandarla tra quelle non ordinate."
+          "q": "Come funziona il trascina e rilascia?",
+          "a": "Su desktop, trascina un’attività dalla riga delle non ordinate in un quadrante qualsiasi, o da un quadrante all’altro. Su mobile, tocca un’attività per selezionarla, poi tocca il quadrante in cui vuoi metterla. Puoi anche toccare la freccia su qualsiasi attività ordinata per rimandarla tra quelle non ordinate."
         },
         {
           "q": "Le mie attività vengono salvate?",
           "a": "Sì, ma solo nel tuo browser, tramite localStorage. Niente viene inviato ad alcun server, niente è collegato a un account, e svuotare la lista cancella con sé anche i dati salvati."
         },
         {
-          "q": "Da quale quadrante dovrei partire se ho l'ADHD?",
-          "a": "Quasi tutti i consigli di produttività per l'ADHD concordano: il quadrante noioso-ma-importante è il punto di leva. Il quadrante in fiamme attira l'attenzione senza bisogno di chiederlo. Il noioso-ma-importante è ciò che tende a essere rimandato all'infinito e a creare l'incendio successivo. Fare un'attività noiosa-ma-importante al giorno è un ritmo ad alto impatto."
+          "q": "Da quale quadrante dovrei partire se ho l’ADHD?",
+          "a": "Quasi tutti i consigli di produttività per l’ADHD concordano: il quadrante noioso-ma-importante è il punto di leva. Il quadrante in fiamme attira l’attenzione senza bisogno di chiederlo. Il noioso-ma-importante è ciò che tende a essere rimandato all’infinito e a creare l’incendio successivo. Fare un’attività noiosa-ma-importante al giorno è un ritmo ad alto impatto."
         },
         {
           "q": "In cosa è diverso da una normale app di to-do?",
-          "a": "Un'app di to-do ti dà una lista piatta e dà per scontato che tu sappia stabilire le priorità. La matrice impone un ordinamento su due assi, che fa emergere le cose che stavi evitando in silenzio. È uno strumento per pensare più che per tenere traccia, e funziona meglio per un reset settimanale che come lista quotidiana."
+          "a": "Un’app di to-do ti dà una lista piatta e dà per scontato che tu sappia stabilire le priorità. La matrice impone un ordinamento su due assi, che fa emergere le cose che stavi evitando in silenzio. È uno strumento per pensare più che per tenere traccia, e funziona meglio per un reset settimanale che come lista quotidiana."
         }
       ]
     }
   ],
   "related": {
     "heading": "Strumenti correlati",
-    "body": "Se hai la testa troppo piena persino per ordinare, parti da uno [svuota-cervello](/tools/brain-dump) per buttare fuori il caos. Se anche quattro quadranti sono troppi, usa [scegline uno](/tools/pick-one) per far emergere una singola attività da cui iniziare. Una volta scelta una voce di un quadrante, dividila in passi fattibili con lo [strumento per dividere le attività](/tools/task-splitter) e cronometra il primo passo con il [timer pomodoro per l'ADHD](/tools/pomodoro). Sfoglia la [libreria completa degli strumenti](/tools)."
+    "body": "Se hai la testa troppo piena persino per ordinare, parti da uno [svuota-cervello](/tools/brain-dump) per buttare fuori il caos. Se anche quattro quadranti sono troppi, usa [scegline una](/tools/pick-one) per far emergere una singola attività da cui iniziare. Una volta scelta una voce di un quadrante, dividila in passi fattibili con lo [strumento per scomporre le attività](/tools/task-splitter) e cronometra il primo passo con il [timer pomodoro per l’ADHD](/tools/pomodoro). Sfoglia la [libreria completa degli strumenti](/tools)."
   },
   "cards": null,
   "openTool": null,
   "comingSoon": null,
   "cta": {
-    "headline": "Provalo nell'app",
-    "body": "La matrice web è uno strumento settimanale per pensare. L'app Doubly per iOS fa il passo successivo: una volta che hai ordinato ciò che conta, l'app fa emergere l'unica attività noiosa-ma-importante da fare oggi e usa controlli di responsabilità con persone reali, così succede davvero.",
-    "label": "Provalo nell'app"
+    "headline": "Provalo nell’app",
+    "body": "La matrice web è uno strumento settimanale per pensare. L’app Doubly per iOS fa il passo successivo: una volta che hai ordinato ciò che conta, l’app fa emergere l’unica attività noiosa-ma-importante da fare oggi e usa controlli di responsabilità da parte di persone reali, così succede davvero.",
+    "label": "Provalo nell’app"
   },
   "jsonld": {
     "appName": "Matrice di Eisenhower di Doubly (edizione ADHD)",

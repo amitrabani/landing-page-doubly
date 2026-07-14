@@ -1,0 +1,119 @@
+{
+  "slug": "visual-timer",
+  "meta": {
+    "title": "Timer visual grátis + relógio de cegueira temporal | Doubly",
+    "description": "Um timer visual grátis com uma fatia que encolhe para você ver o tempo passar. Também funciona como relógio de cegueira temporal para TDAH. Sem cadastro.",
+    "ogTitle": "Timer visual grátis + relógio de cegueira temporal",
+    "ogDescription": "Um timer visual de fatia encolhendo que transforma minutos abstratos em algo que você consegue enxergar. Feito para funcionar como relógio contra a cegueira temporal no TDAH.",
+    "twitterTitle": "Timer visual grátis + relógio de cegueira temporal",
+    "twitterDescription": "Um timer de fatia encolhendo que deixa o tempo visível. Grátis, sem cadastro."
+  },
+  "h1": "Timer visual grátis online",
+  "breadcrumbLabel": "Timer visual",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "answerCapsule": "**Um timer visual é uma contagem regressiva que mostra o tempo como uma fatia que vai encolhendo, então você enxerga quanto falta sem precisar ler números.** Esta versão grátis e online roda em qualquer navegador, continua certa mesmo com a aba em segundo plano e serve também como relógio contra a cegueira temporal para adultos com TDAH, cuja noção interna de tempo não é confiável. Escolha uma duração, toque em Iniciar e veja a fatia desaparecer.",
+  "intro": "Relógios digitais pedem que você leia números e faça conta de cabeça para sentir quanto tempo ainda falta. Um timer visual transforma isso em algo que os seus olhos fazem sozinhos. Use para blocos de foco, sessões de estudo, transições com as crianças, reuniões com prazo flexível ou qualquer momento em que sentir o tempo importa mais do que contar os segundos exatos.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar o timer visual",
+      "steps": [
+        {
+          "name": "Escolha uma duração",
+          "text": "Toque em uma opção pronta ou digite um número de minutos personalizado. Se a tarefa parece gigante, escolha algo pequeno, como dois ou cinco minutos. A sua última configuração fica guardada para a próxima vez."
+        },
+        {
+          "name": "Toque em Iniciar",
+          "text": "A fatia colorida preenche o mostrador e começa a encolher. Você consegue dar uma olhada nela sem precisar ler números."
+        },
+        {
+          "name": "Trabalhe, observe ou espere",
+          "text": "Use para blocos de foco, transições com as crianças, tempo de fala, reuniões ou qualquer coisa que precise de um prazo flexível. Uma olhada rápida já mostra quanto falta, sem te tirar da tarefa."
+        },
+        {
+          "name": "Zere e use de novo",
+          "text": "Quando a fatia acabar, toque em Zerar para rodar a mesma duração de novo, ou escolha outra opção pronta."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que um timer visual funciona",
+      "paragraphs": [
+        "Ler um relógio digital é uma tarefa de dois passos. Primeiro você lê os números, depois subtrai do horário-alvo para descobrir quanto falta. Essa subtração acontece na memória de trabalho, que é exatamente o recurso que você está tentando proteger quando coloca um timer para rodar. Uma fatia encolhendo elimina a subtração. O seu sistema visual percebe a mudança do mesmo jeito que percebe um copo esvaziando.",
+        "Isso importa ainda mais para quem tem uma noção de tempo menos precisa. Crianças, adultos com TDAH ou autismo, pessoas aprendendo um segundo idioma e qualquer um em um momento de estresse alto se beneficiam de uma representação analógica. A versão de sala de aula desse aparelho, o Time Timer físico, é usada na educação especial há décadas e é recomendada por terapeutas ocupacionais como apoio nas transições."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Um relógio contra a cegueira temporal para TDAH",
+      "paragraphs": [
+        "As pessoas procuram esta ferramenta por dois nomes diferentes, e querem a mesma coisa. Um timer visual para uso geral. Um relógio de cegueira temporal para TDAH. O mostrador é idêntico, e o motivo de ele ajudar é o mesmo.",
+        "O Dr. Russell Barkley, um dos pesquisadores mais citados sobre TDAH, descreve o transtorno como, no fundo, uma diferença nos sistemas cerebrais que lidam com adiamento, autorregulação e a sensação do tempo futuro. Ele argumenta que o TDAH é menos um problema de atenção e mais um problema de tempo, motivação e automonitoramento sendo processados de um jeito diferente do que em cérebros sem TDAH. Na prática, isso significa que o futuro parece menos real, os prazos chegam de repente e a distância entre “tenho tempo de sobra” e “meu tempo acabou” é mais curta do que deveria ser.",
+        "A adaptação padrão, recomendada em todas as orientações clínicas, é externalizar o tempo. Transformar o abstrato em concreto. Uma fatia encolhendo faz isso sem pedir nada da sua memória de trabalho. O relógio não é uma cura para a cegueira temporal, ele é uma prótese para ela. A [CHADD](https://chadd.org/about-adhd/overview/), principal organização de referência sobre TDAH nos Estados Unidos, lista apoios de gestão do tempo e pistas visuais entre as estratégias práticas recomendadas para adultos."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "O que é um timer visual?",
+          "a": "Um timer visual é um relógio de contagem regressiva que mostra o tempo como uma forma colorida que vai encolhendo, geralmente uma fatia de pizza, em vez de mostrar só números. Você enxerga o tempo restante com uma olhada, sem precisar fazer a conta de cabeça de subtrair o horário atual do horário-alvo. Isso facilita para crianças, adultos neurodivergentes e qualquer pessoa com pressa sentir quanto tempo ainda falta."
+        },
+        {
+          "q": "O que é cegueira temporal e como um timer visual ajuda?",
+          "a": "Cegueira temporal é a dificuldade de sentir quanto tempo já passou ou quanto ainda falta. É uma característica reconhecida do TDAH, ligada a diferenças na função executiva e na memória de trabalho. Um timer visual ajuda porque externaliza o tempo. Em vez de pedir que o seu cérebro acompanhe a duração por dentro, a fatia que encolhe faz isso por você, e os seus olhos só leem quanto falta."
+        },
+        {
+          "q": "Para quem o timer visual é bom?",
+          "a": "Para qualquer pessoa que acha difícil ler um relógio digital cru com uma olhada rápida. Isso inclui crianças que ainda não leem, estudantes fazendo a lição, adultos com TDAH ou autismo, pessoas em reuniões que precisam de um limite de tempo flexível e professores que querem que a turma controle o próprio ritmo. A fatia encolhendo fala do mesmo jeito com alguém de cinco anos e com alguém de quarenta e cinco."
+        },
+        {
+          "q": "De quanto tempo devo colocar se estou fugindo de uma tarefa?",
+          "a": "Comece com algo absurdamente pequeno. Dois ou cinco minutos costumam ser suficientes para furar a parede da fuga, porque o seu cérebro para de protestar contra terminar uma tarefa que ele nunca vai precisar terminar. Diga a si mesmo que você vai parar quando a fatia acabar. Metade das vezes você vai continuar, e na outra metade você pelo menos terá feito cinco minutos, que é mais do que zero."
+        },
+        {
+          "q": "Qual é a diferença entre isso e um timer pomodoro?",
+          "a": "Um timer pomodoro é uma rotina estruturada de 25 e 5, feita para trabalho sustentado. Um timer visual é uma contagem regressiva de uso geral, para qualquer duração. Use o pomodoro quando você quer um método de foco com pausas já embutidas. Use este aqui quando você precisa sentir quanto tempo uma coisa leva, seja isso dois minutos de louça ou uma reunião de quarenta e cinco minutos."
+        },
+        {
+          "q": "O timer continua certo se eu trocar de aba?",
+          "a": "Sim. Os navegadores desaceleram o JavaScript em segundo plano, então um timer mal feito pode atrasar em uma aba escondida. Este aqui guarda um horário de término absoluto e relê a hora real do relógio a cada tique, então o tempo restante continua correto mesmo depois de horas com a aba em segundo plano. O título da aba também é atualizado com a contagem regressiva."
+        },
+        {
+          "q": "Preciso fazer cadastro ou instalar alguma coisa?",
+          "a": "Não. A ferramenta inteira roda localmente no seu navegador. Não tem conta, não tem barreira de e-mail, não tem pop-up. A última duração usada e a sua preferência de som ficam salvas no localStorage do seu dispositivo, e nada é enviado para um servidor."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Para blocos de foco estruturados de 25 e 5, com pausas já embutidas, experimente o [timer pomodoro para TDAH](/tools/pomodoro). Se o barulho de fundo ou a cabeça agitada ficam te tirando do trabalho, coloque o [gerador de ruído marrom](/tools/brown-noise) por baixo do timer. Se o problema é perder uma tarde inteira em uma única tarefa, o [timer de hiperfoco](/tools/hyperfocus-timer) agenda avisos falados em intervalos recorrentes. Explore a [biblioteca completa de ferramentas](/tools) ou leia a [biblioteca de aprendizado do Doubly](/learn) para mais."
+  },
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "Um relógio deixa o tempo visível. O app do Doubly para iOS deixa o resto do sistema visível. Despeje o caos, encontre um próximo passo claro e tenha a cobrança de pessoas reais que sabem como a cegueira temporal realmente é.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Timer visual do Doubly",
+    "appDescription": "Um timer visual grátis e online com uma fatia que vai encolhendo. Funciona como relógio contra a cegueira temporal para adultos com TDAH. Roda no navegador, sem cadastro, funciona no celular e continua certo com a aba em segundo plano.",
+    "howToName": "Como usar o timer visual online",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

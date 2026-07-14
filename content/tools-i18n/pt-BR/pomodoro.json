@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Timer pomodoro grátis para TDAH - Foco em blocos | Doubly",
+    "description": "Timer pomodoro grátis feito para cérebros com TDAH. Blocos de foco de 25 minutos, pausas de 5, sem cadastro. Salva o seu progresso no navegador.",
+    "ogTitle": "Timer pomodoro grátis para TDAH - Foco em blocos",
+    "ogDescription": "Um timer pomodoro que combina com o jeito que um cérebro com TDAH funciona de verdade. Grátis, sem cadastro, roda no seu navegador.",
+    "twitterTitle": "Timer pomodoro grátis para TDAH",
+    "twitterDescription": "Um timer pomodoro que combina com o jeito que um cérebro com TDAH funciona de verdade. Grátis, sem cadastro."
+  },
+  "h1": "Timer pomodoro grátis para TDAH",
+  "breadcrumbLabel": "Timer pomodoro para TDAH",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "answerCapsule": "**Um timer pomodoro para TDAH divide o trabalho em blocos curtos e com hora para acabar - 25 minutos de foco e depois uma pausa de 5 minutos - para que um cérebro travado ou sobrecarregado tenha um ponto de partida claro e possível.** Este timer grátis roda no seu navegador, salva o progresso localmente e deixa você personalizar a duração dos blocos para encaixar no seu cérebro. Escolha uma tarefa, toque em Iniciar e pare quando o alarme tocar.",
+  "intro": "A Técnica Pomodoro é um método de foco construído em torno de intervalos de trabalho cronometrados. Para adultos com TDAH, ela funciona porque torna o tempo visível: um bloco de 25 minutos transforma “eu tenho que fazer essa coisa gigante” em “eu só preciso trabalhar até o timer tocar”. A pausa faz parte do combinado, não é algo que você precisa merecer.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar o timer",
+      "steps": [
+        {
+          "name": "Escolha uma tarefa",
+          "text": "Só uma. Se você tem uma lista, olhe para ela, escolha a menor coisa que dá para começar agora e guarde a lista."
+        },
+        {
+          "name": "Toque em Iniciar",
+          "text": "Começa um bloco de foco de 25 minutos. Não se preocupe em terminar a tarefa inteira, é só trabalhar até o timer tocar."
+        },
+        {
+          "name": "Faça a pausa de 5 minutos",
+          "text": "Levante. Beba água. Não abra as redes sociais. A pausa faz parte da técnica, não é um prêmio que você pode pular."
+        },
+        {
+          "name": "Depois de 4 blocos, faça uma pausa longa",
+          "text": "Um descanso de 15 minutos. É nessa hora que a maioria dos cérebros com TDAH realmente consolida o que acabou de fazer."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que isso funciona para cérebros com TDAH",
+      "steps": null,
+      "paragraphs": [
+        "Adultos com TDAH vivem a **cegueira temporal**: a distância entre o “agora” e o “não agora” é sentida com muito mais força do que a distância real entre, digamos, “daqui a 25 minutos” e “daqui a 4 horas”. Os pesquisadores Russell Barkley e outros documentaram isso como uma característica central das diferenças de função executiva no TDAH, não como uma falha de caráter.",
+        "Um timer pomodoro resolve essa distância deixando o tempo concreto. Você consegue *ver* os 25 minutos encolhendo. A tarefa deixa de ser infinita, ela passa a ter o tamanho de um bloco. Essa virada, do abstrato para o finito, é o que faz começar parecer possível.",
+        "As pausas obrigatórias também importam. Muitos adultos com TDAH empurram até o esgotamento porque não confiam na própria capacidade de voltar. Um timer com a pausa já embutida te dá permissão para parar antes de desabar. A [CHADD](https://chadd.org/about-adhd/overview/) (Children and Adults with Attention-Deficit/Hyperactivity Disorder, uma organização de apoio a crianças e adultos com TDAH) e entidades parecidas recomendam intervalos estruturados como uma ferramenta prática para lidar com as dificuldades de foco ligadas ao TDAH."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Por que a técnica pomodoro ajuda no TDAH?",
+          "a": "Ela externaliza o tempo. Cérebros com TDAH costumam sofrer com a cegueira temporal, aquela sensação de que a tarefa vai levar uma eternidade ou tempo nenhum. Um bloco visível de 25 minutos transforma esse medo abstrato em uma distância finita, que dá para percorrer. A pausa já vem embutida, então você para de entrar em espiral tentando decidir se pode ou não fazer uma."
+        },
+        {
+          "q": "25 minutos é a duração certa para o TDAH?",
+          "a": "Para algumas pessoas sim, para outras não. Muitos adultos com TDAH se dão melhor com blocos mais curtos (10 a 15 minutos) quando começar está difícil, e com blocos mais longos (35 a 50 minutos) depois que entram no fluxo. Use o botão de personalizar abaixo do timer para definir a sua própria duração. A Técnica Pomodoro oficial usa 25/5, mas o que importa é o princípio: trabalhar e depois pausar."
+        },
+        {
+          "q": "Preciso instalar alguma coisa ou fazer cadastro?",
+          "a": "Não. O timer roda inteiro no seu navegador. O seu progresso (sessões concluídas e durações personalizadas) é salvo localmente no seu dispositivo. Nada sai do seu computador ou celular. Sem conta, sem e-mail."
+        },
+        {
+          "q": "O timer continua rodando se eu trocar de aba?",
+          "a": "Sim. O timer é baseado na hora real do dia, não em um script que pausa quando a aba fica em segundo plano. O título da aba do navegador também é atualizado com o tempo restante, então você pode dar uma olhada nele enquanto trabalha em outra janela."
+        },
+        {
+          "q": "O que acontece depois de quatro pomodoros?",
+          "a": "Você ganha uma pausa longa, de 15 minutos por padrão em vez de 5. Esse descanso mais longo faz parte da Técnica Pomodoro padrão e dá ao seu cérebro uma janela de recuperação de verdade antes do próximo bloco de foco."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Se um bloco de 25 minutos parecer longo demais, experimente o [timer visual](/tools/visual-timer). É o mesmo mostrador de fatia encolhendo, com a duração que você quiser, e ele serve também como relógio contra a cegueira temporal, caso perder a noção do tempo seja o problema mais profundo. Se o seu problema é o contrário, saber a hora de parar, experimente o [timer de hiperfoco](/tools/hyperfocus-timer) para receber avisos falados recorrentes em intervalos fixos. Combine o timer com o [gerador de ruído marrom](/tools/brown-noise) se o barulho do escritório ou a cabeça agitada ficarem te tirando do bloco. Explore a [biblioteca completa de ferramentas](/tools) ou leia a [biblioteca de aprendizado do Doubly](/learn) para encontrar guias sobre foco, despejo mental e como se destravar."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "O timer web te mantém focado por um bloco. O app do Doubly para iOS te ajuda a decidir no que focar antes disso: despejo mental, um próximo passo claro e check-ins de cobrança de pessoas reais.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Timer pomodoro para TDAH do Doubly",
+    "appDescription": "Um timer pomodoro grátis feito para cérebros com TDAH. Durações de foco e de pausa personalizáveis, direto no navegador, sem cadastro.",
+    "howToName": "Como usar o timer pomodoro para TDAH",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

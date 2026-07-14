@@ -12,7 +12,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": "Araçlar",
   "breadcrumbLabel": "Beyin Boşaltma Aracı",
-  "answerCapsule": "**Bir beyin boşaltma aracı, kafandaki her şeyi tek bir yere boşaltmanı, ardından yalnızca yapılabilir görevleri çıkarmasını sağlar; böylece sadece boşa dönüp durmak yerine bir şey yapabilirsin.** Yukarıya özgürce yaz. Araç, dökülenleri okur, duyguları ve içini dökmeyi görmezden gelir ve kısa bir yapılacaklar listesi döndürür. Ücretsiz, kayıt yok, hiçbir şey saklanmıyor.",
+  "answerCapsule": "**Bir beyin boşaltma aracı, kafandaki her şeyi tek bir yere dökmeni sağlar, sonra da yalnızca yapılabilir görevleri çıkarır; böylece boşa dönüp durmak yerine gerçekten bir şey yapabilirsin.** Yukarıya özgürce yaz. Araç, dökülenleri okur, duyguları ve içini dökmeleri görmezden gelir ve kısa bir yapılacaklar listesi döndürür. Ücretsiz, kayıt yok, hiçbir şey saklanmıyor.",
   "intro": "“Çok fazla şey var, başlayamıyorum ama çok fazla şey var” şeklindeki zihinsel döngüyü kırmak, beyin boşaltmanın işidir. Plan yapmak için değil, kafanı boşaltmak için yazarsın. Plan, harekete geçebileceğin bir liste olarak öbür uçtan kendiliğinden çıkar.",
   "sections": [
     {
@@ -68,7 +68,7 @@
         },
         {
           "q": "Ne sıklıkla beyin boşaltma yapmalıyım?",
-          "a": "Kafan dolu ve ellerin takılmış hissettiği her an. Bazı insanlar haftada bir yapar, bazıları her sabah, bazıları yalnızca bunaldığında. Kural yok. Sinyal içseldir: yardımcı olacaksa, yap."
+          "a": "Kafanın dolu, ellerinin ise takılıp kalmış hissettiği her an. Bazı insanlar haftada bir yapar, bazıları her sabah, bazıları yalnızca bunaldığında. Kural yok. Sinyal içseldir: yardımcı olacaksa, yap."
         }
       ]
     }

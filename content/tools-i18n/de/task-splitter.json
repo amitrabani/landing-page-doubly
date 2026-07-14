@@ -1,18 +1,18 @@
 {
   "slug": "task-splitter",
   "meta": {
-    "title": "Jede Aufgabe aufteilen - Kostenloses Tool | Doubly",
-    "description": "Kostenloses KI-Tool: Tipp eine Aufgabe, die du nicht anfangen kannst. Es zerlegt sie in kleine, machbare Schritte mit Zeitangaben. Für ADHD-Gehirne.",
-    "ogTitle": "Jede Aufgabe aufteilen - Kostenloses Tool",
-    "ogDescription": "Tipp eine Aufgabe, die du nicht anfangen kannst. Das kostenlose KI-Tool zerlegt sie in kleine, machbare Schritte mit Zeitangaben. Ohne Anmeldung.",
-    "twitterTitle": "Kostenloses Tool zum Aufgaben aufteilen",
-    "twitterDescription": "Tipp eine Aufgabe, die du nicht anfangen kannst. Die KI teilt sie in kleine, machbare Schritte mit Zeitangaben auf."
+    "title": "ADHS: Aufgaben aufteilen - kostenloses Tool | Doubly",
+    "description": "Für ADHS-Gehirne: Tipp eine Aufgabe ein, die du nicht anfangen kannst. Das kostenlose KI-Tool zerlegt sie in kleine, machbare Schritte mit Zeitangaben.",
+    "ogTitle": "ADHS: Aufgaben aufteilen - kostenloses Tool",
+    "ogDescription": "Tipp eine Aufgabe ein, die du nicht anfangen kannst. Das kostenlose KI-Tool zerlegt sie in kleine, machbare Schritte mit Zeitangaben. Ohne Anmeldung.",
+    "twitterTitle": "Kostenloses Tool zum Aufteilen von Aufgaben",
+    "twitterDescription": "Tipp eine Aufgabe ein, die du nicht anfangen kannst. Die KI teilt sie in kleine, machbare Schritte mit Zeitangaben auf."
   },
-  "h1": "Kostenloses Tool zum Aufgaben aufteilen",
+  "h1": "Kostenloses Tool zum Aufteilen von Aufgaben",
   "breadcrumbHome": "Startseite",
   "breadcrumbTools": "Tools",
-  "breadcrumbLabel": "Tool zum Aufgaben aufteilen",
-  "answerCapsule": "**Ein Tool zum Aufgaben aufteilen macht aus einer Aufgabe, die sich zu groß anfühlt, eine kurze Liste kleiner, machbarer Schritte, damit ein überfordertes Gehirn einen klaren Startpunkt hat.** Tipp oben eine Aufgabe ein. Das Tool gibt dir geordnete Teilschritte mit Zeitangaben zurück. Gemacht für ADHD-Gehirne, kostenlos, ohne Anmeldung. Lädst du die Seite neu, ist deine Eingabe weg.",
+  "breadcrumbLabel": "Tool zum Aufteilen von Aufgaben",
+  "answerCapsule": "**Ein Tool zum Aufteilen von Aufgaben macht aus einer Aufgabe, die sich zu groß anfühlt, eine kurze Liste kleiner, machbarer Schritte, damit ein überfordertes Gehirn einen klaren Startpunkt hat.** Tipp oben eine Aufgabe ein. Das Tool gibt dir geordnete Teilschritte mit Zeitangaben zurück. Gemacht für ADHS-Gehirne, kostenlos, ohne Anmeldung. Lädst du die Seite neu, ist deine Eingabe weg.",
   "intro": "Die meisten Produktivitäts-Tools setzen voraus, dass du planen kannst. Dieses hier setzt voraus, dass du nicht anfangen kannst. Tipp die Aufgabe ein, die seit einer Woche auf deiner Liste steht, und lass die KI sie in ihre kleinste Version zerlegen. Dann mach einen Schritt.",
   "sections": [
     {
@@ -29,10 +29,10 @@
         },
         {
           "name": "Mach Schritt eins",
-          "text": "Nur Schritt eins. Lies nicht vor. Hak ihn ab. Dann Schritt zwei. Den Rest erledigt der Schwung."
+          "text": "Nur Schritt eins. Schau nicht schon auf die nächsten Schritte. Hak ihn ab. Dann Schritt zwei. Den Rest erledigt der Schwung."
         },
         {
-          "name": "Halt an, wenn du feststeckst",
+          "name": "Stopp, wenn du feststeckst",
           "text": "Wenn sich ein Schritt immer noch zu groß anfühlt, füg ihn wieder ins Tool ein und teil ihn erneut auf. Du kannst auch eine Aufteilung noch mal aufteilen."
         }
       ],
@@ -41,11 +41,11 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Warum das bei ADHD-Gehirnen funktioniert",
+      "heading": "Warum das bei ADHS-Gehirnen funktioniert",
       "paragraphs": [
-        "Aufgabeninitiierung, also das Anfangen einer Sache, ist eine der exekutiven Funktionen, die bei ADHD am stärksten betroffen sind. Das Gehirn liest eine vage, mehrschrittige Aufgabe als eine einzige überfordernde Einheit und erstarrt. Forscher wie Russell Barkley beschreiben das als ein Defizit in der inneren Repräsentation von Zeit und Aufwand, nicht als ein Problem der Willenskraft.",
-        "Ein kleiner, konkreter Schritt bewirkt das Gegenteil. „In die Küche gehen“ oder „die Datei öffnen“ bringt die Aktivierungsenergie von unmöglich auf machbar. Je kleiner der erste Schritt, desto größer die Chance, dass das Gehirn ihn akzeptiert. Darum geht es im Kern.",
-        "Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) empfehlen, große Aufgaben in kleine Schritte zu zerlegen, als eine der wichtigsten ADHD-freundlichen Strategien. Doubly macht das automatisch, in zwei Sekunden, damit du nicht erst planen musst, bevor du anfangen kannst."
+        "Aufgabeninitiierung, also das Anfangen einer Sache, ist eine der exekutiven Funktionen, die bei ADHS am stärksten betroffen sind. Das Gehirn liest eine vage, mehrschrittige Aufgabe als eine einzige überfordernde Einheit und erstarrt. Forscher wie Russell Barkley beschreiben das als ein Defizit in der inneren Repräsentation von Zeit und Aufwand, nicht als ein Problem der Willenskraft.",
+        "Ein kleiner, konkreter Schritt bewirkt das Gegenteil. „In die Küche gehen“ oder „die Datei öffnen“ bringt die Aktivierungsenergie von unmöglich auf machbar. Je kleiner der erste Schritt, desto größer die Chance, dass das Gehirn ihn annimmt. Genau darum geht es.",
+        "Organisationen wie [CHADD](https://chadd.org/about-adhd/overview/) empfehlen, große Aufgaben in kleine Schritte zu zerlegen, als eine der wichtigsten Strategien im Umgang mit ADHS. Doubly macht das automatisch, in zwei Sekunden, damit du nicht erst planen musst, bevor du anfangen kannst."
       ],
       "steps": null,
       "faqs": null
@@ -59,12 +59,12 @@
           "a": "Tipp die Aufgabe als einen kurzen Satz ein („die Garage aufräumen“, „den Bericht schreiben“) und lass das Tool sie aufteilen. Jeder Schritt ist kurz genug, um ohne Nachdenken anzufangen. Nimm den ersten und mach ihn. Plan nicht weiter als bis dahin."
         },
         {
-          "q": "Warum hilft es bei ADHD so sehr, eine Aufgabe in Schritte zu zerlegen?",
-          "a": "ADHD-Gehirne produzieren zu wenig Dopamin für Aufgaben, die das Gehirn als „zu groß zum Abschließen“ liest. Ein kleiner, klar begrenzter Schritt ist die bevorzugte Arbeitseinheit des Gehirns. Forschung von Russell Barkley und anderen führt das auf Unterschiede in den exekutiven Funktionen beim Anfangen zurück, nicht auf Faulheit."
+          "q": "Warum hilft es bei ADHS so sehr, eine Aufgabe in Schritte zu zerlegen?",
+          "a": "Bei ADHS schüttet das Gehirn zu wenig Dopamin für Aufgaben aus, die es als „zu groß zum Abschließen“ liest. Ein kleiner, klar begrenzter Schritt ist die bevorzugte Arbeitseinheit des Gehirns. Forschung von Russell Barkley und anderen führt das auf Unterschiede in den exekutiven Funktionen beim Anfangen zurück, nicht auf Faulheit."
         },
         {
           "q": "Speichert das Tool meine Aufgaben?",
-          "a": "Nein. Nichts verlässt deinen Browser außer der Aufgabe, die du eintippst, sie wird an unsere KI geschickt, um sie aufzuteilen, und danach verworfen. Kein Konto, keine E-Mail, kein Verlauf. Lädst du die Seite neu, ist alles weg."
+          "a": "Nein. Nichts verlässt deinen Browser außer der Aufgabe, die du eintippst: Sie geht an unsere KI, wird dort aufgeteilt und danach verworfen. Kein Konto, keine E-Mail, kein Verlauf. Lädst du die Seite neu, ist alles weg."
         },
         {
           "q": "Wie lang sollte jeder Teilschritt sein?",
@@ -81,17 +81,17 @@
   ],
   "related": {
     "heading": "Verwandte Tools",
-    "body": "Wenn dein Kopf mit mehr als einer Aufgabe voll ist, fang mit dem [Brain-Dump-Tool](/tools/brain-dump) an und lass die KI zuerst die machbaren Punkte herausziehen, oder sortier die ganze Liste mit der [ADHD-Eisenhower-Matrix](/tools/eisenhower-matrix) und nutz [Pick One](/tools/pick-one), um eine Startaufgabe hervorzuholen. Sobald du hier eine Schrittliste hast, gib dem ersten Schritt mit dem [ADHD-Pomodoro-Timer](/tools/pomodoro) oder dem [visuellen Timer](/tools/visual-timer) ein festes Zeitfenster, damit du siehst, wie die Arbeit schrumpft. Wenn das Alleine-Anfangen der schwere Teil ist, öffne mit einer Freundin einen [Body-Doubling-Raum](/tools/body-doubling-room). Stöber in der [gesamten Tool-Bibliothek](/tools)."
+    "body": "Wenn dein Kopf mit mehr als einer Aufgabe voll ist, fang mit dem [Brain-Dump-Tool](/tools/brain-dump) an und lass die KI zuerst die machbaren Punkte herausziehen, oder sortier die ganze Liste mit der [Eisenhower-Matrix für ADHS](/tools/eisenhower-matrix) und nutz [Pick One](/tools/pick-one), um eine Startaufgabe hervorzuholen. Sobald du hier eine Schrittliste hast, gib dem ersten Schritt mit dem [Pomodoro-Timer für ADHS](/tools/pomodoro) oder dem [visuellen Timer](/tools/visual-timer) ein festes Zeitfenster, damit du siehst, wie die Arbeit schrumpft. Wenn das Alleine-Anfangen der schwere Teil ist, öffne mit jemandem einen [Body-Doubling-Raum](/tools/body-doubling-room). Stöber in der [gesamten Tool-Bibliothek](/tools)."
   },
   "cta": {
     "headline": "Probier es in der App aus",
-    "body": "Das Web-Tool teilt eine Aufgabe nach der anderen auf. Die Doubly-iOS-App speichert deine Aufteilungen, zeigt dir automatisch den nächsten Schritt und nutzt Verbindlichkeits-Check-ins mit echten Menschen, damit du in Bewegung bleibst.",
+    "body": "Das Web-Tool teilt eine Aufgabe nach der anderen auf. Die Doubly-iOS-App speichert deine Aufteilungen, zeigt dir automatisch den nächsten Schritt und setzt auf Check-ins mit echten Menschen, damit du in Bewegung bleibst.",
     "label": "Probier es in der App aus"
   },
   "jsonld": {
-    "appName": "Doubly Tool zum Aufgaben aufteilen",
-    "appDescription": "Ein kostenloses, KI-gestütztes Tool zum Aufgaben aufteilen. Tipp eine beliebige Aufgabe ein, die du nicht anfangen kannst, und erhalte kleine, machbare Schritte mit Zeitangaben zurück. Gemacht für ADHD-Gehirne.",
-    "howToName": "So nutzt du das Tool zum Aufgaben aufteilen",
+    "appName": "Doubly Tool zum Aufteilen von Aufgaben",
+    "appDescription": "Ein kostenloses, KI-gestütztes Tool zum Aufteilen von Aufgaben. Tipp eine beliebige Aufgabe ein, die du nicht anfangen kannst, und erhalte kleine, machbare Schritte mit Zeitangaben zurück. Gemacht für ADHS-Gehirne.",
+    "howToName": "So nutzt du das Tool zum Aufteilen von Aufgaben",
     "collectionName": null,
     "collectionDescription": null
   },

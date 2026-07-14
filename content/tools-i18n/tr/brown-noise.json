@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Ücretsiz Kahverengi Gürültü Üreteci - ADHD Odağı | Doubly",
+    "description": "Tarayıcında çalışan ücretsiz kahverengi gürültü üreteci. Kahverengi, pembe ve beyaz. Kayıt yok, reklam yok, uyku zamanlayıcısı dahil. ADHD odağı için.",
+    "ogTitle": "ADHD Odağı için Ücretsiz Kahverengi Gürültü Üreteci",
+    "ogDescription": "Uyku zamanlayıcılı ücretsiz bir kahverengi gürültü çalar. Kahverengi, pembe ve beyaz. Tarayıcında çevrimdışı çalışır.",
+    "twitterTitle": "Ücretsiz Kahverengi Gürültü Üreteci",
+    "twitterDescription": "Kahverengi, pembe ve beyaz. Ücretsiz, kayıt yok, tarayıcında çalışır."
+  },
+  "h1": "Ücretsiz kahverengi gürültü üreteci",
+  "breadcrumbLabel": "Kahverengi Gürültü Üreteci",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "answerCapsule": "**Kahverengi gürültü, dikkat dağıtıcıları maskeleyen ve tıka basa dolu bir ADHD beynine üzerine yerleşebileceği sabit bir şey veren derin, düşük frekanslı bir sestir.** Bu ücretsiz ortam sesi üreteci kahverengi, pembe ve beyaz gürültüyü doğrudan tarayıcında çalar. Kayıt yok, reklam yok, indirilecek ses dosyası yok. Bir ses seç, seviyesini ayarla, istersen bir uyku zamanlayıcısı ekle ve işine dön.",
+  "intro": "Yukarıdaki üreteç Web Audio API üzerinde çalışır, yani ses cihazında gerçek zamanlı olarak üretilir. Bu da şu demek: akış yok, arabelleğe alma yok ve wifi'n giderse bile çalışmaya devam eder. Önce kahverengiyi dene. Fazla ağır geliyorsa pembeye geç. ADHD'li yetişkinlerin çoğu kahverengide karar kılıyor.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Kahverengi gürültü üreteci nasıl kullanılır",
+      "steps": [
+        {
+          "name": "Bir ses seç",
+          "text": "Kahverengi, çoğu insanın aradığı derin olan. Kahverengi fazla ağır geliyorsa pembeyi dene. Beyaz en parlak olanı ve görmezden gelmesi en zor olanı."
+        },
+        {
+          "name": "Oynat'a bas",
+          "text": "İlk dokunuş, tarayıcında ses motorunu oluşturur. Yavaş telefonlarda ona yarım saniye tanı. Ondan sonra sesler arasında geçiş anında olur."
+        },
+        {
+          "name": "Ses seviyeni bul",
+          "text": "Biri normal bir ses tonuyla seninle konuştuğunda onu hâlâ duyabileceğin kadar kısık olsun. Sesin üstünden duyulmak için sesini yükseltmen gerekiyorsa, çok yüksektir."
+        },
+        {
+          "name": "Gerekiyorsa bir uyku zamanlayıcısı kur",
+          "text": "15, 30, 60 ya da 90 dakika seç. Ses sonunda yavaşça kısılır, böylece seni irkiltmez. Gün boyu çalışmasını istiyorsan kapalı bırak."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Kahverengi gürültü ADHD beyinlerinde neden işe yarar",
+      "paragraphs": [
+        "ADHD beyinleri yeni seslere yönelme eğilimindedir. Çarpan bir kapı, titreşen bir telefon, arkanda konuşmaya başlayan iki kişi. Her biri dikkatinden bir ipliği yaptığın işten koparır ve o ipliği geri çekmek gerçek bir zaman ve çaba maliyetine mal olur.",
+        "Kahverengi gürültü seni odaklandırmaz. Odağını sürekli çekip koparan şeyleri ortadan kaldırır. Sabit ve öngörülebilir bir ses, öngörülemeyenlerin üzerini örter; böylece beynin birkaç saniyede bir yönelme tepkisini ateşlemeyi bırakır.",
+        "Burada küçük ama ilginç bir araştırma bulgusu da var. 2007 tarihli bir çalışmada [Söderlund, Sikström ve Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x), orta düzeyde beyaz gürültünün dikkat güçlüğü olan çocuklarda bilişsel performansı iyileştirdiğini, nörotipik çocuklarda ise performansı hafifçe düşürdüğünü buldu. Önerilen mekanizma stokastik rezonans: gürültülü bir beynin, kendi çalışma aralığına oturabilmek için biraz dış gürültüye ihtiyaç duyabileceği fikri.",
+        "Bilim hâlâ erken aşamada ama yaşanmışlık aktarımları yüksek sesli ve tutarlı. [CHADD](https://chadd.org/about-adhd/overview/) ve benzeri kuruluşlar, arka plan sesi gibi duyusal araçları denenmeye değer makul şeyler olarak görüyor. Sana yardımcı oluyorsa, bu yeterli."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "faqs": [
+        {
+          "q": "Kahverengi gürültü nedir?",
+          "a": "Kahverengi gürültü, düşük frekanslarda daha fazla enerji taşıyan derin, gümbürtülü bir sestir; adını onu üreten rastgele \"Brown hareketi\" matematiğinden alır. Sabit bir şelale ya da çatıya vuran şiddetli yağmur gibi duyulur. Beyaz gürültüyle kıyaslandığında daha koyu ve daha sıcaktır; çoğu insan uzun seanslarda onu daha az sert bulur."
+        },
+        {
+          "q": "Bu bir ortam sesi üreteci mi?",
+          "a": "Evet. Kahverengi gürültü en popüler ayar ama aynı çalar pembe ve beyaz gürültüyü de üretiyor. Toplamda üç ortam sesi; hepsi tarayıcında canlı olarak üretiliyor, hiçbir ses dosyası indirilmiyor. Beyninin arka planına hangisi karışıyorsa onu seç."
+        },
+        {
+          "q": "Kahverengi gürültü, pembe gürültü, beyaz gürültü: hangisini seçmeliyim?",
+          "a": "Beyaz gürültü tüm frekanslarda eşit dağılır ve bir TV cızırtısı gibi duyulur. Pembe gürültü yüksek frekansları biraz azaltır, bu yüzden daha yumuşak, sabit bir yağmur gibi hissettirir. Kahverengi gürültü onları daha da azaltır, bu yüzden derin ve yere basan bir his verir. Beyaz gürültü sert geliyorsa pembeyi dene. Pembe hâlâ parlak geliyorsa kahverengiyi dene. Rahatça görmezden gelebildiğini seç."
+        },
+        {
+          "q": "Kahverengi gürültü ADHD odağı için iyi mi?",
+          "a": "Bazı ADHD'li yetişkinler sabit bir arka plan sesiyle daha iyi odaklanıyor ve Söderlund ile meslektaşlarının 2007 tarihli çalışması, orta düzeyde işitsel gürültünün dikkat güçlüğü olan çocuklarda bilişsel performansı gerçekten iyileştirdiğini buldu. Muhtemel mekanizma maskeleme. Sabit bir ses, öngörülemeyen sesleri (konuşmalar, trafik, uğuldayan bir buzdolabı) örter, böylece beynin her yeni sese yönelmeyi bırakır."
+        },
+        {
+          "q": "Bütün gün kahverengi gürültü dinlemek güvenli mi?",
+          "a": "Evet, makul bir ses seviyesinde. Müzik için geçerli olan işitme güvenliği kuralları burada da geçerli. Ses seviyesini, aynı odada normal bir tonla konuşan birini rahatça duyabileceğin kadar kısık tut. CDC, 70 dB üzerindeki uzun süreli maruziyetin sınırlandırılmasını öneriyor. Bir seanstan sonra kulakların yoruluyor ya da çınlıyorsa, ses çok yüksektir."
+        },
+        {
+          "q": "Kahverengi gürültü TikTok'ta neden bu kadar popüler?",
+          "a": "TikTok'taki ADHD'li yetişkinler, kahverengi gürültünün kafalarındaki o sürekli iç gevezeliği susturduğunu paylaşmaya başladı; çoğu zaman bunu \"kafamdaki gürültü kayboldu\" diye anlatıyorlar. Bu tek gözlem 2022 ve 2023'te viral oldu ve bir sürü insan denedi. Bilim henüz başlangıç aşamasında ama yaşanmışlık aktarımları, kendin için denemeye değecek kadar güçlü."
+        },
+        {
+          "q": "Bu çevrimdışı çalışır mı?",
+          "a": "Evet. Ses bir sunucudan aktarılmıyor; Web Audio API kullanılarak tarayıcında üretiliyor. Sayfa bir kez yüklendikten sonra internet bağlantısı gerekmiyor. Hiçbir şey kaydedilmiyor, hiçbir şey yüklenmiyor ve çalarda reklam ya da izleyici yok."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "Kahverengi gürültü, bir odak zamanlayıcısıyla doğal olarak eşleşir. Yapılandırılmış 25 dakikalık sprintler için [ADHD pomodoro zamanlayıcısını](/tools/pomodoro) dene ya da aynı zamanda bir zaman körlüğü saati işlevi gören, küçülen bir dilim kadranı istiyorsan [görsel zamanlayıcıyı](/tools/visual-timer) dene. [Tüm araç kütüphanesine](/tools) göz at ya da odak, beyin boşaltma ve takıldığın yerden kurtulma üzerine rehberler için [Doubly öğrenme kütüphanesini](/learn) oku."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Kahverengi gürültü bir göreve yerleşmene yardım eder. Doubly iOS uygulaması ise o görevi en baştan seçmene yardım eder. Beyin boşaltma, tek bir net sonraki adım ve gerçek insanlardan gelen hesap verebilirlik yoklamaları.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly Kahverengi Gürültü Üreteci",
+    "appDescription": "Pembe ve beyaz gürültüyü de sunan, tarayıcı içinde çalışan ücretsiz bir kahverengi gürültü üreteci. Kayıt yok, uyku zamanlayıcısı dahil, çevrimdışı çalışır.",
+    "howToName": "Kahverengi gürültü üreteci nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

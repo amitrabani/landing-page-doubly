@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Aprende: TDAH, enfoque, herramientas y estrategias | Doubly",
+    "description": "Guías en lenguaje claro sobre el TDAH: enfoque, ceguera al tiempo, volcado mental y cómo desbloquearte. Honestas, con base científica y sin culpa.",
+    "ogTitle": "Aprende: TDAH, enfoque, herramientas y estrategias",
+    "ogDescription": "Guías en lenguaje claro sobre el TDAH: enfoque, ceguera al tiempo y cómo desbloquearte.",
+    "twitterTitle": "Aprende: TDAH, enfoque, herramientas y estrategias",
+    "twitterDescription": "Guías en lenguaje claro sobre el TDAH: enfoque, ceguera al tiempo y cómo desbloquearte."
+  },
+  "h1": "Aprende",
+  "breadcrumbLabel": "Aprende",
+  "breadcrumbHome": "Inicio",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Guías en lenguaje claro sobre cómo un cerebro con TDAH maneja el enfoque, el tiempo y el reto de terminar lo que empieza. Escritas pensando en personas reales, no en algoritmos. Con base científica, sin culpa y sin promesas clínicas.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Los primeros artículos salen la semana que viene",
+      "paragraphs": [
+        "Ya estamos escribiendo la primera tanda: la ceguera al tiempo, la ciencia que hay detrás del volcado mental y por qué los consejos de productividad de toda la vida les siguen fallando a los adultos con TDAH.",
+        "Mientras tanto, prueba el [temporizador pomodoro gratis para el TDAH](/tools/pomodoro) o pásate por la [biblioteca completa de herramientas](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Pruébalo en la app",
+    "body": "La app de Doubly para iOS te ayuda a empezar, no solo a planear. Suelta el caos en un volcado mental, quédate con un siguiente paso claro y rinde cuentas ante personas reales a las que de verdad les importa tu progreso.",
+    "label": "Pruébalo en la app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

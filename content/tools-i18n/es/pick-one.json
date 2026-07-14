@@ -1,10 +1,10 @@
 {
   "slug": "pick-one",
   "meta": {
-    "title": "Elige una: selector de tareas al azar | Doubly",
-    "description": "Pega tu lista desordenada y recibe una cosa por la que empezar. La más pequeña, la más temida o al azar. Gratis, sin registro, para cerebros con ADHD.",
+    "title": "Selector de tareas para el TDAH: elige una | Doubly",
+    "description": "Herramienta gratis para el TDAH: pega tu lista desordenada y recibe una sola cosa por la que empezar. La más pequeña, la más temida o al azar. Sin registro.",
     "ogTitle": "Elige una: selector de tareas al azar para el agobio",
-    "ogDescription": "Pega tu lista desordenada y recibe una sola cosa por la que empezar. La más pequeña, la más temida o al azar.",
+    "ogDescription": "Pega tu lista de pendientes desordenada y recibe una sola cosa por la que empezar. La más pequeña, la más temida o al azar.",
     "twitterTitle": "Elige una: un selector de tareas para el agobio",
     "twitterDescription": "Pega una lista desordenada y recibe una sola cosa por la que empezar."
   },
@@ -12,7 +12,7 @@
   "breadcrumbHome": "Inicio",
   "breadcrumbTools": "Herramientas",
   "breadcrumbLabel": "Herramienta Elige una tarea",
-  "answerCapsule": "**Una herramienta de elegir una tarea elimina el paso de decidir. Pega tu lista, elige un modo (la más pequeña, la más temida, al azar) y recibe una sola cosa por la que empezar.** Está pensada para el momento en que una lista de diez tareas se lee como una sola cosa gigante e imposible de empezar. No se guarda nada en nuestro servidor.",
+  "answerCapsule": "**Una herramienta de elegir una tarea elimina el paso de decidir. Pega tu lista, elige un modo (la más pequeña, la más temida, al azar) y recibe una sola cosa por la que empezar.** Está hecha para el momento en que una lista de diez tareas se lee como una única cosa gigante e imposible de empezar. No se guarda nada en nuestro servidor.",
   "intro": "Cuando la lista entera parece imposible, el cuello de botella casi nunca es hacer las cosas. Es decidir. Elige una quita la decisión de en medio y te entrega un punto de partida. Siempre puedes volver a elegir.",
   "sections": [
     {
@@ -21,7 +21,7 @@
       "steps": [
         {
           "name": "Pega tu lista",
-          "text": "Una por línea, o desordenada con comas, o copiada y pegada desde una app de notas. La herramienta lo entiende."
+          "text": "Una por línea, o desordenada con comas, o copiada y pegada desde una app de notas. La herramienta se encarga de ordenarlo."
         },
         {
           "name": "Elige un modo",
@@ -29,7 +29,7 @@
         },
         {
           "name": "Toca Elige una por mí",
-          "text": "Recibes un elemento, grande y claro, con una razón de una línea. Esa es la elegida."
+          "text": "Recibes un solo elemento, grande y claro, con una razón de una línea. Esa es la elegida."
         },
         {
           "name": "Hecho, o esta no",
@@ -41,11 +41,11 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Por qué esto funciona para cerebros con ADHD",
+      "heading": "Por qué esto funciona para los cerebros con TDAH",
       "paragraphs": [
-        "Los adultos con ADHD suelen describir que se quedan bloqueados no porque una tarea sea difícil, sino porque todas las opciones parecen igual de disponibles y ninguna reclama tu atención. Los investigadores lo llaman un cuello de botella de la función ejecutiva en torno a la priorización y el inicio, no un fallo de motivación.",
-        "La barrera es la propia elección. Los economistas del comportamiento lo describen como sobrecarga de opciones: más opciones, decisiones más lentas, más evitación. Para un cerebro con ADHD que ya paga un impuesto de inicio en cada tarea, el coste se acumula. Delegar la elección te deja saltarte la decisión y ponerte en marcha.",
-        "Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan reducir los puntos de decisión como estrategia central adaptada al ADHD. El modo la más pequeña se apoya en el impulso (una pequeña victoria enciende la siguiente). El modo la más temida se apoya en el alivio (quitarte de encima lo pesado hace que el resto se sienta más ligero). El modo al azar se apoya en rendirte (cualquier elección es mejor que ninguna)."
+        "Los adultos con TDAH suelen contar que se quedan bloqueados no porque la tarea sea difícil, sino porque todas las opciones parecen igual de disponibles y ninguna reclama su atención. Los investigadores lo llaman un cuello de botella de la función ejecutiva en torno a la priorización y el inicio, no un fallo de motivación.",
+        "La barrera es la elección misma. Los economistas del comportamiento lo describen como sobrecarga de opciones: más opciones, decisiones más lentas, más evitación. Para un cerebro con TDAH, que ya paga un sobrecoste de arranque en cada tarea, el coste se acumula. Delegar la elección te permite saltarte la decisión y ponerte en marcha.",
+        "Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan reducir los puntos de decisión como estrategia central para el TDAH. El modo la más pequeña se apoya en el impulso (una pequeña victoria enciende la siguiente). El modo la más temida se apoya en el alivio (quitarte de encima lo pesado hace que el resto pese menos). El modo al azar se apoya en rendirte (cualquier elección es mejor que ninguna)."
       ],
       "steps": null,
       "faqs": null
@@ -56,23 +56,23 @@
       "faqs": [
         {
           "q": "¿Cómo decide la herramienta qué tarea elegir?",
-          "a": "Tú eliges el modo. La más pequeña toma el elemento más corto, el más fácil de empezar. La más temida elige el que tiene más probabilidades de ser pesado (largo, o que menciona cosas como impuestos, médicos o respuestas que debes). Elige una sin más es puramente al azar. Nada sale de tu navegador."
+          "a": "Tú eliges el modo. La más pequeña toma el elemento más corto, el más fácil de empezar. La más temida elige el que tiene más probabilidades de ser pesado (largo, o que menciona cosas como impuestos, médicos o respuestas pendientes). Elige una sin más es puramente al azar. Nada sale de tu navegador."
         },
         {
           "q": "¿Por qué querría que una herramienta elija por mí?",
-          "a": "La fatiga de decisión es real. Elegir por dónde empezar cuando estás abrumado cuesta más energía que la tarea misma. Delegar la elección en una herramienta te deja saltarte las vueltas y ponerte en marcha. Siempre puedes anular la elección."
+          "a": "La fatiga de decisión es real. Elegir por dónde empezar cuando estás agobiado cuesta más energía que la tarea misma. Delegar la elección en una herramienta te permite saltarte el bucle de dudas y ponerte en marcha. Siempre puedes cambiar la elección."
         },
         {
-          "q": "¿Sirve para el ADHD?",
-          "a": "Sí. Los cerebros con ADHD suelen atascarse en el paso de elegir, no en el de hacer. Quitar la elección y que te digan \"empieza por esta\" evita un punto de bloqueo muy común. Es la misma lógica que hay detrás del patrón del \"único siguiente paso\"."
+          "q": "¿Sirve para el TDAH?",
+          "a": "Sí. Los cerebros con TDAH suelen atascarse en el paso de elegir, no en el de hacer. Quitar la elección y que te digan \"empieza por esta\" evita un punto de bloqueo muy común. Es la misma lógica que hay detrás del patrón del \"único siguiente paso\"."
         },
         {
           "q": "¿Guarda mi lista?",
-          "a": "Tu lista se queda en tu navegador mediante localStorage. No se envía nada a ningún servidor. Vacía el campo y el almacenamiento se borra con él. No hay cuenta."
+          "a": "Tu lista se queda en tu navegador mediante localStorage. No se envía nada a ningún servidor. Vacía el campo y el almacenamiento se borra con él. No hay ninguna cuenta."
         },
         {
           "q": "¿Cuál es la diferencia entre La más pequeña y La más temida?",
-          "a": "La más pequeña va de impulso. Consigue una pequeña victoria y luego aprovecha la ola. La más temida va de alivio. Quítate de encima lo pesado para que el resto de la lista se sienta más ligero. Ambas son válidas, usa la que necesites hoy."
+          "a": "La más pequeña va de impulso. Consigue una pequeña victoria y luego aprovecha la inercia. La más temida va de alivio. Quítate de encima lo pesado para que el resto de la lista pese menos. Las dos son válidas, usa la que necesites hoy."
         }
       ],
       "steps": null,
@@ -81,19 +81,19 @@
   ],
   "related": {
     "heading": "Herramientas relacionadas",
-    "body": "Si la lista sigue pareciéndote demasiado larga después de elegir una, haz primero un [volcado mental](/tools/brain-dump) para despejar el desorden mental. Para ordenar la lista por importancia y urgencia en lugar de elegir a ciegas, abre la [matriz de Eisenhower para el ADHD](/tools/eisenhower-matrix). ¿Ya tienes la elegida? Divídela en pasos realizables con la [herramienta para dividir tareas](/tools/task-splitter), y luego pon un límite de tiempo al primer paso con el [temporizador pomodoro para el ADHD](/tools/pomodoro). Explora la [biblioteca completa de herramientas](/tools)."
+    "body": "Si la lista sigue pareciéndote demasiado larga después de elegir una, haz primero un [volcado mental](/tools/brain-dump) para despejar el desorden mental. Para ordenar la lista por importancia y urgencia en lugar de elegir a ciegas, abre la [matriz de Eisenhower para el TDAH](/tools/eisenhower-matrix). ¿Ya tienes la elegida? Divídela en pasos realizables con la [herramienta para dividir tareas](/tools/task-splitter) y luego ponle un límite de tiempo al primer paso con el [temporizador pomodoro para el TDAH](/tools/pomodoro). Explora la [biblioteca completa de herramientas](/tools)."
   },
   "cards": null,
   "openTool": null,
   "comingSoon": null,
   "cta": {
     "headline": "Pruébalo en la app",
-    "body": "La herramienta web elige una tarea de una lista pegada. La app de Doubly para iOS recuerda cada lista que has volcado, saca a la luz la única tarea que deberías hacer a continuación según el contexto y tu historial, y usa seguimientos de responsabilidad con personas reales para que la tarea elegida de verdad ocurra.",
+    "body": "La herramienta web elige una tarea de la lista que pegues. La app de Doubly para iOS recuerda cada lista que has volcado, saca a la luz la única tarea que deberías hacer a continuación según el contexto y tu historial, y usa seguimientos con personas reales para que la tarea elegida ocurra de verdad.",
     "label": "Pruébalo en la app"
   },
   "jsonld": {
     "appName": "Herramienta Elige una tarea de Doubly",
-    "appDescription": "Un selector de tareas gratis y en línea. Pega tu lista de pendientes desordenada y la herramienta elige una sola cosa por la que empezar según la más pequeña, la más temida o al azar. Hecho para cerebros con ADHD.",
+    "appDescription": "Un selector de tareas gratis y online. Pega tu lista de pendientes desordenada y la herramienta elige una sola cosa por la que empezar según la más pequeña, la más temida o al azar. Hecha para cerebros con TDAH.",
     "howToName": "Cómo usar la herramienta de elegir una tarea",
     "collectionName": null,
     "collectionDescription": null

@@ -1,0 +1,86 @@
+{
+  "slug": "_index",
+  "meta": {
+    "title": "Ücretsiz ADHD Araçları - Başlamana Yardım Eder | Doubly",
+    "description": "ADHD beyinleri için ücretsiz, kayıt istemeyen araçlar: pomodoro zamanlayıcı, beyin boşaltma ve dahası. Plan yapmak için değil, başlamak için tasarlandı.",
+    "ogTitle": "Başlamana Yardım Eden Ücretsiz ADHD Araçları",
+    "ogDescription": "Kayıt yok. Açılır pencere yok. Doubly uygulamasının arkasındaki ekipten, ADHD beyinleri için ücretsiz araçlar.",
+    "twitterTitle": "Başlamana Yardım Eden Ücretsiz ADHD Araçları",
+    "twitterDescription": "Kayıt yok. Açılır pencere yok. ADHD beyinleri için ücretsiz araçlar."
+  },
+  "h1": "Başlamana yardım eden ücretsiz ADHD araçları",
+  "breadcrumbLabel": "Araçlar",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "ADHD beyinleri için tasarlanmış, kayıt istemeyen ücretsiz araçlar. Plan yapmaya hazır olduğun an için değil, her şeyin üstüne geldiği o bunaldığın an için yapıldı. Tarayıcında kullan. İlerlemen kaydedilsin. Canın istediğinde bırak git.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Mevcut araçlar",
+      "paragraphs": null
+    }
+  ],
+  "related": null,
+  "cards": [
+    {
+      "slug": "task-splitter",
+      "title": "Görev Bölme Aracı",
+      "description": "Başlayamadığın bir görev yaz. Yapay zeka onu süre tahminleriyle küçük, yapılabilir adımlara bölsün. ADHD beyinleri için tasarlandı."
+    },
+    {
+      "slug": "brain-dump",
+      "title": "Beyin Boşaltma Aracı",
+      "description": "Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok, hiçbir şey saklanmıyor."
+    },
+    {
+      "slug": "pick-one",
+      "title": "Birini Seç Aracı",
+      "description": "Dağınık yapılacaklar listeni yapıştır, başlamak için tek bir iş al. En küçüğü, en korkutucusu ya da rastgele. On görevin tek ve devasa, başlanamaz bir şeye dönüştüğü anlar için."
+    },
+    {
+      "slug": "eisenhower-matrix",
+      "title": "Eisenhower Matrisi (ADHD Sürümü)",
+      "description": "Görevleri ders kitabı etiketleri yerine “sıkıcı ama önemli” gibi çeyreklere sürükle. Sonunda ADHD beynine oturan matris. Tarayıcında saklanır."
+    },
+    {
+      "slug": "pomodoro",
+      "title": "ADHD Pomodoro Zamanlayıcı",
+      "description": "25 dakika çalışma, 5 dakika mola - sonunda ADHD beynine oturan odak yöntemi. Ücretsiz, kayıt yok, çevrimdışı çalışır."
+    },
+    {
+      "slug": "visual-timer",
+      "title": "Görsel Zamanlayıcı / Zaman Körlüğü Saati",
+      "description": "Rakam okumak yerine zamanın akıp gittiğini gör: küçülen bir pasta dilimi. ADHD'li yetişkinler için aynı zamanda bir zaman körlüğü saati."
+    },
+    {
+      "slug": "brown-noise",
+      "title": "Ortam Sesi Üreteci",
+      "description": "Tarayıcıda çalışan ücretsiz ortam sesi üreteci. Kahverengi gürültü, ayrıca pembe ve beyaz. Vızıldayan bir ADHD beynini yatıştıran sabit bir arka plan sesi. Uyku zamanlayıcısı dahil, çevrimdışı çalışır."
+    },
+    {
+      "slug": "body-doubling-room",
+      "title": "Body Doubling Odası",
+      "description": "İki kişilik ücretsiz odak odası. Bir link paylaş, eşler arası videoyla yan yana çalış, ortak zamanlayıcıyı başlat. Kayıt yok, kurulum yok."
+    },
+    {
+      "slug": "hyperfocus-timer",
+      "title": "Hiperfokus Kesme Zamanlayıcısı",
+      "description": "Belirlediğin aralıklarla tekrarlanan sesli yoklamalar ve istersen kesin bir bitiş. Böylece ADHD hiperfokusun bütün öğleden sonranı yiyip bitirmez."
+    }
+  ],
+  "openTool": "Aracı aç",
+  "comingSoon": "Yakında",
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Web araçları tek bir göreve başlamana yardım eder. Doubly iOS uygulaması ise devam etmeni sağlar: beyin boşaltma, net tek bir sonraki adım ve gerçek insanlarla düzenli kontrol görüşmeleri.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": "Başlamana Yardım Eden Ücretsiz ADHD Araçları",
+    "collectionDescription": "Doubly uygulamasının arkasındaki ekibin ADHD beyinleri için hazırladığı, sürekli büyüyen ücretsiz araç seti. Kayıt gerektirmez."
+  }
+}

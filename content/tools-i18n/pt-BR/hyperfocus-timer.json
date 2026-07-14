@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Timer de hiperfoco grátis + alarme para TDAH | Doubly",
+    "description": "Timer de hiperfoco grátis: avisa a cada X minutos e fala a hora em voz alta para você não perder seis horas. Sem cadastro, roda no navegador.",
+    "ogTitle": "Timer de hiperfoco grátis + alarme de check-in para TDAH",
+    "ogDescription": "Programe check-ins falados em voz alta para uma sessão de hiperfoco não engolir a sua tarde inteira. Grátis, sem cadastro.",
+    "twitterTitle": "Timer de hiperfoco grátis + alarme de check-in para TDAH",
+    "twitterDescription": "Check-ins falados em voz alta, em intervalos fixos. Grátis, sem cadastro."
+  },
+  "h1": "Timer de hiperfoco grátis",
+  "breadcrumbLabel": "Timer de hiperfoco",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "answerCapsule": "**Um timer de hiperfoco programa check-ins recorrentes, a cada 20 a 45 minutos por padrão, para o túnel de foco do TDAH não engolir seis horas do seu dia sem você perceber.** Esta versão grátis, direto no navegador, toca um alerta, fala a hora e a tarefa que você anotou (se você quiser) e pergunta se você ainda está nela. Um limite de sessão separado dispara uma única vez, ao bater o tempo máximo que você definiu. Sem cadastro, sem instalar nada, e as suas configurações ficam no seu aparelho.",
+  "intro": "O hiperfoco é a metade menos comentada do TDAH. A metade que, de fora, parece produtividade pura, enquanto lá dentro do túnel você esquece de beber água, perde reuniões e ressurge às 19h se perguntando para onde foi a tarde. A solução não é mais foco. É uma interrupção confiável, que quebra o feitiço por tempo suficiente para você escolher o que vem agora.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar o timer de hiperfoco",
+      "steps": [
+        {
+          "name": "Dê um nome à tarefa que você sentou para fazer",
+          "text": "Escreva uma linha curta: \"imposto de renda\", \"o roteiro\", \"revisar o design\". É opcional, mas vale a pena. O check-in falado lê isso de volta para você, e essa é a melhor defesa que existe contra aquela troca de aba que vira três horas de trabalho sobre outra coisa."
+        },
+        {
+          "name": "Escolha o intervalo entre os check-ins",
+          "text": "30 minutos é um bom padrão. Use 20 se você costuma ignorar o alerta, e 45 ou 60 se intervalos curtos picotam o seu fluxo."
+        },
+        {
+          "name": "Defina um limite de sessão (opcional, mas vale a pena)",
+          "text": "Escolha a duração total máxima da sessão. O limite é um alerta separado e mais alto, que dispara uma vez só, não importa quantas vezes você já tenha apertado \"ainda estou nisso\"."
+        },
+        {
+          "name": "Toque em Começar e vá trabalhar",
+          "text": "Quando o check-in dispara, a página toca um alerta, fala a hora e a sua tarefa (se você quiser) e pergunta se você ainda está nela. Escolha Ainda estou nisso, Fazer uma pausa ou Parar."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que isso funciona para cérebros com TDAH",
+      "paragraphs": [
+        "O TDAH costuma ser descrito como um déficit de atenção, mas pesquisadores como o Dr. Russell Barkley o definem de um jeito mais preciso: uma diferença na autorregulação, incluindo a regulação da própria atenção. Ou seja, cérebros com TDAH não prestam só atenção de menos, eles também prestam atenção demais. O hiperfoco é o que acontece quando um assunto é novo, interessante ou estimulante o bastante para o mecanismo de trocar o foco simplesmente parar de disparar. O túnel se fecha e o mundo lá fora some.",
+        "De dentro, a sessão de hiperfoco parece flow. De fora, é almoço pulado, mensagem sem resposta e coluna travada. O custo é real mesmo quando o trabalho é bom. Um check-in sonoro e recorrente custa quase nada e externaliza o automonitoramento que um cérebro com TDAH, dentro do túnel, não consegue fazer sozinho. É o mesmo princípio da contagem regressiva visual para a cegueira temporal, só que aplicado ao problema oposto.",
+        "Por que a hora falada faz diferença: sinal visual é absorvido pelo trabalho. Dá para olhar para o relógio e não ver a hora. O áudio chega de outro jeito, principalmente o som de uma frase, que a parte da linguagem do seu cérebro precisa processar antes de conseguir ignorar. A [CHADD](https://chadd.org/about-adhd/overview/), principal referência sobre TDAH nos Estados Unidos, lista pistas externas e apoios estruturados de tempo entre as estratégias práticas recomendadas para adultos com TDAH."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "O que é um timer de hiperfoco?",
+          "a": "Um timer de hiperfoco é um alarme recorrente que te interrompe em intervalos fixos, normalmente a cada 20 a 45 minutos, para uma sessão de foco profundo ter uma checagem embutida. Em vez de contar até o fim de um único bloco, ele fica disparando durante a sessão inteira, que é justamente o que o hiperfoco do TDAH exige. O alerta é alto ou falado, para atravessar a visão de túnel."
+        },
+        {
+          "q": "Qual a diferença para um timer pomodoro?",
+          "a": "O timer pomodoro alterna entre 25 minutos de foco e 5 de pausa, e foi feito para quem tem dificuldade de começar. O timer de hiperfoco é para o problema contrário: começar é fácil, parar é que não é. Ele não te obriga a fazer pausa, só te puxa para fora do túnel o suficiente para você notar a hora, a data, a sua bexiga e se ainda faz sentido continuar nisso."
+        },
+        {
+          "q": "Por que anunciar a hora em voz alta faz diferença?",
+          "a": "Durante um episódio de hiperfoco, a noção de tempo simplesmente some. Uma checagem de hora falada funciona onde uma olhada no relógio não funciona, porque o áudio te alcança mesmo com os olhos grudados na tela. Ouvir \"são 14h45, você está nisso há duas horas\" é o que quebra o feitiço. Só o som do alerta é fácil demais de dispensar."
+        },
+        {
+          "q": "Qual intervalo devo escolher?",
+          "a": "Comece com 30 minutos. Se perceber que está ignorando ou abafando o alerta, encurte para 20. Se o intervalo estiver quebrando o seu fluxo em vez de te proteger dele, tente 45 ou 60. O objetivo é o maior intervalo que ainda consiga te trazer à tona de forma confiável. Não existe resposta certa, só a que funciona para o seu cérebro nesta semana."
+        },
+        {
+          "q": "Para que serve o limite de sessão?",
+          "a": "O limite de sessão é um alerta mais alto e com som diferente, que dispara ao atingir uma duração total máxima, 2 horas por padrão. Ele existe justamente para aquele dia em que você clica em \"ainda estou nisso\" a cada check-in e ficaria na mesa até meia-noite. É um sinal separado, não um check-in, para o cérebro reptiliano não confundir os dois."
+        },
+        {
+          "q": "O anúncio falado funciona no meu celular?",
+          "a": "Ele usa a Web Speech API do navegador, que funciona nas versões atuais do Safari do iOS, no Chrome do Android e nos navegadores de computador. No iOS, a página precisa continuar aberta e talvez você tenha que tocar nela uma vez para o navegador saber que você liberou o áudio. Se o celular estiver no silencioso, o som do alerta fica mudo, mas o anúncio falado continua saindo pelo alto-falante."
+        },
+        {
+          "q": "O timer continua rodando com a aba em segundo plano?",
+          "a": "Continua. O intervalo é ancorado na hora real do relógio, não em um contador de JavaScript que os navegadores desaceleram em segundo plano. O check-in dispara na hora certa mesmo que você tenha trocado de janela. Se você der permissão, uma notificação do sistema aparece quando a aba não está visível, o título da página pisca, e o alerta fica mais alto e mais frequente quanto mais você ignora. Nos aparelhos compatíveis, a tela é mantida acesa."
+        },
+        {
+          "q": "Por que o horário do check-in varia um ou dois minutos a cada rodada?",
+          "a": "Cada intervalo varia cerca de dez por cento, de propósito. Um alerta perfeitamente previsível é justamente o tipo que um cérebro em hiperfoco aprende a antecipar e a dispensar antes mesmo de registrar conscientemente. Uma variação pequena e imprevisível, às vezes 27 minutos, às vezes 33, desmonta esse descarte automático. Na média da sessão, o intervalo continua sendo o que você escolheu."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "Se o problema é começar, e não parar, experimente o [timer pomodoro para TDAH](/tools/pomodoro) e faça sprints curtos e finitos, com pausas embutidas. Para uma contagem regressiva de sessão única, que você olha em vez de ler, o [timer visual](/tools/visual-timer) também funciona como relógio contra a cegueira temporal. Se o barulho do escritório (ou o de dentro da sua cabeça) fica te puxando de volta para o túnel, ligue o [gerador de ruído marrom](/tools/brown-noise) por baixo. Explore a [biblioteca completa de ferramentas](/tools)."
+  },
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "Um timer consegue te tirar do túnel. O app do Doubly para iOS te ajuda a escolher o que fazer com a próxima hora: despejar a bagunça mental, revelar um próximo passo claro e te manter na linha com check-ins de cobrança de pessoas reais, que sabem bem como é perder uma tarde inteira.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Timer de interrupção de hiperfoco do Doubly",
+    "appDescription": "Um timer de hiperfoco grátis e online, com check-ins falados recorrentes e um limite de sessão opcional. Feito para adultos com TDAH que perdem horas na visão de túnel.",
+    "howToName": "Como usar o timer de hiperfoco",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

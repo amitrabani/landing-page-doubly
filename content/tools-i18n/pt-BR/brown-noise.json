@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Gerador de ruído marrom grátis para TDAH | Doubly",
+    "description": "Gerador de ruído marrom grátis que roda no navegador. Marrom, rosa e branco. Sem cadastro, sem anúncios, com timer de desligamento. Feito para o foco no TDAH.",
+    "ogTitle": "Gerador de ruído marrom grátis para o foco no TDAH",
+    "ogDescription": "Um player de ruído marrom grátis, com timer de desligamento. Marrom, rosa e branco. Funciona offline, no seu navegador.",
+    "twitterTitle": "Gerador de ruído marrom grátis",
+    "twitterDescription": "Marrom, rosa e branco. Grátis, sem cadastro, roda no seu navegador."
+  },
+  "h1": "Gerador de ruído marrom grátis",
+  "breadcrumbLabel": "Gerador de ruído marrom",
+  "breadcrumbHome": "Início",
+  "breadcrumbTools": "Ferramentas",
+  "answerCapsule": "**O ruído marrom é um som grave, de baixa frequência, que mascara as distrações e dá a um cérebro agitado com TDAH algo estável em que se apoiar.** Este gerador de sons ambientes gratuito toca ruído marrom, rosa e branco direto no seu navegador. Sem cadastro, sem anúncios, sem arquivos de áudio para baixar. Escolha um som, ajuste o volume, coloque um timer de desligamento se quiser, e volte ao trabalho.",
+  "intro": "O gerador acima funciona com a Web Audio API, então o som é criado no seu dispositivo em tempo real. Isso significa que não tem streaming, não tem travada de buffer, e ele continua funcionando se o seu wi-fi cair. Comece pelo marrom. Se ele parecer pesado demais, mude para o rosa. A maioria dos adultos com TDAH acaba ficando no marrom.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Como usar o gerador de ruído marrom",
+      "steps": [
+        {
+          "name": "Escolha um som",
+          "text": "O marrom é o mais grave, o que a maioria das pessoas procura. Se ele parecer pesado demais, experimente o rosa. O branco é o mais agudo e o mais difícil de ignorar."
+        },
+        {
+          "name": "Toque em play",
+          "text": "O primeiro toque cria o motor de áudio no seu navegador. Em celulares mais lentos, dê meio segundo para ele. Depois disso, trocar de som é instantâneo."
+        },
+        {
+          "name": "Ache o seu volume",
+          "text": "Baixo o suficiente para você ainda ouvir alguém falando com você em tom normal. Se você precisa levantar a voz para ser ouvido por cima dele, está alto demais."
+        },
+        {
+          "name": "Coloque um timer de desligamento, se precisar",
+          "text": "Escolha 15, 30, 60 ou 90 minutos. O som some suavemente no final, então ele não te dá um susto. Deixe desligado se quiser que ele toque o dia inteiro."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Por que o ruído marrom funciona para cérebros com TDAH",
+      "paragraphs": [
+        "Cérebros com TDAH tendem a se voltar para sons novos. Uma porta batendo, um celular vibrando, duas pessoas começando uma conversa atrás de você. Cada um deles puxa um fio da sua atenção para longe do que você estava fazendo, e trazer essa atenção de volta custa tempo e esforço de verdade.",
+        "O ruído marrom não faz você focar. Ele tira do caminho as coisas que ficam arrancando o seu foco. Um som estável e previsível cobre os imprevisíveis, então o seu cérebro para de disparar a resposta de orientação a cada poucos segundos.",
+        "Também existe aqui um achado de pesquisa pequeno, mas interessante. Em um estudo de 2007, [Söderlund, Sikström e Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) descobriram que um nível moderado de ruído branco melhorou o desempenho cognitivo de crianças com dificuldades de atenção, enquanto piorou um pouco o desempenho de crianças neurotípicas. O mecanismo proposto é a ressonância estocástica, a ideia de que um cérebro ruidoso pode precisar de um pouco de ruído externo para entrar na sua faixa de funcionamento.",
+        "A ciência ainda está no começo, mas os relatos de quem vive isso na pele são altos e consistentes. A [CHADD](https://chadd.org/about-adhd/overview/) e entidades parecidas tratam ferramentas sensoriais, como o som de fundo, como algo razoável de se experimentar. Se ajuda você, já é o bastante."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Perguntas frequentes",
+      "faqs": [
+        {
+          "q": "O que é ruído marrom?",
+          "a": "O ruído marrom é um som grave e retumbante, com mais energia nas frequências baixas, e o nome vem da matemática do \"movimento browniano\" aleatório que o gera. Ele soa como uma cachoeira constante ou uma chuva forte batendo no telhado. Comparado ao ruído branco, ele é mais escuro e mais quente, o que a maioria das pessoas acha menos áspero em sessões longas."
+        },
+        {
+          "q": "Isso é um gerador de sons ambientes?",
+          "a": "Sim. O ruído marrom é a opção mais popular, mas o mesmo player também gera ruído rosa e branco. São três sons ambientes no total, todos criados ao vivo no seu navegador, sem baixar nenhum arquivo de áudio. Escolha aquele que o seu cérebro conseguir jogar para o fundo."
+        },
+        {
+          "q": "Ruído marrom, ruído rosa ou ruído branco: qual escolher?",
+          "a": "O ruído branco é uniforme em todas as frequências e soa como um chiado de TV. O ruído rosa reduz um pouco as frequências altas, então parece mais suave, como uma chuva constante. O ruído marrom reduz essas frequências ainda mais, então ele soa profundo e te dá uma sensação de chão firme. Se o ruído branco parecer áspero, experimente o rosa. Se o rosa ainda parecer agudo, experimente o marrom. Escolha aquele que você consegue ignorar sem esforço."
+        },
+        {
+          "q": "O ruído marrom é bom para o foco no TDAH?",
+          "a": "Alguns adultos com TDAH focam melhor com um som de fundo constante, e um estudo de 2007 de Söderlund e colegas descobriu que um nível moderado de ruído auditivo de fato melhorou o desempenho cognitivo de crianças com dificuldades de atenção. O mecanismo provável é o mascaramento. Um som estável cobre os ruídos imprevisíveis (conversas, trânsito, a geladeira zumbindo), então o seu cérebro para de se voltar para cada som novo."
+        },
+        {
+          "q": "É seguro ouvir ruído marrom o dia inteiro?",
+          "a": "É, em um volume razoável. Valem as mesmas regras de segurança auditiva que valem para a música. Mantenha o volume baixo o suficiente para conseguir ouvir tranquilamente alguém falando em tom normal na mesma sala. O CDC recomenda limitar a exposição prolongada acima de 70 dB. Se os seus ouvidos ficarem cansados ou zumbirem depois de uma sessão, o volume está alto demais."
+        },
+        {
+          "q": "Por que o ruído marrom virou febre no TikTok?",
+          "a": "Adultos com TDAH no TikTok começaram a postar que o ruído marrom silenciava a tagarelice mental constante, muitas vezes descrita como \"o barulho na minha cabeça sumiu\". Essa única observação viralizou em 2022 e 2023, e uma onda de pessoas foi experimentar. A ciência ainda é preliminar, mas os relatos de quem vive isso na pele são fortes o bastante para valer a pena você testar por conta própria."
+        },
+        {
+          "q": "Isso funciona offline?",
+          "a": "Sim. O som é gerado no seu navegador com a Web Audio API, ele não vem em streaming de um servidor. Depois que a página carrega, nenhuma conexão com a internet é necessária. Nada é gravado, nada é enviado, e não existem anúncios nem rastreadores no player."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Ferramentas relacionadas",
+    "body": "O ruído marrom combina naturalmente com um timer de foco. Experimente o [timer pomodoro para TDAH](/tools/pomodoro) para blocos estruturados de 25 minutos, ou o [timer visual](/tools/visual-timer) se você quiser um mostrador de fatia encolhendo que serve também como relógio contra a cegueira temporal. Explore a [biblioteca completa de ferramentas](/tools) ou leia a [biblioteca de aprendizado do Doubly](/learn) para encontrar guias sobre foco, despejo mental e como se destravar."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Experimente no app",
+    "body": "O ruído marrom te ajuda a entrar na tarefa. O app do Doubly para iOS te ajuda a escolher a tarefa antes disso: despejo mental, um próximo passo claro e check-ins de cobrança de pessoas reais.",
+    "label": "Experimente no app"
+  },
+  "jsonld": {
+    "appName": "Gerador de ruído marrom do Doubly",
+    "appDescription": "Um gerador de ruído marrom grátis, direto no navegador, com ruído rosa e branco. Sem cadastro, com timer de desligamento, funciona offline.",
+    "howToName": "Como usar o gerador de ruído marrom",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

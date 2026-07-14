@@ -1,19 +1,19 @@
 {
   "slug": "task-splitter",
   "meta": {
-    "title": "Herramienta gratis para dividir tareas | Doubly",
-    "description": "Escribe una tarea que no puedes empezar. Una IA gratis la divide en pasos pequeños y realizables con tiempos estimados. Sin registro, para cerebros con ADHD.",
-    "ogTitle": "Herramienta gratis para dividir tareas - Divide cualquier tarea",
+    "title": "Dividir tareas para el TDAH: herramienta gratis | Doubly",
+    "description": "Herramienta gratis para dividir tareas con TDAH: escribe la tarea que no puedes empezar y la IA la parte en pasos pequeños con tiempos estimados. Sin registro.",
+    "ogTitle": "Herramienta gratis para dividir tareas, hecha para el TDAH",
     "ogDescription": "Escribe una tarea que no puedes empezar. Una IA gratis la divide en pasos pequeños y realizables con tiempos estimados. Sin registro.",
-    "twitterTitle": "Herramienta gratis para dividir tareas",
+    "twitterTitle": "Dividir tareas para el TDAH: herramienta gratis",
     "twitterDescription": "Escribe una tarea que no puedes empezar. La IA la divide en pasos pequeños y realizables con tiempos estimados."
   },
   "h1": "Herramienta gratis para dividir tareas",
   "breadcrumbHome": "Inicio",
   "breadcrumbTools": "Herramientas",
   "breadcrumbLabel": "Herramienta para dividir tareas",
-  "answerCapsule": "**Una herramienta para dividir tareas convierte una tarea que parece demasiado grande en una lista corta de pasos pequeños y realizables, para que un cerebro abrumado tenga un punto de partida claro.** Escribe una tarea arriba. La herramienta devuelve subpasos ordenados con tiempos estimados. Hecha para cerebros con ADHD, gratis, sin registro. Actualiza la página y lo que escribiste desaparece.",
-  "intro": "La mayoría de las apps de productividad asumen que puedes planear. Esta asume que no puedes empezar. Escribe la tarea que lleva una semana en tu lista y deja que la IA la reduzca a su versión más pequeña. Luego haz un paso.",
+  "answerCapsule": "**Una herramienta para dividir tareas convierte una tarea que parece demasiado grande en una lista corta de pasos pequeños y realizables, para que un cerebro abrumado tenga un punto de partida claro.** Escribe una tarea arriba. La herramienta devuelve subpasos ordenados con tiempos estimados. Hecha para cerebros con TDAH, gratis, sin registro. Actualiza la página y lo que escribiste desaparece.",
+  "intro": "La mayoría de las apps de productividad dan por hecho que puedes planear. Esta da por hecho que no puedes empezar. Escribe la tarea que lleva una semana en tu lista y deja que la IA la reduzca a su versión más pequeña. Luego haz un paso.",
   "sections": [
     {
       "kind": "steps",
@@ -29,10 +29,10 @@
         },
         {
           "name": "Haz el primer paso",
-          "text": "Solo el primer paso. No leas los siguientes. Márcalo. Luego el segundo. El impulso hará el resto."
+          "text": "Solo el primer paso. No leas los siguientes. Márcalo. Luego el segundo. La inercia hará el resto."
         },
         {
-          "name": "Para cuando te bloquees",
+          "name": "Detente cuando te bloquees",
           "text": "Si un paso sigue pareciendo demasiado grande, pégalo de nuevo en la herramienta y divídelo otra vez. Puedes dividir una división."
         }
       ],
@@ -41,11 +41,11 @@
     },
     {
       "kind": "paragraphs",
-      "heading": "Por qué esto funciona para cerebros con ADHD",
+      "heading": "Por qué esto funciona para cerebros con TDAH",
       "paragraphs": [
-        "El inicio de tareas, el acto de empezar algo, es una de las funciones ejecutivas más afectadas por el ADHD. El cerebro lee una tarea vaga y con muchos pasos como una sola unidad abrumadora y se paraliza. Investigadores como Russell Barkley lo describen como un déficit en la representación interna del tiempo y el esfuerzo, no como un problema de fuerza de voluntad.",
-        "Un paso pequeño y concreto hace lo contrario. “Ir a la cocina” u “abrir el archivo” lleva la energía de activación de imposible a manejable. Cuanto más pequeño sea el primer paso, mayor es la probabilidad de que el cerebro lo acepte. De eso se trata todo.",
-        "Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan dividir las tareas grandes en pasos pequeños como una estrategia clave para el ADHD. Doubly lo hace de forma mecánica, en dos segundos, para que no tengas que planearlo antes de poder empezar."
+        "El inicio de tareas, el acto de empezar algo, es una de las funciones ejecutivas más afectadas por el TDAH. El cerebro lee una tarea vaga y con muchos pasos como una sola unidad abrumadora y se paraliza. Investigadores como Russell Barkley lo describen como un déficit en la representación interna del tiempo y el esfuerzo, no como un problema de fuerza de voluntad.",
+        "Un paso pequeño y concreto hace lo contrario. “Ir a la cocina” o “abrir el archivo” baja la energía de activación de imposible a manejable. Cuanto más pequeño sea el primer paso, más probable es que el cerebro lo acepte. De eso se trata todo.",
+        "Organizaciones como [CHADD](https://chadd.org/about-adhd/overview/) recomiendan dividir las tareas grandes en pasos pequeños como una de las estrategias clave para el TDAH. Doubly lo hace de forma mecánica, en dos segundos, para que no tengas que planearlo antes de poder empezar."
       ],
       "steps": null,
       "faqs": null
@@ -59,8 +59,8 @@
           "a": "Escribe la tarea como una frase corta (\"limpiar el garaje\", \"escribir el informe\") y deja que la herramienta la divida. Cada paso es lo bastante corto para empezar sin pensarlo. Elige el primero y hazlo. No planees más allá de eso."
         },
         {
-          "q": "¿Por qué dividir una tarea en pasos ayuda tanto con el ADHD?",
-          "a": "Los cerebros con ADHD producen poca dopamina para las tareas que el cerebro lee como \"demasiado grandes para terminar\". Un paso pequeño y finito es la unidad de trabajo preferida del cerebro. La investigación de Russell Barkley y otros lo relaciona con diferencias de función ejecutiva en el inicio de tareas, no con pereza."
+          "q": "¿Por qué dividir una tarea en pasos ayuda tanto cuando tienes TDAH?",
+          "a": "Los cerebros con TDAH producen poca dopamina para las tareas que el cerebro lee como \"demasiado grandes para terminar\". Un paso pequeño y finito es la unidad de trabajo preferida del cerebro. La investigación de Russell Barkley y otros lo relaciona con diferencias de función ejecutiva en el inicio de tareas, no con la pereza."
         },
         {
           "q": "¿La herramienta guarda mis tareas?",
@@ -72,7 +72,7 @@
         },
         {
           "q": "¿Y si los pasos no son del todo correctos?",
-          "a": "Son un punto de partida, no un contrato. Ignora los pasos que no apliquen, reordénalos en tu cabeza y para cuando la tarea esté hecha. El objetivo es desbloquearte, no seguir un plan perfecto."
+          "a": "Son un punto de partida, no un contrato. Ignora los pasos que no apliquen, reordénalos en tu cabeza y detente cuando la tarea esté hecha. El objetivo es desbloquearte, no seguir un plan perfecto."
         }
       ],
       "steps": null,
@@ -81,16 +81,16 @@
   ],
   "related": {
     "heading": "Herramientas relacionadas",
-    "body": "Si tienes la cabeza llena de más de una tarea, empieza con la [herramienta de volcado mental](/tools/brain-dump) y deja que la IA saque primero lo accionable, o ordena toda la lista con la [matriz de Eisenhower para el ADHD](/tools/eisenhower-matrix) y usa [elige una](/tools/pick-one) para sacar a la luz una tarea con la que empezar. Cuando ya tengas una lista de pasos aquí, ponle tiempo al primero con el [temporizador pomodoro para el ADHD](/tools/pomodoro) o el [temporizador visual](/tools/visual-timer) para que veas cómo el trabajo se encoge. Si lo difícil es empezar en soledad, abre una [sala de acompañamiento](/tools/body-doubling-room) con un amigo. Explora la [biblioteca completa de herramientas](/tools)."
+    "body": "Si tienes la cabeza llena de más de una tarea, empieza con la [herramienta de volcado mental](/tools/brain-dump) y deja que la IA saque primero lo accionable, o ordena toda la lista con la [matriz de Eisenhower para el TDAH](/tools/eisenhower-matrix) y usa [elige una](/tools/pick-one) para quedarte con una sola tarea con la que empezar. Cuando ya tengas aquí una lista de pasos, ponle tiempo al primero con el [temporizador pomodoro para el TDAH](/tools/pomodoro) o el [temporizador visual](/tools/visual-timer) para ver cómo el trabajo se encoge. Si lo difícil es empezar en soledad, abre una [sala de acompañamiento](/tools/body-doubling-room) con un amigo. Explora la [biblioteca completa de herramientas](/tools)."
   },
   "cta": {
     "headline": "Pruébalo en la app",
-    "body": "La herramienta web divide una tarea a la vez. La app de Doubly para iOS guarda tus divisiones, saca a la luz el siguiente paso automáticamente y usa seguimientos de responsabilidad de personas reales para mantenerte en marcha.",
+    "body": "La herramienta web divide una tarea a la vez. La app de Doubly para iOS guarda tus divisiones, te muestra el siguiente paso automáticamente y usa el seguimiento de personas reales para que no pierdas el ritmo.",
     "label": "Pruébalo en la app"
   },
   "jsonld": {
     "appName": "Herramienta para dividir tareas de Doubly",
-    "appDescription": "Una herramienta gratis para dividir tareas con IA. Escribe cualquier tarea que no puedas empezar y recibe pasos pequeños y realizables con tiempos estimados. Hecha para cerebros con ADHD.",
+    "appDescription": "Una herramienta gratis para dividir tareas con IA. Escribe cualquier tarea que no puedas empezar y recibe pasos pequeños y realizables con tiempos estimados. Hecha para cerebros con TDAH.",
     "howToName": "Cómo usar la herramienta para dividir tareas",
     "collectionName": null,
     "collectionDescription": null

@@ -3,7 +3,8 @@ const de = {
   common: {
     tryInDoubly: 'Probier es in Doubly aus',
     changeLanguage: 'Sprache ändern',
-    socialProof: (count: number) => `Schließ dich ${count.toLocaleString('de-DE')} ADHDlern an`,
+    socialProof: (count: number) =>
+      `Schließ dich ${count.toLocaleString('de-DE')} Menschen mit ADHS an`,
   },
 
   // Navbar
@@ -20,7 +21,7 @@ const de = {
 
   // Hero
   hero: {
-    badge: 'Gemacht für ADHD-Gehirne',
+    badge: 'Gemacht für ADHS-Gehirne',
     titlePrefix: 'Wenn dein Gehirn ',
     titleHighlight: '47 Tabs offen hat',
     subtitle: 'Verwandle das Chaos in weniger als einer Minute in einen klaren nächsten Schritt.',
@@ -46,7 +47,7 @@ const de = {
 
   // Problem
   problem: {
-    title: 'ADHD heißt nicht einfach nur unorganisiert zu sein',
+    title: 'ADHS heißt nicht einfach nur unorganisiert zu sein',
     titleHighlight: 'unorganisiert',
     subtitle:
       'Es ist ein täglicher Kampf mit einem Gehirn, das bei deinen eigenen Vorsätzen nicht mitspielt.',
@@ -86,11 +87,11 @@ const de = {
 
   // Guide
   guide: {
-    title: 'Speziell für ADHD-Gehirne gemacht, denen das Anfangen schwerfällt',
+    title: 'Speziell für ADHS-Gehirne gemacht, denen das Anfangen schwerfällt',
     subtitle:
-      'Die meisten Produktivitäts-Apps setzen voraus, dass dein Gehirn bereit zum Planen ist. Doubly ist für den Moment gemacht, in dem du überfordert bist, feststeckst oder etwas vor dir herschiebst, basierend darauf, wie ADHD wirklich funktioniert.',
+      'Die meisten Produktivitäts-Apps setzen voraus, dass dein Gehirn bereit zum Planen ist. Doubly ist für den Moment gemacht, in dem du überfordert bist, feststeckst oder etwas vor dir herschiebst, basierend darauf, wie ADHS wirklich funktioniert.',
     proofPoints: [
-      'Gemacht für ADHD-Hürden, nicht für generische Produktivität',
+      'Gemacht für ADHS-Hürden, nicht für generische Produktivität',
       'Hilft, den Startwiderstand zu verringern',
       'Gibt Struktur, ohne dich zu überfordern',
     ],
@@ -406,18 +407,18 @@ const de = {
   // FAQ
   // ToolsSection
   toolsSection: {
-    title: 'Kostenlose ADHD-Tools, die du sofort nutzen kannst',
+    title: 'Kostenlose ADHS-Tools, die du sofort nutzen kannst',
     subtitle: 'Keine Anmeldung, keine Pop-ups. Öffne eines direkt im Browser, sobald du feststeckst.',
     hot: 'Beliebt',
     openTool: 'Tool öffnen',
-    browseAll: 'Alle kostenlosen ADHD-Tools ansehen',
+    browseAll: 'Alle kostenlosen ADHS-Tools ansehen',
   },
 
   faq: {
     title: 'Fragen',
     items: [
       {
-        q: 'Ist Doubly nur für Menschen mit ADHD-Diagnose?',
+        q: 'Ist Doubly nur für Menschen mit ADHS-Diagnose?',
         a: 'Nein. Doubly ist für alle, die mit dem Anfangen, mit Überforderung oder mentalem Ballast kämpfen. Du brauchst keine Diagnose, nur ein Gehirn, das manchmal erstarrt, wenn zu viel zu tun ist.',
       },
       {
@@ -447,20 +448,20 @@ const de = {
   finalCta: {
     title: 'Dein Gehirn braucht nicht noch mehr Druck',
     highlight: 'Es braucht einen Weg, anzufangen.',
-    subtitle: 'Für ADHD-Köpfe, die genug haben vom Zerdenken, Aufschieben und Hinterherhängen.',
+    subtitle: 'Für ADHS-Köpfe, die genug haben vom Zerdenken, Aufschieben und Hinterherhängen.',
     cta: 'Im App Store laden',
   },
 
   // Footer
   footer: {
     brand: 'Doubly',
-    freeTools: 'Kostenlose ADHD-Tools',
+    freeTools: 'Kostenlose ADHS-Tools',
     tools: 'Tools',
     learn: 'Wissen',
     privacy: 'Datenschutz',
     terms: 'AGB',
     support: 'Support',
-    copyright: (year: number) => `© ${year} Doubly. Für ADHD-Gehirne gemacht.`,
+    copyright: (year: number) => `© ${year} Doubly. Für ADHS-Gehirne gemacht.`,
   },
 
   // StickyBar
@@ -470,11 +471,11 @@ const de = {
 
   // Layout metadata
   metadata: {
-    title: 'Doubly | Die ADHD-App, die dir beim Anfangen hilft',
+    title: 'Doubly | Die ADHS-App, die dir beim Anfangen hilft',
     description:
-      'Kipp das Chaos per Brain Dump raus, erhalte einen klaren nächsten Schritt und nutz Verbindlichkeit, um wirklich dranzubleiben. Gemacht für ADHD-Köpfe, die Hilfe beim Anfangen brauchen, nicht nur beim Planen.',
-    keywords: ['ADHD', 'Produktivität', 'Brain Dump', 'Aufgabenverwaltung', 'Verbindlichkeit', 'Fokus'],
-    ogTitle: 'Doubly | Die ADHD-App, die dir beim Anfangen hilft',
+      'Kipp das Chaos per Brain Dump raus, erhalte einen klaren nächsten Schritt und nutz Verbindlichkeit, um wirklich dranzubleiben. Gemacht für ADHS-Köpfe, die Hilfe beim Anfangen brauchen, nicht nur beim Planen.',
+    keywords: ['ADHS', 'Produktivität', 'Brain Dump', 'Aufgabenverwaltung', 'Verbindlichkeit', 'Fokus'],
+    ogTitle: 'Doubly | Die ADHS-App, die dir beim Anfangen hilft',
     ogDescription:
       'Kipp das Chaos per Brain Dump raus, erhalte einen klaren nächsten Schritt und nutz Verbindlichkeit, um wirklich dranzubleiben.',
   },

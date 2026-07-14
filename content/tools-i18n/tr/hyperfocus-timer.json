@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "Ücretsiz Hiperfokus Zamanlayıcı + Sesli ADHD Alarmı | Doubly",
+    "description": "Ücretsiz hiperfokus zamanlayıcı: belirlediğin aralıklarla seni uyarır ve saati sesli söyler, böylece altı saatini kaptırmazsın. Kayıt yok, tarayıcıda çalışır.",
+    "ogTitle": "Ücretsiz Hiperfokus Zamanlayıcı + Sesli ADHD Alarmı",
+    "ogDescription": "Yüksek sesle konuşan yoklamalar planla; bir hiperfokus seansı bütün öğleden sonranı yemesin. Ücretsiz, kayıt yok.",
+    "twitterTitle": "Ücretsiz Hiperfokus Zamanlayıcı + Sesli ADHD Alarmı",
+    "twitterDescription": "Sabit aralıklarla yüksek sesle konuşan yoklamalar. Ücretsiz, kayıt yok."
+  },
+  "h1": "Ücretsiz hiperfokus zamanlayıcı",
+  "breadcrumbLabel": "Hiperfokus Zamanlayıcı",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "answerCapsule": "**Hiperfokus zamanlayıcı, varsayılan olarak her 20 ila 45 dakikada bir tekrarlanan yoklamalar planlar; böylece ADHD tarzı bir odak tüneli gününün altı saatini sessizce yutamaz.** Bu ücretsiz tarayıcı sürümü bir ses çalar, istersen saati ve yazdığın görevi sesli söyler, hâlâ o işte misin diye sorar. Belirlediğin en uzun seans süresine gelindiğinde ise ayrı bir kesin bitiş uyarısı bir kez çalar. Kayıt yok, kurulum yok, ayarların cihazından çıkmaz.",
+  "intro": "Hiperfokus, ADHD'nin az konuşulan yarısı. Dışarıdan üretken görünen yarısı; oysa tünelin içinde su içmeyi unutur, toplantıları kaçırır, akşam yedide \"öğleden sonra nereye gitti?\" diye kafanı kaldırırsın. Çare daha fazla odaklanmak değil. Çare, büyüyü bozup sıradaki adıma karar vermene fırsat verecek kadar güvenilir bir kesinti.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Hiperfokus zamanlayıcısı nasıl kullanılır",
+      "steps": [
+        {
+          "name": "Ne yapmaya oturduysan onu yaz",
+          "text": "Kısa tek bir satır yeter: \"vergi formları\", \"senaryo\", \"tasarım incelemesi\". İsteğe bağlı ama çok işe yarıyor. Sesli yoklama yazdığını sana geri okur; üç saatlik alakasız bir işe dönüşen o masum sekme değişimine karşı en iyi savunman bu."
+        },
+        {
+          "name": "Bir yoklama aralığı seç",
+          "text": "Varsayılan 30 dakika ve çoğu kişiye iyi gelir. Uyarıyı yok saymaya meyilliysen 20'ye çek; kısa aralıklar akışını bölüp duruyorsa 45 ya da 60'a çık."
+        },
+        {
+          "name": "Kesin bir bitiş belirle (isteğe bağlı ama tavsiye edilir)",
+          "text": "En uzun toplam seans süreni seç. Bu sınır ayrı ve daha yüksek sesli bir uyarıdır; kaç kez \"devam ediyorum\"a basmış olursan ol bir kez çalar."
+        },
+        {
+          "name": "Başlat'a bas ve çalış",
+          "text": "Yoklama zamanı geldiğinde sayfa bir ses çalar, istersen saati ve görevini sesli söyler, hâlâ o işte misin diye sorar. Devam ediyorum, Ara ver ya da Bitir'i seç."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Bu, ADHD beyinlerinde neden işe yarar",
+      "paragraphs": [
+        "ADHD çoğu zaman bir dikkat eksikliği diye anlatılır; oysa Dr. Russell Barkley gibi araştırmacılar onu daha doğru biçimde bir öz düzenleme farklılığı olarak tanımlıyor, dikkatin kendisini düzenlemek de buna dahil. Yani ADHD beyinleri sadece az dikkat vermez, aşırı dikkat de verir. Bir konu yeterince yeni, ilginç ya da uyarıcı olduğunda dikkati başka yere kaydıran o mekanizma çalışmayı bırakır; hiperfokus tam olarak budur. Tünel daralır, dışarıdaki dünya silikleşir.",
+        "İçeriden bakınca hiperfokus, akışta olmak gibi hissettirir. Dışarıdan bakınca kaçırılan öğle yemekleri, cevapsız mesajlar ve tutulmuş bir sırt. İş iyi olsa bile bedeli gerçek. Tekrarlanan, sesli bir yoklama, tünelin içindeki bir ADHD beyninin kendi başına yapamadığı \"kendini izleme\" işini dışarı çıkarmanın en az çaba isteyen yolu. Zaman körlüğüne karşı kullanılan görsel geri sayımın arkasındaki ilkenin aynısı, sadece tam ters soruna uygulanmış hâli.",
+        "Saatin sesli söylenmesi şu yüzden önemli: görsel sinyaller işin içinde eriyip gider. Saate bakarsın ama görmezsin. Ses ise başka türlü işler, özellikle de bir cümle olduğunda; çünkü beynin dil bölümü onu görmezden gelebilmek için önce anlamak zorunda kalır. ABD'nin ulusal ADHD kaynağı [CHADD](https://chadd.org/about-adhd/overview/), dışsal ipuçlarını ve yapılandırılmış zaman desteklerini ADHD'li yetişkinlere önerilen pratik stratejiler arasında sayıyor."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "faqs": [
+        {
+          "q": "Hiperfokus zamanlayıcı nedir?",
+          "a": "Hiperfokus zamanlayıcı, seni sabit aralıklarla (genellikle her 20 ila 45 dakikada bir) bölen tekrarlayan bir alarmdır; böylece derin odaklandığın seansın içine yerleşik bir \"su yüzüne çık\" kontrolü eklenmiş olur. Tek bir bloğun sonuna doğru geri saymak yerine seans boyunca tekrar tekrar çalar; ADHD tarzı hiperfokus yaşayanların asıl ihtiyacı olan da bu. Uyarı, tünel görüşünü delip geçsin diye yüksek sesli ya da konuşarak gelir."
+        },
+        {
+          "q": "Bunun pomodoro zamanlayıcısından farkı ne?",
+          "a": "Pomodoro zamanlayıcı 25 dakikalık odak bloğuyla 5 dakikalık mola arasında döner ve başlamakta zorlananlar için tasarlanmıştır. Hiperfokus zamanlayıcı tam ters sorun için: başlamak sorun değil, bırakmak sorun. Sana mola dayatmaz; sadece saati, tarihi, mesaneni ve bu işi hâlâ yapıyor olman gerekip gerekmediğini fark edecek kadar seni tünelden çekip çıkarır."
+        },
+        {
+          "q": "Saatin sesli söylenmesi neden önemli?",
+          "a": "Hiperfokus sırasında zaman duygusu tamamen kaybolur. Sesli bir saat kontrolü, saate göz atmanın işe yaramadığı yerde işe yarar; çünkü gözlerin ekrana kilitliyken bile ses sana ulaşır. \"Saat 14.45, iki saattir bununla uğraşıyorsun\" cümlesini duymak büyüyü bozar. Tek başına çalan bir sesi görmezden gelmek ise çok kolay."
+        },
+        {
+          "q": "Hangi aralığı seçmeliyim?",
+          "a": "30 dakikayla başla. Kendini uyarıyı yok sayarken ya da hemen susturuyorken bulursan 20'ye indir. Aralık seni akıştan koruyacağına akışını bölüyorsa 45 ya da 60'ı dene. Amaç, seni hâlâ güvenilir biçimde su yüzüne çıkaran en uzun aralığı bulmak. Doğru cevap yok; sadece bu hafta senin beynine uyan cevap var."
+        },
+        {
+          "q": "Kesin bitiş ne işe yarar?",
+          "a": "Seans sınırı, en uzun toplam süreye (varsayılan 2 saat) gelindiğinde çalan, daha yüksek sesli ve farklı tınlayan bir uyarıdır. Her yoklamada \"devam ediyorum\"a basıp gece yarısına kadar masa başında kalacağın durumu yakalar. Bir yoklama değil, ayrı bir sinyaldir; böylece ilkel beynin onu her zamankiyle karıştıramaz."
+        },
+        {
+          "q": "Sesli anons telefonumda çalışır mı?",
+          "a": "Tarayıcının Web Speech API'sini kullanır; modern iOS Safari, Android Chrome ve masaüstü tarayıcılarda çalışır. iOS'ta sayfanın açık kalması gerekir ve sese izin verdiğini tarayıcının anlaması için sayfaya bir kez dokunman gerekebilir. Telefonun sessizdeyse çalan ses kısılır, ama sesli anons yine de hoparlörden duyulur."
+        },
+        {
+          "q": "Sekme arka plandayken zamanlayıcı çalışmaya devam eder mi?",
+          "a": "Evet. Aralık, tarayıcıların arka plan sekmelerinde yavaşlattığı bir JavaScript sayacına değil, gerçek saate bağlı. Başka bir pencereye geçmiş olsan bile yoklama zamanında gelir. İzin verirsen sekme gizliyken masaüstü bildirimi düşer, sayfa başlığı yanıp söner ve sen görmezden geldikçe ses daha yüksek, daha sık çalar. Destekleyen cihazlarda ekranın sönmemesi için izin istenir."
+        },
+        {
+          "q": "Yoklama saati neden her turda bir iki dakika kayıyor?",
+          "a": "Her aralık bilerek yaklaşık yüzde on kaydırılıyor. Tam tamına öngörülebilir bir uyarıyı, hiperfokustaki beyin daha bilincine bile varmadan tahmin edip savuşturmayı öğrenir. Bazen 27, bazen 33 dakika: küçük ve tahmin edilemez bir kayma, bu peşin savuşturma refleksini bozar. Seans boyunca ortalama yine senin seçtiğin aralıktır."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "Sorun bırakmak değil de başlamaksa, yerleşik molalarla kısa ve sınırlı sprintler için [ADHD pomodoro zamanlayıcısını](/tools/pomodoro) dene. Okumak yerine bir bakışta anlayabileceğin tek seanslık bir geri sayım istiyorsan, [görsel zamanlayıcı](/tools/visual-timer) aynı zamanda bir zaman körlüğü saati işlevi görür. Ofisin ya da kafanın içindeki gürültü seni sürekli tünele geri çekiyorsa, altına bir [kahverengi gürültü üreteci](/tools/brown-noise) ser. [Tüm araç kütüphanesine](/tools) göz at."
+  },
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Bir zamanlayıcı seni tünelden çıkarabilir. Doubly iOS uygulaması ise önümüzdeki bir saatte ne yapacağına karar vermene yardım eder: kafandaki karmaşayı dök, net tek bir sonraki adımı öne çıkar ve bir öğleden sonrayı kaybetmenin ne demek olduğunu bilen gerçek insanlara karşı hesap verebilir kal.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly Hiperfokus Kesme Zamanlayıcısı",
+    "appDescription": "Tekrarlayan sesli yoklamalar ve isteğe bağlı kesin bitiş sınırı olan ücretsiz çevrimiçi hiperfokus zamanlayıcısı. Tünel görüşü yüzünden saatlerini kaybeden ADHD'li yetişkinler için.",
+    "howToName": "Hiperfokus zamanlayıcısı nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

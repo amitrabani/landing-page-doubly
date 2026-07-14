@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Gratis bruineruisgenerator voor ADHD-focus | Doubly",
+    "description": "Gratis bruineruisgenerator die in je browser draait. Bruin, roze en wit. Geen account, geen advertenties, met slaaptimer. Gemaakt voor ADHD-focus.",
+    "ogTitle": "Gratis bruineruisgenerator voor ADHD-focus",
+    "ogDescription": "Een gratis speler voor bruine ruis met een slaaptimer. Bruin, roze en wit. Draait offline in je browser.",
+    "twitterTitle": "Gratis bruineruisgenerator",
+    "twitterDescription": "Bruin, roze en wit. Gratis, geen account, draait in je browser."
+  },
+  "h1": "Gratis bruineruisgenerator",
+  "breadcrumbLabel": "Bruineruisgenerator",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Bruine ruis is een diep, laagfrequent geluid dat afleiding maskeert en een druk ADHD-brein iets stabiels geeft om op te landen.** Deze gratis generator voor omgevingsgeluid speelt bruin, roze en wit direct af in je browser. Geen account, geen advertenties, geen audiobestanden om te downloaden. Kies een geluid, zet het volume goed, voeg een slaaptimer toe als je wilt, en ga weer aan het werk.",
+  "intro": "De generator hierboven draait op de Web Audio API, dus het geluid wordt in realtime op je eigen apparaat gemaakt. Dat betekent geen streaming, geen buffering, en hij blijft werken als je wifi wegvalt. Probeer eerst bruin. Voelt het te zwaar? Schakel dan over naar roze. De meeste volwassenen met ADHD komen uit bij bruin.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zo gebruik je de bruineruisgenerator",
+      "steps": [
+        {
+          "name": "Kies een geluid",
+          "text": "Bruin is de diepe variant waar de meeste mensen naar zoeken. Voelt bruin te zwaar? Probeer dan roze. Wit is het helderste en het moeilijkst om te negeren."
+        },
+        {
+          "name": "Druk op play",
+          "text": "Bij de eerste tik wordt de audio-engine in je browser opgebouwd. Gun hem een halve seconde op tragere telefoons. Daarna wissel je direct tussen geluiden."
+        },
+        {
+          "name": "Vind je volume",
+          "text": "Laag genoeg dat je iemand die met een normale stem tegen je praat nog kunt horen. Moet je je stem verheffen om boven het geluid uit te komen, dan staat het te hard."
+        },
+        {
+          "name": "Zet zo nodig een slaaptimer",
+          "text": "Kies 15, 30, 60 of 90 minuten. Het geluid vervaagt aan het eind rustig, zodat je niet opschrikt. Laat hem uit als je het de hele dag wilt laten doorlopen."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Waarom bruine ruis werkt voor ADHD-breinen",
+      "paragraphs": [
+        "ADHD-breinen richten zich vanzelf op nieuwe geluiden. Een deur die dichtslaat, een telefoon die trilt, twee mensen die achter je een gesprek beginnen. Elk daarvan trekt een draadje aandacht weg van waar je mee bezig was, en die aandacht weer terughalen kost echt tijd en moeite.",
+        "Bruine ruis zorgt er niet voor dat je focust. Het haalt weg wat je focus steeds wegtrekt. Een stabiel, voorspelbaar geluid dekt de onvoorspelbare geluiden af, zodat je brein niet elke paar seconden die oriëntatiereflex afvuurt.",
+        "Er is hier ook een klein maar interessant onderzoeksresultaat. In een studie uit 2007 vonden [Söderlund, Sikström en Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) dat matige witte ruis de cognitieve prestaties verbeterde bij kinderen met aandachtsproblemen, terwijl het de prestaties van neurotypische kinderen juist licht verslechterde. Het voorgestelde mechanisme is stochastische resonantie: het idee dat een ruisrijk brein een beetje externe ruis nodig kan hebben om in zijn werkbereik te landen.",
+        "De wetenschap staat nog in de kinderschoenen, maar de ervaringsverhalen zijn luid en consistent. [CHADD](https://chadd.org/about-adhd/overview/) en soortgelijke organisaties zien zintuiglijke hulpmiddelen zoals achtergrondgeluid als iets wat je gerust kunt uitproberen. Als het jou helpt, is dat genoeg."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Veelgestelde vragen",
+      "faqs": [
+        {
+          "q": "Wat is bruine ruis?",
+          "a": "Bruine ruis is een diep, rommelend geluid met meer energie in de lage frequenties, genoemd naar de willekeurige wiskunde van de \"Brownse beweging\" die het genereert. Het klinkt als een gestage waterval of harde regen op een dak. Vergeleken met witte ruis is het donkerder en warmer, en dat vinden de meeste mensen minder scherp tijdens lange sessies."
+        },
+        {
+          "q": "Is dit een generator voor omgevingsgeluid?",
+          "a": "Ja. Bruine ruis is de populairste instelling, maar dezelfde speler genereert ook roze en wit. Drie omgevingsgeluiden in totaal, allemaal live gemaakt in je browser, zonder dat er audiobestanden worden gedownload. Kies degene die voor jouw brein naar de achtergrond verdwijnt."
+        },
+        {
+          "q": "Bruine ruis vs roze ruis vs witte ruis: welke moet ik kiezen?",
+          "a": "Witte ruis is gelijkmatig over alle frequenties en klinkt als de ruis van een tv. Roze ruis dempt de hoge frequenties een beetje, waardoor het zachter aanvoelt, als gestage regen. Bruine ruis dempt ze nog verder, waardoor het diep en aardend aanvoelt. Voelt witte ruis scherp? Probeer roze. Voelt roze nog steeds te helder? Probeer bruin. Kies wat je moeiteloos kunt negeren."
+        },
+        {
+          "q": "Is bruine ruis goed voor ADHD-focus?",
+          "a": "Sommige volwassenen met ADHD focussen beter met een stabiel achtergrondgeluid, en een studie uit 2007 van Söderlund en collega's liet zien dat matige auditieve ruis de cognitieve prestaties van kinderen met aandachtsproblemen juist verbeterde. Het waarschijnlijke mechanisme is maskering. Een stabiel geluid dekt onvoorspelbare geluiden af (praten, verkeer, een brommende koelkast), zodat je brein zich niet meer op elk nieuw geluid richt."
+        },
+        {
+          "q": "Is het veilig om de hele dag naar bruine ruis te luisteren?",
+          "a": "Ja, op een redelijk volume. Dezelfde regels voor gehoorbescherming gelden als bij muziek. Houd het volume laag genoeg om iemand die in dezelfde kamer met een normale stem praat comfortabel te kunnen horen. De CDC raadt aan om langdurige blootstelling boven 70 dB te beperken. Voelen je oren vermoeid aan of piepen ze na een sessie, dan staat het volume te hard."
+        },
+        {
+          "q": "Waarom gaat bruine ruis viraal op TikTok?",
+          "a": "Volwassenen met ADHD begonnen op TikTok te posten dat bruine ruis het constante innerlijke geratel stil maakte, vaak beschreven als \"het lawaai in mijn hoofd was weg\". Die ene observatie ging in 2022 en 2023 viraal, en een golf aan mensen probeerde het. De wetenschap is nog voorlopig, maar de ervaringsverhalen zijn sterk genoeg om het zelf uit te proberen."
+        },
+        {
+          "q": "Werkt dit offline?",
+          "a": "Ja. Het geluid wordt in je browser gegenereerd met de Web Audio API, niet gestreamd vanaf een server. Zodra de pagina is geladen, heb je geen internetverbinding meer nodig. Er wordt niets opgenomen, niets geüpload, en er zitten geen advertenties of trackers in de speler."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Gerelateerde tools",
+    "body": "Bruine ruis combineert vanzelf goed met een focustimer. Probeer de [ADHD-pomodoro-timer](/tools/pomodoro) voor gestructureerde sprints van 25 minuten, of de [visuele timer](/tools/visual-timer) als je een krimpende taartpunt wilt die ook als tijdblindheidsklok werkt. Blader door de [volledige tool-bibliotheek](/tools) of lees de [Doubly-leerbibliotheek](/learn) voor gidsen over focus, brain dumpen en weer op gang komen."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Probeer het in de app",
+    "body": "Bruine ruis helpt je om in een taak te zakken. De Doubly iOS-app helpt je überhaupt te kiezen welke taak dat wordt. Brain dump, één duidelijke volgende stap en verantwoordings-check-ins van echte mensen.",
+    "label": "Probeer het in de app"
+  },
+  "jsonld": {
+    "appName": "Doubly Bruineruisgenerator",
+    "appDescription": "Een gratis bruineruisgenerator in je browser, met roze en witte ruis. Geen account, met slaaptimer, werkt offline.",
+    "howToName": "Zo gebruik je de bruineruisgenerator",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

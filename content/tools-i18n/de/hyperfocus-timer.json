@@ -1,0 +1,107 @@
+{
+  "slug": "hyperfocus-timer",
+  "meta": {
+    "title": "ADHS-Hyperfokus-Timer: kostenloser Check-in-Alarm | Doubly",
+    "description": "Hyperfokus-Timer für ADHS: piept dich alle X Minuten an und sagt die Uhrzeit laut an, damit du keine sechs Stunden verlierst. Kostenlos, ohne Anmeldung.",
+    "ogTitle": "Kostenloser Hyperfokus-Timer + ADHS-Check-in-Alarm",
+    "ogDescription": "Plan laute, gesprochene Check-ins, damit eine Hyperfokus-Sitzung nicht deinen ganzen Nachmittag frisst. Kostenlos, ohne Anmeldung.",
+    "twitterTitle": "Kostenloser Hyperfokus-Timer + ADHS-Check-in-Alarm",
+    "twitterDescription": "Laute, gesprochene Check-ins in festen Abständen. Kostenlos, ohne Anmeldung."
+  },
+  "h1": "Kostenloser Hyperfokus-Timer",
+  "breadcrumbLabel": "Hyperfokus-Timer",
+  "breadcrumbHome": "Start",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Ein Hyperfokus-Timer plant wiederkehrende Check-ins, standardmäßig alle 20 bis 45 Minuten, damit ein ADHS-typischer Fokus-Tunnel nicht still und leise sechs Stunden deines Tages verschluckt.** Diese kostenlose Browser-Version klingelt, sagt auf Wunsch die Uhrzeit und die Aufgabe an, die du notiert hast, und fragt, ob du noch dran bist. Ein separater harter Stopp löst genau einmal aus, bei der maximalen Sitzungslänge, die du festgelegt hast. Keine Anmeldung, keine Installation, deine Einstellungen bleiben auf deinem Gerät.",
+  "intro": "Hyperfokus ist die kaum beachtete Hälfte von ADHS. Die Hälfte, die von außen produktiv aussieht, während du drinnen im Tunnel vergisst, Wasser zu trinken, Meetings verpasst und um 19 Uhr wieder auftauchst und dich fragst, wo der Nachmittag geblieben ist. Die Lösung ist nicht noch mehr Fokus. Sie ist eine verlässliche Unterbrechung, die den Bann lange genug bricht, damit du entscheiden kannst, was als Nächstes passiert.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du den Hyperfokus-Timer",
+      "steps": [
+        {
+          "name": "Benenne die Aufgabe, für die du dich hingesetzt hast",
+          "text": "Tipp eine kurze Zeile: „Steuerformulare“, „das Skript“, „Design-Review“. Das ist optional, aber empfohlen. Der gesprochene Check-in liest sie dir vor, und das ist die beste Verteidigung gegen einen Tab-Wechsel, der in drei Stunden völlig anderer Arbeit endet."
+        },
+        {
+          "name": "Wähl ein Check-in-Intervall",
+          "text": "30 Minuten sind ein sinnvoller Standard. Nimm 20, wenn du dazu neigst, den Hinweis zu ignorieren, und 45 bis 60, wenn kürzere Abstände dir den Flow zerreißen."
+        },
+        {
+          "name": "Leg einen harten Stopp fest (optional, aber empfohlen)",
+          "text": "Wähl eine maximale Gesamtdauer für die Sitzung. Dieses Limit ist ein separater, lauterer Alarm, der genau einmal auslöst, egal wie oft du „Still going“ gedrückt hast."
+        },
+        {
+          "name": "Drück auf Start und arbeite",
+          "text": "Wenn der Check-in auslöst, klingelt die Seite, sagt auf Wunsch die Uhrzeit und deine Aufgabe an und fragt, ob du noch dran bist. Wähl „Still going“ (weiter dran), „Take a break“ (Pause machen) oder „Stop“."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum das für ADHS-Gehirne funktioniert",
+      "paragraphs": [
+        "ADHS wird oft als ein Defizit an Aufmerksamkeit beschrieben, aber Forscher wie Dr. Russell Barkley fassen es treffender als einen Unterschied in der Selbstregulation, einschließlich der Regulation der Aufmerksamkeit selbst. Das heißt: ADHS-Gehirne richten ihre Aufmerksamkeit nicht nur zu wenig aus, sie richten sie manchmal auch zu stark aus. Hyperfokus passiert, wenn ein Thema neu, interessant oder anregend genug ist, dass die übliche Umschaltmechanik der Aufmerksamkeit nicht mehr auslöst. Der Tunnel wird enger, und die Welt außerhalb davon verblasst.",
+        "Von innen fühlt sich eine Hyperfokus-Sitzung wie Flow an. Von außen: ausgefallene Mittagessen, unbeantwortete Nachrichten und ein steifer Rücken. Der Preis ist echt, auch wenn die Arbeit gut ist. Ein wiederkehrender, hörbarer Check-in ist ein Weg mit wenig Aufwand, die Selbstbeobachtung nach außen zu verlagern, die ein ADHS-Gehirn im Tunnel nicht selbst leisten kann. Es ist dasselbe Prinzip wie beim visuellen Countdown gegen Zeitblindheit, nur auf den umgekehrten Fehlermodus angewendet.",
+        "Warum die gesprochene Uhrzeit den Unterschied macht: Visuelle Signale werden von der Arbeit einfach aufgesaugt. Du kannst auf eine Uhr schauen und sie trotzdem nicht sehen. Audio kommt anders an, vor allem der Klang eines ganzen Satzes, den der Sprachteil deines Gehirns erst verarbeiten muss, bevor er ihn ignorieren kann. [CHADD](https://chadd.org/about-adhd/overview/), die zentrale US-Anlaufstelle für ADHS, führt externe Hinweisreize und strukturierte Zeit-Hilfen unter den praktischen Strategien auf, die für Erwachsene mit ADHS empfohlen werden."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Was ist ein Hyperfokus-Timer?",
+          "a": "Ein Hyperfokus-Timer ist ein wiederkehrender Alarm, der dich in festen Abständen unterbricht, meist alle 20 bis 45 Minuten, damit eine tief fokussierte Sitzung einen eingebauten Moment zum Auftauchen hat. Statt auf das Ende eines einzelnen Blocks herunterzuzählen, löst er die ganze Sitzung über immer wieder neu aus, und genau das brauchen Menschen mit ADHS-typischem Hyperfokus tatsächlich. Der Hinweis ist laut oder gesprochen, damit er durch den Tunnelblick dringt."
+        },
+        {
+          "q": "Worin unterscheidet sich das von einem Pomodoro-Timer?",
+          "a": "Ein Pomodoro-Timer wechselt zwischen einem 25-minütigen Fokusblock und einer 5-minütigen Pause und ist für Menschen gebaut, denen das Anfangen schwerfällt. Ein Hyperfokus-Timer ist für das umgekehrte Problem gebaut: Anfangen klappt, Aufhören nicht. Er erzwingt keine Pause, er holt dich nur lange genug aus dem Tunnel, dass du die Uhrzeit bemerkst, das Datum, deine Blase und die Frage, ob du das hier eigentlich noch tun solltest."
+        },
+        {
+          "q": "Warum ist die Ansage der Uhrzeit so wichtig?",
+          "a": "Während einer Hyperfokus-Episode verschwindet das gefühlte Zeitempfinden. Ein gesprochener Zeit-Check wirkt dort, wo ein Blick auf die Uhr versagt, weil der Ton dich auch dann erreicht, wenn deine Augen am Bildschirm kleben. „Es ist 14:45 Uhr, du bist seit zwei Stunden dran“ zu hören, bricht den Bann. Der Klingelton allein lässt sich zu leicht abtun."
+        },
+        {
+          "q": "Welches Intervall soll ich wählen?",
+          "a": "Fang mit 30 Minuten an. Wenn du merkst, dass du das Klingeln ignorierst oder wegdrückst, geh runter auf 20. Wenn das Intervall den Flow eher zerreißt, als dich vor ihm zu schützen, probier 45 oder 60. Das Ziel ist das längste Intervall, das dich noch zuverlässig zum Luftholen hochholt. Es gibt keine richtige Antwort, nur die, die diese Woche für dein Gehirn funktioniert."
+        },
+        {
+          "q": "Wofür ist der harte Stopp da?",
+          "a": "Ein Sitzungslimit ist ein lauterer, anders klingender Alarm bei einer maximalen Gesamtdauer, standardmäßig 2 Stunden. Er fängt den Fall ab, in dem du bei jedem Check-in auf „Still going“ klickst und sonst bis Mitternacht am Schreibtisch geblieben wärst. Es ist ein eigenes Signal, kein Check-in, damit dein Reptiliengehirn es nicht mit dem üblichen verwechseln kann."
+        },
+        {
+          "q": "Funktioniert die gesprochene Ansage auf meinem Handy?",
+          "a": "Sie nutzt die Web Speech API des Browsers, die in modernem iOS Safari, Android Chrome und in Desktop-Browsern funktioniert. Auf iOS muss die Seite geöffnet bleiben, und du musst sie eventuell einmal antippen, damit der Browser weiß, dass du Audio erlaubt hast. Wenn dein Handy auf lautlos steht, bleibt der Klingelton stumm, die gesprochene Ansage kommt aber trotzdem aus dem Lautsprecher."
+        },
+        {
+          "q": "Läuft der Timer weiter, wenn der Tab im Hintergrund ist?",
+          "a": "Ja. Das Intervall hängt an der echten Uhrzeit, nicht an einem JavaScript-Zähler, den Browser in Hintergrund-Tabs drosseln. Der Check-in löst pünktlich aus, auch wenn du in ein anderes Fenster gewechselt bist. Wenn du es erlaubst, erscheint eine Desktop-Benachrichtigung, sobald der Tab im Hintergrund liegt, der Seitentitel blinkt, und der Klingelton wird lauter und häufiger, je länger du ihn ignorierst. Auf unterstützten Geräten wird zusätzlich ein Wake Lock für den Bildschirm angefordert."
+        },
+        {
+          "q": "Warum verschiebt sich die Check-in-Zeit jede Runde um ein, zwei Minuten?",
+          "a": "Jedes Intervall wird absichtlich um etwa zehn Prozent verschoben. Ein perfekt vorhersehbarer Alarm ist genau die Sorte, die ein hyperfokussiertes Gehirn zu erwarten lernt und wegdrückt, bevor es ihn bewusst registriert. Eine kleine, unvorhersehbare Verschiebung, mal 27 Minuten, mal 33, hebelt dieses vorauseilende Ignorieren aus. Im Schnitt über die Sitzung bleibt es trotzdem bei dem Intervall, das du gewählt hast."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Wenn das Problem eher das Anfangen als das Aufhören ist, probier den [ADHS-Pomodoro-Timer](/tools/pomodoro) für kurze, klar begrenzte Sprints mit eingebauten Pausen. Für einen Countdown für eine einzelne Sitzung, auf den du nur einen Blick werfen musst, statt ihn zu lesen, dient der [visuelle Timer](/tools/visual-timer) nebenbei als Uhr gegen Zeitblindheit. Wenn der Lärm des Büros oder der in deinem Kopf dich immer wieder in den Tunnel zieht, leg den [Brown-Noise-Generator](/tools/brown-noise) darunter. Stöber in der [kompletten Tool-Bibliothek](/tools)."
+  },
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Ein Timer kann dich aus dem Tunnel holen. Die Doubly-iOS-App hilft dir zu entscheiden, was du mit der nächsten Stunde anfängst: das Chaos per Brain Dump rauskippen, einen klaren nächsten Schritt sichtbar machen und verbindlich bleiben gegenüber echten Menschen, die wissen, wie es sich anfühlt, einen ganzen Nachmittag zu verlieren.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly Hyperfokus-Timer",
+    "appDescription": "Ein kostenloser Online-Hyperfokus-Timer mit wiederkehrenden gesprochenen Check-ins und einem optionalen harten Stopp-Limit. Gebaut für Erwachsene mit ADHS, die durch Tunnelblick Stunden verlieren.",
+    "howToName": "So nutzt du den Hyperfokus-Timer",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

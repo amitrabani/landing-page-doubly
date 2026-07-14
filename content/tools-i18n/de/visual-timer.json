@@ -1,0 +1,119 @@
+{
+  "slug": "visual-timer",
+  "meta": {
+    "title": "ADHS-Timer: visueller Timer gegen Zeitblindheit | Doubly",
+    "description": "ADHS-Timer und Zeitblindheits-Uhr: ein visueller Timer mit schrumpfendem Kreissegment macht Zeit sichtbar. Kostenlos, ohne Anmeldung, direkt im Browser.",
+    "ogTitle": "Visueller Timer für ADHS + Uhr gegen Zeitblindheit",
+    "ogDescription": "Ein visueller Timer mit schrumpfendem Kreissegment, der abstrakte Minuten in etwas verwandelt, das du sehen kannst. Gebaut als Uhr gegen Zeitblindheit bei ADHS.",
+    "twitterTitle": "Visueller Timer für ADHS + Uhr gegen Zeitblindheit",
+    "twitterDescription": "Ein Timer mit schrumpfendem Kreissegment, der Zeit sichtbar macht. Kostenlos, keine Anmeldung."
+  },
+  "h1": "Kostenloser visueller Timer online",
+  "breadcrumbLabel": "Visueller Timer",
+  "breadcrumbHome": "Start",
+  "breadcrumbTools": "Tools",
+  "answerCapsule": "**Ein visueller Timer ist ein Countdown, der Zeit als schrumpfendes Kreissegment zeigt, sodass du siehst, wie viel noch übrig ist, ohne Ziffern zu lesen.** Diese kostenlose Online-Version läuft in jedem Browser, zählt auch in Hintergrund-Tabs genau weiter und dient nebenbei als Uhr gegen Zeitblindheit für Erwachsene mit ADHS, deren inneres Zeitgefühl unzuverlässig ist. Wähl eine Dauer, drück auf Start und sieh zu, wie das Kreissegment verschwindet.",
+  "intro": "Digitale Uhren verlangen von dir, Zahlen zu lesen und im Kopf zu rechnen, um zu spüren, wie viel Zeit noch bleibt. Ein visueller Timer macht daraus etwas, das deine Augen ganz automatisch erledigen. Nutz ihn für Fokus-Sprints, Lernblöcke, Übergänge mit Kindern, Meetings mit weichen Deadlines oder für jeden Moment, in dem das Zeitgefühl wichtiger ist als die exakte Sekundenzahl.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "So nutzt du den visuellen Timer",
+      "steps": [
+        {
+          "name": "Wähl eine Dauer",
+          "text": "Tipp auf eine Voreinstellung oder gib deine eigene Minutenzahl ein. Wenn sich eine Aufgabe riesig anfühlt, wähl etwas Kleines, zwei oder fünf Minuten. Deine letzte Einstellung wird fürs nächste Mal gemerkt."
+        },
+        {
+          "name": "Drück auf Start",
+          "text": "Das farbige Kreissegment füllt das Zifferblatt und beginnt zu schrumpfen. Ein kurzer Blick genügt, du musst keine Zahlen lesen."
+        },
+        {
+          "name": "Arbeiten, zuschauen oder warten",
+          "text": "Nutz ihn für Fokus-Sprints, Übergänge mit Kindern, Redezeiten, Meetings oder alles, was eine weiche Deadline braucht. Ein kurzer Blick sagt dir, wie viel noch übrig ist, ohne dich aus der Aufgabe zu reißen."
+        },
+        {
+          "name": "Zurücksetzen und wiederverwenden",
+          "text": "Wenn das Kreissegment weg ist, drück auf Reset, um dieselbe Dauer erneut laufen zu lassen, oder tipp auf eine andere Voreinstellung."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Warum ein visueller Timer funktioniert",
+      "paragraphs": [
+        "Eine Digitaluhr abzulesen ist eine Aufgabe in zwei Schritten. Zuerst liest du die Ziffern, dann ziehst du sie von der Zielzeit ab, um herauszufinden, wie viel noch bleibt. Diese Subtraktion passiert im Arbeitsgedächtnis, also genau in der Ressource, die du schonen willst, wenn du überhaupt einen Timer stellst. Ein schrumpfendes Kreissegment spart dir das Rechnen. Dein visuelles System nimmt die Veränderung genauso wahr, wie es ein Glas wahrnimmt, das leer wird.",
+        "Das zählt besonders für Menschen, deren Zeitgefühl weniger präzise ist. Kinder, Erwachsene mit ADHS oder Autismus, Menschen, die eine zweite Sprache lernen, und alle in einem Moment voller Anspannung profitieren von einer analogen Darstellung. Die Klassenzimmer-Variante dieses Geräts, der physische Time Timer, wird seit Jahrzehnten in der Sonderpädagogik eingesetzt und von Ergotherapeutinnen und Ergotherapeuten zur Unterstützung bei Übergängen empfohlen."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Eine Uhr gegen Zeitblindheit bei ADHS",
+      "paragraphs": [
+        "Menschen suchen dieses Tool unter zwei verschiedenen Namen und wollen dasselbe. Einen visuellen Timer für den allgemeinen Gebrauch. Eine Uhr gegen Zeitblindheit bei ADHS. Das Zifferblatt ist identisch, und der Grund, warum es hilft, ist derselbe.",
+        "Dr. Russell Barkley, einer der meistzitierten ADHS-Forscher, beschreibt die Störung im Kern als einen Unterschied in den Hirnsystemen, die für Belohnungsaufschub, Selbstregulation und das Gefühl für zukünftige Zeit zuständig sind. Er argumentiert, dass ADHS weniger ein Problem der Aufmerksamkeit ist als eines damit, wie Zeit, Motivation und Selbstbeobachtung verarbeitet werden, nämlich anders als in Gehirnen ohne ADHS. Im Alltag heißt das: Die Zukunft fühlt sich weniger real an, Deadlines kommen plötzlich, und der Abstand zwischen „Ich habe noch massig Zeit“ und „Meine Zeit ist um“ ist kürzer, als er sein sollte.",
+        "Die Standard-Anpassung, die sich durch die klinischen Empfehlungen zieht, lautet: Zeit externalisieren. Mach das Abstrakte konkret. Ein schrumpfendes Kreissegment tut genau das, ohne irgendetwas von deinem Arbeitsgedächtnis zu verlangen. Die Uhr ist keine Heilung für Zeitblindheit, sie ist eine Prothese dafür. [CHADD](https://chadd.org/about-adhd/overview/), die zentrale US-Anlaufstelle für ADHS, führt Hilfen zum Zeitmanagement und visuelle Hinweisreize unter den praktischen Strategien auf, die für Erwachsene empfohlen werden."
+      ],
+      "steps": null,
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Was ist ein visueller Timer?",
+          "a": "Ein visueller Timer ist eine Countdown-Uhr, die Zeit als schrumpfende farbige Form zeigt, meist als Kreissegment, statt nur als Ziffern. Du siehst die verbleibende Zeit auf einen Blick, ohne im Kopf die aktuelle Uhrzeit von der Zielzeit abzuziehen. Das macht es für Kinder, neurodivergente Erwachsene und alle, die es eilig haben, leichter zu spüren, wie viel Zeit noch bleibt."
+        },
+        {
+          "q": "Was ist Zeitblindheit, und wie hilft ein visueller Timer dagegen?",
+          "a": "Zeitblindheit ist die Schwierigkeit, zu spüren, wie viel Zeit vergangen ist oder wie viel noch bleibt. Sie ist ein anerkanntes Merkmal von ADHS und hängt mit Unterschieden in den exekutiven Funktionen und im Arbeitsgedächtnis zusammen. Ein visueller Timer hilft, indem er Zeit externalisiert. Statt dass dein Gehirn die Dauer intern mitverfolgen muss, übernimmt das schrumpfende Kreissegment das für dich, und deine Augen lesen ab, wie viel noch übrig ist."
+        },
+        {
+          "q": "Für wen ist ein visueller Timer gut?",
+          "a": "Für alle, denen es schwerfällt, eine reine Digitalanzeige auf einen Blick zu erfassen. Dazu gehören Kinder, die noch nicht lesen, Schülerinnen und Schüler bei den Hausaufgaben, Erwachsene mit ADHS oder Autismus, Menschen in Meetings, die eine weiche Zeitbegrenzung brauchen, und Lehrkräfte, die ihre Klasse ihr eigenes Tempo finden lassen wollen. Das schrumpfende Kreissegment funktioniert bei einer Fünfjährigen genauso wie bei einer Fünfundvierzigjährigen."
+        },
+        {
+          "q": "Wie lange sollte ich ihn stellen, wenn ich eine Aufgabe vermeide?",
+          "a": "Fang absurd klein an. Zwei oder fünf Minuten reichen oft schon, um die Blockade zu durchbrechen, weil dein Gehirn aufhört, sich gegen das Beenden einer Aufgabe zu wehren, die es gar nicht beenden muss. Sag dir, dass du aufhörst, wenn das Kreissegment weg ist. Etwa in der Hälfte der Fälle machst du einfach weiter, in der anderen Hälfte hast du zumindest fünf Minuten geschafft, und das ist mehr als nichts."
+        },
+        {
+          "q": "Worin unterscheidet sich das von einem Pomodoro-Timer?",
+          "a": "Ein Pomodoro-Timer ist eine strukturierte 25-und-5-Routine, gemacht für längeres Durcharbeiten. Ein visueller Timer ist ein Allzweck-Countdown für jede beliebige Dauer. Nimm den Pomodoro, wenn du eine Fokus-Methode mit eingebauten Pausen willst. Nimm diesen hier, wenn du spüren musst, wie lange etwas dauert, egal ob das zwei Minuten Abwasch sind oder ein fünfundvierzigminütiges Meeting."
+        },
+        {
+          "q": "Läuft der Timer genau, wenn ich den Tab wechsle?",
+          "a": "Ja. Browser drosseln JavaScript im Hintergrund, deshalb kann ein naiv gebauter Timer in einem versteckten Tab nachgehen. Dieser hier speichert eine absolute Endzeit und liest bei jedem Tick die echte Uhrzeit neu, sodass die verbleibende Zeit auch dann stimmt, wenn der Tab stundenlang im Hintergrund war. Der Tab-Titel zeigt den Countdown ebenfalls mit an."
+        },
+        {
+          "q": "Muss ich mich anmelden oder etwas installieren?",
+          "a": "Nein. Das ganze Tool läuft lokal in deinem Browser. Kein Konto, keine E-Mail-Hürde, kein Pop-up. Deine zuletzt genutzte Dauer und deine Ton-Einstellung werden im localStorage auf deinem Gerät gespeichert, und nichts wird an einen Server gesendet."
+        }
+      ],
+      "steps": null,
+      "paragraphs": null
+    }
+  ],
+  "related": {
+    "heading": "Verwandte Tools",
+    "body": "Für strukturierte 25-und-5-Fokus-Sprints mit eingebauten Pausen probier den [ADHS-Pomodoro-Timer](/tools/pomodoro). Wenn Hintergrundgeräusche oder ein überfüllter Kopf dich immer wieder aus der Arbeit reißen, leg den [Brown-Noise-Generator](/tools/brown-noise) unter den Timer. Wenn das Problem eher darin besteht, einen ganzen Nachmittag an eine einzige Aufgabe zu verlieren, plant der [Hyperfokus-Timer](/tools/hyperfocus-timer) gesprochene Check-ins in wiederkehrenden Abständen. Stöber in der [kompletten Tool-Bibliothek](/tools) oder lies für mehr die [Doubly-Wissensbibliothek](/learn)."
+  },
+  "cta": {
+    "headline": "Probier es in der App aus",
+    "body": "Eine Uhr macht Zeit sichtbar. Die Doubly-iOS-App macht den Rest des Systems sichtbar. Kipp das Chaos per Brain Dump raus, hol dir einen klaren nächsten Schritt und bleib gegenüber echten Menschen verbindlich, die wissen, wie sich Zeitblindheit wirklich anfühlt.",
+    "label": "Probier es in der App aus"
+  },
+  "jsonld": {
+    "appName": "Doubly Visueller Timer",
+    "appDescription": "Ein kostenloser visueller Online-Timer mit schrumpfendem Kreissegment. Dient als Uhr gegen Zeitblindheit für Erwachsene mit ADHS. Browserbasiert, keine Anmeldung, handytauglich, läuft auch in Hintergrund-Tabs genau.",
+    "howToName": "So nutzt du den visuellen Timer online",
+    "collectionName": null,
+    "collectionDescription": null
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null
+}

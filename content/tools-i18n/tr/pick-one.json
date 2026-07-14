@@ -1,35 +1,35 @@
 {
   "slug": "pick-one",
   "meta": {
-    "title": "Bir Tane Seç: Bunalınca Görev Seçici | Doubly",
+    "title": "Birini Seç: Bunalınca Rastgele Görev Seçici | Doubly",
     "description": "Dağınık yapılacaklar listeni yapıştır, başlamak için tek bir iş al. En küçük, en korkutucu ya da rastgele. Ücretsiz, kayıt yok, ADHD beyinleri için.",
-    "ogTitle": "Bir Tane Seç: Bunalınca Rastgele Görev Seçici",
+    "ogTitle": "Birini Seç: Bunalınca Rastgele Görev Seçici",
     "ogDescription": "Dağınık yapılacaklar listeni yapıştır, başlamak için tek bir iş al. En küçük, en korkutucu ya da rastgele.",
-    "twitterTitle": "Bir Tane Seç: Bunalmaya Karşı Görev Seçici",
+    "twitterTitle": "Birini Seç: Bunalmaya Karşı Bir Görev Seçici",
     "twitterDescription": "Dağınık bir liste yapıştır, başlamak için tek bir iş al."
   },
-  "h1": "Bir tane seç. Sadece bir tane.",
+  "h1": "Birini seç. Sadece birini.",
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": "Araçlar",
-  "breadcrumbLabel": "Bir Tane Seç Aracı",
-  "answerCapsule": "**Bir tane seç aracı, seçme adımını ortadan kaldırır. Listeni yapıştır, bir mod seç (en küçük, en korkutucu, rastgele) ve başlamak için tek bir iş al.** On görevlik bir listenin dev, başlanamaz tek bir şey gibi göründüğü an için tasarlandı. Sunucumuzda hiçbir şey kaydedilmez.",
-  "intro": "Bütün liste imkansız hissettirdiğinde, tıkanma noktası nadiren yapmaktır. Karar vermektir. Bir tane seç, kararı aradan çıkarır ve sana bir başlangıç noktası verir. İstediğin zaman yeniden seçebilirsin.",
+  "breadcrumbLabel": "Birini Seç Aracı",
+  "answerCapsule": "**Birini seç aracı, seçme adımını ortadan kaldırır. Listeni yapıştır, bir mod seç (en küçük, en korkutucu, rastgele) ve başlamak için tek bir iş al.** On görevlik bir listenin dev ve başlanamaz tek bir şey gibi göründüğü an için tasarlandı. Sunucumuzda hiçbir şey kaydedilmez.",
+  "intro": "Bütün liste imkansız hissettirdiğinde, tıkanma noktası nadiren yapmaktır. Karar vermektir. Birini seç, kararı aradan çıkarır ve sana bir başlangıç noktası verir. İstediğin zaman yeniden seçebilirsin.",
   "sections": [
     {
       "kind": "steps",
-      "heading": "Bir tane seç aracı nasıl kullanılır",
+      "heading": "Birini seç aracı nasıl kullanılır",
       "steps": [
         {
           "name": "Listeni yapıştır",
-          "text": "Her satıra bir tane, ya da virgüllerle dağınık, ya da bir not uygulamasından kopyala-yapıştır. Araç gerisini çözer."
+          "text": "Her satıra bir tane, ya da virgüllerle dağınık halde, ya da bir not uygulamasından kopyala-yapıştır. Araç gerisini çözer."
         },
         {
           "name": "Bir mod seç",
-          "text": "Momentum için En küçük, rahatlama için En korkutucu, tam teslimiyet için Sadece bir tane seç."
+          "text": "Momentum için En küçük, rahatlama için En korkutucu, tamamen teslim olmak için Sadece birini seç."
         },
         {
-          "name": "Benim için bir tane seç'e dokun",
-          "text": "Büyük ve net tek bir madde alırsın, tek satırlık bir gerekçeyle. İşte o bir tane."
+          "name": "Benim için birini seç'e dokun",
+          "text": "Büyük ve net tek bir madde alırsın, yanında tek satırlık bir gerekçe. İşte o bir tane."
         },
         {
           "name": "Yaptım ya da bu olmadı",
@@ -43,36 +43,36 @@
       "kind": "paragraphs",
       "heading": "Bu neden ADHD beyinlerinde işe yarar",
       "paragraphs": [
-        "ADHD'li yetişkinler sık sık takılı kalmayı bir görev zor olduğu için değil, her seçenek eşit ölçüde ulaşılabilir göründüğü ve hiçbiri dikkat talep etmediği için yaşadıklarını anlatır. Araştırmacılar buna bir motivasyon eksikliği değil, önceliklendirme ve başlama etrafında bir yürütücü işlev tıkanması diyor.",
-        "Engel, seçimin kendisidir. Davranışsal ekonomistler buna seçim aşırı yüklenmesi diyor: daha çok seçenek, daha yavaş kararlar, daha çok kaçınma. Zaten her görevde bir başlama vergisi ödeyen bir ADHD beyni için maliyet katlanarak artar. Seçimi devretmek, kararı atlayıp harekete geçmeni sağlar.",
-        "[CHADD](https://chadd.org/about-adhd/overview/) gibi kuruluşlar, temel bir ADHD dostu strateji olarak seçim noktalarını azaltmayı öneriyor. En küçük modu momentuma dayanır (küçücük bir zafer bir sonrakini ateşler). En korkutucu modu rahatlamaya dayanır (ağır şey gidince gerisi daha hafif hisseder). Rastgele modu teslimiyete dayanır (herhangi bir seçim, hiç seçim yapmamaktan iyidir)."
+        "ADHD'li yetişkinler sık sık takılı kalmalarını bir görev zor olduğu için değil, her seçenek eşit ölçüde ulaşılabilir göründüğü ve hiçbiri dikkat talep etmediği için anlatır. Araştırmacılar buna bir motivasyon eksikliği değil, önceliklendirme ve başlama etrafında bir yürütücü işlev tıkanması diyor.",
+        "Engel, seçimin kendisi. Davranışsal ekonomistler bunu seçim aşırı yüklenmesi olarak tanımlıyor: daha çok seçenek, daha yavaş kararlar, daha çok kaçınma. Zaten her görev için bir başlama vergisi ödeyen bir ADHD beyninde bu maliyet katlanarak artar. Seçimi devretmek, kararı atlayıp harekete geçmeni sağlar.",
+        "[CHADD](https://chadd.org/about-adhd/overview/) gibi kuruluşlar, temel bir ADHD dostu strateji olarak seçim noktalarını azaltmayı öneriyor. En küçük modu momentuma yaslanır (küçücük bir zafer bir sonrakini ateşler). En korkutucu modu rahatlamaya yaslanır (ağır olan şey gidince gerisi daha hafif hisseder). Rastgele modu ise teslimiyete yaslanır (herhangi bir seçim, hiç seçim yapmamaktan iyidir)."
       ],
       "steps": null,
       "faqs": null
     },
     {
       "kind": "faq",
-      "heading": "Sıkça sorulan sorular",
+      "heading": "Sık sorulan sorular",
       "faqs": [
         {
-          "q": "Bir tane seç aracı hangi görevi seçeceğine nasıl karar verir?",
-          "a": "Modu sen seçersin. En küçük, en kısa maddeyi, başlaması en kolay olanı yakalar. En korkutucu, ağır olma olasılığı en yüksek olanı seçer (uzun olan ya da vergiler, doktorlar veya borçlu olduğun cevaplar gibi şeylerden bahseden). Sadece bir tane seç ise düpedüz rastgeledir. Hiçbir şey tarayıcından dışarı çıkmaz."
+          "q": "Birini seç aracı hangi görevi seçeceğine nasıl karar verir?",
+          "a": "Modu sen seçersin. En küçük, en kısa maddeyi yakalar: başlaması en kolay olanı. En korkutucu, ağır olma ihtimali en yüksek olanı seçer (uzun olan ya da vergiler, doktorlar veya borçlu olduğun cevaplar gibi şeylerden bahseden). Sadece birini seç ise düpedüz rastgeledir. Hiçbir şey tarayıcından dışarı çıkmaz."
         },
         {
-          "q": "Neden benim için seçen bir araç isteyeyim ki?",
-          "a": "Karar yorgunluğu gerçektir. Bunaldığında neye başlayacağını seçmek, görevin kendisinden daha çok enerji tüketir. Seçimi bir araca devretmek, dönüp durmayı atlayıp harekete geçmeni sağlar. Seçimi istediğin zaman geçersiz kılabilirsin."
+          "q": "Neden benim yerime seçen bir araç isteyeyim ki?",
+          "a": "Karar yorgunluğu gerçek. Bunaldığında neye başlayacağını seçmek, görevin kendisinden daha çok enerji götürür. Seçimi bir araca devretmek, kafanda dönüp durmayı atlayıp harekete geçmeni sağlar. Seçimi istediğin zaman geçersiz kılabilirsin."
         },
         {
           "q": "Bu ADHD için faydalı mı?",
-          "a": "Evet. ADHD beyinleri genellikle yapma adımında değil, seçme adımında takılır. Seçimi ortadan kaldırmak ve \"bununla başla\" denmesi, yaygın bir takılma noktasını aşar. Bu, \"tek bir sonraki adım\" deseninin arkasındaki mantığın aynısı."
+          "a": "Evet. ADHD beyinleri çoğu zaman yapma adımında değil, seçme adımında takılır. Seçimi ortadan kaldırmak ve sana \"bununla başla\" denmesi, çok yaygın bir takılma noktasını aşar. Bu, \"tek bir sonraki adım\" yaklaşımının arkasındaki mantığın aynısı."
         },
         {
           "q": "Listemi kaydediyor mu?",
-          "a": "Listen, localStorage aracılığıyla tarayıcında kalır. Hiçbir sunucuya hiçbir şey gönderilmez. Alanı temizle, depolama da onunla birlikte temizlenir. Hesap yok."
+          "a": "Listen, localStorage aracılığıyla tarayıcında kalır. Hiçbir sunucuya hiçbir şey gönderilmez. Alanı temizlediğinde depolama da onunla birlikte temizlenir. Hesap yok."
         },
         {
           "q": "En küçük ile En korkutucu arasındaki fark nedir?",
-          "a": "En küçük, momentumla ilgilidir. Küçücük bir zaferi devir, sonra dalgaya kapıl. En korkutucu, rahatlamayla ilgilidir. Ağır şeyi sırtından at, böylece listenin geri kalanı daha hafif hisseder. İkisi de geçerli, bugün hangisine ihtiyacın varsa onu kullan."
+          "a": "En küçük, momentumla ilgilidir. Küçücük bir zaferi devir, sonra dalgaya kapıl. En korkutucu ise rahatlamayla ilgilidir. Ağır şeyi sırtından at, böylece listenin geri kalanı daha hafif hisseder. İkisi de geçerli; bugün hangisine ihtiyacın varsa onu kullan."
         }
       ],
       "steps": null,
@@ -81,20 +81,20 @@
   ],
   "related": {
     "heading": "İlgili araçlar",
-    "body": "Bir tane seçtikten sonra liste hâlâ çok uzun geliyorsa, önce zihinsel karmaşayı temizlemek için bir [beyin boşaltma](/tools/brain-dump) yap. Kör seçim yapmak yerine listeyi önem ve aciliyete göre sıralamak için [ADHD Eisenhower matrisi](/tools/eisenhower-matrix) aracını aç. Seçimini yaptın mı? [görev bölme aracı](/tools/task-splitter) ile onu yapılabilir adımlara böl, sonra [ADHD pomodoro zamanlayıcısı](/tools/pomodoro) ile ilk adım için belirli bir süre ayır. [Tüm araç kütüphanesine](/tools) göz at."
+    "body": "Birini seçtikten sonra liste hâlâ çok uzun geliyorsa, önce zihinsel karmaşayı temizlemek için bir [beyin boşaltma](/tools/brain-dump) yap. Listeyi körlemesine seçmek yerine önem ve aciliyete göre sıralamak için [ADHD Eisenhower matrisini](/tools/eisenhower-matrix) aç. Seçimini yaptın mı? [görev bölme aracıyla](/tools/task-splitter) onu yapılabilir adımlara böl, sonra [ADHD pomodoro zamanlayıcısıyla](/tools/pomodoro) ilk adım için bir zaman kutusu ayır. [Tüm araç kütüphanesine](/tools) göz at."
   },
   "cards": null,
   "openTool": null,
   "comingSoon": null,
   "cta": {
     "headline": "Uygulamada dene",
-    "body": "Web aracı, yapıştırılan bir listeden bir görev seçer. Doubly iOS uygulaması ise şimdiye kadar boşalttığın her listeyi hatırlar, bağlama ve geçmişe göre bir sonraki yapman gereken tek görevi öne çıkarır ve gerçek insanlarla hesap verebilirlik yoklamaları kullanır, böylece seçilen görev gerçekten yapılır.",
+    "body": "Web aracı, yapıştırdığın listeden tek bir görev seçer. Doubly iOS uygulaması ise şimdiye kadar döktüğün her listeyi hatırlar, bağlama ve geçmişe bakarak sıradaki yapman gereken tek görevi öne çıkarır ve gerçek insanlarla hesap verebilirlik yoklamaları kullanır; böylece seçilen görev gerçekten yapılır.",
     "label": "Uygulamada dene"
   },
   "jsonld": {
-    "appName": "Doubly Bir Tane Seç Görev Aracı",
-    "appDescription": "Ücretsiz bir çevrimiçi görev seçici. Dağınık bir yapılacaklar listesi yapıştır, araç en küçük, en korkutucu ya da rastgeleye göre başlamak için tek bir iş seçer. ADHD beyinleri için tasarlandı.",
-    "howToName": "Bir tane seç aracı nasıl kullanılır",
+    "appName": "Doubly Birini Seç Görev Aracı",
+    "appDescription": "Ücretsiz çevrimiçi bir görev seçici. Dağınık bir yapılacaklar listesi yapıştır, araç en küçük, en korkutucu ya da rastgele ölçütüne göre başlaman için tek bir iş seçsin. ADHD beyinleri için tasarlandı.",
+    "howToName": "Birini seç aracı nasıl kullanılır",
     "collectionName": null,
     "collectionDescription": null
   }

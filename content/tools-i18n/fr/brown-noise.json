@@ -1,0 +1,104 @@
+{
+  "slug": "brown-noise",
+  "meta": {
+    "title": "Générateur de bruit brun gratuit - focus TDAH | Doubly",
+    "description": "Générateur de bruit brun gratuit, dans ton navigateur. Brun, rose et blanc. Sans inscription, sans pub, minuteur de veille inclus. Conçu pour le focus TDAH.",
+    "ogTitle": "Générateur de bruit brun gratuit pour le focus TDAH",
+    "ogDescription": "Un lecteur de bruit brun gratuit avec minuteur de veille. Brun, rose et blanc. Fonctionne hors ligne dans ton navigateur.",
+    "twitterTitle": "Générateur de bruit brun gratuit",
+    "twitterDescription": "Brun, rose et blanc. Gratuit, sans inscription, dans ton navigateur."
+  },
+  "h1": "Générateur de bruit brun gratuit",
+  "breadcrumbLabel": "Générateur de bruit brun",
+  "breadcrumbHome": "Accueil",
+  "breadcrumbTools": "Outils",
+  "answerCapsule": "**Le bruit brun est un son grave et profond, riche en basses fréquences, qui masque les distractions et donne à un cerveau TDAH agité quelque chose de stable sur quoi se poser.** Ce générateur de sons d’ambiance gratuit joue du brun, du rose et du blanc directement dans ton navigateur. Sans inscription, sans pub, sans fichier audio à télécharger. Choisis un son, règle le volume, ajoute un minuteur de veille si tu veux, et retourne bosser.",
+  "intro": "Le générateur ci-dessus tourne avec la Web Audio API : le son est créé sur ton appareil, en temps réel. Ça veut dire pas de streaming, pas de mise en mémoire tampon, et ça continue de marcher si ton wifi lâche. Commence par le brun. Si tu le trouves trop lourd, passe au rose. La plupart des adultes TDAH finissent sur le brun.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Comment utiliser le générateur de bruit brun",
+      "steps": [
+        {
+          "name": "Choisis un son",
+          "text": "Le brun, c’est le son grave que la plupart des gens viennent chercher. S’il te paraît trop lourd, essaie le rose. Le blanc est le plus clair, et le plus difficile à ignorer."
+        },
+        {
+          "name": "Appuie sur Lecture",
+          "text": "Le premier appui crée le moteur audio dans ton navigateur. Laisse-lui une demi-seconde sur les téléphones les plus lents. Ensuite, changer de son est instantané."
+        },
+        {
+          "name": "Trouve ton volume",
+          "text": "Assez bas pour que tu entendes encore quelqu’un te parler d’une voix normale. Si tu dois hausser la voix pour te faire entendre par-dessus, c’est trop fort."
+        },
+        {
+          "name": "Règle un minuteur de veille si besoin",
+          "text": "Choisis 15, 30, 60 ou 90 minutes. Le son s’estompe doucement à la fin pour ne pas te faire sursauter. Laisse-le désactivé si tu veux qu’il tourne toute la journée."
+        }
+      ]
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Pourquoi le bruit brun marche pour les cerveaux TDAH",
+      "paragraphs": [
+        "Les cerveaux TDAH ont tendance à s’orienter vers les sons nouveaux. Une porte qui claque, un téléphone qui vibre, deux personnes qui lancent une conversation derrière toi. Chacun tire un fil de ton attention loin de ce que tu étais en train de faire, et le ramener coûte du temps et de l’énergie, pour de vrai.",
+        "Le bruit brun ne te rend pas concentré. Il enlève ce qui n’arrête pas d’arracher ton attention. Un son stable et prévisible recouvre les sons imprévisibles, et ton cerveau arrête de déclencher son réflexe d’orientation toutes les quelques secondes.",
+        "Il y a aussi ici un résultat de recherche modeste, mais intéressant. Dans une étude de 2007, [Söderlund, Sikström et Smart](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2007.01749.x) ont montré qu’un bruit blanc modéré améliorait les performances cognitives d’enfants ayant des difficultés d’attention, alors qu’il dégradait légèrement celles d’enfants neurotypiques. Le mécanisme proposé est la résonance stochastique : l’idée qu’un cerveau « bruyant » a peut-être besoin d’un peu de bruit externe pour atterrir dans sa plage de fonctionnement.",
+        "La science n’en est qu’à ses débuts, mais les témoignages de vécu sont nombreux et concordants. [CHADD](https://chadd.org/about-adhd/overview/) et des organismes similaires considèrent les outils sensoriels comme le son de fond comme une piste raisonnable à essayer. Si ça t’aide, ça suffit."
+      ]
+    },
+    {
+      "kind": "faq",
+      "heading": "Questions fréquentes",
+      "faqs": [
+        {
+          "q": "Qu’est-ce que le bruit brun ?",
+          "a": "Le bruit brun est un son grave et sourd, avec plus d’énergie dans les basses fréquences. Il tient son nom du modèle mathématique aléatoire du « mouvement brownien » qui le génère. Ça ressemble à une cascade continue ou à une grosse pluie sur un toit. Comparé au bruit blanc, il est plus sombre et plus chaud, ce que la plupart des gens trouvent moins agressif sur de longues sessions."
+        },
+        {
+          "q": "Est-ce que c’est un générateur de sons d’ambiance ?",
+          "a": "Oui. Le bruit brun est le réglage le plus populaire, mais le même lecteur génère aussi du rose et du blanc. Trois sons d’ambiance en tout, tous créés en direct dans ton navigateur, sans aucun fichier audio téléchargé. Choisis celui qui se fond dans le décor pour ton cerveau."
+        },
+        {
+          "q": "Bruit brun, bruit rose ou bruit blanc : lequel choisir ?",
+          "a": "Le bruit blanc est réparti également sur toutes les fréquences et ressemble au souffle d’une télé. Le bruit rose atténue un peu les hautes fréquences, ce qui le rend plus doux, comme une pluie régulière. Le bruit brun les atténue encore plus, d’où cette sensation grave qui t’ancre. Si le bruit blanc te paraît agressif, essaie le rose. Si le rose te paraît encore trop clair, essaie le brun. Choisis celui que tu peux ignorer sans effort."
+        },
+        {
+          "q": "Le bruit brun est-il bon pour le focus TDAH ?",
+          "a": "Certains adultes TDAH se concentrent mieux avec un fond sonore stable, et une étude de 2007 de Söderlund et ses collègues a montré qu’un bruit auditif modéré améliorait bel et bien les performances cognitives d’enfants ayant des difficultés d’attention. Le mécanisme le plus probable, c’est le masquage. Un son stable recouvre les bruits imprévisibles (des voix, la circulation, un frigo qui ronronne), du coup ton cerveau arrête de s’orienter vers chaque nouveau son."
+        },
+        {
+          "q": "Est-ce sans danger d’écouter du bruit brun toute la journée ?",
+          "a": "Oui, à un volume raisonnable. Les mêmes règles de sécurité auditive s’appliquent que pour la musique. Garde le volume assez bas pour entendre confortablement quelqu’un parler d’une voix normale dans la même pièce. Le CDC recommande de limiter les expositions prolongées au-dessus de 70 dB. Si tes oreilles sont fatiguées ou sifflent après une session, c’est que le volume est trop élevé."
+        },
+        {
+          "q": "Pourquoi le bruit brun cartonne-t-il sur TikTok ?",
+          "a": "Des adultes TDAH sur TikTok se sont mis à raconter que le bruit brun faisait taire le bavardage mental permanent, souvent décrit comme ça : « le bruit dans ma tête a disparu ». Cette seule observation est devenue virale en 2022 et 2023, et une vague de gens l’ont essayé. La science n’en est qu’à ses débuts, mais les témoignages de vécu sont assez forts pour que ça vaille le coup d’essayer par toi-même."
+        },
+        {
+          "q": "Est-ce que ça marche hors ligne ?",
+          "a": "Oui. Le son est généré dans ton navigateur avec la Web Audio API, il n’est pas diffusé depuis un serveur. Une fois la page chargée, aucune connexion internet n’est nécessaire. Rien n’est enregistré, rien n’est envoyé, et il n’y a ni pub ni traqueur dans le lecteur."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "Outils associés",
+    "body": "Le bruit brun se marie naturellement avec un minuteur de focus. Essaie le [minuteur Pomodoro TDAH](/tools/pomodoro) pour des sprints structurés de 25 minutes, ou le [minuteur visuel](/tools/visual-timer) si tu veux une part de cadran qui se réduit et qui fait aussi office d’horloge de cécité temporelle. Parcours la [bibliothèque complète d’outils](/tools) ou lis la [bibliothèque de ressources Doubly](/learn) pour des guides sur le focus, le vide-cerveau et comment te débloquer."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Essaie-le dans l’appli",
+    "body": "Le bruit brun t’aide à te poser sur une tâche. L’appli Doubly sur iOS t’aide à choisir la tâche en premier lieu. Vide-cerveau, une seule prochaine étape claire, et des points de suivi de responsabilisation avec de vraies personnes.",
+    "label": "Essaie-le dans l’appli"
+  },
+  "jsonld": {
+    "appName": "Générateur de bruit brun Doubly",
+    "appDescription": "Un générateur de bruit brun gratuit dans le navigateur, avec du rose et du blanc. Sans inscription, minuteur de veille inclus, fonctionne hors ligne.",
+    "howToName": "Comment utiliser le générateur de bruit brun",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

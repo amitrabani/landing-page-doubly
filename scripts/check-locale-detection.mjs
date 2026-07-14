@@ -95,8 +95,112 @@ for (const file of ['src/proxy.ts', 'src/i18n/pickLocale.ts']) {
   }
 }
 
+// --- Where a matched request is sent -------------------------------------
+//
+// The proxy redirects the page the visitor actually landed on, not just "/".
+// It delegates "does this page exist in this locale?" to localizedHref, which
+// reads the generated tools manifest. Two failure modes matter, and both are
+// checked here:
+//   1. a redirect into a locale that has NO pack for that page would 404;
+//   2. an English-only page (/privacy, /terms, /support, /r/{id}) must never be
+//      rewritten into a locale prefix.
+
+const manifest = loadModule('src/i18n/toolsManifest.ts', () => ({}));
+const { localizedHref } = loadModule('src/i18n/links.ts', (id) => {
+  if (id === './config') return config;
+  if (id === './toolsManifest') return manifest;
+  throw new Error(`unexpected import: ${id}`);
+});
+
+const { defaultLocale, locales } = config;
+const nonDefault = locales.filter((l) => l !== defaultLocale);
+
+// The matcher must cover the localized surfaces and nothing else.
+const proxySrc = fs.readFileSync(path.join(ROOT, 'src/proxy.ts'), 'utf8');
+const matcherBlock = proxySrc.match(/matcher:\s*\[([^\]]*)\]/)?.[1] ?? '';
+const matcher = [...matcherBlock.matchAll(/'([^']+)'/g)].map((m) => m[1]);
+for (const expected of ['/', '/tools', '/tools/:slug', '/learn']) {
+  if (!matcher.includes(expected)) {
+    failed++;
+    console.error(`✗ proxy matcher is missing ${JSON.stringify(expected)} — that page never gets localized`);
+  }
+}
+for (const forbidden of ['/privacy', '/terms', '/support']) {
+  if (matcher.some((m) => m.startsWith(forbidden))) {
+    failed++;
+    console.error(`✗ proxy matcher includes ${JSON.stringify(forbidden)} — that page is English-only`);
+  }
+}
+
+// English never redirects, whatever the path.
+for (const p of ['/', '/tools', '/tools/pomodoro', '/learn', '/privacy']) {
+  const got = localizedHref(defaultLocale, p);
+  if (got !== p) {
+    failed++;
+    console.error(`✗ localizedHref('${defaultLocale}', '${p}') -> '${got}' (English must never be rewritten)`);
+  }
+}
+
+// The homepage is translated everywhere, so it always redirects.
+for (const locale of nonDefault) {
+  const got = localizedHref(locale, '/');
+  if (got !== `/${locale}`) {
+    failed++;
+    console.error(`✗ localizedHref('${locale}', '/') -> '${got}' (expected '/${locale}')`);
+  }
+}
+
+// English-only pages are never rewritten into a locale prefix (they would 404).
+for (const locale of nonDefault) {
+  for (const p of ['/privacy', '/terms', '/support']) {
+    const got = localizedHref(locale, p);
+    if (got !== p) {
+      failed++;
+      console.error(`✗ localizedHref('${locale}', '${p}') -> '${got}' (English-only page must not be localized)`);
+    }
+  }
+}
+
+// A tool/hub/learn path is sent into the locale ONLY when that locale has the
+// pack; otherwise it must stay on the English page rather than 404.
+let redirected = 0;
+let keptEnglish = 0;
+const allSlugs = [
+  ...new Set(Object.values(manifest.localizedToolSlugs ?? {}).flat()),
+  'a-slug-that-does-not-exist',
+];
+for (const locale of nonDefault) {
+  const have = manifest.localizedToolSlugs?.[locale] ?? [];
+  for (const slug of allSlugs) {
+    const got = localizedHref(locale, `/tools/${slug}`);
+    const expected = have.includes(slug) ? `/${locale}/tools/${slug}` : `/tools/${slug}`;
+    if (got !== expected) {
+      failed++;
+      console.error(`✗ localizedHref('${locale}', '/tools/${slug}') -> '${got}' (expected '${expected}')`);
+    } else if (have.includes(slug)) redirected++;
+    else keptEnglish++;
+  }
+
+  for (const [p, list] of [
+    ['/tools', manifest.hubLocales ?? []],
+    ['/learn', manifest.learnLocales ?? []],
+  ]) {
+    const got = localizedHref(locale, p);
+    const expected = list.includes(locale) ? `/${locale}${p}` : p;
+    if (got !== expected) {
+      failed++;
+      console.error(`✗ localizedHref('${locale}', '${p}') -> '${got}' (expected '${expected}')`);
+    } else if (list.includes(locale)) redirected++;
+    else keptEnglish++;
+  }
+}
+
 if (failed) {
   console.error(`\nLocale-detection check FAILED (${failed} problem(s)).`);
   process.exit(1);
 }
 console.log(`\nAll ${CASES.length} cases pass: locale follows the browser language, never the country.`);
+console.log(
+  `Redirect targets: ${redirected} localized page(s) redirect into their locale, ` +
+    `${keptEnglish} untranslated page(s) correctly stay on English (no 404).`,
+);

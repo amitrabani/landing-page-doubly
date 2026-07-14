@@ -13,7 +13,7 @@
   "breadcrumbTools": "Outils",
   "breadcrumbLabel": "Outil Choisis-en une",
   "answerCapsule": "**Un outil « choisis-en une » supprime l’étape du choix. Colle ta liste, choisis un mode (la plus petite, la plus intimidante, au hasard) et obtiens une seule chose par où commencer.** Il est fait pour le moment où une liste de dix tâches se lit comme un seul bloc géant impossible à commencer. Rien n’est enregistré sur notre serveur.",
-  "intro": "Quand la liste entière paraît impossible, le point de blocage, c’est rarement l’action. C’est la décision. Choisis-en une élimine la décision et te tend un point de départ. Tu peux toujours en choisir une autre.",
+  "intro": "Quand la liste entière paraît impossible, le point de blocage, c’est rarement l’action. C’est la décision. « Choisis-en une » supprime la décision et te tend un point de départ. Tu peux toujours en choisir une autre.",
   "sections": [
     {
       "kind": "steps",
@@ -25,7 +25,7 @@
         },
         {
           "name": "Choisis un mode",
-          "text": "La plus petite pour l’élan, La plus intimidante pour le soulagement, Au hasard pour tout lâcher."
+          "text": "La plus petite pour l’élan, La plus intimidante pour le soulagement, Choisis-en une au hasard pour tout lâcher."
         },
         {
           "name": "Appuie sur Choisis-en une pour moi",
@@ -56,7 +56,7 @@
       "faqs": [
         {
           "q": "Comment l’outil choisis-en une décide-t-il quelle tâche choisir ?",
-          "a": "C’est toi qui choisis le mode. La plus petite attrape l’élément le plus court, le plus facile à commencer. La plus intimidante choisit celui qui a le plus de chances d’être lourd (long, ou qui évoque des choses comme les impôts, les médecins ou les réponses que tu dois). Au hasard, c’est purement aléatoire. Rien ne quitte ton navigateur."
+          "a": "C’est toi qui choisis le mode. La plus petite attrape l’élément le plus court, le plus facile à commencer. La plus intimidante choisit celui qui a le plus de chances d’être lourd (long, ou qui évoque des choses comme les impôts, les médecins ou les réponses que tu dois). Choisis-en une au hasard, c’est purement aléatoire. Rien ne quitte ton navigateur."
         },
         {
           "q": "Pourquoi voudrais-je qu’un outil choisisse à ma place ?",
@@ -68,7 +68,7 @@
         },
         {
           "q": "Est-ce que l’outil enregistre ma liste ?",
-          "a": "Ta liste reste dans ton navigateur via le localStorage. Rien n’est envoyé à un serveur. Vide le champ et le stockage se vide avec lui. Il n’y a pas de compte."
+          "a": "Ta liste reste dans ton navigateur, via le localStorage. Rien n’est envoyé à un serveur. Vide le champ et le stockage se vide avec lui. Il n’y a pas de compte."
         },
         {
           "q": "Quelle est la différence entre La plus petite et La plus intimidante ?",

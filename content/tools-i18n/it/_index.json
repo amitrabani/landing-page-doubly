@@ -1,0 +1,86 @@
+{
+  "slug": "_index",
+  "meta": {
+    "title": "Strumenti ADHD gratuiti per iniziare davvero | Doubly",
+    "description": "Strumenti ADHD gratuiti, senza registrazione: timer pomodoro, svuota-cervello e altro. Pensati per il momento in cui devi iniziare, non solo pianificare.",
+    "ogTitle": "Strumenti ADHD gratuiti per iniziare davvero",
+    "ogDescription": "Niente registrazione. Niente popup. Strumenti gratuiti per menti ADHD, dal team che ha creato l’app Doubly.",
+    "twitterTitle": "Strumenti ADHD gratuiti per iniziare davvero",
+    "twitterDescription": "Niente registrazione. Niente popup. Strumenti gratuiti per menti ADHD."
+  },
+  "h1": "Strumenti ADHD gratuiti per iniziare davvero",
+  "breadcrumbLabel": "Strumenti",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Strumenti gratuiti, senza registrazione, pensati per le menti ADHD. Fatti per il momento in cui ti senti sopraffatto, non per quello in cui sei pronto a pianificare. Li apri dal browser. I progressi restano salvati. Puoi mollare quando vuoi.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "Strumenti disponibili",
+      "paragraphs": null
+    }
+  ],
+  "related": null,
+  "cards": [
+    {
+      "slug": "task-splitter",
+      "title": "Strumento per scomporre le attività",
+      "description": "Scrivi un’attività che non riesci a iniziare. L’IA la divide in piccoli passi fattibili con stime di tempo. Fatto per le menti ADHD."
+    },
+    {
+      "slug": "brain-dump",
+      "title": "Strumento svuota-cervello",
+      "description": "Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione, niente viene salvato."
+    },
+    {
+      "slug": "pick-one",
+      "title": "Strumento «scegline una»",
+      "description": "Incolla la tua lista disordinata e ottieni una cosa sola da cui partire. La più piccola, la più spaventosa o a caso. Fatto per quando dieci attività sembrano un unico blocco impossibile da iniziare."
+    },
+    {
+      "slug": "eisenhower-matrix",
+      "title": "Matrice di Eisenhower (edizione ADHD)",
+      "description": "Trascina le attività in quadranti come «noioso ma importante», al posto delle etichette da manuale. La matrice che finalmente si adatta a una mente ADHD. Si salva in locale."
+    },
+    {
+      "slug": "pomodoro",
+      "title": "Timer Pomodoro per l’ADHD",
+      "description": "25 minuti di lavoro, 5 di pausa: il metodo di concentrazione che finalmente si adatta a una mente ADHD. Gratis, senza registrazione, funziona offline."
+    },
+    {
+      "slug": "visual-timer",
+      "title": "Timer visivo / orologio per la cecità temporale",
+      "description": "Uno spicchio che si riduce: vedi il tempo che passa invece di leggere dei numeri. Funziona anche come orologio per la cecità temporale negli adulti con ADHD."
+    },
+    {
+      "slug": "brown-noise",
+      "title": "Generatore di suoni ambientali",
+      "description": "Generatore di suoni ambientali gratuito, direttamente nel browser. Rumore marrone, rosa e bianco. Un sottofondo costante per calmare una mente ADHD sempre accesa. Con timer di spegnimento, funziona offline."
+    },
+    {
+      "slug": "body-doubling-room",
+      "title": "Stanza di body doubling",
+      "description": "Stanza di concentrazione gratuita per due. Condividi un link e lavorate fianco a fianco in video peer-to-peer, con un timer condiviso. Senza registrazione, niente da installare."
+    },
+    {
+      "slug": "hyperfocus-timer",
+      "title": "Timer per interrompere l’iperfocus",
+      "description": "Ogni X minuti una voce ti richiama, più un limite massimo facoltativo, così una sessione di iperfocus ADHD non si mangia tutto il pomeriggio."
+    }
+  ],
+  "openTool": "Apri lo strumento",
+  "comingSoon": "In arrivo",
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "Gli strumenti web ti aiutano a iniziare una singola attività. L’app Doubly per iOS ti aiuta ad andare avanti: svuota-cervello, un unico passo chiaro e controlli di responsabilità da parte di persone reali.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": "Strumenti ADHD gratuiti per iniziare davvero",
+    "collectionDescription": "Una raccolta in crescita di strumenti gratuiti e senza registrazione, pensati per le menti ADHD dal team che ha creato l’app Doubly."
+  }
+}

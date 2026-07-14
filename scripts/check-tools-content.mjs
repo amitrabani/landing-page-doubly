@@ -16,6 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { compare } from './lib/pack-rules.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = path.join(ROOT, 'content', 'tools-i18n');
@@ -28,79 +29,6 @@ function readPack(locale, slug) {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
   } catch (e) {
     return { __parseError: e.message };
-  }
-}
-
-function linkHrefs(str) {
-  const hrefs = [];
-  const re = /\[[^\]]*\]\(([^)\s]+)\)/g;
-  let m;
-  while ((m = re.exec(str)) !== null) hrefs.push(m[1]);
-  return hrefs;
-}
-
-// Walk two parallel values; collect structural + link + emptiness problems.
-function compare(en, loc, trail, problems, locale) {
-  const kind = (v) =>
-    v === null ? 'null' : Array.isArray(v) ? 'array' : typeof v;
-  if (kind(en) !== kind(loc)) {
-    problems.push(`${trail}: expected ${kind(en)}, got ${kind(loc)}`);
-    return;
-  }
-  if (en === null) return;
-  if (Array.isArray(en)) {
-    if (en.length !== loc.length) {
-      problems.push(`${trail}: array length ${loc.length} != en's ${en.length}`);
-    }
-    const n = Math.min(en.length, loc.length);
-    for (let i = 0; i < n; i++) compare(en[i], loc[i], `${trail}[${i}]`, problems, locale);
-    return;
-  }
-  if (typeof en === 'object') {
-    // Treat a null-valued key as equivalent to an absent one. The section
-    // objects are a discriminated union: a `steps` section legitimately carries
-    // only `steps`, and whether the unused `paragraphs`/`faqs` are `null` or
-    // omitted is cosmetic (the renderer reads only the payload matching `kind`).
-    for (const key of Object.keys(en)) {
-      if (!(key in loc)) {
-        if (en[key] !== null) problems.push(`${trail}.${key}: MISSING`);
-        continue;
-      }
-      if (en[key] === null && loc[key] === null) continue;
-      compare(en[key], loc[key], `${trail}.${key}`, problems, locale);
-    }
-    for (const key of Object.keys(loc)) {
-      if (!(key in en) && loc[key] !== null) {
-        problems.push(`${trail}.${key}: EXTRA (not in en)`);
-      }
-    }
-    return;
-  }
-  if (typeof en === 'string') {
-    // slug and href-bearing identity fields must stay identical to en.
-    if (trail.endsWith('.slug')) {
-      if (en !== loc) problems.push(`${trail}: slug changed ("${loc}" != "${en}")`);
-      return;
-    }
-    if (loc.trim() === '' && en.trim() !== '') {
-      problems.push(`${trail}: empty string (en is non-empty)`);
-    }
-    const enHrefs = linkHrefs(en);
-    const locHrefs = linkHrefs(loc);
-    if (enHrefs.length !== locHrefs.length) {
-      problems.push(`${trail}: has ${locHrefs.length} link(s), en has ${enHrefs.length}`);
-    } else {
-      for (let i = 0; i < enHrefs.length; i++) {
-        if (enHrefs[i] !== locHrefs[i]) {
-          problems.push(`${trail}: link href changed ("${locHrefs[i]}" != en's "${enHrefs[i]}")`);
-        }
-      }
-    }
-    // Bold/em marker balance should survive translation.
-    const bold = (s) => (s.match(/\*\*/g) || []).length;
-    if (bold(en) !== bold(loc)) {
-      problems.push(`${trail}: ${bold(loc)} '**' markers != en's ${bold(en)}`);
-    }
   }
 }
 

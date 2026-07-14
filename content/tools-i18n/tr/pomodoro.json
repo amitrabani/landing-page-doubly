@@ -1,0 +1,101 @@
+{
+  "slug": "pomodoro",
+  "meta": {
+    "title": "Ücretsiz ADHD Pomodoro Zamanlayıcı - Kısa Sprintler | Doubly",
+    "description": "ADHD beyinleri için ücretsiz pomodoro zamanlayıcı. 25 dakikalık odak sprintleri, 5 dakikalık molalar, kayıt yok. İlerlemeni tarayıcında kaydeder.",
+    "ogTitle": "Ücretsiz ADHD Pomodoro Zamanlayıcı - Kısa Sprintlerle Odaklan",
+    "ogDescription": "Bir ADHD beyninin gerçekte nasıl çalıştığına uyan bir pomodoro zamanlayıcı. Ücretsiz, kayıt yok, tarayıcında çalışır.",
+    "twitterTitle": "Ücretsiz ADHD Pomodoro Zamanlayıcı",
+    "twitterDescription": "Bir ADHD beyninin gerçekte nasıl çalıştığına uyan bir pomodoro zamanlayıcı. Ücretsiz, kayıt yok."
+  },
+  "h1": "Ücretsiz ADHD pomodoro zamanlayıcı",
+  "breadcrumbLabel": "ADHD Pomodoro Zamanlayıcı",
+  "breadcrumbHome": "Ana Sayfa",
+  "breadcrumbTools": "Araçlar",
+  "answerCapsule": "**Bir ADHD pomodoro zamanlayıcısı, işi kısa ve sonlu sprintlere böler - 25 dakika odak, sonra 5 dakika mola - böylece takılmış ya da bunalmış bir beynin başlaması için net ve yapılabilir bir yeri olur.** Bu ücretsiz zamanlayıcı tarayıcında çalışır, ilerlemeni yerel olarak kaydeder ve sprint süresini beynine uyacak şekilde ayarlamana izin verir. Tek bir görev seç, Başlat'a bas ve zil çaldığında dur.",
+  "intro": "Pomodoro Tekniği, zamanlanmış çalışma aralıkları üzerine kurulu bir odak yöntemidir. ADHD'li yetişkinlerde işe yarar, çünkü zamanı görünür kılar: 25 dakikalık bir sprint, “bu devasa şeyi yapmam gerekiyor”u “sadece zil çalana kadar çalışmam yeterli”ye dönüştürür. Mola da anlaşmanın bir parçasıdır, hak etmen gereken bir şey değil.",
+  "sections": [
+    {
+      "kind": "steps",
+      "heading": "Zamanlayıcı nasıl kullanılır",
+      "steps": [
+        {
+          "name": "Tek bir görev seç",
+          "text": "Sadece bir tane. Bir listen varsa ona bak, şu an başlayabileceğin en küçük şeyi seç ve listeyi kaldır."
+        },
+        {
+          "name": "Başlat'a bas",
+          "text": "25 dakikalık bir odak sprinti başlar. Görevin tamamını bitirmeyi dert etme - sadece zil çalana kadar çalış."
+        },
+        {
+          "name": "5 dakikalık molayı ver",
+          "text": "Ayağa kalk. Su iç. Sosyal medyayı açma. Mola, tekniğin bir parçasıdır; atlayabileceğin bir ödül değil."
+        },
+        {
+          "name": "4 sprintten sonra uzun bir mola ver",
+          "text": "15 dakikalık bir dinlenme. Çoğu ADHD beyni, üzerinde çalıştığı şeyi asıl bu sırada pekiştirir."
+        }
+      ],
+      "paragraphs": null,
+      "faqs": null
+    },
+    {
+      "kind": "paragraphs",
+      "heading": "Bu, ADHD beyinlerinde neden işe yarar",
+      "steps": null,
+      "paragraphs": [
+        "ADHD'li yetişkinler **zaman körlüğü** yaşar: “şimdi” ile “şimdi değil” arasındaki uçurum, diyelim ki “25 dakika sonra” ile “4 saat sonra” arasındaki analog mesafeden çok daha keskin hissedilir. Russell Barkley gibi araştırmacılar bunu, ahlaki bir kusur değil, ADHD'deki yürütücü işlev farklılıklarının temel bir özelliği olarak belgeledi.",
+        "Bir pomodoro zamanlayıcısı, zamanı somutlaştırarak bu boşluğu kapatır. 25 dakikanın küçüldüğünü *görebilirsin*. Görev artık sonsuz değildir, tek bir sprint kadardır. Soyuttan sonluya geçen bu kayma, başlamayı mümkün kılan şeydir.",
+        "Zorunlu molalar da önemli. Birçok ADHD'li yetişkin, geri dönebileceğine güvenmediği için tükenene kadar kendini zorlar. İçinde mola olan bir zamanlayıcı, çakılmadan önce durmana izin verir. [CHADD](https://chadd.org/about-adhd/overview/) (Dikkat Eksikliği/Hiperaktivite Bozukluğu Olan Çocuklar ve Yetişkinler) ve benzeri kuruluşlar, ADHD kaynaklı odak zorluklarını yönetmek için yapılandırılmış aralıkları pratik bir araç olarak önerir."
+      ],
+      "faqs": null
+    },
+    {
+      "kind": "faq",
+      "heading": "Sık sorulan sorular",
+      "steps": null,
+      "paragraphs": null,
+      "faqs": [
+        {
+          "q": "Pomodoro tekniği ADHD için neden yardımcı olur?",
+          "a": "Zamanı dışsallaştırır. ADHD beyinleri çoğu zaman zaman körlüğüyle boğuşur: bir görevin sonsuza dek süreceği ya da hiç zaman almayacağı hissi. Görünür 25 dakikalık bir sprint, o soyut korkuyu sonlu ve yürünebilir bir mesafeye dönüştürür. Mola içine yerleşiktir, böylece mola verip veremeyeceğini düşünüp sarmala girmeyi bırakırsın."
+        },
+        {
+          "q": "25 dakika ADHD için doğru süre mi?",
+          "a": "Bazıları için evet, bazıları için hayır. Birçok ADHD'li yetişkin, başlamak zor geldiğinde daha kısa sprintlerle (10–15 dakika), akışa girdikten sonra ise daha uzun olanlarla (35–50 dakika) daha iyi çalışır. Kendi süreni ayarlamak için zamanlayıcının altındaki özelleştirme düğmesini kullan. Resmî Pomodoro Tekniği 25/5 kullanır ama asıl önemli olan ilkedir: çalış, sonra mola ver."
+        },
+        {
+          "q": "Bir şey kurmam ya da kayıt olmam gerekiyor mu?",
+          "a": "Hayır. Zamanlayıcı tamamen tarayıcında çalışır. İlerlemen (tamamlanan seanslar ve özel süreler) cihazında yerel olarak kaydedilir. Hiçbir şey bilgisayarından ya da telefonundan çıkmaz. Hesap yok, e-posta yok."
+        },
+        {
+          "q": "Sekme değiştirirsem zamanlayıcı çalışmaya devam eder mi?",
+          "a": "Evet. Zamanlayıcı, sekme arka plandayken duraklayan bir betiğe değil, günün gerçek saatine dayanır. Tarayıcı sekmesinin başlığı da kalan süreyle güncellenir, böylece başka bir pencerede çalışırken ona göz atabilirsin."
+        },
+        {
+          "q": "Dört pomodorodan sonra ne olur?",
+          "a": "Uzun bir molayı hak edersin - varsayılan olarak 5 dakika yerine 15 dakika. Bu daha uzun dinlenme, standart Pomodoro Tekniği'nin bir parçasıdır ve bir sonraki odak bloğundan önce beynine gerçek bir toparlanma penceresi verir."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "heading": "İlgili araçlar",
+    "body": "25 dakikalık bir sprint uzun geliyorsa [görsel zamanlayıcıyı](/tools/visual-timer) dene. Aynı küçülen dilim kadranı, istediğin herhangi bir süreyle; ayrıca asıl sorun zamanın nasıl geçtiğini kaçırmaksa bir zaman körlüğü saati işlevi de görür. Sorun tam tersiyse, yani ne zaman duracağını bilemiyorsan, sabit aralıklarla tekrarlanan sesli yoklamalar için [hiperfokus zamanlayıcısını](/tools/hyperfocus-timer) dene. Ofis gürültüsü ya da zihnindeki koşuşturma seni sprintten koparıp duruyorsa, zamanlayıcıyı [kahverengi gürültü üreteciyle](/tools/brown-noise) birlikte kullan. [Tüm araç kütüphanesine](/tools) göz at ya da odak, beyin boşaltma ve takıldığın yerden kurtulma üzerine rehberler için [Doubly öğrenme kütüphanesini](/learn) oku."
+  },
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Uygulamada dene",
+    "body": "Web zamanlayıcısı tek bir sprint boyunca odağını korumanı sağlar. Doubly iOS uygulaması ise en başta neye odaklanacağına karar vermene yardım eder: beyin boşaltma, tek bir net sonraki adım ve gerçek insanlardan gelen hesap verebilirlik yoklamaları.",
+    "label": "Uygulamada dene"
+  },
+  "jsonld": {
+    "appName": "Doubly ADHD Pomodoro Zamanlayıcı",
+    "appDescription": "ADHD beyinleri için tasarlanmış ücretsiz bir pomodoro zamanlayıcı. Özelleştirilebilir odak ve mola süreleri, tarayıcı tabanlı, kayıt yok.",
+    "howToName": "ADHD pomodoro zamanlayıcısı nasıl kullanılır",
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

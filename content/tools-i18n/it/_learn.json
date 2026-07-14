@@ -1,0 +1,43 @@
+{
+  "slug": "_learn",
+  "meta": {
+    "title": "Guide ADHD: concentrazione, tempo e strumenti | Doubly",
+    "description": "Guide ADHD in parole semplici: concentrazione, cecità temporale, svuota-cervello e come sbloccarsi. Oneste, basate sull’evidenza, senza sensi di colpa.",
+    "ogTitle": "Guide ADHD: concentrazione, tempo e strumenti",
+    "ogDescription": "Guide ADHD in parole semplici: concentrazione, cecità temporale e come sbloccarsi.",
+    "twitterTitle": "Guide ADHD: concentrazione, tempo e strumenti",
+    "twitterDescription": "Guide ADHD in parole semplici: concentrazione, cecità temporale e come sbloccarsi."
+  },
+  "h1": "Guide",
+  "breadcrumbLabel": "Guide",
+  "breadcrumbHome": "Home",
+  "breadcrumbTools": null,
+  "answerCapsule": null,
+  "intro": "Guide in parole semplici su come funziona una mente ADHD: concentrazione, percezione del tempo e la fatica di arrivare in fondo alle cose. Scritte pensando a persone vere, non agli algoritmi. Basate sull’evidenza, senza sensi di colpa e senza pretese cliniche.",
+  "sections": [
+    {
+      "kind": "paragraphs",
+      "heading": "I primi articoli escono la settimana prossima",
+      "paragraphs": [
+        "Stiamo scrivendo i primi proprio ora: cecità temporale, la scienza dello svuota-cervello e il motivo per cui i soliti consigli di produttività continuano a lasciare a piedi gli adulti con ADHD.",
+        "Nel frattempo, prova il [timer pomodoro gratuito per l’ADHD](/tools/pomodoro) oppure sfoglia la [libreria completa degli strumenti](/tools)."
+      ]
+    }
+  ],
+  "related": null,
+  "cards": null,
+  "openTool": null,
+  "comingSoon": null,
+  "cta": {
+    "headline": "Provalo nell’app",
+    "body": "L’app Doubly per iOS ti aiuta a iniziare, non solo a pianificare. Butta giù il caos che hai in testa, ricevi un unico passo chiaro da cui partire e renditi responsabile davanti a persone vere a cui importa dei tuoi progressi.",
+    "label": "Provalo nell’app"
+  },
+  "jsonld": {
+    "appName": null,
+    "appDescription": null,
+    "howToName": null,
+    "collectionName": null,
+    "collectionDescription": null
+  }
+}

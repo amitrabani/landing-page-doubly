@@ -12,8 +12,8 @@
   "breadcrumbHome": "Accueil",
   "breadcrumbTools": "Outils",
   "breadcrumbLabel": "Outil de vide-cerveau",
-  "answerCapsule": "**Un outil de vide-cerveau te permet de déposer tout ce que tu as en tête au même endroit, puis en extrait uniquement les tâches actionnables pour que tu puisses faire quelque chose au lieu de tourner en rond.** Écris librement ci-dessus. L’outil lit ton vide-cerveau, ignore les émotions et le défoulement, et renvoie une courte liste de choses à faire. Gratuit, sans inscription, rien n’est stocké.",
-  "intro": "Briser la boucle mentale « il y en a trop, je n’arrive pas à commencer, mais il y en a trop », c’est le rôle du vide-cerveau. Tu écris pour vider ta tête, pas pour planifier. Le plan ressort de l’autre côté, sous forme d’une liste sur laquelle tu peux agir.",
+  "answerCapsule": "**Un outil de vide-cerveau te permet de déposer tout ce que tu as en tête au même endroit, puis en extrait uniquement les tâches actionnables pour que tu puisses agir au lieu de tourner en rond.** Écris librement ci-dessus. L’outil lit ton vide-cerveau, ignore les émotions et le défoulement, et te renvoie une courte liste de choses à faire. Gratuit, sans inscription, rien n’est stocké.",
+  "intro": "Briser la boucle mentale « il y en a trop, je n’arrive pas à commencer, mais il y en a trop », c’est justement le rôle du vide-cerveau. Tu écris pour vider ta tête, pas pour planifier. Le plan ressort de l’autre côté, sous forme d’une liste sur laquelle tu peux agir.",
   "sections": [
     {
       "kind": "steps",
@@ -21,7 +21,7 @@
       "steps": [
         {
           "name": "Écris tout ce que tu as en tête",
-          "text": "Aucune structure, aucune correction. Tâches, inquiétudes, pensées à moitié formées, plaintes, idées. Sors tout ça de ta tête pour le mettre sur la page."
+          "text": "Aucune structure, aucune correction. Tâches, inquiétudes, pensées à moitié formées, plaintes, idées. Sors tout ça de ta tête et pose-le sur la page."
         },
         {
           "name": "Appuie sur Extraire les tâches",
@@ -43,7 +43,7 @@
       "paragraphs": [
         "Les adultes TDAH ont tendance à garder en mémoire de travail plus de choses que le cerveau n’est fait pour en contenir. Des boucles ouvertes, des tâches à moitié pensées, des choses qu’ils voulaient dire, des choses qu’ils ont failli oublier. Les chercheurs décrivent cela comme un problème de charge de la mémoire de travail, pas comme un défaut de concentration. Le cerveau est occupé, juste pas par ce que tu voudrais.",
         "Externaliser ces pensées sur une page allège la charge. Dans « Getting Things Done », David Allen appelle ça la capture des boucles ouvertes. Une fois qu’un élément est sur le papier, le cerveau arrête de le repasser en boucle. Pour le TDAH en particulier, ça peut faire la différence entre rester paralysé et réussir à commencer.",
-        "Ce que l’outil ajoute, c’est la deuxième étape : ressortir uniquement les éléments actionnables pour que tu n’aies pas à relire tout ce que tu as vidé et à décider de ce qui comptait. Des organismes comme [CHADD](https://chadd.org/about-adhd/overview/) recommandent d’externaliser ses pensées comme une stratégie de base adaptée au TDAH."
+        "Ce que l’outil ajoute, c’est la deuxième étape : ressortir uniquement les éléments actionnables, pour que tu n’aies pas à relire tout ce que tu as vidé et à décider de ce qui comptait. Des organismes comme [CHADD](https://chadd.org/about-adhd/overview/) recommandent d’externaliser ses pensées comme une stratégie de base adaptée au TDAH."
       ]
     },
     {
@@ -60,7 +60,7 @@
         },
         {
           "q": "Mon vide-cerveau est-il privé ?",
-          "a": "Oui. Ton texte est envoyé à notre IA pour en extraire les tâches, puis supprimé. Rien n’est stocké sous ton identité, rien ne quitte ton navigateur à part la requête elle-même, et il n’y a pas de compte."
+          "a": "Oui. Ton texte est envoyé à notre IA pour en extraire les tâches, puis il est supprimé. Rien n’est stocké sous ton identité, rien ne quitte ton navigateur à part la requête elle-même, et il n’y a pas de compte."
         },
         {
           "q": "Pourquoi le vide-cerveau est-il utile pour le TDAH ?",
@@ -68,18 +68,18 @@
         },
         {
           "q": "À quelle fréquence devrais-je faire un vide-cerveau ?",
-          "a": "Chaque fois que ta tête est pleine et que tu te sens bloqué. Certains le font une fois par semaine, d’autres chaque matin, d’autres seulement quand ils sont débordés. Il n’y a pas de règle. Le signal est interne : si ça peut aider, fais-le."
+          "a": "Dès que ta tête est pleine et que tu n’arrives plus à passer à l’action. Certains le font une fois par semaine, d’autres chaque matin, d’autres seulement quand ils sont débordés. Il n’y a pas de règle. Le signal est interne : si ça peut aider, fais-le."
         }
       ]
     }
   ],
   "related": {
     "heading": "Outils associés",
-    "body": "Une fois que tu as une liste de tâches, utilise [choisis-en une](/tools/pick-one) pour faire remonter une seule tâche par où commencer, ou trie toute la liste avec la [matrice d’Eisenhower TDAH](/tools/eisenhower-matrix). Envoie la plus intimidante dans l’[outil de découpage de tâches](/tools/task-splitter) pour la découper en petites étapes. Chronomètre la première étape avec le [minuteur Pomodoro TDAH](/tools/pomodoro) ou le [minuteur visuel](/tools/visual-timer). Si le plus dur, c’est de commencer seul, ouvre une [salle de body doubling](/tools/body-doubling-room) et travaille à côté de quelqu’un. Parcours la [bibliothèque complète d’outils](/tools)."
+    "body": "Une fois que tu as une liste de tâches, utilise [choisis-en une](/tools/pick-one) pour faire remonter une seule tâche par où commencer, ou trie toute la liste avec la [matrice d’Eisenhower TDAH](/tools/eisenhower-matrix). Envoie la plus intimidante dans l’[outil de découpage de tâches](/tools/task-splitter) pour la couper en petites étapes. Chronomètre la première étape avec le [minuteur Pomodoro TDAH](/tools/pomodoro) ou le [minuteur visuel](/tools/visual-timer). Si le plus dur, c’est de commencer seul, ouvre une [salle de body doubling](/tools/body-doubling-room) et travaille à côté de quelqu’un. Parcours la [bibliothèque complète d’outils](/tools)."
   },
   "cta": {
     "headline": "Essaie-le dans l’appli",
-    "body": "L’outil web libère ta tête une fois. L’appli Doubly sur iOS enregistre tes vide-cerveaux, fait remonter la seule tâche à faire ensuite et utilise des points de suivi de responsabilisation avec de vraies personnes, pour que la liste ne redevienne pas du fouillis.",
+    "body": "L’outil web libère ta tête une fois. L’appli Doubly sur iOS se souvient de tes vide-cerveaux, fait remonter la seule tâche à faire ensuite et utilise des points de suivi de responsabilisation avec de vraies personnes, pour que la liste ne redevienne pas du fouillis.",
     "label": "Essaie-le dans l’appli"
   },
   "jsonld": {
