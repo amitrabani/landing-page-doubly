@@ -479,6 +479,57 @@ const de = {
     ogDescription:
       'Kipp das Chaos per Brain Dump raus, erhalte einen klaren nächsten Schritt und nutz Verbindlichkeit, um wirklich dranzubleiben.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Tool zum Aufteilen von Aufgaben',
+      description:
+        'Tipp eine Aufgabe ein, die du nicht anfangen kannst. Die KI zerlegt sie in kleine, machbare Schritte mit Zeitschätzung. Gemacht für ADHS-Gehirne.',
+    },
+    'brain-dump': {
+      title: 'Brain-Dump-Tool',
+      description:
+        'Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung, nichts wird gespeichert.',
+    },
+    'pick-one': {
+      title: 'Pick One: eine Aufgabe wählen',
+      description:
+        'Füg deine chaotische To-do-Liste ein und bekomm eine einzige Aufgabe zum Anfangen. Die kleinste, die unangenehmste oder eine zufällige. Für den Moment, in dem sich zehn Aufgaben wie ein einziger Klotz anfühlen, den du nicht anpacken kannst.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower-Matrix (ADHS-Edition)',
+      description:
+        'Zieh Aufgaben in Quadranten wie „langweilig, aber wichtig“ statt in Lehrbuch-Kategorien. Die Matrix, die endlich zu einem ADHS-Gehirn passt. Wird lokal gespeichert.',
+    },
+    'pomodoro': {
+      title: 'ADHS-Pomodoro-Timer',
+      description:
+        '25 Minuten arbeiten, 5 Minuten Pause - die Fokusmethode, die endlich zu einem ADHS-Gehirn passt. Kostenlos, ohne Anmeldung, funktioniert offline.',
+    },
+    'visual-timer': {
+      title: 'Visueller Timer / Zeitblindheits-Uhr',
+      description:
+        'Ein schrumpfendes Tortenstück, damit du Zeit vergehen siehst, statt Ziffern zu lesen. Funktioniert auch als Zeitblindheits-Uhr für Erwachsene mit ADHS.',
+    },
+    'brown-noise': {
+      title: 'Generator für Hintergrundgeräusche',
+      description:
+        'Kostenloser Geräuschgenerator direkt im Browser. Brown Noise plus Pink und White Noise. Gleichmäßiger Klangteppich, der ein unruhiges ADHS-Gehirn beruhigt. Mit Sleep-Timer, funktioniert offline.',
+    },
+    'body-doubling-room': {
+      title: 'Body-Doubling-Raum',
+      description:
+        'Kostenloser Fokusraum für zwei. Link teilen, per Peer-to-Peer-Video nebeneinander arbeiten, gemeinsamen Timer laufen lassen. Ohne Anmeldung, ohne Installation.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hyperfokus-Timer mit Check-ins',
+      description:
+        'Wiederkehrende gesprochene Check-ins alle X Minuten, dazu ein optionaler harter Stopp, damit eine ADHS-Hyperfokus-Session nicht deinen ganzen Nachmittag auffrisst.',
+    },
+  },
+
 };
 
 export default de;

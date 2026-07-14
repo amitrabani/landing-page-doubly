@@ -478,6 +478,57 @@ const ko = {
     ogDescription:
       '혼란을 브레인 덤프하고, 명확한 다음 단계 하나를 받고, 함께하기로 실제로 끝까지 해내세요.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: '할 일 쪼개기 도구',
+      description:
+        '도저히 시작이 안 되는 할 일을 적어보세요. AI가 할 만한 작은 단계로 쪼개고 예상 시간까지 붙여줘요. ADHD 뇌에 맞춰 만들었어요.',
+    },
+    'brain-dump': {
+      title: '브레인 덤프 도구',
+      description:
+        '머릿속에 있는 걸 다 쏟아내면 AI가 실행할 수 있는 할 일만 뽑아내요. 가입도 필요 없고, 아무것도 저장되지 않아요.',
+    },
+    'pick-one': {
+      title: '하나 고르기 도구',
+      description:
+        '뒤죽박죽인 할 일 목록을 붙여넣으면 시작할 일 하나를 골라줘요. 가장 작은 것, 가장 겁나는 것, 아니면 무작위로. 할 일 열 개가 거대한 덩어리 하나로 보여서 손도 못 대는 순간을 위해 만들었어요.',
+    },
+    'eisenhower-matrix': {
+      title: '아이젠하워 매트릭스 (ADHD 버전)',
+      description:
+        '교과서에 나오는 딱딱한 분류 대신 "지루하지만 중요한" 같은 칸에 할 일을 끌어다 놓으세요. 드디어 ADHD 뇌에 맞는 매트릭스예요. 내용은 브라우저에 저장돼요.',
+    },
+    'pomodoro': {
+      title: 'ADHD 포모도로 타이머',
+      description:
+        '25분 집중, 5분 휴식. 드디어 ADHD 뇌에 맞는 집중법이에요. 무료, 가입 없이, 오프라인에서도 돼요.',
+    },
+    'visual-timer': {
+      title: '시각 타이머 / 시간 감각 시계',
+      description:
+        '숫자를 읽는 대신, 줄어드는 원형 조각으로 시간이 흘러가는 걸 눈으로 볼 수 있어요. ADHD 성인을 위한 시간 감각 시계로도 쓸 수 있어요.',
+    },
+    'brown-noise': {
+      title: '브라운 노이즈 생성기',
+      description:
+        '브라우저에서 바로 쓰는 무료 배경 소음 생성기. 브라운 노이즈에 핑크와 화이트까지. 쉴 새 없이 돌아가는 ADHD 뇌를 가라앉히는 일정한 배경 소리예요. 취침 타이머도 있고, 오프라인에서도 돼요.',
+    },
+    'body-doubling-room': {
+      title: '바디 더블링 방',
+      description:
+        '두 사람이 쓰는 무료 집중 공간. 링크를 공유하고, P2P 영상으로 나란히 앉아 일하고, 타이머를 함께 돌리세요. 가입도 설치도 없어요.',
+    },
+    'hyperfocus-timer': {
+      title: '하이퍼포커스 중단 타이머',
+      description:
+        '몇 분 간격으로 음성 체크인이 반복되고, 원하면 강제 종료도 걸어둘 수 있어요. ADHD 하이퍼포커스가 오후를 통째로 삼켜버리지 않도록요.',
+    },
+  },
+
 };
 
 export default ko;

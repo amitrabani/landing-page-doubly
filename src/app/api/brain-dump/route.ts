@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { applyGuards, fetchWithTimeout } from '@/lib/api-guard';
+import { isLocale, defaultLocale, localeEnglishNames } from '@/i18n/config';
 
 export const runtime = 'nodejs';
 
@@ -41,12 +42,22 @@ export async function POST(request: NextRequest) {
   });
   if (!guarded.ok) return guarded.res;
 
-  const body = guarded.body as { text?: unknown } | null;
+  const body = guarded.body as { text?: unknown; locale?: unknown } | null;
   const text = typeof body?.text === 'string' ? body.text.trim() : '';
 
   if (!text || text.length < 3 || text.length > MAX_DUMP_LENGTH) {
     return NextResponse.json({ error: 'Invalid text' }, { status: 400 });
   }
+
+  // The localized pages send their locale so the extracted tasks come back in the
+  // page's language. English (or an absent/unknown locale) leaves the prompt
+  // unchanged. Mirrors the same directive in /api/split-task.
+  const localeRaw = typeof body?.locale === 'string' ? body.locale : '';
+  const locale = isLocale(localeRaw) ? localeRaw : defaultLocale;
+  const languageDirective =
+    locale === defaultLocale
+      ? ''
+      : `\n\nRespond entirely in ${localeEnglishNames[locale]}. Every task title must be written in ${localeEnglishNames[locale]}, regardless of the language of the brain dump.`;
 
   try {
     const response = await fetchWithTimeout(
@@ -55,7 +66,7 @@ export async function POST(request: NextRequest) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          question: `${BRAIN_DUMP_PROMPT}\n\nBrain dump:\n${text}`,
+          question: `${BRAIN_DUMP_PROMPT}${languageDirective}\n\nBrain dump:\n${text}`,
         }),
       },
       25_000,

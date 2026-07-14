@@ -478,6 +478,57 @@ const ja = {
     ogDescription:
       '混乱をブレインダンプし、はっきりした次の一歩を得て、アカウンタビリティで最後までやり遂げる。',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'タスク分解ツール',
+      description:
+        '始められないタスクを打ち込むだけ。AIが、すぐ手をつけられる小さなステップに分けて、それぞれの所要時間の目安まで出します。ADHDの脳のために。',
+    },
+    'brain-dump': {
+      title: 'ブレインダンプツール',
+      description:
+        '頭の中のすべてを吐き出せば、AIが実行できるタスクだけを取り出します。登録不要、保存もなし。',
+    },
+    'pick-one': {
+      title: 'ひとつ選ぶツール',
+      description:
+        'ぐちゃぐちゃのToDoリストを貼り付ければ、最初に取りかかる1つが返ってきます。一番小さいもの、一番こわいもの、それかランダムで。10個のタスクが、手のつけられない大きなかたまり1つに見えてしまうときのために。',
+    },
+    'eisenhower-matrix': {
+      title: 'アイゼンハワー・マトリクス（ADHD版）',
+      description:
+        '教科書どおりのラベルではなく、「退屈だけど大事」のような枠にタスクをドラッグ。ADHDの脳にやっと合うマトリクスです。データは端末の中に保存されます。',
+    },
+    'pomodoro': {
+      title: 'ADHD向けポモドーロタイマー',
+      description:
+        '25分の作業、5分の休憩。ADHDの脳にやっと合う集中法です。無料、登録不要、オフラインでも動きます。',
+    },
+    'visual-timer': {
+      title: 'ビジュアルタイマー / タイムブラインドネス時計',
+      description:
+        '数字を読むのではなく、円が少しずつ欠けていくのを見て、時間が過ぎるのを目でつかめます。時間感覚のずれ（タイムブラインドネス）に悩むADHDの大人のための時計としても。',
+    },
+    'brown-noise': {
+      title: '環境音の生成ツール',
+      description:
+        'ブラウザで使える無料の環境音生成ツール。ブラウンノイズに、ピンクノイズとホワイトノイズも。ざわつくADHDの脳を静める、ゆらぎのない背景音。スリープタイマーつき、オフラインでも動きます。',
+    },
+    'body-doubling-room': {
+      title: 'ボディダブリング・ルーム',
+      description:
+        '2人用の無料フォーカスルーム。リンクを共有すれば、P2Pのビデオでとなりに座っているように一緒に作業できて、タイマーも共有できます。登録もインストールも不要。',
+    },
+    'hyperfocus-timer': {
+      title: '過集中の中断タイマー',
+      description:
+        'X分おきに声で呼びかけて、必要なら強制ストップも。ADHDの過集中で午後がまるごと消えてしまうのを防ぎます。',
+    },
+  },
+
 };
 
 export default ja;

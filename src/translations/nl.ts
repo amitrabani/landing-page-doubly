@@ -478,6 +478,57 @@ const nl = {
     ogDescription:
       'Dump de chaos uit je hoofd, krijg één duidelijke volgende stap, en gebruik verantwoording om echt door te zetten.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Takensplitter',
+      description:
+        'Typ een taak waar je niet aan kunt beginnen. De AI deelt hem op in kleine, haalbare stappen met een tijdsinschatting. Gemaakt voor ADHD-breinen.',
+    },
+    'brain-dump': {
+      title: 'Brain dump-tool',
+      description:
+        'Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie, niets wordt opgeslagen.',
+    },
+    'pick-one': {
+      title: 'Kies één taak',
+      description:
+        'Plak je rommelige to-dolijst en je krijgt één ding om mee te beginnen: de kleinste, de engste, of gewoon willekeurig. Voor het moment dat tien taken aanvoelen als één groot blok waar je niet aan begint.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower-matrix (ADHD-editie)',
+      description:
+        'Sleep taken naar vakjes als "saai maar belangrijk" in plaats van naar labels uit een managementboek. De matrix die eindelijk past bij een ADHD-brein. Alles blijft lokaal opgeslagen.',
+    },
+    'pomodoro': {
+      title: 'ADHD-pomodoro-timer',
+      description:
+        '25 minuten werken, 5 minuten pauze - de focusmethode die eindelijk past bij een ADHD-brein. Gratis, geen registratie, werkt offline.',
+    },
+    'visual-timer': {
+      title: 'Visuele timer / tijdblindheidsklok',
+      description:
+        'Een krimpende taartpunt, zodat je de tijd ziet verstrijken in plaats van cijfers te moeten lezen. Werkt ook als tijdblindheidsklok voor volwassenen met ADHD.',
+    },
+    'brown-noise': {
+      title: 'Generator voor achtergrondgeluid',
+      description:
+        'Gratis generator voor achtergrondgeluid in je browser. Bruine ruis, plus roze en witte ruis. Constant geluid dat een druk ADHD-brein tot rust brengt. Met slaaptimer, werkt offline.',
+    },
+    'body-doubling-room': {
+      title: 'Body doubling-ruimte',
+      description:
+        'Gratis focusruimte voor twee. Deel een link, werk zij aan zij via peer-to-peer video en laat een gedeelde timer lopen. Geen registratie, geen installatie.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hyperfocus-onderbrekingstimer',
+      description:
+        'Gesproken check-ins om de zoveel minuten en een optionele harde stop, zodat een ADHD-hyperfocus niet je hele middag opslokt.',
+    },
+  },
+
 };
 
 export default nl;

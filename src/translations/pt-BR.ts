@@ -478,6 +478,57 @@ const ptBR = {
     ogDescription:
       'Despeje o caos, receba um próximo passo claro e use a cobrança para realmente ir até o fim.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Ferramenta para dividir tarefas',
+      description:
+        'Digite uma tarefa que você não consegue começar. A IA divide ela em passos pequenos e fáceis de fazer, com tempo estimado. Feita para cérebros com TDAH.',
+    },
+    'brain-dump': {
+      title: 'Ferramenta de despejo mental',
+      description:
+        'Solte tudo que está na sua cabeça e a IA separa só as tarefas em que dá para agir. Sem cadastro, nada é guardado.',
+    },
+    'pick-one': {
+      title: 'Escolha uma tarefa',
+      description:
+        'Cole uma lista de tarefas bagunçada e receba uma coisa por onde começar. A menor, a mais assustadora ou aleatória. Feita para a hora em que dez tarefas viram uma única coisa gigante e impossível de começar.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matriz de Eisenhower (edição TDAH)',
+      description:
+        'Arraste as tarefas para quadrantes tipo "chato mas importante", nada de rótulos de manual. A matriz que finalmente serve para um cérebro com TDAH. Salva no seu navegador.',
+    },
+    'pomodoro': {
+      title: 'Timer pomodoro para TDAH',
+      description:
+        '25 minutos de trabalho, 5 de pausa - o método de foco que finalmente serve para um cérebro com TDAH. Grátis, sem cadastro, funciona offline.',
+    },
+    'visual-timer': {
+      title: 'Timer visual / relógio de cegueira temporal',
+      description:
+        'Uma fatia que encolhe para você ver o tempo passar em vez de ler números. Também funciona como relógio de cegueira temporal para adultos com TDAH.',
+    },
+    'brown-noise': {
+      title: 'Gerador de som ambiente',
+      description:
+        'Gerador de som ambiente grátis que roda no navegador. Ruído marrom, rosa e branco. Um som de fundo constante para acalmar um cérebro agitado com TDAH. Com timer de desligamento e funciona offline.',
+    },
+    'body-doubling-room': {
+      title: 'Sala de body doubling',
+      description:
+        'Sala de foco grátis para duas pessoas. Compartilhe um link e trabalhem lado a lado por vídeo ponto a ponto, com um timer em comum. Sem cadastro, sem instalar nada.',
+    },
+    'hyperfocus-timer': {
+      title: 'Timer para interromper o hiperfoco',
+      description:
+        'Check-ins falados a cada X minutos e um limite máximo opcional, para que o hiperfoco do TDAH não engula a sua tarde inteira.',
+    },
+  },
+
 };
 
 export default ptBR;

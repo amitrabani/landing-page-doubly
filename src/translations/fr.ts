@@ -491,6 +491,57 @@ const fr = {
     ogDescription:
       'Vide le chaos, obtiens une seule prochaine étape claire, et utilise la responsabilisation pour vraiment aller au bout.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Outil de découpage de tâches',
+      description:
+        'Écris une tâche que tu n’arrives pas à commencer. L’IA la découpe en petites étapes faisables, avec une durée estimée pour chacune. Pensé pour les cerveaux TDAH.',
+    },
+    'brain-dump': {
+      title: 'Outil de vide-cerveau',
+      description:
+        'Vide tout ce que tu as en tête, l’IA en extrait uniquement les tâches actionnables. Sans inscription, rien n’est stocké.',
+    },
+    'pick-one': {
+      title: 'Outil Choisis-en une',
+      description:
+        'Colle ta liste de tâches en vrac, repars avec une seule chose par où commencer. La plus petite, la plus intimidante, ou au hasard. Pour ces moments où dix tâches ressemblent à un seul bloc impossible à attaquer.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matrice d’Eisenhower (édition TDAH)',
+      description:
+        'Glisse tes tâches dans des quadrants du genre « ennuyeux mais important », au lieu des étiquettes de manuel. La matrice qui colle enfin à un cerveau TDAH. Tout est sauvegardé en local.',
+    },
+    'pomodoro': {
+      title: 'Minuteur Pomodoro TDAH',
+      description:
+        '25 minutes de travail, 5 minutes de pause - la méthode de focus qui colle enfin à un cerveau TDAH. Gratuit, sans inscription, marche hors ligne.',
+    },
+    'visual-timer': {
+      title: 'Minuteur visuel / horloge de cécité temporelle',
+      description:
+        'Une part de cadran qui se réduit, pour voir le temps passer au lieu de lire des chiffres. Fait aussi office d’horloge de cécité temporelle pour les adultes TDAH.',
+    },
+    'brown-noise': {
+      title: 'Générateur de sons d’ambiance',
+      description:
+        'Générateur de sons d’ambiance gratuit, directement dans ton navigateur. Du bruit brun, mais aussi du rose et du blanc. Un fond sonore régulier pour apaiser un cerveau TDAH agité. Minuteur de veille inclus, marche hors ligne.',
+    },
+    'body-doubling-room': {
+      title: 'Salle de body doubling',
+      description:
+        'Salle de focus gratuite à deux. Partage un lien, travaille côte à côte en vidéo pair-à-pair, avec un minuteur partagé. Sans inscription, sans installation.',
+    },
+    'hyperfocus-timer': {
+      title: 'Minuteur d’interruption d’hyperfocus',
+      description:
+        'Des points de contrôle annoncés à voix haute toutes les X minutes et un arrêt net en option, pour qu’une session d’hyperfocus TDAH n’engloutisse pas tout ton après-midi.',
+    },
+  },
+
 };
 
 export default fr;

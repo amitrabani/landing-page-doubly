@@ -478,6 +478,57 @@ const es = {
     ogDescription:
       'Suelta el caos en un volcado mental, consigue un siguiente paso claro y usa la responsabilidad compartida para cumplir de verdad.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Herramienta para dividir tareas',
+      description:
+        'Escribe una tarea que no consigues empezar. La IA la divide en pasos pequeños y abordables, con su tiempo estimado. Hecha para cerebros con TDAH.',
+    },
+    'brain-dump': {
+      title: 'Herramienta de volcado mental',
+      description:
+        'Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro, no se guarda nada.',
+    },
+    'pick-one': {
+      title: 'Herramienta para elegir una tarea',
+      description:
+        'Pega una lista de pendientes caótica y te devuelve una sola cosa con la que empezar. La más pequeña, la que más miedo da o una al azar. Hecha para cuando diez tareas se convierten en un único bloque gigante imposible de empezar.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matriz de Eisenhower (edición TDAH)',
+      description:
+        'Arrastra las tareas a cuadrantes como «aburrido pero importante» en vez de etiquetas de manual. La matriz que por fin encaja con un cerebro con TDAH. Se guarda en tu navegador.',
+    },
+    'pomodoro': {
+      title: 'Temporizador Pomodoro para el TDAH',
+      description:
+        '25 minutos de trabajo, 5 de descanso: el método de concentración que por fin encaja con un cerebro con TDAH. Gratis, sin registro, funciona sin conexión.',
+    },
+    'visual-timer': {
+      title: 'Temporizador visual / reloj para la ceguera al tiempo',
+      description:
+        'Una porción de tarta que se encoge para que veas pasar el tiempo en vez de leer números. Sirve también como reloj contra la ceguera al tiempo en adultos con TDAH.',
+    },
+    'brown-noise': {
+      title: 'Generador de sonido ambiental',
+      description:
+        'Generador de sonido ambiental gratis en el navegador. Ruido marrón, rosa y blanco. Un fondo sonoro constante para calmar un cerebro con TDAH que no para. Incluye temporizador para dormir y funciona sin conexión.',
+    },
+    'body-doubling-room': {
+      title: 'Sala de body doubling',
+      description:
+        'Sala de concentración gratis para dos personas. Comparte un enlace, trabaja codo con codo por videollamada P2P y pon en marcha un temporizador compartido. Sin registro, sin instalar nada.',
+    },
+    'hyperfocus-timer': {
+      title: 'Temporizador para interrumpir la hiperconcentración',
+      description:
+        'Avisos hablados que se repiten cada X minutos y un tope definitivo opcional, para que una sesión de hiperconcentración con TDAH no se te coma la tarde entera.',
+    },
+  },
+
 };
 
 export default es;

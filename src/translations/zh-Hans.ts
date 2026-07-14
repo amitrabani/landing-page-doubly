@@ -478,6 +478,57 @@ const zhHans = {
     ogDescription:
       '把混乱一键清空,得到一个清晰的下一步,再靠监督陪伴真正坚持到底。',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: '任务拆解工具',
+      description:
+        '输入一个你开不了头的任务,AI 会把它拆成一个个能做到的小步骤,还带时间估算。为 ADHD 大脑打造。',
+    },
+    'brain-dump': {
+      title: '大脑清空工具',
+      description:
+        '把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册,不留存任何内容。',
+    },
+    'pick-one': {
+      title: '挑一个任务',
+      description:
+        '粘贴一份乱糟糟的待办清单,只带走一件可以先做的事。最小的、最让你发怵的,或者随机挑一个。专为十件事在眼前糊成一团、根本无从下手的那一刻而做。',
+    },
+    'eisenhower-matrix': {
+      title: '艾森豪威尔矩阵(ADHD 版)',
+      description:
+        '把任务拖进「无聊却重要」这样的象限,而不是教科书上的标签。这个矩阵,终于是照着 ADHD 大脑做的。数据保存在本地。',
+    },
+    'pomodoro': {
+      title: 'ADHD 番茄钟',
+      description:
+        '专注 25 分钟,休息 5 分钟,这套专注法终于适合 ADHD 大脑。免费,无需注册,离线也能用。',
+    },
+    'visual-timer': {
+      title: '可视化计时器 / 时间盲视时钟',
+      description:
+        '一块慢慢变小的扇形,让你亲眼看见时间在流走,而不是去读数字。对 ADHD 成年人来说,它也是一个时间盲视时钟。',
+    },
+    'brown-noise': {
+      title: '环境音生成器',
+      description:
+        '在浏览器里直接用的免费环境音生成器。棕噪音,外加粉红噪音和白噪音。用稳定的背景声安抚忙个不停的 ADHD 大脑。自带睡眠定时器,离线也能用。',
+    },
+    'body-doubling-room': {
+      title: '身旁陪伴室',
+      description:
+        '免费的双人专注房间。分享一个链接,通过点对点视频并肩做事,共用一个计时器。无需注册,无需安装。',
+    },
+    'hyperfocus-timer': {
+      title: '超专注中断计时器',
+      description:
+        '每隔 X 分钟用语音提醒你一次,还能设一个硬性停止时间,免得一场 ADHD 超专注把你一整个下午都耗光。',
+    },
+  },
+
 };
 
 export default zhHans;

@@ -478,6 +478,57 @@ const tr = {
     ogDescription:
       'Kaosu beyin boşaltmayla dök, tek bir net sonraki adım al ve gerçekten takip etmek için hesap verebilirliği kullan.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Görev Bölme Aracı',
+      description:
+        'Başlayamadığın bir görev yaz. Yapay zeka onu süre tahminleriyle küçük, yapılabilir adımlara bölsün. ADHD beyinleri için tasarlandı.',
+    },
+    'brain-dump': {
+      title: 'Beyin Boşaltma Aracı',
+      description:
+        'Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok, hiçbir şey saklanmıyor.',
+    },
+    'pick-one': {
+      title: 'Birini Seç Aracı',
+      description:
+        'Dağınık yapılacaklar listeni yapıştır, başlamak için tek bir iş al. En küçüğü, en korkutucusu ya da rastgele. On görevin tek ve devasa, başlanamaz bir şeye dönüştüğü anlar için.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower Matrisi (ADHD Sürümü)',
+      description:
+        'Görevleri ders kitabı etiketleri yerine “sıkıcı ama önemli” gibi çeyreklere sürükle. Sonunda ADHD beynine oturan matris. Tarayıcında saklanır.',
+    },
+    'pomodoro': {
+      title: 'ADHD Pomodoro Zamanlayıcı',
+      description:
+        '25 dakika çalışma, 5 dakika mola - sonunda ADHD beynine oturan odak yöntemi. Ücretsiz, kayıt yok, çevrimdışı çalışır.',
+    },
+    'visual-timer': {
+      title: 'Görsel Zamanlayıcı / Zaman Körlüğü Saati',
+      description:
+        'Rakam okumak yerine zamanın akıp gittiğini gör: küçülen bir pasta dilimi. ADHD\'li yetişkinler için aynı zamanda bir zaman körlüğü saati.',
+    },
+    'brown-noise': {
+      title: 'Ortam Sesi Üreteci',
+      description:
+        'Tarayıcıda çalışan ücretsiz ortam sesi üreteci. Kahverengi gürültü, ayrıca pembe ve beyaz. Vızıldayan bir ADHD beynini yatıştıran sabit bir arka plan sesi. Uyku zamanlayıcısı dahil, çevrimdışı çalışır.',
+    },
+    'body-doubling-room': {
+      title: 'Body Doubling Odası',
+      description:
+        'İki kişilik ücretsiz odak odası. Bir link paylaş, eşler arası videoyla yan yana çalış, ortak zamanlayıcıyı başlat. Kayıt yok, kurulum yok.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hiperfokus Kesme Zamanlayıcısı',
+      description:
+        'Belirlediğin aralıklarla tekrarlanan sesli yoklamalar ve istersen kesin bir bitiş. Böylece ADHD hiperfokusun bütün öğleden sonranı yiyip bitirmez.',
+    },
+  },
+
 };
 
 export default tr;

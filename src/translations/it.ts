@@ -478,6 +478,57 @@ const it = {
     ogDescription:
       'Svuota il caos, ottieni un unico passo chiaro e usa la responsabilità per portare davvero a termine.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Strumento per scomporre le attività',
+      description:
+        'Scrivi un’attività che non riesci a iniziare. L’IA la divide in piccoli passi fattibili con stime di tempo. Fatto per le menti ADHD.',
+    },
+    'brain-dump': {
+      title: 'Strumento svuota-cervello',
+      description:
+        'Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione, niente viene salvato.',
+    },
+    'pick-one': {
+      title: 'Strumento «scegline una»',
+      description:
+        'Incolla la tua lista disordinata e ottieni una cosa sola da cui partire. La più piccola, la più spaventosa o a caso. Fatto per quando dieci attività sembrano un unico blocco impossibile da iniziare.',
+    },
+    'eisenhower-matrix': {
+      title: 'Matrice di Eisenhower (edizione ADHD)',
+      description:
+        'Trascina le attività in quadranti come «noioso ma importante», al posto delle etichette da manuale. La matrice che finalmente si adatta a una mente ADHD. Si salva in locale.',
+    },
+    'pomodoro': {
+      title: 'Timer Pomodoro per l’ADHD',
+      description:
+        '25 minuti di lavoro, 5 di pausa: il metodo di concentrazione che finalmente si adatta a una mente ADHD. Gratis, senza registrazione, funziona offline.',
+    },
+    'visual-timer': {
+      title: 'Timer visivo / orologio per la cecità temporale',
+      description:
+        'Uno spicchio che si riduce: vedi il tempo che passa invece di leggere dei numeri. Funziona anche come orologio per la cecità temporale negli adulti con ADHD.',
+    },
+    'brown-noise': {
+      title: 'Generatore di suoni ambientali',
+      description:
+        'Generatore di suoni ambientali gratuito, direttamente nel browser. Rumore marrone, rosa e bianco. Un sottofondo costante per calmare una mente ADHD sempre accesa. Con timer di spegnimento, funziona offline.',
+    },
+    'body-doubling-room': {
+      title: 'Stanza di body doubling',
+      description:
+        'Stanza di concentrazione gratuita per due. Condividi un link e lavorate fianco a fianco in video peer-to-peer, con un timer condiviso. Senza registrazione, niente da installare.',
+    },
+    'hyperfocus-timer': {
+      title: 'Timer per interrompere l’iperfocus',
+      description:
+        'Ogni X minuti una voce ti richiama, più un limite massimo facoltativo, così una sessione di iperfocus ADHD non si mangia tutto il pomeriggio.',
+    },
+  },
+
 };
 
 export default it;

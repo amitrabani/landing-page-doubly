@@ -478,6 +478,57 @@ const en = {
     ogDescription:
       'Brain dump the chaos, get one clear next step, and use accountability to actually follow through.',
   },
+  // Tool library card copy (title + description per tool).
+  // Mirrors content/tools-i18n/${locale}/_index.json cards[] so the homepage grid and
+  // the footer speak the visitor's language; kept in sync by scripts/check-tool-cards.mjs.
+  toolCards: {
+    'task-splitter': {
+      title: 'Task Breakdown Tool',
+      description:
+        'Type a task you cannot start. AI splits it into small, doable steps with time estimates. Built for ADHD brains.',
+    },
+    'brain-dump': {
+      title: 'Brain Dump Tool',
+      description:
+        'Dump everything in your head, AI pulls out only the actionable tasks. No signup, nothing stored.',
+    },
+    'pick-one': {
+      title: 'Pick One Task Tool',
+      description:
+        'Paste a messy to-do list, get one thing to start with. Smallest, scariest, or random. Built for the moment ten tasks reads as one giant unstartable thing.',
+    },
+    'eisenhower-matrix': {
+      title: 'Eisenhower Matrix (ADHD Edition)',
+      description:
+        'Drag tasks into quadrants like "boring but important" instead of textbook labels. The matrix that finally fits an ADHD brain. Saves locally.',
+    },
+    'pomodoro': {
+      title: 'ADHD Pomodoro Timer',
+      description:
+        '25-minute work, 5-minute break - the focus method that finally fits an ADHD brain. Free, no signup, works offline.',
+    },
+    'visual-timer': {
+      title: 'Visual Timer / Time Blindness Clock',
+      description:
+        'A shrinking pie wedge so you can see time passing instead of reading digits. Doubles as a time blindness clock for ADHD adults.',
+    },
+    'brown-noise': {
+      title: 'Ambient Sound Generator',
+      description:
+        'Free in-browser ambient sound generator. Brown noise plus pink and white. Steady background sound to quiet a busy ADHD brain. Sleep timer included, works offline.',
+    },
+    'body-doubling-room': {
+      title: 'Body Doubling Room',
+      description:
+        'Free two-person focus room. Share a link, work side by side over peer-to-peer video, run a shared timer. No signup, no install.',
+    },
+    'hyperfocus-timer': {
+      title: 'Hyperfocus Interrupt Timer',
+      description:
+        'Recurring spoken check-ins every X minutes and an optional hard stop, so an ADHD hyperfocus session does not eat your whole afternoon.',
+    },
+  },
+
 } as const;
 
 export default en;
