@@ -2,93 +2,20 @@
 
 import { useEffect, useMemo, useState } from 'react';
 
-import { useT } from '@/i18n/TranslationProvider';
+import { useLocale, useT } from '@/i18n/TranslationProvider';
+import { MODES, pickOne, splitList, type Mode, type Picked } from './pickLogic';
 
 const STORAGE_KEY = 'pick-one-input-v1';
 const MAX_LENGTH = 4000;
 
-// Stable English ids: they drive the picking logic and index the copy dictionary.
-type Mode = 'smallest' | 'scariest' | 'random';
-
-const MODES: Mode[] = ['smallest', 'scariest', 'random'];
-
-const SCARY_WORDS = [
-  'tax',
-  'taxes',
-  'doctor',
-  'dentist',
-  'doctors',
-  'insurance',
-  'bill',
-  'bills',
-  'rent',
-  'mortgage',
-  'lawyer',
-  'attorney',
-  'court',
-  'irs',
-  'hmrc',
-  'email back',
-  'reply',
-  'apology',
-  'apologize',
-  'boss',
-  'manager',
-  'difficult conversation',
-  'breakup',
-  'cancel',
-  'unsubscribe',
-  'dispute',
-  'complaint',
-  'overdue',
-  'forgot',
-  'should have',
-  'meant to',
-];
-
-function splitList(raw: string): string[] {
-  return raw
-    .split(/[\n;,]+/)
-    .map((s) => s.replace(/^[\s\-*•\d.)]+/, '').trim())
-    .filter((s) => s.length > 0 && s.length < 200);
-}
-
-function scariness(item: string): number {
-  const lower = item.toLowerCase();
-  let score = item.length / 40;
-  for (const w of SCARY_WORDS) {
-    if (lower.includes(w)) score += 2;
-  }
-  return score;
-}
-
-function pickIndex(items: string[], mode: Mode, excluded: Set<string>): number {
-  const candidates = items
-    .map((text, idx) => ({ text, idx }))
-    .filter((c) => !excluded.has(c.text));
-  if (candidates.length === 0) return -1;
-
-  if (mode === 'smallest') {
-    return candidates.reduce((best, c) =>
-      c.text.length < best.text.length ? c : best,
-    ).idx;
-  }
-  if (mode === 'scariest') {
-    return candidates.reduce((best, c) =>
-      scariness(c.text) > scariness(best.text) ? c : best,
-    ).idx;
-  }
-  const choice = candidates[Math.floor(Math.random() * candidates.length)];
-  return choice.idx;
-}
-
 export default function PickOneTool() {
   const t = useT();
+  const locale = useLocale();
   const copy = t.toolWidgets.pickOne;
 
   const [input, setInput] = useState('');
   const [mode, setMode] = useState<Mode>('smallest');
-  const [pickedIdx, setPickedIdx] = useState<number | null>(null);
+  const [picked, setPicked] = useState<Picked | null>(null);
   const [skipped, setSkipped] = useState<Set<string>>(new Set());
   const [done, setDone] = useState<Set<string>>(new Set());
 
@@ -118,44 +45,36 @@ export default function PickOneTool() {
   }, [skipped, done]);
 
   const remaining = items.filter((t) => !excluded.has(t));
-  const pickedText = pickedIdx !== null ? items[pickedIdx] ?? null : null;
+  const pickedText = picked !== null ? items[picked.idx] ?? null : null;
 
-  const handlePick = () => {
-    const idx = pickIndex(items, mode, excluded);
-    setPickedIdx(idx === -1 ? null : idx);
-  };
+  const repick = (nextExcluded: Set<string>) =>
+    setPicked(pickOne(items, mode, nextExcluded, copy.scaryWords, locale));
+
+  const handlePick = () => repick(excluded);
 
   const handleSkip = () => {
-    if (pickedText) {
-      setSkipped((prev) => new Set(prev).add(pickedText));
-    }
-    const newExcluded = new Set(excluded);
-    if (pickedText) newExcluded.add(pickedText);
-    const idx = pickIndex(items, mode, newExcluded);
-    setPickedIdx(idx === -1 ? null : idx);
+    if (!pickedText) return;
+    setSkipped((prev) => new Set(prev).add(pickedText));
+    repick(new Set(excluded).add(pickedText));
   };
 
   const handleDone = () => {
-    if (pickedText) {
-      setDone((prev) => new Set(prev).add(pickedText));
-    }
-    const newExcluded = new Set(excluded);
-    if (pickedText) newExcluded.add(pickedText);
-    const idx = pickIndex(items, mode, newExcluded);
-    setPickedIdx(idx === -1 ? null : idx);
+    if (!pickedText) return;
+    setDone((prev) => new Set(prev).add(pickedText));
+    repick(new Set(excluded).add(pickedText));
   };
 
   const handleReset = () => {
     setSkipped(new Set());
     setDone(new Set());
-    setPickedIdx(null);
+    setPicked(null);
   };
 
   const handleClear = () => {
     setInput('');
     setSkipped(new Set());
     setDone(new Set());
-    setPickedIdx(null);
+    setPicked(null);
   };
 
   const canPick = remaining.length > 0;
@@ -200,7 +119,11 @@ export default function PickOneTool() {
             <button
               key={m}
               type="button"
-              onClick={() => setMode(m)}
+              // Drop the current pick: its reason line belongs to the old mode.
+              onClick={() => {
+                setMode(m);
+                setPicked(null);
+              }}
               className={`rounded-full px-4 py-2 text-sm font-medium border transition-all ${
                 mode === m
                   ? 'bg-charcoal text-cream border-charcoal'
@@ -270,7 +193,9 @@ export default function PickOneTool() {
               {pickedText}
             </p>
             <p className="text-sm text-charcoal-light leading-6 mb-5">
-              {copy.modes[mode].reason}
+              {picked?.noSignal
+                ? copy.modes.scariest.noSignalReason
+                : copy.modes[mode].reason}
             </p>
 
             <div className="flex flex-wrap gap-2">

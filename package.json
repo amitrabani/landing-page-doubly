@@ -11,6 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "check:i18n": "node scripts/check-translations.mjs",
+    "check:pick-one": "node scripts/check-pick-one.mjs",
     "check:tool-cards": "node scripts/check-tool-cards.mjs",
     "check:tools-content": "node scripts/check-tools-content.mjs",
     "check:pack": "node scripts/check-pack.mjs",

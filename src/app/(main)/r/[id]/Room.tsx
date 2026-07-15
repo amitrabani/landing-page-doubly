@@ -10,7 +10,8 @@ import JoinScreen from './JoinScreen';
 import PhaseBanner, { type SessionPhase } from './PhaseBanner';
 import { ReactionsBar, ReactionsLayer, useReactionBursts, type ReactionEmoji } from './Reactions';
 import { useSignaling, type SignalMsg } from './useSignaling';
-import { useWebRTC } from './useWebRTC';
+import { useWebRTC, type RoomErrorCode } from './useWebRTC';
+import { useT } from '@/i18n/TranslationProvider';
 
 type Props = { roomId: string };
 
@@ -36,6 +37,8 @@ function format(remainingSec: number): string {
 }
 
 export default function Room({ roomId }: Props) {
+  const t = useT();
+  const copy = t.room;
   const router = useRouter();
   const [join, setJoin] = useState<JoinData | null>(null);
   const [selfId] = useState(() => nanoid(10));
@@ -45,7 +48,7 @@ export default function Room({ roomId }: Props) {
   const [reflectionSelf, setReflectionSelf] = useState('');
   const [reflectionPeer, setReflectionPeer] = useState('');
   const [phase, setPhase] = useState<SessionPhase>('waiting');
-  const [peerLeftToast, setPeerLeftToast] = useState<string | null>(null);
+  const [peerLeft, setPeerLeft] = useState(false);
   const [copied, setCopied] = useState(false);
   const [nowTick, setNowTick] = useState(() => Date.now());
   const { bursts: reactionBursts, fire: fireReaction } = useReactionBursts();
@@ -89,7 +92,7 @@ export default function Room({ roomId }: Props) {
           const emoji = String(payload.emoji || '');
           if (emoji) fireReaction(emoji);
         } else if (msg.kind === 'leave') {
-          setPeerLeftToast('Your partner left the room.');
+          setPeerLeft(true);
           setTimer((t) => {
             if (t.startedAt === null) return t;
             const elapsed = (Date.now() - t.startedAt) / 1000;
@@ -130,16 +133,16 @@ export default function Room({ roomId }: Props) {
   }, [join, rtc]);
 
   useEffect(() => {
-    if (signaling.peer && peerLeftToast) {
-      setPeerLeftToast(null);
+    if (signaling.peer && peerLeft) {
+      setPeerLeft(false);
     }
-  }, [signaling.peer, peerLeftToast]);
+  }, [signaling.peer, peerLeft]);
 
   useEffect(() => {
-    if (!peerLeftToast) return;
-    const t = setTimeout(() => setPeerLeftToast(null), 5000);
-    return () => clearTimeout(t);
-  }, [peerLeftToast]);
+    if (!peerLeft) return;
+    const id = setTimeout(() => setPeerLeft(false), 5000);
+    return () => clearTimeout(id);
+  }, [peerLeft]);
 
   useEffect(() => {
     if (timer.startedAt === null) return;
@@ -305,36 +308,37 @@ export default function Room({ roomId }: Props) {
     return (
       <div className="mx-auto max-w-md px-6 py-16 text-center">
         <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-charcoal mb-3">
-          Room is full
+          {copy.full.title}
         </h1>
-        <p className="text-charcoal-light mb-8">
-          A body doubling room fits two people. The good news, starting a new one takes one click.
-        </p>
+        <p className="text-charcoal-light mb-8">{copy.full.body}</p>
         <button
           type="button"
           onClick={() => router.push('/tools/body-doubling-room')}
           className="rounded-full bg-charcoal text-cream px-5 py-3 font-semibold hover:bg-charcoal-light transition-colors"
         >
-          Start a new room
+          {copy.full.cta}
         </button>
       </div>
     );
   }
 
-  const peerName = signaling.peer?.name || 'Waiting';
+  const peerName = signaling.peer?.name || copy.tiles.peerFallbackName;
   const peerAvatar = signaling.peer?.avatar || '👻';
-  const peerPlaceholder = signaling.peer ? undefined : 'Waiting for partner...';
+  const peerPlaceholder = signaling.peer ? undefined : copy.tiles.waitingForPartner;
   const peerPresent = Boolean(signaling.peer);
   const showDial = phase === 'focus';
   const showReflection = phase === 'wrap-up' || phase === 'done';
+
+  const errorText = (code: RoomErrorCode) =>
+    code === 'p2p-blocked' ? copy.errors.p2pBlocked : copy.errors.mediaUnavailable;
 
   return (
     <div className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 sm:py-10">
       <header className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <p className="text-xs uppercase tracking-wider text-charcoal/60">Body doubling room</p>
+          <p className="text-xs uppercase tracking-wider text-charcoal/60">{copy.header.eyebrow}</p>
           <h1 className="font-[family-name:var(--font-display)] text-xl font-semibold text-charcoal">
-            {peerPresent ? `You and ${peerName}` : 'Waiting for your partner'}
+            {peerPresent ? copy.header.withPeer(peerName) : copy.header.waiting}
           </h1>
         </div>
         <button
@@ -342,7 +346,7 @@ export default function Room({ roomId }: Props) {
           onClick={copyInvite}
           className="rounded-full border border-warm-dark/40 bg-white px-4 py-2 text-sm font-medium text-charcoal hover:bg-warm transition-colors"
         >
-          {copied ? 'Link copied' : 'Copy invite link'}
+          {copied ? copy.header.linkCopied : copy.header.copyInvite}
         </button>
       </header>
 
@@ -357,20 +361,20 @@ export default function Room({ roomId }: Props) {
         />
       </div>
 
-      {peerLeftToast && (
+      {peerLeft && (
         <div className="mb-4 rounded-2xl bg-coral/20 border border-coral/40 px-4 py-3 text-sm text-charcoal">
-          {peerLeftToast}
+          {copy.status.peerLeft}
         </div>
       )}
       {rtc.connectError && (
         <div className="mb-4 flex flex-col gap-2 rounded-2xl bg-coral/20 border border-coral/40 px-4 py-3 text-sm text-charcoal sm:flex-row sm:items-center sm:justify-between">
-          <span>{rtc.connectError}</span>
+          <span>{errorText(rtc.connectError)}</span>
           <button
             type="button"
             onClick={rtc.retry}
             className="self-start rounded-full bg-charcoal text-cream px-3 py-1.5 text-xs font-semibold hover:bg-charcoal-light"
           >
-            Retry
+            {copy.controls.retry}
           </button>
         </div>
       )}
@@ -379,7 +383,7 @@ export default function Room({ roomId }: Props) {
         <div className="space-y-2">
           <VideoTile
             stream={rtc.localStream}
-            name={`${join.name} (you)`}
+            name={copy.tiles.you(join.name)}
             avatar={join.avatar}
             muted
             micOn={rtc.micOn}
@@ -389,7 +393,7 @@ export default function Room({ roomId }: Props) {
           {showReflection ? (
             <input
               type="text"
-              placeholder="One win or one snag..."
+              placeholder={copy.tiles.reflectionPlaceholder}
               value={reflectionSelf}
               onChange={(e) => updateReflection(e.target.value)}
               maxLength={140}
@@ -398,7 +402,11 @@ export default function Room({ roomId }: Props) {
           ) : (
             <input
               type="text"
-              placeholder={phase === 'intro' ? 'What I am about to work on...' : "What I'm working on"}
+              placeholder={
+                phase === 'intro'
+                  ? copy.tiles.goalPlaceholderIntro
+                  : copy.tiles.goalPlaceholderFocus
+              }
               value={goalSelf}
               onChange={(e) => updateGoal(e.target.value)}
               maxLength={120}
@@ -421,11 +429,15 @@ export default function Room({ roomId }: Props) {
           <div className="rounded-2xl border border-warm-dark/40 bg-white/60 px-4 py-2 text-sm text-charcoal min-h-[2.5rem]">
             {showReflection ? (
               reflectionPeer || (
-                <span className="text-charcoal/40">{peerPresent ? 'Waiting for their wrap-up' : '—'}</span>
+                <span className="text-charcoal/40">
+                  {peerPresent ? copy.tiles.peerNoReflection : copy.tiles.empty}
+                </span>
               )
             ) : (
               goalPeer || (
-                <span className="text-charcoal/40">{peerPresent ? 'No goal yet' : '—'}</span>
+                <span className="text-charcoal/40">
+                  {peerPresent ? copy.tiles.peerNoGoal : copy.tiles.empty}
+                </span>
               )
             )}
           </div>
@@ -439,17 +451,17 @@ export default function Room({ roomId }: Props) {
             tone="lavender"
             display={format(remainingSec)}
             status={timer.startedAt !== null ? 'running' : timer.pausedRemainingSec !== null ? 'paused' : 'idle'}
-            ariaLabel={`Timer, ${format(remainingSec)} remaining`}
+            ariaLabel={copy.status.timerAria(format(remainingSec))}
           />
         )}
 
         {!showDial && phase !== 'done' && (
           <p className="text-sm text-charcoal/60">
             {phase === 'intro'
-              ? `Up next: ${join.durationMin}-minute focus block`
+              ? copy.status.upNext(join.durationMin)
               : phase === 'wrap-up'
-                ? 'Take a breath. The timer is paused.'
-                : `Plan: ${join.durationMin}-minute focus block once your partner arrives`}
+                ? copy.status.wrapUpBreath
+                : copy.status.planOnArrival(join.durationMin)}
           </p>
         )}
 
@@ -484,7 +496,7 @@ export default function Room({ roomId }: Props) {
                 onClick={handleLeave}
                 className="rounded-full border border-charcoal/20 px-4 py-2 text-sm font-medium text-charcoal hover:bg-warm transition-colors"
               >
-                Leave
+                {copy.controls.leave}
               </button>
             )}
           </div>
@@ -495,9 +507,7 @@ export default function Room({ roomId }: Props) {
         )}
 
         {!peerPresent && signaling.status === 'connected' && (
-          <p className="text-sm text-charcoal/60">
-            Share the invite link to bring someone in. The session unlocks when they arrive.
-          </p>
+          <p className="text-sm text-charcoal/60">{copy.status.shareToUnlock}</p>
         )}
       </div>
 
@@ -516,6 +526,7 @@ type MiniProps = {
 };
 
 function MicCamMini({ micOn, camOn, micAllowed, camAllowed, onToggleMic, onToggleCam }: MiniProps) {
+  const c = useT().room.controls;
   const base =
     'inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors disabled:cursor-not-allowed disabled:opacity-50';
   const styleFor = (on: boolean) =>
@@ -526,7 +537,7 @@ function MicCamMini({ micOn, camOn, micAllowed, camAllowed, onToggleMic, onToggl
         type="button"
         onClick={onToggleMic}
         disabled={!micAllowed}
-        aria-label={micOn ? 'Mute mic' : 'Unmute mic'}
+        aria-label={micOn ? c.muteMic : c.unmuteMic}
         className={`${base} ${styleFor(micOn)}`}
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -541,7 +552,7 @@ function MicCamMini({ micOn, camOn, micAllowed, camAllowed, onToggleMic, onToggl
         type="button"
         onClick={onToggleCam}
         disabled={!camAllowed}
-        aria-label={camOn ? 'Turn off camera' : 'Turn on camera'}
+        aria-label={camOn ? c.camOff : c.camOn}
         className={`${base} ${styleFor(camOn)}`}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
+import { useT } from '@/i18n/TranslationProvider';
+
 const AVATARS = ['🦊', '🐢', '🦉', '🐝', '🦋', '🐙', '🦔', '🌻', '🍵', '🪴'];
 const DURATIONS = [15, 25, 45, 60];
 
@@ -11,6 +13,9 @@ type Props = {
 };
 
 export default function JoinScreen({ isFirstArrival, onJoin }: Props) {
+  const t = useT();
+  const copy = t.room.join;
+
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [duration, setDuration] = useState(25);
@@ -34,18 +39,16 @@ export default function JoinScreen({ isFirstArrival, onJoin }: Props) {
   return (
     <div className="mx-auto max-w-md px-6 py-12">
       <h1 className="font-[family-name:var(--font-display)] text-3xl font-bold text-charcoal mb-2">
-        {isFirstArrival ? 'Start a focus session' : 'Join the focus session'}
+        {isFirstArrival ? copy.titleFirst : copy.titleJoin}
       </h1>
       <p className="text-charcoal-light mb-8">
-        {isFirstArrival
-          ? 'Pick your name and the session length. You can share the invite link once you are in.'
-          : 'Pick your name and join. The host has already set the timer.'}
+        {isFirstArrival ? copy.subtitleFirst : copy.subtitleJoin}
       </p>
 
       <form onSubmit={submit} className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-2">
-            Your name
+            {copy.nameLabel}
           </label>
           <input
             id="name"
@@ -55,20 +58,20 @@ export default function JoinScreen({ isFirstArrival, onJoin }: Props) {
             autoComplete="off"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Alex"
+            placeholder={copy.namePlaceholder}
             className="w-full rounded-2xl border border-warm-dark/40 bg-white px-4 py-3 text-charcoal placeholder-charcoal/40 focus:border-lavender focus:outline-none"
           />
         </div>
 
         <div>
-          <span className="block text-sm font-medium text-charcoal mb-2">Pick an avatar</span>
+          <span className="block text-sm font-medium text-charcoal mb-2">{copy.avatarLabel}</span>
           <div className="grid grid-cols-5 gap-2">
             {AVATARS.map((emoji) => (
               <button
                 key={emoji}
                 type="button"
                 onClick={() => setAvatar(emoji)}
-                aria-label={`Choose ${emoji} avatar`}
+                aria-label={copy.avatarChooseAria(emoji)}
                 aria-pressed={avatar === emoji}
                 className={`aspect-square rounded-2xl text-2xl transition-all ${
                   avatar === emoji
@@ -84,7 +87,9 @@ export default function JoinScreen({ isFirstArrival, onJoin }: Props) {
 
         {isFirstArrival && (
           <div>
-            <span className="block text-sm font-medium text-charcoal mb-2">Session length</span>
+            <span className="block text-sm font-medium text-charcoal mb-2">
+              {copy.durationLabel}
+            </span>
             <div className="grid grid-cols-4 gap-2">
               {DURATIONS.map((mins) => (
                 <button
@@ -98,24 +103,21 @@ export default function JoinScreen({ isFirstArrival, onJoin }: Props) {
                       : 'bg-warm border border-warm-dark/30 text-charcoal hover:bg-warm-dark/20'
                   }`}
                 >
-                  {mins} min
+                  {copy.minutes(mins)}
                 </button>
               ))}
             </div>
           </div>
         )}
 
-        <p className="text-xs text-charcoal/60 leading-5">
-          The next screen asks for camera and microphone access. Both are optional. If you skip them, you
-          will join with a ghost tile and other people in the room can still see you are there.
-        </p>
+        <p className="text-xs text-charcoal/60 leading-5">{copy.permissionNote}</p>
 
         <button
           type="submit"
           disabled={!name.trim()}
           className="w-full rounded-full bg-charcoal text-cream px-5 py-3 font-semibold hover:bg-charcoal-light disabled:cursor-not-allowed disabled:opacity-50 transition-colors"
         >
-          {isFirstArrival ? 'Create room' : 'Join room'}
+          {isFirstArrival ? copy.createCta : copy.joinCta}
         </button>
       </form>
     </div>

@@ -1,5 +1,7 @@
 'use client';
 
+import { useT } from '@/i18n/TranslationProvider';
+
 type Props = {
   micOn: boolean;
   camOn: boolean;
@@ -25,14 +27,17 @@ export default function ControlsBar({
   onTimerToggle,
   onLeave,
 }: Props) {
+  const t = useT();
+  const c = t.room.controls;
+
   return (
     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
       <ControlButton
         active={micOn}
         disabled={!micAllowed}
         onClick={onToggleMic}
-        label={micOn ? 'Mute mic' : micAllowed ? 'Unmute mic' : 'Mic unavailable'}
-        title={micOn ? 'Mute' : micAllowed ? 'Unmute' : 'Mic blocked or unavailable'}
+        label={micOn ? c.muteMic : micAllowed ? c.unmuteMic : c.micUnavailable}
+        title={micOn ? c.muteTitle : micAllowed ? c.unmuteTitle : c.micBlockedTitle}
         tone={micOn ? 'sage' : 'neutral'}
       >
         {micOn ? <MicIcon /> : <MicOffIcon />}
@@ -42,8 +47,8 @@ export default function ControlsBar({
         active={camOn}
         disabled={!camAllowed}
         onClick={onToggleCam}
-        label={camOn ? 'Turn off camera' : camAllowed ? 'Turn on camera' : 'Camera unavailable'}
-        title={camOn ? 'Stop video' : camAllowed ? 'Start video' : 'Camera blocked or unavailable'}
+        label={camOn ? c.camOff : camAllowed ? c.camOn : c.camUnavailable}
+        title={camOn ? c.stopVideoTitle : camAllowed ? c.startVideoTitle : c.camBlockedTitle}
         tone={camOn ? 'sage' : 'neutral'}
       >
         {camOn ? <CamIcon /> : <CamOffIcon />}
@@ -55,7 +60,7 @@ export default function ControlsBar({
         disabled={!canStartTimer}
         className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-3 text-sm font-semibold hover:bg-charcoal-light disabled:cursor-not-allowed disabled:opacity-50 transition-colors"
       >
-        {timerRunning ? 'Pause timer' : 'Start timer'}
+        {timerRunning ? c.pauseTimer : c.startTimer}
       </button>
 
       <button
@@ -63,7 +68,7 @@ export default function ControlsBar({
         onClick={onLeave}
         className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 px-5 py-3 text-sm font-medium text-charcoal hover:bg-warm transition-colors"
       >
-        Leave
+        {c.leave}
       </button>
     </div>
   );

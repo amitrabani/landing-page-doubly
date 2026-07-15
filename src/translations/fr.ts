@@ -612,12 +612,62 @@ const fr = {
           label: 'La plus flippante',
           reason:
             'Celle que tu préférerais ne pas regarder. La faire en premier libère ta journée.',
+          noSignalReason:
+            'Rien ici ne fait vraiment peur, et c’est déjà une bonne nouvelle. On en a pris une au hasard.',
         },
         random: {
           label: 'Choisis, c’est tout',
           reason: 'Zéro délibération. La liste a choisi pour toi. Lance-toi.',
         },
       },
+      // Mots de la peur pour le mode « La plus flippante ». Comparés en
+      // sous-chaîne à l’élément mis en minuscules : on privilégie donc les
+      // racines courtes (« impôt » attrape « impôts », « dentiste » attrape
+      // « prendre rendez-vous chez le dentiste »). Ce ne sont PAS les mots
+      // anglais traduits : ce sont les institutions et les corvées que les
+      // francophones évitent vraiment (urssaf, cpam, paperasse, relances).
+      scaryWords: [
+        'impôt',
+        'impot',
+        'urssaf',
+        'cpam',
+        'ameli',
+        'sécu',
+        'mutuelle',
+        'assurance',
+        'facture',
+        'loyer',
+        'dette',
+        'crédit',
+        'amende',
+        'paperasse',
+        'administrat',
+        'démarche',
+        'note de frais',
+        'résili',
+        'désabonn',
+        'relanc',
+        'échéance',
+        'retard',
+        'oubli',
+        'repouss',
+        'procrastin',
+        'aurais dû',
+        'aurais du',
+        'dentiste',
+        'médecin',
+        'notaire',
+        'huissier',
+        'tribunal',
+        'annul',
+        'répondre',
+        'repondre',
+        'appeler',
+        'excus',
+        'confront',
+        'patron',
+        'rupture',
+      ],
       pickCta: 'Choisis-en une pour moi',
       pickAnotherCta: 'Choisis-en une autre',
       emptyHint: 'Ajoute au moins un élément, puis tape sur choisir.',
@@ -858,6 +908,126 @@ const fr = {
       tryInApp: 'Essaie-le dans l’appli',
       appStoreAria: (label: string) => `${label} sur l’App Store`,
       breadcrumbAria: 'Fil d’Ariane',
+    },
+  },
+
+  // La salle de body doubling en direct, sur /r/[id].
+  //
+  // Contrairement au reste du fichier, cette section n’est pas choisie par
+  // l’URL : la langue est résolue pour chaque personne à partir de son propre
+  // Accept-Language. Les deux participants peuvent donc lire la même salle dans
+  // deux langues différentes. Ne jamais écrire une phrase qui suppose le
+  // contraire.
+  room: {
+    join: {
+      titleFirst: 'Lance une session de focus',
+      titleJoin: 'Rejoins la session de focus',
+      subtitleFirst:
+        'Choisis ton prénom et la durée. Tu pourras partager le lien d’invitation une fois à l’intérieur.',
+      subtitleJoin: 'Choisis ton prénom et entre. Le minuteur est déjà réglé par l’hôte.',
+      nameLabel: 'Ton prénom',
+      namePlaceholder: 'Camille',
+      avatarLabel: 'Choisis un avatar',
+      avatarChooseAria: (emoji: string) => `Choisir l’avatar ${emoji}`,
+      durationLabel: 'Durée de la session',
+      minutes: (n: number) => `${n} min`,
+      permissionNote:
+        'L’écran suivant demande l’accès à la caméra et au micro. Les deux sont facultatifs. Si tu passes, tu entres avec une tuile fantôme et l’autre personne voit quand même que tu es là.',
+      createCta: 'Créer la salle',
+      joinCta: 'Rejoindre la salle',
+    },
+    header: {
+      eyebrow: 'Salle de body doubling',
+      withPeer: (name: string) => `Toi et ${name}`,
+      waiting: 'En attente de ton binôme',
+      copyInvite: 'Copier le lien d’invitation',
+      linkCopied: 'Lien copié',
+    },
+    full: {
+      title: 'La salle est pleine',
+      body: 'Une salle de body doubling accueille deux personnes. Bonne nouvelle : en ouvrir une autre prend un clic.',
+      cta: 'Ouvrir une nouvelle salle',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Étape 0 sur 3',
+        title: 'Partage ton lien',
+        body: 'Envoie l’adresse de la page à une personne. La session démarre dès qu’elle arrive.',
+      },
+      intro: {
+        eyebrow: 'Étape 1 sur 3 · Intro',
+        title: 'Dis bonjour et annonce ce que tu vas faire',
+        titleWithPeer: (name: string) => `Fais coucou à ${name}`,
+        body: 'Prends 60 secondes. Caméra allumée, une phrase chacun. Dire son objectif à voix haute, c’est ce qui le rend réel.',
+        cta: 'Démarrer le focus',
+      },
+      focus: {
+        eyebrow: 'Étape 2 sur 3 · Focus',
+        title: 'Tête baissée. Vous travaillez ensemble, en silence.',
+        body: 'Micro allumé ou coupé, les deux marchent. Le vrai truc, c’est que l’autre soit là.',
+        cta: 'Arrêter le focus maintenant',
+      },
+      wrapUp: {
+        eyebrow: 'Étape 3 sur 3 · Bilan',
+        title: 'Partage une victoire et une chose qui a coincé',
+        body: 'Un petit bilan à voix haute ancre ce que tu viens de faire et rend la prochaine session plus facile à lancer.',
+        cta: 'Terminer la session',
+      },
+      done: {
+        eyebrow: 'Session terminée',
+        title: 'Bien joué. Tu étais là.',
+        body: 'Ça compte. Reste pour une autre, ou ferme l’onglet et va te faire du bien.',
+        runAnother: 'En relancer une',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (toi)`,
+      peerFallbackName: 'En attente',
+      waitingForPartner: 'En attente de ton binôme...',
+      micMuted: 'Micro coupé',
+      goalPlaceholderIntro: 'Ce sur quoi je vais bosser...',
+      goalPlaceholderFocus: 'Ce sur quoi je bosse',
+      reflectionPlaceholder: 'Une victoire ou un blocage...',
+      peerNoGoal: 'Pas encore d’objectif',
+      peerNoReflection: 'En attente de son bilan',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Couper le micro',
+      unmuteMic: 'Activer le micro',
+      micUnavailable: 'Micro indisponible',
+      muteTitle: 'Couper',
+      unmuteTitle: 'Activer',
+      micBlockedTitle: 'Micro bloqué ou indisponible',
+      camOff: 'Couper la caméra',
+      camOn: 'Activer la caméra',
+      camUnavailable: 'Caméra indisponible',
+      stopVideoTitle: 'Couper la vidéo',
+      startVideoTitle: 'Activer la vidéo',
+      camBlockedTitle: 'Caméra bloquée ou indisponible',
+      startTimer: 'Démarrer le minuteur',
+      pauseTimer: 'Mettre le minuteur en pause',
+      leave: 'Quitter',
+      retry: 'Réessayer',
+    },
+    reactions: {
+      groupAria: 'Envoyer une réaction',
+      sendAria: (emoji: string) => `Envoyer la réaction ${emoji}`,
+    },
+    status: {
+      peerLeft: 'Ton binôme a quitté la salle.',
+      shareToUnlock:
+        'Partage le lien d’invitation pour faire venir quelqu’un. La session démarre dès son arrivée.',
+      upNext: (minutes: number) => `Ensuite : ${minutes} min de focus`,
+      planOnArrival: (minutes: number) =>
+        `Au programme : ${minutes} min de focus dès que ton binôme arrive`,
+      wrapUpBreath: 'Respire un coup. Le minuteur est en pause.',
+      timerAria: (remaining: string) => `Minuteur, il reste ${remaining}`,
+    },
+    errors: {
+      p2pBlocked:
+        'Connexion impossible. Ton réseau bloque peut-être les connexions pair-à-pair. Essaie un autre réseau.',
+      mediaUnavailable: 'Caméra et micro indisponibles.',
     },
   },
 

@@ -49,6 +49,10 @@ const LOCALIZED_KEY_RECORDS = new Set([
   '.twoQuestions.responses',
 ]);
 
+// Arrays whose LENGTH is legitimately per-locale (nothing indexes them
+// positionally). Every other array must match en's length.
+const FREE_LENGTH_ARRAYS = new Set(['.toolWidgets.pickOne.scaryWords']);
+
 // Recursively compare value shapes. Arrays of objects must have the same
 // length (demo code zips them against en-derived state); leaf kinds must match.
 function compareShape(ref, val, trail, problems) {
@@ -59,7 +63,8 @@ function compareShape(ref, val, trail, problems) {
     return;
   }
   if (Array.isArray(ref)) {
-    if (ref.length !== val.length) {
+    const arrayPath = trail.slice(trail.indexOf('.'));
+    if (ref.length !== val.length && !FREE_LENGTH_ARRAYS.has(arrayPath)) {
       problems.push(`${trail}: array length ${val.length} != en's ${ref.length}`);
     }
     const n = Math.min(ref.length, val.length);
@@ -132,7 +137,52 @@ function checkInvariants(locale, dict, problems) {
     }
   }
 
-  // 4. Highlights must be verbatim substrings of their titles.
+  // 4. The "Scariest" pick-one mode ranks items by substring-matching them
+  //    against scaryWords. The words must therefore be in the SAME language as
+  //    the items the user will type, and lowercase, or nothing ever matches and
+  //    the mode degrades to a random pick with an apologetic reason line. That
+  //    degradation is silent by design (it is the honest fallback), which is
+  //    exactly why it needs a build-time guard: an English list copy-pasted into
+  //    de.ts would look fine and rank nothing.
+  const { scaryWords, modes } = dict.toolWidgets.pickOne;
+  if (!Array.isArray(scaryWords) || scaryWords.length < 12) {
+    problems.push(
+      `toolWidgets.pickOne.scaryWords: only ${scaryWords?.length ?? 0} words (need >= 12, or "Scariest" ranks almost nothing)`,
+    );
+  }
+  const seen = new Set();
+  for (const w of scaryWords ?? []) {
+    if (typeof w !== 'string' || !w.trim()) {
+      problems.push(`toolWidgets.pickOne.scaryWords: empty entry`);
+      continue;
+    }
+    if (w !== w.toLowerCase()) {
+      problems.push(
+        `toolWidgets.pickOne.scaryWords: ${JSON.stringify(w)} is not lowercase (matched against a lowercased item, so it can never hit)`,
+      );
+    }
+    if (seen.has(w)) {
+      problems.push(`toolWidgets.pickOne.scaryWords: duplicate entry ${JSON.stringify(w)}`);
+    }
+    seen.add(w);
+  }
+  if (!modes.scariest.noSignalReason) {
+    problems.push('toolWidgets.pickOne.modes.scariest.noSignalReason: missing');
+  }
+  // The words must bite on this locale's OWN placeholder list — the sample text
+  // we literally show the user. If they do not, they are almost certainly still
+  // English (or translated too literally to match real input).
+  if (locale !== 'en' && Array.isArray(scaryWords)) {
+    const sample = dict.toolWidgets.pickOne.inputPlaceholder.toLowerCase();
+    const hits = scaryWords.filter((w) => typeof w === 'string' && sample.includes(w));
+    if (hits.length === 0) {
+      problems.push(
+        `toolWidgets.pickOne.scaryWords: no word matches this locale's own inputPlaceholder (${JSON.stringify(dict.toolWidgets.pickOne.inputPlaceholder)}) — the list is probably still English, and "Scariest" would rank nothing`,
+      );
+    }
+  }
+
+  // 5. Highlights must be verbatim substrings of their titles.
   const highlightPairs = [
     ['problem', dict.problem.title, dict.problem.titleHighlight],
     ['brainDumpDemo', dict.brainDumpDemo.title, dict.brainDumpDemo.titleHighlight],

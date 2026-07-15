@@ -597,12 +597,58 @@ const en = {
         scariest: {
           label: 'Scariest',
           reason: 'The one you would rather not look at. Doing it first frees the day.',
+          // Shown when nothing on the list trips a dread word. Ranking by length
+          // instead would be a lie, so we say what we actually did.
+          noSignalReason:
+            'Nothing here reads as scary, which is its own kind of good news. Picked one at random.',
         },
         random: {
           label: 'Just pick one',
           reason: 'No deliberation. The list picked itself. Just start.',
         },
       },
+      // Dread words for the "Scariest" mode. Matched as substrings against the
+      // lowercased item, so stems beat full words: "tax" also catches "taxes".
+      //
+      // LOCALIZING THIS IS NOT TRANSLATION. Each locale needs the things people
+      // in that language actually avoid, named the way they name them: the tax
+      // authority ("IRS" -> "Finanzamt" -> "מס הכנסה"), the bureaucracy, the
+      // conversation nobody wants to have. A literal translation of this list is
+      // worse than useless, because it silently ranks nothing.
+      scaryWords: [
+        'tax',
+        'doctor',
+        'dentist',
+        'insurance',
+        'bill',
+        'rent',
+        'mortgage',
+        'lawyer',
+        'attorney',
+        'court',
+        'irs',
+        'hmrc',
+        'landlord',
+        'email back',
+        'reply',
+        'call back',
+        'apolog',
+        'boss',
+        'manager',
+        'difficult conversation',
+        'confront',
+        'breakup',
+        'cancel',
+        'unsubscribe',
+        'dispute',
+        'complaint',
+        'overdue',
+        'deadline',
+        'forgot',
+        'should have',
+        'meant to',
+        'been putting off',
+      ],
       pickCta: 'Pick one for me',
       pickAnotherCta: 'Pick another',
       emptyHint: 'Add at least one item, then tap pick.',
@@ -839,6 +885,128 @@ const en = {
       tryInApp: 'Try it in the app',
       appStoreAria: (label: string) => `${label} on the App Store`,
       breadcrumbAria: 'Breadcrumb',
+    },
+  },
+
+  // The live body-doubling room at /r/[id].
+  //
+  // Unlike every other section, this one is NOT chosen by the URL. /r/[id] is a
+  // link two people share, so the locale is resolved per viewer from their own
+  // Accept-Language: the same room renders in Hebrew for one participant and in
+  // German for the other. Nothing here may assume both people read the same
+  // language, so never build a sentence out of a peer's UI strings.
+  room: {
+    join: {
+      titleFirst: 'Start a focus session',
+      titleJoin: 'Join the focus session',
+      subtitleFirst:
+        'Pick your name and the session length. You can share the invite link once you are in.',
+      subtitleJoin: 'Pick your name and join. The host has already set the timer.',
+      nameLabel: 'Your name',
+      // A short, common first name in this language. It is a placeholder, not a
+      // brand: use a name that reads as ordinary to a native speaker.
+      namePlaceholder: 'Alex',
+      avatarLabel: 'Pick an avatar',
+      avatarChooseAria: (emoji: string) => `Choose ${emoji} avatar`,
+      durationLabel: 'Session length',
+      minutes: (n: number) => `${n} min`,
+      permissionNote:
+        'The next screen asks for camera and microphone access. Both are optional. If you skip them, you will join with a ghost tile and other people in the room can still see you are there.',
+      createCta: 'Create room',
+      joinCta: 'Join room',
+    },
+    header: {
+      eyebrow: 'Body doubling room',
+      withPeer: (name: string) => `You and ${name}`,
+      waiting: 'Waiting for your partner',
+      copyInvite: 'Copy invite link',
+      linkCopied: 'Link copied',
+    },
+    full: {
+      title: 'Room is full',
+      body: 'A body doubling room fits two people. The good news, starting a new one takes one click.',
+      cta: 'Start a new room',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Step 0 of 3',
+        title: 'Share your link',
+        body: 'Send the page URL to one person. The session starts the moment they join.',
+      },
+      intro: {
+        eyebrow: 'Step 1 of 3 · Intro',
+        title: 'Wave hi and say what you are about to do',
+        titleWithPeer: (name: string) => `Wave hi to ${name}`,
+        body: 'Take 60 seconds. Camera on, one sentence each. Saying the goal out loud is what makes it stick.',
+        cta: 'Start focus',
+      },
+      focus: {
+        eyebrow: 'Step 2 of 3 · Focus',
+        title: 'Heads down. You are working together in silence.',
+        body: 'Mic on or off, both fine. The other person being there is the point.',
+        cta: 'End focus early',
+      },
+      wrapUp: {
+        eyebrow: 'Step 3 of 3 · Wrap-up',
+        title: 'Share one win and one thing that tripped you up',
+        body: 'A short out-loud reflection locks in what you just did and makes the next session easier to start.',
+        cta: 'End session',
+      },
+      done: {
+        eyebrow: 'Session complete',
+        title: 'Nice work. You showed up.',
+        body: 'That counts. Stay and run another, or close the tab and go do something kind for yourself.',
+        runAnother: 'Run another',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (you)`,
+      peerFallbackName: 'Waiting',
+      waitingForPartner: 'Waiting for partner...',
+      micMuted: 'Microphone muted',
+      goalPlaceholderIntro: 'What I am about to work on...',
+      goalPlaceholderFocus: "What I'm working on",
+      reflectionPlaceholder: 'One win or one snag...',
+      peerNoGoal: 'No goal yet',
+      peerNoReflection: 'Waiting for their wrap-up',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Mute mic',
+      unmuteMic: 'Unmute mic',
+      micUnavailable: 'Mic unavailable',
+      muteTitle: 'Mute',
+      unmuteTitle: 'Unmute',
+      micBlockedTitle: 'Mic blocked or unavailable',
+      camOff: 'Turn off camera',
+      camOn: 'Turn on camera',
+      camUnavailable: 'Camera unavailable',
+      stopVideoTitle: 'Stop video',
+      startVideoTitle: 'Start video',
+      camBlockedTitle: 'Camera blocked or unavailable',
+      startTimer: 'Start timer',
+      pauseTimer: 'Pause timer',
+      leave: 'Leave',
+      retry: 'Retry',
+    },
+    reactions: {
+      groupAria: 'Send a reaction',
+      sendAria: (emoji: string) => `Send ${emoji} reaction`,
+    },
+    status: {
+      peerLeft: 'Your partner left the room.',
+      shareToUnlock:
+        'Share the invite link to bring someone in. The session unlocks when they arrive.',
+      upNext: (minutes: number) => `Up next: ${minutes}-minute focus block`,
+      planOnArrival: (minutes: number) =>
+        `Plan: ${minutes}-minute focus block once your partner arrives`,
+      wrapUpBreath: 'Take a breath. The timer is paused.',
+      timerAria: (remaining: string) => `Timer, ${remaining} remaining`,
+    },
+    errors: {
+      p2pBlocked:
+        "Can't connect. Your network may block peer-to-peer connections. Try a different network.",
+      mediaUnavailable: 'Camera and microphone unavailable.',
     },
   },
 

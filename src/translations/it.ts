@@ -595,12 +595,65 @@ const it = {
         scariest: {
           label: 'La più spaventosa',
           reason: 'Quella che preferiresti non guardare. Farla per prima ti libera la giornata.',
+          // Mostrato quando nella lista non c’è nessuna parola che fa paura. Ordinare
+          // per lunghezza sarebbe una bugia, quindi diciamo cosa abbiamo fatto davvero.
+          noSignalReason:
+            'Qui non c’è niente che spaventi davvero, e anche questa è una buona notizia. Ne abbiamo scelta una a caso.',
         },
         random: {
           label: 'Scegli e basta',
           reason: 'Niente ragionamenti. Ha scelto la lista. Tu inizia e basta.',
         },
       },
+      // Parole-paura per la modalità «La più spaventosa». Confrontate come
+      // sottostringhe dell’elemento in minuscolo, quindi le radici battono le
+      // parole intere: «tass» prende anche «tasse».
+      //
+      // NON È UNA TRADUZIONE. Sono le cose che in Italia si rimandano davvero,
+      // chiamate come le chiama chi le scrive: il fisco, la burocrazia, la
+      // telefonata che nessuno vuole fare.
+      scaryWords: [
+        'tass',
+        'f24',
+        'agenzia delle entrate',
+        'commercialist',
+        'inps',
+        'dichiarazione',
+        'bollett',
+        'bollo',
+        'multa',
+        'mutuo',
+        'affitt',
+        'debit',
+        'assicuraz',
+        'burocra',
+        'raccomandat',
+        'scad',
+        'in ritardo',
+        'arretrat',
+        'avvocat',
+        'notaio',
+        'tribunal',
+        'dentist',
+        'medic',
+        'ospedal',
+        'rispond',
+        'richiama',
+        // «scusa»/«scuse» e non la radice «scus»: quella prenderebbe anche
+        // «discussione», che non è per forza una cosa da temere.
+        'scusa',
+        'scuse',
+        'capo',
+        'colloqui',
+        'affront',
+        'reclam',
+        'disd',
+        'condomin',
+        'dimenticat',
+        'avrei dovuto',
+        'rimando da',
+        'procrastin',
+      ],
       pickCta: 'Scegline una per me',
       pickAnotherCta: 'Scegline un’altra',
       emptyHint: 'Aggiungi almeno un elemento, poi tocca scegli.',
@@ -838,6 +891,128 @@ const it = {
       tryInApp: 'Provalo nell’app',
       appStoreAria: (label: string) => `${label} sull’App Store`,
       breadcrumbAria: 'Percorso di navigazione',
+    },
+  },
+
+  // La stanza di body doubling dal vivo su /r/[id].
+  //
+  // A differenza di ogni altra sezione, questa NON dipende dall’URL: /r/[id] è un
+  // link che due persone si scambiano, quindi la lingua si risolve per ciascuno
+  // dalla sua Accept-Language. La stessa stanza può essere in ebraico per uno e in
+  // tedesco per l’altro: niente qui può dare per scontato che leggano la stessa
+  // lingua, quindi mai comporre una frase con le stringhe dell’altra persona.
+  room: {
+    join: {
+      titleFirst: 'Inizia una sessione di concentrazione',
+      titleJoin: 'Unisciti alla sessione di concentrazione',
+      subtitleFirst:
+        'Scegli il tuo nome e la durata. Il link d’invito lo condividi una volta dentro.',
+      subtitleJoin: 'Scegli il tuo nome ed entra. Il timer è già impostato.',
+      nameLabel: 'Il tuo nome',
+      // Un nome proprio breve e comune in questa lingua. È un segnaposto, non un
+      // marchio: usa un nome che a un madrelingua suoni ordinario.
+      namePlaceholder: 'Giulia',
+      avatarLabel: 'Scegli un avatar',
+      avatarChooseAria: (emoji: string) => `Scegli l’avatar ${emoji}`,
+      durationLabel: 'Durata della sessione',
+      minutes: (n: number) => `${n} min`,
+      permissionNote:
+        'Nella schermata dopo ti verranno chiesti videocamera e microfono. Sono entrambi facoltativi: se li salti entri con un riquadro fantasma e nella stanza si vede comunque che ci sei.',
+      createCta: 'Crea la stanza',
+      joinCta: 'Entra nella stanza',
+    },
+    header: {
+      eyebrow: 'Stanza di body doubling',
+      withPeer: (name: string) => `Tu e ${name}`,
+      waiting: 'In attesa dell’altra persona',
+      copyInvite: 'Copia il link d’invito',
+      linkCopied: 'Link copiato',
+    },
+    full: {
+      title: 'La stanza è piena',
+      body: 'In una stanza di body doubling si sta in due. La buona notizia: aprirne una nuova è questione di un clic.',
+      cta: 'Apri una nuova stanza',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Passo 0 di 3',
+        title: 'Condividi il link',
+        body: 'Manda l’indirizzo della pagina a una persona. La sessione parte appena entra.',
+      },
+      intro: {
+        eyebrow: 'Passo 1 di 3 · Presentazioni',
+        title: 'Salutatevi e dite cosa state per fare',
+        titleWithPeer: (name: string) => `Saluta ${name}`,
+        body: 'Prendetevi 60 secondi. Videocamera accesa, una frase a testa. Dire l’obiettivo ad alta voce è ciò che lo fissa.',
+        cta: 'Inizia la concentrazione',
+      },
+      focus: {
+        eyebrow: 'Passo 2 di 3 · Concentrazione',
+        title: 'Testa bassa. State lavorando insieme, in silenzio.',
+        body: 'Microfono acceso o spento, va bene lo stesso. Il punto è che l’altra persona è lì.',
+        cta: 'Termina in anticipo',
+      },
+      wrapUp: {
+        eyebrow: 'Passo 3 di 3 · Chiusura',
+        title: 'Dite una cosa andata bene e una che vi ha bloccato',
+        body: 'Una riflessione breve ad alta voce fissa quello che avete appena fatto e rende più facile ricominciare la prossima volta.',
+        cta: 'Chiudi la sessione',
+      },
+      done: {
+        eyebrow: 'Sessione completata',
+        title: 'Bel lavoro. Ce l’hai fatta.',
+        body: 'Vale. Resta e fanne un’altra, oppure chiudi la scheda e fai qualcosa di gentile per te.',
+        runAnother: 'Fanne un’altra',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (tu)`,
+      peerFallbackName: 'In attesa',
+      waitingForPartner: 'In attesa dell’altra persona...',
+      micMuted: 'Microfono disattivato',
+      goalPlaceholderIntro: 'Su cosa sto per lavorare...',
+      goalPlaceholderFocus: 'Su cosa sto lavorando',
+      reflectionPlaceholder: 'Una cosa andata bene o un intoppo...',
+      peerNoGoal: 'Ancora nessun obiettivo',
+      peerNoReflection: 'In attesa della sua chiusura',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Disattiva il microfono',
+      unmuteMic: 'Attiva il microfono',
+      micUnavailable: 'Microfono non disponibile',
+      muteTitle: 'Disattiva',
+      unmuteTitle: 'Attiva',
+      micBlockedTitle: 'Microfono bloccato o non disponibile',
+      camOff: 'Spegni la videocamera',
+      camOn: 'Accendi la videocamera',
+      camUnavailable: 'Videocamera non disponibile',
+      stopVideoTitle: 'Interrompi il video',
+      startVideoTitle: 'Avvia il video',
+      camBlockedTitle: 'Videocamera bloccata o non disponibile',
+      startTimer: 'Avvia il timer',
+      pauseTimer: 'Metti in pausa il timer',
+      leave: 'Esci',
+      retry: 'Riprova',
+    },
+    reactions: {
+      groupAria: 'Invia una reazione',
+      sendAria: (emoji: string) => `Invia la reazione ${emoji}`,
+    },
+    status: {
+      peerLeft: 'L’altra persona ha lasciato la stanza.',
+      shareToUnlock:
+        'Condividi il link d’invito per far entrare qualcuno. La sessione si sblocca appena arriva.',
+      upNext: (minutes: number) => `Poi: ${minutes} minuti di concentrazione`,
+      planOnArrival: (minutes: number) =>
+        `Piano: ${minutes} minuti di concentrazione appena arriva l’altra persona`,
+      wrapUpBreath: 'Fai un respiro. Il timer è in pausa.',
+      timerAria: (remaining: string) => `Timer, ${remaining} rimanenti`,
+    },
+    errors: {
+      p2pBlocked:
+        'Impossibile connettersi. La tua rete potrebbe bloccare le connessioni peer-to-peer. Prova con un’altra rete.',
+      mediaUnavailable: 'Videocamera e microfono non disponibili.',
     },
   },
 };

@@ -1,5 +1,7 @@
 'use client';
 
+import { useT } from '@/i18n/TranslationProvider';
+
 export type SessionPhase = 'waiting' | 'intro' | 'focus' | 'wrap-up' | 'done';
 
 type Props = {
@@ -11,42 +13,6 @@ type Props = {
   onLeave: () => void;
 };
 
-const COPY: Record<
-  SessionPhase,
-  { eyebrow: string; title: string; body: string; cta: string | null }
-> = {
-  waiting: {
-    eyebrow: 'Step 0 of 3',
-    title: 'Share your link',
-    body: 'Send the page URL to one person. The session starts the moment they join.',
-    cta: null,
-  },
-  intro: {
-    eyebrow: 'Step 1 of 3 · Intro',
-    title: 'Wave hi and say what you are about to do',
-    body: 'Take 60 seconds. Camera on, one sentence each. Saying the goal out loud is what makes it stick.',
-    cta: 'Start focus',
-  },
-  focus: {
-    eyebrow: 'Step 2 of 3 · Focus',
-    title: 'Heads down. You are working together in silence.',
-    body: 'Mic on or off, both fine. The other person being there is the point.',
-    cta: 'End focus early',
-  },
-  'wrap-up': {
-    eyebrow: 'Step 3 of 3 · Wrap-up',
-    title: 'Share one win and one thing that tripped you up',
-    body: 'A short out-loud reflection locks in what you just did and makes the next session easier to start.',
-    cta: 'End session',
-  },
-  done: {
-    eyebrow: 'Session complete',
-    title: 'Nice work. You showed up.',
-    body: 'That counts. Stay and run another, or close the tab and go do something kind for yourself.',
-    cta: null,
-  },
-};
-
 export default function PhaseBanner({
   phase,
   peerName,
@@ -55,7 +21,26 @@ export default function PhaseBanner({
   onRestart,
   onLeave,
 }: Props) {
-  const copy = COPY[phase];
+  const t = useT();
+  const p = t.room.phases;
+
+  // The peer's name is the only thing interpolated here, and it is a name the
+  // peer typed, not a translated string, so it is safe to drop into any locale.
+  const copy: { eyebrow: string; title: string; body: string; cta: string | null } =
+    phase === 'waiting'
+      ? { ...p.waiting, cta: null }
+      : phase === 'intro'
+        ? {
+            eyebrow: p.intro.eyebrow,
+            title: peerPresent ? p.intro.titleWithPeer(peerName) : p.intro.title,
+            body: p.intro.body,
+            cta: p.intro.cta,
+          }
+        : phase === 'focus'
+          ? { ...p.focus, cta: p.focus.cta }
+          : phase === 'wrap-up'
+            ? { ...p.wrapUp, cta: p.wrapUp.cta }
+            : { ...p.done, cta: null };
 
   const tint =
     phase === 'intro'
@@ -76,7 +61,7 @@ export default function PhaseBanner({
             {copy.eyebrow}
           </p>
           <h2 className="mt-1 font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal sm:text-xl">
-            {phase === 'intro' && peerPresent ? `Wave hi to ${peerName}` : copy.title}
+            {copy.title}
           </h2>
           <p className="mt-1 text-sm leading-6 text-charcoal-light">{copy.body}</p>
         </div>
@@ -88,14 +73,14 @@ export default function PhaseBanner({
               onClick={onRestart}
               className="rounded-full bg-charcoal px-5 py-2.5 text-sm font-semibold text-cream hover:bg-charcoal-light transition-colors"
             >
-              Run another
+              {p.done.runAnother}
             </button>
             <button
               type="button"
               onClick={onLeave}
               className="rounded-full border border-charcoal/20 bg-white px-5 py-2.5 text-sm font-medium text-charcoal hover:bg-warm transition-colors"
             >
-              Leave
+              {t.room.controls.leave}
             </button>
           </div>
         ) : copy.cta ? (
