@@ -771,15 +771,15 @@ const de = {
       privacyNote: 'Läuft in deinem Browser. Nichts wird aufgezeichnet, nichts hochgeladen.',
       sounds: {
         brown: {
-          name: 'Brown',
+          name: 'Braun',
           description: 'Tief und grollend. Wie ein ferner Wasserfall. Das aus TikTok.',
         },
         pink: {
-          name: 'Pink',
-          description: 'Weicher als White, weniger bassig als Brown. Ausgewogen.',
+          name: 'Rosa',
+          description: 'Weicher als Weiß, weniger bassig als Braun. Ausgewogen.',
         },
         white: {
-          name: 'White',
+          name: 'Weiß',
           description: 'Das Rauschen eines alten Fernsehers. Hell und gleichmäßig.',
         },
       },
