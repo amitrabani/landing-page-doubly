@@ -595,12 +595,68 @@ const nl = {
         scariest: {
           label: 'Engste',
           reason: 'Die waar je liever niet naar kijkt. Doe hem eerst en je dag is vrij.',
+          // Getoond als niets op de lijst een dreadwoord raakt. Ranken op lengte
+          // zou een leugen zijn, dus zeggen we gewoon wat we echt gedaan hebben.
+          noSignalReason:
+            'Niets hier leest als eng, en dat is op zich goed nieuws. We kozen er willekeurig één.',
         },
         random: {
           label: 'Kies er gewoon één',
           reason: 'Niet wikken en wegen. De lijst koos zelf. Begin gewoon.',
         },
       },
+      // Dreadwoorden voor de modus "Engste". Ze worden als substring vergeleken
+      // met het item in kleine letters, dus stammen werken beter dan hele
+      // woorden: "tandarts" vangt ook "tandartsafspraak", "belasting" vangt ook
+      // "belastingaangifte". Nederlandse samenstellingen maken stammen sterk.
+      //
+      // DIT IS GEEN VERTALING. Dit zijn de dingen die Nederlandstaligen echt
+      // vermijden, met de namen die zij ervoor gebruiken: de Belastingdienst,
+      // het CJIB, het UWV, de toeslagen, de aanmaning, het gesprek dat niemand
+      // wil voeren. Een letterlijke vertaling van de Engelse lijst rankt niets.
+      scaryWords: [
+        'belasting',
+        'aangifte',
+        'toeslag',
+        'cjib',
+        'boete',
+        'uwv',
+        'gemeente',
+        'verzekering',
+        'hypotheek',
+        'huur',
+        'schuld',
+        'incasso',
+        'aanmaning',
+        'factuur',
+        'rekening',
+        'papierwerk',
+        'administratie',
+        'tandarts',
+        'huisarts',
+        'advocaat',
+        'opzeggen',
+        'afzeggen',
+        'excuses',
+        'confront',
+        'moeilijk gesprek',
+        'functioneringsgesprek',
+        'sollicit',
+        'baas',
+        'terugbel',
+        'terugmail',
+        'reageren',
+        'deadline',
+        'achterstallig',
+        'vergeten',
+        'uitstel',
+        'al weken',
+        'al maanden',
+        // Deliberately NOT 'eindelijk': "finally" marks aspiration ("eindelijk
+        // het kruidenrek opruimen") at least as often as dread, so it made
+        // ordinary chores outrank the dentist.
+        'allang',
+      ],
       pickCta: 'Kies er één voor mij',
       pickAnotherCta: 'Kies een andere',
       emptyHint: 'Voeg minstens één item toe en tik dan op kiezen.',
@@ -839,6 +895,128 @@ const nl = {
       tryInApp: 'Probeer het in de app',
       appStoreAria: (label: string) => `${label} in de App Store`,
       breadcrumbAria: 'Kruimelpad',
+    },
+  },
+
+  // De live body doubling-ruimte op /r/[id].
+  //
+  // Anders dan elke andere sectie wordt deze NIET door de URL gekozen. /r/[id]
+  // is een link die twee mensen delen, dus de taal wordt per kijker bepaald op
+  // basis van hun eigen Accept-Language: dezelfde ruimte is Hebreeuws voor de
+  // een en Duits voor de ander. Ga hier nooit uit van een gedeelde taal en bouw
+  // dus nooit een zin uit de UI-teksten van de ander.
+  room: {
+    join: {
+      titleFirst: 'Start een focussessie',
+      titleJoin: 'Doe mee met de focussessie',
+      subtitleFirst:
+        'Kies je naam en de lengte van de sessie. De uitnodigingslink deel je zodra je binnen bent.',
+      subtitleJoin: 'Kies je naam en doe mee. De host heeft de timer al gezet.',
+      nameLabel: 'Je naam',
+      // Een korte, gewone voornaam in deze taal. Het is een placeholder, geen
+      // merknaam: kies iets wat een moedertaalspreker doodnormaal vindt.
+      namePlaceholder: 'Sanne',
+      avatarLabel: 'Kies een avatar',
+      avatarChooseAria: (emoji: string) => `Kies avatar ${emoji}`,
+      durationLabel: 'Lengte van de sessie',
+      minutes: (n: number) => `${n} min`,
+      permissionNote:
+        'Het volgende scherm vraagt om camera en microfoon. Allebei optioneel. Sla je ze over, dan kom je binnen met een tegel zonder beeld en zien de anderen nog steeds dat je er bent.',
+      createCta: 'Ruimte aanmaken',
+      joinCta: 'Meedoen',
+    },
+    header: {
+      eyebrow: 'Body doubling-ruimte',
+      withPeer: (name: string) => `Jij en ${name}`,
+      waiting: 'Wachten op je maatje',
+      copyInvite: 'Uitnodigingslink kopiëren',
+      linkCopied: 'Link gekopieerd',
+    },
+    full: {
+      title: 'Ruimte is vol',
+      body: 'In een body doubling-ruimte passen twee mensen. Het goede nieuws: een nieuwe start je met één klik.',
+      cta: 'Start een nieuwe ruimte',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Stap 0 van 3',
+        title: 'Deel je link',
+        body: 'Stuur de link van deze pagina naar één iemand. De sessie begint zodra diegene binnenkomt.',
+      },
+      intro: {
+        eyebrow: 'Stap 1 van 3 · Kennismaken',
+        title: 'Zwaai even en zeg wat je gaat doen',
+        titleWithPeer: (name: string) => `Zwaai even naar ${name}`,
+        body: 'Neem 60 seconden. Camera aan, één zin per persoon. Je doel hardop zeggen is wat het laat plakken.',
+        cta: 'Start de focus',
+      },
+      focus: {
+        eyebrow: 'Stap 2 van 3 · Focus',
+        title: 'Koppie omlaag. Jullie werken samen in stilte.',
+        body: 'Microfoon aan of uit, allebei prima. Dat de ander er is, dat is het hele punt.',
+        cta: 'Focus eerder stoppen',
+      },
+      wrapUp: {
+        eyebrow: 'Stap 3 van 3 · Afronden',
+        title: 'Deel één succesje en één ding dat tegenzat',
+        body: 'Even hardop terugkijken zet vast wat je net deed en maakt de volgende sessie makkelijker om te starten.',
+        cta: 'Sessie beëindigen',
+      },
+      done: {
+        eyebrow: 'Sessie voltooid',
+        title: 'Goed bezig. Je was er.',
+        body: 'Dat telt. Blijf voor nog een ronde, of sluit het tabblad en doe iets liefs voor jezelf.',
+        runAnother: 'Nog een ronde',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (jij)`,
+      peerFallbackName: 'Wachten',
+      waitingForPartner: 'Wachten op je maatje...',
+      micMuted: 'Microfoon uit',
+      goalPlaceholderIntro: 'Waar ik zo aan ga werken...',
+      goalPlaceholderFocus: 'Waar ik aan werk',
+      reflectionPlaceholder: 'Eén succesje of één struikelblok...',
+      peerNoGoal: 'Nog geen doel',
+      peerNoReflection: 'Wacht op hun afronding',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Microfoon uit',
+      unmuteMic: 'Microfoon aan',
+      micUnavailable: 'Microfoon niet beschikbaar',
+      muteTitle: 'Dempen',
+      unmuteTitle: 'Dempen opheffen',
+      micBlockedTitle: 'Microfoon geblokkeerd of niet beschikbaar',
+      camOff: 'Camera uit',
+      camOn: 'Camera aan',
+      camUnavailable: 'Camera niet beschikbaar',
+      stopVideoTitle: 'Video stoppen',
+      startVideoTitle: 'Video starten',
+      camBlockedTitle: 'Camera geblokkeerd of niet beschikbaar',
+      startTimer: 'Timer starten',
+      pauseTimer: 'Timer pauzeren',
+      leave: 'Weggaan',
+      retry: 'Opnieuw',
+    },
+    reactions: {
+      groupAria: 'Stuur een reactie',
+      sendAria: (emoji: string) => `Stuur reactie ${emoji}`,
+    },
+    status: {
+      peerLeft: 'Je maatje heeft de ruimte verlaten.',
+      shareToUnlock:
+        'Deel de uitnodigingslink om iemand binnen te halen. De sessie start zodra diegene er is.',
+      upNext: (minutes: number) => `Straks: focusblok van ${minutes} minuten`,
+      planOnArrival: (minutes: number) =>
+        `Plan: focusblok van ${minutes} minuten zodra je maatje er is`,
+      wrapUpBreath: 'Haal even adem. De timer staat op pauze.',
+      timerAria: (remaining: string) => `Timer, nog ${remaining}`,
+    },
+    errors: {
+      p2pBlocked:
+        'Verbinden lukt niet. Je netwerk blokkeert misschien peer-to-peer-verbindingen. Probeer een ander netwerk.',
+      mediaUnavailable: 'Camera en microfoon niet beschikbaar.',
     },
   },
 

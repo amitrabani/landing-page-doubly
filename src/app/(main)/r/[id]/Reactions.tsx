@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 
+import { useT } from '@/i18n/TranslationProvider';
+
 export const REACTIONS = ['👋', '👍', '❤️', '🎉'] as const;
 export type ReactionEmoji = (typeof REACTIONS)[number];
 
@@ -13,10 +15,13 @@ type BarProps = {
 };
 
 export function ReactionsBar({ onSend, disabled }: BarProps) {
+  const t = useT();
+  const copy = t.room.reactions;
+
   return (
     <div
       role="group"
-      aria-label="Send a reaction"
+      aria-label={copy.groupAria}
       className="flex items-center gap-1.5 rounded-full border border-warm-dark/40 bg-white px-2 py-1.5 shadow-[0_4px_16px_rgba(45,43,50,0.08)]"
     >
       {REACTIONS.map((emoji) => (
@@ -25,7 +30,7 @@ export function ReactionsBar({ onSend, disabled }: BarProps) {
           type="button"
           disabled={disabled}
           onClick={() => onSend(emoji)}
-          aria-label={`Send ${emoji} reaction`}
+          aria-label={copy.sendAria(emoji)}
           className="flex h-9 w-9 items-center justify-center rounded-full text-xl transition-transform hover:scale-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
         >
           {emoji}

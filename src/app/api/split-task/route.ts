@@ -54,8 +54,14 @@ function normalize(parsed: Record<string, unknown>, fallbackTitle: string) {
   const subtasksRaw = source.subtasks;
   const subtasks = Array.isArray(subtasksRaw)
     ? subtasksRaw
-        .map((st: ParsedSubtask, i: number) => ({
-          text: pickString(st?.subtask, st?.text, st?.name, `Step ${i + 1}`).slice(0, 200),
+        // No text fallback here on purpose. A subtask the model returned with no
+        // subtask/text/name carries no information, so a placeholder ("Step 3")
+        // would be a phantom row next to a checkbox, and it would be English on
+        // a localized page no matter what languageDirective asked for. Letting
+        // pickString return '' lets the filter below drop the row, and the tool
+        // falls back to its own localized emptyState if nothing survives.
+        .map((st: ParsedSubtask) => ({
+          text: pickString(st?.subtask, st?.text, st?.name).slice(0, 200),
           duration: typeof st?.duration === 'string' ? st.duration.slice(0, 32) : null,
         }))
         .filter((st) => st.text.trim().length > 0)

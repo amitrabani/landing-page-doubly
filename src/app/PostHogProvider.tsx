@@ -36,6 +36,7 @@ if (typeof window !== 'undefined' && POSTHOG_KEY) {
     person_profiles: 'always',
     capture_pageview: false, // we capture manually below
     capture_pageleave: true,
+    disable_session_recording: true, // temporarily paused, remove to re-enable
     bootstrap: {
       distinctID: visitorId,
       isIdentifiedID: true,

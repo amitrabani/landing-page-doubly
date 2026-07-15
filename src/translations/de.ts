@@ -600,12 +600,63 @@ const de = {
         scariest: {
           label: 'Unangenehmste',
           reason: 'Die, die du am liebsten übersiehst. Zuerst erledigt, ist der Tag frei.',
+          // Wird gezeigt, wenn kein Eintrag ein Dread-Wort trifft. Nach Länge zu
+          // sortieren wäre gelogen, also sagen wir, was wirklich passiert ist.
+          noSignalReason:
+            'Nichts hier klingt wirklich unangenehm, das ist doch auch mal eine gute Nachricht. Wir haben zufällig gewählt.',
         },
         random: {
           label: 'Einfach eine',
           reason: 'Kein Abwägen. Die Liste hat entschieden. Fang einfach an.',
         },
       },
+      // Dread-Wörter für den Modus „Unangenehmste“. Werden als Substring gegen den
+      // kleingeschriebenen Eintrag geprüft, deshalb schlagen Stämme ganze Wörter:
+      // „steuer“ trifft auch „Steuererklärung“ und „Steuern“, „zahnarzt“ trifft
+      // „Zahnarzttermin“. Alles klein, sonst kann es nie treffen.
+      scaryWords: [
+        'steuer',
+        'finanzamt',
+        'elster',
+        'rechnung',
+        'mahnung',
+        'bußgeld',
+        'schulden',
+        'kredit',
+        'miete',
+        'vermieter',
+        'versicherung',
+        'krankenkasse',
+        'rundfunkbeitrag',
+        'behörde',
+        'bürgeramt',
+        'antrag',
+        'formular',
+        'papierkram',
+        'kündig',
+        'vertrag',
+        'anwalt',
+        'zahnarzt',
+        'hausarzt',
+        'anruf',
+        'rückruf',
+        'antworten',
+        'absag',
+        'entschuldig',
+        'chef',
+        'konflikt',
+        'streit',
+        'beschwerde',
+        'frist',
+        'deadline',
+        'überfällig',
+        'vergessen',
+        'aufgeschoben',
+        'hergeschoben',
+        'längst',
+        'bewerbung',
+        'prüfung',
+      ],
       pickCta: 'Wähl eine für mich',
       pickAnotherCta: 'Eine andere wählen',
       emptyHint: 'Füg mindestens einen Eintrag hinzu und tipp dann auf Wählen.',
@@ -720,15 +771,15 @@ const de = {
       privacyNote: 'Läuft in deinem Browser. Nichts wird aufgezeichnet, nichts hochgeladen.',
       sounds: {
         brown: {
-          name: 'Brown',
+          name: 'Braun',
           description: 'Tief und grollend. Wie ein ferner Wasserfall. Das aus TikTok.',
         },
         pink: {
-          name: 'Pink',
-          description: 'Weicher als White, weniger bassig als Brown. Ausgewogen.',
+          name: 'Rosa',
+          description: 'Weicher als Weiß, weniger bassig als Braun. Ausgewogen.',
         },
         white: {
-          name: 'White',
+          name: 'Weiß',
           description: 'Das Rauschen eines alten Fernsehers. Hell und gleichmäßig.',
         },
       },
@@ -845,6 +896,126 @@ const de = {
       tryInApp: 'Probier es in der App aus',
       appStoreAria: (label: string) => `${label} im App Store`,
       breadcrumbAria: 'Navigationspfad',
+    },
+  },
+
+  // Der Live-Body-Doubling-Raum unter /r/[id].
+  //
+  // Die Sprache wird hier NICHT über die URL gewählt, sondern pro Person aus
+  // ihrer eigenen Accept-Language. Derselbe Raum kann für die eine Person auf
+  // Deutsch und für die andere auf Hebräisch laufen. Nichts hier darf annehmen,
+  // dass beide dieselbe Sprache lesen.
+  room: {
+    join: {
+      titleFirst: 'Fokus-Session starten',
+      titleJoin: 'Der Fokus-Session beitreten',
+      subtitleFirst:
+        'Wähl deinen Namen und die Länge. Den Einladungslink teilst du, sobald du drin bist.',
+      subtitleJoin: 'Wähl deinen Namen und komm dazu. Den Timer hat der Host schon gestellt.',
+      nameLabel: 'Dein Name',
+      // Ein kurzer, alltäglicher Vorname. Platzhalter, keine Marke.
+      namePlaceholder: 'Lena',
+      avatarLabel: 'Avatar wählen',
+      avatarChooseAria: (emoji: string) => `Avatar ${emoji} wählen`,
+      durationLabel: 'Länge der Session',
+      minutes: (n: number) => `${n} Min.`,
+      permissionNote:
+        'Gleich fragt der Browser nach Kamera und Mikrofon. Beides ist freiwillig. Ohne kommst du als Geister-Kachel rein, und die andere Person sieht trotzdem, dass du da bist.',
+      createCta: 'Raum erstellen',
+      joinCta: 'Raum betreten',
+    },
+    header: {
+      eyebrow: 'Body-Doubling-Raum',
+      withPeer: (name: string) => `Du und ${name}`,
+      waiting: 'Warten auf dein Gegenüber',
+      copyInvite: 'Einladungslink kopieren',
+      linkCopied: 'Link kopiert',
+    },
+    full: {
+      title: 'Raum ist voll',
+      body: 'In einen Body-Doubling-Raum passen zwei Leute. Die gute Nachricht: Ein neuer ist einen Klick entfernt.',
+      cta: 'Neuen Raum starten',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Schritt 0 von 3',
+        title: 'Teil deinen Link',
+        body: 'Schick die Adresse dieser Seite an eine Person. Sobald sie da ist, geht es los.',
+      },
+      intro: {
+        eyebrow: 'Schritt 1 von 3 · Intro',
+        title: 'Kurz winken und sagen, was du gleich machst',
+        titleWithPeer: (name: string) => `Winke ${name} zu`,
+        body: 'Nimm dir 60 Sekunden. Kamera an, ein Satz pro Person. Das Ziel laut zu sagen, ist der ganze Trick.',
+        cta: 'Fokus starten',
+      },
+      focus: {
+        eyebrow: 'Schritt 2 von 3 · Fokus',
+        title: 'Kopf runter. Ihr arbeitet zusammen, in Ruhe.',
+        body: 'Mikro an oder aus, beides okay. Es geht darum, dass die andere Person da ist.',
+        cta: 'Fokus früher beenden',
+      },
+      wrapUp: {
+        eyebrow: 'Schritt 3 von 3 · Abschluss',
+        title: 'Erzählt euch einen Erfolg und eine Stolperstelle',
+        body: 'Kurz laut zu reflektieren, verankert das Geschaffte und macht den nächsten Start leichter.',
+        cta: 'Session beenden',
+      },
+      done: {
+        eyebrow: 'Session geschafft',
+        title: 'Stark. Du warst da.',
+        body: 'Das zählt. Bleib für eine weitere Runde oder mach den Tab zu und tu dir etwas Gutes.',
+        runAnother: 'Noch eine Runde',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (du)`,
+      peerFallbackName: 'Warten',
+      waitingForPartner: 'Warten auf dein Gegenüber...',
+      micMuted: 'Mikrofon stumm',
+      goalPlaceholderIntro: 'Woran ich gleich arbeite...',
+      goalPlaceholderFocus: 'Woran ich arbeite',
+      reflectionPlaceholder: 'Ein Erfolg oder ein Haken...',
+      peerNoGoal: 'Noch kein Ziel',
+      peerNoReflection: 'Warten auf den Abschluss',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Mikro stumm',
+      unmuteMic: 'Mikro an',
+      micUnavailable: 'Mikro nicht verfügbar',
+      muteTitle: 'Stumm',
+      unmuteTitle: 'Ton an',
+      micBlockedTitle: 'Mikro blockiert oder nicht verfügbar',
+      camOff: 'Kamera aus',
+      camOn: 'Kamera an',
+      camUnavailable: 'Kamera nicht verfügbar',
+      stopVideoTitle: 'Video stoppen',
+      startVideoTitle: 'Video starten',
+      camBlockedTitle: 'Kamera blockiert oder nicht verfügbar',
+      startTimer: 'Timer starten',
+      pauseTimer: 'Timer pausieren',
+      leave: 'Verlassen',
+      retry: 'Erneut versuchen',
+    },
+    reactions: {
+      groupAria: 'Reaktion senden',
+      sendAria: (emoji: string) => `Reaktion ${emoji} senden`,
+    },
+    status: {
+      peerLeft: 'Dein Gegenüber hat den Raum verlassen.',
+      shareToUnlock:
+        'Teil den Einladungslink, damit jemand dazukommt. Sobald die Person da ist, geht es los.',
+      upNext: (minutes: number) => `Als Nächstes: ${minutes} Min. Fokusblock`,
+      planOnArrival: (minutes: number) =>
+        `Plan: ${minutes} Min. Fokusblock, sobald dein Gegenüber da ist`,
+      wrapUpBreath: 'Durchatmen. Der Timer ist pausiert.',
+      timerAria: (remaining: string) => `Timer, ${remaining} übrig`,
+    },
+    errors: {
+      p2pBlocked:
+        'Keine Verbindung. Dein Netzwerk blockiert vielleicht Peer-to-Peer-Verbindungen. Probier ein anderes Netzwerk.',
+      mediaUnavailable: 'Kamera und Mikrofon nicht verfügbar.',
     },
   },
 

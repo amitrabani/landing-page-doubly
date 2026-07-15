@@ -6,10 +6,15 @@ import type { Role, SignalMsg } from './useSignaling';
 const ICE_SERVERS: RTCIceServer[] = [{ urls: 'stun:stun.l.google.com:19302' }];
 const CONNECT_TIMEOUT_MS = 15000;
 
+// The hook reports failures as codes, not sentences. The room is rendered in
+// the viewer's own language, so the copy for these lives in the dictionary
+// (room.errors) and is resolved at render time.
+export type RoomErrorCode = 'p2p-blocked' | 'media-unavailable';
+
 export type MediaPermissions = {
   camAllowed: boolean;
   micAllowed: boolean;
-  error: string | null;
+  error: RoomErrorCode | null;
 };
 
 type Args = {
@@ -24,7 +29,7 @@ export function useWebRTC({ role, peerPresent, selfId, send, registerHandler }: 
   const [localStream, setLocalStream] = useState<MediaStream | null>(null);
   const [remoteStream, setRemoteStream] = useState<MediaStream | null>(null);
   const [connected, setConnected] = useState(false);
-  const [connectError, setConnectError] = useState<string | null>(null);
+  const [connectError, setConnectError] = useState<RoomErrorCode | null>(null);
   const [camOn, setCamOn] = useState(true);
   const [micOn, setMicOn] = useState(false);
   const [media, setMedia] = useState<MediaPermissions>({
@@ -69,7 +74,7 @@ export function useWebRTC({ role, peerPresent, selfId, send, registerHandler }: 
     setMedia({
       camAllowed,
       micAllowed,
-      error: !camAllowed && !micAllowed ? 'Camera and microphone unavailable.' : null,
+      error: !camAllowed && !micAllowed ? 'media-unavailable' : null,
     });
     setCamOn(camAllowed);
     setMicOn(false);
@@ -161,9 +166,7 @@ export function useWebRTC({ role, peerPresent, selfId, send, registerHandler }: 
     timeoutRef.current = setTimeout(() => {
       if (!pcRef.current) return;
       if (pcRef.current.connectionState !== 'connected') {
-        setConnectError(
-          "Can't connect. Your network may block peer-to-peer connections. Try a different network.",
-        );
+        setConnectError('p2p-blocked');
       }
     }, CONNECT_TIMEOUT_MS);
   }, []);

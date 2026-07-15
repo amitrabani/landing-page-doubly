@@ -593,12 +593,61 @@ const zhHans = {
         scariest: {
           label: '最吓人的',
           reason: '你最不想看的那一项。先干掉它,一整天都轻松了。',
+          // Shown when nothing on the list trips a dread word. Ranking by length
+          // instead would be a lie, so we say what we actually did.
+          noSignalReason: '这里没有一件看着吓人的,这本身就是好消息。那就随手挑了一个。',
         },
         random: {
           label: '随便挑一个',
           reason: '不用纠结。清单自己选好了。开始就行。',
         },
       },
+      // Dread words for the "Scariest" mode. Matched as substrings against the
+      // lowercased item. Chinese has no spaces, so short stems work naturally:
+      // 牙医 catches 「预约牙医」, 回复 catches 「回复邮件」. Prefer 2-character
+      // stems; a single character (税, 还, 报) collides with innocent words.
+      //
+      // This is a localized list, not a translation of the English one: it is
+      // what people here actually put off (报税, 社保, 公积金, 物业, 领导, 道歉).
+      scaryWords: [
+        '报税',
+        '个税',
+        '社保',
+        '公积金',
+        '房租',
+        '物业',
+        '房贷',
+        '还款',
+        '账单',
+        '欠费',
+        '保险',
+        '银行',
+        '签证',
+        '律师',
+        '法院',
+        '投诉',
+        '退款',
+        '退订',
+        '注销',
+        '报销',
+        '牙医',
+        '医院',
+        '体检',
+        '挂号',
+        '回复',
+        '电话',
+        '道歉',
+        '拒绝',
+        '领导',
+        '老板',
+        '面试',
+        '分手',
+        '逾期',
+        '截止',
+        '拖着',
+        '拖延',
+        '忘了',
+      ],
       pickCta: '帮我挑一个',
       pickAnotherCta: '再挑一个',
       emptyHint: '至少添加一项,再点挑选。',
@@ -834,6 +883,120 @@ const zhHans = {
       tryInApp: '在应用里试试',
       appStoreAria: (label: string) => `在 App Store 查看${label}`,
       breadcrumbAria: '面包屑导航',
+    },
+  },
+
+  // The live body-doubling room at /r/[id].
+  //
+  // The locale is resolved per viewer, so the same room can render in Chinese
+  // for one person and in German for the other. Never write copy that assumes
+  // the two people read the same language.
+  room: {
+    join: {
+      titleFirst: '开一场专注',
+      titleJoin: '加入这场专注',
+      subtitleFirst: '选个名字和时长。进去之后再把邀请链接发出去。',
+      subtitleJoin: '选个名字就能进。计时发起人已经定好了。',
+      nameLabel: '你的名字',
+      namePlaceholder: '小明',
+      avatarLabel: '选个头像',
+      avatarChooseAria: (emoji: string) => `选择 ${emoji} 头像`,
+      durationLabel: '专注时长',
+      minutes: (n: number) => `${n} 分钟`,
+      permissionNote:
+        '下一步会请求摄像头和麦克风权限,两个都可以不给。不给也能进,只是显示成一个虚影,房间里的人照样知道你在。',
+      createCta: '创建房间',
+      joinCta: '加入房间',
+    },
+    header: {
+      eyebrow: '陪伴专注房间',
+      withPeer: (name: string) => `你和 ${name}`,
+      waiting: '正在等同伴',
+      copyInvite: '复制邀请链接',
+      linkCopied: '链接已复制',
+    },
+    full: {
+      title: '房间满了',
+      body: '一个陪伴专注房间只坐两个人。好消息是,再开一个只要点一下。',
+      cta: '开一个新房间',
+    },
+    phases: {
+      waiting: {
+        eyebrow: '第 0 步,共 3 步',
+        title: '把链接发出去',
+        body: '把这个页面的链接发给一个人。对方一进来,这一场就开始。',
+      },
+      intro: {
+        eyebrow: '第 1 步,共 3 步 · 打招呼',
+        title: '打个招呼,说说你接下来要做什么',
+        titleWithPeer: (name: string) => `跟 ${name} 打个招呼`,
+        body: '花 60 秒。开着摄像头,各说一句。把目标说出口,它才算数。',
+        cta: '开始专注',
+      },
+      focus: {
+        eyebrow: '第 2 步,共 3 步 · 专注',
+        title: '埋头做事。你们一起,安静地做。',
+        body: '麦克风开着关着都行。重点是对面有个人在。',
+        cta: '提前结束专注',
+      },
+      wrapUp: {
+        eyebrow: '第 3 步,共 3 步 · 收尾',
+        title: '说一个进展,和一个卡住你的地方',
+        body: '出声说两句,把刚做完的事钉住,下一场也更容易开始。',
+        cta: '结束这一场',
+      },
+      done: {
+        eyebrow: '这一场结束了',
+        title: '干得漂亮。你出现了。',
+        body: '这就算数。留下来再来一场,或者关掉页面,去做点对自己好的事。',
+        runAnother: '再来一场',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name}(你)`,
+      peerFallbackName: '等待中',
+      waitingForPartner: '正在等同伴……',
+      micMuted: '麦克风已静音',
+      goalPlaceholderIntro: '我接下来要做的是……',
+      goalPlaceholderFocus: '我正在做的事',
+      reflectionPlaceholder: '一个进展,或者一个坎……',
+      peerNoGoal: '还没写目标',
+      peerNoReflection: '等对方收尾',
+      empty: '—',
+    },
+    controls: {
+      muteMic: '麦克风静音',
+      unmuteMic: '取消静音',
+      micUnavailable: '麦克风不可用',
+      muteTitle: '静音',
+      unmuteTitle: '取消静音',
+      micBlockedTitle: '麦克风被禁用或不可用',
+      camOff: '关闭摄像头',
+      camOn: '打开摄像头',
+      camUnavailable: '摄像头不可用',
+      stopVideoTitle: '关闭视频',
+      startVideoTitle: '开启视频',
+      camBlockedTitle: '摄像头被禁用或不可用',
+      startTimer: '开始计时',
+      pauseTimer: '暂停计时',
+      leave: '离开',
+      retry: '重试',
+    },
+    reactions: {
+      groupAria: '发个表情',
+      sendAria: (emoji: string) => `发送 ${emoji} 表情`,
+    },
+    status: {
+      peerLeft: '同伴离开了房间。',
+      shareToUnlock: '把邀请链接发出去,叫个人进来。对方一到,这一场就解锁。',
+      upNext: (minutes: number) => `接下来:${minutes} 分钟专注`,
+      planOnArrival: (minutes: number) => `计划:同伴一到,就开始 ${minutes} 分钟专注`,
+      wrapUpBreath: '喘口气。计时已经暂停。',
+      timerAria: (remaining: string) => `计时器,还剩 ${remaining}`,
+    },
+    errors: {
+      p2pBlocked: '连不上。你的网络可能屏蔽了点对点连接,换个网络试试。',
+      mediaUnavailable: '摄像头和麦克风不可用。',
     },
   },
 };

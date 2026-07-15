@@ -596,12 +596,58 @@ const ptBR = {
         scariest: {
           label: 'A mais assustadora',
           reason: 'Aquela que você prefere nem olhar. Fazer ela primeiro libera o dia.',
+          noSignalReason:
+            'Nada aqui parece assustador, e isso já é uma boa notícia. Escolhi uma no aleatório.',
         },
         random: {
           label: 'Qualquer uma',
           reason: 'Sem pensar demais. A lista escolheu sozinha. É só começar.',
         },
       },
+      // Palavras de pavor do modo "A mais assustadora". Comparadas como substring
+      // no item em minúsculas, então radicais curtos valem mais que palavras
+      // inteiras: "impost" pega "imposto" e "impostos".
+      scaryWords: [
+        'imposto',
+        'receita federal',
+        'iptu',
+        'ipva',
+        'inss',
+        'detran',
+        'cartório',
+        'burocra',
+        'boleto',
+        'fatura',
+        'dívida',
+        'aluguel',
+        'condomínio',
+        'multa',
+        'seguro',
+        'plano de saúde',
+        'médico',
+        'dentist',
+        'exame',
+        'psicólog',
+        'advogad',
+        'chefe',
+        'responder',
+        'ligar pra',
+        'ligar pro',
+        'desculp',
+        'confront',
+        'conversa difícil',
+        'desmarcar',
+        'cancelar',
+        'reclamaç',
+        'prazo',
+        'vencid',
+        'atrasad',
+        'esqueci',
+        'devia ter',
+        'enrolando',
+        'procrastin',
+        'pra depois',
+      ],
       pickCta: 'Escolha uma para mim',
       pickAnotherCta: 'Escolher outra',
       emptyHint: 'Adicione pelo menos um item e toque em escolher.',
@@ -840,6 +886,124 @@ const ptBR = {
       tryInApp: 'Experimente no app',
       appStoreAria: (label: string) => `${label} na App Store`,
       breadcrumbAria: 'Trilha de navegação',
+    },
+  },
+
+  // A sala de body doubling ao vivo em /r/[id].
+  //
+  // O idioma aqui vem do navegador de quem entra, não da URL: a mesma sala pode
+  // aparecer em português para uma pessoa e em alemão para a outra. Nunca monte
+  // uma frase juntando textos da interface com o que a outra pessoa vê.
+  room: {
+    join: {
+      titleFirst: 'Comece uma sessão de foco',
+      titleJoin: 'Entre na sessão de foco',
+      subtitleFirst:
+        'Escolha seu nome e a duração. Assim que entrar, você pode compartilhar o link do convite.',
+      subtitleJoin: 'Escolha seu nome e entre. Quem criou a sala já ajustou o timer.',
+      nameLabel: 'Seu nome',
+      namePlaceholder: 'Lucas',
+      avatarLabel: 'Escolha um avatar',
+      avatarChooseAria: (emoji: string) => `Escolher o avatar ${emoji}`,
+      durationLabel: 'Duração da sessão',
+      minutes: (n: number) => `${n} min`,
+      permissionNote:
+        'A próxima tela pede acesso à câmera e ao microfone. Os dois são opcionais. Se você pular, entra com um quadrado vazio e a outra pessoa ainda vê que você está ali.',
+      createCta: 'Criar sala',
+      joinCta: 'Entrar na sala',
+    },
+    header: {
+      eyebrow: 'Sala de body doubling',
+      withPeer: (name: string) => `Você e ${name}`,
+      waiting: 'Esperando a outra pessoa',
+      copyInvite: 'Copiar link do convite',
+      linkCopied: 'Link copiado',
+    },
+    full: {
+      title: 'A sala está cheia',
+      body: 'Uma sala de body doubling cabe duas pessoas. A boa notícia: abrir outra leva um clique.',
+      cta: 'Abrir uma sala nova',
+    },
+    phases: {
+      waiting: {
+        eyebrow: 'Passo 0 de 3',
+        title: 'Compartilhe seu link',
+        body: 'Mande o link da página para uma pessoa. A sessão começa assim que ela entrar.',
+      },
+      intro: {
+        eyebrow: 'Passo 1 de 3 · Oi',
+        title: 'Acene e diga o que você vai fazer agora',
+        titleWithPeer: (name: string) => `Acene para ${name}`,
+        body: 'Leve 60 segundos. Câmera ligada, uma frase cada. Falar a meta em voz alta é o que faz ela grudar.',
+        cta: 'Começar o foco',
+      },
+      focus: {
+        eyebrow: 'Passo 2 de 3 · Foco',
+        title: 'Cabeça baixa. Vocês estão trabalhando juntos, em silêncio.',
+        body: 'Microfone ligado ou desligado, tanto faz. Ter alguém ali é o que importa.',
+        cta: 'Encerrar o foco antes',
+      },
+      wrapUp: {
+        eyebrow: 'Passo 3 de 3 · Fechamento',
+        title: 'Conte uma vitória e uma coisa que te travou',
+        body: 'Uma reflexão curta em voz alta fixa o que você acabou de fazer e deixa a próxima sessão mais fácil de começar.',
+        cta: 'Encerrar a sessão',
+      },
+      done: {
+        eyebrow: 'Sessão concluída',
+        title: 'Muito bem. Você apareceu.',
+        body: 'Isso conta. Fique para outra rodada ou feche a aba e faça algo gentil por você.',
+        runAnother: 'Fazer outra',
+      },
+    },
+    tiles: {
+      you: (name: string) => `${name} (você)`,
+      peerFallbackName: 'Esperando',
+      waitingForPartner: 'Esperando a outra pessoa...',
+      micMuted: 'Microfone mudo',
+      goalPlaceholderIntro: 'No que eu vou trabalhar agora...',
+      goalPlaceholderFocus: 'No que estou trabalhando',
+      reflectionPlaceholder: 'Uma vitória ou um perrengue...',
+      peerNoGoal: 'Ainda sem meta',
+      peerNoReflection: 'Esperando o fechamento dela',
+      empty: '—',
+    },
+    controls: {
+      muteMic: 'Silenciar o microfone',
+      unmuteMic: 'Ligar o microfone',
+      micUnavailable: 'Microfone indisponível',
+      muteTitle: 'Silenciar',
+      unmuteTitle: 'Ativar o som',
+      micBlockedTitle: 'Microfone bloqueado ou indisponível',
+      camOff: 'Desligar a câmera',
+      camOn: 'Ligar a câmera',
+      camUnavailable: 'Câmera indisponível',
+      stopVideoTitle: 'Parar o vídeo',
+      startVideoTitle: 'Iniciar o vídeo',
+      camBlockedTitle: 'Câmera bloqueada ou indisponível',
+      startTimer: 'Iniciar o timer',
+      pauseTimer: 'Pausar o timer',
+      leave: 'Sair',
+      retry: 'Tentar de novo',
+    },
+    reactions: {
+      groupAria: 'Enviar uma reação',
+      sendAria: (emoji: string) => `Enviar a reação ${emoji}`,
+    },
+    status: {
+      peerLeft: 'A outra pessoa saiu da sala.',
+      shareToUnlock:
+        'Compartilhe o link do convite para chamar alguém. A sessão libera quando a pessoa chegar.',
+      upNext: (minutes: number) => `A seguir: bloco de foco de ${minutes} min`,
+      planOnArrival: (minutes: number) =>
+        `Plano: bloco de foco de ${minutes} min quando a outra pessoa chegar`,
+      wrapUpBreath: 'Respire fundo. O timer está pausado.',
+      timerAria: (remaining: string) => `Timer, faltam ${remaining}`,
+    },
+    errors: {
+      p2pBlocked:
+        'Não deu para conectar. Sua rede pode bloquear conexões ponto a ponto. Tente outra rede.',
+      mediaUnavailable: 'Câmera e microfone indisponíveis.',
     },
   },
 
