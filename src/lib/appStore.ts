@@ -43,6 +43,6 @@ export function trackAppStoreClick(placement: AppStorePlacement, extra?: Record<
   // event). Fire a Lead so Reddit campaigns can optimize toward it; actual
   // installs are attributed app-side via AppsFlyer. Inert until the pixel loads.
   if (typeof window !== 'undefined') {
-    window.rdt?.('track', 'Lead', { customEventName: `app_store_${placement}` });
+    window.rdt?.('track', 'Lead');
   }
 }
