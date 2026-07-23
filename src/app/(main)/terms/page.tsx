@@ -18,7 +18,7 @@ export default function TermsOfUse() {
         </Link>
 
         <h1 className="mb-2 font-display text-4xl font-bold text-charcoal">Terms of Use</h1>
-        <p className="mb-12 text-sm text-muted">Last updated: March 12, 2026</p>
+        <p className="mb-12 text-sm text-muted">Last updated: July 23, 2026</p>
 
         <Section title="1. Acceptance of Terms">
           <p className="text-base leading-7 text-charcoal-light">
@@ -31,7 +31,9 @@ export default function TermsOfUse() {
           <p className="text-base leading-7 text-charcoal-light">
             Doubly is a task management app designed for ADHD brains. It helps you organize tasks,
             collaborate with household members, track focus sessions, and build productive habits.
-            Some features use AI to assist with task creation and suggestions.
+            Some features use AI to assist with task creation and suggestions, and optional
+            integrations let you add tasks through WhatsApp, import events from Google Calendar, and
+            receive reminders by phone call.
           </p>
         </Section>
 
@@ -71,7 +73,29 @@ export default function TermsOfUse() {
           </BulletItem>
         </Section>
 
-        <Section title="6. Acceptable Use">
+        <Section title="6. Connected Services">
+          <p className="mb-4 text-base leading-7 text-charcoal-light">
+            Doubly offers optional integrations. Each one is off until you enable it, and you can
+            disconnect any of them in the app&apos;s settings at any time.
+          </p>
+          <BulletItem label="WhatsApp">
+            You may only link a WhatsApp number you own. Messages to and from the Doubly bot travel
+            over Meta&apos;s WhatsApp Business Platform, so the integration is also subject to
+            WhatsApp&apos;s terms, and your carrier&apos;s messaging and data rates may apply.
+          </BulletItem>
+          <BulletItem label="Google Calendar">
+            The calendar import is read-only and subject to Google&apos;s terms. Doubly never
+            creates, edits, or deletes events in your calendar.
+          </BulletItem>
+          <BulletItem label="AI Call Reminders">
+            By entering a phone number for call reminders, you confirm the number is yours and you
+            consent to receive automated reminder calls from Doubly at that number. Standard call
+            charges from your carrier may apply. You can stop the calls at any time by removing the
+            number in the app&apos;s settings.
+          </BulletItem>
+        </Section>
+
+        <Section title="7. Acceptable Use">
           <p className="text-base leading-7 text-charcoal-light">
             You agree not to misuse the App, including attempting to access it through unauthorized
             means, interfering with other users, or using it for any unlawful purpose. We reserve the
@@ -79,29 +103,35 @@ export default function TermsOfUse() {
           </p>
         </Section>
 
-        <Section title="7. Disclaimers">
-          <p className="text-base leading-7 text-charcoal-light">
+        <Section title="8. Disclaimers">
+          <p className="mb-4 text-base leading-7 text-charcoal-light">
             Doubly is provided &quot;as is&quot; without warranties of any kind. We do not guarantee
             uninterrupted or error-free service. AI-generated suggestions are for informational
             purposes and should not replace professional advice.
           </p>
+          <p className="text-base leading-7 text-charcoal-light">
+            Reminders, including push notifications, WhatsApp messages, and reminder calls, depend on
+            third-party networks and may be delayed or fail to arrive. Do not rely on Doubly as your
+            only reminder for anything critical, such as medication, medical appointments, or legal
+            deadlines.
+          </p>
         </Section>
 
-        <Section title="8. Limitation of Liability">
+        <Section title="9. Limitation of Liability">
           <p className="text-base leading-7 text-charcoal-light">
             To the maximum extent permitted by law, Doubly and its creators shall not be liable for
             any indirect, incidental, or consequential damages arising from your use of the App.
           </p>
         </Section>
 
-        <Section title="9. Changes to These Terms">
+        <Section title="10. Changes to These Terms">
           <p className="text-base leading-7 text-charcoal-light">
             We may update these terms from time to time. Continued use of the App after changes are
             posted constitutes acceptance of the updated terms.
           </p>
         </Section>
 
-        <Section title="10. Contact">
+        <Section title="11. Contact">
           <p className="text-base leading-7 text-charcoal-light">
             Questions about these terms? Reach us at{' '}
             <a
