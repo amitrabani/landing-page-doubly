@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useMotionValue, useReducedMotion, useSpring, useTransform, type MotionValue } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform, type MotionValue } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import { createContext, useContext, type ReactNode } from 'react';
 
 const Ctx = createContext<{ x: MotionValue<number>; y: MotionValue<number> } | null>(null);
@@ -11,7 +12,7 @@ const Ctx = createContext<{ x: MotionValue<number>; y: MotionValue<number> } | n
  * giving the scene real dimensionality. Inert under reduced motion and on touch.
  */
 export default function MouseParallax({ children, className }: { children: ReactNode; className?: string }) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   // Normalized -0.5 .. 0.5 from scene center.
   const mx = useMotionValue(0);
   const my = useMotionValue(0);

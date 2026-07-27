@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useSpring, useTransform, useVelocity } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform, useVelocity } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 
 /**
  * Page-level atmosphere: a slow rotating aurora mesh, drifting gradient blobs, and a
@@ -9,7 +10,7 @@ import { motion, useReducedMotion, useScroll, useSpring, useTransform, useVeloci
  * never affects layout geometry, so the demos' measurements stay exact.
  */
 export default function AmbientBackground() {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const { scrollY } = useScroll();
   const velocity = useVelocity(scrollY);
   const smoothVel = useSpring(velocity, { stiffness: 90, damping: 30, mass: 0.4 });

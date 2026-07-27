@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useMotionValue, useReducedMotion, useSpring } from 'framer-motion';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import type { ReactNode } from 'react';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 /** Magnetic hover: the child leans toward the cursor while hovered, springs home on leave. */
 export default function MagneticArea({ children, className, strength = 0.3 }: Props) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const x = useSpring(mx, { stiffness: 200, damping: 16 });

@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import { EASE, VIEWPORT_ONCE } from '@/lib/motion';
 import type { JSX, ReactNode } from 'react';
 
@@ -35,7 +36,7 @@ export default function WordReveal({
   highlight,
   highlightClassName,
 }: Props) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const Tag = motion[as as 'span'] as typeof motion.span;
 
   if (reduced) {
@@ -140,7 +141,7 @@ export function LineReveal({
   className?: string;
   delay?: number;
 }) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   if (reduced) return <span className={className}>{children}</span>;
   return (
     <span className={'inline-block overflow-hidden align-bottom pb-[0.1em] -mb-[0.1em] ' + (className ?? '')}>

@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useRef } from 'react';
 import { EASE } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
@@ -83,7 +84,7 @@ const floatingCards = [
 export default function Hero() {
   const t = useT();
   const sectionRef = useRef<HTMLElement>(null);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end start'],

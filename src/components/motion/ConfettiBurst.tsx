@@ -1,6 +1,7 @@
 'use client';
 
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import { useMemo } from 'react';
 
 type Props = {
@@ -19,7 +20,7 @@ const DEFAULT_COLORS = ['#A8B5A0', '#B8A9D4', '#E8967A', '#9EC5D9', '#D4C8ED'];
  * Position the parent relative; this renders absolutely centered particles.
  */
 export default function ConfettiBurst({ fire, colors = DEFAULT_COLORS, count = 18, className }: Props) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
 
   const particles = useMemo(() => {
     if (fire === 0) return [];

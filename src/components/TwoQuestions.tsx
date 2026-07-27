@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { EASE, HOVER_LIFT, SPRING, SPRING_SOFT, VIEWPORT_ONCE_TIGHT, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
@@ -47,7 +48,7 @@ const accentFor = (option: string, options: readonly string[]) => {
 export default function TwoQuestions() {
   const t = useT();
   const [answer2, setAnswer2] = useState<string | null>(null);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const accent = accentFor(answer2 ?? '', t.twoQuestions.options as readonly string[]);
 
   return (

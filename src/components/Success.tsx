@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useRef } from 'react';
 import { EASE } from '@/lib/motion';
 import MouseParallax, { MouseLayer } from '@/components/motion/MouseParallax';
@@ -9,7 +10,7 @@ import { useT } from '@/i18n/TranslationProvider';
 export default function Success() {
   const t = useT();
   const imageRef = useRef<HTMLDivElement>(null);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const { scrollYProgress } = useScroll({
     target: imageRef,
     offset: ['start end', 'end start'],

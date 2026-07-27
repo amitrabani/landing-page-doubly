@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from 'framer-motion';
+import { motion, useScroll, useTransform, type MotionValue } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useRef } from 'react';
 import WordReveal from '@/components/motion/WordReveal';
 import { useT } from '@/i18n/TranslationProvider';
@@ -28,7 +29,7 @@ export default function Stakes() {
   const bodyWords = t.stakes.body.split(' ');
   const sectionRef = useRef<HTMLElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
 
   const { scrollYProgress: sectionProgress } = useScroll({
     target: sectionRef,

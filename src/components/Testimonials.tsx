@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, type Variants } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { EASE, SPRING, SPRING_SOFT, VIEWPORT_ONCE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
@@ -51,7 +52,7 @@ const starVariants: Variants = {
 
 export default function Testimonials() {
   const t = useT();
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   // Widen the tuple's literal length so the grid ternary below typechecks as
   // reviews get added (the section handles 1-3 cards).
   const count: number = t.testimonials.items.length;

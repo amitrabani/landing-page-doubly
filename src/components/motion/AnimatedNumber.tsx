@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useSpring, useTransform } from 'framer-motion';
+import { motion, useSpring, useTransform } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import { useEffect } from 'react';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 /** Number that springs to its new value whenever `value` changes. */
 export default function AnimatedNumber({ value, className, format }: Props) {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const spring = useSpring(value, { stiffness: 180, damping: 26 });
   const display = useTransform(spring, (v) => {
     const n = Math.round(v);

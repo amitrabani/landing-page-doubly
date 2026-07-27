@@ -8,8 +8,8 @@ import {
   useTransform,
   useMotionTemplate,
   useMotionValueEvent,
-  useReducedMotion,
 } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import type { Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -44,7 +44,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useHydratedReducedMotion();
 
   // Anchor links must point at the current locale's homepage so they don't
   // bounce the visitor back to the English page.

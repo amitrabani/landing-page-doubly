@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useEffect, useState } from 'react';
 import { SPRING } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick, type AppStorePlacement } from '@/lib/appStore';
@@ -14,7 +15,7 @@ export default function AppStoreButton({
   className?: string;
 }) {
   const t = useT();
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const [shimmer, setShimmer] = useState(false);
 
   // One-time shimmer sweep shortly after mount, then the bar unmounts for good.

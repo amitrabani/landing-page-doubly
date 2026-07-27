@@ -1,10 +1,11 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 
 /** Thin page-scroll progress bar above the navbar, in the brand gradient. */
 export default function ScrollProgress() {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 28, restDelta: 0.001 });
 

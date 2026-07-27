@@ -1,6 +1,7 @@
 'use client';
 
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
@@ -14,7 +15,7 @@ const EXIT_EASE = [0.76, 0, 0.24, 1] as const;
  * Always present in the initial markup so the first paint is covered (no content flash).
  */
 export default function Preloader() {
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const [visible, setVisible] = useState(true);
   const [count, setCount] = useState(0);
   const rafRef = useRef<number>(0);

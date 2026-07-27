@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useHydratedReducedMotion } from './useHydratedReducedMotion';
 import { useRef, type ReactNode } from 'react';
 
 type Props = {
@@ -15,7 +16,7 @@ type Props = {
 /** Pointer-tracked 3D tilt with spring smoothing. Pure CSS transforms, no WebGL. */
 export default function TiltCard({ children, className, maxTilt = 7, sheen = false }: Props) {
   const ref = useRef<HTMLDivElement>(null);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const px = useMotionValue(0.5);
   const py = useMotionValue(0.5);
   const sx = useSpring(px, { stiffness: 120, damping: 18 });

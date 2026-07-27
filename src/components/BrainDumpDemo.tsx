@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef, useMemo } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { EASE, SPRING, SPRING_SNAPPY, fadeRise } from '@/lib/motion';
 import WordReveal from '@/components/motion/WordReveal';
 import Parallax from '@/components/motion/Parallax';
@@ -58,7 +59,7 @@ export default function BrainDumpDemo() {
   const phraseEls = useRef<(HTMLSpanElement | null)[]>([]);
   const rowEls = useRef<(HTMLDivElement | null)[]>([]);
   const prevRevealed = useRef<boolean[]>(tasks.map(() => false));
-  const reduceMotion = useReducedMotion();
+  const reduceMotion = useHydratedReducedMotion();
   const ranges = useMemo(() => computeRanges(DUMP_TEXT, tasks), [DUMP_TEXT, tasks]);
 
   // Delay before a landed task row springs in, leaving room for the flying token.

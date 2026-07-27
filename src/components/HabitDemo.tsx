@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence, useReducedMotion, type Variants } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { EASE, SPRING_SNAPPY, SPRING_SOFT, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import AnimatedNumber from '@/components/motion/AnimatedNumber';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
@@ -139,7 +140,7 @@ export default function HabitDemo() {
   // Per-habit confetti counters + one for the all-done celebration (0 = silent).
   const [bursts, setBursts] = useState<Record<string, number>>({});
   const [celebrationFire, setCelebrationFire] = useState(0);
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
 
   // Each habit gets its own unique grid
   const grids = useMemo(() => {

@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { locales, localeNames, defaultLocale, isLocale, type Locale } from '@/i18n/config';
 import { localizedHref } from '@/i18n/links';
 import { useLocale, useT } from '@/i18n/TranslationProvider';
@@ -24,7 +25,7 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
   const current = useLocale();
   const pathname = usePathname();
   const t = useT();
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

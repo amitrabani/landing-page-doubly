@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useT } from '@/i18n/TranslationProvider';
 import { EASE, SPRING, SPRING_SNAPPY } from '@/lib/motion';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
@@ -11,7 +12,7 @@ export default function StickyBar() {
   // Both start true so the bar never flashes before the observers report in.
   const [heroInView, setHeroInView] = useState(true);
   const [ctaInView, setCtaInView] = useState(true);
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useHydratedReducedMotion();
 
   useEffect(() => {
     const hero = document.getElementById('hero');

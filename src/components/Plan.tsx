@@ -3,12 +3,12 @@
 import { useRef } from 'react';
 import {
   motion,
-  useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
   type MotionValue,
 } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { EASE, SPRING, SPRING_SNAPPY, SPRING_SOFT, fadeRise, staggerContainer } from '@/lib/motion';
 import TiltCard from '@/components/motion/TiltCard';
 import WordReveal from '@/components/motion/WordReveal';
@@ -122,7 +122,7 @@ function JourneyPath({
 
 export default function Plan() {
   const t = useT();
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const gridRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: gridRef,

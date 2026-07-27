@@ -16,7 +16,8 @@
     "check:tools-content": "node scripts/check-tools-content.mjs",
     "check:pack": "node scripts/check-pack.mjs",
     "check:locale": "node scripts/check-locale-detection.mjs",
-    "check:links": "node scripts/check-built-links.mjs"
+    "check:links": "node scripts/check-built-links.mjs",
+    "check:hydration": "node scripts/check-hydration-safety.mjs"
   },
   "keywords": [],
   "author": "",

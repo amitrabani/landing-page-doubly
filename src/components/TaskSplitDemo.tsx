@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import {
   EASE,
   SPRING,
@@ -58,7 +59,7 @@ export default function TaskSplitDemo() {
   const locale = useLocale();
   const presets = t.taskSplitDemo.presets;
   const presetResults = t.taskSplitDemo.presetResults as unknown as Record<string, TaskResult>;
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const [activeTask, setActiveTask] = useState<string | null>(null);
   const [taskResult, setTaskResult] = useState<TaskResult | null>(null);
   const [checked, setChecked] = useState<Set<number>>(new Set());

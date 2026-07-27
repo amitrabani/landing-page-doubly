@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { useEffect, useRef, useState } from 'react';
 import { EASE, VIEWPORT_ONCE_TIGHT } from '@/lib/motion';
 import MagneticArea from '@/components/motion/MagneticArea';
@@ -20,7 +21,7 @@ function Sparkle({ className }: { className?: string }) {
 
 export default function FinalCTA() {
   const t = useT();
-  const reduced = useReducedMotion();
+  const reduced = useHydratedReducedMotion();
   const sectionRef = useRef<HTMLElement>(null);
   const [entered, setEntered] = useState(false);
   const [sweep, setSweep] = useState(false);
