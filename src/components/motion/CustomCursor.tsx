@@ -67,7 +67,7 @@ export default function CustomCursor() {
       {/* Lagging ring */}
       <motion.div
         aria-hidden
-        className="pointer-events-none fixed left-0 top-0 z-[90] rounded-full border border-lavender-dark/50 mix-blend-multiply"
+        className="pointer-events-none fixed left-0 top-0 z-[90] rounded-full border border-lavender-dark/60"
         style={{ x: ringX, y: ringY, translateX: '-50%', translateY: '-50%' }}
         animate={{
           width: active ? 56 : 30,

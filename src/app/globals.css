@@ -89,12 +89,10 @@ html.lenis body {
 
 .ambient-blob {
   animation: ambient-drift 48s ease-in-out infinite;
-  will-change: transform;
 }
 
 .ambient-blob-slow {
   animation: ambient-drift 72s ease-in-out infinite reverse;
-  will-change: transform;
 }
 
 .grain {
@@ -103,22 +101,28 @@ html.lenis body {
   background-size: 240px 240px;
 }
 
-/* Slow rotating aurora mesh behind the blobs */
+/*
+ * Slow rotating aurora mesh behind the blobs.
+ * Perf: the element is 70vmax and scaled 2x, so the GPU rasterizes and blurs a
+ * quarter of the pixels it would at 140vmax; blur(30px) scaled 2x reads as the
+ * old blur(60px). The scale lives in the transform (base rule + keyframes), so
+ * reduced-motion users (animation: none) keep the same centered, scaled look.
+ */
 @keyframes aurora-spin {
-  0%   { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
+  0%   { transform: translate(-50%, -50%) scale(2) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) scale(2) rotate(360deg); }
 }
 
 .aurora {
   opacity: 0.5;
-  filter: blur(60px);
+  filter: blur(30px);
+  transform: translate(-50%, -50%) scale(2);
   background:
     radial-gradient(35% 35% at 30% 35%, rgba(184, 169, 212, 0.30) 0%, transparent 70%),
     radial-gradient(30% 30% at 70% 30%, rgba(232, 150, 122, 0.20) 0%, transparent 70%),
     radial-gradient(38% 38% at 65% 70%, rgba(168, 181, 160, 0.26) 0%, transparent 70%),
     radial-gradient(28% 28% at 35% 72%, rgba(158, 197, 217, 0.22) 0%, transparent 70%);
   animation: aurora-spin 80s linear infinite;
-  will-change: transform;
 }
 
 /* Custom cursor: hide the native pointer, but keep a real caret over text fields */
