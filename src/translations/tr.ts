@@ -79,7 +79,6 @@ const tr = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Çok fazla görev. Çok fazla düşünce.' },
       { image: '/problem-2.jpg', alt: 'Ne yapacağını biliyorsun ama yine de başlayamıyorsun.' },
-      { image: '/problem-4.jpg', alt: 'Normal şeylere başlamak bu kadar zor olmamalı.' },
       { image: '/problem-3.jpg', alt: 'Ve bu sana zamandan fazlasına mal oluyor.' },
     ],
   },

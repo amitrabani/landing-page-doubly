@@ -9,7 +9,7 @@ import Parallax from '@/components/motion/Parallax';
 import TiltCard from '@/components/motion/TiltCard';
 
 /** Each card drifts on its own depth plane while scrolling. */
-const CARD_SPEEDS = [18, 34, 26, 42];
+const CARD_SPEEDS = [18, 34, 42];
 
 export default function VisualProblem() {
   const t = useT();
@@ -26,7 +26,7 @@ export default function VisualProblem() {
           />
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           {t.visualProblem.cards.map((card, i) => (
             <Parallax key={card.alt} speed={CARD_SPEEDS[i % CARD_SPEEDS.length]}>
               <motion.div

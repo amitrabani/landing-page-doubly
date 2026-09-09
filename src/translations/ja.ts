@@ -79,7 +79,6 @@ const ja = {
     cards: [
       { image: '/problem-1.jpg', alt: 'タスクが多すぎる。考えごとも多すぎる。' },
       { image: '/problem-2.jpg', alt: 'やるべきことは分かっているのに、始められない。' },
-      { image: '/problem-4.jpg', alt: '普通のことを始めるのが、こんなに難しいはずはない。' },
       { image: '/problem-3.jpg', alt: 'そして、それは時間以上のものを奪っていく。' },
     ],
   },

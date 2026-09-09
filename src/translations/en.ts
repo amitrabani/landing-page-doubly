@@ -79,7 +79,6 @@ const en = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Too many tasks. Too many thoughts.' },
       { image: '/problem-2.jpg', alt: "You know what to do, but still can\u2019t start." },
-      { image: '/problem-4.jpg', alt: "It shouldn\u2019t be this hard to start normal things." },
       { image: '/problem-3.jpg', alt: "And it\u2019s costing you more than time." },
     ],
   },

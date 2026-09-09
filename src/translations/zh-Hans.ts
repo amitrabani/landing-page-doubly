@@ -79,7 +79,6 @@ const zhHans = {
     cards: [
       { image: '/problem-1.jpg', alt: '任务太多。念头太多。' },
       { image: '/problem-2.jpg', alt: '你知道该做什么,却还是开不了头。' },
-      { image: '/problem-4.jpg', alt: '做些平常的事,本不该这么难。' },
       { image: '/problem-3.jpg', alt: '而它让你付出的,远不止时间。' },
     ],
   },

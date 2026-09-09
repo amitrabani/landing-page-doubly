@@ -79,7 +79,6 @@ const it = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Troppe attività. Troppi pensieri.' },
       { image: '/problem-2.jpg', alt: 'Sai cosa fare, ma non riesci comunque a iniziare.' },
-      { image: '/problem-4.jpg', alt: 'Non dovrebbe essere così difficile iniziare le cose normali.' },
       { image: '/problem-3.jpg', alt: 'E ti sta costando più del tempo.' },
     ],
   },

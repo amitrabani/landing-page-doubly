@@ -83,10 +83,6 @@ const fr = {
         image: '/problem-2.jpg',
         alt: 'Tu sais quoi faire, mais tu n’arrives toujours pas à commencer.',
       },
-      {
-        image: '/problem-4.jpg',
-        alt: 'Commencer des choses normales ne devrait pas être aussi difficile.',
-      },
       { image: '/problem-3.jpg', alt: 'Et ça te coûte plus que du temps.' },
     ],
   },

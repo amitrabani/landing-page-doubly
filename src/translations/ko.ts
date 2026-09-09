@@ -79,7 +79,6 @@ const ko = {
     cards: [
       { image: '/problem-1.jpg', alt: '할 일도 너무 많고, 생각도 너무 많아요.' },
       { image: '/problem-2.jpg', alt: '뭘 해야 하는지 알면서도 시작을 못 해요.' },
-      { image: '/problem-4.jpg', alt: '평범한 일을 시작하는 게 이렇게까지 힘들면 안 되잖아요.' },
       { image: '/problem-3.jpg', alt: '그리고 이건 시간보다 더 많은 걸 앗아가요.' },
     ],
   },

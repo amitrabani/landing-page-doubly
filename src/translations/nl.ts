@@ -79,7 +79,6 @@ const nl = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Te veel taken. Te veel gedachten.' },
       { image: '/problem-2.jpg', alt: 'Je weet wat je moet doen, maar toch kun je niet beginnen.' },
-      { image: '/problem-4.jpg', alt: 'Beginnen aan normale dingen zou niet zo moeilijk moeten zijn.' },
       { image: '/problem-3.jpg', alt: 'En het kost je meer dan alleen tijd.' },
     ],
   },

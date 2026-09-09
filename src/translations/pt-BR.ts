@@ -79,7 +79,6 @@ const ptBR = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Tarefas demais. Pensamentos demais.' },
       { image: '/problem-2.jpg', alt: 'Você sabe o que fazer, mas ainda assim não consegue começar.' },
-      { image: '/problem-4.jpg', alt: 'Não deveria ser tão difícil começar coisas normais.' },
       { image: '/problem-3.jpg', alt: 'E isso está te custando mais do que tempo.' },
     ],
   },

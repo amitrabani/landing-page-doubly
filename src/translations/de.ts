@@ -80,7 +80,6 @@ const de = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Zu viele Aufgaben. Zu viele Gedanken.' },
       { image: '/problem-2.jpg', alt: 'Du weißt, was zu tun ist, und kommst trotzdem nicht in Gang.' },
-      { image: '/problem-4.jpg', alt: 'Normale Dinge anzufangen sollte nicht so schwer sein.' },
       { image: '/problem-3.jpg', alt: 'Und es kostet dich mehr als nur Zeit.' },
     ],
   },

@@ -79,7 +79,6 @@ const es = {
     cards: [
       { image: '/problem-1.jpg', alt: 'Demasiadas tareas. Demasiados pensamientos.' },
       { image: '/problem-2.jpg', alt: 'Sabes qué hacer, pero aún así no puedes empezar.' },
-      { image: '/problem-4.jpg', alt: 'No debería costar tanto empezar cosas normales.' },
       { image: '/problem-3.jpg', alt: 'Y te está costando más que tiempo.' },
     ],
   },
