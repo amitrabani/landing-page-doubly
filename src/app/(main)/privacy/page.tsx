@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
         </Link>
 
         <h1 className="mb-2 font-display text-4xl font-bold text-charcoal">Privacy Policy</h1>
-        <p className="mb-12 text-sm text-muted">Last updated: July 23, 2026</p>
+        <p className="mb-12 text-sm text-muted">Last updated: September 13, 2026</p>
 
         <Section title="1. Data We Collect and How It Is Used">
           <p className="mb-4 text-base leading-7 text-charcoal-light">
@@ -51,6 +51,10 @@ export default function PrivacyPolicy() {
           <BulletItem label="Phone Number for Call Reminders (optional)">
             If you enable AI call reminders, we store the phone number you provide so we can place
             reminder calls. See section 5 for details.
+          </BulletItem>
+          <BulletItem label="Location (optional)">
+            If you add a location to a task, we save that location with the task so Doubly can
+            remind you when you arrive. See section 6 for details.
           </BulletItem>
         </Section>
 
@@ -167,7 +171,36 @@ export default function PrivacyPolicy() {
           </BulletItem>
         </Section>
 
-        <Section title="6. Subscriptions and Billing">
+        <Section title="6. Location Reminders">
+          <p className="mb-4 text-base leading-7 text-charcoal-light">
+            Location reminders are optional. They only work if you add a location to a task and
+            allow location access.
+          </p>
+          <BulletItem label="What we save">
+            The location you picked for a task: its coordinates, the reminder distance you chose,
+            and its name. It is saved with the task. If you share the task with your household, they
+            can see it.
+          </BulletItem>
+          <BulletItem label="What stays on your phone">
+            To notice when you arrive, Doubly uses your phone&apos;s location in the background, even
+            when the app is closed or not in use. This check runs on your phone. We never send your
+            location history to our servers, and we do not keep a record of where you go.
+          </BulletItem>
+          <BulletItem label="Finding an address">
+            To search an address or name your current location, the app uses your phone&apos;s
+            built-in map service (Apple on iPhone, Google on Android).
+          </BulletItem>
+          <BulletItem label="Not used for AI or ads">
+            Location data is not sent to our AI processors and is never used for advertising or sold
+            to anyone.
+          </BulletItem>
+          <BulletItem label="Your controls">
+            You can remove a location from a task at any time. You can turn off location access for
+            Doubly in your phone&apos;s settings. Deleting a task deletes its location.
+          </BulletItem>
+        </Section>
+
+        <Section title="7. Subscriptions and Billing">
           <p className="mb-4 text-base leading-7 text-charcoal-light">
             Doubly offers auto-renewable subscriptions.
           </p>
@@ -183,7 +216,7 @@ export default function PrivacyPolicy() {
           </BulletItem>
         </Section>
 
-        <Section title="7. Your Rights and Data Deletion">
+        <Section title="8. Your Rights and Data Deletion">
           <p className="text-base leading-7 text-charcoal-light">
             Because we link data to your identity, you have the right to access or delete your data.
             You may initiate account and data deletion directly within the app settings or by
