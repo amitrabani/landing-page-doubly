@@ -20,7 +20,7 @@ export default function PrivacyPolicy() {
         </Link>
 
         <h1 className="mb-2 font-display text-4xl font-bold text-charcoal">Privacy Policy</h1>
-        <p className="mb-12 text-sm text-muted">Last updated: September 14, 2026</p>
+        <p className="mb-12 text-sm text-muted">Last updated: September 15, 2026</p>
 
         <Paragraph>
           This policy explains what data Doubly collects, why we collect it, who else gets it, and
@@ -174,16 +174,24 @@ export default function PrivacyPolicy() {
               subscription changes, and WhatsApp use.
             </li>
             <li>
-              In the web app: the pages you open (with the full web address), when you leave a page,
-              the theme you pick, and page speed measurements. The web app does not send what you
-              click, does not record your screen, and does not send your email. It keeps your
-              PostHog ID in browser storage and in a cookie that is set for all of usedoubly.com.
+              In the web app, only after you click Accept in its cookie banner (section 6): the
+              pages you open (with the full web address), when you leave a page, how far you scroll
+              and how long you stay on a page, the theme you pick, and page speed measurements. The
+              web app does not record your screen and does not send your email. It does not send the
+              text of what you click. It also does not send where you click or move your mouse,
+              because that tracking (called heatmaps) is turned off in our PostHog settings. Surveys
+              are turned off there too. After you click Accept, the web app keeps your PostHog ID in
+              browser storage and in a cookie that is set for all of usedoubly.com. If you also
+              click Accept on usedoubly.com, PostHog can link your visits there to your Doubly
+              account (section 6).
             </li>
             <li>Screen recordings of some iPhone app sessions. See section 4.</li>
           </List>
           <Basis>
             Legitimate interests. We need this to improve Doubly and fix problems. You can object by
-            emailing <MailLink />.
+            emailing <MailLink />. In the web app, the legal basis is consent: PostHog only runs
+            there after you click Accept. You can change your choice with &quot;Cookie
+            settings&quot; in the web app (section 6).
           </Basis>
 
           <SubHeading>2.5 Health-related answers (optional)</SubHeading>
@@ -631,7 +639,7 @@ export default function PrivacyPolicy() {
             below are needed for the site or a tool to work, so they do not need consent.
           </Paragraph>
 
-          <TableWrap label="Cookies and browser storage">
+          <TableWrap label="Cookies and browser storage on usedoubly.com">
             <table className={tableClass}>
               <caption className="sr-only">Cookies and browser storage on usedoubly.com</caption>
               <thead>
@@ -710,13 +718,16 @@ export default function PrivacyPolicy() {
                   </Td>
                   <Td>PostHog</Td>
                   <Td>
-                    Your analytics ID and session ID. It is set for all of usedoubly.com, so
-                    app.usedoubly.com can read it too.
+                    Your analytics IDs and session ID. It also holds the first web address you
+                    opened, with any campaign tags or ad click IDs in it, and the site that sent
+                    you. It is set for all of usedoubly.com, so the web app at app.usedoubly.com can
+                    read it too. See below for what that means.
                   </Td>
                   <Td>1 year, renewed when it is updated</Td>
                   <Td>
                     Only after Accept on this website. The web app at app.usedoubly.com also sets it
-                    (section 2.4).
+                    after you click Accept there. Older versions of the web app set it without
+                    asking (see below).
                   </Td>
                 </tr>
                 <tr>
@@ -826,9 +837,201 @@ export default function PrivacyPolicy() {
           <Paragraph>
             <Strong>Changing your choice:</Strong> click &quot;Cookie settings&quot; in the footer
             of our pages. If you had accepted and now click Reject, PostHog stops sending data and
-            saves a note that it is turned off. We delete the cookies and browser storage these tools
-            set on our site, and the page reloads without them. Cookies that Google, Meta or Reddit
-            keep on their own websites stay until they expire or you clear them.
+            saves a note that it is turned off. We delete the cookies these tools set on our site
+            and the browser storage PostHog saved, and the page reloads without them. PostHog&apos;s
+            session storage stays until you close the tab. Any browser storage Meta saved stays
+            until you clear your browser data. Cookies that Google, Meta or Reddit keep on their own
+            websites stay until they expire or you clear them.
+          </Paragraph>
+
+          <SubHeading>The web app at app.usedoubly.com</SubHeading>
+          <Paragraph>
+            After you sign in to the web app, a banner asks you to Accept or Reject. It shows until
+            you pick one. Until you click Accept, PostHog does not start in the web app. It sends
+            nothing and saves no PostHog cookie or browser storage. If you click Accept, PostHog
+            starts right away. Section 2.4 lists what it gets.
+          </Paragraph>
+          <Paragraph>
+            Older versions of the web app started PostHog without asking. If you used the web app
+            before the banner was added, PostHog may still have its cookie and browser storage in
+            your browser, with your Doubly user ID. Clicking Reject deletes them.
+          </Paragraph>
+          <Paragraph>
+            Your choice in the web app is separate from your choice on usedoubly.com. They are two
+            different websites, and each one saves its own choice. The choice is saved in your
+            browser, not in your Doubly account. So you may see the banner on both websites. Accept
+            or Reject on one does not change your choice on the other. The choice also applies to
+            anyone else who signs in to the web app in the same browser. Signing out does not change
+            it.
+          </Paragraph>
+          <Paragraph>
+            <Strong>If you click Accept on both websites:</Strong> they share one PostHog cookie, so
+            PostHog can link your visits to usedoubly.com to your Doubly account. Then what you do
+            on usedoubly.com, including what you click and the email you give the Android waitlist,
+            can be saved under your Doubly user ID. And the first page you opened on usedoubly.com,
+            with its campaign tags and ad click IDs, and the site that sent you there, can be added
+            to your Doubly analytics profile.
+          </Paragraph>
+          <Paragraph>
+            Legal basis: consent. The items marked &quot;always&quot; below keep you signed in and
+            remember your settings and your cookie choice, so they do not need consent.
+          </Paragraph>
+
+          <TableWrap label="Cookies and browser storage in the web app">
+            <table className={tableClass}>
+              <caption className="sr-only">
+                Cookies and browser storage in the web app at app.usedoubly.com
+              </caption>
+              <thead>
+                <tr>
+                  <Th>Name or key</Th>
+                  <Th>Provider</Th>
+                  <Th>Purpose</Th>
+                  <Th>Lifetime</Th>
+                  <Th>When set</Th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <Td>
+                    <code>doubly_cookie_consent</code> (browser storage)
+                  </Td>
+                  <Td>Doubly</Td>
+                  <Td>Remembers whether you clicked Accept or Reject in the web app.</Td>
+                  <Td>Until you clear your browser data</Td>
+                  <Td>Always, when you click Accept or Reject</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'sb-<project>-auth-token'}</code> (cookie, can be split into parts ending
+                    in <code>.0</code>, <code>.1</code> and so on)
+                  </Td>
+                  <Td>Doubly, using Supabase</Td>
+                  <Td>Keeps you signed in.</Td>
+                  <Td>400 days, renewed while you use the app. Deleted when you sign out</Td>
+                  <Td>Always, when you sign in</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'sb-<project>-auth-token-code-verifier'}</code> (cookie)
+                  </Td>
+                  <Td>Doubly, using Supabase</Td>
+                  <Td>
+                    A one-time secret that makes sure Google sign-in finishes in your browser.
+                  </Td>
+                  <Td>Until Google sign-in finishes, at most 400 days</Td>
+                  <Td>Always, when you sign in with Google</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>doubly-locale</code> (cookie)
+                  </Td>
+                  <Td>Doubly</Td>
+                  <Td>Remembers the language you picked.</Td>
+                  <Td>1 year</Td>
+                  <Td>Always, when you pick a language</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>doubly.webTheme</code> (browser storage)
+                  </Td>
+                  <Td>Doubly</Td>
+                  <Td>Remembers the theme you picked.</Td>
+                  <Td>Until you clear your browser data</Td>
+                  <Td>Always, when you pick a theme</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>doubly.web.week.v1</code> (browser storage)
+                  </Td>
+                  <Td>Doubly</Td>
+                  <Td>Remembers how you set up the Week view.</Td>
+                  <Td>Until you clear your browser data</Td>
+                  <Td>Always, when you change the Week view</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>doubly.web.storageGeneration</code> (browser storage)
+                  </Td>
+                  <Td>Doubly</Td>
+                  <Td>
+                    Notes that the web app already deleted data that an older version left in your
+                    browser, so it does not do it again.
+                  </Td>
+                  <Td>Until you clear your browser data</Td>
+                  <Td>Always, the first time you open the web app</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'ph_<project>_posthog'}</code> (cookie)
+                  </Td>
+                  <Td>PostHog</Td>
+                  <Td>
+                    Your analytics IDs and session ID, and whether PostHog has your Doubly user ID.
+                    It also holds the first web address you opened, with any campaign tags or ad
+                    click IDs in it, and the site that sent you. It is set for all of usedoubly.com,
+                    so usedoubly.com can read it too. See above for what that means.
+                  </Td>
+                  <Td>1 year, renewed when it is updated. Deleted when you click Reject</Td>
+                  <Td>After Accept in the web app. Older versions set it without asking</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'ph_<project>_posthog'}</code> (browser storage)
+                  </Td>
+                  <Td>PostHog</Td>
+                  <Td>
+                    Analytics IDs, the site you first came from, campaign tags in the link, and
+                    feature settings.
+                  </Td>
+                  <Td>Until you clear your browser data or click Reject</Td>
+                  <Td>After Accept in the web app. Older versions set it without asking</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'ph_<project>_posthog'}</code>, <code>{'ph_<project>_window_id'}</code>,{' '}
+                    <code>{'ph_<project>_primary_window_exists'}</code> (session storage)
+                  </Td>
+                  <Td>PostHog</Td>
+                  <Td>Where this visit came from, and which browser tab is which.</Td>
+                  <Td>Until you close the tab or click Reject</Td>
+                  <Td>Only after Accept in the web app</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'dmn_chk_<id>'}</code> (cookie)
+                  </Td>
+                  <Td>PostHog</Td>
+                  <Td>A test to find which domain to set its cookie on.</Td>
+                  <Td>3 seconds</Td>
+                  <Td>Only after Accept in the web app</Td>
+                </tr>
+                <tr>
+                  <Td>
+                    <code>{'__ph_opt_in_out_<project>'}</code> (browser storage)
+                  </Td>
+                  <Td>PostHog</Td>
+                  <Td>Stops PostHog from sending data while the page reloads after a Reject.</Td>
+                  <Td>Deleted once the page has reloaded</Td>
+                  <Td>When you click Reject after you had accepted in the web app</Td>
+                </tr>
+              </tbody>
+            </table>
+          </TableWrap>
+          <Paragraph>
+            PostHog may add a few more keys in special cases. The web app may also save a few more
+            keys that its features need, for example progress points that are still waiting to be
+            saved to your account. These are always set and do not need consent.
+          </Paragraph>
+          <Paragraph>
+            <Strong>Changing your choice in the web app:</Strong> click &quot;Cookie settings&quot;
+            in the web app&apos;s side menu. On a narrow screen, it is the cookie icon in the top
+            bar. If you had accepted and now click Reject, PostHog stops sending data. If the web
+            app is also open in another tab, that tab can still send one last event saying you left
+            the page. We delete the PostHog cookies and browser storage in the table above,
+            including the cookie set for all of usedoubly.com. Then the page reloads without
+            PostHog. While your choice in the web app is Reject, the web app deletes these again
+            each time you open it, even a PostHog cookie that usedoubly.com set.
           </Paragraph>
         </Section>
 
@@ -1104,7 +1307,10 @@ export default function PrivacyPolicy() {
               data under its own rules and our account settings there. Email us and we will ask them
               to delete your data.
             </li>
-            <li>Website cookies and browser storage: see the table in section 6.</li>
+            <li>
+              Cookies and browser storage on usedoubly.com and in the web app: see the tables in
+              section 6.
+            </li>
           </List>
 
           <SubHeading>When you delete your account</SubHeading>
@@ -1193,7 +1399,8 @@ export default function PrivacyPolicy() {
             <li>
               <Strong>Withdraw consent</Strong> at any time: for Apple&apos;s tracking prompt
               (section 5) in your iPhone&apos;s settings, for website cookies with &quot;Cookie
-              settings&quot; in the footer of our pages, and for health-related answers by email.
+              settings&quot; in the footer of our pages, for web app cookies with &quot;Cookie
+              settings&quot; in the web app (section 6), and for health-related answers by email.
             </li>
             <li>
               <Strong>Complain</Strong> to a data protection authority in the EU country where you
