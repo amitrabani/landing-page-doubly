@@ -13,7 +13,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "ADHD beyinleri için tasarlanmış, kayıt istemeyen ücretsiz araçlar. Plan yapmaya hazır olduğun an için değil, her şeyin üstüne geldiği o bunaldığın an için yapıldı. Tarayıcında kullan. İlerlemen kaydedilsin. Canın istediğinde bırak git.",
+  "intro": "ADHD beyinleri için tasarlanmış, kayıt istemeyen ücretsiz araçlar. Plan yapmaya hazır olduğun an için değil, her şeyin üstüne geldiği o bunaldığın an için yapıldı. Tarayıcında kullan. Canın istediğinde bırak git.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Beyin Boşaltma Aracı",
-      "description": "Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok, hiçbir şey saklanmıyor."
+      "description": "Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok."
     },
     {
       "slug": "pick-one",

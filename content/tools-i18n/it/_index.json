@@ -13,7 +13,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Strumenti gratuiti, senza registrazione, pensati per le menti ADHD. Fatti per il momento in cui ti senti sopraffatto, non per quello in cui sei pronto a pianificare. Li apri dal browser. I progressi restano salvati. Puoi mollare quando vuoi.",
+  "intro": "Strumenti gratuiti, senza registrazione, pensati per le menti ADHD. Fatti per il momento in cui ti senti sopraffatto, non per quello in cui sei pronto a pianificare. Li apri dal browser. Puoi mollare quando vuoi.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Strumento svuota-cervello",
-      "description": "Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione, niente viene salvato."
+      "description": "Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione."
     },
     {
       "slug": "pick-one",

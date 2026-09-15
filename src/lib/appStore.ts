@@ -3,7 +3,8 @@ import posthog from 'posthog-js';
 declare global {
   interface Window {
     // Reddit Pixel queue, present only when NEXT_PUBLIC_REDDIT_PIXEL_ID is set
-    // (see src/app/RedditPixel.tsx). Optional so calls stay inert without it.
+    // and the visitor accepted cookies (see src/app/RedditPixel.tsx). Optional so
+    // calls stay inert without it.
     rdt?: (...args: unknown[]) => void;
   }
 }

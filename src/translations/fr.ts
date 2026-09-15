@@ -469,7 +469,16 @@ const fr = {
     privacy: 'Confidentialité',
     terms: 'Conditions',
     support: 'Assistance',
+    cookieSettings: 'Paramètres des cookies',
     copyright: (year: number) => `© ${year} Doubly. Conçu pour les cerveaux TDAH.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Nous utilisons des cookies pour mesurer l’audience et l’efficacité de nos publicités.',
+    privacyLink: 'Politique de confidentialité',
+    reject: 'Refuser',
+    accept: 'Accepter',
   },
 
   // StickyBar
@@ -499,7 +508,7 @@ const fr = {
     'brain-dump': {
       title: 'Outil de vide-cerveau',
       description:
-        'Vide tout ce que tu as en tête, l’IA en extrait uniquement les tâches actionnables. Sans inscription, rien n’est stocké.',
+        'Vide tout ce que tu as en tête, l’IA en extrait uniquement les tâches actionnables. Sans inscription.',
     },
     'pick-one': {
       title: 'Outil Choisis-en une',
@@ -544,7 +553,6 @@ const fr = {
       inputPlaceholder: 'ex. Faire ma note de frais',
       submit: 'Découper',
       submitting: 'Découpage…',
-      privacyNote: 'Privé. Rien n’est enregistré sur notre serveur.',
       charactersLeft: (count: number) =>
         `${count} caractère${count > 1 ? 's' : ''} restant${count > 1 ? 's' : ''}`,
       presetsIntro: 'Ou essaie l’une de celles-ci :',
@@ -572,7 +580,6 @@ const fr = {
       label: 'Vide tout ce que tu as en tête. Pas besoin que ce soit rangé.',
       placeholder:
         'J’oublie sans arrêt d’appeler le dentiste et la cuisine est un chantier.\nLe projet au boulot me submerge. Je dois acheter de quoi dîner ce soir\net répondre au mail de Sarah de la semaine dernière.',
-      privacy: 'Privé. Rien n’est enregistré sur notre serveur.',
       charactersLeft: (remaining: number) =>
         `${remaining} caractère${remaining > 1 ? 's' : ''} restant${remaining > 1 ? 's' : ''}.`,
       clear: 'Effacer',

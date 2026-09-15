@@ -76,8 +76,7 @@ export default function ToolsHubPage() {
           </h1>
           <p className="text-lg text-charcoal-light leading-8 max-w-2xl">
             Free, no-signup tools designed for ADHD brains. Built for the moment you’re overwhelmed,
-            not for the moment you’re ready to plan. Use them in your browser. Save your progress.
-            Walk away whenever.
+            not for the moment you’re ready to plan. Use them in your browser. Walk away whenever.
           </p>
         </header>
 

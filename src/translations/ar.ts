@@ -459,7 +459,16 @@ const ar = {
     privacy: 'الخصوصية',
     terms: 'الشروط',
     support: 'الدعم',
+    cookieSettings: 'إعدادات ملفات تعريف الارتباط',
     copyright: (year: number) => `© ${year} Doubly. صُمّم لعقول ADHD.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'نستخدم ملفات تعريف الارتباط لقياس الزيارات وأداء الإعلانات.',
+    privacyLink: 'سياسة الخصوصية',
+    reject: 'رفض',
+    accept: 'قبول',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const ar = {
     'brain-dump': {
       title: 'أداة تفريغ الدماغ',
       description:
-        'أفرِغ كل ما في رأسك، ويستخرج الذكاء الاصطناعي المهام القابلة للتنفيذ فقط. بدون تسجيل، ولا شيء يُحفَظ.',
+        'أفرِغ كل ما في رأسك، ويستخرج الذكاء الاصطناعي المهام القابلة للتنفيذ فقط. بدون تسجيل.',
     },
     'pick-one': {
       title: 'أداة «اختر واحدة»',
@@ -537,7 +546,6 @@ const ar = {
       inputPlaceholder: 'مثلاً: قدّم تقرير المصروفات',
       submit: 'قسّمها',
       submitting: 'جارٍ تقسيمها…',
-      privacyNote: 'خاص. لا شيء يُحفَظ على خادمنا.',
       charactersLeft: (count: number) => {
         if (count === 0) return 'لم يبقَ أي حرف';
         if (count === 1) return 'بقي حرف واحد';
@@ -577,7 +585,6 @@ const ar = {
       label: 'أفرِغ كل ما في رأسك. لا حاجة لأن يكون منظّماً.',
       placeholder:
         'أنسى دائماً أن أتصل بطبيب الأسنان، والمطبخ فوضى.\nأشعر بالإرهاق بسبب مشروع العمل. أحتاج شراء البقالة\nلعشاء الليلة والرد على رسالة سارة من الأسبوع الماضي.',
-      privacy: 'خاص. لا شيء يُحفَظ على خادمنا.',
       charactersLeft: (remaining: number) => {
         if (remaining === 0) return 'لم يبقَ أي حرف.';
         if (remaining === 1) return 'بقي حرف واحد.';

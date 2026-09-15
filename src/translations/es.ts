@@ -459,7 +459,16 @@ const es = {
     privacy: 'Privacidad',
     terms: 'Términos',
     support: 'Soporte',
+    cookieSettings: 'Configuración de cookies',
     copyright: (year: number) => `© ${year} Doubly. Hecho para cerebros con TDAH.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Usamos cookies para medir las visitas y el rendimiento de nuestros anuncios.',
+    privacyLink: 'Política de privacidad',
+    reject: 'Rechazar',
+    accept: 'Aceptar',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const es = {
     'brain-dump': {
       title: 'Herramienta de volcado mental',
       description:
-        'Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro, no se guarda nada.',
+        'Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro.',
     },
     'pick-one': {
       title: 'Herramienta para elegir una tarea',
@@ -534,7 +543,6 @@ const es = {
       inputPlaceholder: 'p. ej. Entregar el informe de gastos',
       submit: 'Divídela',
       submitting: 'Dividiéndola…',
-      privacyNote: 'Privado. No guardamos nada en nuestro servidor.',
       charactersLeft: (count: number) => `Quedan ${count} caracteres`,
       presetsIntro: 'O prueba una de estas:',
       presets: {
@@ -561,7 +569,6 @@ const es = {
       label: 'Suelta todo lo que tienes en la cabeza. No hace falta que esté ordenado.',
       placeholder:
         'Siempre se me olvida llamar al dentista y la cocina es un desastre.\nEstoy agobiado con el proyecto del trabajo. Tengo que comprar comida\npara la cena de hoy y responder al correo de Sara de la semana pasada.',
-      privacy: 'Privado. No guardamos nada en nuestro servidor.',
       charactersLeft: (remaining: number) => `Quedan ${remaining} caracteres.`,
       clear: 'Borrar',
       submit: 'Extraer las tareas',

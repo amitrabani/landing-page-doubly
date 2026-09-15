@@ -13,7 +13,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Free, no-signup tools designed for ADHD brains. Built for the moment you’re overwhelmed, not for the moment you’re ready to plan. Use them in your browser. Save your progress. Walk away whenever.",
+  "intro": "Free, no-signup tools designed for ADHD brains. Built for the moment you’re overwhelmed, not for the moment you’re ready to plan. Use them in your browser. Walk away whenever.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Brain Dump Tool",
-      "description": "Dump everything in your head, AI pulls out only the actionable tasks. No signup, nothing stored."
+      "description": "Dump everything in your head, AI pulls out only the actionable tasks. No signup."
     },
     {
       "slug": "pick-one",

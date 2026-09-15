@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Strumenti",
   "breadcrumbLabel": "Strumento svuota-cervello",
-  "answerCapsule": "**Uno strumento svuota-cervello ti fa scaricare in un unico posto tutto ciò che hai in testa, poi estrae solo le attività concrete, così puoi fare qualcosa invece di girare a vuoto.** Scrivi liberamente qui sopra. Lo strumento legge ciò che hai buttato giù, ignora emozioni e sfoghi, e restituisce una breve lista di cose da fare. Gratis, senza registrazione, nulla viene salvato.",
+  "answerCapsule": "**Uno strumento svuota-cervello ti fa scaricare in un unico posto tutto ciò che hai in testa, poi estrae solo le attività concrete, così puoi fare qualcosa invece di girare a vuoto.** Scrivi liberamente qui sopra. Lo strumento legge ciò che hai buttato giù, ignora emozioni e sfoghi, e restituisce una breve lista di cose da fare. Gratis, senza registrazione.",
   "intro": "Il loop mentale del «c’è troppo, non riesco a iniziare, ma c’è troppo» è proprio ciò che lo svuota-cervello serve a spezzare. Scrivi per svuotare la testa, non per pianificare. Il piano esce dall’altro lato come una lista su cui puoi agire.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "In cosa è diverso da una normale app per le note?",
           "a": "Un’app per le note ti dà una pagina bianca. Questo strumento legge ciò che hai buttato giù ed estrae solo le attività concrete e fattibili, ignorando emozioni, osservazioni e sfoghi. Ottieni una breve lista di cose da fare senza doverla scrivere tu."
-        },
-        {
-          "q": "Il mio svuota-cervello è privato?",
-          "a": "Sì. Il tuo testo viene inviato alla nostra IA per estrarre le attività e poi viene scartato. Niente viene salvato collegandolo alla tua identità, niente lascia il tuo browser oltre alla richiesta stessa, e non c’è nessun account."
         },
         {
           "q": "Perché lo svuota-cervello è utile per l’ADHD?",

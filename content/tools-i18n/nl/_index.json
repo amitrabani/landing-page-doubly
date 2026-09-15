@@ -13,7 +13,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Gratis tools zonder registratie, gemaakt voor ADHD-breinen. Bedoeld voor het moment dat het je te veel wordt, niet voor het moment dat je rustig kunt gaan plannen. Je gebruikt ze gewoon in je browser, je voortgang blijft bewaard en je stopt wanneer je wilt.",
+  "intro": "Gratis tools zonder registratie, gemaakt voor ADHD-breinen. Bedoeld voor het moment dat het je te veel wordt, niet voor het moment dat je rustig kunt gaan plannen. Je gebruikt ze gewoon in je browser en je stopt wanneer je wilt.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Brain dump-tool",
-      "description": "Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie, niets wordt opgeslagen."
+      "description": "Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie."
     },
     {
       "slug": "pick-one",

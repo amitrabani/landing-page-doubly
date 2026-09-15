@@ -46,10 +46,6 @@ const FAQS = [
     a: 'ADHD brains under-produce dopamine for tasks the brain reads as "too big to finish." A small, finite step is the brain\'s preferred unit of work. Research from Russell Barkley and others links this to executive-function differences in task initiation, not laziness.',
   },
   {
-    q: 'Does the tool save my tasks?',
-    a: 'No. Nothing leaves your browser except the task you type, which is sent to our AI to break it down and then discarded. No account, no email, no history. Refresh the page and it is gone.',
-  },
-  {
     q: 'How long should each sub-step be?',
     a: 'The tool aims for steps that take a few minutes each. If a step still feels too big, paste that step back in as a fresh task and split it again. There is no rule against splitting a split.',
   },
@@ -161,7 +157,7 @@ export default function TaskSplitterPage() {
               doable steps so an overwhelmed brain has a clear place to start.
             </strong>{' '}
             Type a task above. The tool returns ordered sub-steps with time estimates. Built for
-            ADHD brains, free, no signup. Refresh the page and your input is gone.
+            ADHD brains, free, no signup.
           </p>
         </div>
 

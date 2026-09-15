@@ -13,7 +13,7 @@
   "breadcrumbHome": "Início",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Ferramentas grátis e sem cadastro, feitas para cérebros com TDAH. Pensadas para a hora em que você está sobrecarregado, não para a hora em que você está pronto para planejar. Use direto no navegador. Salve o seu progresso. Saia quando quiser.",
+  "intro": "Ferramentas grátis e sem cadastro, feitas para cérebros com TDAH. Pensadas para a hora em que você está sobrecarregado, não para a hora em que você está pronto para planejar. Use direto no navegador. Saia quando quiser.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Ferramenta de despejo mental",
-      "description": "Solte tudo que está na sua cabeça e a IA separa só as tarefas em que dá para agir. Sem cadastro, nada é guardado."
+      "description": "Solte tudo que está na sua cabeça e a IA separa só as tarefas em que dá para agir. Sem cadastro."
     },
     {
       "slug": "pick-one",

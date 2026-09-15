@@ -459,7 +459,16 @@ const zhHans = {
     privacy: '隐私',
     terms: '条款',
     support: '支持',
+    cookieSettings: 'Cookie 设置',
     copyright: (year: number) => `© ${year} Doubly. 为 ADHD 大脑打造。`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: '我们使用 Cookie 来衡量访问量和广告效果。',
+    privacyLink: '隐私政策',
+    reject: '拒绝',
+    accept: '接受',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const zhHans = {
     'brain-dump': {
       title: '大脑清空工具',
       description:
-        '把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册,不留存任何内容。',
+        '把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册。',
     },
     'pick-one': {
       title: '挑一个任务',
@@ -534,7 +543,6 @@ const zhHans = {
       inputPlaceholder: '例如:提交报销单',
       submit: '拆解它',
       submitting: '正在拆解……',
-      privacyNote: '私密。我们的服务器不保存任何内容。',
       charactersLeft: (count: number) => `还可以输入 ${count} 字`,
       presetsIntro: '或者试试这些:',
       presets: {
@@ -561,7 +569,6 @@ const zhHans = {
       label: '把脑子里的一切都倒出来。不用整理。',
       placeholder:
         '我总忘记给牙医打电话,厨房也乱成一团。\n工作上那个项目让我喘不过气。今晚要买菜做饭,\n还得回 Sarah 上周发来的邮件。',
-      privacy: '私密。我们的服务器不保存任何内容。',
       charactersLeft: (remaining: number) => `还可以输入 ${remaining} 字。`,
       clear: '清空',
       submit: '把任务挑出来',

@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Brain dump-tool",
-  "answerCapsule": "**Met een brain dump-tool haal je in één keer alles uit je hoofd op één plek, waarna hij er alleen de bruikbare taken uit vist, zodat je iets kunt dóén in plaats van te blijven malen.** Typ hierboven vrijuit. De tool leest je dump, negeert emoties en gemopper, en geeft een kort to-dolijstje terug. Gratis, geen registratie, niets wordt opgeslagen.",
+  "answerCapsule": "**Met een brain dump-tool haal je in één keer alles uit je hoofd op één plek, waarna hij er alleen de bruikbare taken uit vist, zodat je iets kunt dóén in plaats van te blijven malen.** Typ hierboven vrijuit. De tool leest je dump, negeert emoties en gemopper, en geeft een kort to-dolijstje terug. Gratis, geen registratie.",
   "intro": "Die mentale lus van “het is te veel, ik kan niet beginnen, maar het is te veel” doorbreken: daar is de brain dump voor. Je schrijft om je hoofd leeg te maken, niet om te plannen. Het plan rolt er aan de andere kant vanzelf uit, als een lijst waar je meteen iets mee kunt.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Hoe verschilt dit van een gewone notitie-app?",
           "a": "Een notitie-app geeft je een lege pagina. Deze tool leest wat je hebt gedumpt en haalt er alleen de concrete, bruikbare taken uit; emoties, observaties en gemopper laat hij liggen. Je krijgt een kort to-dolijstje zonder er zelf een te schrijven."
-        },
-        {
-          "q": "Is mijn brain dump privé?",
-          "a": "Ja. Je tekst wordt naar onze AI gestuurd om de taken eruit te halen en daarna weggegooid. Er wordt niets opgeslagen dat aan jou gekoppeld is, er verlaat niets je browser behalve de aanvraag zelf, en er is geen account."
         },
         {
           "q": "Waarom is een brain dump nuttig bij ADHD?",

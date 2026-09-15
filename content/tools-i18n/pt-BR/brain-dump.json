@@ -12,7 +12,7 @@
   "breadcrumbHome": "Início",
   "breadcrumbTools": "Ferramentas",
   "breadcrumbLabel": "Ferramenta de despejo mental",
-  "answerCapsule": "**Uma ferramenta de despejo mental deixa você tirar da cabeça, em um só lugar, tudo o que está lá dentro e depois separa só as tarefas possíveis, para você fazer algo em vez de só ficar girando em círculos.** Digite à vontade acima. A ferramenta lê o despejo, ignora as emoções e o desabafo e devolve uma lista curta de afazeres. Grátis, sem cadastro, nada é guardado.",
+  "answerCapsule": "**Uma ferramenta de despejo mental deixa você tirar da cabeça, em um só lugar, tudo o que está lá dentro e depois separa só as tarefas possíveis, para você fazer algo em vez de só ficar girando em círculos.** Digite à vontade acima. A ferramenta lê o despejo, ignora as emoções e o desabafo e devolve uma lista curta de afazeres. Grátis, sem cadastro.",
   "intro": "Aquele loop mental de “tem coisa demais, não consigo começar, mas tem coisa demais” é justamente o que o despejo mental existe para quebrar. Você escreve para esvaziar a cabeça, não para planejar. O plano cai do outro lado como uma lista em que você consegue agir.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Como isso é diferente de um app de notas comum?",
           "a": "Um app de notas te dá uma página em branco. Esta ferramenta lê o que você despejou e separa só as tarefas concretas e possíveis, ignorando emoções, observações e desabafos. Você recebe uma lista curta de afazeres sem precisar escrever uma."
-        },
-        {
-          "q": "O meu despejo mental é privado?",
-          "a": "Sim. O seu texto é enviado para a nossa IA extrair as tarefas e depois é descartado. Nada é guardado ligado à sua identidade, nada sai do seu navegador além da própria requisição e não existe conta."
         },
         {
           "q": "Por que o despejo mental é útil para o TDAH?",

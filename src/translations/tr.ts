@@ -459,7 +459,16 @@ const tr = {
     privacy: 'Gizlilik',
     terms: 'Koşullar',
     support: 'Destek',
+    cookieSettings: 'Çerez ayarları',
     copyright: (year: number) => `© ${year} Doubly. ADHD beyinleri için tasarlandı.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Ziyaretleri ve reklamlarımızın performansını ölçmek için çerezler kullanıyoruz.',
+    privacyLink: 'Gizlilik Politikası',
+    reject: 'Reddet',
+    accept: 'Kabul et',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const tr = {
     'brain-dump': {
       title: 'Beyin Boşaltma Aracı',
       description:
-        'Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok, hiçbir şey saklanmıyor.',
+        'Kafandaki her şeyi dök, yapay zeka yalnızca yapılabilir görevleri çıkarsın. Kayıt yok.',
     },
     'pick-one': {
       title: 'Birini Seç Aracı',
@@ -534,7 +543,6 @@ const tr = {
       inputPlaceholder: 'örn. Masraf raporumu gönder',
       submit: 'Parçalara böl',
       submitting: 'Parçalara bölünüyor…',
-      privacyNote: 'Gizli. Sunucumuzda hiçbir şey saklanmıyor.',
       charactersLeft: (count: number) => `${count} karakter kaldı`,
       presetsIntro: 'Ya da bunlardan birini dene:',
       presets: {
@@ -561,7 +569,6 @@ const tr = {
       label: 'Kafandaki her şeyi dök. Düzenli olmasına gerek yok.',
       placeholder:
         'Diş hekimini aramayı sürekli unutuyorum ve mutfak berbat halde.\nİşteki proje yüzünden bunalmış hissediyorum. Akşam yemeği için market\nalışverişi yapmam ve Sarah’ın geçen haftaki e-postasına cevap yazmam lazım.',
-      privacy: 'Gizli. Sunucumuzda hiçbir şey saklanmıyor.',
       charactersLeft: (remaining: number) => `${remaining} karakter kaldı.`,
       clear: 'Temizle',
       submit: 'Görevleri çıkar',

@@ -2,10 +2,8 @@ import type { Metadata } from 'next';
 import '../globals.css';
 import en from '@/translations/en';
 import { fontVariables } from '../fonts';
-import PostHogProvider from '../PostHogProvider';
-import ScrollDepthTracker from '@/components/ScrollDepthTracker';
-import { GoogleTagManagerScript, GoogleTagManagerNoScript } from '../GoogleTagManager';
-import { RedditPixel } from '../RedditPixel';
+import ConsentedTrackers from '../ConsentedTrackers';
+import MainCookieBanner from './MainCookieBanner';
 import { EnglishTranslationProvider } from '@/i18n/TranslationProvider';
 import { SITE_URL } from '@/lib/sitemap-data';
 
@@ -29,16 +27,12 @@ export const metadata: Metadata = {
 export default function MainRootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={fontVariables}>
-      <head>
-        <GoogleTagManagerScript />
-        <RedditPixel />
-      </head>
       <body suppressHydrationWarning>
-        <GoogleTagManagerNoScript />
-        <PostHogProvider>
-          <ScrollDepthTracker />
-          <EnglishTranslationProvider>{children}</EnglishTranslationProvider>
-        </PostHogProvider>
+        <ConsentedTrackers />
+        <EnglishTranslationProvider>
+          <MainCookieBanner />
+          {children}
+        </EnglishTranslationProvider>
       </body>
     </html>
   );

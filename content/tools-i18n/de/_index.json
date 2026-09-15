@@ -13,7 +13,7 @@
   "breadcrumbHome": "Startseite",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Kostenlose Tools ohne Anmeldung, gemacht für ADHS-Gehirne. Für den Moment, in dem dir alles zu viel wird, nicht für den Moment, in dem du in Ruhe planen könntest. Läuft im Browser. Dein Fortschritt bleibt gespeichert. Aufhören kannst du jederzeit.",
+  "intro": "Kostenlose Tools ohne Anmeldung, gemacht für ADHS-Gehirne. Für den Moment, in dem dir alles zu viel wird, nicht für den Moment, in dem du in Ruhe planen könntest. Läuft im Browser. Aufhören kannst du jederzeit.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Brain-Dump-Tool",
-      "description": "Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung, nichts wird gespeichert."
+      "description": "Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung."
     },
     {
       "slug": "pick-one",

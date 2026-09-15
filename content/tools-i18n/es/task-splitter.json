@@ -12,7 +12,7 @@
   "breadcrumbHome": "Inicio",
   "breadcrumbTools": "Herramientas",
   "breadcrumbLabel": "Herramienta para dividir tareas",
-  "answerCapsule": "**Una herramienta para dividir tareas convierte una tarea que parece demasiado grande en una lista corta de pasos pequeños y realizables, para que un cerebro abrumado tenga un punto de partida claro.** Escribe una tarea arriba. La herramienta devuelve subpasos ordenados con tiempos estimados. Hecha para cerebros con TDAH, gratis, sin registro. Actualiza la página y lo que escribiste desaparece.",
+  "answerCapsule": "**Una herramienta para dividir tareas convierte una tarea que parece demasiado grande en una lista corta de pasos pequeños y realizables, para que un cerebro abrumado tenga un punto de partida claro.** Escribe una tarea arriba. La herramienta devuelve subpasos ordenados con tiempos estimados. Hecha para cerebros con TDAH, gratis, sin registro.",
   "intro": "La mayoría de las apps de productividad dan por hecho que puedes planear. Esta da por hecho que no puedes empezar. Escribe la tarea que lleva una semana en tu lista y deja que la IA la reduzca a su versión más pequeña. Luego haz un paso.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "¿Por qué dividir una tarea en pasos ayuda tanto cuando tienes TDAH?",
           "a": "Los cerebros con TDAH producen poca dopamina para las tareas que el cerebro lee como \"demasiado grandes para terminar\". Un paso pequeño y finito es la unidad de trabajo preferida del cerebro. La investigación de Russell Barkley y otros lo relaciona con diferencias de función ejecutiva en el inicio de tareas, no con la pereza."
-        },
-        {
-          "q": "¿La herramienta guarda mis tareas?",
-          "a": "No. Nada sale de tu navegador salvo la tarea que escribes, que se envía a nuestra IA para dividirla y luego se descarta. Sin cuenta, sin correo, sin historial. Actualiza la página y desaparece."
         },
         {
           "q": "¿Cuánto debería durar cada subpaso?",

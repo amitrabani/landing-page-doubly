@@ -29,6 +29,12 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /*
+     * The cookie banner is fixed to the bottom. While it is open, CookieBanner
+     * sets --consent-banner-height, so focus never scrolls an element under it
+     * (WCAG 2.4.11) and the end of the page can scroll clear of it.
+     */
+    scroll-padding-bottom: var(--consent-banner-height, 0px);
   }
 
   /*
@@ -48,6 +54,7 @@
     font-family: var(--font-body);
     color: var(--color-charcoal);
     background-color: var(--color-cream);
+    padding-bottom: var(--consent-banner-height, 0px);
   }
 
   ::selection {

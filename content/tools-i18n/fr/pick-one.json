@@ -12,7 +12,7 @@
   "breadcrumbHome": "Accueil",
   "breadcrumbTools": "Outils",
   "breadcrumbLabel": "Outil Choisis-en une",
-  "answerCapsule": "**Un outil « choisis-en une » supprime l’étape du choix. Colle ta liste, choisis un mode (la plus petite, la plus intimidante, au hasard) et obtiens une seule chose par où commencer.** Il est fait pour le moment où une liste de dix tâches se lit comme un seul bloc géant impossible à commencer. Rien n’est enregistré sur notre serveur.",
+  "answerCapsule": "**Un outil « choisis-en une » supprime l’étape du choix. Colle ta liste, choisis un mode (la plus petite, la plus intimidante, au hasard) et obtiens une seule chose par où commencer.** Il est fait pour le moment où une liste de dix tâches se lit comme un seul bloc géant impossible à commencer.",
   "intro": "Quand la liste entière paraît impossible, le point de blocage, c’est rarement l’action. C’est la décision. « Choisis-en une » supprime la décision et te tend un point de départ. Tu peux toujours en choisir une autre.",
   "sections": [
     {

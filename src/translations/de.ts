@@ -460,7 +460,16 @@ const de = {
     privacy: 'Datenschutz',
     terms: 'AGB',
     support: 'Support',
+    cookieSettings: 'Cookie-Einstellungen',
     copyright: (year: number) => `© ${year} Doubly. Für ADHS-Gehirne gemacht.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Wir nutzen Cookies, um Besuche und den Erfolg unserer Werbung zu messen.',
+    privacyLink: 'Datenschutzerklärung',
+    reject: 'Ablehnen',
+    accept: 'Akzeptieren',
   },
 
   // StickyBar
@@ -490,7 +499,7 @@ const de = {
     'brain-dump': {
       title: 'Brain-Dump-Tool',
       description:
-        'Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung, nichts wird gespeichert.',
+        'Kipp alles aus dem Kopf, die KI zieht nur die machbaren Aufgaben heraus. Ohne Anmeldung.',
     },
     'pick-one': {
       title: 'Pick One: eine Aufgabe wählen',
@@ -535,7 +544,6 @@ const de = {
       inputPlaceholder: 'z. B. Reisekostenabrechnung einreichen',
       submit: 'Aufteilen',
       submitting: 'Wird aufgeteilt…',
-      privacyNote: 'Privat. Nichts wird auf unserem Server gespeichert.',
       charactersLeft: (count: number) => `Noch ${count} Zeichen`,
       presetsIntro: 'Oder probier eines davon:',
       presets: {
@@ -566,7 +574,6 @@ const de = {
       label: 'Kipp alles raus, was in deinem Kopf ist. Es muss nicht sortiert sein.',
       placeholder:
         'Ich vergesse ständig, beim Zahnarzt anzurufen, und die Küche ist ein Chaos.\nDas Projekt auf der Arbeit überfordert mich. Ich muss noch Lebensmittel\nfür heute Abend kaufen und auf Sarahs E-Mail von letzter Woche antworten.',
-      privacy: 'Privat. Nichts wird auf unserem Server gespeichert.',
       charactersLeft: (remaining: number) => `Noch ${remaining} Zeichen.`,
       clear: 'Leeren',
       submit: 'Aufgaben herausziehen',

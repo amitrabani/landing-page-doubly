@@ -459,7 +459,16 @@ const ja = {
     privacy: 'プライバシー',
     terms: '利用規約',
     support: 'サポート',
+    cookieSettings: 'Cookie設定',
     copyright: (year: number) => `© ${year} Doubly. ADHDの脳のために。`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: '訪問数と広告の効果を測るためにCookieを使用しています。',
+    privacyLink: 'プライバシーポリシー',
+    reject: '拒否する',
+    accept: '同意する',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const ja = {
     'brain-dump': {
       title: 'ブレインダンプツール',
       description:
-        '頭の中のすべてを吐き出せば、AIが実行できるタスクだけを取り出します。登録不要、保存もなし。',
+        '頭の中のすべてを吐き出せば、AIが実行できるタスクだけを取り出します。登録不要。',
     },
     'pick-one': {
       title: 'ひとつ選ぶツール',
@@ -534,7 +543,6 @@ const ja = {
       inputPlaceholder: '例：経費精算を提出する',
       submit: '分解する',
       submitting: '分解しています…',
-      privacyNote: '非公開。サーバーには何も保存されません。',
       charactersLeft: (count: number) => `残り${count}文字`,
       presetsIntro: 'または、こちらを試してみて：',
       presets: {
@@ -561,7 +569,6 @@ const ja = {
       label: '頭の中のものを全部吐き出して。整理は不要です。',
       placeholder:
         '歯医者に電話するのをずっと忘れてるし、キッチンはぐちゃぐちゃ。\n仕事のプロジェクトのことで圧倒されてる。今夜の夕食の食料品を買わないと\nいけないし、先週のSarahのメールにも返信しないと。',
-      privacy: '非公開。サーバーには何も保存されません。',
       charactersLeft: (remaining: number) => `残り${remaining}文字。`,
       clear: 'クリア',
       submit: 'タスクを取り出す',

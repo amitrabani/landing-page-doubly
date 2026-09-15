@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Pick One Task Tool",
-  "answerCapsule": "**A pick one task tool removes the choosing step. Paste your list, choose a mode (smallest, scariest, random), and get one thing to start with.** It is built for the moment a list of ten tasks reads as one giant unstartable thing. Nothing is saved on our server.",
+  "answerCapsule": "**A pick one task tool removes the choosing step. Paste your list, choose a mode (smallest, scariest, random), and get one thing to start with.** It is built for the moment a list of ten tasks reads as one giant unstartable thing.",
   "intro": "When the whole list feels impossible, the bottleneck is rarely the doing. It is the deciding. Pick one strips the decision out and hands you a starting point. You can always pick again.",
   "sections": [
     {

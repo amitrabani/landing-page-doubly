@@ -12,7 +12,7 @@
   "breadcrumbHome": "Startseite",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Tool zum Aufteilen von Aufgaben",
-  "answerCapsule": "**Ein Tool zum Aufteilen von Aufgaben macht aus einer Aufgabe, die sich zu groß anfühlt, eine kurze Liste kleiner, machbarer Schritte, damit ein überfordertes Gehirn einen klaren Startpunkt hat.** Tipp oben eine Aufgabe ein. Das Tool gibt dir geordnete Teilschritte mit Zeitangaben zurück. Gemacht für ADHS-Gehirne, kostenlos, ohne Anmeldung. Lädst du die Seite neu, ist deine Eingabe weg.",
+  "answerCapsule": "**Ein Tool zum Aufteilen von Aufgaben macht aus einer Aufgabe, die sich zu groß anfühlt, eine kurze Liste kleiner, machbarer Schritte, damit ein überfordertes Gehirn einen klaren Startpunkt hat.** Tipp oben eine Aufgabe ein. Das Tool gibt dir geordnete Teilschritte mit Zeitangaben zurück. Gemacht für ADHS-Gehirne, kostenlos, ohne Anmeldung.",
   "intro": "Die meisten Produktivitäts-Tools setzen voraus, dass du planen kannst. Dieses hier setzt voraus, dass du nicht anfangen kannst. Tipp die Aufgabe ein, die seit einer Woche auf deiner Liste steht, und lass die KI sie in ihre kleinste Version zerlegen. Dann mach einen Schritt.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "Warum hilft es bei ADHS so sehr, eine Aufgabe in Schritte zu zerlegen?",
           "a": "Bei ADHS schüttet das Gehirn zu wenig Dopamin für Aufgaben aus, die es als „zu groß zum Abschließen“ liest. Ein kleiner, klar begrenzter Schritt ist die bevorzugte Arbeitseinheit des Gehirns. Forschung von Russell Barkley und anderen führt das auf Unterschiede in den exekutiven Funktionen beim Anfangen zurück, nicht auf Faulheit."
-        },
-        {
-          "q": "Speichert das Tool meine Aufgaben?",
-          "a": "Nein. Nichts verlässt deinen Browser außer der Aufgabe, die du eintippst: Sie geht an unsere KI, wird dort aufgeteilt und danach verworfen. Kein Konto, keine E-Mail, kein Verlauf. Lädst du die Seite neu, ist alles weg."
         },
         {
           "q": "Wie lang sollte jeder Teilschritt sein?",

@@ -12,7 +12,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": "Araçlar",
   "breadcrumbLabel": "Görev Bölme Aracı",
-  "answerCapsule": "**Bir görev bölme aracı, çok büyük hissettiren bir görevi küçük, yapılabilir adımlardan oluşan kısa bir listeye dönüştürür; böylece bunalmış bir beynin başlaması için net bir yeri olur.** Yukarıya bir görev yaz. Araç, süre tahminleriyle sıralı alt adımlar döndürür. ADHD beyinleri için tasarlandı, ücretsiz, kayıt yok. Sayfayı yenile, yazdıkların kaybolur.",
+  "answerCapsule": "**Bir görev bölme aracı, çok büyük hissettiren bir görevi küçük, yapılabilir adımlardan oluşan kısa bir listeye dönüştürür; böylece bunalmış bir beynin başlaması için net bir yeri olur.** Yukarıya bir görev yaz. Araç, süre tahminleriyle sıralı alt adımlar döndürür. ADHD beyinleri için tasarlandı, ücretsiz, kayıt yok.",
   "intro": "Çoğu üretkenlik aracı planlayabildiğini varsayar. Bu araç başlayamadığını varsayar. Bir haftadır listende duran görevi yaz ve yapay zekanın onu kendisinin en küçük haline bölmesine izin ver. Sonra tek bir adım at.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "Bir görevi adımlara bölmek ADHD için neden bu kadar yardımcı olur?",
           "a": "ADHD beyinleri, \"bitirilemeyecek kadar büyük\" olarak algıladığı görevler için yeterince dopamin üretmez. Küçük ve sınırlı bir adım, beynin tercih ettiği iş birimidir. Russell Barkley ve diğerlerinin araştırmaları bunu tembellikle değil, görev başlatmadaki yürütücü işlev farklılıklarıyla ilişkilendirir."
-        },
-        {
-          "q": "Araç görevlerimi kaydediyor mu?",
-          "a": "Hayır. Yazdığın görev dışında hiçbir şey tarayıcından çıkmaz; o görev de bölünmesi için yapay zekamıza gönderilir ve ardından silinir. Hesap yok, e-posta yok, geçmiş yok. Sayfayı yenile, gitti."
         },
         {
           "q": "Her alt adım ne kadar sürmeli?",

@@ -13,7 +13,7 @@
   "breadcrumbHome": "Inicio",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Herramientas gratis y sin registro, pensadas para cerebros con TDAH. Hechas para el momento del agobio, no para cuando ya tienes la cabeza clara y ganas de planear. Úsalas en el navegador. Guarda tu progreso. Déjalas a medias cuando quieras.",
+  "intro": "Herramientas gratis y sin registro, pensadas para cerebros con TDAH. Hechas para el momento del agobio, no para cuando ya tienes la cabeza clara y ganas de planear. Úsalas en el navegador. Déjalas a medias cuando quieras.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Herramienta de volcado mental",
-      "description": "Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro, no se guarda nada."
+      "description": "Suelta todo lo que tienes en la cabeza y la IA extrae solo las tareas accionables. Sin registro."
     },
     {
       "slug": "pick-one",

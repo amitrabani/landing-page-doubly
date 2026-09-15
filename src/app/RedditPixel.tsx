@@ -3,9 +3,10 @@ import Script from 'next/script';
 const REDDIT_PIXEL_ID = process.env.NEXT_PUBLIC_REDDIT_PIXEL_ID?.trim();
 
 // Reddit conversion pixel. Inert until NEXT_PUBLIC_REDDIT_PIXEL_ID is set, so it
-// is safe to ship before the pixel exists. Fires the base PageVisit event on
-// load; downstream conversions (SignUp, Lead, Purchase) are sent via rdt() calls
-// from the relevant components, e.g. window.rdt?.('track', 'SignUp').
+// is safe to ship before the pixel exists. Rendered only by ConsentedTrackers,
+// after the visitor accepts cookies. Fires the base PageVisit event on load;
+// downstream conversions (SignUp, Lead, Purchase) are sent via rdt() calls from
+// the relevant components, e.g. window.rdt?.('track', 'SignUp').
 export function RedditPixel() {
   if (!REDDIT_PIXEL_ID) return null;
   return (

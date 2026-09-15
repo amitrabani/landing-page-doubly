@@ -459,7 +459,16 @@ const en = {
     privacy: 'Privacy',
     terms: 'Terms',
     support: 'Support',
+    cookieSettings: 'Cookie settings',
     copyright: (year: number) => `\u00a9 ${year} Doubly. Built for ADHD brains.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'We use cookies to measure visits and how our ads perform.',
+    privacyLink: 'Privacy Policy',
+    reject: 'Reject',
+    accept: 'Accept',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const en = {
     'brain-dump': {
       title: 'Brain Dump Tool',
       description:
-        'Dump everything in your head, AI pulls out only the actionable tasks. No signup, nothing stored.',
+        'Dump everything in your head, AI pulls out only the actionable tasks. No signup.',
     },
     'pick-one': {
       title: 'Pick One Task Tool',
@@ -537,7 +546,6 @@ const en = {
       inputPlaceholder: 'e.g. File my expense report',
       submit: 'Break it down',
       submitting: 'Breaking it down…',
-      privacyNote: 'Private. Nothing is saved on our server.',
       charactersLeft: (count: number) => `${count} characters left`,
       presetsIntro: 'Or try one of these:',
       presets: {
@@ -564,7 +572,6 @@ const en = {
       label: 'Dump everything in your head. Doesn’t need to be organized.',
       placeholder:
         'I keep forgetting to call the dentist and the kitchen is a mess.\nFeeling overwhelmed about the project at work. Need to buy groceries\nfor dinner tonight and respond to Sarah’s email from last week.',
-      privacy: 'Private. Nothing is saved on our server.',
       charactersLeft: (remaining: number) => `${remaining} characters left.`,
       clear: 'Clear',
       submit: 'Pull out the tasks',
