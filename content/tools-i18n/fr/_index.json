@@ -13,7 +13,7 @@
   "breadcrumbHome": "Accueil",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "Des outils gratuits, sans inscription, pensés pour les cerveaux TDAH. Faits pour le moment où tu es débordé, pas pour celui où tu es prêt à planifier. Tout tourne dans ton navigateur. Ta progression est sauvegardée. Tu repars quand tu veux.",
+  "intro": "Des outils gratuits, sans inscription, pensés pour les cerveaux TDAH. Faits pour le moment où tu es débordé, pas pour celui où tu es prêt à planifier. Tu repars quand tu veux.",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "Outil de vide-cerveau",
-      "description": "Vide tout ce que tu as en tête, l’IA en extrait uniquement les tâches actionnables. Sans inscription, rien n’est stocké."
+      "description": "Vide tout ce que tu as en tête, l’IA en extrait uniquement les tâches actionnables. Sans inscription."
     },
     {
       "slug": "pick-one",

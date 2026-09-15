@@ -12,7 +12,7 @@
   "breadcrumbHome": "Accueil",
   "breadcrumbTools": "Outils",
   "breadcrumbLabel": "Outil de vide-cerveau",
-  "answerCapsule": "**Un outil de vide-cerveau te permet de déposer tout ce que tu as en tête au même endroit, puis en extrait uniquement les tâches actionnables pour que tu puisses agir au lieu de tourner en rond.** Écris librement ci-dessus. L’outil lit ton vide-cerveau, ignore les émotions et le défoulement, et te renvoie une courte liste de choses à faire. Gratuit, sans inscription, rien n’est stocké.",
+  "answerCapsule": "**Un outil de vide-cerveau te permet de déposer tout ce que tu as en tête au même endroit, puis en extrait uniquement les tâches actionnables pour que tu puisses agir au lieu de tourner en rond.** Écris librement ci-dessus. L’outil lit ton vide-cerveau, ignore les émotions et le défoulement, et te renvoie une courte liste de choses à faire. Gratuit, sans inscription.",
   "intro": "Briser la boucle mentale « il y en a trop, je n’arrive pas à commencer, mais il y en a trop », c’est justement le rôle du vide-cerveau. Tu écris pour vider ta tête, pas pour planifier. Le plan ressort de l’autre côté, sous forme d’une liste sur laquelle tu peux agir.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "En quoi est-ce différent d’une appli de notes classique ?",
           "a": "Une appli de notes te donne une page blanche. Cet outil lit ce que tu as vidé et en extrait uniquement les tâches concrètes et actionnables, en ignorant les émotions, les observations et le défoulement. Tu obtiens une courte liste de choses à faire sans avoir à l’écrire toi-même."
-        },
-        {
-          "q": "Mon vide-cerveau est-il privé ?",
-          "a": "Oui. Ton texte est envoyé à notre IA pour en extraire les tâches, puis il est supprimé. Rien n’est stocké sous ton identité, rien ne quitte ton navigateur à part la requête elle-même, et il n’y a pas de compte."
         },
         {
           "q": "Pourquoi le vide-cerveau est-il utile pour le TDAH ?",

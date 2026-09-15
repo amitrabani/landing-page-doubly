@@ -12,7 +12,7 @@
   "breadcrumbHome": "Accueil",
   "breadcrumbTools": "Outils",
   "breadcrumbLabel": "Outil de découpage de tâches",
-  "answerCapsule": "**Un outil de découpage de tâches transforme une tâche qui paraît trop grosse en une courte liste de petites étapes faisables, pour qu’un cerveau débordé ait un point de départ clair.** Écris une tâche ci-dessus. L’outil renvoie des sous-étapes ordonnées avec des durées estimées. Conçu pour les cerveaux TDAH, gratuit, sans inscription. Recharge la page et ce que tu as écrit disparaît.",
+  "answerCapsule": "**Un outil de découpage de tâches transforme une tâche qui paraît trop grosse en une courte liste de petites étapes faisables, pour qu’un cerveau débordé ait un point de départ clair.** Écris une tâche ci-dessus. L’outil renvoie des sous-étapes ordonnées avec des durées estimées. Conçu pour les cerveaux TDAH, gratuit, sans inscription.",
   "intro": "La plupart des applis de productivité supposent que tu sais planifier. Celle-ci suppose que tu n’arrives pas à commencer. Écris la tâche qui traîne sur ta liste depuis une semaine et laisse l’IA la réduire à sa plus petite version. Puis fais une seule étape.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Pourquoi découper une tâche en étapes aide-t-il autant avec le TDAH ?",
           "a": "Les cerveaux TDAH produisent trop peu de dopamine pour les tâches perçues comme « trop grosses pour être terminées ». Une petite étape bien délimitée est l’unité de travail que le cerveau préfère. Les travaux de Russell Barkley et d’autres relient cela à des différences de fonction exécutive dans l’initiation des tâches, pas à de la paresse."
-        },
-        {
-          "q": "L’outil enregistre-t-il mes tâches ?",
-          "a": "Non. Rien ne quitte ton navigateur, à part la tâche que tu écris, qui est envoyée à notre IA pour être découpée, puis supprimée. Pas de compte, pas d’e-mail, pas d’historique. Recharge la page et tout disparaît."
         },
         {
           "q": "Combien de temps doit durer chaque sous-étape ?",

@@ -45,10 +45,6 @@ const FAQS = [
     a: 'A notes app gives you a blank page. This tool reads what you dumped and pulls out only the concrete, actionable tasks, ignoring emotions, observations, and venting. You get a short to-do list without writing one yourself.',
   },
   {
-    q: 'Is my brain dump private?',
-    a: 'Yes. Your text is sent to our AI to extract tasks and is then discarded. Nothing is stored against your identity, nothing leaves your browser besides the request itself, and there is no account.',
-  },
-  {
     q: 'Why is brain dumping useful for ADHD?',
     a: 'ADHD adults often have working memory loaded with half-finished thoughts. That mental clutter is its own kind of overwhelm. Getting the contents out, even messily, frees up cognitive space and makes the actionable items visible enough to act on.',
   },
@@ -161,7 +157,7 @@ export default function BrainDumpPage() {
               spinning.
             </strong>{' '}
             Type freely above. The tool reads the dump, ignores emotions and venting, and returns
-            a short to-do list. Free, no signup, nothing stored.
+            a short to-do list. Free, no signup.
           </p>
         </div>
 

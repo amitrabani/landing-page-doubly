@@ -160,7 +160,6 @@ export default function PickOnePage() {
               (smallest, scariest, random), and get one thing to start with.
             </strong>{' '}
             It is built for the moment a list of ten tasks reads as one giant unstartable thing.
-            Nothing is saved on our server.
           </p>
         </div>
 

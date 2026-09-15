@@ -2,10 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import '../globals.css';
 import { fontVariables } from '../fonts';
-import PostHogProvider from '../PostHogProvider';
-import ScrollDepthTracker from '@/components/ScrollDepthTracker';
-import { GoogleTagManagerScript, GoogleTagManagerNoScript } from '../GoogleTagManager';
-import { RedditPixel } from '../RedditPixel';
+import ConsentedTrackers from '../ConsentedTrackers';
+import CookieBanner from '@/components/CookieBanner';
 import { LocaleTranslationProvider } from '@/i18n/TranslationProvider';
 import { isLocale, isRtl, htmlLang, defaultLocale, nonDefaultLocales } from '@/i18n/config';
 import { SITE_URL } from '@/lib/sitemap-data';
@@ -45,18 +43,12 @@ export default async function LocaleRootLayout({
       dir={isRtl(locale) ? 'rtl' : 'ltr'}
       className={fontVariables}
     >
-      <head>
-        <GoogleTagManagerScript />
-        <RedditPixel />
-      </head>
       <body suppressHydrationWarning>
-        <GoogleTagManagerNoScript />
-        <PostHogProvider>
-          <ScrollDepthTracker />
-          <LocaleTranslationProvider locale={locale}>
-            {children}
-          </LocaleTranslationProvider>
-        </PostHogProvider>
+        <ConsentedTrackers />
+        <LocaleTranslationProvider locale={locale}>
+          <CookieBanner />
+          {children}
+        </LocaleTranslationProvider>
       </body>
     </html>
   );

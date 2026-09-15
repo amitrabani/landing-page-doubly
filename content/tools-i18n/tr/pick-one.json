@@ -12,7 +12,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": "Araçlar",
   "breadcrumbLabel": "Birini Seç Aracı",
-  "answerCapsule": "**Birini seç aracı, seçme adımını ortadan kaldırır. Listeni yapıştır, bir mod seç (en küçük, en korkutucu, rastgele) ve başlamak için tek bir iş al.** On görevlik bir listenin dev ve başlanamaz tek bir şey gibi göründüğü an için tasarlandı. Sunucumuzda hiçbir şey kaydedilmez.",
+  "answerCapsule": "**Birini seç aracı, seçme adımını ortadan kaldırır. Listeni yapıştır, bir mod seç (en küçük, en korkutucu, rastgele) ve başlamak için tek bir iş al.** On görevlik bir listenin dev ve başlanamaz tek bir şey gibi göründüğü an için tasarlandı.",
   "intro": "Bütün liste imkansız hissettirdiğinde, tıkanma noktası nadiren yapmaktır. Karar vermektir. Birini seç, kararı aradan çıkarır ve sana bir başlangıç noktası verir. İstediğin zaman yeniden seçebilirsin.",
   "sections": [
     {

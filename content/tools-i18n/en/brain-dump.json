@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Brain Dump Tool",
-  "answerCapsule": "**A brain dump tool lets you offload everything in your head in one place, then pulls out only the actionable tasks so you can do something instead of just spinning.** Type freely above. The tool reads the dump, ignores emotions and venting, and returns a short to-do list. Free, no signup, nothing stored.",
+  "answerCapsule": "**A brain dump tool lets you offload everything in your head in one place, then pulls out only the actionable tasks so you can do something instead of just spinning.** Type freely above. The tool reads the dump, ignores emotions and venting, and returns a short to-do list. Free, no signup.",
   "intro": "The mental loop of “there is too much, I cannot start, but there is too much” is the brain dump’s job to break. You write to empty the head, not to plan. The plan falls out the other side as a list you can act on.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "How is this different from a regular notes app?",
           "a": "A notes app gives you a blank page. This tool reads what you dumped and pulls out only the concrete, actionable tasks, ignoring emotions, observations, and venting. You get a short to-do list without writing one yourself."
-        },
-        {
-          "q": "Is my brain dump private?",
-          "a": "Yes. Your text is sent to our AI to extract tasks and is then discarded. Nothing is stored against your identity, nothing leaves your browser besides the request itself, and there is no account."
         },
         {
           "q": "Why is brain dumping useful for ADHD?",

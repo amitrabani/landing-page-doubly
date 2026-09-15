@@ -33,6 +33,8 @@ export default function StickyBar() {
   // visible. ~90% of paid visitors never scroll far, so no scroll threshold.
   const visible = !heroInView && !ctaInView;
 
+  // While the cookie banner is open it covers the bottom of the screen, so the bar
+  // moves up above it (CookieBanner sets --consent-banner-height).
   return (
     <AnimatePresence>
       {visible && (
@@ -45,7 +47,7 @@ export default function StickyBar() {
             transition: { duration: 0.25, ease: EASE },
           }}
           transition={{ ...SPRING, opacity: { duration: 0.3, ease: 'easeOut' } }}
-          className="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-6 md:hidden"
+          className="fixed bottom-[calc(1.5rem_+_var(--consent-banner-height,0px))] left-0 right-0 z-50 flex justify-center px-6 md:hidden"
         >
           <motion.a
             href={APP_STORE_URL}

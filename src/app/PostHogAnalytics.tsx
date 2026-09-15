@@ -1,7 +1,6 @@
 'use client';
 
 import posthog from 'posthog-js';
-import { PostHogProvider as PHProvider, usePostHog } from 'posthog-js/react';
 import { useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
@@ -9,16 +8,17 @@ import { usePathname, useSearchParams } from 'next/navigation';
 // identified. The project has defaultIdentifiedOnly=true; if the SDK starts
 // anonymous and identifies later, the initial events (and the recording's
 // session start) get dropped server-side and no person is ever created.
+export const VISITOR_ID_STORAGE_KEY = 'doubly_web_visitor_id';
+
 function resolveVisitorId(): string {
-  const STORAGE_KEY = 'doubly_web_visitor_id';
   try {
-    const existing = window.localStorage.getItem(STORAGE_KEY);
+    const existing = window.localStorage.getItem(VISITOR_ID_STORAGE_KEY);
     if (existing) return existing;
     const fresh =
       typeof crypto !== 'undefined' && 'randomUUID' in crypto
         ? `web_${crypto.randomUUID()}`
         : `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
-    window.localStorage.setItem(STORAGE_KEY, fresh);
+    window.localStorage.setItem(VISITOR_ID_STORAGE_KEY, fresh);
     return fresh;
   } catch {
     return `web_${Date.now()}_${Math.random().toString(36).slice(2)}`;
@@ -28,9 +28,9 @@ function resolveVisitorId(): string {
 const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 const POSTHOG_HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST?.trim();
 
-if (typeof window !== 'undefined' && POSTHOG_KEY) {
+function initPostHog(apiKey: string) {
   const visitorId = resolveVisitorId();
-  posthog.init(POSTHOG_KEY, {
+  posthog.init(apiKey, {
     api_host: POSTHOG_HOST || 'https://events.usedoubly.com',
     ui_host: 'https://us.posthog.com',
     person_profiles: 'always',
@@ -42,37 +42,42 @@ if (typeof window !== 'undefined' && POSTHOG_KEY) {
       isIdentifiedID: true,
     },
   });
+  // Rejecting cookies after accepting them opts PostHog out (ConsentedTrackers), and
+  // that opt-out is persisted. Accepting again has to switch capture back on.
+  if (posthog.has_opted_out_capturing()) {
+    posthog.opt_in_capturing({ captureEventName: false });
+  }
 }
 
-function PostHogPageView() {
+function PostHogPageView({ apiKey }: { apiKey: string }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const ph = usePostHog();
 
   useEffect(() => {
-    if (pathname && ph) {
+    // Init here rather than in a parent effect: a parent's effects run after its
+    // children's, and a capture before init is dropped, which would lose the
+    // first $pageview.
+    if (!posthog.__loaded) initPostHog(apiKey);
+    if (pathname) {
       let url = window.origin + pathname;
       if (searchParams.toString()) {
         url = url + '?' + searchParams.toString();
       }
-      ph.capture('$pageview', { $current_url: url });
+      posthog.capture('$pageview', { $current_url: url });
     }
-  }, [pathname, searchParams, ph]);
+  }, [apiKey, pathname, searchParams]);
 
   return null;
 }
 
-export default function PostHogProvider({ children }: { children: React.ReactNode }) {
-  if (!POSTHOG_KEY) {
-    return <>{children}</>;
-  }
+// Rendered only by ConsentedTrackers, so nothing here (not even the visitor id)
+// runs before the visitor accepts cookies.
+export default function PostHogAnalytics() {
+  if (!POSTHOG_KEY) return null;
 
   return (
-    <PHProvider client={posthog}>
-      <Suspense fallback={null}>
-        <PostHogPageView />
-      </Suspense>
-      {children}
-    </PHProvider>
+    <Suspense fallback={null}>
+      <PostHogPageView apiKey={POSTHOG_KEY} />
+    </Suspense>
   );
 }

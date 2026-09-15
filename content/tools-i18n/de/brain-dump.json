@@ -12,7 +12,7 @@
   "breadcrumbHome": "Startseite",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Brain-Dump-Tool",
-  "answerCapsule": "**Mit einem Brain-Dump-Tool lädst du alles, was dir im Kopf herumschwirrt, an einem Ort ab, und es zieht nur die machbaren Aufgaben heraus, damit du ins Tun kommst, statt dich im Kreis zu drehen.** Tipp oben einfach drauflos. Das Tool liest den Dump, ignoriert Gefühle und Frust und gibt dir eine kurze To-do-Liste zurück. Kostenlos, ohne Anmeldung, nichts wird gespeichert.",
+  "answerCapsule": "**Mit einem Brain-Dump-Tool lädst du alles, was dir im Kopf herumschwirrt, an einem Ort ab, und es zieht nur die machbaren Aufgaben heraus, damit du ins Tun kommst, statt dich im Kreis zu drehen.** Tipp oben einfach drauflos. Das Tool liest den Dump, ignoriert Gefühle und Frust und gibt dir eine kurze To-do-Liste zurück. Kostenlos, ohne Anmeldung.",
   "intro": "Ein Brain Dump ist dazu da, die Gedankenschleife „Es ist zu viel, ich kann nicht anfangen, aber es ist zu viel“ zu durchbrechen. Du schreibst, um den Kopf zu leeren, nicht um zu planen. Der Plan entsteht dabei von selbst, als Liste, mit der du wirklich etwas anfangen kannst.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Wie unterscheidet sich das von einer normalen Notiz-App?",
           "a": "Eine Notiz-App gibt dir eine leere Seite. Dieses Tool liest, was du rausgekippt hast, und zieht nur die konkreten, machbaren Aufgaben heraus. Gefühle, Beobachtungen und Frust lässt es links liegen. Du bekommst eine kurze To-do-Liste, ohne sie selbst zu schreiben."
-        },
-        {
-          "q": "Ist mein Brain Dump privat?",
-          "a": "Ja. Dein Text geht an unsere KI, die daraus die Aufgaben zieht, und wird danach verworfen. Nichts wird mit deiner Identität gespeichert, nichts verlässt deinen Browser außer der Anfrage selbst, und ein Konto brauchst du auch nicht."
         },
         {
           "q": "Warum hilft ein Brain Dump bei ADHS?",

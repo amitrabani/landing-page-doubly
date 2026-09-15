@@ -104,7 +104,7 @@ export default function BrainDumpTool() {
         />
         <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-3">
           <div className="text-xs text-muted-light">
-            {t.privacy} <span aria-live="polite">{t.charactersLeft(remaining)}</span>
+            <span aria-live="polite">{t.charactersLeft(remaining)}</span>
           </div>
           <div className="flex gap-2">
             {(input || tasks) && (

@@ -130,8 +130,7 @@ export default function TaskSplitterTool() {
             {loading ? copy.submitting : copy.submit}
           </button>
         </div>
-        <div className="flex items-center justify-between text-xs text-muted-light">
-          <span>{copy.privacyNote}</span>
+        <div className="flex items-center justify-end text-xs text-muted-light">
           <span aria-live="polite">{copy.charactersLeft(remaining)}</span>
         </div>
       </form>

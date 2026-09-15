@@ -459,7 +459,16 @@ const he = {
     privacy: 'פרטיות',
     terms: 'תנאים',
     support: 'תמיכה',
+    cookieSettings: 'הגדרות עוגיות',
     copyright: (year: number) => `© ${year} Doubly. נבנה למוחות עם ADHD.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'אנחנו משתמשים בעוגיות כדי למדוד ביקורים ואת ביצועי הפרסומות שלנו.',
+    privacyLink: 'מדיניות הפרטיות',
+    reject: 'דחייה',
+    accept: 'אישור',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const he = {
     'brain-dump': {
       title: 'כלי פריקת מוח',
       description:
-        'שחררו את כל מה שבראש, וה-AI שולף רק את המשימות בנות-הביצוע. בלי הרשמה, שום דבר לא נשמר.',
+        'שחררו את כל מה שבראש, וה-AI שולף רק את המשימות בנות-הביצוע. בלי הרשמה.',
     },
     'pick-one': {
       title: 'כלי "בחרו משימה אחת"',
@@ -535,7 +544,6 @@ const he = {
       inputPlaceholder: 'למשל: להגיש דוח הוצאות',
       submit: 'פרקו את זה',
       submitting: 'מפרק את זה…',
-      privacyNote: 'פרטי. שום דבר לא נשמר בשרת שלנו.',
       charactersLeft: (count: number) => (count === 1 ? 'נשאר תו אחד' : `נשארו ${count} תווים`),
       presetsIntro: 'או נסו אחת מאלה:',
       presets: {
@@ -562,7 +570,6 @@ const he = {
       label: 'שחררו את כל מה שבראש. לא צריך שיהיה מסודר.',
       placeholder:
         'אני כל הזמן שוכח להתקשר לרופא השיניים והמטבח בלגן.\nאני מוצף מהפרויקט בעבודה. צריך לקנות מצרכים\nלארוחת ערב היום ולענות למייל של שרה מהשבוע שעבר.',
-      privacy: 'פרטי. שום דבר לא נשמר בשרת שלנו.',
       charactersLeft: (remaining: number) =>
         remaining === 1 ? 'נשאר תו אחד.' : `נשארו ${remaining} תווים.`,
       clear: 'ניקוי',

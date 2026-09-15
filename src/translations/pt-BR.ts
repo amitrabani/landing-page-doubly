@@ -459,7 +459,16 @@ const ptBR = {
     privacy: 'Privacidade',
     terms: 'Termos',
     support: 'Suporte',
+    cookieSettings: 'Configurações de cookies',
     copyright: (year: number) => `© ${year} Doubly. Feito para cérebros com TDAH.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Usamos cookies para medir visitas e o desempenho dos nossos anúncios.',
+    privacyLink: 'Política de Privacidade',
+    reject: 'Recusar',
+    accept: 'Aceitar',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const ptBR = {
     'brain-dump': {
       title: 'Ferramenta de despejo mental',
       description:
-        'Solte tudo que está na sua cabeça e a IA separa só as tarefas em que dá para agir. Sem cadastro, nada é guardado.',
+        'Solte tudo que está na sua cabeça e a IA separa só as tarefas em que dá para agir. Sem cadastro.',
     },
     'pick-one': {
       title: 'Escolha uma tarefa',
@@ -534,7 +543,6 @@ const ptBR = {
       inputPlaceholder: 'ex.: Enviar meu relatório de despesas',
       submit: 'Dividir em passos',
       submitting: 'Dividindo…',
-      privacyNote: 'Privado. Nada é salvo no nosso servidor.',
       charactersLeft: (count: number) =>
         `${count} caractere${count === 1 ? '' : 's'} restante${count === 1 ? '' : 's'}`,
       presetsIntro: 'Ou experimente uma destas:',
@@ -562,7 +570,6 @@ const ptBR = {
       label: 'Despeje tudo o que está na sua cabeça. Não precisa estar organizado.',
       placeholder:
         'Vivo esquecendo de ligar pro dentista e a cozinha está uma bagunça.\nEstou sobrecarregado com o projeto do trabalho. Preciso fazer compras\npara o jantar de hoje e responder o e-mail da Sarah da semana passada.',
-      privacy: 'Privado. Nada é salvo no nosso servidor.',
       charactersLeft: (remaining: number) =>
         `${remaining} caractere${remaining === 1 ? '' : 's'} restante${remaining === 1 ? '' : 's'}.`,
       clear: 'Limpar',

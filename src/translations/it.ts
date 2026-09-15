@@ -459,7 +459,16 @@ const it = {
     privacy: 'Privacy',
     terms: 'Termini',
     support: 'Supporto',
+    cookieSettings: 'Impostazioni cookie',
     copyright: (year: number) => `© ${year} Doubly. Creato per menti ADHD.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'Usiamo i cookie per misurare le visite e l’efficacia dei nostri annunci.',
+    privacyLink: 'Informativa sulla privacy',
+    reject: 'Rifiuta',
+    accept: 'Accetta',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const it = {
     'brain-dump': {
       title: 'Strumento svuota-cervello',
       description:
-        'Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione, niente viene salvato.',
+        'Butta giù tutto ciò che hai in testa, l’IA estrae solo le attività concrete. Senza registrazione.',
     },
     'pick-one': {
       title: 'Strumento «scegline una»',
@@ -534,7 +543,6 @@ const it = {
       inputPlaceholder: 'es. Compilare la nota spese',
       submit: 'Dividila',
       submitting: 'La sto dividendo…',
-      privacyNote: 'Privato. Non salviamo nulla sul nostro server.',
       charactersLeft: (count: number) => `${count} caratteri rimasti`,
       presetsIntro: 'Oppure prova una di queste:',
       presets: {
@@ -561,7 +569,6 @@ const it = {
       label: 'Butta fuori tutto quello che hai in testa. Non serve che sia ordinato.',
       placeholder:
         'Continuo a dimenticare di chiamare il dentista e la cucina è un disastro.\nMi sento sopraffatto dal progetto al lavoro. Devo fare la spesa per la\ncena di stasera e rispondere all’email di Sara della settimana scorsa.',
-      privacy: 'Privato. Non salviamo nulla sul nostro server.',
       charactersLeft: (remaining: number) => `${remaining} caratteri rimasti.`,
       clear: 'Svuota',
       submit: 'Tira fuori le attività',

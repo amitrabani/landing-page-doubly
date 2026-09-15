@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Strumenti",
   "breadcrumbLabel": "Strumento per scomporre le attività",
-  "answerCapsule": "**Uno strumento per scomporre le attività trasforma un’attività che sembra troppo grande in una breve lista di piccoli passi fattibili, così un cervello sopraffatto ha un punto di partenza chiaro.** Scrivi un’attività qui sopra. Lo strumento restituisce sotto-passi ordinati con stime di tempo. Fatto per le menti ADHD, gratis, senza registrazione. Aggiorna la pagina e ciò che hai scritto sparisce.",
+  "answerCapsule": "**Uno strumento per scomporre le attività trasforma un’attività che sembra troppo grande in una breve lista di piccoli passi fattibili, così un cervello sopraffatto ha un punto di partenza chiaro.** Scrivi un’attività qui sopra. Lo strumento restituisce sotto-passi ordinati con stime di tempo. Fatto per le menti ADHD, gratis, senza registrazione.",
   "intro": "La maggior parte delle app di produttività dà per scontato che tu sappia pianificare. Questa dà per scontato che tu non riesca a iniziare. Scrivi l’attività ferma sulla tua lista da una settimana e lascia che l’IA la riduca alla sua versione più piccola. Poi fai un passo.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "Perché scomporre un’attività in passi aiuta così tanto con l’ADHD?",
           "a": "I cervelli ADHD producono meno dopamina per le attività che il cervello legge come «troppo grandi da finire». Un passo piccolo e definito è l’unità di lavoro preferita dal cervello. Le ricerche di Russell Barkley e altri collegano tutto questo a differenze nelle funzioni esecutive legate all’avvio delle attività, non alla pigrizia."
-        },
-        {
-          "q": "Lo strumento salva le mie attività?",
-          "a": "No. Niente lascia il tuo browser tranne l’attività che scrivi, che viene inviata alla nostra IA per scomporla e poi scartata. Nessun account, nessuna email, nessuna cronologia. Aggiorna la pagina e sparisce."
         },
         {
           "q": "Quanto dovrebbe durare ogni sotto-passo?",

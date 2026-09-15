@@ -12,7 +12,7 @@
   "breadcrumbHome": "Startseite",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Aufgabe wählen",
-  "answerCapsule": "**Ein Tool zum Wählen einer Aufgabe nimmt dir den Schritt des Aussuchens ab. Füg deine Liste ein, wähl einen Modus (kleinste, gruseligste, zufällig) und bekomm eine Sache zum Anfangen.** Es ist für den Moment gemacht, in dem sich eine Liste mit zehn Aufgaben wie ein einziges riesiges Ding anfühlt, das man unmöglich anfangen kann. Auf unserem Server wird nichts gespeichert.",
+  "answerCapsule": "**Ein Tool zum Wählen einer Aufgabe nimmt dir den Schritt des Aussuchens ab. Füg deine Liste ein, wähl einen Modus (kleinste, gruseligste, zufällig) und bekomm eine Sache zum Anfangen.** Es ist für den Moment gemacht, in dem sich eine Liste mit zehn Aufgaben wie ein einziges riesiges Ding anfühlt, das man unmöglich anfangen kann.",
   "intro": "Wenn die ganze Liste unmöglich wirkt, liegt der Engpass selten am Tun. Er liegt am Entscheiden. Das Tool nimmt die Entscheidung raus und gibt dir einen Startpunkt. Du kannst jederzeit neu wählen.",
   "sections": [
     {

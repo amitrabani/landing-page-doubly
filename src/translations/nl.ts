@@ -459,7 +459,16 @@ const nl = {
     privacy: 'Privacy',
     terms: 'Voorwaarden',
     support: 'Support',
+    cookieSettings: 'Cookie-instellingen',
     copyright: (year: number) => `© ${year} Doubly. Gemaakt voor ADHD-breinen.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: 'We gebruiken cookies om bezoeken en de resultaten van onze advertenties te meten.',
+    privacyLink: 'Privacybeleid',
+    reject: 'Weigeren',
+    accept: 'Accepteren',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const nl = {
     'brain-dump': {
       title: 'Brain dump-tool',
       description:
-        'Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie, niets wordt opgeslagen.',
+        'Dump alles wat in je hoofd zit, de AI haalt er alleen de bruikbare taken uit. Geen registratie.',
     },
     'pick-one': {
       title: 'Kies één taak',
@@ -534,7 +543,6 @@ const nl = {
       inputPlaceholder: 'bijv. Mijn declaratie indienen',
       submit: 'Splits het op',
       submitting: 'Bezig met opsplitsen…',
-      privacyNote: 'Privé. Er wordt niets op onze server opgeslagen.',
       charactersLeft: (count: number) => `Nog ${count} ${count === 1 ? 'teken' : 'tekens'}`,
       presetsIntro: 'Of probeer een van deze:',
       presets: {
@@ -561,7 +569,6 @@ const nl = {
       label: 'Gooi eruit wat er in je hoofd zit. Hoeft niet geordend te zijn.',
       placeholder:
         'Ik vergeet steeds de tandarts te bellen en de keuken is een puinhoop.\nIk voel me overweldigd door dat project op werk. Moet nog boodschappen doen\nvoor vanavond en de mail van Sarah van vorige week beantwoorden.',
-      privacy: 'Privé. Er wordt niets op onze server opgeslagen.',
       charactersLeft: (remaining: number) =>
         `Nog ${remaining} ${remaining === 1 ? 'teken' : 'tekens'}.`,
       clear: 'Wissen',

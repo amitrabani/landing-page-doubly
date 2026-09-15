@@ -3,6 +3,8 @@ import { headers } from 'next/headers';
 import { isRtl } from '@/i18n/config';
 import { pickLocale } from '@/i18n/pickLocale';
 import { LocaleTranslationProvider } from '@/i18n/TranslationProvider';
+import CookieBanner from '@/components/CookieBanner';
+import CookieSettingsFooter from '@/components/CookieSettingsFooter';
 
 import Room from './Room';
 
@@ -24,11 +26,15 @@ export default async function RoomPage({ params }: { params: Promise<{ id: strin
   const locale = pickLocale((await headers()).get('accept-language'));
 
   // <html dir> lives in the (main) root layout and is pinned to English/ltr, so
-  // an RTL viewer gets their direction from this subtree wrapper instead.
+  // an RTL viewer gets their direction from this subtree wrapper instead. The
+  // cookie banner sits inside it too, so it uses the viewer's language (the
+  // root layout's English banner skips /r/).
   return (
     <div dir={isRtl(locale) ? 'rtl' : 'ltr'}>
       <LocaleTranslationProvider locale={locale}>
+        <CookieBanner />
         <Room roomId={id} />
+        <CookieSettingsFooter />
       </LocaleTranslationProvider>
     </div>
   );

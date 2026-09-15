@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Task Breakdown Tool",
-  "answerCapsule": "**A task breakdown tool turns one task that feels too big into a short list of small, doable steps so an overwhelmed brain has a clear place to start.** Type a task above. The tool returns ordered sub-steps with time estimates. Built for ADHD brains, free, no signup. Refresh the page and your input is gone.",
+  "answerCapsule": "**A task breakdown tool turns one task that feels too big into a short list of small, doable steps so an overwhelmed brain has a clear place to start.** Type a task above. The tool returns ordered sub-steps with time estimates. Built for ADHD brains, free, no signup.",
   "intro": "Most productivity tools assume you can plan. This one assumes you cannot start. Type the task that has been sitting on your list for a week and let the AI cut it into the smallest version of itself. Then do one step.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Why is breaking a task into steps so helpful for ADHD?",
           "a": "ADHD brains under-produce dopamine for tasks the brain reads as \"too big to finish.\" A small, finite step is the brain's preferred unit of work. Research from Russell Barkley and others links this to executive-function differences in task initiation, not laziness."
-        },
-        {
-          "q": "Does the tool save my tasks?",
-          "a": "No. Nothing leaves your browser except the task you type, which is sent to our AI to break it down and then discarded. No account, no email, no history. Refresh the page and it is gone."
         },
         {
           "q": "How long should each sub-step be?",

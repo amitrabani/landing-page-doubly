@@ -12,7 +12,7 @@
   "breadcrumbHome": "Início",
   "breadcrumbTools": "Ferramentas",
   "breadcrumbLabel": "Ferramenta para dividir tarefas",
-  "answerCapsule": "**Uma ferramenta para dividir tarefas transforma uma tarefa que parece grande demais em uma lista curta de passos pequenos e possíveis, para que um cérebro sobrecarregado tenha um ponto de partida claro.** Digite uma tarefa acima. A ferramenta devolve sub-passos ordenados com tempos estimados. Feita para cérebros com TDAH, grátis, sem cadastro. Atualize a página e o que você digitou some.",
+  "answerCapsule": "**Uma ferramenta para dividir tarefas transforma uma tarefa que parece grande demais em uma lista curta de passos pequenos e possíveis, para que um cérebro sobrecarregado tenha um ponto de partida claro.** Digite uma tarefa acima. A ferramenta devolve sub-passos ordenados com tempos estimados. Feita para cérebros com TDAH, grátis, sem cadastro.",
   "intro": "A maioria dos apps de produtividade parte do princípio de que você consegue planejar. Este parte do princípio de que você não consegue começar. Digite a tarefa que está parada na sua lista há uma semana e deixe a IA cortá-la na menor versão possível dela mesma. Depois, faça um passo.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "Por que dividir uma tarefa em passos ajuda tanto no TDAH?",
           "a": "Cérebros com TDAH produzem pouca dopamina para tarefas que o cérebro lê como \"grandes demais para terminar\". Um passo pequeno e finito é a unidade de trabalho preferida do cérebro. Pesquisas de Russell Barkley e outros ligam isso a diferenças de função executiva na iniciação de tarefas, não a preguiça."
-        },
-        {
-          "q": "A ferramenta salva as minhas tarefas?",
-          "a": "Não. Nada sai do seu navegador além da tarefa que você digita, que é enviada para a nossa IA dividir e depois descartada. Sem conta, sem e-mail, sem histórico. Atualize a página e ela some."
         },
         {
           "q": "Quanto tempo cada sub-passo deve levar?",

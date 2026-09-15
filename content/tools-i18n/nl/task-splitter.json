@@ -12,7 +12,7 @@
   "breadcrumbHome": "Home",
   "breadcrumbTools": "Tools",
   "breadcrumbLabel": "Takensplitter",
-  "answerCapsule": "**Een takensplitter verandert één taak die te groot voelt in een kort lijstje kleine, haalbare stappen, zodat een overweldigd brein een duidelijke plek heeft om te beginnen.** Typ hierboven een taak. De tool geeft geordende substappen met tijdsinschattingen terug. Gemaakt voor ADHD-breinen, gratis, geen registratie. Ververs de pagina en je invoer is weg.",
+  "answerCapsule": "**Een takensplitter verandert één taak die te groot voelt in een kort lijstje kleine, haalbare stappen, zodat een overweldigd brein een duidelijke plek heeft om te beginnen.** Typ hierboven een taak. De tool geeft geordende substappen met tijdsinschattingen terug. Gemaakt voor ADHD-breinen, gratis, geen registratie.",
   "intro": "De meeste productiviteitstools gaan ervan uit dat je kunt plannen. Deze gaat ervan uit dat je niet kunt beginnen. Typ de taak die al een week op je lijst staat en laat de AI hem in de kleinst mogelijke versie van zichzelf hakken. Doe daarna één stap.",
   "sections": [
     {
@@ -61,10 +61,6 @@
         {
           "q": "Waarom helpt het opdelen van een taak in stappen zo goed bij ADHD?",
           "a": "ADHD-breinen maken te weinig dopamine aan voor taken die het brein leest als \"te groot om af te maken.\" Een kleine, afgebakende stap is de werkeenheid die het brein het liefst heeft. Onderzoek van Russell Barkley en anderen koppelt dit aan verschillen in executieve functies bij taakinitiatie, niet aan luiheid."
-        },
-        {
-          "q": "Slaat de tool mijn taken op?",
-          "a": "Nee. Er verlaat niets je browser, behalve de taak die je typt. Die gaat naar onze AI om hem op te splitsen en wordt daarna weggegooid. Geen account, geen e-mail, geen geschiedenis. Ververs de pagina en hij is weg."
         },
         {
           "q": "Hoe lang zou elke substap moeten zijn?",

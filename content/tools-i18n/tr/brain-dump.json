@@ -12,7 +12,7 @@
   "breadcrumbHome": "Ana Sayfa",
   "breadcrumbTools": "Araçlar",
   "breadcrumbLabel": "Beyin Boşaltma Aracı",
-  "answerCapsule": "**Bir beyin boşaltma aracı, kafandaki her şeyi tek bir yere dökmeni sağlar, sonra da yalnızca yapılabilir görevleri çıkarır; böylece boşa dönüp durmak yerine gerçekten bir şey yapabilirsin.** Yukarıya özgürce yaz. Araç, dökülenleri okur, duyguları ve içini dökmeleri görmezden gelir ve kısa bir yapılacaklar listesi döndürür. Ücretsiz, kayıt yok, hiçbir şey saklanmıyor.",
+  "answerCapsule": "**Bir beyin boşaltma aracı, kafandaki her şeyi tek bir yere dökmeni sağlar, sonra da yalnızca yapılabilir görevleri çıkarır; böylece boşa dönüp durmak yerine gerçekten bir şey yapabilirsin.** Yukarıya özgürce yaz. Araç, dökülenleri okur, duyguları ve içini dökmeleri görmezden gelir ve kısa bir yapılacaklar listesi döndürür. Ücretsiz, kayıt yok.",
   "intro": "“Çok fazla şey var, başlayamıyorum ama çok fazla şey var” şeklindeki zihinsel döngüyü kırmak, beyin boşaltmanın işidir. Plan yapmak için değil, kafanı boşaltmak için yazarsın. Plan, harekete geçebileceğin bir liste olarak öbür uçtan kendiliğinden çıkar.",
   "sections": [
     {
@@ -57,10 +57,6 @@
         {
           "q": "Bu, normal bir not uygulamasından nasıl farklı?",
           "a": "Bir not uygulaması sana boş bir sayfa verir. Bu araç, döktüğün şeyi okur ve duyguları, gözlemleri ve içini dökmeleri görmezden gelerek yalnızca somut, yapılabilir görevleri çıkarır. Kendin yazmadan kısa bir yapılacaklar listesi elde edersin."
-        },
-        {
-          "q": "Beyin boşaltmam gizli mi?",
-          "a": "Evet. Metnin, görevleri çıkarmak için yapay zekamıza gönderilir ve ardından silinir. Kimliğinle ilişkilendirilerek hiçbir şey saklanmaz, isteğin kendisi dışında tarayıcından hiçbir şey çıkmaz ve hesap yoktur."
         },
         {
           "q": "Beyin boşaltma ADHD için neden faydalı?",

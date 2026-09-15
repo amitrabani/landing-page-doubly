@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useT, useLocale } from '@/i18n/TranslationProvider';
 import { tools } from '@/lib/tools';
 import { toolHref, toolsHubHref, learnHref } from '@/i18n/toolsManifest';
+import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 // CSS-only underline that grows from the left on hover (scaleX origin-left pseudo-element).
 const linkClass =
@@ -62,6 +63,7 @@ export default function Footer() {
           <Link href="/support" className={linkClass}>
             {t.footer.support}
           </Link>
+          <CookieSettingsButton className={`${linkClass} cursor-pointer`} />
         </div>
 
         <div className="text-sm text-muted-light">

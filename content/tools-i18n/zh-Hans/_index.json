@@ -13,7 +13,7 @@
   "breadcrumbHome": "首页",
   "breadcrumbTools": null,
   "answerCapsule": null,
-  "intro": "为 ADHD 大脑打造的免费工具,无需注册。它们是为你脑子一团乱、什么都开不了头的那一刻做的,不是为你已经准备好做计划的那一刻。打开浏览器就能用,进度会保存,想走随时走。",
+  "intro": "为 ADHD 大脑打造的免费工具,无需注册。它们是为你脑子一团乱、什么都开不了头的那一刻做的,不是为你已经准备好做计划的那一刻。打开浏览器就能用,想走随时走。",
   "sections": [
     {
       "kind": "paragraphs",
@@ -31,7 +31,7 @@
     {
       "slug": "brain-dump",
       "title": "大脑清空工具",
-      "description": "把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册,不留存任何内容。"
+      "description": "把脑子里的一切都倒出来,AI 只把能落地的任务挑出来。无需注册。"
     },
     {
       "slug": "pick-one",

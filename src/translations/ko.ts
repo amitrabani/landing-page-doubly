@@ -459,7 +459,16 @@ const ko = {
     privacy: '개인정보처리방침',
     terms: '이용약관',
     support: '고객지원',
+    cookieSettings: '쿠키 설정',
     copyright: (year: number) => `© ${year} Doubly. ADHD 뇌를 위해 만들었어요.`,
+  },
+
+  // CookieBanner
+  cookieBanner: {
+    message: '방문 수와 광고 효과를 측정하기 위해 쿠키를 사용합니다.',
+    privacyLink: '개인정보처리방침',
+    reject: '거부',
+    accept: '수락',
   },
 
   // StickyBar
@@ -489,7 +498,7 @@ const ko = {
     'brain-dump': {
       title: '브레인 덤프 도구',
       description:
-        '머릿속에 있는 걸 다 쏟아내면 AI가 실행할 수 있는 할 일만 뽑아내요. 가입도 필요 없고, 아무것도 저장되지 않아요.',
+        '머릿속에 있는 걸 다 쏟아내면 AI가 실행할 수 있는 할 일만 뽑아내요. 가입도 필요 없어요.',
     },
     'pick-one': {
       title: '하나 고르기 도구',
@@ -534,7 +543,6 @@ const ko = {
       inputPlaceholder: '예: 경비 정산서 제출하기',
       submit: '쪼개기',
       submitting: '쪼개는 중…',
-      privacyNote: '비공개예요. 서버에 아무것도 저장되지 않아요.',
       charactersLeft: (count: number) => `${count}자 남음`,
       presetsIntro: '아니면 이런 것도 해보세요:',
       presets: {
@@ -561,7 +569,6 @@ const ko = {
       label: '머릿속에 있는 걸 다 쏟아내세요. 정리하지 않아도 돼요.',
       placeholder:
         '치과 예약을 자꾸 까먹고 주방은 엉망이에요.\n회사 프로젝트 때문에 압도당하는 기분이에요. 오늘 저녁 장도 봐야 하고\n지난주에 온 지민이 메일에도 답장해야 해요.',
-      privacy: '비공개예요. 서버에 아무것도 저장되지 않아요.',
       charactersLeft: (remaining: number) => `${remaining}자 남았어요.`,
       clear: '지우기',
       submit: '할 일 뽑아내기',
