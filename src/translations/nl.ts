@@ -40,7 +40,7 @@ const nl = {
       accountability: 'Verantwoording',
     },
     phone: {
-      screenAlt: 'Doubly-app die je gewoontes toont met dagelijkse streaks en voortgangsroosters',
+      screenAlt: 'Doubly-app die elke gewoonte als een eigen eiland toont, met hoe vaak je het deed',
     },
   },
 

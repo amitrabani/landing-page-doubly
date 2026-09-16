@@ -40,7 +40,7 @@ const it = {
       accountability: 'Responsabilità',
     },
     phone: {
-      screenAlt: 'L’app Doubly che mostra le tue abitudini con serie giornaliere e griglie di progressi',
+      screenAlt: 'L’app Doubly che mostra ogni abitudine come un’isola, con quante volte l’hai fatta',
     },
   },
 

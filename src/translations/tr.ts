@@ -40,7 +40,7 @@ const tr = {
       accountability: 'Hesap Verebilirlik',
     },
     phone: {
-      screenAlt: 'Doubly uygulaması günlük serilerin ve ilerleme ızgaralarıyla alışkanlıklarını gösteriyor',
+      screenAlt: 'Doubly uygulaması her alışkanlığı kendi adası olarak ve kaç kez yaptığınla gösteriyor',
     },
   },
 

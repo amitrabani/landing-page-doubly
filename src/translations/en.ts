@@ -40,7 +40,7 @@ const en = {
       accountability: 'Accountability',
     },
     phone: {
-      screenAlt: 'Doubly app showing your habits with daily streaks and progress grids',
+      screenAlt: 'Doubly app showing each habit as its own island, with how many times you did it',
     },
   },
 

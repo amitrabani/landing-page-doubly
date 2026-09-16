@@ -218,7 +218,7 @@ export default function Hero() {
                     {/* Real app screen, links to the App Store */}
                     <a href={APP_STORE_URL} onClick={() => trackAppStoreClick('hero_phone')} className="block">
                       <img
-                        src="/hero-app-screen.png"
+                        src="/hero-habit-islands.jpg"
                         alt={t.hero.phone.screenAlt}
                         className="block w-full h-auto"
                       />

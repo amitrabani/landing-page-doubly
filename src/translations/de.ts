@@ -41,7 +41,7 @@ const de = {
       accountability: 'Verbindlichkeit',
     },
     phone: {
-      screenAlt: 'Die Doubly-App zeigt deine Gewohnheiten mit täglichen Streaks und Fortschrittsrastern',
+      screenAlt: 'Die Doubly-App zeigt jede Gewohnheit als eigene Insel, mit der Anzahl, wie oft du sie gemacht hast',
     },
   },
 

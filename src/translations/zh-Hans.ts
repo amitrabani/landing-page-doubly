@@ -40,7 +40,7 @@ const zhHans = {
       accountability: '监督陪伴',
     },
     phone: {
-      screenAlt: 'Doubly 应用展示你的习惯,包括每日连续记录和进度网格',
+      screenAlt: 'Doubly 应用把每个习惯显示为一座岛屿,并显示你完成了多少次',
     },
   },
 

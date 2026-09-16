@@ -40,7 +40,7 @@ const ja = {
       accountability: 'アカウンタビリティ',
     },
     phone: {
-      screenAlt: '毎日のストリークと進捗グリッドで習慣を表示するDoublyアプリ',
+      screenAlt: '習慣ごとに島を表示し、何回できたかを示すDoublyアプリ',
     },
   },
 

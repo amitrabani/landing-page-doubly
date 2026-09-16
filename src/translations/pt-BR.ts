@@ -40,7 +40,7 @@ const ptBR = {
       accountability: 'Cobrança',
     },
     phone: {
-      screenAlt: 'App Doubly mostrando seus hábitos com sequências diárias e grades de progresso',
+      screenAlt: 'App Doubly mostrando cada hábito como uma ilha própria, com quantas vezes você o fez',
     },
   },
 

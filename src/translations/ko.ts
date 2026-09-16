@@ -40,7 +40,7 @@ const ko = {
       accountability: '함께하기',
     },
     phone: {
-      screenAlt: 'Doubly 앱이 매일의 연속 기록과 진행 현황 그리드로 습관을 보여주는 화면',
+      screenAlt: 'Doubly 앱이 각 습관을 하나의 섬으로 보여주고, 몇 번 했는지 표시하는 화면',
     },
   },
 

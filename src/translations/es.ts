@@ -40,7 +40,7 @@ const es = {
       accountability: 'Responsabilidad compartida',
     },
     phone: {
-      screenAlt: 'La app Doubly mostrando tus hábitos con rachas diarias y cuadrículas de progreso',
+      screenAlt: 'La app Doubly mostrando cada hábito como su propia isla, con cuántas veces lo hiciste',
     },
   },
 
