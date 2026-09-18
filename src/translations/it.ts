@@ -1021,6 +1021,37 @@ const it = {
       mediaUnavailable: 'Videocamera e microfono non disponibili.',
     },
   },
+
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Il villaggio di Doubly',
+    ruleTask: 'Un compito finito aggiunge una casa e un albero.',
+    ruleHabit: 'Un’abitudine mantenuta fa crescere il suo posto: verdure, attrezzi della palestra, la pista, il pozzo, libri, lampioni e altro.',
+    nothingIsLost: 'Qui niente va mai perso. Se manchi, il villaggio aspetta.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 verdura nell’orto',
+      strength: 'Un attrezzo nuovo in palestra',
+      running: 'La pista si è allungata',
+      reading: '+1 libro in biblioteca',
+      water: 'Il livello del pozzo è salito',
+    },
+    tilesTitle: 'Quello che hai costruito',
+    tiles: {
+      homes: 'Case',
+      trees: 'Alberi',
+      veggies: 'Orto',
+      strength: 'Palestra',
+      running: 'Pista',
+      water: 'Pozzo',
+      reading: 'Biblioteca',
+      rest: 'Lampioni',
+      other: 'Fiori',
+      fruit: 'Alberi da frutto',
+      outdoors: 'Uccelli',
+      limits: 'Farfalle',
+    },
+  },
 };
 
 export default it;

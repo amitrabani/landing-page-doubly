@@ -20,7 +20,7 @@ export default function VisualProblem() {
           <WordReveal
             text={t.problem.title}
             as="h2"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal leading-tight"
             highlight={t.problem.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
@@ -37,7 +37,7 @@ export default function VisualProblem() {
               >
                 <TiltCard
                   maxTilt={4}
-                  className="group relative rounded-3xl overflow-hidden shadow-md shadow-charcoal/5 transition-shadow duration-500 hover:shadow-2xl hover:shadow-charcoal/15"
+                  className="game-panel game-panel-hover group relative rounded-3xl overflow-hidden"
                 >
                   <div className="overflow-hidden mb-[-7%]">
                     <Image

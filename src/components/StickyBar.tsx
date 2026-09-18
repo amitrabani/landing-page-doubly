@@ -53,7 +53,7 @@ export default function StickyBar() {
             href={APP_STORE_URL}
             onClick={() => trackAppStoreClick('sticky_bar')}
             whileHover="hover"
-            className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-3.5 text-base font-medium shadow-xl shadow-charcoal/20"
+            className="game-btn [--game-btn-edge:#151419] inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-8 py-3.5 text-base font-semibold"
           >
             {t.stickyBar.cta}
             <motion.svg

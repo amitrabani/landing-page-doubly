@@ -1005,6 +1005,37 @@ const zhHans = {
       mediaUnavailable: '摄像头和麦克风不可用。',
     },
   },
+
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Doubly 的村庄',
+    ruleTask: '完成一个任务，就多一座房子和一棵树。',
+    ruleHabit: '坚持的习惯会让它自己的地方生长：蔬菜、健身器材、跑道、水井、书、路灯，还有更多。',
+    nothingIsLost: '这里什么都不会失去。你不在的时候，村庄会等你。',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '菜地里蔬菜 +1',
+      strength: '健身区新增器材',
+      running: '跑道变长了',
+      reading: '图书馆里书 +1',
+      water: '水井变高了',
+    },
+    tilesTitle: '村庄成长记录',
+    tiles: {
+      homes: '房子',
+      trees: '树',
+      veggies: '菜地',
+      strength: '健身区',
+      running: '跑道',
+      water: '水井',
+      reading: '图书馆',
+      rest: '路灯',
+      other: '花',
+      fruit: '果树',
+      outdoors: '小鸟',
+      limits: '蝴蝶',
+    },
+  },
 };
 
 export default zhHans;

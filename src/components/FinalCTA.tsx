@@ -9,6 +9,7 @@ import Parallax from '@/components/motion/Parallax';
 import { useT } from '@/i18n/TranslationProvider';
 import AppStoreButton from './AppStoreButton';
 import SocialProofCounter from './SocialProofCounter';
+import VillageSkyline from './village/VillageSkyline';
 
 /** Tiny four-point sparkle, colored via currentColor. Decorative only. */
 function Sparkle({ className }: { className?: string }) {
@@ -46,7 +47,7 @@ export default function FinalCTA() {
     <section
       ref={sectionRef}
       id="get-doubly"
-      className="relative overflow-hidden py-20 sm:py-28 px-6 bg-gradient-to-b from-warm to-cream"
+      className="relative overflow-hidden px-6 pt-20 pb-48 sm:pt-28 sm:pb-60 bg-[linear-gradient(180deg,#F5EFE6_0%,#d9edf8_55%,#c3e2f1_100%)]"
     >
       {/* Soft radial glow stage drifting behind the headline */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -84,7 +85,7 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.7, ease: EASE }}
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal leading-tight"
           >
             {t.finalCta.title}
           </motion.h2>
@@ -99,7 +100,7 @@ export default function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.65, delay: 0.18, ease: EASE }}
-              className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-semibold tracking-tight text-lavender-dark"
+              className="font-[family-name:var(--font-display)] text-2xl sm:text-3xl font-black tracking-tight text-lavender-dark"
             >
               {t.finalCta.highlight}
             </motion.p>
@@ -150,6 +151,9 @@ export default function FinalCTA() {
 
         </motion.div>
       </div>
+
+      {/* The village's street, along the bottom edge: what all of this builds */}
+      <VillageSkyline className="pointer-events-none absolute inset-x-0 bottom-0 h-36 w-full sm:h-44" />
     </section>
   );
 }

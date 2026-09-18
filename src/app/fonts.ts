@@ -14,7 +14,9 @@ export const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
   display: 'swap',
-  weight: ['500', '600', '700'],
+  // 900 is the game skin's headline weight (see the game skin block in
+  // globals.css); the lighter three still carry body-level display text.
+  weight: ['500', '600', '700', '900'],
 });
 
 export const fontVariables = `${inter.variable} ${fraunces.variable}`;

@@ -67,7 +67,7 @@ export default function Testimonials() {
   const isThreeUp = count >= 3;
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 px-6 bg-warm">
+    <section id="testimonials" className="py-12 sm:py-16 px-6 bg-village-grass">
       <div className="mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -76,7 +76,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8, ease: EASE }}
           className="text-center mb-12"
         >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight max-w-3xl mx-auto">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal leading-tight max-w-3xl mx-auto">
             {t.testimonials.title}
           </h2>
           <p className="mt-4 text-muted text-lg">{t.testimonials.subtitle}</p>
@@ -113,7 +113,7 @@ export default function Testimonials() {
                   <motion.div
                     variants={surfaceVariants}
                     transition={SPRING_SOFT}
-                    className="h-full bg-white/80 rounded-3xl border border-charcoal/5 p-7 flex flex-col"
+                    className="h-full game-panel bg-white rounded-3xl p-7 flex flex-col"
                   >
                     {/* Stars */}
                     <motion.div variants={starsContainerVariants} className="flex gap-1 mb-4">

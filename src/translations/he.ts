@@ -1021,6 +1021,37 @@ const he = {
       mediaUnavailable: 'המצלמה והמיקרופון לא זמינים.',
     },
   },
+
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'הכפר של דאבלי',
+    ruleTask: 'משימה שסיימת מוסיפה בית ועץ.',
+    ruleHabit: 'הרגל שהתמדתם בו מפתח את המקום שלו: ירקות, ציוד כושר, המסלול, הבאר, ספרים, מנורות ועוד.',
+    nothingIsLost: 'כאן שום דבר לא הולך לאיבוד. כשלא נמצאים, הכפר מחכה.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 ירק בערוגה',
+      strength: 'ציוד חדש בחדר הכושר',
+      running: 'המסלול התארך',
+      reading: '+1 ספר בספרייה',
+      water: 'הבאר התגבהה',
+    },
+    tilesTitle: 'מה שנבנה',
+    tiles: {
+      homes: 'בתים',
+      trees: 'עצים',
+      veggies: 'ערוגת ירקות',
+      strength: 'חדר כושר',
+      running: 'מסלול',
+      water: 'באר',
+      reading: 'ספרייה',
+      rest: 'מנורות',
+      other: 'פרחים',
+      fruit: 'עצי פרי',
+      outdoors: 'ציפורים',
+      limits: 'פרפרים',
+    },
+  },
 };
 
 export default he;

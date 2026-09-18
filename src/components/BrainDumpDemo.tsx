@@ -222,7 +222,7 @@ export default function BrainDumpDemo() {
             text={t.brainDumpDemo.title}
             highlight={t.brainDumpDemo.titleHighlight}
             highlightClassName="text-lavender-dark"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold text-charcoal leading-tight tracking-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black text-charcoal leading-tight tracking-tight"
           />
           <motion.p {...fadeRise(0.2, 20)} className="mt-4 text-muted text-lg max-w-xl mx-auto">
             {t.brainDumpDemo.subtitle}
@@ -262,7 +262,7 @@ export default function BrainDumpDemo() {
                   ? { duration: 4, ease: 'easeInOut', repeat: Infinity }
                   : { duration: 0.6, ease: 'easeOut' },
               }}
-              className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full"
+              className="game-panel bg-white rounded-3xl p-6 sm:p-8 h-full"
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-xl bg-lavender-light/30 flex items-center justify-center">
@@ -382,7 +382,7 @@ export default function BrainDumpDemo() {
               whileInView={{ rotateY: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
-              className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 sm:p-8 h-full flex flex-col"
+              className="game-panel bg-white rounded-3xl p-6 sm:p-8 h-full flex flex-col"
             >
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-xl bg-sage/20 flex items-center justify-center">

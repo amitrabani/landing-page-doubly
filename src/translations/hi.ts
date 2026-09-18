@@ -1003,6 +1003,37 @@ const hi = {
       mediaUnavailable: 'कैमरा और माइक उपलब्ध नहीं हैं।',
     },
   },
+
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'डबली का गाँव',
+    ruleTask: 'एक पूरा किया काम एक घर और एक पेड़ जोड़ता है।',
+    ruleHabit: 'निभाई गई आदत अपनी जगह बढ़ाती है: सब्ज़ियाँ, जिम के उपकरण, ट्रैक, कुआँ, किताबें, लैंप और भी बहुत कुछ।',
+    nothingIsLost: 'यहाँ कुछ भी कभी खोता नहीं। अगर आप दूर हों, गाँव इंतज़ार करता है।',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: 'क्यारी में +1 सब्ज़ी',
+      strength: 'जिम में नया उपकरण',
+      running: 'ट्रैक लंबा हो गया',
+      reading: 'पुस्तकालय में +1 किताब',
+      water: 'कुआँ ऊँचा हो गया',
+    },
+    tilesTitle: 'आपने क्या बनाया',
+    tiles: {
+      homes: 'घर',
+      trees: 'पेड़',
+      veggies: 'सब्ज़ी की क्यारी',
+      strength: 'जिम',
+      running: 'ट्रैक',
+      water: 'कुआँ',
+      reading: 'पुस्तकालय',
+      rest: 'लैंप',
+      other: 'फूल',
+      fruit: 'फलदार पेड़',
+      outdoors: 'चिड़ियाँ',
+      limits: 'तितलियाँ',
+    },
+  },
 };
 
 export default hi;

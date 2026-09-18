@@ -60,7 +60,7 @@ export default function Stakes() {
         <WordReveal
           text={t.stakes.title}
           as="h2"
-          className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal leading-tight"
+          className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-black text-charcoal leading-tight"
         />
         {reduced ? (
           <p ref={bodyRef} className="mt-6 text-muted text-lg leading-relaxed max-w-2xl mx-auto">

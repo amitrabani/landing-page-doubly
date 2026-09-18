@@ -1026,6 +1026,36 @@ const ru = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Деревня Дабли',
+    ruleTask: 'Выполненная задача добавляет дом и дерево.',
+    ruleHabit: 'Соблюдённая привычка растит своё место: овощи, тренажёры, дорожку, колодец, книги, фонари и не только.',
+    nothingIsLost: 'Здесь ничего не теряется. Если тебя нет, деревня ждёт.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 овощ на грядке',
+      strength: 'Новый тренажёр на площадке',
+      running: 'Дорожка стала длиннее',
+      reading: '+1 книга в библиотеке',
+      water: 'Колодец стал выше',
+    },
+    tilesTitle: 'Что уже построено',
+    tiles: {
+      homes: 'Дома',
+      trees: 'Деревья',
+      veggies: 'Грядка',
+      strength: 'Площадка',
+      running: 'Дорожка',
+      water: 'Колодец',
+      reading: 'Библиотека',
+      rest: 'Фонари',
+      other: 'Цветы',
+      fruit: 'Плодовые деревья',
+      outdoors: 'Птицы',
+      limits: 'Бабочки',
+    },
+  },
 };
 
 export default ru;

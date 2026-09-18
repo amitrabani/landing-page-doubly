@@ -144,7 +144,7 @@ export default function Navbar() {
             <a
               href={APP_STORE_URL}
               onClick={() => trackAppStoreClick('navbar')}
-              className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-medium hover:bg-charcoal-light transition-colors"
+              className="game-btn [--game-btn-edge:#151419] inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-5 py-2.5 text-sm font-semibold"
             >
               {t.navbar.cta}
             </a>
@@ -218,7 +218,7 @@ export default function Navbar() {
                   trackAppStoreClick('navbar_mobile');
                   setMobileOpen(false);
                 }}
-                className="inline-flex items-center justify-center rounded-full bg-charcoal text-cream px-6 py-3 text-lg font-medium mt-4"
+                className="game-btn [--game-btn-edge:#151419] inline-flex items-center justify-center rounded-full bg-charcoal text-cream px-6 py-3 text-lg font-semibold mt-4"
               >
                 {t.navbar.cta}
               </motion.a>

@@ -19,7 +19,7 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
         <div className="text-center max-w-2xl mx-auto">
           <h2
             id="tools-heading"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-bold text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-black text-charcoal leading-tight"
           >
             {t.toolsSection.title}
           </h2>
@@ -31,14 +31,14 @@ export default function ToolsSection({ locale = defaultLocale }: { locale?: Loca
             <li key={tool.slug}>
               <Link
                 href={toolHref(locale, tool.slug)}
-                className="group block h-full rounded-2xl bg-white/70 border border-warm-dark/30 p-5 hover:border-lavender hover:shadow-[0_4px_20px_rgba(184,169,212,0.15)] transition-all"
+                className="game-panel game-panel-hover group block h-full rounded-2xl bg-white p-5"
               >
                 <div className="flex items-center gap-2">
                   <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-charcoal">
                     {t.toolCards[tool.slug].title}
                   </h3>
                   {tool.hot && (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-lavender/20 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-lavender-dark">
+                    <span className="game-pill inline-flex items-center gap-1 rounded-full bg-lavender-light px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-charcoal">
                       <span aria-hidden="true">🔥</span> {t.toolsSection.hot}
                     </span>
                   )}

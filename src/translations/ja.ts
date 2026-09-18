@@ -1004,6 +1004,36 @@ const ja = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'ダブリーの村',
+    ruleTask: 'タスクを1つ終えると、家と木が1つずつ増えます。',
+    ruleHabit: '続けた習慣はそれぞれの場所を育てます。野菜、ジムの器具、トラック、井戸、本、街灯など。',
+    nothingIsLost: 'ここでは何も失われません。離れていても、村は待っています。',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '畑に野菜が +1',
+      strength: 'ジムに新しい器具',
+      running: 'トラックが長くなった',
+      reading: '図書館に本が +1',
+      water: '井戸が高くなった',
+    },
+    tilesTitle: 'あなたが建てたもの',
+    tiles: {
+      homes: '家',
+      trees: '木',
+      veggies: '野菜畑',
+      strength: 'ジム',
+      running: 'トラック',
+      water: '井戸',
+      reading: '図書館',
+      rest: '街灯',
+      other: '花',
+      fruit: '果樹',
+      outdoors: '鳥',
+      limits: '蝶',
+    },
+  },
 };
 
 export default ja;

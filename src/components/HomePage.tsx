@@ -6,6 +6,7 @@ import Plan from '@/components/Plan';
 import TaskSplitDemo from '@/components/TaskSplitDemo';
 import TwoQuestions from '@/components/TwoQuestions';
 import HabitDemo from '@/components/HabitDemo';
+import VillageSection from '@/components/VillageSection';
 import Success from '@/components/Success';
 import Stakes from '@/components/Stakes';
 import Testimonials from '@/components/Testimonials';
@@ -37,6 +38,7 @@ export default function HomePage({ locale = defaultLocale }: { locale?: Locale }
       <Navbar />
       <main>
         <Hero />
+        <VillageSection />
         <VisualProblem />
         <TaskSplitDemo />
         <BrainDumpDemo />

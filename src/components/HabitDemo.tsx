@@ -216,7 +216,7 @@ export default function HabitDemo() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black text-charcoal leading-tight">
             {t.habitDemo.title}
           </h2>
           <p className="mt-4 text-muted text-lg max-w-xl mx-auto">
@@ -234,7 +234,7 @@ export default function HabitDemo() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex-1"
           >
-            <div className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6">
+            <div className="game-panel bg-white rounded-3xl p-6">
               <div className="flex items-center justify-between mb-5">
                 <div>
                   <div className="text-xs font-medium text-muted-light">{t.habitDemo.todayLabel}</div>
@@ -348,7 +348,7 @@ export default function HabitDemo() {
                     <a
                       href={APP_STORE_URL}
                       onClick={() => trackAppStoreClick('habit_demo_all_done')}
-                      className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02] shadow-lg shadow-charcoal/10"
+                      className="game-btn [--game-btn-edge:#151419] inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-semibold"
                     >
                       {t.habitDemo.allDoneCta}
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -369,7 +369,7 @@ export default function HabitDemo() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex-1"
           >
-            <div className="bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-6 h-full flex flex-col">
+            <div className="game-panel bg-white rounded-3xl p-6 h-full flex flex-col">
               {/* Header with habit selector */}
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
@@ -459,7 +459,7 @@ export default function HabitDemo() {
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
+                    className="font-[family-name:var(--font-display)] text-2xl font-black text-charcoal"
                   >
                     <AnimatedNumber value={activeHabit.streak} />
                   </motion.div>
@@ -469,7 +469,7 @@ export default function HabitDemo() {
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
+                    className="font-[family-name:var(--font-display)] text-2xl font-black text-charcoal"
                   >
                     <AnimatedNumber value={activeHabit.best} />
                   </motion.div>
@@ -479,7 +479,7 @@ export default function HabitDemo() {
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal"
+                    className="font-[family-name:var(--font-display)] text-2xl font-black text-charcoal"
                   >
                     <AnimatedNumber
                       value={parseInt(activeHabit.pct, 10)}

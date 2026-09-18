@@ -8,34 +8,32 @@ import WordReveal from '@/components/motion/WordReveal';
 import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import { useT } from '@/i18n/TranslationProvider';
 
-/** Per-option accent: option index maps onto the palette (lavender / coral / sage / sky). */
+/** Per-option accent: option index maps onto the palette (lavender / coral / sage / sky).
+    The card outline is the same charcoal everywhere (.game-panel), so the accent
+    shows through the icon tile and the intro line instead. */
 const accents = [
   {
     intro: 'text-lavender-dark',
-    border: 'border-lavender/40',
-    chipBg: 'bg-lavender-light/30',
-    chipText: 'text-lavender-dark',
+    chipBg: 'bg-lavender',
+    chipText: 'text-charcoal',
     glow: 'rgba(184, 169, 212, 0.45)',
   },
   {
     intro: 'text-coral-dark',
-    border: 'border-coral/40',
-    chipBg: 'bg-coral-light/25',
-    chipText: 'text-coral-dark',
+    chipBg: 'bg-coral',
+    chipText: 'text-charcoal',
     glow: 'rgba(232, 150, 122, 0.4)',
   },
   {
     intro: 'text-sage-dark',
-    border: 'border-sage/50',
-    chipBg: 'bg-sage/20',
-    chipText: 'text-sage-dark',
+    chipBg: 'bg-sage',
+    chipText: 'text-charcoal',
     glow: 'rgba(168, 181, 160, 0.5)',
   },
   {
     intro: 'text-[#6B98B4]',
-    border: 'border-sky/50',
-    chipBg: 'bg-sky-light/30',
-    chipText: 'text-[#6B98B4]',
+    chipBg: 'bg-sky',
+    chipText: 'text-charcoal',
     glow: 'rgba(158, 197, 217, 0.5)',
   },
 ];
@@ -52,13 +50,13 @@ export default function TwoQuestions() {
   const accent = accentFor(answer2 ?? '', t.twoQuestions.options as readonly string[]);
 
   return (
-    <section className="py-12 sm:py-16 px-6 bg-warm">
+    <section className="py-12 sm:py-16 px-6 bg-village-sand">
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-12">
           <WordReveal
             text={t.twoQuestions.title}
             as="h2"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black text-charcoal leading-tight"
             highlight={t.twoQuestions.titleHighlight}
             highlightClassName="text-coral-dark"
           />
@@ -184,7 +182,7 @@ export default function TwoQuestions() {
                 }
                 animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 transition={SPRING_SOFT}
-                className={`relative bg-white rounded-3xl border ${accent.border} shadow-xl shadow-charcoal/5 p-8 text-center`}
+                className="game-panel relative bg-white rounded-3xl p-8 text-center"
               >
                 {/* One-shot soft glow pulse on arrival (no loop) */}
                 {!reduced && (
@@ -203,7 +201,7 @@ export default function TwoQuestions() {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ ...SPRING, delay: 0.08 }}
-                  className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl mb-4 ${accent.chipBg} ${accent.chipText}`}
+                  className={`game-tile inline-flex h-12 w-12 items-center justify-center rounded-2xl mb-4 ${accent.chipBg} ${accent.chipText}`}
                 >
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                     <path
@@ -218,7 +216,7 @@ export default function TwoQuestions() {
                 <div className={`text-sm ${accent.intro} font-medium mb-2`}>
                   {t.twoQuestions.responseIntro}
                 </div>
-                <h3 className="font-[family-name:var(--font-display)] text-2xl font-bold text-charcoal mb-3">
+                <h3 className="font-[family-name:var(--font-display)] text-2xl font-black text-charcoal mb-3">
                   {t.twoQuestions.responses[answer2 as keyof typeof t.twoQuestions.responses]?.title}
                 </h3>
                 <p className="text-muted leading-relaxed max-w-md mx-auto mb-6">
@@ -229,7 +227,7 @@ export default function TwoQuestions() {
                   <a
                     href={APP_STORE_URL}
                     onClick={() => trackAppStoreClick('two_questions')}
-                    className="group inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-6 py-3 text-sm font-medium hover:bg-charcoal-light transition-all hover:scale-[1.02]"
+                    className="game-btn [--game-btn-edge:#151419] group inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-6 py-3 text-sm font-semibold"
                   >
                     {t.twoQuestions.mockupCta}
                     <svg

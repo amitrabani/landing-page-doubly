@@ -85,7 +85,7 @@ export default function FAQ() {
           transition={{ duration: 0.8, ease: EASE }}
           className="text-center mb-12"
         >
-          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-semibold tracking-tight text-charcoal">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl font-black tracking-tight text-charcoal">
             {t.faq.title}
           </h2>
         </motion.div>
@@ -96,7 +96,7 @@ export default function FAQ() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT_ONCE_TIGHT}
-          className="bg-white/60 backdrop-blur-sm rounded-3xl border border-charcoal/5 px-6 sm:px-8"
+          className="game-panel bg-white rounded-3xl px-6 sm:px-8"
         >
           {t.faq.items.map((faq) => (
             <FAQItem key={faq.q} faq={faq} />

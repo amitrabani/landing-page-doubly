@@ -132,13 +132,13 @@ export default function TaskSplitDemo() {
   }, [allDone]);
 
   return (
-    <section id="split-demo" className="py-12 sm:py-16 px-6 bg-warm">
+    <section id="split-demo" className="py-12 sm:py-16 px-6 bg-village-sky">
       <div className="mx-auto max-w-3xl">
         <div className="text-center mb-12">
           <WordReveal
             text={t.taskSplitDemo.title}
             as="h2"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-charcoal leading-tight"
             highlight={t.taskSplitDemo.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
@@ -163,10 +163,8 @@ export default function TaskSplitDemo() {
                 whileHover={reduced ? undefined : { rotate: i % 2 === 0 ? 1 : -1 }}
                 whileTap={{ scale: 0.95 }}
                 transition={SPRING_SNAPPY}
-                className={`rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
-                  activeTask === p.label
-                    ? 'bg-lavender text-white shadow-md shadow-lavender/20'
-                    : 'bg-white/80 text-charcoal-light border border-charcoal/8 hover:border-lavender/30 hover:bg-lavender-light/10'
+                className={`game-pill rounded-full px-5 py-2.5 text-sm font-semibold text-charcoal transition-colors ${
+                  activeTask === p.label ? 'bg-lavender' : 'bg-white hover:bg-lavender-light/40'
                 }`}
               >
                 <span className="me-1.5">{p.icon}</span>
@@ -193,14 +191,14 @@ export default function TaskSplitDemo() {
                   : '0 0 0 0px rgba(184, 169, 212, 0), 0 0 0 0 rgba(184, 169, 212, 0)',
               }}
               transition={reduced ? { duration: 0 } : { duration: 0.35, ease: EASE }}
-              className="flex-1 rounded-full px-5 py-2.5 text-sm bg-white/80 border border-charcoal/8 text-charcoal placeholder:text-muted-light focus:outline-none focus:border-lavender/40 transition-colors"
+              className="flex-1 rounded-full px-5 py-2.5 text-sm bg-white border-2 border-charcoal text-charcoal placeholder:text-muted-light focus:outline-none"
             />
             <motion.button
               onClick={handleCustomSubmit}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.96 }}
               transition={SPRING_SNAPPY}
-              className="rounded-full px-5 py-2.5 text-sm font-medium bg-charcoal text-cream hover:bg-charcoal-light transition-colors"
+              className="game-pill rounded-full px-5 py-2.5 text-sm font-semibold bg-charcoal text-cream hover:bg-charcoal-light transition-colors"
             >
               {t.taskSplitDemo.splitButton}
             </motion.button>
@@ -220,7 +218,7 @@ export default function TaskSplitDemo() {
               >
                 <TiltCard
                   maxTilt={3}
-                  className="relative bg-white rounded-3xl border border-charcoal/5 shadow-xl shadow-charcoal/5 p-8"
+                  className="relative game-panel bg-white rounded-3xl p-8"
                 >
                   <ConfettiBurst
                     fire={confettiFire}
@@ -469,7 +467,7 @@ export default function TaskSplitDemo() {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           transition={SPRING_SNAPPY}
-                          className="inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-medium hover:bg-charcoal-light transition-colors shadow-lg shadow-charcoal/10"
+                          className="game-pill inline-flex items-center gap-2 rounded-full bg-charcoal text-cream px-7 py-3 text-sm font-semibold hover:bg-charcoal-light transition-colors"
                         >
                           {t.taskSplitDemo.allDoneCta}
                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

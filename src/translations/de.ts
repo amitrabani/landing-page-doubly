@@ -1025,6 +1025,36 @@ const de = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Doublys Dorf',
+    ruleTask: 'Eine erledigte Aufgabe bringt ein Haus und einen Baum.',
+    ruleHabit: 'Eine gehaltene Gewohnheit lässt ihren eigenen Ort wachsen: Gemüse, Sportgeräte, die Laufbahn, den Brunnen, Bücher, Laternen und mehr.',
+    nothingIsLost: 'Hier geht nie etwas verloren. Wenn du weg bist, wartet das Dorf.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 Gemüse im Beet',
+      strength: 'Neues Gerät im Fitnesspark',
+      running: 'Die Laufbahn ist länger geworden',
+      reading: '+1 Buch in der Bücherei',
+      water: 'Der Brunnen ist höher geworden',
+    },
+    tilesTitle: 'Was du gebaut hast',
+    tiles: {
+      homes: 'Häuser',
+      trees: 'Bäume',
+      veggies: 'Gemüsebeet',
+      strength: 'Fitnesspark',
+      running: 'Laufbahn',
+      water: 'Brunnen',
+      reading: 'Bücherei',
+      rest: 'Laternen',
+      other: 'Blumen',
+      fruit: 'Obstbäume',
+      outdoors: 'Vögel',
+      limits: 'Schmetterlinge',
+    },
+  },
 };
 
 export default de;

@@ -63,7 +63,7 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={t.common.changeLanguage}
-        className="inline-flex items-center gap-1.5 rounded-full border border-charcoal/10 px-3 py-1.5 text-sm text-charcoal hover:border-charcoal/25 transition-colors"
+        className="game-pill inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-sm font-medium text-charcoal"
       >
         <svg
           width="16"
@@ -91,7 +91,7 @@ export default function LanguageSwitcher({ className = '' }: { className?: strin
             animate={reduced ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
             exit={reduced ? { opacity: 0 } : { opacity: 0, y: -6, scale: 0.98 }}
             transition={{ duration: 0.16 }}
-            className="absolute end-0 top-full z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-2xl border border-charcoal/10 bg-cream p-1.5 shadow-xl shadow-charcoal/10"
+            className="game-panel absolute end-0 top-full z-50 mt-2 max-h-80 w-44 overflow-y-auto rounded-2xl bg-cream p-1.5"
           >
             {locales.map((locale) => (
               <li key={locale} role="option" aria-selected={locale === current}>

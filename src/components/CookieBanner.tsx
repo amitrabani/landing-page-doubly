@@ -62,7 +62,7 @@ export default function CookieBanner() {
       ref={sectionRef}
       tabIndex={-1}
       aria-labelledby={messageId}
-      className="fixed inset-x-3 bottom-3 z-[60] mx-auto flex max-w-xl flex-col gap-3 rounded-2xl border border-charcoal/10 bg-white px-4 py-3 shadow-xl shadow-charcoal/10 sm:flex-row sm:items-center"
+      className="game-panel fixed inset-x-3 bottom-3 z-[60] mx-auto flex max-w-xl flex-col gap-3 rounded-2xl bg-white px-4 py-3 sm:flex-row sm:items-center"
     >
       <p id={messageId} className="flex-1 text-sm text-charcoal-light">
         {t.cookieBanner.message}{' '}

@@ -1002,6 +1002,36 @@ const ko = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: '더블리의 마을',
+    ruleTask: '할 일을 하나 끝내면 집 한 채와 나무 한 그루가 생겨요.',
+    ruleHabit: '지킨 습관은 자기 자리를 키워요. 채소, 운동 기구, 트랙, 우물, 책, 가로등, 그리고 더 많은 것들.',
+    nothingIsLost: '여기서는 아무것도 사라지지 않아요. 자리를 비워도 마을은 기다려요.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '텃밭에 채소 +1',
+      strength: '운동 공간에 새 기구',
+      running: '트랙이 길어졌어요',
+      reading: '도서관에 책 +1',
+      water: '우물이 높아졌어요',
+    },
+    tilesTitle: '내가 지은 것',
+    tiles: {
+      homes: '집',
+      trees: '나무',
+      veggies: '텃밭',
+      strength: '운동 공간',
+      running: '트랙',
+      water: '우물',
+      reading: '도서관',
+      rest: '가로등',
+      other: '꽃',
+      fruit: '과일나무',
+      outdoors: '새',
+      limits: '나비',
+    },
+  },
 };
 
 export default ko;

@@ -93,12 +93,12 @@ export default function AndroidWaitlist({ className = '' }: { className?: string
           placeholder={t.hero.android.placeholder}
           autoFocus
           aria-label={t.hero.android.prompt}
-          className="w-full sm:w-64 rounded-full border border-charcoal/10 bg-white/90 px-4 py-2 text-sm text-charcoal placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-lavender"
+          className="game-pill w-full sm:w-64 rounded-full bg-white px-4 py-2 text-sm text-charcoal placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-lavender"
         />
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="rounded-full bg-charcoal text-white px-5 py-2 text-sm font-medium hover:bg-charcoal/90 transition-colors disabled:opacity-60"
+          className="game-btn [--game-btn-edge:#151419] rounded-full bg-charcoal text-white px-5 py-2 text-sm font-semibold disabled:opacity-60"
         >
           {t.hero.android.submit}
         </button>

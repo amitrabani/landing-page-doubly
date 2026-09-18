@@ -1001,6 +1001,36 @@ const tr = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Doubly\'nin köyü',
+    ruleTask: 'Biten bir görev bir ev ve bir ağaç ekler.',
+    ruleHabit: 'Sürdürülen bir alışkanlık kendi yerini büyütür: sebzeler, spor aletleri, koşu yolu, kuyu, kitaplar, lambalar ve daha fazlası.',
+    nothingIsLost: 'Burada hiçbir şey kaybolmaz. Uzaktaysan köy bekler.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: 'Bahçeye +1 sebze',
+      strength: 'Spor alanına yeni alet',
+      running: 'Koşu yolu uzadı',
+      reading: 'Kütüphaneye +1 kitap',
+      water: 'Kuyu yükseldi',
+    },
+    tilesTitle: 'İnşa ettiklerin',
+    tiles: {
+      homes: 'Evler',
+      trees: 'Ağaçlar',
+      veggies: 'Sebze bahçesi',
+      strength: 'Spor alanı',
+      running: 'Koşu yolu',
+      water: 'Kuyu',
+      reading: 'Kütüphane',
+      rest: 'Lambalar',
+      other: 'Çiçekler',
+      fruit: 'Meyve ağaçları',
+      outdoors: 'Kuşlar',
+      limits: 'Kelebekler',
+    },
+  },
 };
 
 export default tr;

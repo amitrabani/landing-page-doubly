@@ -30,7 +30,7 @@ export default function Success() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease: EASE }}
-          className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
+          className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black text-charcoal leading-tight"
         >
           {t.success.subtitle}
         </motion.h2>

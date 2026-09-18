@@ -1009,6 +1009,36 @@ const es = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'El pueblo de Doubly',
+    ruleTask: 'Una tarea terminada añade una casa y un árbol.',
+    ruleHabit: 'Un hábito cumplido hace crecer su propio lugar: verduras, aparatos del gimnasio, la pista, el pozo, libros, farolas y más.',
+    nothingIsLost: 'Aquí nada se pierde. Si te vas, el pueblo espera.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 verdura en el huerto',
+      strength: 'Aparato nuevo en el gimnasio',
+      running: 'La pista creció',
+      reading: '+1 libro en la biblioteca',
+      water: 'Subió el nivel del pozo',
+    },
+    tilesTitle: 'Lo que construiste',
+    tiles: {
+      homes: 'Casas',
+      trees: 'Árboles',
+      veggies: 'Huerto',
+      strength: 'Gimnasio',
+      running: 'Pista',
+      water: 'Pozo',
+      reading: 'Biblioteca',
+      rest: 'Farolas',
+      other: 'Flores',
+      fruit: 'Frutales',
+      outdoors: 'Pájaros',
+      limits: 'Mariposas',
+    },
+  },
 };
 
 export default es;

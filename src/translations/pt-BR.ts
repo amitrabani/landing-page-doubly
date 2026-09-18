@@ -1013,6 +1013,36 @@ const ptBR = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'A vila do Doubly',
+    ruleTask: 'Uma tarefa concluída adiciona uma casa e uma árvore.',
+    ruleHabit: 'Um hábito mantido faz crescer o próprio lugar: verduras, aparelhos da academia, a pista, o poço, livros, lampiões e mais.',
+    nothingIsLost: 'Aqui nada se perde. Se você ficar longe, a vila espera.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 verdura na horta',
+      strength: 'Aparelho novo na academia',
+      running: 'A pista ficou maior',
+      reading: '+1 livro na biblioteca',
+      water: 'O poço ficou mais alto',
+    },
+    tilesTitle: 'O que você construiu',
+    tiles: {
+      homes: 'Casas',
+      trees: 'Árvores',
+      veggies: 'Horta',
+      strength: 'Academia',
+      running: 'Pista',
+      water: 'Poço',
+      reading: 'Biblioteca',
+      rest: 'Lampiões',
+      other: 'Flores',
+      fruit: 'Árvores frutíferas',
+      outdoors: 'Pássaros',
+      limits: 'Borboletas',
+    },
+  },
 };
 
 export default ptBR;

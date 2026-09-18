@@ -39,7 +39,7 @@ export default function AppStoreButton({
         aria-hidden
         className="pointer-events-none absolute -inset-4 rounded-[1.6rem] bg-[radial-gradient(ellipse_at_center,rgba(184,169,212,0.5),transparent_70%)] blur-xl opacity-50 transition-opacity duration-500 group-hover:opacity-100"
       />
-      <span className="relative block overflow-hidden rounded-xl">
+      <span className="game-panel relative block overflow-hidden rounded-xl">
         <img src="/app-store-badge.svg" alt={t.hero.cta} className="block h-16 w-auto sm:h-20" />
         {shimmer && (
           <span

@@ -1201,6 +1201,36 @@ const ar = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'قرية دبلي',
+    ruleTask: 'كل مهمة تنهيها تضيف بيتًا وشجرة.',
+    ruleHabit: 'كل عادة تحافظ عليها تُنمّي مكانها: خضار، أجهزة رياضية، المضمار، البئر، كتب، مصابيح وغيرها.',
+    nothingIsLost: 'لا شيء يضيع هنا أبدًا. إذا غبت، القرية تنتظر.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 خضار في الحقل',
+      strength: 'جهاز جديد في ساحة التمارين',
+      running: 'المضمار صار أطول',
+      reading: '+1 كتاب في المكتبة',
+      water: 'البئر صار أعلى',
+    },
+    tilesTitle: 'ما بنيته',
+    tiles: {
+      homes: 'بيوت',
+      trees: 'أشجار',
+      veggies: 'حقل الخضار',
+      strength: 'ساحة التمارين',
+      running: 'المضمار',
+      water: 'البئر',
+      reading: 'المكتبة',
+      rest: 'مصابيح',
+      other: 'زهور',
+      fruit: 'أشجار مثمرة',
+      outdoors: 'الطيور',
+      limits: 'الفراشات',
+    },
+  },
 };
 
 export default ar;

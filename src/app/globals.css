@@ -20,6 +20,11 @@
   --color-muted: #7A7680;
   --color-muted-light: #9E9AA4;
 
+  /* Pale washes of the village's sky, grass and sand, for section backgrounds. */
+  --color-village-sky: #d9edf8;
+  --color-village-grass: #e3f0d3;
+  --color-village-sand: #f4ead2;
+
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
@@ -161,5 +166,98 @@ html.lenis body {
   .aurora,
   .shimmer-sweep {
     animation: none;
+  }
+}
+
+/* ============================================================
+   Game skin
+   ------------------------------------------------------------
+   Doubly keeps its own palette (cream, lavender, coral, sage);
+   what these classes change is the *shape* language, the way a
+   casual game draws its interface: every surface has a thick
+   charcoal outline and sits on a solid shadow instead of a soft
+   blurred one, and anything clickable presses down onto that
+   shadow. One home for the look, so a card in the hero and a
+   card eight sections down can never drift apart.
+
+   RTL-safe: the outlines are even on all sides and every shadow
+   offset is vertical, so nothing has to mirror for Hebrew.
+   ============================================================ */
+/* Plain :root, not @theme - Tailwind drops theme variables that no utility
+   references, and these are only ever read by the classes below. */
+:root {
+  /* Outline weight and how far a surface floats above its shadow. */
+  --game-edge: 2px;
+  --game-edge-thick: 3px;
+  --game-drop: 5px;
+  --game-drop-lg: 8px;
+  --game-shadow-color: rgba(45, 43, 50, 0.22);
+}
+
+/* A raised surface: card, panel, floating chip. */
+.game-panel {
+  border: var(--game-edge) solid var(--color-charcoal);
+  box-shadow: 0 var(--game-drop) 0 var(--game-shadow-color);
+}
+
+/* The big ones - the phone, a full-width feature card. */
+.game-panel-lg {
+  border: var(--game-edge-thick) solid var(--color-charcoal);
+  box-shadow: 0 var(--game-drop-lg) 0 var(--game-shadow-color);
+}
+
+/* Cards that answer to the pointer. Hover lifts them off the shadow. */
+.game-panel-hover {
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.game-panel-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 calc(var(--game-drop) + 4px) 0 var(--game-shadow-color);
+}
+
+/* A small outlined chip: badges, counters, tags. */
+.game-pill {
+  border: var(--game-edge) solid var(--color-charcoal);
+  box-shadow: 0 3px 0 var(--game-shadow-color);
+}
+
+/* The square behind an icon. */
+.game-tile {
+  border: var(--game-edge) solid var(--color-charcoal);
+  box-shadow: 0 2px 0 var(--game-shadow-color);
+}
+
+/* A button is a cap resting on a solid edge. Clicking drops it onto the
+   edge, which is where the physical click feeling comes from. Each button
+   sets its own --game-btn-edge, usually the darker shade of its fill. */
+.game-btn {
+  border: var(--game-edge) solid var(--color-charcoal);
+  box-shadow: 0 var(--game-drop) 0 var(--game-btn-edge, var(--game-shadow-color));
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease,
+    filter 0.15s ease;
+}
+.game-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 calc(var(--game-drop) + 1px) 0 var(--game-btn-edge, var(--game-shadow-color));
+  filter: brightness(1.04);
+}
+.game-btn:active {
+  transform: translateY(var(--game-drop));
+  box-shadow: 0 0 0 var(--game-btn-edge, var(--game-shadow-color));
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-panel-hover,
+  .game-btn {
+    transition: none;
+  }
+  .game-panel-hover:hover,
+  .game-btn:hover {
+    transform: none;
   }
 }

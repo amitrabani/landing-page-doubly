@@ -1016,6 +1016,36 @@ const en = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Doubly\'s village',
+    ruleTask: 'A finished task adds a home and a tree.',
+    ruleHabit: 'A kept habit grows its own place: vegetables, gym gear, the track, the well, books, lamps, and more.',
+    nothingIsLost: 'Nothing here is ever lost. If you are away, the village waits.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 vegetable in the patch',
+      strength: 'New gear in the gym',
+      running: 'The track got longer',
+      reading: '+1 book in the library',
+      water: 'The well got higher',
+    },
+    tilesTitle: 'What you built',
+    tiles: {
+      homes: 'Homes',
+      trees: 'Trees',
+      veggies: 'Veggie patch',
+      strength: 'Gym',
+      running: 'Track',
+      water: 'Well',
+      reading: 'Library',
+      rest: 'Lamps',
+      other: 'Flowers',
+      fruit: 'Fruit trees',
+      outdoors: 'Birds',
+      limits: 'Butterflies',
+    },
+  },
 } as const;
 
 export default en;

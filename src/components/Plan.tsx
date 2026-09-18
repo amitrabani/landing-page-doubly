@@ -44,10 +44,10 @@ const stepIcons = [
 ];
 
 const stepStyles = [
-  { color: 'text-lavender-dark', bg: 'bg-lavender-light/20', hover: 'hover:bg-lavender-light/40' },
-  { color: 'text-coral-dark', bg: 'bg-coral-light/20', hover: 'hover:bg-coral-light/40' },
-  { color: 'text-sage-dark', bg: 'bg-sage/20', hover: 'hover:bg-sage/35' },
-  { color: 'text-sky', bg: 'bg-sky-light/25', hover: 'hover:bg-sky-light/45' },
+  { color: 'text-charcoal', bg: 'bg-lavender-light', hover: 'hover:bg-lavender' },
+  { color: 'text-charcoal', bg: 'bg-coral-light', hover: 'hover:bg-coral' },
+  { color: 'text-charcoal', bg: 'bg-sage', hover: 'hover:bg-sage-dark' },
+  { color: 'text-charcoal', bg: 'bg-sky-light', hover: 'hover:bg-sky' },
 ];
 
 const stepVariants = {
@@ -139,7 +139,7 @@ export default function Plan() {
           <WordReveal
             text={t.plan.title}
             as="h2"
-            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal leading-tight"
+            className="font-[family-name:var(--font-display)] text-3xl sm:text-4xl lg:text-5xl font-black text-charcoal leading-tight"
             highlight={t.plan.titleHighlight}
             highlightClassName="text-lavender-dark"
           />
@@ -172,7 +172,7 @@ export default function Plan() {
                     variants={chipVariants(!!reduced)}
                     whileHover={{ y: -4, scale: 1.06 }}
                     transition={SPRING_SOFT}
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl transition-colors duration-300 ${stepStyles[i].bg} ${stepStyles[i].hover} ${stepStyles[i].color}`}
+                    className={`game-tile inline-flex items-center justify-center w-16 h-16 rounded-2xl transition-colors duration-300 ${stepStyles[i].bg} ${stepStyles[i].hover} ${stepStyles[i].color}`}
                   >
                     {stepIcons[i]}
                   </motion.div>

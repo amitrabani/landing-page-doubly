@@ -1026,6 +1026,36 @@ const nl = {
     },
   },
 
+  // The village: the game inside the app. Copied from the app's own village.* strings.
+  village: {
+    name: 'Het dorp van Doubly',
+    ruleTask: 'Een afgeronde taak geeft een huis en een boom.',
+    ruleHabit: 'Een volgehouden gewoonte laat haar eigen plek groeien: groenten, fitnesstoestellen, de baan, de put, boeken, lantaarns en meer.',
+    nothingIsLost: 'Hier gaat nooit iets verloren. Als je weg bent, wacht het dorp.',
+    // What keeping a habit pays, per island: the line the app shows when it happens.
+    rewards: {
+      veggies: '+1 groente in de moestuin',
+      strength: 'Nieuw toestel in het fitnesspark',
+      running: 'De baan werd langer',
+      reading: '+1 boek in de bibliotheek',
+      water: 'De put werd hoger',
+    },
+    tilesTitle: 'Wat je bouwde',
+    tiles: {
+      homes: 'Huizen',
+      trees: 'Bomen',
+      veggies: 'Moestuin',
+      strength: 'Fitnesspark',
+      running: 'Baan',
+      water: 'Put',
+      reading: 'Bibliotheek',
+      rest: 'Lantaarns',
+      other: 'Bloemen',
+      fruit: 'Fruitbomen',
+      outdoors: 'Vogels',
+      limits: 'Vlinders',
+    },
+  },
 };
 
 export default nl;

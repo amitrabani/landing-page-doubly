@@ -13,6 +13,10 @@ import { APP_STORE_URL, trackAppStoreClick } from '@/lib/appStore';
 import AppStoreButton from './AppStoreButton';
 import SocialProofCounter from './SocialProofCounter';
 import AndroidWaitlist from './AndroidWaitlist';
+import HabitIsland, { type HabitIslandKind } from './village/HabitIsland';
+import IslandLabel from './village/IslandLabel';
+import { Birds, Butterfly, Cloud } from './village/VillageSprites';
+import { villageColors } from './village/villageColors';
 
 const iconProps = {
   width: 15,
@@ -81,6 +85,40 @@ const floatingCards = [
   },
 ];
 
+/**
+ * The habit islands afloat around the phone, the same five the screen on the
+ * phone shows, with the same counts, so the picture and the page agree.
+ *
+ * Each hangs off one edge of the phone (`side`) at a height that misses the
+ * three floating cards, tucked a little behind the frame so it reads as water
+ * continuing past the device. On a narrow screen there is no room beside the
+ * phone, so the islands tuck further in and lose their labels.
+ */
+const heroIslands: readonly {
+  kind: HabitIslandKind;
+  count: number;
+  side: 'left' | 'right';
+  /** How far down the phone it hangs, as a whole Tailwind class so the scanner can see it. */
+  top: string;
+  /** Extra classes that nudge this island in or out, so the five do not line up like a column. */
+  nudge: string;
+  depth: number;
+  bob: number;
+}[] = [
+  { kind: 'running', count: 137, side: 'right', top: 'top-[3%]', nudge: '-ml-14 lg:-ml-5', depth: -10, bob: 5.2 },
+  { kind: 'veggies', count: 184, side: 'left', top: 'top-[19%]', nudge: '-mr-14 lg:mr-1 xl:-mr-4', depth: 12, bob: 4.4 },
+  { kind: 'strength', count: 92, side: 'right', top: 'top-[50%]', nudge: '-ml-16 lg:-ml-3 xl:ml-2', depth: 16, bob: 6 },
+  { kind: 'reading', count: 76, side: 'left', top: 'top-[51%]', nudge: '-mr-16 lg:mr-1', depth: -8, bob: 5.6 },
+  { kind: 'water', count: 263, side: 'right', top: 'top-[77%]', nudge: '-ml-12 lg:-ml-6', depth: 10, bob: 4.8 },
+];
+
+/** Butterflies around the phone: where each hovers, its colour, and how far out of step it flaps. */
+const heroButterflies = [
+  { left: '6%', top: '8%', fill: villageColors.roofRidge, delay: 0 },
+  { left: '93%', top: '40%', fill: villageColors.crop, delay: 1.1 },
+  { left: '12%', top: '90%', fill: villageColors.glassLit, delay: 2.3 },
+] as const;
+
 export default function Hero() {
   const t = useT();
   const sectionRef = useRef<HTMLElement>(null);
@@ -99,8 +137,39 @@ export default function Hero() {
   return (
     <section id="hero" ref={sectionRef} className="relative overflow-hidden">
       <MouseParallax className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6">
-        {/* Soft gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-cream via-cream to-warm pointer-events-none" />
+        {/* The village's sky, settling into the page's cream by the fold */}
+        <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,#8cc6e8_0%,#c3e2f1_38%,#eef5ef_70%,#FBF8F3_100%)]" />
+        {/* Sun in the upper left, clouds kept to the top third, a pair of birds for scale */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1440 420"
+          preserveAspectRatio="xMidYMin slice"
+          className="pointer-events-none absolute inset-x-0 top-0 h-[44vh] w-full"
+        >
+          <defs>
+            <radialGradient id="hero-sun" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor={villageColors.sun} stopOpacity={0.95} />
+              <stop offset="45%" stopColor={villageColors.sun} stopOpacity={0.45} />
+              <stop offset="100%" stopColor={villageColors.sun} stopOpacity={0} />
+            </radialGradient>
+          </defs>
+          <ellipse cx={170} cy={50} rx={330} ry={260} fill="url(#hero-sun)" />
+          <motion.g
+            animate={reduced ? undefined : { x: [0, 28, 0] }}
+            transition={{ duration: 38, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <Cloud x={230} y={150} scale={2.1} />
+            <Cloud x={1190} y={120} scale={2.5} />
+          </motion.g>
+          <motion.g
+            animate={reduced ? undefined : { x: [0, -22, 0] }}
+            transition={{ duration: 46, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <Cloud x={700} y={110} scale={1.5} opacity={0.8} />
+            <Cloud x={960} y={210} scale={1.7} opacity={0.85} />
+          </motion.g>
+          <Birds x={840} y={160} scale={1.6} />
+        </svg>
         {/* Background blobs: scroll parallax (inner) nested inside mouse depth (outer) */}
         <MouseLayer depth={-14} className="absolute top-20 right-1/4 pointer-events-none">
           <motion.div
@@ -148,12 +217,12 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: EASE }}
                 className="mb-6 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
               >
-                <span className="inline-block text-sm font-medium text-lavender-dark bg-lavender-light/30 rounded-full px-4 py-1.5">
+                <span className="game-pill inline-block text-sm font-semibold text-charcoal bg-lavender-light rounded-full px-4 py-1.5">
                   {t.hero.badge}
                 </span>
                 {/* Live member count, dressed as a soft pill with a pulsing
                     dot so it reads as an active community, not an afterthought. */}
-                <div className="inline-flex items-center gap-2 rounded-full border border-sage/25 bg-sage/[0.08] px-3.5 py-1.5">
+                <div className="game-pill inline-flex items-center gap-2 rounded-full bg-sage/25 px-3.5 py-1.5">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sage-dark/60" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-sage-dark" />
@@ -169,7 +238,7 @@ export default function Hero() {
                 highlight={t.hero.titleHighlight}
                 highlightClassName="text-lavender-dark"
                 delay={0.15}
-                className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-semibold text-charcoal leading-[1.15] tracking-tight"
+                className="font-[family-name:var(--font-display)] text-4xl sm:text-5xl lg:text-6xl font-black text-charcoal leading-[1.1] tracking-tight"
               />
 
               <motion.p
@@ -205,15 +274,39 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3, ease: EASE }}
-              className="flex-1 relative flex items-center justify-center"
+              className="flex-1 relative isolate flex items-center justify-center"
             >
+              {/* Open sea behind the phone: the water the habit islands float in */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-1/2 -z-20 h-[128%] w-[180%] max-w-[840px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-[radial-gradient(closest-side,rgba(78,143,181,0.9),rgba(99,165,201,0.85)_45%,rgba(127,184,214,0.6)_72%,rgba(127,184,214,0)_100%)]"
+              />
+              {/* Butterflies adrift around the phone */}
+              {heroButterflies.map((butterfly) => (
+                <motion.svg
+                  key={butterfly.left}
+                  aria-hidden="true"
+                  viewBox="0 0 16 12"
+                  className="pointer-events-none absolute hidden h-5 w-6 md:block"
+                  style={{ left: butterfly.left, top: butterfly.top }}
+                  animate={reduced ? undefined : { y: [0, -10, 0], x: [0, 6, 0], rotate: [0, 8, 0] }}
+                  transition={{
+                    duration: 4 + butterfly.delay,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: butterfly.delay,
+                  }}
+                >
+                  <Butterfly x={8} y={6} scale={2.6} fill={butterfly.fill} />
+                </motion.svg>
+              ))}
               {/* Phone frame on a subtle mid-foreground plane */}
               <MouseLayer depth={6}>
                 <motion.div style={reduced ? undefined : { scale: phoneScale }} className="relative w-64 sm:w-72">
                   <TiltCard
                     maxTilt={6}
                     sheen
-                    className="relative bg-white rounded-[2.5rem] shadow-2xl shadow-charcoal/10 border border-charcoal/5 overflow-hidden"
+                    className="game-panel-lg relative bg-white rounded-[2.5rem] overflow-hidden"
                   >
                     {/* Real app screen, links to the App Store */}
                     <a href={APP_STORE_URL} onClick={() => trackAppStoreClick('hero_phone')} className="block">
@@ -224,6 +317,31 @@ export default function Hero() {
                       />
                     </a>
                   </TiltCard>
+
+                  {/* Habit islands, behind the phone and out past both of its edges */}
+                  {heroIslands.map((island, index) => (
+                    <MouseLayer
+                      key={island.kind}
+                      depth={island.depth}
+                      className={`pointer-events-none absolute -z-10 w-[124px] lg:w-[150px] xl:w-[176px] ${
+                        island.side === 'left' ? 'right-full' : 'left-full'
+                      } ${island.top} ${island.nudge}`}
+                    >
+                      <motion.div
+                        animate={reduced ? undefined : { y: [0, -island.bob, 0] }}
+                        transition={{ duration: island.bob, repeat: Infinity, ease: 'easeInOut' }}
+                        className="flex flex-col items-center"
+                      >
+                        <HabitIsland kind={island.kind} count={island.count} riseDelay={0.7 + index * 0.12} className="block w-full" />
+                        {/* No room for a label beside the phone on a narrow screen. The wrapper
+                            hides it: `hidden` on the label itself would tie with its own
+                            `inline-flex`, and stylesheet order would pick the winner. */}
+                        <span className="-mt-1 hidden max-w-full lg:block">
+                          <IslandLabel name={t.village.tiles[island.kind]} count={island.count} />
+                        </span>
+                      </motion.div>
+                    </MouseLayer>
+                  ))}
 
                   {/* Floating cards */}
                   {floatingCards.map((card) => (
@@ -246,9 +364,9 @@ export default function Hero() {
                               scale: { duration: 0.6, delay: card.delay + 0.3, ease: EASE },
                               y: { duration: 3, repeat: Infinity, ease: 'easeInOut', delay: card.delay + 0.6 },
                             }}
-                            className="flex items-center gap-2.5 rounded-2xl bg-white/95 px-3 py-2.5 shadow-[0_14px_40px_-12px_rgba(0,0,0,0.22)] ring-1 ring-black/[0.05] backdrop-blur"
+                            className="game-panel flex items-center gap-2.5 rounded-2xl bg-white px-3 py-2.5"
                           >
-                            <span className={`flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
+                            <span className={`game-tile flex h-7 w-7 items-center justify-center rounded-[0.6rem] text-white ${card.color}`}>
                               {card.icon}
                             </span>
                             <span className="text-sm font-semibold text-charcoal whitespace-nowrap">{t.hero.floatingCards[card.labelKey]}</span>
