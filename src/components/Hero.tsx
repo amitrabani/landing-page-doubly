@@ -300,13 +300,15 @@ export default function Hero() {
                   <Butterfly x={8} y={6} scale={2.6} fill={butterfly.fill} />
                 </motion.svg>
               ))}
-              {/* Phone frame on a subtle mid-foreground plane */}
+              {/* Phone frame on a subtle mid-foreground plane. Narrower on a phone screen, so the
+                  islands beside it fit inside the screen. The corner radius shrinks by the same
+                  share, so the frame keeps its shape. */}
               <MouseLayer depth={6}>
-                <motion.div style={reduced ? undefined : { scale: phoneScale }} className="relative w-64 sm:w-72">
+                <motion.div style={reduced ? undefined : { scale: phoneScale }} className="relative w-56 sm:w-72">
                   <TiltCard
                     maxTilt={6}
                     sheen
-                    className="game-panel-lg relative bg-white rounded-[2.5rem] overflow-hidden"
+                    className="game-panel-lg relative bg-white rounded-[2.2rem] sm:rounded-[2.5rem] overflow-hidden"
                   >
                     {/* Real app screen, links to the App Store */}
                     <a href={APP_STORE_URL} onClick={() => trackAppStoreClick('hero_phone')} className="block">
