@@ -1,8 +1,9 @@
 'use client';
 
-import { MotionConfig, motion } from 'framer-motion';
-import { useState } from 'react';
+import { MotionConfig, animate, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import ConfettiBurst from '@/components/motion/ConfettiBurst';
+import { useHydratedReducedMotion } from '@/components/motion/useHydratedReducedMotion';
 import { staggerChild, staggerContainer, VIEWPORT_ONCE } from '@/lib/motion';
 import { useT } from '@/i18n/TranslationProvider';
 import HabitIsland, { HABIT_ISLAND_KINDS, habitIslandGrowth, type HabitIslandKind } from './HabitIsland';
@@ -10,22 +11,25 @@ import IslandLabel from './IslandLabel';
 import { villageColors as c } from './villageColors';
 
 /**
- * The five habit islands, playable. Each island takes ONE tap. The tap keeps
- * its habit once: the count goes up by one, the island grows by the app's own
- * rule, and the line the app shows for that reward floats up off it. Showing
- * beats telling: nobody reads "a kept habit grows its own place", everybody
- * taps an island.
+ * The five habit islands, playable. Each island takes ONE tap, and that tap
+ * grows it all the way: the count runs up from its small start to a full-grown
+ * number, as if the habit had been kept dozens of times, and the island passes
+ * through every stage of the app's own growth rule on the way. The line the
+ * app shows for that reward floats up off it. Showing beats telling: nobody
+ * reads "a kept habit grows its own place", everybody taps an island.
+ *
+ * The count runs up over about a second and a half, not in one jump, so the
+ * visitor sees the buildings arrive one stage after another. With reduced
+ * motion on, it jumps straight to the end.
  *
  * After its tap an island is used up. Its button stays pressed down and
- * ignores every further tap, and its "+1" badge becomes a check mark. The
+ * ignores every further tap, and its play badge becomes a check mark. The
  * button is marked aria-disabled, not disabled: a disabled button drops the
  * keyboard focus, and a screen reader could no longer find the new count.
  *
- * The starting counts are chosen so that the tap on three of the five crosses
- * a line, because that is where the rule shows itself: open water becomes a
- * sandbar (0 to 1), the farm gets its greenhouse (4 to 5), the track gets its
- * stand and finish gate (24 to 25). The library and the water start
- * mid-growth: their tap adds one to the count and widens the island a little.
+ * Every island starts young (open water, or stage 1 or 2), so the tap always
+ * has somewhere to go. Every grown count is past 25, the app's line for a
+ * full-grown island.
  *
  * Counts only go up. Nothing here reads the clock and nothing is taken back,
  * the same promise the village makes in the app.
@@ -33,10 +37,20 @@ import { villageColors as c } from './villageColors';
 const START_COUNTS: Record<HabitIslandKind, number> = {
   veggies: 4,
   strength: 0,
-  running: 24,
-  reading: 12,
-  water: 2,
+  running: 6,
+  reading: 2,
+  water: 1,
 };
+
+const GROWN_COUNTS: Record<HabitIslandKind, number> = {
+  veggies: 48,
+  strength: 36,
+  running: 60,
+  reading: 30,
+  water: 72,
+};
+
+const GROW_SECONDS = 1.6;
 
 const BURST_COLORS = [c.crop, c.roofRidge, c.glassLit, c.sprout, c.foam];
 
@@ -47,11 +61,33 @@ export default function HabitIslandsPlayground() {
   // The floating reward line and the screen-reader announcement follow the last tap.
   const lastKept = keptKinds.length > 0 ? keptKinds[keptKinds.length - 1] : null;
 
+  // The count each tapped island shows right now, while it runs up to its grown count.
+  const [shownCounts, setShownCounts] = useState<Partial<Record<HabitIslandKind, number>>>({});
+  const reduced = useHydratedReducedMotion();
+  const runs = useRef<{ stop: () => void }[]>([]);
+
+  useEffect(() => {
+    const started = runs.current;
+    return () => started.forEach((run) => run.stop());
+  }, []);
+
   const keep = (kind: HabitIslandKind) => {
+    if (keptKinds.includes(kind)) return;
     setKeptKinds((kept) => (kept.includes(kind) ? kept : [...kept, kind]));
+    if (reduced) {
+      setShownCounts((shown) => ({ ...shown, [kind]: GROWN_COUNTS[kind] }));
+      return;
+    }
+    runs.current.push(
+      animate(START_COUNTS[kind], GROWN_COUNTS[kind], {
+        duration: GROW_SECONDS,
+        ease: 'easeOut',
+        onUpdate: (value) => setShownCounts((shown) => ({ ...shown, [kind]: Math.round(value) })),
+      }),
+    );
   };
 
-  const countOf = (kind: HabitIslandKind) => START_COUNTS[kind] + (keptKinds.includes(kind) ? 1 : 0);
+  const countOf = (kind: HabitIslandKind) => shownCounts[kind] ?? START_COUNTS[kind];
 
   return (
     <MotionConfig reducedMotion="user">
@@ -65,8 +101,8 @@ export default function HabitIslandsPlayground() {
         {HABIT_ISLAND_KINDS.map((kind) => {
           const isKept = keptKinds.includes(kind);
           const count = countOf(kind);
-          // A burst only when the tap carried the island into a new stage.
-          const reachedNewStage = habitIslandGrowth(count).stage !== habitIslandGrowth(START_COUNTS[kind]).stage;
+          // One burst, at the moment the running count makes the island full-grown.
+          const isFullGrown = habitIslandGrowth(count).stage === 3;
 
           return (
             <motion.li
@@ -98,10 +134,11 @@ export default function HabitIslandsPlayground() {
                 ) : (
                   <span
                     aria-hidden="true"
-                    dir="ltr"
-                    className="game-pill absolute end-2 top-2 rounded-full bg-white px-1.5 text-[11px] font-black leading-5 text-charcoal"
+                    className="game-pill absolute end-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-charcoal"
                   >
-                    +1
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor">
+                      <path d="M2 0.8 9 5 2 9.2Z" />
+                    </svg>
                   </span>
                 )}
 
@@ -118,16 +155,17 @@ export default function HabitIslandsPlayground() {
                   </motion.span>
                 ) : null}
 
-                <ConfettiBurst fire={reachedNewStage ? 1 : 0} count={14} colors={BURST_COLORS} />
+                <ConfettiBurst fire={isFullGrown ? 1 : 0} count={14} colors={BURST_COLORS} />
               </button>
             </motion.li>
           );
         })}
       </motion.ul>
 
-      {/* The same reward, said once for anyone who cannot see it float. */}
+      {/* The same reward, said once for anyone who cannot see it float. It names the grown count, so
+          a screen reader is not sent every step of the run. */}
       <p aria-live="polite" className="sr-only">
-        {lastKept ? `${t.village.tiles[lastKept]} ×${countOf(lastKept)}. ${t.village.rewards[lastKept]}` : ''}
+        {lastKept ? `${t.village.tiles[lastKept]} ×${GROWN_COUNTS[lastKept]}. ${t.village.rewards[lastKept]}` : ''}
       </p>
     </MotionConfig>
   );
