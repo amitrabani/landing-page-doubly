@@ -1009,7 +1009,6 @@ const ja = {
     name: 'ダブリーの村',
     ruleTask: 'タスクを1つ終えると、家と木が1つずつ増えます。',
     ruleHabit: '続けた習慣はそれぞれの場所を育てます。野菜、ジムの器具、トラック、井戸、本、街灯など。',
-    nothingIsLost: 'ここでは何も失われません。離れていても、村は待っています。',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '畑に野菜が +1',

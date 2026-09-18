@@ -1038,7 +1038,6 @@ const fr = {
     name: 'Le village de Doubly',
     ruleTask: 'Une tâche terminée ajoute une maison et un arbre.',
     ruleHabit: 'Une habitude tenue fait grandir son propre lieu : légumes, matériel de sport, la piste, le puits, des livres, des lampes et plus encore.',
-    nothingIsLost: 'Ici, rien n\'est jamais perdu. Si tu t\'absentes, le village attend.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 légume au potager',

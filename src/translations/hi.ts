@@ -1009,7 +1009,6 @@ const hi = {
     name: 'डबली का गाँव',
     ruleTask: 'एक पूरा किया काम एक घर और एक पेड़ जोड़ता है।',
     ruleHabit: 'निभाई गई आदत अपनी जगह बढ़ाती है: सब्ज़ियाँ, जिम के उपकरण, ट्रैक, कुआँ, किताबें, लैंप और भी बहुत कुछ।',
-    nothingIsLost: 'यहाँ कुछ भी कभी खोता नहीं। अगर आप दूर हों, गाँव इंतज़ार करता है।',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: 'क्यारी में +1 सब्ज़ी',

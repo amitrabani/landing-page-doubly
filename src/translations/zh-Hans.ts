@@ -1011,7 +1011,6 @@ const zhHans = {
     name: 'Doubly 的村庄',
     ruleTask: '完成一个任务，就多一座房子和一棵树。',
     ruleHabit: '坚持的习惯会让它自己的地方生长：蔬菜、健身器材、跑道、水井、书、路灯，还有更多。',
-    nothingIsLost: '这里什么都不会失去。你不在的时候，村庄会等你。',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '菜地里蔬菜 +1',

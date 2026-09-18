@@ -1018,7 +1018,6 @@ const ptBR = {
     name: 'A vila do Doubly',
     ruleTask: 'Uma tarefa concluída adiciona uma casa e uma árvore.',
     ruleHabit: 'Um hábito mantido faz crescer o próprio lugar: verduras, aparelhos da academia, a pista, o poço, livros, lampiões e mais.',
-    nothingIsLost: 'Aqui nada se perde. Se você ficar longe, a vila espera.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 verdura na horta',

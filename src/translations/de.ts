@@ -1030,7 +1030,6 @@ const de = {
     name: 'Doublys Dorf',
     ruleTask: 'Eine erledigte Aufgabe bringt ein Haus und einen Baum.',
     ruleHabit: 'Eine gehaltene Gewohnheit lässt ihren eigenen Ort wachsen: Gemüse, Sportgeräte, die Laufbahn, den Brunnen, Bücher, Laternen und mehr.',
-    nothingIsLost: 'Hier geht nie etwas verloren. Wenn du weg bist, wartet das Dorf.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 Gemüse im Beet',

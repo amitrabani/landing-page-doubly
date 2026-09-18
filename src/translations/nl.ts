@@ -1031,7 +1031,6 @@ const nl = {
     name: 'Het dorp van Doubly',
     ruleTask: 'Een afgeronde taak geeft een huis en een boom.',
     ruleHabit: 'Een volgehouden gewoonte laat haar eigen plek groeien: groenten, fitnesstoestellen, de baan, de put, boeken, lantaarns en meer.',
-    nothingIsLost: 'Hier gaat nooit iets verloren. Als je weg bent, wacht het dorp.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 groente in de moestuin',

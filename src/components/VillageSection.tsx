@@ -105,10 +105,6 @@ export default function VillageSection() {
             </motion.li>
           ))}
         </motion.ul>
-
-        <motion.p {...fadeRise(0.1)} className="mt-10 text-center text-base text-charcoal-light">
-          {t.village.nothingIsLost}
-        </motion.p>
       </div>
     </section>
   );

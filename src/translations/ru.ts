@@ -1031,7 +1031,6 @@ const ru = {
     name: 'Деревня Дабли',
     ruleTask: 'Выполненная задача добавляет дом и дерево.',
     ruleHabit: 'Соблюдённая привычка растит своё место: овощи, тренажёры, дорожку, колодец, книги, фонари и не только.',
-    nothingIsLost: 'Здесь ничего не теряется. Если тебя нет, деревня ждёт.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 овощ на грядке',

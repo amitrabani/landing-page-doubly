@@ -7,9 +7,11 @@ const INTERACTIVE = 'a, button, [role="button"], [data-cursor], label, summary';
 
 /**
  * Soft trailing cursor: a lagging ring + a tight dot. The ring swells and fills
- * over interactive elements for a magnetic, tactile feel. Mouse-only (fine pointer +
- * hover), and disabled entirely under reduced motion. The native caret is restored
- * over text fields via the `.custom-cursor` rules in globals.css.
+ * over interactive elements for a magnetic, tactile feel. It stays small over an
+ * element marked aria-disabled, because a swollen ring says "you can click this".
+ * Mouse-only (fine pointer + hover), and disabled entirely under reduced motion.
+ * The native caret is restored over text fields via the `.custom-cursor` rules in
+ * globals.css.
  */
 export default function CustomCursor() {
   const [enabled, setEnabled] = useState(false);
@@ -37,7 +39,8 @@ export default function CustomCursor() {
       y.set(e.clientY);
       setHidden(false);
       const target = e.target as HTMLElement | null;
-      setActive(!!target?.closest(INTERACTIVE));
+      const interactive = target?.closest(INTERACTIVE);
+      setActive(!!interactive && interactive.getAttribute('aria-disabled') !== 'true');
     };
     const onDown = () => setPressed(true);
     const onUp = () => setPressed(false);

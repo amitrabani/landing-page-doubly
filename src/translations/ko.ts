@@ -1007,7 +1007,6 @@ const ko = {
     name: '더블리의 마을',
     ruleTask: '할 일을 하나 끝내면 집 한 채와 나무 한 그루가 생겨요.',
     ruleHabit: '지킨 습관은 자기 자리를 키워요. 채소, 운동 기구, 트랙, 우물, 책, 가로등, 그리고 더 많은 것들.',
-    nothingIsLost: '여기서는 아무것도 사라지지 않아요. 자리를 비워도 마을은 기다려요.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '텃밭에 채소 +1',

@@ -1206,7 +1206,6 @@ const ar = {
     name: 'قرية دبلي',
     ruleTask: 'كل مهمة تنهيها تضيف بيتًا وشجرة.',
     ruleHabit: 'كل عادة تحافظ عليها تُنمّي مكانها: خضار، أجهزة رياضية، المضمار، البئر، كتب، مصابيح وغيرها.',
-    nothingIsLost: 'لا شيء يضيع هنا أبدًا. إذا غبت، القرية تنتظر.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 خضار في الحقل',

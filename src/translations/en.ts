@@ -1021,7 +1021,6 @@ const en = {
     name: 'Doubly\'s village',
     ruleTask: 'A finished task adds a home and a tree.',
     ruleHabit: 'A kept habit grows its own place: vegetables, gym gear, the track, the well, books, lamps, and more.',
-    nothingIsLost: 'Nothing here is ever lost. If you are away, the village waits.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 vegetable in the patch',

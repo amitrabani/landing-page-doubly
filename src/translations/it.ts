@@ -1027,7 +1027,6 @@ const it = {
     name: 'Il villaggio di Doubly',
     ruleTask: 'Un compito finito aggiunge una casa e un albero.',
     ruleHabit: 'Un’abitudine mantenuta fa crescere il suo posto: verdure, attrezzi della palestra, la pista, il pozzo, libri, lampioni e altro.',
-    nothingIsLost: 'Qui niente va mai perso. Se manchi, il villaggio aspetta.',
     // What keeping a habit pays, per island: the line the app shows when it happens.
     rewards: {
       veggies: '+1 verdura nell’orto',

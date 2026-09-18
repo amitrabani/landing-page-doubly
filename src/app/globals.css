@@ -251,6 +251,17 @@ html.lenis body {
   filter: none;
 }
 
+/* A button that works once stays down after that one use, and stops reacting.
+   It carries aria-disabled, not disabled, so the keyboard focus stays on it.
+   The hover and active selectors are listed so this state beats both of them. */
+.game-btn[aria-disabled='true'],
+.game-btn[aria-disabled='true']:hover,
+.game-btn[aria-disabled='true']:active {
+  transform: translateY(var(--game-drop));
+  box-shadow: 0 0 0 var(--game-btn-edge, var(--game-shadow-color));
+  filter: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .game-panel-hover,
   .game-btn {
